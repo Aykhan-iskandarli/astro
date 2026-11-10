@@ -135,3 +135,19 @@ def test_progressions_endpoint():
 def test_composite_endpoint():
     r = client.post("/api/charts/composite", json={"first": BAKU, "second": LONDON})
     assert r.status_code == 200 and len(r.json()["points"]) >= 14
+
+
+def test_sky_endpoints():
+    r = client.get("/api/sky", params={"at": "2026-11-10T12:00:00Z"})
+    assert r.status_code == 200 and len(r.json()["points"]) == 12 and "voidOfCourse" in r.json()["moon"]
+    r = client.get("/api/sky/calendar", params={"start": "2026-11-01", "end": "2027-01-01"})
+    assert r.status_code == 200 and r.json()["lunations"]
+    assert client.get("/api/sky/calendar", params={"start": "2026-01-01", "end": "2028-01-01"}).status_code == 422
+
+
+def test_timeline_endpoint():
+    body = {"date": "1990-06-15", "time": "14:30", "latitude": 40.4093, "longitude": 49.8671,
+            "timezone": "Asia/Baku", "start": "2026-01-01", "days": 120}
+    r = client.post("/api/charts/timeline", json=body)
+    assert r.status_code == 200 and all("at" in e for e in r.json()["events"])
+    assert client.post("/api/charts/timeline", json={**body, "days": 900}).status_code == 422

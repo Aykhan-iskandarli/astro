@@ -10,6 +10,7 @@ import VedicModel from '../models/vedic.model';
 import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
 import {ProgressionModel, ReturnModel} from '../models/forecast.model';
+import TimelineModel from '../models/timeline.model';
 
 export const getPlaces = (query: string): Promise<PlaceModel[]> => {
     return axiosPublic.get(API.places, {params: {q: query, limit: 8}})
@@ -92,5 +93,12 @@ export const getComposite = (first: IBirthInput, second: IBirthInput): Promise<N
     return axiosPublic.post(API.composite, {first, second, houseSystem: first.houseSystem})
         .then((res) => {
             return new NatalChartModel(res.data);
+        });
+};
+
+export const getTimeline = (input: IBirthInput, start: string, days: number): Promise<TimelineModel> => {
+    return axiosPublic.post(API.timeline, {...input, start, days})
+        .then((res) => {
+            return new TimelineModel(res.data);
         });
 };

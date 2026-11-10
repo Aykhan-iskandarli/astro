@@ -46,21 +46,8 @@ const styles = {
         top: '50%',
         marginTop: 'calc(min(110vmin, 1100px) / -2)',
         zIndex: -1,
-        opacity: 0.7,
-        [breakpoint(sizes.breakpoint)]: {right: '-45vmin', opacity: 0.4},
-    },
-    orbit: {
-        fill: 'none',
-        stroke: colors.border,
-        strokeWidth: 1,
-    },
-    orbitPlanet: {
-        fill: colors.gold,
-        filter: `drop-shadow(0 0 10px ${colors.gold})`,
-    },
-    orbitPlanetViolet: {
-        fill: colors.violet,
-        filter: `drop-shadow(0 0 8px ${colors.violet})`,
+        opacity: 0.85,
+        [breakpoint(sizes.breakpoint)]: {right: '-45vmin', opacity: 0.35},
     },
     content: {
         position: 'relative',

@@ -19,6 +19,7 @@ import NumerologyPanelComponent from '../numerology-panel/numerology-panel.compo
 import ChinesePanelComponent from '../chinese-panel/chinese-panel.component';
 import ForecastPanelComponent from '../forecast-panel/forecast-panel.component';
 import TabStripComponent from '../tab-strip/tab-strip.component';
+import BigThreeComponent from '../big-three/big-three.component';
 import {useChartResultStyles} from './chart-result.style';
 import {IChartResult} from './chart-result';
 
@@ -53,6 +54,13 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
         }
     }, []);
 
+    // From the Big Three cards (above the wheel): always bring the wheel + interpretation into view
+    const handleSelectFromSummary = useCallback((id: string) => {
+        setSelected(id);
+        setHovered(null);
+        stageRef.current?.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+    }, []);
+
     const handleSelect = useCallback((id: string) => {
         setSelected(id);
     }, []);
@@ -67,6 +75,7 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
 
                     {key: 'natal', label: translate('tab_natal'), children: (
                         <div className={classes.tabBody}>
+                            <BigThreeComponent chart={chart} onSelect={handleSelectFromSummary}/>
                             <div ref={stageRef} className={classes.stage}>
                                 <div className={classes.wheelWrap}>
                                     <ChartWheelComponent chart={chart} activeId={hovered} selectedId={selected} onActivate={handleActivate} onSelect={handleSelect}/>

@@ -47,9 +47,40 @@ const styles = {
         display: 'flex',
         gap: rem(4),
         marginLeft: 'auto',
-        [breakpoint(sizes.breakpointSm)]: {
-            '& a:first-child': {display: 'none'},
-        },
+        // Tablets and phones use the menu button instead
+        [breakpoint(sizes.breakpoint)]: {display: 'none'},
+    },
+    // The header's backdrop-filter makes it the containing block for fixed children, so the scrim is
+    // positioned against the header: it starts at its bottom edge and covers the rest of the viewport.
+    scrim: {
+        position: 'absolute',
+        top: '100%',
+        left: 0,
+        right: 0,
+        height: '100vh',
+        background: 'rgba(6,6,26,0.6)',
+        zIndex: -1,
+    },
+    mobileNav: {
+        display: 'flex',
+        flexDirection: 'column',
+        margin: [0, rem(12)],
+        padding: rem(8),
+        borderRadius: rem(16),
+        border: `1px solid ${colors.border}`,
+        background: 'rgba(20,20,43,0.97)',
+        boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+    },
+    mobileLink: {
+        display: 'flex',
+        alignItems: 'center',
+        minHeight: rem(48),
+        padding: [0, rem(16)],
+        borderRadius: rem(10),
+        color: colors.text,
+        textDecoration: 'none',
+        fontSize: rem(17),
+        '&:hover, &:focus-visible': {background: 'rgba(157,140,255,0.1)'},
     },
     link: {
         display: 'inline-flex',
@@ -69,6 +100,7 @@ const styles = {
     },
     tools: {
         display: 'flex',
+        [breakpoint(sizes.breakpoint)]: {marginLeft: 'auto'},
         alignItems: 'center',
         gap: rem(8),
         [breakpoint(sizes.breakpointSm)]: {gap: rem(2)},
@@ -104,6 +136,11 @@ const styles = {
         transition: transition('color, border-color', 0.2),
         '&:hover': {color: colors.gold, borderColor: colors.gold},
         '&[aria-pressed="true"]': {color: colors.gold, borderColor: colors.goldDeep},
+    },
+    // After iconButton so its display rule wins (same specificity, later in the sheet)
+    menuButton: {
+        display: 'none',
+        [breakpoint(sizes.breakpoint)]: {display: 'inline-flex'},
     },
 };
 

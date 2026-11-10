@@ -14,4 +14,5 @@ services:
       - ./packages/engine/tests:/app/packages/engine/tests
       - ./apps/api/app:/app/apps/api/app
       - ./apps/api/tests:/app/apps/api/tests
-    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log", "--reload"]
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log", "--reload",
+              "--reload-dir", "/app/apps/api/app", "--reload-dir", "/app/packages/engine/astra_engine"]

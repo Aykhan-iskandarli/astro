@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from pydantic.alias_generators import to_camel
 
-from astra_engine import MODULES, BirthData
+from astra_engine import MODULES, SKY, BirthData
 from astra_engine._backend import LIBRARY_VERSION
 
 from .geo import load_index
@@ -80,6 +80,11 @@ class ReturnRequest(NatalRequest):
 
 class ProgressionRequest(NatalRequest):
     target: DateTime | None = None
+
+
+class TimelineRequest(NatalRequest):
+    start: Date | None = None
+    days: int = Field(default=365, ge=1, le=400)
 
 
 class NumerologyRequest(BaseModel):
@@ -186,3 +191,35 @@ def progression_chart(req: ProgressionRequest) -> dict:
 def composite_chart(req: SynastryRequest) -> dict:
     return MODULES["western.composite"].calculate(_birth(req.first), _birth(req.second),
                                                   house_system=req.house_system)
+
+
+def _utc(at: DateTime | None) -> DateTime | None:
+    if at is not None and at.tzinfo is None:
+        at = at.replace(tzinfo=TimeZone.utc)
+    if at is not None and not 1800 <= at.year <= 2999:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return at
+
+
+@app.get("/api/sky")
+def sky_now(at: DateTime | None = None) -> dict:
+    """The sky at a moment (default: now). Not personal: no birth data involved."""
+    return SKY["sky.now"].calculate(_utc(at))
+
+
+@app.get("/api/sky/calendar")
+def sky_calendar(start: Date, end: Date) -> dict:
+    if not (1800 <= start.year and end.year <= 2999):
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    try:
+        return SKY["sky.calendar"].calculate(start, end)
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=[str(e)]) from e
+
+
+@app.post("/api/charts/timeline")
+def transit_timeline(req: TimelineRequest) -> dict:
+    if req.start is not None and not 1800 <= req.start.year <= 2998:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.timeline"].calculate(_birth(req), start=req.start, days=req.days,
+                                                 house_system=req.house_system)

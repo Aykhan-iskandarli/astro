@@ -67,3 +67,15 @@ def test_south_node_opposite_north():
     by_id = {p["id"]: p for p in out["points"]}
     d = (by_id["southNode"]["longitude"] - by_id["northNode"]["longitude"]) % 360
     assert abs(d - 180) < 1e-6
+
+
+def test_house_rulers_follow_cusp_sign_and_planet_positions():
+    from astra_engine.western.dignities import rulers_of
+    out = natal.calculate(BIRTHS["baku-1990"])
+    points = {p["id"]: p for p in out["points"]}
+    for h in out["houses"]:
+        assert [r["id"] for r in h["rulers"]] == rulers_of(h["sign"])
+        assert h["rulers"][0]["kind"] == "traditional"
+        for r in h["rulers"]:
+            assert r["sign"] == points[r["id"]]["sign"] and r["house"] == points[r["id"]]["house"]
+    assert rulers_of("scorpio") == ["mars", "pluto"] and rulers_of("leo") == ["sun"]

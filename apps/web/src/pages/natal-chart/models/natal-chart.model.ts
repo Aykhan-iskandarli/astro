@@ -73,16 +73,52 @@ export class ChartPointModel extends ChartPositionModel {
     }
 }
 
+export class HouseRulerModel {
+    public id: string | null = null;
+    public sign: string | null = null;
+    public house: number | null = null;
+    public kind: 'traditional' | 'modern' | null = null;
+
+    constructor(item: any) {
+        this._setId(item);
+        this._setSign(item);
+        this._setHouse(item);
+        this._setKind(item);
+    }
+
+    private _setId({id}: any) {
+        this.id = id ?? null;
+    }
+
+    private _setSign({sign}: any) {
+        this.sign = sign ?? null;
+    }
+
+    private _setHouse({house}: any) {
+        this.house = house ?? null;
+    }
+
+    private _setKind({kind}: any) {
+        this.kind = kind ?? null;
+    }
+}
+
 export class HouseCuspModel extends ChartPositionModel {
     public number: number | null = null;
+    public rulers: HouseRulerModel[] = [];
 
     constructor(item: any) {
         super(item, `house-${item?.number}`);
         this._setNumber(item);
+        this._setRulers(item);
     }
 
     private _setNumber({number}: any) {
         this.number = number ?? null;
+    }
+
+    private _setRulers({rulers}: any) {
+        this.rulers = rulers?.map((r: any) => new HouseRulerModel(r)) ?? [];
     }
 }
 

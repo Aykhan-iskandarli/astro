@@ -11,7 +11,8 @@ from .chinese import bazi
 from .destiny import matrix as destiny_matrix
 from .numerology import core as numerology
 from .vedic import chart as vedic_chart
-from .western import composite, natal, progressions, returns, synastry, transits
+from .sky import calendar as sky_calendar, now as sky_now
+from .western import composite, natal, progressions, returns, synastry, timeline, transits
 
 
 class EngineModule(Protocol):
@@ -31,6 +32,10 @@ MODULES: dict[str, EngineModule] = {
     returns.MODULE_ID: returns,                  # Phase 7
     progressions.MODULE_ID: progressions,        # Phase 7
     composite.MODULE_ID: composite,              # Phase 7
+    timeline.MODULE_ID: timeline,                # transit timeline
 }
 
-__all__ = ["BirthData", "MODULES", "EngineModule", "resolve_utc"]
+# The sky itself is not tied to a birth chart: calculate(at) / calculate(start, end)
+SKY: dict[str, EngineModule] = {sky_now.MODULE_ID: sky_now, sky_calendar.MODULE_ID: sky_calendar}
+
+__all__ = ["BirthData", "MODULES", "SKY", "EngineModule", "resolve_utc"]

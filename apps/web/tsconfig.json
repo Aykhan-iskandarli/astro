@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
@@ -15,15 +19,30 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["vite/client", "node"],
-    "baseUrl": "src",
+    "types": [
+      "vite/client",
+      "node"
+    ],
     "paths": {
-      "assets/*": ["assets/*"],
-      "core/*": ["core/*"],
-      "pages/*": ["pages/*"],
-      "router/*": ["router/*"],
-      "store/*": ["store/*"]
+      "assets/*": [
+        "./src/assets/*"
+      ],
+      "core/*": [
+        "./src/core/*"
+      ],
+      "pages/*": [
+        "./src/pages/*"
+      ],
+      "router/*": [
+        "./src/router/*"
+      ],
+      "store/*": [
+        "./src/store/*"
+      ]
     }
   },
-  "include": ["src", "vite.config.ts"]
+  "include": [
+    "src",
+    "vite.config.ts"
+  ]
 }

@@ -4,7 +4,9 @@ import {Button} from 'antd';
 import {motion, useReducedMotion, useScroll, useTransform} from 'framer-motion';
 import {Routes} from 'router/routes';
 import {wasPrerendered} from 'core/helpers/prerender';
-import StarfieldComponent from 'core/shared/starfield/starfield.component';
+import CosmicBackgroundComponent from 'core/shared/cosmic-background/cosmic-background.component';
+import ShootingStarsComponent from 'core/shared/shooting-stars/shooting-stars.component';
+import AstrolabeComponent from 'core/shared/astrolabe/astrolabe.component';
 import useLocalization from 'assets/lang';
 import {useHeroStyles} from './hero.style';
 import {IHero} from './hero';
@@ -45,21 +47,13 @@ const HeroComponent = ({journeyId}: IHero) => {
 
     return (
         <section ref={ref} className={classes.hero} aria-labelledby='hero-title'>
-            <StarfieldComponent/>
+            <CosmicBackgroundComponent/>
             <motion.div className={classes.nebulaA} style={{y: nebulaY}} aria-hidden='true'/>
             <motion.div className={classes.nebulaB} style={{y: nebula2Y}} aria-hidden='true'/>
-            <motion.svg className={classes.orbits} viewBox='-500 -500 1000 1000' style={{rotate: orbitRotate}} aria-hidden='true'>
-                {[180, 270, 360, 450].map((r, i) => (
-                    <motion.circle key={r} cx={0} cy={0} r={r} className={classes.orbit}
-                                   initial={!intro ? false : {pathLength: 0, opacity: 0}}
-                                   animate={{pathLength: 1, opacity: 1}}
-                                   transition={{delay: 0.3 + i * 0.25, duration: 2.4, ease: EASE}}/>
-                ))}
-                <motion.circle cx={360} cy={0} r={6} className={classes.orbitPlanet}
-                               initial={!intro ? false : {opacity: 0}} animate={{opacity: 1}} transition={{delay: 2.2, duration: 1}}/>
-                <motion.circle cx={-127} cy={-127} r={4} className={classes.orbitPlanetViolet}
-                               initial={!intro ? false : {opacity: 0}} animate={{opacity: 1}} transition={{delay: 2.6, duration: 1}}/>
-            </motion.svg>
+            <ShootingStarsComponent/>
+            <motion.div className={classes.orbits} style={{rotate: orbitRotate}} aria-hidden='true'>
+                <AstrolabeComponent/>
+            </motion.div>
 
             <motion.div className={`container ${classes.content}`} style={{y: contentY, opacity: contentOpacity}}>
                 <motion.p className={classes.eyebrow} {...rise(0.2)}>{translate('hero_eyebrow')}</motion.p>

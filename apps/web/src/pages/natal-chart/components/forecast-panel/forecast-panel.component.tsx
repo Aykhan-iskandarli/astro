@@ -13,10 +13,11 @@ import {IReturnParams} from '../../actions/natal-chart.service';
 import ChartWheelComponent from '../chart-wheel/chart-wheel.component';
 import InterpretationPanelComponent from '../interpretation-panel/interpretation-panel.component';
 import PointsTableComponent from '../points-table/points-table.component';
+import TransitTimelineComponent from '../transit-timeline/transit-timeline.component';
 import {useForecastPanelStyles} from './forecast-panel.style';
 import {IForecastPanel} from './forecast-panel';
 
-type Mode = 'solar' | 'lunar' | 'progressions';
+type Mode = 'timeline' | 'solar' | 'lunar' | 'progressions';
 const MIN = dayjs('1800-01-01');
 const MAX = dayjs('2999-12-31');
 
@@ -25,7 +26,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
     const content = useContent();
     const classes = useForecastPanelStyles();
     const birthInput = useStore('birthInput');
-    const [mode, setMode] = useState<Mode>('solar');
+    const [mode, setMode] = useState<Mode>('timeline');
     const [year, setYear] = useState<number>(dayjs().year());
     const [after, setAfter] = useState<Dayjs>(() => dayjs().startOf('day'));
     const [target, setTarget] = useState<Dayjs>(() => dayjs().startOf('day'));
@@ -41,7 +42,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
     const params: IReturnParams = useMemo(() => (mode === 'solar'
         ? {kind: 'solar', year, relocate: relocate ? place : null}
         : {kind: 'lunar', after: after.format('YYYY-MM-DD'), relocate: relocate ? place : null}), [mode, year, after, relocate, place]);
-    const {data: ret, isFetching: retBusy} = useGetReturn(birthInput, params, mode !== 'progressions');
+    const {data: ret, isFetching: retBusy} = useGetReturn(birthInput, params, mode === 'solar' || mode === 'lunar');
     const {data: prog, isFetching: progBusy} = useGetProgressions(birthInput, target.endOf('day').toISOString(), mode === 'progressions');
 
     const name = useCallback((id: string) => content.points[id as keyof typeof content.points]?.name ?? id, [content]);
@@ -91,6 +92,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
     })), [places]);
 
     const modes = useMemo(() => [
+        {value: 'timeline', label: translate('forecast_timeline')},
         {value: 'solar', label: translate('forecast_solar')},
         {value: 'lunar', label: translate('forecast_lunar')},
         {value: 'progressions', label: translate('forecast_progressions')},
@@ -115,7 +117,9 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
                 <Segmented options={modes} value={mode} onChange={handleMode} size='large'/>
             </header>
 
-            <div className={classes.controls}>
+            {mode === 'timeline' ? <TransitTimelineComponent/> : null}
+
+            {mode === 'timeline' ? null : <div className={classes.controls}>
                 {mode === 'solar' ? (
                     <label className={classes.control}>
                         <span>{translate('forecast_year')}</span>
@@ -145,9 +149,9 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
                         ) : null}
                     </div>
                 )}
-            </div>
+            </div>}
 
-            {mode !== 'progressions' ? (
+            {mode === 'timeline' ? null : mode !== 'progressions' ? (
                 !ret?.chart ? <LoaderComponent/> : (
                     <div className={classNames(classes.body, {[classes.busy]: retBusy})}>
                         <p className={classes.info}>{translate(mode === 'solar' ? 'forecast_solar_info' : 'forecast_lunar_info')}</p>

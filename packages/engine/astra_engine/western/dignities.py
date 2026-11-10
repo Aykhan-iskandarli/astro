@@ -18,6 +18,20 @@ EXALTATION: dict[str, str] = {
 }
 
 
+# House rulers: the traditional ruler of the cusp sign, plus the modern co-ruler where one exists.
+TRADITIONAL_RULER: dict[str, str] = {
+    "aries": "mars", "taurus": "venus", "gemini": "mercury", "cancer": "moon", "leo": "sun", "virgo": "mercury",
+    "libra": "venus", "scorpio": "mars", "sagittarius": "jupiter", "capricorn": "saturn", "aquarius": "saturn",
+    "pisces": "jupiter",
+}
+MODERN_CORULER: dict[str, str] = {"scorpio": "pluto", "aquarius": "uranus", "pisces": "neptune"}
+
+
+def rulers_of(sign: str) -> list[str]:
+    """[traditional ruler] or [traditional ruler, modern co-ruler]."""
+    return [TRADITIONAL_RULER[sign]] + ([MODERN_CORULER[sign]] if sign in MODERN_CORULER else [])
+
+
 def _opposite(sign: str) -> str:
     return SIGNS[(SIGNS.index(sign) + 6) % 12]
 

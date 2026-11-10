@@ -1,6 +1,6 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
-import {getBazi, getComposite, getNumerology, getPlaces, getProgressions, getReturn, getTransits, getVedic, IReturnParams} from './natal-chart.service';
+import {getBazi, getComposite, getNumerology, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic, IReturnParams} from './natal-chart.service';
 import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
 import VedicModel from '../models/vedic.model';
@@ -8,6 +8,7 @@ import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
 import NatalChartModel from '../models/natal-chart.model';
 import {ProgressionModel, ReturnModel} from '../models/forecast.model';
+import TimelineModel from '../models/timeline.model';
 
 export const useGetPlaces = (query: string) => {
     return useQuery<PlaceModel[], Error>({
@@ -135,6 +136,23 @@ export const useGetComposite = (first: IBirthInput | null, second: IBirthInput |
             return getComposite(first!, second!);
         },
         enabled: !!first && !!second,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetTimeline = (input: IBirthInput | null, start: string, days: number, enabled: boolean) => {
+    return useQuery<TimelineModel, Error>({
+        queryKey: ['timeline', input, start, days],
+        queryFn: () => {
+            return getTimeline(input!, start, days);
+        },
+        enabled: !!input && enabled,
+        placeholderData: keepPreviousData,
         staleTime: Infinity,
         gcTime: 5 * 60 * 1000,
         retry: false,

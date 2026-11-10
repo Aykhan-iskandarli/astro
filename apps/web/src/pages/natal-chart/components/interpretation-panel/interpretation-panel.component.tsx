@@ -1,5 +1,5 @@
 import {AnimatePresence, motion} from 'framer-motion';
-import {describePlacement} from '@astra/content';
+import {aspectPairText, describePlacement} from '@astra/content';
 import {ASPECT_GLYPHS, aspectTone, formatDegree, formatOrb, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
 import {useStore} from 'store/store.config';
 import useLocalization, {useContent} from 'assets/lang';
@@ -67,6 +67,9 @@ const InterpretationPanelComponent = ({chart, pointId}: IInterpretationPanel) =>
                                                 <strong>{info?.name}</strong>{` · ${pointName(other)} · ${formatOrb(a.orb!)}`}
                                                 {a.applying !== null ? ` · ${translate(a.applying ? 'applying' : 'separating')}` : ''}
                                                 <br/>
+                                                {aspectPairText(locale, a.p1!, a.p2!) ? (
+                                                    <>{aspectPairText(locale, a.p1!, a.p2!)}<br/></>
+                                                ) : null}
                                                 <span className={classes.muted}>{info?.meaning}</span>
                                             </span>
                                         </li>

@@ -42,6 +42,14 @@ const pad = (n: number) => String(n).padStart(2, '0');
 export const formatDegree = (degree: number | null, minute: number | null) =>
     degree === null || minute === null ? '—' : `${degree}°${pad(minute)}′`;
 
+/** UTC ISO instant from the engine -> the viewer's local date/time (DD.MM.YYYY HH:mm). */
+export const formatLocal = (iso: string | null, withTime = true) => {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    const date = `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${d.getFullYear()}`;
+    return withTime ? `${date} ${pad(d.getHours())}:${pad(d.getMinutes())}` : date;
+};
+
 /** Orb in degrees -> 1°23′ */
 export const formatOrb = (orb: number) => {
     const d = Math.floor(orb);

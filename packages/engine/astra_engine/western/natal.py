@@ -13,7 +13,7 @@ from ..common.birth import BirthData, HouseSystem, resolve_utc
 from ..common.zodiac import house_of, norm, sign_of, split_degree
 from .aspects import AspectPoint, find_aspects
 from .balance import balance
-from .dignities import dignity_of
+from .dignities import dignity_of, rulers_of
 from .lunar import lunar_phase
 from .patterns import find_patterns
 
@@ -109,7 +109,19 @@ def assemble(raw: dict[str, tuple[float, float | None, bool | None]], cusps: lis
             "dignity": dignity_of(pid, pos["sign"]),
         })
     angles = {aid: _position(lon) for aid, lon in angle_lons.items()} if angle_lons else None
-    houses = [{"number": i + 1, **_position(c)} for i, c in enumerate(cusps)] if cusps else None
+    houses = None
+    if cusps:
+        where = {p["id"]: p for p in points}
+        houses = []
+        for i, c in enumerate(cusps):
+            pos = _position(c)
+            houses.append({
+                "number": i + 1, **pos,
+                # Where each ruler of the cusp sign sits: links this house's topics to another house
+                "rulers": [{"id": r, "sign": where[r]["sign"], "house": where[r]["house"],
+                            "kind": "traditional" if j == 0 else "modern"}
+                           for j, r in enumerate(rulers_of(pos["sign"])) if r in where],
+            })
 
     aspect_points = [AspectPoint(p["id"], p["longitude"], p["speed"]) for p in points if p["id"] != "partOfFortune"]
     if angles:

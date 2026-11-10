@@ -7,6 +7,9 @@ import {IBirthInput} from 'store/store';
 import {Routes} from 'router/routes';
 import SeoComponent from 'core/shared/seo/seo.component';
 import LoaderComponent from 'core/shared/loader/loader.component';
+import CosmicBackgroundComponent from 'core/shared/cosmic-background/cosmic-background.component';
+import ShootingStarsComponent from 'core/shared/shooting-stars/shooting-stars.component';
+import AstrolabeComponent from 'core/shared/astrolabe/astrolabe.component';
 import useLocalization from 'assets/lang';
 import {useCreateDestinyMatrix, useCreateNatalChart} from './actions/natal-chart.mutation';
 import BirthFormComponent from './components/birth-form/birth-form.component';
@@ -21,7 +24,7 @@ function NatalChartComponent() {
     const dispatch = useDispatch();
     const birthInput = useStore('birthInput');
     const savedCharts = useStore('savedCharts');
-    const {page, formCard, formHead, resultWrap} = useNatalChartStyles();
+    const {stage, backdrop, astrolabe, page, formCard, formHead, resultWrap} = useNatalChartStyles();
     const [editing, setEditing] = useState(true);
 
     const {mutate: createChart, data: chart, isPending, reset} = useCreateNatalChart();
@@ -58,6 +61,17 @@ function NatalChartComponent() {
     const showResult = !editing && chart;
 
     return (
+        <div className={stage}>
+            <AnimatePresence>
+                {!showResult && (
+                    <motion.div key='backdrop' className={backdrop} aria-hidden='true'
+                                initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.8}}>
+                        <CosmicBackgroundComponent intensity={0.85}/>
+                        <ShootingStarsComponent/>
+                        <div className={astrolabe}><AstrolabeComponent opacity={0.55}/></div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         <div className={`container ${page}`}>
             <SeoComponent titleKey='seo_chart_title' descriptionKey='seo_chart_description' path={Routes.natalChart}/>
             <AnimatePresence mode='wait'>
@@ -82,6 +96,7 @@ function NatalChartComponent() {
                     </motion.div>
                 )}
             </AnimatePresence>
+        </div>
         </div>
     );
 }

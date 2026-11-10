@@ -10,4 +10,7 @@ export const API = {
     returns: '/api/charts/returns',
     progressions: '/api/charts/progressions',
     composite: '/api/charts/composite',
+    timeline: '/api/charts/timeline',
+    sky: '/api/sky',
+    skyCalendar: '/api/sky/calendar',
 };
