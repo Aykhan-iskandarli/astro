@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Regenerate when routes change: keep in sync with publicRoutes in src/router/routes.ts -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://astra.example/</loc></url>
+  <url><loc>https://astra.example/natal-chart</loc></url>
+  <url><loc>https://astra.example/privacy-policy</loc></url>
+</urlset>

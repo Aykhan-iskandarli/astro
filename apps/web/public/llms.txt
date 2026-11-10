@@ -1,0 +1,10 @@
+# Astra
+
+> Astra is a free, open-source (AGPL-3.0) astrology platform. It calculates Western natal charts with Swiss Ephemeris accuracy: planets, houses, aspects, aspect patterns, element balance and short interpretations, in Azerbaijani and English. Birth data is not stored on the server.
+
+### Main pages
+- [Home](https://astra.example/): introduction and a journey through the planets' archetypes
+- [Natal chart](https://astra.example/natal-chart): enter birth date, time and place to calculate a chart
+
+### Legal
+- [Privacy policy](https://astra.example/privacy-policy)

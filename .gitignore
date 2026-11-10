@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+*.log
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+.env.local
+apps/api/data/cities.json
+spike/out/*.png
+.DS_Store
+spike/ephe/
+apps/web/dist/

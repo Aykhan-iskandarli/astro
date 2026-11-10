@@ -1,0 +1,878 @@
+{
+  "_status": "draft: AI-written, needs editorial review by an astrologer",
+  "points": {
+    "sun": {
+      "name": "Sun",
+      "keywords": "identity, vitality, the conscious self",
+      "archetype": "Identity, vitality, the conscious self.",
+      "short": "The Sun shows your core identity, your vitality and what makes you shine."
+    },
+    "moon": {
+      "name": "Moon",
+      "keywords": "emotions, instincts, inner needs",
+      "archetype": "Emotions, instincts, inner needs.",
+      "short": "The Moon shows your emotions, what makes you feel safe and your inner needs."
+    },
+    "mercury": {
+      "name": "Mercury",
+      "keywords": "mind, communication, learning",
+      "archetype": "Mind, communication, learning.",
+      "short": "Mercury shows how you think, speak and learn."
+    },
+    "venus": {
+      "name": "Venus",
+      "keywords": "love, beauty, values, harmony",
+      "archetype": "Love, beauty, values, harmony.",
+      "short": "Venus shows what you love, what you value and how you seek harmony in relationships."
+    },
+    "mars": {
+      "name": "Mars",
+      "keywords": "drive, courage, action",
+      "archetype": "Drive, courage, action.",
+      "short": "Mars shows what you go after, how you take action and where you direct your energy."
+    },
+    "jupiter": {
+      "name": "Jupiter",
+      "keywords": "expansion, abundance, luck, wisdom",
+      "archetype": "Expansion, abundance, luck, wisdom: the planet of abundance.",
+      "short": "Jupiter shows where you grow, where your faith lies and where life opens up generously."
+    },
+    "saturn": {
+      "name": "Saturn",
+      "keywords": "discipline, structure, time, life lessons",
+      "archetype": "Discipline, structure, time, life lessons.",
+      "short": "Saturn shows where you carry responsibility, learn patience and grow stronger over time."
+    },
+    "uranus": {
+      "name": "Uranus",
+      "keywords": "change, freedom, innovation",
+      "archetype": "Change, freedom, innovation.",
+      "short": "Uranus shows where you want to be different, free and open to sudden change."
+    },
+    "neptune": {
+      "name": "Neptune",
+      "keywords": "dreams, intuition, spirituality",
+      "archetype": "Dreams, intuition, spirituality.",
+      "short": "Neptune shows your dreams, your intuition and the sensitive area where boundaries dissolve."
+    },
+    "pluto": {
+      "name": "Pluto",
+      "keywords": "transformation, power, rebirth",
+      "archetype": "Transformation, power, rebirth.",
+      "short": "Pluto shows where you go through deep change and discover your inner power."
+    },
+    "northNode": {
+      "name": "North Node",
+      "keywords": "path of growth, direction",
+      "archetype": "Direction of growth.",
+      "short": "The North Node shows your direction of growth: the path that moves you forward even when it feels unfamiliar."
+    },
+    "southNode": {
+      "name": "South Node",
+      "keywords": "past, habits, ready-made skills",
+      "archetype": "Familiar habits and ready-made skills.",
+      "short": "The South Node shows familiar habits you already master, and where you may get stuck."
+    },
+    "lilith": {
+      "name": "Lilith (Black Moon)",
+      "keywords": "hidden instinct, taboo, independence",
+      "archetype": "Hidden instinct and independence.",
+      "short": "Lilith shows suppressed instincts and the part of you that refuses to submit."
+    },
+    "chiron": {
+      "name": "Chiron",
+      "keywords": "wound, healing, wisdom",
+      "archetype": "The wound and the healing.",
+      "short": "Chiron shows a sensitive wound, and the wisdom that lets you help others as you understand it."
+    },
+    "partOfFortune": {
+      "name": "Part of Fortune",
+      "keywords": "success, ease, natural flow",
+      "archetype": "Natural success and ease.",
+      "short": "The Part of Fortune shows where life flows more easily and where you find contentment."
+    },
+    "asc": {
+      "name": "Ascendant",
+      "abbr": "ASC",
+      "keywords": "appearance, first impression, approach",
+      "archetype": "The doorway to the world.",
+      "short": "The Ascendant shows how you present yourself to the world and the first impression you make."
+    },
+    "mc": {
+      "name": "Midheaven",
+      "abbr": "MC",
+      "keywords": "career, purpose, public role",
+      "archetype": "The summit and purpose.",
+      "short": "The Midheaven shows your career direction, public role and what you want to be known for."
+    },
+    "dc": {
+      "name": "Descendant",
+      "abbr": "DC",
+      "keywords": "partnership, others",
+      "archetype": "Partnership.",
+      "short": "The Descendant shows the qualities you seek in partners and learn through relationships."
+    },
+    "ic": {
+      "name": "Imum Coeli",
+      "abbr": "IC",
+      "keywords": "roots, home, family",
+      "archetype": "Roots and home.",
+      "short": "The Imum Coeli shows your roots, your family and your inner refuge."
+    }
+  },
+  "signs": {
+    "aries": {
+      "name": "Aries",
+      "keywords": "courage, initiative, directness",
+      "expression": "In Aries this energy is expressed boldly, directly and with initiative: quick to start and frank to speak."
+    },
+    "taurus": {
+      "name": "Taurus",
+      "keywords": "stability, comfort, patience",
+      "expression": "In Taurus this energy is expressed calmly, patiently and steadily: it seeks stability, comfort and tangible results."
+    },
+    "gemini": {
+      "name": "Gemini",
+      "keywords": "curiosity, agility, communication",
+      "expression": "In Gemini this energy is expressed with curiosity, agility and sociability: it wants to learn, ask and share."
+    },
+    "cancer": {
+      "name": "Cancer",
+      "keywords": "care, sensitivity, memory",
+      "expression": "In Cancer this energy is expressed sensitively, caringly and protectively: it seeks emotional safety and closeness."
+    },
+    "leo": {
+      "name": "Leo",
+      "keywords": "creativity, generosity, self-expression",
+      "expression": "In Leo this energy is expressed warmly, creatively and generously: it wants to be seen, loved and to create from the heart."
+    },
+    "virgo": {
+      "name": "Virgo",
+      "keywords": "precision, service, analysis",
+      "expression": "In Virgo this energy is expressed precisely, attentively and usefully: it wants to improve, organise and help."
+    },
+    "libra": {
+      "name": "Libra",
+      "keywords": "harmony, fairness, partnership",
+      "expression": "In Libra this energy is expressed gracefully, diplomatically and in balance: it seeks harmony, beauty and fairness."
+    },
+    "scorpio": {
+      "name": "Scorpio",
+      "keywords": "depth, intensity, transformation",
+      "expression": "In Scorpio this energy is expressed deeply, intensely and loyally: it wants to get past the surface to the truth."
+    },
+    "sagittarius": {
+      "name": "Sagittarius",
+      "keywords": "freedom, meaning, adventure",
+      "expression": "In Sagittarius this energy is expressed optimistically, openly and freely: it seeks meaning, travel and wide horizons."
+    },
+    "capricorn": {
+      "name": "Capricorn",
+      "keywords": "responsibility, purpose, endurance",
+      "expression": "In Capricorn this energy is expressed seriously, purposefully and with endurance: it wants to build something solid, step by step."
+    },
+    "aquarius": {
+      "name": "Aquarius",
+      "keywords": "originality, freedom, community",
+      "expression": "In Aquarius this energy is expressed originally, independently and with an eye on the future: it thinks differently and wants change together."
+    },
+    "pisces": {
+      "name": "Pisces",
+      "keywords": "empathy, imagination, intuition",
+      "expression": "In Pisces this energy is expressed sensitively, dreamily and compassionately: it flows with intuition and longs for wholeness."
+    }
+  },
+  "houses": {
+    "1": {
+      "name": "1st house",
+      "theme": "self, appearance, beginnings",
+      "expression": "In the 1st house this theme shows clearly in your personality and how you present yourself."
+    },
+    "2": {
+      "name": "2nd house",
+      "theme": "money, values, resources",
+      "expression": "In the 2nd house this theme is lived through money, possessions, skills and self-worth."
+    },
+    "3": {
+      "name": "3rd house",
+      "theme": "communication, learning, surroundings",
+      "expression": "In the 3rd house this theme shows in communication, learning, siblings and your close surroundings."
+    },
+    "4": {
+      "name": "4th house",
+      "theme": "home, family, roots",
+      "expression": "In the 4th house this theme is lived through home, family, roots and a sense of inner security."
+    },
+    "5": {
+      "name": "5th house",
+      "theme": "creativity, romance, play",
+      "expression": "In the 5th house this theme shows in creativity, romance, children and the joy of living."
+    },
+    "6": {
+      "name": "6th house",
+      "theme": "work, health, daily rhythm",
+      "expression": "In the 6th house this theme is lived through daily work, habits, service and caring for your health."
+    },
+    "7": {
+      "name": "7th house",
+      "theme": "partnership, marriage, others",
+      "expression": "In the 7th house this theme shows in partnerships, marriage and committed relationships."
+    },
+    "8": {
+      "name": "8th house",
+      "theme": "intimacy, shared resources, transformation",
+      "expression": "In the 8th house this theme is lived through deep bonds, shared resources and life-changing crises."
+    },
+    "9": {
+      "name": "9th house",
+      "theme": "philosophy, travel, higher learning",
+      "expression": "In the 9th house this theme shows in travel, higher education, belief and worldview."
+    },
+    "10": {
+      "name": "10th house",
+      "theme": "career, reputation, purpose",
+      "expression": "In the 10th house this theme is visible in your career, public reputation and life purpose."
+    },
+    "11": {
+      "name": "11th house",
+      "theme": "friends, community, hopes",
+      "expression": "In the 11th house this theme is lived through friendship, community, teamwork and hopes for the future."
+    },
+    "12": {
+      "name": "12th house",
+      "theme": "inner world, solitude, the unconscious",
+      "expression": "In the 12th house this theme is lived in your inner world, in solitude, dreams and unseen processes."
+    }
+  },
+  "aspects": {
+    "conjunction": {
+      "name": "Conjunction",
+      "meaning": "The two energies merge and amplify each other."
+    },
+    "opposition": {
+      "name": "Opposition",
+      "meaning": "The two energies stand at opposite poles; the task is balance and seeing yourself in the other."
+    },
+    "trine": {
+      "name": "Trine",
+      "meaning": "The two energies flow naturally together, giving talent and ease."
+    },
+    "square": {
+      "name": "Square",
+      "meaning": "There is tension between the two energies; the friction drives growth and action."
+    },
+    "sextile": {
+      "name": "Sextile",
+      "meaning": "The two energies support each other; the opportunity is there, but the step is yours to take."
+    },
+    "quincunx": {
+      "name": "Quincunx",
+      "meaning": "The two energies don't quite understand each other; constant small adjustments are needed."
+    },
+    "semisextile": {
+      "name": "Semi-sextile",
+      "meaning": "A light, subtle link; a chance for small adjustments."
+    },
+    "semisquare": {
+      "name": "Semi-square",
+      "meaning": "Minor but persistent irritation; friction that asks for attention."
+    },
+    "sesquiquadrate": {
+      "name": "Sesquiquadrate",
+      "meaning": "Hidden tension; a challenge that surfaces from time to time."
+    }
+  },
+  "patterns": {
+    "grandTrine": {
+      "name": "Grand Trine",
+      "meaning": "Three planets form an equilateral triangle: natural talent and easy flow, with a risk of staying too comfortable."
+    },
+    "tSquare": {
+      "name": "T-Square",
+      "meaning": "Two opposing planets put pressure on a third: the apex planet shows the main life challenge and its driving force."
+    },
+    "grandCross": {
+      "name": "Grand Cross",
+      "meaning": "Four planets form a cross: tension from every side builds great endurance and strength."
+    },
+    "yod": {
+      "name": "Yod (Finger of Fate)",
+      "meaning": "Two planets point at a third: the apex is a special mission and an area of constant adjustment."
+    },
+    "kite": {
+      "name": "Kite",
+      "meaning": "A fourth planet joins a grand trine: talent gains a concrete direction and purpose."
+    },
+    "mysticRectangle": {
+      "name": "Mystic Rectangle",
+      "meaning": "Two oppositions joined by trines and sextiles: tension turns into practical harmony."
+    },
+    "stellium": {
+      "name": "Stellium",
+      "meaning": "Three or more planets gather in one place: this theme carries special weight in your life."
+    }
+  },
+  "elements": {
+    "fire": {
+      "name": "Fire",
+      "meaning": "energy, inspiration, courage"
+    },
+    "earth": {
+      "name": "Earth",
+      "meaning": "practicality, stability, results"
+    },
+    "air": {
+      "name": "Air",
+      "meaning": "ideas, communication, connection"
+    },
+    "water": {
+      "name": "Water",
+      "meaning": "emotion, intuition, sensitivity"
+    }
+  },
+  "modalities": {
+    "cardinal": {
+      "name": "Cardinal",
+      "meaning": "starting, initiative"
+    },
+    "fixed": {
+      "name": "Fixed",
+      "meaning": "sustaining, endurance"
+    },
+    "mutable": {
+      "name": "Mutable",
+      "meaning": "adapting, flexibility"
+    }
+  },
+  "polarity": {
+    "positive": {
+      "name": "Positive (yang)",
+      "meaning": "outward, active"
+    },
+    "negative": {
+      "name": "Negative (yin)",
+      "meaning": "inward, receptive"
+    }
+  },
+  "dignities": {
+    "domicile": {
+      "name": "Domicile",
+      "meaning": "The planet is in its own sign: its energy flows naturally and strongly."
+    },
+    "exaltation": {
+      "name": "Exaltation",
+      "meaning": "The planet is exalted: its best qualities shine."
+    },
+    "detriment": {
+      "name": "Detriment",
+      "meaning": "The planet is opposite its own sign: expressing it takes extra effort."
+    },
+    "fall": {
+      "name": "Fall",
+      "meaning": "The planet is in its fall: maturity in this area is earned over time."
+    }
+  },
+  "lunarPhases": {
+    "newMoon": "New Moon",
+    "waxingCrescent": "Waxing Crescent",
+    "firstQuarter": "First Quarter",
+    "waxingGibbous": "Waxing Gibbous",
+    "fullMoon": "Full Moon",
+    "disseminating": "Disseminating",
+    "lastQuarter": "Last Quarter",
+    "balsamic": "Balsamic"
+  },
+  "houseSystems": {
+    "placidus": "Placidus",
+    "koch": "Koch",
+    "wholeSign": "Whole Sign",
+    "equal": "Equal",
+    "porphyry": "Porphyry"
+  },
+  "destiny": {
+    "arcana": {
+      "1": {
+        "name": "The Magician",
+        "keywords": "will, beginnings, communication",
+        "plus": "Starting new things and inspiring people through words and ideas.",
+        "minus": "Manipulation, scattered energy, starting without finishing."
+      },
+      "2": {
+        "name": "The High Priestess",
+        "keywords": "intuition, knowledge, mystery",
+        "plus": "Deep intuition, a gift for learning and teaching, trust in the inner voice.",
+        "minus": "Withdrawal, doubt, hiding knowledge."
+      },
+      "3": {
+        "name": "The Empress",
+        "keywords": "femininity, abundance, creation",
+        "plus": "Care, beauty, abundance and creative energy.",
+        "minus": "Over-control, waste, low self-worth."
+      },
+      "4": {
+        "name": "The Emperor",
+        "keywords": "order, leadership, structure",
+        "plus": "Responsibility, building stability, leadership and decisiveness.",
+        "minus": "Rigidity, authoritarianism, resistance to change."
+      },
+      "5": {
+        "name": "The Hierophant",
+        "keywords": "tradition, teaching, values",
+        "plus": "Passing on knowledge, giving spiritual direction, respect for family and tradition.",
+        "minus": "Dogmatism, preaching, clinging to old rules."
+      },
+      "6": {
+        "name": "The Lovers",
+        "keywords": "love, choice, harmony",
+        "plus": "Loving from the heart, seeing beauty, making the right choice.",
+        "minus": "Indecision, dependency, conditional love."
+      },
+      "7": {
+        "name": "The Chariot",
+        "keywords": "movement, goals, victory",
+        "plus": "Moving towards goals, travel, winning through will.",
+        "minus": "Haste, losing direction, aggression."
+      },
+      "8": {
+        "name": "Justice",
+        "keywords": "balance, responsibility, law",
+        "plus": "Fairness, understanding cause and effect, clear decisions.",
+        "minus": "Judging others, resentment, powerlessness before injustice."
+      },
+      "9": {
+        "name": "The Hermit",
+        "keywords": "wisdom, solitude, search",
+        "plus": "Deep thought, finding your own path, lighting the way for others.",
+        "minus": "Isolation, coldness, escaping the world."
+      },
+      "10": {
+        "name": "Wheel of Fortune",
+        "keywords": "flow, opportunity, cycles",
+        "plus": "Openness to change, seeing chances, moving with the rhythm of life.",
+        "minus": "Passivity, leaving everything to fate, instability."
+      },
+      "11": {
+        "name": "Strength",
+        "keywords": "inner power, energy, endurance",
+        "plus": "Great vital energy, mastering emotions, compassionate strength.",
+        "minus": "Exhaustion, suppressed anger, forcing power."
+      },
+      "12": {
+        "name": "The Hanged Man",
+        "keywords": "sacrifice, new perspective, pause",
+        "plus": "Seeing the world differently, service, deep understanding.",
+        "minus": "Victim role, being stuck, self-denial."
+      },
+      "13": {
+        "name": "Death",
+        "keywords": "transformation, renewal, endings",
+        "plus": "Letting go of the old to make room for the new; the power to transform.",
+        "minus": "Fear of change, clinging to the past, destructiveness."
+      },
+      "14": {
+        "name": "Temperance",
+        "keywords": "balance, patience, healing",
+        "plus": "Calm, adaptability, bringing harmony and healing to people.",
+        "minus": "Indifference, extremes, inner emptiness."
+      },
+      "15": {
+        "name": "The Devil",
+        "keywords": "power, charm, material world",
+        "plus": "Charisma, financial skill, using power well.",
+        "minus": "Addictions, manipulation, giving in to desires."
+      },
+      "16": {
+        "name": "The Tower",
+        "keywords": "upheaval, liberation, rebuilding",
+        "plus": "Tearing down false structures and building anew, sincere creativity.",
+        "minus": "Sudden crises, stubbornness, destroying what is around you."
+      },
+      "17": {
+        "name": "The Star",
+        "keywords": "hope, inspiration, talent",
+        "plus": "Creativity, beauty, inspiring others, hope.",
+        "minus": "Fear of being seen, living in dreams."
+      },
+      "18": {
+        "name": "The Moon",
+        "keywords": "intuition, dreams, the hidden",
+        "plus": "Strong imagination, intuition, creative vision.",
+        "minus": "Fears, illusions, self-deception."
+      },
+      "19": {
+        "name": "The Sun",
+        "keywords": "joy, success, light",
+        "plus": "Warmth, optimism, success and sharing energy with others.",
+        "minus": "Egoism, arrogance, burning out."
+      },
+      "20": {
+        "name": "Judgement",
+        "keywords": "awakening, family line, rebirth",
+        "plus": "Bond with the family, awakening, learning from past experience.",
+        "minus": "Ancestral burdens, not forgiving, being stuck in the past."
+      },
+      "21": {
+        "name": "The World",
+        "keywords": "wholeness, breadth, travel",
+        "plus": "A broad worldview, travel, going beyond borders.",
+        "minus": "Feeling limited, stagnation, fear."
+      },
+      "22": {
+        "name": "The Fool",
+        "keywords": "freedom, lightness, a new path",
+        "plus": "Freedom, spontaneity, play and openness to the new.",
+        "minus": "Irresponsibility, instability, chaos."
+      }
+    },
+    "positions": {
+      "A": {
+        "name": "Calling card",
+        "meaning": "How others see you; your natural character."
+      },
+      "B": {
+        "name": "Second half of character",
+        "meaning": "Inner character, inspiration and potential talent."
+      },
+      "C": {
+        "name": "Task until 40",
+        "meaning": "The quality and material sphere to develop before 40."
+      },
+      "D": {
+        "name": "Karmic task",
+        "meaning": "The main lesson of the soul to work through."
+      },
+      "E": {
+        "name": "Comfort zone",
+        "meaning": "The heart of the matrix: the energy where you find harmony."
+      },
+      "F": {
+        "name": "Father's line (spiritual)",
+        "meaning": "Spiritual inheritance from the father's side."
+      },
+      "G": {
+        "name": "Mother's line (spiritual)",
+        "meaning": "Spiritual inheritance from the mother's side."
+      },
+      "H": {
+        "name": "Father's line (material)",
+        "meaning": "Material inheritance and programmes from the father's side."
+      },
+      "I": {
+        "name": "Mother's line (material)",
+        "meaning": "Material inheritance and programmes from the mother's side."
+      },
+      "J": {
+        "name": "Personality",
+        "meaning": "A personal quality close to the core."
+      },
+      "K": {
+        "name": "Talent",
+        "meaning": "Personal talent, natural gift."
+      },
+      "L": {
+        "name": "Money channel",
+        "meaning": "The channel through which money comes."
+      },
+      "M": {
+        "name": "Readiness for relationships",
+        "meaning": "Meeting a partner and readiness for a relationship."
+      },
+      "N": {
+        "name": "Karmic tail (middle)",
+        "meaning": "An unresolved task carried from the past."
+      },
+      "O": {
+        "name": "Childhood energy",
+        "meaning": "A quality formed in childhood."
+      },
+      "P": {
+        "name": "Higher talent",
+        "meaning": "A talent given from above."
+      },
+      "Q": {
+        "name": "Finance programme",
+        "meaning": "Inner beliefs about money."
+      },
+      "S": {
+        "name": "Inner core",
+        "meaning": "The quality that leads to the comfort zone."
+      },
+      "T": {
+        "name": "Path to the heart",
+        "meaning": "Spiritual talent expressed close to the core."
+      },
+      "R": {
+        "name": "Love and money node",
+        "meaning": "The main block and growth point in love and money."
+      },
+      "R1": {
+        "name": "Character of the relationship",
+        "meaning": "The general tone of your partnerships."
+      },
+      "R2": {
+        "name": "Profession and success",
+        "meaning": "The professional sphere that brings success."
+      },
+      "F1": {
+        "name": "Father's line programme",
+        "meaning": "A programme passed down the father's line."
+      },
+      "F2": {
+        "name": "Father's line talent",
+        "meaning": "A talent from the father's line."
+      },
+      "G1": {
+        "name": "Mother's line programme",
+        "meaning": "A programme passed down the mother's line."
+      },
+      "G2": {
+        "name": "Mother's line talent",
+        "meaning": "A talent from the mother's line."
+      },
+      "H1": {
+        "name": "Father's line programme (material)",
+        "meaning": "A material programme from the father's side."
+      },
+      "H2": {
+        "name": "Father's line, near centre",
+        "meaning": "The father's-line energy near the centre."
+      },
+      "I1": {
+        "name": "Mother's line programme (material)",
+        "meaning": "A material programme from the mother's side."
+      },
+      "I2": {
+        "name": "Mother's line, near centre",
+        "meaning": "The mother's-line energy near the centre."
+      },
+      "L1": {
+        "name": "Combined centre",
+        "meaning": "The sum of the personal and ancestral centres."
+      },
+      "L2": {
+        "name": "Ancestral centre",
+        "meaning": "The centre of the ancestral square."
+      }
+    },
+    "purposes": {
+      "sky": {
+        "name": "Sky line",
+        "meaning": "Spiritual qualities, inner growth."
+      },
+      "earth": {
+        "name": "Earth line",
+        "meaning": "Material skills, showing up in the world."
+      },
+      "personal": {
+        "name": "Personal purpose (age 20–40)",
+        "meaning": "Finding yourself, balancing sky and earth."
+      },
+      "male": {
+        "name": "Male line",
+        "meaning": "The influence of the father's line."
+      },
+      "female": {
+        "name": "Female line",
+        "meaning": "The influence of the mother's line."
+      },
+      "social": {
+        "name": "Social purpose (age 40–60)",
+        "meaning": "Your role in society, with family and people."
+      },
+      "spiritual": {
+        "name": "Spiritual purpose (age 60+)",
+        "meaning": "The highest task of the soul."
+      }
+    },
+    "chakras": {
+      "sahasrara": "Sahasrara (crown)",
+      "ajna": "Ajna (third eye)",
+      "vishuddha": "Vishuddha (throat)",
+      "anahata": "Anahata (heart)",
+      "manipura": "Manipura (solar plexus)",
+      "svadhisthana": "Svadhisthana (sacral)",
+      "muladhara": "Muladhara (root)"
+    },
+    "lines": {
+      "love": "Love line",
+      "money": "Money line",
+      "financeProgram": "Finance programme",
+      "karmicTail": "Karmic tail",
+      "maleLine": "Male ancestral programmes",
+      "femaleLine": "Female ancestral programmes"
+    }
+  },
+  "vedic": {
+    "grahas": {
+      "sun": {
+        "name": "Sun (Surya)",
+        "dasha": "A period of self-confidence, father, authority, health and leadership."
+      },
+      "moon": {
+        "name": "Moon (Chandra)",
+        "dasha": "A period of emotions, mother, home, comfort and public contact."
+      },
+      "mars": {
+        "name": "Mars (Mangala)",
+        "dasha": "A period of energy, courage, land and property, siblings and competition."
+      },
+      "mercury": {
+        "name": "Mercury (Budha)",
+        "dasha": "A period of learning, trade, communication and intellectual work."
+      },
+      "jupiter": {
+        "name": "Jupiter (Guru)",
+        "dasha": "A period of wisdom, growth, children, teachers and blessings."
+      },
+      "venus": {
+        "name": "Venus (Shukra)",
+        "dasha": "A period of love, marriage, beauty, art and comfort."
+      },
+      "saturn": {
+        "name": "Saturn (Shani)",
+        "dasha": "A period of patience, duty, hard work, discipline and maturity."
+      },
+      "rahu": {
+        "name": "Rahu (North Node)",
+        "dasha": "A period of ambition, unusual opportunities, foreign links and sudden change."
+      },
+      "ketu": {
+        "name": "Ketu (South Node)",
+        "dasha": "A period of turning inward, spirituality, detachment and letting go."
+      },
+      "lagna": {
+        "name": "Lagna (Ascendant)",
+        "dasha": "Body, character and the starting point of the life path."
+      }
+    },
+    "rashis": {
+      "aries": "Mesha",
+      "taurus": "Vrishabha",
+      "gemini": "Mithuna",
+      "cancer": "Karka",
+      "leo": "Simha",
+      "virgo": "Kanya",
+      "libra": "Tula",
+      "scorpio": "Vrishchika",
+      "sagittarius": "Dhanu",
+      "capricorn": "Makara",
+      "aquarius": "Kumbha",
+      "pisces": "Meena"
+    },
+    "nakshatras": {
+      "ashwini": {
+        "name": "Ashwini",
+        "keywords": "speed, healing, beginnings"
+      },
+      "bharani": {
+        "name": "Bharani",
+        "keywords": "bearing, transformation, responsibility"
+      },
+      "krittika": {
+        "name": "Krittika",
+        "keywords": "sharpness, purification, courage"
+      },
+      "rohini": {
+        "name": "Rohini",
+        "keywords": "fertility, beauty, growth"
+      },
+      "mrigashira": {
+        "name": "Mrigashira",
+        "keywords": "searching, curiosity, gentleness"
+      },
+      "ardra": {
+        "name": "Ardra",
+        "keywords": "storm, renewal, intensity"
+      },
+      "punarvasu": {
+        "name": "Punarvasu",
+        "keywords": "return, hope, restoration"
+      },
+      "pushya": {
+        "name": "Pushya",
+        "keywords": "nourishment, care, stability"
+      },
+      "ashlesha": {
+        "name": "Ashlesha",
+        "keywords": "entwining, mystery, intuition"
+      },
+      "magha": {
+        "name": "Magha",
+        "keywords": "lineage, honour, power"
+      },
+      "purvaPhalguni": {
+        "name": "Purva Phalguni",
+        "keywords": "pleasure, love, creativity"
+      },
+      "uttaraPhalguni": {
+        "name": "Uttara Phalguni",
+        "keywords": "partnership, generosity, commitment"
+      },
+      "hasta": {
+        "name": "Hasta",
+        "keywords": "skill, craft, dexterity"
+      },
+      "chitra": {
+        "name": "Chitra",
+        "keywords": "brilliance, design, artistry"
+      },
+      "swati": {
+        "name": "Swati",
+        "keywords": "independence, flexibility, trade"
+      },
+      "vishakha": {
+        "name": "Vishakha",
+        "keywords": "purpose, determination, achievement"
+      },
+      "anuradha": {
+        "name": "Anuradha",
+        "keywords": "friendship, devotion, cooperation"
+      },
+      "jyeshtha": {
+        "name": "Jyeshtha",
+        "keywords": "seniority, protection, authority"
+      },
+      "mula": {
+        "name": "Mula",
+        "keywords": "roots, investigation, radical change"
+      },
+      "purvaAshadha": {
+        "name": "Purva Ashadha",
+        "keywords": "victory, conviction, influence"
+      },
+      "uttaraAshadha": {
+        "name": "Uttara Ashadha",
+        "keywords": "final victory, principle, endurance"
+      },
+      "shravana": {
+        "name": "Shravana",
+        "keywords": "listening, learning, knowledge"
+      },
+      "dhanishta": {
+        "name": "Dhanishta",
+        "keywords": "rhythm, wealth, music"
+      },
+      "shatabhisha": {
+        "name": "Shatabhisha",
+        "keywords": "healing, secrecy, independence"
+      },
+      "purvaBhadrapada": {
+        "name": "Purva Bhadrapada",
+        "keywords": "fire, idealism, transformation"
+      },
+      "uttaraBhadrapada": {
+        "name": "Uttara Bhadrapada",
+        "keywords": "depth, patience, wisdom"
+      },
+      "revati": {
+        "name": "Revati",
+        "keywords": "protection, guidance, completion"
+      }
+    },
+    "dignities": {
+      "exalted": "Uccha (exalted)",
+      "debilitated": "Neecha (debilitated)",
+      "own": "Swakshetra (own sign)"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astra-engine"
+version = "0.1.0"
+description = "Pure, deterministic astrology calculation modules for Astra"
+license = "AGPL-3.0-only"
+requires-python = ">=3.12"
+dependencies = [
+    # Exact pins: kerykeion releases very often and v5 -> v6 broke the API. Upgrade only with golden tests green.
+    "kerykeion==6.0.5",
+    "pyswisseph==2.10.3.2",
+    "pydantic>=2.5,<3",
+    "tzdata>=2024.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["astra_engine*"]
+
+[tool.setuptools.package-data]
+astra_engine = ["ephe/*.se1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

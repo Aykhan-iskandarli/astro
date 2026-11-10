@@ -1,0 +1,9 @@
+{
+  "name": "Astra",
+  "short_name": "Astra",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "theme_color": "#0B0B1E",
+  "background_color": "#0B0B1E",
+  "display": "standalone",
+  "start_url": "/"
+}

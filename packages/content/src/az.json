@@ -1,0 +1,878 @@
+{
+  "_status": "draft: AI-written, needs editorial review by an astrologer and a native editor",
+  "points": {
+    "sun": {
+      "name": "Günəş",
+      "keywords": "kimlik, həyat enerjisi, şüurlu mən",
+      "archetype": "Kimlik, həyat gücü və şüurlu “mən”.",
+      "short": "Günəş sizin kimliyinizi, həyat enerjinizi və nəyə görə parladığınızı göstərir."
+    },
+    "moon": {
+      "name": "Ay",
+      "keywords": "duyğular, instinkt, daxili ehtiyaclar",
+      "archetype": "Duyğular, instinktlər və daxili ehtiyaclar.",
+      "short": "Ay duyğularınızı, özünüzü necə təhlükəsiz hiss etdiyinizi və daxili ehtiyaclarınızı göstərir."
+    },
+    "mercury": {
+      "name": "Merkuri",
+      "keywords": "ağıl, ünsiyyət, öyrənmə",
+      "archetype": "Ağıl, ünsiyyət və öyrənmə.",
+      "short": "Merkuri necə düşündüyünüzü, danışdığınızı və öyrəndiyinizi göstərir."
+    },
+    "venus": {
+      "name": "Venera",
+      "keywords": "sevgi, gözəllik, dəyərlər, harmoniya",
+      "archetype": "Sevgi, gözəllik, dəyərlər və harmoniya.",
+      "short": "Venera nəyi sevdiyinizi, nəyə dəyər verdiyinizi və münasibətlərdə harmoniyanı necə axtardığınızı göstərir."
+    },
+    "mars": {
+      "name": "Mars",
+      "keywords": "iradə, cəsarət, hərəkət",
+      "archetype": "İradə, cəsarət və hərəkət.",
+      "short": "Mars nəyə can atdığınızı, necə hərəkətə keçdiyinizi və enerjinizi hara yönəltdiyinizi göstərir."
+    },
+    "jupiter": {
+      "name": "Yupiter",
+      "keywords": "genişlənmə, bolluq, şans, müdriklik",
+      "archetype": "Genişlənmə, bolluq, şans və müdriklik — bolluq planeti.",
+      "short": "Yupiter harada böyüdüyünüzü, inamınızı və həyatın sizə səxavətlə açıldığı sahəni göstərir."
+    },
+    "saturn": {
+      "name": "Saturn",
+      "keywords": "nizam, struktur, zaman, həyat dərsləri",
+      "archetype": "Nizam-intizam, struktur, zaman və həyat dərsləri.",
+      "short": "Saturn məsuliyyət daşıdığınız, səbir öyrəndiyiniz və zamanla möhkəmləndiyiniz sahəni göstərir."
+    },
+    "uranus": {
+      "name": "Uran",
+      "keywords": "dəyişiklik, azadlıq, yenilik",
+      "archetype": "Dəyişiklik, azadlıq və yenilik.",
+      "short": "Uran harada fərqli olmaq, azad olmaq və gözlənilməz dəyişikliklərə açıq olmaq istədiyinizi göstərir."
+    },
+    "neptune": {
+      "name": "Neptun",
+      "keywords": "xəyallar, intuisiya, mənəviyyat",
+      "archetype": "Xəyallar, intuisiya və mənəviyyat.",
+      "short": "Neptun xəyallarınızı, intuisiyanızı və sərhədlərin əridiyi həssas sahəni göstərir."
+    },
+    "pluto": {
+      "name": "Pluton",
+      "keywords": "transformasiya, güc, yenidən doğuş",
+      "archetype": "Transformasiya, güc və yenidən doğuş.",
+      "short": "Pluton dərin dəyişikliklər yaşadığınız və daxili gücünüzü kəşf etdiyiniz sahəni göstərir."
+    },
+    "northNode": {
+      "name": "Şimal düyünü",
+      "keywords": "inkişaf yolu, istiqamət",
+      "archetype": "İnkişaf istiqaməti.",
+      "short": "Şimal düyünü böyümə istiqamətinizi — rahat olmasa da sizi irəli aparan yolu göstərir."
+    },
+    "southNode": {
+      "name": "Cənub düyünü",
+      "keywords": "keçmiş, vərdişlər, hazır bacarıqlar",
+      "archetype": "Tanış vərdişlər və hazır bacarıqlar.",
+      "short": "Cənub düyünü artıq yaxşı bildiyiniz, amma ilişib qala biləcəyiniz tanış vərdişləri göstərir."
+    },
+    "lilith": {
+      "name": "Lilit (Qara Ay)",
+      "keywords": "gizli instinkt, tabu, müstəqillik",
+      "archetype": "Gizli instinkt və müstəqillik.",
+      "short": "Lilit sıxışdırılan instinktləri və heç kimə tabe olmaq istəmədiyiniz tərəfinizi göstərir."
+    },
+    "chiron": {
+      "name": "Xiron",
+      "keywords": "yara, şəfa, müdriklik",
+      "archetype": "Yara və şəfa.",
+      "short": "Xiron həssas yaranızı və onu anladıqca başqalarına kömək edə biləcəyiniz müdrikliyi göstərir."
+    },
+    "partOfFortune": {
+      "name": "Bəxt nöqtəsi",
+      "keywords": "uğur, rahatlıq, təbii axın",
+      "archetype": "Təbii uğur və rahatlıq.",
+      "short": "Bəxt nöqtəsi həyatın sizə daha asan axdığı və məmnunluq tapdığınız sahəni göstərir."
+    },
+    "asc": {
+      "name": "Assendent",
+      "abbr": "ASC",
+      "keywords": "görünüş, ilk təəssürat, yanaşma",
+      "archetype": "Dünyaya açılan qapı.",
+      "short": "Assendent özünüzü dünyaya necə təqdim etdiyinizi və ilk təəssüratı göstərir."
+    },
+    "mc": {
+      "name": "Orta səma",
+      "abbr": "MC",
+      "keywords": "karyera, məqsəd, ictimai rol",
+      "archetype": "Zirvə və məqsəd.",
+      "short": "Orta səma karyera istiqamətinizi, ictimai rolunuzu və nəyə görə tanınmaq istədiyinizi göstərir."
+    },
+    "dc": {
+      "name": "Dessendent",
+      "abbr": "DC",
+      "keywords": "tərəfdaşlıq, digərləri",
+      "archetype": "Tərəfdaşlıq.",
+      "short": "Dessendent tərəfdaşlarda axtardığınız və münasibətlərdə öyrəndiyiniz keyfiyyətləri göstərir."
+    },
+    "ic": {
+      "name": "İmum Koeli",
+      "abbr": "IC",
+      "keywords": "kök, ev, ailə",
+      "archetype": "Köklər və ev.",
+      "short": "İmum Koeli köklərinizi, ailənizi və daxili sığınacağınızı göstərir."
+    }
+  },
+  "signs": {
+    "aries": {
+      "name": "Qoç",
+      "keywords": "cəsarət, təşəbbüs, birbaşalıq",
+      "expression": "Qoç bürcündə bu enerji cəsarətli, birbaşa və təşəbbüskar şəkildə ifadə olunur — tez başlayır, açıq danışır."
+    },
+    "taurus": {
+      "name": "Buğa",
+      "keywords": "sabitlik, rahatlıq, səbir",
+      "expression": "Buğa bürcündə bu enerji sakit, səbirli və dayanıqlı ifadə olunur — sabitlik, rahatlıq və real nəticə axtarır."
+    },
+    "gemini": {
+      "name": "Əkizlər",
+      "keywords": "maraq, çeviklik, ünsiyyət",
+      "expression": "Əkizlər bürcündə bu enerji maraqlı, çevik və ünsiyyətcil ifadə olunur — öyrənmək, soruşmaq və bölüşmək istəyir."
+    },
+    "cancer": {
+      "name": "Xərçəng",
+      "keywords": "qayğı, həssaslıq, yaddaş",
+      "expression": "Xərçəng bürcündə bu enerji həssas, qayğıkeş və qoruyucu ifadə olunur — emosional təhlükəsizlik və yaxınlıq axtarır."
+    },
+    "leo": {
+      "name": "Şir",
+      "keywords": "yaradıcılıq, səxavət, özünüifadə",
+      "expression": "Şir bürcündə bu enerji isti, yaradıcı və səxavətli ifadə olunur — görünmək, sevilmək və ürəkdən yaratmaq istəyir."
+    },
+    "virgo": {
+      "name": "Qız",
+      "keywords": "dəqiqlik, xidmət, təhlil",
+      "expression": "Qız bürcündə bu enerji dəqiq, diqqətli və faydalı ifadə olunur — təkmilləşdirmək, nizamlamaq və kömək etmək istəyir."
+    },
+    "libra": {
+      "name": "Tərəzi",
+      "keywords": "harmoniya, ədalət, tərəfdaşlıq",
+      "expression": "Tərəzi bürcündə bu enerji incə, diplomatik və balanslı ifadə olunur — harmoniya, gözəllik və ədalət axtarır."
+    },
+    "scorpio": {
+      "name": "Əqrəb",
+      "keywords": "dərinlik, intensivlik, dönüşüm",
+      "expression": "Əqrəb bürcündə bu enerji dərin, intensiv və sadiq ifadə olunur — səthdən keçib həqiqətə çatmaq istəyir."
+    },
+    "sagittarius": {
+      "name": "Oxatan",
+      "keywords": "azadlıq, məna, macəra",
+      "expression": "Oxatan bürcündə bu enerji nikbin, açıq və azadsevər ifadə olunur — məna, səyahət və geniş üfüqlər axtarır."
+    },
+    "capricorn": {
+      "name": "Oğlaq",
+      "keywords": "məsuliyyət, məqsəd, dözüm",
+      "expression": "Oğlaq bürcündə bu enerji ciddi, məqsədyönlü və dözümlü ifadə olunur — addım-addım möhkəm bir şey qurmaq istəyir."
+    },
+    "aquarius": {
+      "name": "Dolça",
+      "keywords": "orijinallıq, azadlıq, cəmiyyət",
+      "expression": "Dolça bürcündə bu enerji orijinal, müstəqil və gələcəyə yönəlik ifadə olunur — fərqli düşünür və birlikdə dəyişmək istəyir."
+    },
+    "pisces": {
+      "name": "Balıqlar",
+      "keywords": "empatiya, xəyal, intuisiya",
+      "expression": "Balıqlar bürcündə bu enerji həssas, xəyalpərəst və şəfqətli ifadə olunur — intuisiya ilə axır və bütövlüyə qovuşmaq istəyir."
+    }
+  },
+  "houses": {
+    "1": {
+      "name": "1-ci ev",
+      "theme": "şəxsiyyət, görünüş, başlanğıclar",
+      "expression": "1-ci evdə bu mövzu şəxsiyyətinizdə və özünüzü necə təqdim etdiyinizdə açıq görünür."
+    },
+    "2": {
+      "name": "2-ci ev",
+      "theme": "pul, dəyərlər, resurslar",
+      "expression": "2-ci evdə bu mövzu pul, mülk, bacarıqlar və özünüdəyərləndirmə ilə bağlı yaşanır."
+    },
+    "3": {
+      "name": "3-cü ev",
+      "theme": "ünsiyyət, öyrənmə, yaxın mühit",
+      "expression": "3-cü evdə bu mövzu ünsiyyətdə, öyrənmədə, qardaş-bacı və yaxın mühitlə münasibətdə özünü göstərir."
+    },
+    "4": {
+      "name": "4-cü ev",
+      "theme": "ev, ailə, köklər",
+      "expression": "4-cü evdə bu mövzu ev, ailə, köklər və daxili rahatlıq hissi ilə bağlı yaşanır."
+    },
+    "5": {
+      "name": "5-ci ev",
+      "theme": "yaradıcılıq, sevgi, oyun",
+      "expression": "5-ci evdə bu mövzu yaradıcılıqda, romantikada, uşaqlarda və həyatdan zövq almaqda özünü göstərir."
+    },
+    "6": {
+      "name": "6-cı ev",
+      "theme": "iş, sağlamlıq, gündəlik ritm",
+      "expression": "6-cı evdə bu mövzu gündəlik işdə, vərdişlərdə, xidmətdə və sağlamlıq qayğısında yaşanır."
+    },
+    "7": {
+      "name": "7-ci ev",
+      "theme": "tərəfdaşlıq, evlilik, digərləri",
+      "expression": "7-ci evdə bu mövzu tərəfdaşlıqlarda, evlilikdə və bir-birinə bağlı münasibətlərdə özünü göstərir."
+    },
+    "8": {
+      "name": "8-ci ev",
+      "theme": "intimlik, ortaq resurslar, dönüşüm",
+      "expression": "8-ci evdə bu mövzu dərin bağlılıqlarda, ortaq resurslarda və həyatı dəyişən böhranlarda yaşanır."
+    },
+    "9": {
+      "name": "9-cu ev",
+      "theme": "fəlsəfə, səyahət, ali təhsil",
+      "expression": "9-cu evdə bu mövzu səyahətdə, ali təhsildə, inanc və dünyagörüşündə özünü göstərir."
+    },
+    "10": {
+      "name": "10-cu ev",
+      "theme": "karyera, nüfuz, məqsəd",
+      "expression": "10-cu evdə bu mövzu karyerada, ictimai nüfuzda və həyat məqsədinizdə açıq görünür."
+    },
+    "11": {
+      "name": "11-ci ev",
+      "theme": "dostlar, cəmiyyət, arzular",
+      "expression": "11-ci evdə bu mövzu dostluqda, icmada, komanda işində və gələcək arzularında yaşanır."
+    },
+    "12": {
+      "name": "12-ci ev",
+      "theme": "daxili dünya, təklik, şüuraltı",
+      "expression": "12-ci evdə bu mövzu daxili dünyada, təklikdə, yuxularda və gözə görünməyən proseslərdə yaşanır."
+    }
+  },
+  "aspects": {
+    "conjunction": {
+      "name": "Birləşmə",
+      "meaning": "İki enerji bir-birinə qarışır və birlikdə güclənir."
+    },
+    "opposition": {
+      "name": "Qarşıdurma",
+      "meaning": "İki enerji əks qütblərdə dayanır; balans tapmaq və digərində özünü görmək lazımdır."
+    },
+    "trine": {
+      "name": "Trin",
+      "meaning": "İki enerji təbii və rahat axır; bu, istedad və asanlıq verir."
+    },
+    "square": {
+      "name": "Kvadrat",
+      "meaning": "İki enerji arasında gərginlik var; bu sürtünmə inkişafa və hərəkətə təkan verir."
+    },
+    "sextile": {
+      "name": "Sekstil",
+      "meaning": "İki enerji bir-birini dəstəkləyir; fürsət var, amma addım atmaq sizdən asılıdır."
+    },
+    "quincunx": {
+      "name": "Kvinkunks",
+      "meaning": "İki enerji bir-birini tam anlamır; daim kiçik düzəlişlər tələb olunur."
+    },
+    "semisextile": {
+      "name": "Yarımsekstil",
+      "meaning": "Yüngül, incə bir əlaqə; kiçik uyğunlaşma imkanı."
+    },
+    "semisquare": {
+      "name": "Yarımkvadrat",
+      "meaning": "Kiçik, amma davamlı narahatlıq; diqqət tələb edən sürtünmə."
+    },
+    "sesquiquadrate": {
+      "name": "Seskvikvadrat",
+      "meaning": "Gizli gərginlik; vaxtaşırı üzə çıxan çağırış."
+    }
+  },
+  "patterns": {
+    "grandTrine": {
+      "name": "Böyük trin",
+      "meaning": "Üç planet bərabər üçbucaq qurur: bu, təbii istedad və rahat axın verir, amma rahatlıqda qalmaq riski də var."
+    },
+    "tSquare": {
+      "name": "T-kvadrat",
+      "meaning": "İki qarşı planet üçüncüsünə gərginlik yükləyir: zirvədəki planet həyatın əsas çağırışını və hərəkət gücünü göstərir."
+    },
+    "grandCross": {
+      "name": "Böyük xaç",
+      "meaning": "Dörd planet xaç qurur: çoxtərəfli gərginlik böyük dözüm və güc yaradır."
+    },
+    "yod": {
+      "name": "Yod (Taleyin barmağı)",
+      "meaning": "İki planet üçüncüsünə işarə edir: zirvədəki planet xüsusi missiya və daimi uyğunlaşma sahəsidir."
+    },
+    "kite": {
+      "name": "Uçurtma",
+      "meaning": "Böyük trinə dördüncü planet qoşulur: istedad konkret istiqamət və məqsəd qazanır."
+    },
+    "mysticRectangle": {
+      "name": "Mistik düzbucaqlı",
+      "meaning": "İki qarşıdurma trin və sekstillərlə birləşir: gərginlik praktik harmoniyaya çevrilir."
+    },
+    "stellium": {
+      "name": "Stellium",
+      "meaning": "Üç və daha çox planet bir yerdə toplanır: bu mövzu həyatınızda xüsusi ağırlıq daşıyır."
+    }
+  },
+  "elements": {
+    "fire": {
+      "name": "Od",
+      "meaning": "enerji, ilham, cəsarət"
+    },
+    "earth": {
+      "name": "Torpaq",
+      "meaning": "praktiklik, sabitlik, nəticə"
+    },
+    "air": {
+      "name": "Hava",
+      "meaning": "fikir, ünsiyyət, əlaqə"
+    },
+    "water": {
+      "name": "Su",
+      "meaning": "duyğu, intuisiya, həssaslıq"
+    }
+  },
+  "modalities": {
+    "cardinal": {
+      "name": "Kardinal",
+      "meaning": "başlamaq, təşəbbüs"
+    },
+    "fixed": {
+      "name": "Sabit",
+      "meaning": "davam etdirmək, dözüm"
+    },
+    "mutable": {
+      "name": "Dəyişkən",
+      "meaning": "uyğunlaşmaq, çeviklik"
+    }
+  },
+  "polarity": {
+    "positive": {
+      "name": "Müsbət (yan)",
+      "meaning": "xaricə yönəlik, aktiv"
+    },
+    "negative": {
+      "name": "Mənfi (yin)",
+      "meaning": "daxilə yönəlik, qəbuledici"
+    }
+  },
+  "dignities": {
+    "domicile": {
+      "name": "Öz evində",
+      "meaning": "Planet öz bürcündədir: enerjisi təbii və güclü ifadə olunur."
+    },
+    "exaltation": {
+      "name": "Yüksəlişdə",
+      "meaning": "Planet ucaldığı bürcdədir: ən yaxşı keyfiyyətləri parlayır."
+    },
+    "detriment": {
+      "name": "Sürgündə",
+      "meaning": "Planet öz bürcünün əksindədir: enerjisini ifadə etmək üçün əlavə səy lazımdır."
+    },
+    "fall": {
+      "name": "Düşüşdə",
+      "meaning": "Planet zəiflədiyi bürcdədir: bu sahədə yetkinlik zamanla qazanılır."
+    }
+  },
+  "lunarPhases": {
+    "newMoon": "Yeni Ay",
+    "waxingCrescent": "Böyüyən hilal",
+    "firstQuarter": "İlk dörddəbir",
+    "waxingGibbous": "Böyüyən Ay",
+    "fullMoon": "Bədirlənmiş Ay",
+    "disseminating": "Azalan Ay",
+    "lastQuarter": "Son dörddəbir",
+    "balsamic": "Balzam Ay"
+  },
+  "houseSystems": {
+    "placidus": "Placidus",
+    "koch": "Koch",
+    "wholeSign": "Tam bürc",
+    "equal": "Bərabər",
+    "porphyry": "Porphyry"
+  },
+  "destiny": {
+    "arcana": {
+      "1": {
+        "name": "Sehrbaz",
+        "keywords": "iradə, başlanğıc, ünsiyyət",
+        "plus": "Yeni işə başlamaq, sözlə və fikirlə insanları ruhlandırmaq bacarığı.",
+        "minus": "Manipulyasiya, dağınıqlıq, başlayıb bitirməmək."
+      },
+      "2": {
+        "name": "Baş kahinə",
+        "keywords": "intuisiya, bilik, sirr",
+        "plus": "Dərin intuisiya, öyrənmə və öyrətmə istedadı, daxili səsə güvən.",
+        "minus": "Qapalılıq, şübhə, biliyi gizlətmək."
+      },
+      "3": {
+        "name": "İmperatriça",
+        "keywords": "qadınlıq, bolluq, yaradıcılıq",
+        "plus": "Qayğı, gözəllik, bərəkət və yaratmaq enerjisi.",
+        "minus": "Həddən artıq nəzarət, israf, özünə dəyər verməmək."
+      },
+      "4": {
+        "name": "İmperator",
+        "keywords": "nizam, liderlik, struktur",
+        "plus": "Məsuliyyət, sabitlik qurmaq, rəhbərlik və qərarlılıq.",
+        "minus": "Sərtlik, avtoritarlıq, dəyişikliyə müqavimət."
+      },
+      "5": {
+        "name": "Baş kahin",
+        "keywords": "ənənə, müəllimlik, dəyərlər",
+        "plus": "Bilik ötürmək, mənəvi istiqamət vermək, ailə və ənənəyə hörmət.",
+        "minus": "Dogmatizm, nəsihətçilik, köhnə qaydalara ilişib qalmaq."
+      },
+      "6": {
+        "name": "Aşiqlər",
+        "keywords": "sevgi, seçim, harmoniya",
+        "plus": "Ürəkdən sevmək, gözəlliyi görmək, düzgün seçim etmək.",
+        "minus": "Qərarsızlıq, asılılıq, sevgini şərtə bağlamaq."
+      },
+      "7": {
+        "name": "Döyüş arabası",
+        "keywords": "hərəkət, məqsəd, qələbə",
+        "plus": "Məqsədə doğru irəliləmək, səyahət, iradə ilə qalib gəlmək.",
+        "minus": "Tələskənlik, istiqamətini itirmək, aqressiya."
+      },
+      "8": {
+        "name": "Ədalət",
+        "keywords": "balans, məsuliyyət, qanun",
+        "plus": "Ədalətli olmaq, səbəb-nəticəni anlamaq, aydın qərarlar.",
+        "minus": "Mühakimə etmək, kin, ədalətsizlik qarşısında acizlik."
+      },
+      "9": {
+        "name": "Zahid",
+        "keywords": "müdriklik, təklik, axtarış",
+        "plus": "Dərin düşüncə, öz yolunu tapmaq, başqalarına işıq tutmaq.",
+        "minus": "Təcrid, soyuqluq, dünyadan qaçmaq."
+      },
+      "10": {
+        "name": "Tale çarxı",
+        "keywords": "axın, imkan, dövr",
+        "plus": "Dəyişikliyə açıqlıq, şansları görmək, həyatın ritminə uyğunlaşmaq.",
+        "minus": "Passivlik, hər şeyi taleyə həvalə etmək, qeyri-sabitlik."
+      },
+      "11": {
+        "name": "Güc",
+        "keywords": "daxili güc, enerji, dözüm",
+        "plus": "Böyük həyat enerjisi, emosiyaları idarə etmək, mərhəmətli güc.",
+        "minus": "Özünü yormaq, qəzəbi boğmaq, gücü zorla göstərmək."
+      },
+      "12": {
+        "name": "Asılmış adam",
+        "keywords": "fədakarlıq, yeni baxış, dayanma",
+        "plus": "Dünyaya fərqli baxmaq, xidmət etmək, dərin anlayış.",
+        "minus": "Qurban rolu, ilişib qalmaq, özünü inkar."
+      },
+      "13": {
+        "name": "Ölüm",
+        "keywords": "dəyişim, yenilənmə, son",
+        "plus": "Köhnəni buraxıb yenisinə yer açmaq, transformasiya gücü.",
+        "minus": "Dəyişiklikdən qorxu, keçmişə yapışmaq, dağıdıcılıq."
+      },
+      "14": {
+        "name": "Ölçülülük",
+        "keywords": "balans, səbir, şəfa",
+        "plus": "Sakitlik, uyğunlaşma, insanlara harmoniya və şəfa gətirmək.",
+        "minus": "Laqeydlik, ifrata varmaq, daxili boşluq."
+      },
+      "15": {
+        "name": "Şeytan",
+        "keywords": "güc, cazibə, maddi dünya",
+        "plus": "Xarizma, maliyyə bacarığı, gücdən düzgün istifadə.",
+        "minus": "Asılılıqlar, manipulyasiya, nəfsə tabe olmaq."
+      },
+      "16": {
+        "name": "Qüllə",
+        "keywords": "sarsıntı, azadlıq, yenidən qurmaq",
+        "plus": "Yanlış strukturları dağıdıb yenisini qurmaq, səmimi yaradıcılıq.",
+        "minus": "Ani böhranlar, inadkarlıq, ətrafı dağıtmaq."
+      },
+      "17": {
+        "name": "Ulduz",
+        "keywords": "ümid, ilham, istedad",
+        "plus": "Yaradıcılıq, gözəllik, insanlara ilham vermək, ümid.",
+        "minus": "Özünü göstərməkdən qorxu, xəyallarda yaşamaq."
+      },
+      "18": {
+        "name": "Ay",
+        "keywords": "intuisiya, xəyal, gizli dünya",
+        "plus": "Güclü təxəyyül, intuisiya, yaradıcı təsəvvür.",
+        "minus": "Qorxular, illüziyalar, özünü aldatmaq."
+      },
+      "19": {
+        "name": "Günəş",
+        "keywords": "sevinc, uğur, işıq",
+        "plus": "İstilik, nikbinlik, uğur və ətrafa enerji paylamaq.",
+        "minus": "Eqoizm, lovğalıq, həddən artıq yorulmaq."
+      },
+      "20": {
+        "name": "Məhkəmə",
+        "keywords": "oyanış, nəsil, yenidən doğuş",
+        "plus": "Ailə ilə bağ, oyanış, keçmiş təcrübədən öyrənmək.",
+        "minus": "Nəsil yükü, bağışlamamaq, keçmişə ilişmək."
+      },
+      "21": {
+        "name": "Dünya",
+        "keywords": "bütövlük, genişlik, səyahət",
+        "plus": "Geniş dünyagörüşü, səyahət, sərhədləri aşmaq.",
+        "minus": "Məhdudluq hissi, yerində saymaq, qorxu."
+      },
+      "22": {
+        "name": "Divanə",
+        "keywords": "azadlıq, yüngüllük, yeni yol",
+        "plus": "Sərbəstlik, kortəbiilik, oyun və yeniliyə açıqlıq.",
+        "minus": "Məsuliyyətsizlik, sabitsizlik, xaos."
+      }
+    },
+    "positions": {
+      "A": {
+        "name": "Vizit kartı",
+        "meaning": "Başqalarının sizi necə gördüyü, təbii xarakteriniz."
+      },
+      "B": {
+        "name": "Xarakterin ikinci yarısı",
+        "meaning": "Daxili xarakter, ilham və potensial istedad."
+      },
+      "C": {
+        "name": "40 yaşa qədər tapşırıq",
+        "meaning": "40 yaşa qədər açılmalı olan keyfiyyət və maddi sahə."
+      },
+      "D": {
+        "name": "Karmik tapşırıq",
+        "meaning": "Ruhun əsas işlənməli olan dərsi."
+      },
+      "E": {
+        "name": "Komfort zonası",
+        "meaning": "Matrisin ürəyi: harmoniya və rahatlıq tapdığınız enerji."
+      },
+      "F": {
+        "name": "Ata xətti (mənəvi)",
+        "meaning": "Ata tərəfindən gələn mənəvi irs."
+      },
+      "G": {
+        "name": "Ana xətti (mənəvi)",
+        "meaning": "Ana tərəfindən gələn mənəvi irs."
+      },
+      "H": {
+        "name": "Ata xətti (maddi)",
+        "meaning": "Ata tərəfindən gələn maddi irs və proqramlar."
+      },
+      "I": {
+        "name": "Ana xətti (maddi)",
+        "meaning": "Ana tərəfindən gələn maddi irs və proqramlar."
+      },
+      "J": {
+        "name": "Şəxsiyyət",
+        "meaning": "Mərkəzə yaxın şəxsi keyfiyyət."
+      },
+      "K": {
+        "name": "İstedad",
+        "meaning": "Şəxsi istedad, təbii bacarıq."
+      },
+      "L": {
+        "name": "Maliyyə kanalı",
+        "meaning": "Pulun gəldiyi kanal."
+      },
+      "M": {
+        "name": "Münasibətə hazırlıq",
+        "meaning": "Tərəfdaşla tanışlıq və münasibətə hazırlıq."
+      },
+      "N": {
+        "name": "Karmik quyruq (orta)",
+        "meaning": "Keçmişdən gələn işlənməmiş tapşırıq."
+      },
+      "O": {
+        "name": "Uşaqlıq enerjisi",
+        "meaning": "Uşaqlıqda formalaşan keyfiyyət."
+      },
+      "P": {
+        "name": "Ali istedad",
+        "meaning": "Yuxarıdan verilmiş istedad."
+      },
+      "Q": {
+        "name": "Maliyyə proqramı",
+        "meaning": "Pulla bağlı daxili inanclar."
+      },
+      "S": {
+        "name": "Daxili özək",
+        "meaning": "Komfort zonasına aparan keyfiyyət."
+      },
+      "T": {
+        "name": "Ürəyə gedən yol",
+        "meaning": "Mənəvi istedadın mərkəzə yaxın ifadəsi."
+      },
+      "R": {
+        "name": "Sevgi və pul düyünü",
+        "meaning": "Münasibətlərdə və maliyyədə əsas blok və inkişaf nöqtəsi."
+      },
+      "R1": {
+        "name": "Münasibətin xarakteri",
+        "meaning": "Cütlükdə münasibətin ümumi tonu."
+      },
+      "R2": {
+        "name": "Peşə və uğur sahəsi",
+        "meaning": "Uğur gətirən peşə sahəsi."
+      },
+      "F1": {
+        "name": "Ata xətti proqramı",
+        "meaning": "Ata nəslindən ötürülən proqram."
+      },
+      "F2": {
+        "name": "Ata xətti istedadı",
+        "meaning": "Ata nəslindən gələn istedad."
+      },
+      "G1": {
+        "name": "Ana xətti proqramı",
+        "meaning": "Ana nəslindən ötürülən proqram."
+      },
+      "G2": {
+        "name": "Ana xətti istedadı",
+        "meaning": "Ana nəslindən gələn istedad."
+      },
+      "H1": {
+        "name": "Ata xətti proqramı (maddi)",
+        "meaning": "Ata tərəfindən maddi proqram."
+      },
+      "H2": {
+        "name": "Ata xətti, mərkəzə yaxın",
+        "meaning": "Ata xəttinin mərkəzə yaxın enerjisi."
+      },
+      "I1": {
+        "name": "Ana xətti proqramı (maddi)",
+        "meaning": "Ana tərəfindən maddi proqram."
+      },
+      "I2": {
+        "name": "Ana xətti, mərkəzə yaxın",
+        "meaning": "Ana xəttinin mərkəzə yaxın enerjisi."
+      },
+      "L1": {
+        "name": "Ümumi mərkəz",
+        "meaning": "Şəxsi və nəsil mərkəzlərinin cəmi."
+      },
+      "L2": {
+        "name": "Nəsil mərkəzi",
+        "meaning": "Nəsil kvadratının mərkəzi."
+      }
+    },
+    "purposes": {
+      "sky": {
+        "name": "Göy xətti",
+        "meaning": "Mənəvi keyfiyyətlər, daxili inkişaf."
+      },
+      "earth": {
+        "name": "Yer xətti",
+        "meaning": "Maddi bacarıqlar, dünyada özünü göstərmək."
+      },
+      "personal": {
+        "name": "Şəxsi təyinat (20–40 yaş)",
+        "meaning": "Özünü tapmaq, göy və yer arasında balans."
+      },
+      "male": {
+        "name": "Kişi xətti",
+        "meaning": "Ata nəslinin təsiri."
+      },
+      "female": {
+        "name": "Qadın xətti",
+        "meaning": "Ana nəslinin təsiri."
+      },
+      "social": {
+        "name": "Sosial təyinat (40–60 yaş)",
+        "meaning": "Cəmiyyətdəki rolunuz, ailə və insanlarla münasibət."
+      },
+      "spiritual": {
+        "name": "Mənəvi təyinat (60+ yaş)",
+        "meaning": "Ruhun ali vəzifəsi."
+      }
+    },
+    "chakras": {
+      "sahasrara": "Sahasrara (tac)",
+      "ajna": "Acna (üçüncü göz)",
+      "vishuddha": "Vişuddha (boğaz)",
+      "anahata": "Anahata (ürək)",
+      "manipura": "Manipura (günəş kələfi)",
+      "svadhisthana": "Svadhisthana (sakral)",
+      "muladhara": "Muladhara (kök)"
+    },
+    "lines": {
+      "love": "Sevgi xətti",
+      "money": "Pul xətti",
+      "financeProgram": "Maliyyə proqramı",
+      "karmicTail": "Karmik quyruq",
+      "maleLine": "Kişi nəsil proqramları",
+      "femaleLine": "Qadın nəsil proqramları"
+    }
+  },
+  "vedic": {
+    "grahas": {
+      "sun": {
+        "name": "Günəş (Surya)",
+        "dasha": "Özünə inam, ata, nüfuz, sağlamlıq və liderlik dövrü."
+      },
+      "moon": {
+        "name": "Ay (Çandra)",
+        "dasha": "Duyğular, ana, ev, rahatlıq və ictimai əlaqələr dövrü."
+      },
+      "mars": {
+        "name": "Mars (Manqala)",
+        "dasha": "Enerji, cəsarət, torpaq-əmlak, qardaşlar və mübarizə dövrü."
+      },
+      "mercury": {
+        "name": "Merkuri (Budha)",
+        "dasha": "Təhsil, ticarət, ünsiyyət və intellektual iş dövrü."
+      },
+      "jupiter": {
+        "name": "Yupiter (Quru)",
+        "dasha": "Müdriklik, genişlənmə, övlad, müəllim və bərəkət dövrü."
+      },
+      "venus": {
+        "name": "Venera (Şukra)",
+        "dasha": "Sevgi, evlilik, gözəllik, sənət və rahatlıq dövrü."
+      },
+      "saturn": {
+        "name": "Saturn (Şani)",
+        "dasha": "Səbir, məsuliyyət, zəhmət, nizam və yetkinlik dövrü."
+      },
+      "rahu": {
+        "name": "Rahu (Şimal düyünü)",
+        "dasha": "Arzular, qeyri-adi imkanlar, xarici əlaqələr və gözlənilməz dəyişikliklər dövrü."
+      },
+      "ketu": {
+        "name": "Ketu (Cənub düyünü)",
+        "dasha": "Daxilə dönüş, mənəviyyat, ayrılıq və köhnəni buraxmaq dövrü."
+      },
+      "lagna": {
+        "name": "Laqna (Assendent)",
+        "dasha": "Bədən, xarakter və həyat yolunun başlanğıc nöqtəsi."
+      }
+    },
+    "rashis": {
+      "aries": "Meşa",
+      "taurus": "Vrişabha",
+      "gemini": "Mithuna",
+      "cancer": "Karka",
+      "leo": "Simha",
+      "virgo": "Kanya",
+      "libra": "Tula",
+      "scorpio": "Vrişçika",
+      "sagittarius": "Dhanu",
+      "capricorn": "Makara",
+      "aquarius": "Kumbha",
+      "pisces": "Mina"
+    },
+    "nakshatras": {
+      "ashwini": {
+        "name": "Ashwini",
+        "keywords": "sürət, şəfa, başlanğıc"
+      },
+      "bharani": {
+        "name": "Bharani",
+        "keywords": "daşımaq, dönüşüm, məsuliyyət"
+      },
+      "krittika": {
+        "name": "Krittika",
+        "keywords": "kəskinlik, təmizlənmə, cəsarət"
+      },
+      "rohini": {
+        "name": "Rohini",
+        "keywords": "bərəkət, gözəllik, artım"
+      },
+      "mrigashira": {
+        "name": "Mrigashira",
+        "keywords": "axtarış, maraq, incəlik"
+      },
+      "ardra": {
+        "name": "Ardra",
+        "keywords": "fırtına, yenilənmə, dərinlik"
+      },
+      "punarvasu": {
+        "name": "Punarvasu",
+        "keywords": "qayıdış, ümid, bərpa"
+      },
+      "pushya": {
+        "name": "Pushya",
+        "keywords": "qidalandırma, qayğı, sabitlik"
+      },
+      "ashlesha": {
+        "name": "Ashlesha",
+        "keywords": "sarılmaq, sirr, intuisiya"
+      },
+      "magha": {
+        "name": "Magha",
+        "keywords": "nəsil, şərəf, güc"
+      },
+      "purvaPhalguni": {
+        "name": "Purva Phalguni",
+        "keywords": "zövq, sevgi, yaradıcılıq"
+      },
+      "uttaraPhalguni": {
+        "name": "Uttara Phalguni",
+        "keywords": "tərəfdaşlıq, səxavət, öhdəlik"
+      },
+      "hasta": {
+        "name": "Hasta",
+        "keywords": "bacarıq, əl işi, çeviklik"
+      },
+      "chitra": {
+        "name": "Chitra",
+        "keywords": "parlaqlıq, dizayn, sənət"
+      },
+      "swati": {
+        "name": "Swati",
+        "keywords": "müstəqillik, çeviklik, ticarət"
+      },
+      "vishakha": {
+        "name": "Vishakha",
+        "keywords": "məqsəd, qətiyyət, nailiyyət"
+      },
+      "anuradha": {
+        "name": "Anuradha",
+        "keywords": "dostluq, sədaqət, əməkdaşlıq"
+      },
+      "jyeshtha": {
+        "name": "Jyeshtha",
+        "keywords": "böyüklük, qoruma, nüfuz"
+      },
+      "mula": {
+        "name": "Mula",
+        "keywords": "kök, axtarış, köklü dəyişiklik"
+      },
+      "purvaAshadha": {
+        "name": "Purva Ashadha",
+        "keywords": "qələbə, inam, təsir"
+      },
+      "uttaraAshadha": {
+        "name": "Uttara Ashadha",
+        "keywords": "son qələbə, prinsip, dözüm"
+      },
+      "shravana": {
+        "name": "Shravana",
+        "keywords": "dinləmək, öyrənmək, bilik"
+      },
+      "dhanishta": {
+        "name": "Dhanishta",
+        "keywords": "ritm, bolluq, musiqi"
+      },
+      "shatabhisha": {
+        "name": "Shatabhisha",
+        "keywords": "şəfa, sirr, müstəqillik"
+      },
+      "purvaBhadrapada": {
+        "name": "Purva Bhadrapada",
+        "keywords": "alov, ideal, dönüşüm"
+      },
+      "uttaraBhadrapada": {
+        "name": "Uttara Bhadrapada",
+        "keywords": "dərinlik, səbir, müdriklik"
+      },
+      "revati": {
+        "name": "Revati",
+        "keywords": "qoruma, yol göstərmə, tamamlanma"
+      }
+    },
+    "dignities": {
+      "exalted": "Uçça (yüksəlişdə)",
+      "debilitated": "Niça (düşüşdə)",
+      "own": "Svakşetra (öz bürcündə)"
+    }
+  }
+}

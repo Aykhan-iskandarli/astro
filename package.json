@@ -1,0 +1,16 @@
+{
+  "name": "astra",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "workspaces": [
+    "apps/web",
+    "packages/content"
+  ],
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "dev": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/web",
+    "test": "npm run test -w packages/content && npm run test -w apps/web",
+    "lint": "npm run lint -w apps/web"
+  }
+}
