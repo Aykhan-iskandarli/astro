@@ -5,4 +5,9 @@ export const API = {
     transits: '/api/charts/transits',
     synastry: '/api/charts/synastry',
     vedic: '/api/charts/vedic',
+    numerology: '/api/numerology',
+    bazi: '/api/charts/bazi',
+    returns: '/api/charts/returns',
+    progressions: '/api/charts/progressions',
+    composite: '/api/charts/composite',
 };

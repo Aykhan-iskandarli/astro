@@ -1,5 +1,5 @@
 import {useCallback, useRef, useState} from 'react';
-import {Alert, Button, Tabs} from 'antd';
+import {Alert, Button} from 'antd';
 import {motion} from 'framer-motion';
 import {formatDegree} from 'core/helpers/astro';
 import LoaderComponent from 'core/shared/loader/loader.component';
@@ -15,6 +15,10 @@ import DestinyMatrixComponent from '../destiny-matrix/destiny-matrix.component';
 import TransitsPanelComponent from '../transits-panel/transits-panel.component';
 import SynastryPanelComponent from '../synastry-panel/synastry-panel.component';
 import VedicPanelComponent from '../vedic-panel/vedic-panel.component';
+import NumerologyPanelComponent from '../numerology-panel/numerology-panel.component';
+import ChinesePanelComponent from '../chinese-panel/chinese-panel.component';
+import ForecastPanelComponent from '../forecast-panel/forecast-panel.component';
+import TabStripComponent from '../tab-strip/tab-strip.component';
 import {useChartResultStyles} from './chart-result.style';
 import {IChartResult} from './chart-result';
 
@@ -25,13 +29,12 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
     const [hovered, setHovered] = useState<string | null>(null);
     const [selected, setSelected] = useState<string>('sun');
     const [tab, setTab] = useState<string>('natal');
+    // Panels render on first visit and stay mounted (keeps transit dates, partner input, etc.)
+    const [visited, setVisited] = useState<Set<string>>(() => new Set(['natal']));
 
     const handleTab = useCallback((key: string) => {
         setTab(key);
-        // Keep the chosen tab fully visible in the swipeable strip on phones
-        requestAnimationFrame(() => {
-            document.querySelector('.ant-tabs-tab-active')?.scrollIntoView({block: 'nearest', inline: 'nearest'});
-        });
+        setVisited((v) => (v.has(key) ? v : new Set(v).add(key)));
     }, []);
 
     const handleActivate = useCallback((id: string | null) => {
@@ -59,6 +62,60 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
     const dateText = chart.date ? chart.date.split('-').reverse().join('.') : '';
     const utcText = chart.utcDatetime ? chart.utcDatetime.slice(11, 16) : null;
     const systemName = (s: string | null) => (s ? content.houseSystems[s as keyof typeof content.houseSystems] ?? s : '');
+
+    const panels = [
+
+                    {key: 'natal', label: translate('tab_natal'), children: (
+                        <div className={classes.tabBody}>
+                            <div ref={stageRef} className={classes.stage}>
+                                <div className={classes.wheelWrap}>
+                                    <ChartWheelComponent chart={chart} activeId={hovered} selectedId={selected} onActivate={handleActivate} onSelect={handleSelect}/>
+                                </div>
+                                <aside className={classes.side} aria-label={translate('section_interpretation')}>
+                                    <InterpretationPanelComponent chart={chart} pointId={activeId}/>
+                                </aside>
+                            </div>
+
+                            <section className={classes.section} aria-labelledby='sec-points'>
+                                <h2 id='sec-points'>{translate('section_planets')}</h2>
+                                <PointsTableComponent chart={chart} activeId={activeId} onActivate={handleActivate} onSelect={handleSelectFromTable}/>
+                            </section>
+
+                            {chart.timeUnknown ? null : (
+                                <section className={classes.section} aria-labelledby='sec-houses'>
+                                    <h2 id='sec-houses'>{translate('section_houses')}</h2>
+                                    <HousesTableComponent chart={chart}/>
+                                </section>
+                            )}
+
+                            <section className={classes.section} aria-labelledby='sec-aspects'>
+                                <h2 id='sec-aspects'>{translate('section_aspects')}</h2>
+                                <AspectGridComponent chart={chart} activeId={activeId} onActivate={handleActivate}/>
+                            </section>
+
+                            <section className={classes.section} aria-labelledby='sec-patterns'>
+                                <h2 id='sec-patterns'>{translate('section_patterns')}</h2>
+                                <PatternsListComponent patterns={chart.patterns}/>
+                            </section>
+
+                            {chart.balance ? (
+                                <section className={classes.section} aria-labelledby='sec-balance'>
+                                    <h2 id='sec-balance'>{translate('section_balance')}</h2>
+                                    <BalancePanelComponent balance={chart.balance}/>
+                                </section>
+                            ) : null}
+                        </div>
+                    )},
+                    {key: 'destiny', label: translate('tab_destiny'), children: matrix
+                        ? <DestinyMatrixComponent matrix={matrix}/>
+                        : matrixFailed ? <Alert type='warning' showIcon message={translate('destiny_error')}/> : <LoaderComponent/>},
+                    {key: 'transits', label: translate('tab_transits'), children: <TransitsPanelComponent chart={chart}/>},
+                    {key: 'forecast', label: translate('tab_forecast'), children: <ForecastPanelComponent chart={chart}/>},
+                    {key: 'vedic', label: translate('tab_vedic'), children: <VedicPanelComponent/>},
+                    {key: 'numerology', label: translate('tab_numerology'), children: <NumerologyPanelComponent/>},
+                    {key: 'chinese', label: translate('tab_chinese'), children: <ChinesePanelComponent/>},
+                    {key: 'synastry', label: translate('tab_synastry'), children: <SynastryPanelComponent/>},
+    ];
 
     return (
         <div className={classes.result}>
@@ -105,61 +162,14 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                 ) : null}
             </div>
 
-            <Tabs
-                className={classes.tabs}
-                activeKey={tab}
-                onChange={handleTab}
-                size='large'
-                items={[
-                    {key: 'natal', label: translate('tab_natal'), children: (
-                        <div className={classes.tabBody}>
-                            <div ref={stageRef} className={classes.stage}>
-                                <div className={classes.wheelWrap}>
-                                    <ChartWheelComponent chart={chart} activeId={hovered} selectedId={selected} onActivate={handleActivate} onSelect={handleSelect}/>
-                                </div>
-                                <aside className={classes.side} aria-label={translate('section_interpretation')}>
-                                    <InterpretationPanelComponent chart={chart} pointId={activeId}/>
-                                </aside>
-                            </div>
-
-                            <section className={classes.section} aria-labelledby='sec-points'>
-                                <h2 id='sec-points'>{translate('section_planets')}</h2>
-                                <PointsTableComponent chart={chart} activeId={activeId} onActivate={handleActivate} onSelect={handleSelectFromTable}/>
-                            </section>
-
-                            {chart.timeUnknown ? null : (
-                                <section className={classes.section} aria-labelledby='sec-houses'>
-                                    <h2 id='sec-houses'>{translate('section_houses')}</h2>
-                                    <HousesTableComponent chart={chart}/>
-                                </section>
-                            )}
-
-                            <section className={classes.section} aria-labelledby='sec-aspects'>
-                                <h2 id='sec-aspects'>{translate('section_aspects')}</h2>
-                                <AspectGridComponent chart={chart} activeId={activeId} onActivate={handleActivate}/>
-                            </section>
-
-                            <section className={classes.section} aria-labelledby='sec-patterns'>
-                                <h2 id='sec-patterns'>{translate('section_patterns')}</h2>
-                                <PatternsListComponent patterns={chart.patterns}/>
-                            </section>
-
-                            {chart.balance ? (
-                                <section className={classes.section} aria-labelledby='sec-balance'>
-                                    <h2 id='sec-balance'>{translate('section_balance')}</h2>
-                                    <BalancePanelComponent balance={chart.balance}/>
-                                </section>
-                            ) : null}
-                        </div>
-                    )},
-                    {key: 'destiny', label: translate('tab_destiny'), children: matrix
-                        ? <DestinyMatrixComponent matrix={matrix}/>
-                        : matrixFailed ? <Alert type='warning' showIcon message={translate('destiny_error')}/> : <LoaderComponent/>},
-                    {key: 'transits', label: translate('tab_transits'), children: <TransitsPanelComponent chart={chart}/>},
-                    {key: 'vedic', label: translate('tab_vedic'), children: <VedicPanelComponent/>},
-                    {key: 'synastry', label: translate('tab_synastry'), children: <SynastryPanelComponent/>},
-                ]}
-            />
+            <TabStripComponent items={panels.map(({key, label}) => ({key, label}))} activeKey={tab} onChange={handleTab}
+                               label={translate('result_for')}/>
+            {panels.filter((p) => visited.has(p.key)).map((p) => (
+                <div key={p.key} id={`panel-${p.key}`} role='tabpanel' aria-labelledby={`tab-${p.key}`} hidden={p.key !== tab}
+                     className={classes.panel}>
+                    {p.children}
+                </div>
+            ))}
         </div>
     );
 };

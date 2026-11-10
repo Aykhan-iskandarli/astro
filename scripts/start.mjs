@@ -16,8 +16,15 @@ if (!dockerOk) {
     process.exit(1);
 }
 
-console.log('▶ Starting API container (first run builds the image and downloads the city index)…');
-if (run('docker', ['compose', 'up', '-d', 'api']).status !== 0) {
+// Plain `docker build` (cached, seconds when nothing changed). Docker Compose v5 builds through "bake", which
+// stops with an fs.read entitlement prompt on this setup, so the image is built here and compose only runs it.
+console.log('▶ Building the API image (first run also downloads the city index)…');
+if (run('docker', ['build', '-q', '-f', 'apps/api/Dockerfile', '-t', 'astra-api:dev', '.']).status !== 0) {
+    console.error('\n✖ Could not build the API image.\n');
+    process.exit(1);
+}
+console.log('▶ Starting API container…');
+if (run('docker', ['compose', 'up', '-d', '--no-build', 'api']).status !== 0) {
     console.error('\n✖ Could not start the API container.\n');
     process.exit(1);
 }

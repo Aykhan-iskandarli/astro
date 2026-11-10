@@ -99,3 +99,39 @@ def test_vedic_endpoint():
     body = r.json()
     assert len(body["grahas"]) == 9 and body["lagna"] is not None
     assert len(body["dasha"]["mahadashas"]) == 9
+
+
+def test_numerology_endpoint():
+    r = client.post("/api/numerology", json={"date": "1990-06-15", "fullName": "John Smith"})
+    assert r.status_code == 200
+    body = r.json()
+    assert body["lifePath"]["value"] == 4 and body["expression"]["value"] == 8
+
+
+def test_bazi_endpoint():
+    r = client.post("/api/charts/bazi", json={**BAKU, "gender": "female"})
+    assert r.status_code == 200
+    body = r.json()
+    assert body["dayMaster"]["id"] and body["luck"]["forward"] is False
+    assert client.post("/api/charts/bazi", json={**BAKU, "gender": "x"}).status_code == 422
+
+
+def test_returns_endpoint():
+    r = client.post("/api/charts/returns", json={**BAKU, "kind": "solar", "year": 2026})
+    assert r.status_code == 200 and r.json()["at"].startswith("2026-06-1")
+    r = client.post("/api/charts/returns", json={**BAKU, "kind": "lunar", "after": "2026-11-10",
+                                                 "relocate": {"latitude": 51.5, "longitude": -0.1,
+                                                              "timezone": "Europe/London", "name": "London"}})
+    assert r.status_code == 200 and r.json()["meta"]["relocated"] is True
+    assert client.post("/api/charts/returns", json={**BAKU, "relocate": {"latitude": 0, "longitude": 0,
+                                                                         "timezone": "Bad/Zone"}}).status_code == 422
+
+
+def test_progressions_endpoint():
+    r = client.post("/api/charts/progressions", json={**BAKU, "target": "2026-11-10T00:00:00Z"})
+    assert r.status_code == 200 and 36 < r.json()["ageYears"] < 37
+
+
+def test_composite_endpoint():
+    r = client.post("/api/charts/composite", json={"first": BAKU, "second": LONDON})
+    assert r.status_code == 200 and len(r.json()["points"]) >= 14

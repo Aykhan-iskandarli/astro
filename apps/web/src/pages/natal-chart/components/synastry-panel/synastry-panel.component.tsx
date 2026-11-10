@@ -1,5 +1,5 @@
 import {useCallback, useMemo, useState} from 'react';
-import {Alert, Button} from 'antd';
+import {Alert, Button, Segmented} from 'antd';
 import {motion} from 'framer-motion';
 import classNames from 'classnames';
 import {useStore} from 'store/store.config';
@@ -15,6 +15,7 @@ import {IOverlay} from '../../models/synastry.model';
 import ChartWheelComponent from '../chart-wheel/chart-wheel.component';
 import BirthFormComponent from '../birth-form/birth-form.component';
 import SavedChartsComponent from '../saved-charts/saved-charts.component';
+import CompositeViewComponent from '../composite-view/composite-view.component';
 import {useSynastryPanelStyles} from './synastry-panel.style';
 
 const ELEMENT_COLORS: Record<string, string> = {fire: colors.fire, earth: colors.earth, air: colors.air, water: colors.water};
@@ -26,6 +27,11 @@ const SynastryPanelComponent = () => {
     const birthInput = useStore('birthInput');
     const [partner, setPartner] = useState<IBirthInput | null>(null);
     const [hovered, setHovered] = useState<string | null>(null);
+    const [view, setView] = useState<'synastry' | 'composite'>('synastry');
+
+    const handleView = useCallback((v: string | number) => {
+        setView(v as 'synastry' | 'composite');
+    }, []);
     const {mutate: createSynastry, data: result, isPending, reset} = useCreateSynastry();
 
     const name = useCallback((id: string) => content.points[id as keyof typeof content.points]?.name ?? id, [content]);
@@ -104,6 +110,12 @@ const SynastryPanelComponent = () => {
                 </div>
             ) : (
                 <>
+                    <Segmented className={classes.viewSwitch} size='large' value={view} onChange={handleView} options={[
+                        {value: 'synastry', label: translate('synastry_view')},
+                        {value: 'composite', label: translate('composite_view')},
+                    ]}/>
+                    {view === 'composite' ? <CompositeViewComponent first={birthInput} second={partner}/> : (
+                    <>
                     <section className={classes.score} aria-labelledby='syn-score'>
                         <motion.div className={classes.scoreValue} initial={{scale: 0.6, opacity: 0}} animate={{scale: 1, opacity: 1}}
                                     transition={{duration: 0.6, ease: [0.22, 1, 0.36, 1]}}>
@@ -181,6 +193,8 @@ const SynastryPanelComponent = () => {
                             ))}
                         </div>
                     </section>
+                    </>
+                    )}
                 </>
             )}
         </div>

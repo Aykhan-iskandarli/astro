@@ -42,6 +42,12 @@ export const panelStyles = {
         '& h3': {fontSize: rem(22), marginBottom: rem(16)},
         [breakpoint(sizes.breakpointLg)]: {position: 'static', maxHeight: 'none'},
     },
+    // Sticky column for a component that already draws its own card (e.g. the interpretation panel)
+    sidePlain: {
+        position: 'sticky',
+        top: rem(96),
+        [breakpoint(sizes.breakpointLg)]: {position: 'static'},
+    },
     list: {
         display: 'flex',
         flexDirection: 'column',

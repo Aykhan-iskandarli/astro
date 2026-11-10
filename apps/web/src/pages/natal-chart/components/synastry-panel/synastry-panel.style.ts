@@ -8,6 +8,7 @@ import {panelStyles} from '../transits-panel/transits-panel.style';
 
 const styles = {
     ...panelStyles,
+    viewSwitch: {alignSelf: 'flex-start', maxWidth: '100%'},
     formCard: {
         maxWidth: rem(560),
         width: '100%',

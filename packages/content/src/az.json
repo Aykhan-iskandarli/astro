@@ -874,5 +874,333 @@
       "debilitated": "Niça (düşüşdə)",
       "own": "Svakşetra (öz bürcündə)"
     }
+  },
+  "numerology": {
+    "numbers": {
+      "1": {
+        "name": "Lider",
+        "keywords": "müstəqillik, təşəbbüs, iradə",
+        "meaning": "Öz yolunu açan, ilk addımı atan və başqalarını arxasınca aparan enerji."
+      },
+      "2": {
+        "name": "Diplomat",
+        "keywords": "əməkdaşlıq, həssaslıq, balans",
+        "meaning": "Tərəfdaşlıq, səbir və insanları bir araya gətirmək bacarığı."
+      },
+      "3": {
+        "name": "Yaradıcı",
+        "keywords": "ifadə, sevinc, ünsiyyət",
+        "meaning": "Söz, sənət və yumorla özünü ifadə edən, ətrafa sevinc yayan enerji."
+      },
+      "4": {
+        "name": "Qurucu",
+        "keywords": "nizam, zəhmət, sabitlik",
+        "meaning": "Möhkəm təməl quran, planlı və etibarlı işləyən enerji."
+      },
+      "5": {
+        "name": "Azad ruh",
+        "keywords": "azadlıq, dəyişiklik, macəra",
+        "meaning": "Yeniliyə açıq, səyahət və təcrübə ilə öyrənən çevik enerji."
+      },
+      "6": {
+        "name": "Qayğıkeş",
+        "keywords": "məsuliyyət, ailə, harmoniya",
+        "meaning": "Ailəyə, insanlara qayğı və ev-ocağı harmoniyası."
+      },
+      "7": {
+        "name": "Axtarışçı",
+        "keywords": "təhlil, müdriklik, daxili dünya",
+        "meaning": "Həqiqəti axtaran, dərin düşünən və təklikdə güclənən enerji."
+      },
+      "8": {
+        "name": "Güc",
+        "keywords": "uğur, maddi dünya, nüfuz",
+        "meaning": "Məqsədə çatmaq, idarə etmək və maddi uğur qurmaq bacarığı."
+      },
+      "9": {
+        "name": "Humanist",
+        "keywords": "mərhəmət, tamamlanma, xidmət",
+        "meaning": "Geniş ürək, insanlığa xidmət və köhnəni buraxıb tamamlamaq."
+      },
+      "11": {
+        "name": "Master 11 — İşıq daşıyıcısı",
+        "keywords": "intuisiya, ilham, ruhani müəllim",
+        "meaning": "Güclü intuisiya və başqalarını ruhlandırmaq missiyası; yüksək gərginlikli, amma ilhamverici enerji."
+      },
+      "22": {
+        "name": "Master 22 — Böyük qurucu",
+        "keywords": "vizyon, böyük layihələr, praktik idealizm",
+        "meaning": "Böyük arzuları real, uzunömürlü əsərlərə çevirmək potensialı."
+      },
+      "33": {
+        "name": "Master 33 — Böyük müəllim",
+        "keywords": "şəfqət, xidmət, şəfa",
+        "meaning": "Sevgi və şəfqətlə başqalarına yol göstərmək, fədakar xidmət."
+      }
+    },
+    "kinds": {
+      "lifePath": {
+        "name": "Həyat yolu",
+        "meaning": "Doğum tarixindən: həyatın əsas mövzusu və istiqaməti."
+      },
+      "expression": {
+        "name": "İfadə (tale)",
+        "meaning": "Tam addan: istedadlarınız və özünüzü dünyaya necə ifadə etdiyiniz."
+      },
+      "soulUrge": {
+        "name": "Ruh istəyi",
+        "meaning": "Addakı saitlərdən: ürəyinizin dərin arzusu."
+      },
+      "personality": {
+        "name": "Şəxsiyyət",
+        "meaning": "Addakı samitlərdən: başqalarının sizi necə gördüyü."
+      },
+      "birthday": {
+        "name": "Doğum günü",
+        "meaning": "Doğum günündən: xüsusi bir istedad."
+      },
+      "maturity": {
+        "name": "Yetkinlik",
+        "meaning": "Həyat yolu + ifadə: həyatın ikinci yarısında açılan potensial."
+      },
+      "personalYear": {
+        "name": "Şəxsi il",
+        "meaning": "Bu ilin enerjisi: 9 illik dövrdə harada olduğunuz."
+      },
+      "personalMonth": {
+        "name": "Şəxsi ay",
+        "meaning": "Bu ayın enerjisi."
+      }
+    },
+    "karmicDebt": {
+      "13": "Zəhmətlə öyrənmək: tənbəlliyi aşmaq və işi sona çatdırmaq.",
+      "14": "Azadlıqdan düzgün istifadə: ifratlardan və asılılıqlardan qaçmaq.",
+      "16": "Eqonun yenidən qurulması: qürurdan təvazökarlığa.",
+      "19": "Müstəqilliyi düzgün öyrənmək: kömək istəməyi bacarmaq."
+    }
+  },
+  "chinese": {
+    "elements": {
+      "wood": {
+        "name": "Ağac",
+        "keywords": "böyümə, çeviklik, mərhəmət"
+      },
+      "fire": {
+        "name": "Od",
+        "keywords": "ehtiras, işıq, ifadə"
+      },
+      "earth": {
+        "name": "Torpaq",
+        "keywords": "sabitlik, etibar, qayğı"
+      },
+      "metal": {
+        "name": "Metal",
+        "keywords": "nizam, qətiyyət, ədalət"
+      },
+      "water": {
+        "name": "Su",
+        "keywords": "müdriklik, axıcılıq, intuisiya"
+      }
+    },
+    "stems": {
+      "jia": "Jia",
+      "yi": "Yi",
+      "bing": "Bing",
+      "ding": "Ding",
+      "wu": "Wu",
+      "ji": "Ji",
+      "geng": "Geng",
+      "xin": "Xin",
+      "ren": "Ren",
+      "gui": "Gui"
+    },
+    "branches": {
+      "zi": "Zi",
+      "chou": "Chou",
+      "yin": "Yin",
+      "mao": "Mao",
+      "chen": "Chen",
+      "si": "Si",
+      "wu": "Wu",
+      "wei": "Wei",
+      "shen": "Shen",
+      "you": "You",
+      "xu": "Xu",
+      "hai": "Hai"
+    },
+    "animals": {
+      "rat": "Siçan",
+      "ox": "Öküz",
+      "tiger": "Pələng",
+      "rabbit": "Dovşan",
+      "dragon": "Əjdaha",
+      "snake": "İlan",
+      "horse": "At",
+      "goat": "Keçi",
+      "monkey": "Meymun",
+      "rooster": "Xoruz",
+      "dog": "İt",
+      "pig": "Donuz"
+    },
+    "tenGods": {
+      "dayMaster": {
+        "name": "Gün hökmdarı",
+        "meaning": "Sizin özünüz: xarakterin özəyi."
+      },
+      "friend": {
+        "name": "Dost (Bi Jian)",
+        "meaning": "həmyaşıdlar, özünəinam, müstəqillik"
+      },
+      "robWealth": {
+        "name": "Rəqib (Jie Cai)",
+        "meaning": "rəqabət, cəsarət, risk"
+      },
+      "eatingGod": {
+        "name": "Yemək tanrısı (Shi Shen)",
+        "meaning": "yaradıcılıq, zövq, rahat ifadə"
+      },
+      "hurtingOfficer": {
+        "name": "Üsyankar istedad (Shang Guan)",
+        "meaning": "parlaq istedad, tənqid, qaydaları sınamaq"
+      },
+      "indirectWealth": {
+        "name": "Gözlənilməz sərvət (Pian Cai)",
+        "meaning": "fürsətlər, ticarət, səxavət"
+      },
+      "directWealth": {
+        "name": "Daimi sərvət (Zheng Cai)",
+        "meaning": "zəhmətlə qazanc, qənaət, məsuliyyət"
+      },
+      "sevenKillings": {
+        "name": "Yeddi qatil (Qi Sha)",
+        "meaning": "təzyiq, cəsarət, liderlik sınağı"
+      },
+      "directOfficer": {
+        "name": "Rəsmi güc (Zheng Guan)",
+        "meaning": "nizam, nüfuz, qayda"
+      },
+      "indirectResource": {
+        "name": "Qeyri-adi bilik (Pian Yin)",
+        "meaning": "intuisiya, qeyri-ənənəvi bilik"
+      },
+      "directResource": {
+        "name": "Dəstək (Zheng Yin)",
+        "meaning": "təhsil, qayğı, dəstək"
+      }
+    },
+    "palaces": {
+      "soul": {
+        "name": "Həyat sarayı",
+        "meaning": "Şəxsiyyət, xarakter, həyatın əsas mövzusu."
+      },
+      "siblings": {
+        "name": "Qardaşlar",
+        "meaning": "Qardaş-bacılar və yaxın həmkarlar."
+      },
+      "spouse": {
+        "name": "Həyat yoldaşı",
+        "meaning": "Evlilik və yaxın tərəfdaşlıq."
+      },
+      "children": {
+        "name": "Uşaqlar",
+        "meaning": "Övladlar, yaradıcılıq, tələbələr."
+      },
+      "wealth": {
+        "name": "Sərvət",
+        "meaning": "Pul qazanma və xərcləmə üslubu."
+      },
+      "health": {
+        "name": "Sağlamlıq",
+        "meaning": "Bədən, sağlamlıq meylləri."
+      },
+      "surface": {
+        "name": "Səyahət",
+        "meaning": "Ev xaricində həyat, səyahət, ictimai imic."
+      },
+      "friends": {
+        "name": "Dostlar",
+        "meaning": "Dostlar, tabeliyində olanlar, sosial şəbəkə."
+      },
+      "career": {
+        "name": "Karyera",
+        "meaning": "İş, peşə, nüfuz."
+      },
+      "property": {
+        "name": "Əmlak",
+        "meaning": "Ev, daşınmaz əmlak, ailə mühiti."
+      },
+      "spirit": {
+        "name": "Mənəvi rifah",
+        "meaning": "Daxili rahatlıq, hobbilər, mənəvi həyat."
+      },
+      "parents": {
+        "name": "Valideynlər",
+        "meaning": "Valideynlər, müəllimlər, rəhbərlər."
+      }
+    },
+    "stars": {
+      "emperor": {
+        "name": "Zi Wei — İmperator",
+        "keywords": "liderlik, ləyaqət, məsuliyyət"
+      },
+      "advisor": {
+        "name": "Tian Ji — Müşavir",
+        "keywords": "ağıl, planlama, dəyişkənlik"
+      },
+      "sun": {
+        "name": "Tai Yang — Günəş",
+        "keywords": "səxavət, işıq, ictimai fəaliyyət"
+      },
+      "warrior": {
+        "name": "Wu Qu — Döyüşçü",
+        "keywords": "maliyyə, qətiyyət, icra"
+      },
+      "fortunate": {
+        "name": "Tian Tong — Bəxtli",
+        "keywords": "rahatlıq, xoşbəxtlik, uşaq qəlbi"
+      },
+      "judge": {
+        "name": "Lian Zhen — Hakim",
+        "keywords": "prinsip, ehtiras, nizam-intizam"
+      },
+      "empress": {
+        "name": "Tian Fu — İmperatriça",
+        "keywords": "sabitlik, ehtiyat, idarəçilik"
+      },
+      "moon": {
+        "name": "Tai Yin — Ay",
+        "keywords": "incəlik, ev, daxili sərvət"
+      },
+      "wolf": {
+        "name": "Tan Lang — Canavar",
+        "keywords": "arzular, cazibə, istedadlar"
+      },
+      "advocator": {
+        "name": "Ju Men — Müdafiəçi",
+        "keywords": "nitq, təhlil, mübahisə"
+      },
+      "minister": {
+        "name": "Tian Xiang — Nazir",
+        "keywords": "kömək, diplomatiya, ədalət"
+      },
+      "sage": {
+        "name": "Tian Liang — Müdrik",
+        "keywords": "qoruma, müdriklik, xeyriyyə"
+      },
+      "marshal": {
+        "name": "Qi Sha — Marşal",
+        "keywords": "cəsarət, sərt qərarlar, müstəqillik"
+      },
+      "rebel": {
+        "name": "Po Jun — Üsyançı",
+        "keywords": "dağıdıb yenidən qurmaq, yenilik"
+      }
+    },
+    "mutagens": {
+      "A": "Lu — bərəkət",
+      "B": "Quan — güc",
+      "C": "Ke — şöhrət",
+      "D": "Ji — maneə"
+    }
   }
 }

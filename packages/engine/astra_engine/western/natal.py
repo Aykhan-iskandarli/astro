@@ -85,6 +85,54 @@ def build_subject(birth: BirthData, utc: datetime, house_system: str = "P"):
         )
 
 
+KIND = {pid: kind for pid, _, kind in POINTS}
+
+
+def assemble(raw: dict[str, tuple[float, float | None, bool | None]], cusps: list[float] | None,
+             angle_lons: dict[str, float] | None) -> dict:
+    """Chart body from raw longitudes: points, angles, houses, aspects, patterns, balance, lunar phase, sect.
+
+    raw: point id -> (longitude, speed, retrograde). Shared by the natal, progressed and composite charts so
+    they all have the same JSON shape.
+    """
+    points = []
+    for pid, _, kind in POINTS:
+        if pid not in raw:
+            continue
+        lon, speed, retro = raw[pid]
+        pos = _position(lon)
+        points.append({
+            "id": pid, "kind": kind, **pos,
+            "house": house_of(lon, cusps) if cusps else None,
+            "retrograde": bool(retro),
+            "speed": round(speed, 6) if speed is not None else None,
+            "dignity": dignity_of(pid, pos["sign"]),
+        })
+    angles = {aid: _position(lon) for aid, lon in angle_lons.items()} if angle_lons else None
+    houses = [{"number": i + 1, **_position(c)} for i, c in enumerate(cusps)] if cusps else None
+
+    aspect_points = [AspectPoint(p["id"], p["longitude"], p["speed"]) for p in points if p["id"] != "partOfFortune"]
+    if angles:
+        aspect_points += [AspectPoint(a, angles[a]["longitude"], None, is_angle=True) for a in ("asc", "mc")]
+    aspects = find_aspects(aspect_points)
+    signs = {p["id"]: p["sign"] for p in points}
+    by_id = {p["id"]: p for p in points}
+    sect = None
+    if angles:
+        # Sun above the horizon (houses 7-12 side of the ASC/DSC axis) = day chart
+        sect = "day" if norm(by_id["sun"]["longitude"] - angles["asc"]["longitude"]) > 180 else "night"
+    return {
+        "points": points,
+        "angles": angles,
+        "houses": houses,
+        "aspects": aspects,
+        "patterns": find_patterns(aspects, signs, {p["id"]: p["house"] for p in points}),
+        "balance": balance(signs),
+        "lunarPhase": lunar_phase(by_id["sun"]["longitude"], by_id["moon"]["longitude"]),
+        "sect": sect,
+    }
+
+
 def calculate(birth: BirthData, house_system: HouseSystem = "P") -> dict:
     """Pure and deterministic: same input -> same output. No I/O besides reading ephemeris files."""
     time_unknown = birth.time_unknown
@@ -95,39 +143,10 @@ def calculate(birth: BirthData, house_system: HouseSystem = "P") -> dict:
     cusps = [getattr(subject, f"{h}_house").abs_pos for h in HOUSE_ATTRS]
     used_system = _detect_polar_fallback(subject.julian_day, birth, house_system, cusps)
 
-    points = []
-    for pid, attr, kind in POINTS:
-        if time_unknown and pid in TIME_DEPENDENT:
-            continue
-        p = getattr(subject, attr)
-        pos = _position(p.abs_pos)
-        points.append({
-            "id": pid, "kind": kind, **pos,
-            "house": None if time_unknown else house_of(p.abs_pos, cusps),
-            "retrograde": bool(p.retrograde),
-            "speed": round(p.speed, 6) if p.speed is not None else None,
-            "dignity": dignity_of(pid, pos["sign"]),
-        })
-
-    angles = None if time_unknown else {
-        aid: _position(getattr(subject, attr).abs_pos) for aid, attr in ANGLES}
-    houses = None if time_unknown else [
-        {"number": i + 1, **_position(c)} for i, c in enumerate(cusps)]
-
-    aspect_points = [AspectPoint(p["id"], p["longitude"], p["speed"]) for p in points
-                     if p["id"] not in {"partOfFortune"}]
-    if angles:
-        aspect_points += [AspectPoint(a, angles[a]["longitude"], None, is_angle=True) for a in ("asc", "mc")]
-    aspects = find_aspects(aspect_points)
-
-    signs = {p["id"]: p["sign"] for p in points}
-    house_map = {p["id"]: p["house"] for p in points}
-    by_id = {p["id"]: p for p in points}
-
-    sect = None
-    if angles:
-        # Sun above the horizon (houses 7-12 side of the ASC/DSC axis) = day chart
-        sect = "day" if norm(by_id["sun"]["longitude"] - angles["asc"]["longitude"]) > 180 else "night"
+    raw = {pid: (getattr(subject, attr).abs_pos, getattr(subject, attr).speed, getattr(subject, attr).retrograde)
+           for pid, attr, _ in POINTS if not (time_unknown and pid in TIME_DEPENDENT)}
+    angle_lons = None if time_unknown else {aid: getattr(subject, attr).abs_pos for aid, attr in ANGLES}
+    body = assemble(raw, None if time_unknown else cusps, angle_lons)
 
     return {
         "module": MODULE_ID,
@@ -146,16 +165,9 @@ def calculate(birth: BirthData, house_system: HouseSystem = "P") -> dict:
             "utcOffset": resolved.utc_offset, "dstNote": resolved.dst_note,
             "julianDay": None if time_unknown else round(subject.julian_day, 6),
         },
-        "points": points,
-        "angles": angles,
-        "houses": houses,
-        "aspects": aspects,
-        "patterns": find_patterns(aspects, signs, house_map),
-        "balance": balance(signs),
-        "lunarPhase": lunar_phase(by_id["sun"]["longitude"], by_id["moon"]["longitude"]),
-        "sect": sect,
+        **body,
         "moonRange": _moon_range(birth) if time_unknown else None,
     }
 
 
-__all__ = ["calculate", "MODULE_ID", "MODULE_VERSION"]
+__all__ = ["calculate", "assemble", "build_subject", "MODULE_ID", "MODULE_VERSION"]

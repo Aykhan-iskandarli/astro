@@ -37,21 +37,8 @@ const styles = {
         marginTop: rem(-24),
         '&:empty': {display: 'none'},
     },
-    tabs: {
-        // The tab panel takes focus on click; no page-wide focus frame around it
-        '& .ant-tabs-content, & .ant-tabs-tabpane': {outline: 'none !important'},
-        '& .ant-tabs-nav': {marginBottom: rem(32)},
-        '& .ant-tabs-tab': {fontSize: rem(17)},
-        // Phones: a natively swipeable tab strip instead of antd's hidden overflow menu
-        [breakpoint(sizes.breakpoint)]: {
-            '& .ant-tabs-nav-wrap': {overflowX: 'auto', scrollbarWidth: 'none', '&::-webkit-scrollbar': {display: 'none'}},
-            '& .ant-tabs-nav-list': {transform: 'none !important'},
-            '& .ant-tabs-nav-operations': {display: 'none !important'},
-            '& .ant-tabs-tab': {fontSize: rem(15)},
-            '& .ant-tabs-tab + .ant-tabs-tab': {marginLeft: `${rem(20)} !important`},
-            '& .ant-tabs-ink-bar': {display: 'none'},
-            '& .ant-tabs-tab-active': {borderBottom: `2px solid ${colors.gold}`},
-        },
+    panel: {
+        outline: 'none',
     },
     tabBody: {
         display: 'flex',

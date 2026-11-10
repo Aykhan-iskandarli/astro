@@ -60,6 +60,35 @@ def _birth(req: NatalRequest) -> BirthData:
         raise HTTPException(status_code=422, detail=[err["msg"] for err in e.errors()]) from e
 
 
+class BaziRequest(NatalRequest):
+    gender: Literal["male", "female"] = "male"
+
+
+class PlaceInput(BaseModel):
+    latitude: float = Field(ge=-90, le=90)
+    longitude: float = Field(ge=-180, le=180)
+    timezone: str
+    name: str | None = Field(default=None, max_length=160)
+
+
+class ReturnRequest(NatalRequest):
+    kind: Literal["solar", "lunar"] = "solar"
+    year: int | None = Field(default=None, ge=1800, le=2998)
+    after: Date | None = None
+    relocate: PlaceInput | None = None
+
+
+class ProgressionRequest(NatalRequest):
+    target: DateTime | None = None
+
+
+class NumerologyRequest(BaseModel):
+    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
+
+    full_name: str | None = Field(default=None, max_length=120)
+    date: Date
+
+
 class DestinyMatrixRequest(BaseModel):
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
 
@@ -115,3 +144,45 @@ def synastry_chart(req: SynastryRequest) -> dict:
 @app.post("/api/charts/vedic")
 def vedic_chart(req: NatalRequest) -> dict:
     return MODULES["vedic.chart"].calculate(_birth(req))
+
+
+@app.post("/api/numerology")
+def numerology(req: NumerologyRequest) -> dict:
+    try:
+        birth = BirthData(date=req.date, latitude=0, longitude=0, timezone="UTC")
+    except ValidationError as e:
+        raise HTTPException(status_code=422, detail=[err["msg"] for err in e.errors()]) from e
+    return MODULES["numerology.core"].calculate(birth, full_name=req.full_name)
+
+
+@app.post("/api/charts/bazi")
+def bazi_chart(req: BaziRequest) -> dict:
+    return MODULES["chinese.bazi"].calculate(_birth(req), gender=req.gender)
+
+
+@app.post("/api/charts/returns")
+def return_chart(req: ReturnRequest) -> dict:
+    place = req.relocate.model_dump() if req.relocate else None
+    if place:
+        try:
+            BirthData(date=req.date, latitude=place["latitude"], longitude=place["longitude"], timezone=place["timezone"])
+        except ValidationError as e:
+            raise HTTPException(status_code=422, detail=[err["msg"] for err in e.errors()]) from e
+    return MODULES["western.returns"].calculate(_birth(req), kind=req.kind, year=req.year, after=req.after,
+                                                place=place, house_system=req.house_system)
+
+
+@app.post("/api/charts/progressions")
+def progression_chart(req: ProgressionRequest) -> dict:
+    target = req.target
+    if target is not None and target.tzinfo is None:
+        target = target.replace(tzinfo=TimeZone.utc)
+    if target is not None and not 1800 <= target.year <= 2999:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.progressions"].calculate(_birth(req), target=target, house_system=req.house_system)
+
+
+@app.post("/api/charts/composite")
+def composite_chart(req: SynastryRequest) -> dict:
+    return MODULES["western.composite"].calculate(_birth(req.first), _birth(req.second),
+                                                  house_system=req.house_system)

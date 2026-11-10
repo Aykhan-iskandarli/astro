@@ -874,5 +874,333 @@
       "debilitated": "Neecha (debilitated)",
       "own": "Swakshetra (own sign)"
     }
+  },
+  "numerology": {
+    "numbers": {
+      "1": {
+        "name": "Leader",
+        "keywords": "independence, initiative, will",
+        "meaning": "The energy that opens its own path, takes the first step and leads others."
+      },
+      "2": {
+        "name": "Diplomat",
+        "keywords": "cooperation, sensitivity, balance",
+        "meaning": "Partnership, patience and the gift of bringing people together."
+      },
+      "3": {
+        "name": "Creator",
+        "keywords": "expression, joy, communication",
+        "meaning": "Self-expression through words, art and humour, spreading joy around."
+      },
+      "4": {
+        "name": "Builder",
+        "keywords": "order, hard work, stability",
+        "meaning": "The energy that builds solid foundations and works with plan and reliability."
+      },
+      "5": {
+        "name": "Free spirit",
+        "keywords": "freedom, change, adventure",
+        "meaning": "A flexible energy open to the new, learning through travel and experience."
+      },
+      "6": {
+        "name": "Nurturer",
+        "keywords": "responsibility, family, harmony",
+        "meaning": "Care for family and people, and harmony at home."
+      },
+      "7": {
+        "name": "Seeker",
+        "keywords": "analysis, wisdom, inner world",
+        "meaning": "The energy that seeks truth, thinks deeply and grows strong in solitude."
+      },
+      "8": {
+        "name": "Power",
+        "keywords": "success, material world, authority",
+        "meaning": "The ability to achieve goals, manage and build material success."
+      },
+      "9": {
+        "name": "Humanitarian",
+        "keywords": "compassion, completion, service",
+        "meaning": "A big heart, service to humanity, and letting go to complete a cycle."
+      },
+      "11": {
+        "name": "Master 11 — Illuminator",
+        "keywords": "intuition, inspiration, spiritual teacher",
+        "meaning": "Strong intuition and a mission to inspire others; a high-voltage but inspiring energy."
+      },
+      "22": {
+        "name": "Master 22 — Master builder",
+        "keywords": "vision, large projects, practical idealism",
+        "meaning": "The potential to turn big dreams into real, lasting works."
+      },
+      "33": {
+        "name": "Master 33 — Master teacher",
+        "keywords": "compassion, service, healing",
+        "meaning": "Guiding others with love and compassion; selfless service."
+      }
+    },
+    "kinds": {
+      "lifePath": {
+        "name": "Life path",
+        "meaning": "From the birth date: the main theme and direction of your life."
+      },
+      "expression": {
+        "name": "Expression (destiny)",
+        "meaning": "From the full name: your talents and how you express yourself."
+      },
+      "soulUrge": {
+        "name": "Soul urge",
+        "meaning": "From the vowels of the name: your heart's deepest desire."
+      },
+      "personality": {
+        "name": "Personality",
+        "meaning": "From the consonants of the name: how others see you."
+      },
+      "birthday": {
+        "name": "Birthday",
+        "meaning": "From the day of birth: a special talent."
+      },
+      "maturity": {
+        "name": "Maturity",
+        "meaning": "Life path + expression: potential that unfolds in the second half of life."
+      },
+      "personalYear": {
+        "name": "Personal year",
+        "meaning": "The energy of this year: where you are in the 9-year cycle."
+      },
+      "personalMonth": {
+        "name": "Personal month",
+        "meaning": "The energy of this month."
+      }
+    },
+    "karmicDebt": {
+      "13": "Learning through effort: overcoming laziness and finishing what you start.",
+      "14": "Using freedom wisely: avoiding excess and dependency.",
+      "16": "Rebuilding the ego: from pride to humility.",
+      "19": "Learning independence the right way: being able to ask for help."
+    }
+  },
+  "chinese": {
+    "elements": {
+      "wood": {
+        "name": "Wood",
+        "keywords": "growth, flexibility, kindness"
+      },
+      "fire": {
+        "name": "Fire",
+        "keywords": "passion, light, expression"
+      },
+      "earth": {
+        "name": "Earth",
+        "keywords": "stability, reliability, care"
+      },
+      "metal": {
+        "name": "Metal",
+        "keywords": "order, determination, justice"
+      },
+      "water": {
+        "name": "Water",
+        "keywords": "wisdom, flow, intuition"
+      }
+    },
+    "stems": {
+      "jia": "Jia",
+      "yi": "Yi",
+      "bing": "Bing",
+      "ding": "Ding",
+      "wu": "Wu",
+      "ji": "Ji",
+      "geng": "Geng",
+      "xin": "Xin",
+      "ren": "Ren",
+      "gui": "Gui"
+    },
+    "branches": {
+      "zi": "Zi",
+      "chou": "Chou",
+      "yin": "Yin",
+      "mao": "Mao",
+      "chen": "Chen",
+      "si": "Si",
+      "wu": "Wu",
+      "wei": "Wei",
+      "shen": "Shen",
+      "you": "You",
+      "xu": "Xu",
+      "hai": "Hai"
+    },
+    "animals": {
+      "rat": "Rat",
+      "ox": "Ox",
+      "tiger": "Tiger",
+      "rabbit": "Rabbit",
+      "dragon": "Dragon",
+      "snake": "Snake",
+      "horse": "Horse",
+      "goat": "Goat",
+      "monkey": "Monkey",
+      "rooster": "Rooster",
+      "dog": "Dog",
+      "pig": "Pig"
+    },
+    "tenGods": {
+      "dayMaster": {
+        "name": "Day Master",
+        "meaning": "You yourself: the core of the character."
+      },
+      "friend": {
+        "name": "Friend (Bi Jian)",
+        "meaning": "peers, self-reliance, independence"
+      },
+      "robWealth": {
+        "name": "Rob Wealth (Jie Cai)",
+        "meaning": "competition, boldness, risk"
+      },
+      "eatingGod": {
+        "name": "Eating God (Shi Shen)",
+        "meaning": "creativity, enjoyment, easy expression"
+      },
+      "hurtingOfficer": {
+        "name": "Hurting Officer (Shang Guan)",
+        "meaning": "brilliant talent, criticism, testing rules"
+      },
+      "indirectWealth": {
+        "name": "Indirect Wealth (Pian Cai)",
+        "meaning": "opportunities, trade, generosity"
+      },
+      "directWealth": {
+        "name": "Direct Wealth (Zheng Cai)",
+        "meaning": "earned income, thrift, responsibility"
+      },
+      "sevenKillings": {
+        "name": "Seven Killings (Qi Sha)",
+        "meaning": "pressure, courage, a test of leadership"
+      },
+      "directOfficer": {
+        "name": "Direct Officer (Zheng Guan)",
+        "meaning": "order, status, rules"
+      },
+      "indirectResource": {
+        "name": "Indirect Resource (Pian Yin)",
+        "meaning": "intuition, unconventional knowledge"
+      },
+      "directResource": {
+        "name": "Direct Resource (Zheng Yin)",
+        "meaning": "learning, care, support"
+      }
+    },
+    "palaces": {
+      "soul": {
+        "name": "Life palace",
+        "meaning": "Personality, character, the main theme of life."
+      },
+      "siblings": {
+        "name": "Siblings",
+        "meaning": "Brothers, sisters and close colleagues."
+      },
+      "spouse": {
+        "name": "Spouse",
+        "meaning": "Marriage and close partnership."
+      },
+      "children": {
+        "name": "Children",
+        "meaning": "Children, creativity, students."
+      },
+      "wealth": {
+        "name": "Wealth",
+        "meaning": "How money is earned and spent."
+      },
+      "health": {
+        "name": "Health",
+        "meaning": "The body and health tendencies."
+      },
+      "surface": {
+        "name": "Travel",
+        "meaning": "Life away from home, travel, public image."
+      },
+      "friends": {
+        "name": "Friends",
+        "meaning": "Friends, subordinates, social network."
+      },
+      "career": {
+        "name": "Career",
+        "meaning": "Work, profession, status."
+      },
+      "property": {
+        "name": "Property",
+        "meaning": "Home, real estate, family environment."
+      },
+      "spirit": {
+        "name": "Fortune & spirit",
+        "meaning": "Inner peace, hobbies, spiritual life."
+      },
+      "parents": {
+        "name": "Parents",
+        "meaning": "Parents, teachers, superiors."
+      }
+    },
+    "stars": {
+      "emperor": {
+        "name": "Zi Wei — Emperor",
+        "keywords": "leadership, dignity, responsibility"
+      },
+      "advisor": {
+        "name": "Tian Ji — Advisor",
+        "keywords": "intelligence, planning, change"
+      },
+      "sun": {
+        "name": "Tai Yang — Sun",
+        "keywords": "generosity, light, public activity"
+      },
+      "warrior": {
+        "name": "Wu Qu — Warrior",
+        "keywords": "finance, determination, execution"
+      },
+      "fortunate": {
+        "name": "Tian Tong — Fortunate",
+        "keywords": "ease, happiness, a childlike heart"
+      },
+      "judge": {
+        "name": "Lian Zhen — Judge",
+        "keywords": "principle, passion, discipline"
+      },
+      "empress": {
+        "name": "Tian Fu — Empress",
+        "keywords": "stability, reserves, management"
+      },
+      "moon": {
+        "name": "Tai Yin — Moon",
+        "keywords": "gentleness, home, inner wealth"
+      },
+      "wolf": {
+        "name": "Tan Lang — Wolf",
+        "keywords": "desires, charm, many talents"
+      },
+      "advocator": {
+        "name": "Ju Men — Advocator",
+        "keywords": "speech, analysis, debate"
+      },
+      "minister": {
+        "name": "Tian Xiang — Minister",
+        "keywords": "help, diplomacy, fairness"
+      },
+      "sage": {
+        "name": "Tian Liang — Sage",
+        "keywords": "protection, wisdom, charity"
+      },
+      "marshal": {
+        "name": "Qi Sha — Marshal",
+        "keywords": "courage, tough decisions, independence"
+      },
+      "rebel": {
+        "name": "Po Jun — Rebel",
+        "keywords": "breaking down and rebuilding, innovation"
+      }
+    },
+    "mutagens": {
+      "A": "Lu — prosperity",
+      "B": "Quan — power",
+      "C": "Ke — fame",
+      "D": "Ji — obstacle"
+    }
   }
 }

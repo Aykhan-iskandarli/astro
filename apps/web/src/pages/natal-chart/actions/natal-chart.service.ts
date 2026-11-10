@@ -7,6 +7,9 @@ import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
 import SynastryModel from '../models/synastry.model';
 import VedicModel from '../models/vedic.model';
+import NumerologyModel from '../models/numerology.model';
+import BaziModel from '../models/bazi.model';
+import {ProgressionModel, ReturnModel} from '../models/forecast.model';
 
 export const getPlaces = (query: string): Promise<PlaceModel[]> => {
     return axiosPublic.get(API.places, {params: {q: query, limit: 8}})
@@ -47,5 +50,47 @@ export const getVedic = (input: IBirthInput): Promise<VedicModel> => {
     return axiosPublic.post(API.vedic, input)
         .then((res) => {
             return new VedicModel(res.data);
+        });
+};
+
+export const getNumerology = (date: string, fullName: string): Promise<NumerologyModel> => {
+    return axiosPublic.post(API.numerology, {date, fullName: fullName || null})
+        .then((res) => {
+            return new NumerologyModel(res.data);
+        });
+};
+
+export const getBazi = (input: IBirthInput, gender: 'male' | 'female'): Promise<BaziModel> => {
+    return axiosPublic.post(API.bazi, {...input, gender})
+        .then((res) => {
+            return new BaziModel(res.data);
+        });
+};
+
+export interface IReturnParams {
+    kind: 'solar' | 'lunar';
+    year?: number;
+    after?: string;
+    relocate?: {latitude: number; longitude: number; timezone: string; name: string} | null;
+}
+
+export const getReturn = (input: IBirthInput, params: IReturnParams): Promise<ReturnModel> => {
+    return axiosPublic.post(API.returns, {...input, ...params})
+        .then((res) => {
+            return new ReturnModel(res.data);
+        });
+};
+
+export const getProgressions = (input: IBirthInput, target: string): Promise<ProgressionModel> => {
+    return axiosPublic.post(API.progressions, {...input, target})
+        .then((res) => {
+            return new ProgressionModel(res.data);
+        });
+};
+
+export const getComposite = (first: IBirthInput, second: IBirthInput): Promise<NatalChartModel> => {
+    return axiosPublic.post(API.composite, {first, second, houseSystem: first.houseSystem})
+        .then((res) => {
+            return new NatalChartModel(res.data);
         });
 };

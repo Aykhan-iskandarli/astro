@@ -19,6 +19,7 @@ components are used as dependencies or data files.
 | [Uvicorn](https://github.com/encode/uvicorn) | 0.54.0 | BSD-3-Clause | dist-info `LICENSE.md` | ASGI server |
 | [Pydantic](https://github.com/pydantic/pydantic) | 2.14.3 | MIT | dist-info `LICENSE` | Validation |
 | [tzdata](https://github.com/python/tzdata) | 2026.6 | Apache-2.0 | dist-info `LICENSE` | IANA time zone database (historical DST) |
+| [lunar_python](https://github.com/6tail/lunar-python) | 1.4.9 | MIT | GitHub repo LICENSE (checked 2026-11-10) | Chinese calendar, solar terms, BaZi pillars and luck pillars |
 | [pytest](https://github.com/pytest-dev/pytest), [httpx](https://github.com/encode/httpx) | — | MIT / BSD-3-Clause | dist-info | Tests only |
 
 ## Data
@@ -46,6 +47,7 @@ components are used as dependencies or data files.
 | dayjs | 1.11.23 | MIT | ✓ |
 | reflect-metadata | 0.2.2 | Apache-2.0 | ✓ |
 | three | 0.187.0 | MIT | ✓ |
+| [iztro](https://github.com/SylarLong/iztro) | 2.6.5 | MIT | ✓ (package LICENSE + GitHub) | Zi Wei Dou Shu astrolabe, computed in the browser |
 | @react-three/fiber | 9.8.2 | MIT | not in the npm package — verified in the [upstream repo LICENSE](https://github.com/pmndrs/react-three-fiber/blob/master/LICENSE) |
 | @react-three/drei | 10.7.9 | MIT | ✓ |
 | @fontsource/playfair-display (Playfair Display font) | 5.3.0 | SIL OFL-1.1 | ✓ |
@@ -71,7 +73,7 @@ components are used as dependencies or data files.
 | [stellium](https://github.com/katelouie/stellium) 0.22.0 | AGPL-3.0 (repo LICENSE) | Spike comparison only (`spike/`). Candidate for Phase 6 (BaZi). |
 | [aryaminus/astro](https://github.com/aryaminus/astro) | MIT (LICENSE file verified 2026-11-10; GitHub reports NOASSERTION) | Not used: the Vedic module is computed directly with the Swiss Ephemeris. |
 | [AhmadHassan-BTed/SoulMatrix](https://github.com/AhmadHassan-BTed/SoulMatrix) | **none** (no LICENSE file, GitHub reports none — checked 2026-11-10) | Not used. The Destiny Matrix was implemented independently from public method descriptions (`docs/destiny-matrix.md`). |
-| [SylarLong/iztro](https://github.com/SylarLong/iztro) | **not verified** | Must be checked before Phase 6. |
+| [SylarLong/iztro](https://github.com/SylarLong/iztro) | MIT (verified 2026-11-10) | **Used** (see web runtime table). The Python port `x-haose/py-iztro` has **no license** and is not used. |
 
 ## Obligations
 
