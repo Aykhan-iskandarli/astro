@@ -10,6 +10,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {useGetVedic} from '../../actions/natal-chart.query';
 import {IVedicPoint} from '../../models/vedic.model';
 import SouthIndianChartComponent from '../south-indian-chart/south-indian-chart.component';
+import SadeSatiComponent from '../sade-sati/sade-sati.component';
 import {useVedicPanelStyles} from './vedic-panel.style';
 
 const VEDIC_GLYPHS: Record<string, string> = {...POINT_GLYPHS, rahu: POINT_GLYPHS.northNode, ketu: POINT_GLYPHS.southNode};
@@ -107,7 +108,7 @@ const VedicPanelComponent = () => {
                 </p>
             </header>
 
-            {vedic.timeUnknown ? <Alert type='info' showIcon message={translate('vedic_time_unknown')}/> : null}
+            {vedic.timeUnknown ? <Alert type='info' showIcon title={translate('vedic_time_unknown')}/> : null}
 
             <div className={classes.charts}>
                 <SouthIndianChartComponent title={translate('vedic_d1')} placements={d1} lagnaSign={vedic.lagna?.sign ?? null}
@@ -160,6 +161,11 @@ const VedicPanelComponent = () => {
                     })}
                 </ol>
             </section>
+
+            {vedic.sadeSati ? (
+                <SadeSatiComponent sadeSati={vedic.sadeSati}
+                                   signName={(s) => `${v.rashis[s as keyof typeof v.rashis]} (${content.signs[s as keyof typeof content.signs]?.name})`}/>
+            ) : null}
         </div>
     );
 };

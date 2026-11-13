@@ -132,7 +132,7 @@ const SynastryPanelComponent = () => {
                                     </li>
                                 ))}
                             </ul>
-                            {result.scoreExcluded.length ? <Alert type='info' showIcon message={translate('synastry_time_note')}/> : null}
+                            {result.scoreExcluded.length ? <Alert type='info' showIcon title={translate('synastry_time_note')}/> : null}
                             <p className={classes.note}>{translate('synastry_score_method')}</p>
                         </div>
                     </section>

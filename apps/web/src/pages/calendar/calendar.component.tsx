@@ -1,5 +1,5 @@
 import {useCallback, useMemo, useState} from 'react';
-import {Alert, Button, Checkbox} from 'antd';
+import {Alert, Button, Checkbox, Segmented} from 'antd';
 import type {CheckboxOptionType} from 'antd';
 import {Routes} from 'router/routes';
 import {formatLocal, glyph, POINT_GLYPHS} from 'core/helpers/astro';
@@ -11,6 +11,7 @@ import {ITranslationKey} from 'assets/lang/lang';
 import {useGetCalendar} from 'pages/sky/actions/sky.query';
 import {SkyEventModel} from 'pages/sky/models/sky.model';
 import {eventLabel} from 'pages/sky/components/event-label/event-label';
+import MoonCalendarComponent from './components/moon-calendar/moon-calendar.component';
 import {useCalendarStyles} from './calendar.style';
 
 type Kind = 'lunations' | 'eclipses' | 'ingresses' | 'stations';
@@ -25,7 +26,13 @@ function CalendarComponent() {
     const classes = useCalendarStyles();
     const [year, setYear] = useState(() => new Date().getFullYear());
     const [kinds, setKinds] = useState<Kind[]>(['lunations', 'eclipses', 'stations']);
+    const [mode, setMode] = useState<'events' | 'moon'>('events');
     const {data, isFetching, isError} = useGetCalendar(`${year}-01-01`, `${year + 1}-01-01`);
+    const handleMode = useCallback((v: string | number) => setMode(v as 'events' | 'moon'), []);
+    const modes = useMemo(() => [
+        {value: 'events', label: translate('calendar_mode_events')},
+        {value: 'moon', label: translate('calendar_mode_moon')},
+    ], [translate]);
 
     const point = useCallback((id: string | null) => (id ? content.points[id as keyof typeof content.points]?.name ?? id : ''), [content]);
     const sign = useCallback((id: string | null) => (id ? content.signs[id as keyof typeof content.signs]?.name ?? id : ''), [content]);
@@ -63,6 +70,11 @@ function CalendarComponent() {
                     <p className={classes.muted}>{translate('calendar_intro')}</p>
                 </header>
 
+                <Segmented options={modes} value={mode} onChange={handleMode} size='large'/>
+
+                {mode === 'moon' ? <MoonCalendarComponent/> : null}
+
+                {mode === 'events' ? <>
                 <div className={classes.toolbar}>
                     <div className={classes.yearSwitch}>
                         <Button onClick={handlePrev} aria-label={translate('calendar_prev')} disabled={year <= MIN_YEAR}>‹</Button>
@@ -72,7 +84,7 @@ function CalendarComponent() {
                     <Checkbox.Group<Kind> options={options} value={kinds} onChange={handleKinds}/>
                 </div>
 
-                {isError ? <Alert type='error' showIcon message={translate('today_error')}/> : null}
+                {isError ? <Alert type='error' showIcon title={translate('today_error')}/> : null}
                 {isFetching && !data ? <LoaderComponent/> : null}
 
                 {data ? (
@@ -114,6 +126,7 @@ function CalendarComponent() {
                         <p className={classes.muted}>{translate('calendar_timezone_note')}</p>
                     </>
                 ) : null}
+                </> : null}
             </div>
         </div>
     );

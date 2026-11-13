@@ -243,6 +243,7 @@ export default class NatalChartModel {
     public houseSystemRequested: string | null = null;
     public library: string | null = null;
     public points: ChartPointModel[] = [];
+    public extraPoints: ChartPointModel[] = [];   // asteroids, Vertex, Part of Spirit: own table, not on the wheel
     public angles: ChartPositionModel[] = [];
     public houses: HouseCuspModel[] = [];
     public aspects: AspectModel[] = [];
@@ -256,6 +257,7 @@ export default class NatalChartModel {
         this._setInput(item);
         this._setMeta(item);
         this._setPoints(item);
+        this._setExtraPoints(item);
         this._setAngles(item);
         this._setHouses(item);
         this._setAspects(item);
@@ -288,6 +290,10 @@ export default class NatalChartModel {
 
     private _setPoints({points}: any) {
         this.points = points?.map((p: any) => new ChartPointModel(p)) ?? [];
+    }
+
+    private _setExtraPoints({extraPoints}: any) {
+        this.extraPoints = extraPoints?.map((p: any) => new ChartPointModel(p)) ?? [];
     }
 
     private _setAngles({angles}: any) {

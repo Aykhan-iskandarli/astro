@@ -6,6 +6,7 @@ export const POINT_GLYPHS: Record<string, string> = {
     jupiter: '♃', saturn: '♄', uranus: '♅', neptune: '♆', pluto: '♇',
     northNode: '☊', southNode: '☋', lilith: '⚸', chiron: '⚷',
     partOfFortune: '', // drawn as SVG (⊗ is not in the bundled symbol font)
+    ceres: '⚳', pallas: '⚴', juno: '⚵', vesta: '⚶', vertex: 'Vx', partOfSpirit: '',
     asc: 'AC', mc: 'MC', dc: 'DC', ic: 'IC',
 };
 

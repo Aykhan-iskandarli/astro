@@ -873,6 +873,23 @@
       "exalted": "Uccha (exalted)",
       "debilitated": "Neecha (debilitated)",
       "own": "Swakshetra (own sign)"
+    },
+    "sadeSati": {
+      "intro": "Sade Sati is the roughly 7.5-year period while Saturn passes through the sign before your natal Moon sign, the Moon sign itself and the sign after it. In the Vedic tradition it is a time of responsibility, testing and maturing: it can feel heavy, but patience and discipline bring solid results.",
+      "phases": {
+        "rising": {
+          "name": "Rising",
+          "meaning": "Saturn in the sign before the Moon: expenses, fatigue and letting go of the old; a period of inner preparation."
+        },
+        "peak": {
+          "name": "Peak",
+          "meaning": "Saturn in the Moon sign: emotional pressure and responsibility are strongest; take care of health and relationships, be patient."
+        },
+        "setting": {
+          "name": "Setting",
+          "meaning": "Saturn in the sign after the Moon: order in money and family matters; the fruit of the effort gradually shows."
+        }
+      }
     }
   },
   "numerology": {
@@ -970,6 +987,18 @@
       "personalMonth": {
         "name": "Personal month",
         "meaning": "The energy of this month."
+      },
+      "personalDay": {
+        "name": "Personal day",
+        "meaning": "Today’s energy: from your personal month and today’s date."
+      },
+      "pinnacle": {
+        "name": "Pinnacle",
+        "meaning": "The main theme and opportunity of one of life’s four periods."
+      },
+      "challenge": {
+        "name": "Challenge",
+        "meaning": "The theme to work on during that period."
       }
     },
     "karmicDebt": {
@@ -977,6 +1006,80 @@
       "14": "Using freedom wisely: avoiding excess and dependency.",
       "16": "Rebuilding the ego: from pride to humility.",
       "19": "Learning independence the right way: being able to ask for help."
+    },
+    "challenges": {
+      "0": "The challenge of choice: every path is open, and you have to choose the direction yourself.",
+      "1": "Self-reliance: standing on your own feet without depending on others’ opinions.",
+      "2": "Sensitivity: not taking every word to heart, and voicing your own needs too.",
+      "3": "Self-expression: sharing thoughts and feelings with courage and without scattering.",
+      "4": "Order and patience: building a solid foundation step by step without avoiding responsibility.",
+      "5": "Freedom: balancing the need for change with stability, and avoiding extremes.",
+      "6": "Responsibility: caring for others without forgetting yourself or demanding perfection.",
+      "7": "Trust: going deep without withdrawing into isolation, and trusting people and life.",
+      "8": "Power and money: balancing material success with values, and using control wisely."
+    },
+    "relations": {
+      "same": {
+        "name": "Same number",
+        "meaning": "You understand each other easily and share the same strengths and weak spots."
+      },
+      "harmonious": {
+        "name": "Harmonious numbers",
+        "meaning": "Your numbers belong to the same family (1-5-7, 2-4-8, 3-6-9): natural affinity and a similar temperament."
+      },
+      "different": {
+        "name": "Different numbers",
+        "meaning": "Your temperaments differ: you can complement each other, but understanding takes more effort."
+      }
+    },
+    "loShu": {
+      "intro": "The Lo Shu magic square: the digits of the birth date (zeros ignored) are placed in the 4-9-2 / 3-5-7 / 8-1-6 layout. A repeated digit shows a strong quality; a missing digit shows an area to work on.",
+      "missing": {
+        "1": "Work on expressing yourself and standing up for your view.",
+        "2": "Develop sensitivity and intuition, and learn to listen to others.",
+        "3": "Train imagination and memory, and plan your ideas.",
+        "4": "Work on order and practicality, and finish what you start.",
+        "5": "Emotional balance and focusing on a goal.",
+        "6": "Attention to family and home responsibilities, and developing creativity.",
+        "7": "Learning from experience and turning losses into lessons.",
+        "8": "Attention to detail and financial order.",
+        "9": "Developing idealism, humanity and a sense of greater purpose."
+      },
+      "lines": {
+        "mental": {
+          "name": "Mental plane (4-9-2)",
+          "meaning": "Strong intellect, planning and a good memory."
+        },
+        "emotional": {
+          "name": "Emotional plane (3-5-7)",
+          "meaning": "Emotional richness, empathy and spiritual depth."
+        },
+        "practical": {
+          "name": "Practical plane (8-1-6)",
+          "meaning": "Skill with material matters and organisation."
+        },
+        "thought": {
+          "name": "Thought plane (4-3-8)",
+          "meaning": "The ability to plan ideas and carry them out."
+        },
+        "will": {
+          "name": "Will plane (9-5-1)",
+          "meaning": "Determination and perseverance towards a goal."
+        },
+        "action": {
+          "name": "Action plane (2-7-6)",
+          "meaning": "Turning ideas into deeds, and activity."
+        },
+        "determination": {
+          "name": "Success arrow (4-5-6)",
+          "meaning": "Consistency and the will that leads to success."
+        },
+        "spiritual": {
+          "name": "Compassion arrow (2-5-8)",
+          "meaning": "Intuition, kindness and inner balance."
+        }
+      },
+      "emptyLine": "None of this line’s digits are present: this area needs more conscious effort."
     }
   },
   "chinese": {
@@ -1201,6 +1304,32 @@
       "B": "Quan — power",
       "C": "Ke — fame",
       "D": "Ji — obstacle"
+    },
+    "relations": {
+      "same": {
+        "name": "Same animal",
+        "meaning": "You understand each other well, but you also share the same weak spots."
+      },
+      "sixHarmony": {
+        "name": "Six Harmonies (Liu He)",
+        "meaning": "One of the best pairings: natural closeness and complementing each other."
+      },
+      "threeHarmony": {
+        "name": "Three Harmonies (San He)",
+        "meaning": "Animals of the same trine: shared values and easy cooperation."
+      },
+      "clash": {
+        "name": "Clash (Liu Chong)",
+        "meaning": "Opposite animals: strong attraction but frequent disagreement; it takes patience and compromise."
+      },
+      "harm": {
+        "name": "Harm (Liu Hai)",
+        "meaning": "Hidden tension and misunderstandings are possible; open communication matters."
+      },
+      "neutral": {
+        "name": "Neutral",
+        "meaning": "No special classical link: the relationship depends on personal effort and other factors."
+      }
     }
   },
   "placements": {
@@ -1561,5 +1690,298 @@
     "pluto": "A Pluto cycle: slow, deep transformation of power and inner life; the square is a generational midlife marker.",
     "chiron": "A Chiron cycle (about 50 years): old wounds resurface to be healed; the return comes around age 50.",
     "northNode": "A nodal cycle (about 18.6 years): a turning point in life direction and purpose."
+  },
+  "extraPoints": {
+    "ceres": {
+      "name": "Ceres",
+      "keywords": "care, nourishment, loss and recovery",
+      "short": "Ceres shows how you give and receive care: nourishment, parenting and recovering after loss."
+    },
+    "pallas": {
+      "name": "Pallas",
+      "keywords": "wisdom, strategy, creative intelligence",
+      "short": "Pallas shows how you solve problems: seeing patterns, building strategy and creative intelligence."
+    },
+    "juno": {
+      "name": "Juno",
+      "keywords": "partnership, commitment, loyalty",
+      "short": "Juno shows what you need in a long-term relationship: commitment, equality and loyalty."
+    },
+    "vesta": {
+      "name": "Vesta",
+      "keywords": "focus, devotion, inner fire",
+      "short": "Vesta shows where you devote yourself completely: concentration, dedication and inner fire."
+    },
+    "vertex": {
+      "name": "Vertex",
+      "keywords": "fated encounters, unexpected turns",
+      "short": "The Vertex is regarded as the point of encounters that feel fated and of unexpected events that change your course."
+    },
+    "partOfSpirit": {
+      "name": "Part of Spirit",
+      "keywords": "intention, will, purpose",
+      "short": "The Part of Spirit is the twin of the Part of Fortune: it shows your conscious intention and what you create by your own will."
+    },
+    "selena": {
+      "name": "Selena (White Moon)",
+      "keywords": "light, reward, protection",
+      "short": "Selena is traditionally read as the soul’s bright side, the reward for past kindness and a “guardian angel”."
+    }
+  },
+  "cycles": {
+    "returns": {
+      "jupiter": {
+        "name": "Jupiter return",
+        "meaning": "About every 12 years: the start of a new growth cycle, opportunities and expansion."
+      },
+      "saturn": {
+        "name": "Saturn return",
+        "meaning": "Around ages 29–30 and 58–60: a test of maturity, rebuilding the structures of your life and taking responsibility."
+      },
+      "chiron": {
+        "name": "Chiron return",
+        "meaning": "Around age 50: understanding old wounds and turning them into wisdom and the ability to help others."
+      }
+    },
+    "profection": {
+      "name": "Profection year",
+      "meaning": "Each age “activates” one house and sign: the year’s theme is that house, and the lord of the year is the planet ruling that sign."
+    }
+  },
+  "karmic": {
+    "intro": "In karmic astrology the lunar nodes show the habits the soul brings from the past and the direction it is meant to grow in this life. Chiron shows a deep wound and how it turns into wisdom; Lilith shows the repressed side that stays in the shadow.",
+    "nodeAxis": {
+      "aries": {
+        "past": "Your strength from the past is adapting, pleasing others and keeping relationships in balance. But compromising too much and leaving decisions to others can hold you back.",
+        "future": "Your path leads to independence, courage and saying clearly what you want. You learn to take the first step and to decide on your own.",
+        "advice": "Act without waiting for approval: healthy self-interest is your lesson."
+      },
+      "taurus": {
+        "past": "You are used to crises, intense feelings and handling other people’s resources. Drama, control and the urge to change everything at the root are familiar ground.",
+        "future": "Your path leads to calm, simple pleasures and building your own values. You learn to create stability with your own hands and to enjoy the present.",
+        "advice": "Slow down instead of digging into everything: stability is not weakness."
+      },
+      "gemini": {
+        "past": "Big truths, beliefs and certainty about being right are familiar ground. Thinking you already know and rushing to teach others can limit you.",
+        "future": "Your path leads to asking with curiosity, listening and learning different points of view. Communication, study and your close surroundings help you grow.",
+        "advice": "Ask before you answer: details matter as much as the big picture."
+      },
+      "cancer": {
+        "past": "Responsibility, career, control and looking strong are familiar. Hiding feelings and carrying everything alone can be a habit.",
+        "future": "Your path leads to your feelings, family and inner security. You learn to show vulnerability, accept care and allow emotional closeness.",
+        "advice": "Do not measure success by status alone: put down roots at home and in the heart."
+      },
+      "leo": {
+        "past": "Groups, friends, ideas and observing from the side are familiar ground. You may tend to hide your individuality behind the collective.",
+        "future": "Your path leads to expressing yourself from the heart, to creativity and to the courage to stand in the spotlight.",
+        "advice": "Put your own name on your ideas: do not be afraid to shine."
+      },
+      "virgo": {
+        "past": "Dreams, compassion, intuition and going with the flow are familiar. Escaping reality and the victim role can be your test.",
+        "future": "Your path leads to order, practical service and the value of everyday work. You learn to work with concrete steps, health and habits.",
+        "advice": "Turn the dream into a plan: small, regular steps carry you forward."
+      },
+      "libra": {
+        "past": "Independence, a fighting spirit and doing everything alone are familiar ground. Not seeing other people’s needs can be your test.",
+        "future": "Your path leads to cooperation, partnership and diplomacy. You learn to understand another point of view and to decide together.",
+        "advice": "Aim for agreement rather than victory."
+      },
+      "scorpio": {
+        "past": "Stability, comfort, material security and resisting change are familiar ground. Getting stuck and possessiveness can hold you back.",
+        "future": "Your path leads to deep transformation, emotional intimacy and sharing resources with others. You learn to let go of the old and be reborn.",
+        "advice": "Do not fear change: you grow stronger as you let go."
+      },
+      "sagittarius": {
+        "past": "Gathering information, talking a lot and knowing a little about everything are familiar ground. Getting lost in details and indecision can be your test.",
+        "future": "Your path leads to meaning, philosophy, travel and your own truth. You learn to trust your intuition and to live by faith.",
+        "advice": "You do not need to know everything: trust what your heart knows is right."
+      },
+      "capricorn": {
+        "past": "Family, emotional security, attachment to the past and caretaking are familiar ground. Dependence and being ruled by feelings can be your test.",
+        "future": "Your path leads to responsibility, professional success and owning your life. You learn to build structure and to become a mature leader.",
+        "advice": "Leave the comfortable nest: set a goal and pursue it steadily."
+      },
+      "aquarius": {
+        "past": "Attention, recognition, creative self-expression and personal drama are familiar ground. Needing everything to revolve around you can be your test.",
+        "future": "Your path leads to the collective, friendship, ideas and working for the common good. You learn to use your individuality in service of others.",
+        "advice": "Contribute without waiting for applause: the team helps you grow."
+      },
+      "pisces": {
+        "past": "Analysis, order, criticism and the pursuit of perfection are familiar ground. The urge to control everything and worry can be your test.",
+        "future": "Your path leads to faith, compassion, intuition and spirituality. You learn to let go and trust the whole.",
+        "advice": "Do not try to fix every detail: sometimes letting go is the right step."
+      }
+    },
+    "nodeHouse": {
+      "1": {
+        "past": "Old habit: building life around a partner and relationships.",
+        "future": "Area of growth: discovering your own identity, wishes and independence."
+      },
+      "2": {
+        "past": "Old habit: living through other people’s money, power and crises.",
+        "future": "Area of growth: building your own values, your own income and inner stability."
+      },
+      "3": {
+        "past": "Old habit: distant ideals, beliefs and assuming you already know.",
+        "future": "Area of growth: your close surroundings, learning and everyday communication."
+      },
+      "4": {
+        "past": "Old habit: shutting yourself into career, status and public role.",
+        "future": "Area of growth: home, family and inner roots."
+      },
+      "5": {
+        "past": "Old habit: dissolving into the group and staying on the sidelines.",
+        "future": "Area of growth: creativity, love, joy and self-expression."
+      },
+      "6": {
+        "past": "Old habit: withdrawing into solitude, dreams and escape.",
+        "future": "Area of growth: daily work, health and useful service."
+      },
+      "7": {
+        "past": "Old habit: doing everything alone and thinking only of yourself.",
+        "future": "Area of growth: partnership, cooperation and equal relationships."
+      },
+      "8": {
+        "past": "Old habit: holding tightly to your own possessions and comfort.",
+        "future": "Area of growth: deep intimacy, shared resources and transformation."
+      },
+      "9": {
+        "past": "Old habit: getting absorbed in details, small talk and information.",
+        "future": "Area of growth: meaning, philosophy, education and far horizons."
+      },
+      "10": {
+        "past": "Old habit: staying inside the comfort of family and home.",
+        "future": "Area of growth: vocation, responsibility and public role."
+      },
+      "11": {
+        "past": "Old habit: craving personal attention and self-centred creativity.",
+        "future": "Area of growth: friendship, teamwork and shared goals."
+      },
+      "12": {
+        "past": "Old habit: losing yourself in work, control and daily worries.",
+        "future": "Area of growth: spirituality, intuition, rest in solitude and letting go."
+      }
+    },
+    "nodeContacts": {
+      "northNode": "A planet conjunct the North Node is an energy that helps you on your future path: the more you develop it, the more the way opens.",
+      "southNode": "A planet conjunct the South Node is a ready-made talent from the past: you can rely on it, but do not stop there.",
+      "square": "A planet square the nodal axis is regarded as a “skipped step”: a theme left unfinished in the past that asks to be completed in this life."
+    },
+    "chironSign": {
+      "aries": "The wound concerns asserting yourself and your right to exist: you may hesitate to show yourself. Healing comes from teaching others courage and how to take their place.",
+      "taurus": "The wound concerns security, the body and self-worth: there may be a feeling of “never enough”. Healing comes from finding stability in simple pleasures and in recognising your own worth.",
+      "gemini": "The wound concerns speaking, learning and being understood: you may feel your thoughts do not count. Healing comes from bringing clarity and comfort to others through words.",
+      "cancer": "The wound concerns family, care and emotional safety: you may have felt unloved or unprotected. Healing comes from giving deep care to others and to yourself.",
+      "leo": "The wound concerns self-expression and being seen: you may swing between needing attention and feeling ashamed. Healing comes from helping others shine and accepting your own creativity.",
+      "virgo": "The wound concerns perfection, health and being useful: you may feel you are never good enough. Healing comes from accepting imperfection while offering practical help.",
+      "libra": "The wound concerns relationships, fairness and being accepted: there may be a fear of abandonment. Healing comes from learning and teaching equal relationships with healthy boundaries.",
+      "scorpio": "The wound concerns trust, intimacy and loss: there may be a fear of betrayal. Healing comes from guiding others through crises and supporting deep transformation.",
+      "sagittarius": "The wound concerns faith, meaning and truth: you may doubt what life is for. Healing comes from sharing the wisdom your own experience has given you.",
+      "capricorn": "The wound concerns success, authority and recognition: however hard you work, it may never feel like enough. Healing comes from modelling healthy responsibility and resilience for others.",
+      "aquarius": "The wound concerns belonging and being different: you may feel like an outsider in groups. Healing comes from helping those who are different find their place.",
+      "pisces": "The wound concerns boundaries, spirituality and over-sensitivity: there may be an urge to escape the world. Healing comes from comforting others with compassion and intuition."
+    },
+    "chironHouse": {
+      "1": "Area of wound and healing: yourself, your body and first impressions.",
+      "2": "Area of wound and healing: money, possessions and self-worth.",
+      "3": "Area of wound and healing: communication, education, siblings.",
+      "4": "Area of wound and healing: family, home and roots.",
+      "5": "Area of wound and healing: creativity, love and children.",
+      "6": "Area of wound and healing: work, health and daily life.",
+      "7": "Area of wound and healing: partnership and marriage.",
+      "8": "Area of wound and healing: intimacy, crises and shared resources.",
+      "9": "Area of wound and healing: faith, worldview and higher learning.",
+      "10": "Area of wound and healing: career, status and public role.",
+      "11": "Area of wound and healing: friendship, groups and hopes for the future.",
+      "12": "Area of wound and healing: the inner world, solitude and hidden fears."
+    },
+    "lilithSign": {
+      "aries": "Shadow: anger and demanding your way harshly; a suppressed will can burst out. Strength: being yourself without fear.",
+      "taurus": "Shadow: over-attachment to pleasure and material things, or denying them entirely. Strength: accepting your body and pleasure without shame.",
+      "gemini": "Shadow: manipulation with words, gossip, or silenced thoughts. Strength: speaking openly about forbidden topics.",
+      "cancer": "Shadow: emotional dependence and old pain around family. Strength: not apologising for your feelings.",
+      "leo": "Shadow: pride, doing anything to be recognised, or hiding yourself completely. Strength: shining without waiting for applause.",
+      "virgo": "Shadow: excessive criticism, control and a passion for perfection. Strength: allowing yourself to be imperfect.",
+      "libra": "Shadow: losing yourself in relationships, or controlling the partner. Strength: keeping your own terms within a partnership.",
+      "scorpio": "Shadow: jealousy, control and power games. Strength: fearless intimacy and deep honesty.",
+      "sagittarius": "Shadow: dogmatism, forcing your truth on others. Strength: living your own beliefs freely.",
+      "capricorn": "Shadow: hunger for power, coldness, or rebellion against authority. Strength: building success by your own rules.",
+      "aquarius": "Shadow: cold distance and opposing everything. Strength: living your difference without shame.",
+      "pisces": "Shadow: escape, illusion and the victim role. Strength: trusting your intuition completely."
+    },
+    "selenaSign": {
+      "aries": "Bright path: courage, standing up to injustice and protecting others. In these qualities help comes to you in hard moments.",
+      "taurus": "Bright path: generosity, sharing the value you create and caring for nature. Simplicity protects you.",
+      "gemini": "Bright path: speaking the truth, sharing knowledge and connecting people.",
+      "cancer": "Bright path: care, protecting the family and being an emotional refuge for others.",
+      "leo": "Bright path: sincere creativity, inspiring others and love from the heart.",
+      "virgo": "Bright path: selfless service and practical support for those in need.",
+      "libra": "Bright path: justice, reconciling people and honesty in relationships.",
+      "scorpio": "Bright path: helping others out of crises and deep loyalty.",
+      "sagittarius": "Bright path: faith, sharing wisdom and showing others the way.",
+      "capricorn": "Bright path: responsibility, keeping your word and protecting the vulnerable.",
+      "aquarius": "Bright path: friendship, freedom and contributing to a better future for all.",
+      "pisces": "Bright path: compassion, forgiveness and spiritual support."
+    }
+  },
+  "moonCalendar": {
+    "voc": "Void-of-course Moon: the time after the Moon makes its last exact aspect in a sign until it enters the next sign. Traditionally it is not recommended for starting new things, major decisions or contracts; it suits routine work, rest and reflection.",
+    "lunarDay": "A lunar day starts at the New Moon; each following lunar day starts at moonrise in the chosen city. So lunar days do not match calendar days and depend on the city.",
+    "days": {
+      "1": "Intentions and plans: think about the month ahead, do not rush into big things.",
+      "2": "Gathering resources: attention to food, generosity and small gifts.",
+      "3": "Activity: sport and turning energy into movement; avoid arguments.",
+      "4": "Careful choices: considered decisions, remembering family roots.",
+      "5": "Listening to the body: healthy eating and new knowledge.",
+      "6": "Communication and forgiveness: breathe, dream, light conversations.",
+      "7": "The power of words: watch promises and negotiations.",
+      "8": "Change and cleansing: a good day to let go of the old.",
+      "9": "Emotional sensitivity: stay away from illusions, choose calm.",
+      "10": "Family and traditions: home matters, time with loved ones.",
+      "11": "Strong energy: push important things forward, but do not overdo it.",
+      "12": "A day of compassion: kindness and heartfelt wishes.",
+      "13": "Learning: gathering information and returning to unfinished work.",
+      "14": "Good business steps: initiative, negotiations and agreements.",
+      "15": "Waves of feeling (close to the Full Moon): avoid impulsive decisions.",
+      "16": "Harmony and moderation: quiet pleasure, balance.",
+      "17": "Joy and meetings: communication, celebration, friends.",
+      "18": "The mirror day: what you see in others tells you about yourself; humility.",
+      "19": "Attention and inner cleansing: be careful with tempting offers.",
+      "20": "Courage: overcoming fears and lifting the spirit.",
+      "21": "Activity and travel: creative energy, teamwork.",
+      "22": "Knowledge and wisdom: teaching and learning.",
+      "23": "Strong, sometimes harsh energy: keep yourself in check.",
+      "24": "Creative power: physical activity and restoring strength.",
+      "25": "Calm and patience: postpone big decisions, reflect.",
+      "26": "Saving words and time: do not talk too much, avoid empty tasks.",
+      "27": "Intuition and spirituality: creativity, travel, inspiration.",
+      "28": "Inner harmony: time in nature, gratitude.",
+      "29": "The heaviest day of the month: cleansing and wrapping things up; do not start new things.",
+      "30": "Day of completion: closing the cycle, forgiving and settling debts. (This day does not occur every month.)"
+    },
+    "moonSigns": {
+      "aries": "Good for new initiatives, sport and quick decisions; avoid haste.",
+      "taurus": "Good for calm, steady tasks: money, shopping, self-care and gardening.",
+      "gemini": "Good for negotiations, correspondence, learning and short trips.",
+      "cancer": "Good for home, family, cooking and heartfelt conversations.",
+      "leo": "Good for creativity, presentations, celebrations and showing yourself.",
+      "virgo": "Good for planning, cleaning, healthy habits and detailed work.",
+      "libra": "Good for meetings, agreements, art and beauty.",
+      "scorpio": "Good for deep research, letting go of the old and financial strategy.",
+      "sagittarius": "Good for travel, study, big plans and sport.",
+      "capricorn": "Good for career, structure and long-term work.",
+      "aquarius": "Good for friends, group projects, technology and new ideas.",
+      "pisces": "Good for rest, creativity, meditation and charity."
+    },
+    "phases": {
+      "newMoon": "New Moon",
+      "waxingCrescent": "Waxing crescent",
+      "firstQuarter": "First quarter",
+      "waxingGibbous": "Waxing gibbous",
+      "fullMoon": "Full Moon",
+      "disseminating": "Waning gibbous",
+      "lastQuarter": "Last quarter",
+      "balsamic": "Waning crescent"
+    }
   }
 }

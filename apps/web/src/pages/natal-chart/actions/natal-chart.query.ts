@@ -1,6 +1,12 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
-import {getBazi, getComposite, getNumerology, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic, IReturnParams} from './natal-chart.service';
+import {
+    getBazi, getChineseCompatibility, getComposite, getCycles, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
+    INumerologyPerson, IReturnParams,
+} from './natal-chart.service';
+import CyclesModel from '../models/cycles.model';
+import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
+import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
 import VedicModel from '../models/vedic.model';
@@ -158,6 +164,53 @@ export const useGetTimeline = (input: IBirthInput | null, start: string, days: n
         retry: false,
         retryOnMount: false,
         refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetCycles = (input: IBirthInput | null, enabled: boolean) => {
+    return useQuery<CyclesModel, Error>({
+        queryKey: ['cycles', input],
+        queryFn: () => {
+            return getCycles(input!);
+        },
+        enabled: !!input && enabled,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetNumerologyCompatibility = (first: INumerologyPerson | null, second: INumerologyPerson | null) => {
+    return useQuery<NumerologyCompatibilityModel, Error>({
+        queryKey: ['numerology-compatibility', first, second],
+        queryFn: () => {
+            return getNumerologyCompatibility(first!, second!);
+        },
+        enabled: !!first && !!second,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetChineseCompatibility = (first: string | null, second: string | null) => {
+    return useQuery<ChineseCompatibilityModel, Error>({
+        queryKey: ['chinese-compatibility', first, second],
+        queryFn: () => {
+            return getChineseCompatibility(first!, second!);
+        },
+        enabled: !!first && !!second,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        retry: false,
         refetchOnWindowFocus: false,
     });
 };

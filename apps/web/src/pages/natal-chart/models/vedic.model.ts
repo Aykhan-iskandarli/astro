@@ -22,6 +22,28 @@ export interface IDashaPeriod {
     antardashas?: IDashaPeriod[];
 }
 
+export interface ISadeSatiPhase {
+    phase: 'rising' | 'peak' | 'setting';
+    sign: string;
+    start: string;
+    end: string;
+}
+
+export interface ISadeSatiPeriod {
+    start: string;
+    end: string;
+    startClipped: boolean;
+    endClipped: boolean;
+    status: 'past' | 'now' | 'future';
+    phases: ISadeSatiPhase[];
+}
+
+export interface ISadeSati {
+    moonSign: string;
+    horizonYears: number;
+    periods: ISadeSatiPeriod[];
+}
+
 export default class VedicModel {
     public ayanamsa: number | null = null;
     public timeUnknown: boolean = false;
@@ -30,6 +52,7 @@ export default class VedicModel {
     public dashaStartLord: string | null = null;
     public dashaBalanceYears: number | null = null;
     public mahadashas: IDashaPeriod[] = [];
+    public sadeSati: ISadeSati | null = null;
 
     constructor(item: any) {
         this._setAyanamsa(item);
@@ -37,6 +60,11 @@ export default class VedicModel {
         this._setLagna(item);
         this._setGrahas(item);
         this._setDasha(item);
+        this._setSadeSati(item);
+    }
+
+    private _setSadeSati({sadeSati}: any) {
+        this.sadeSati = sadeSati ?? null;
     }
 
     private _setAyanamsa({ayanamsa}: any) {

@@ -20,6 +20,8 @@ import ChinesePanelComponent from '../chinese-panel/chinese-panel.component';
 import ForecastPanelComponent from '../forecast-panel/forecast-panel.component';
 import TabStripComponent from '../tab-strip/tab-strip.component';
 import BigThreeComponent from '../big-three/big-three.component';
+import ExtraPointsComponent from '../extra-points/extra-points.component';
+import KarmicPanelComponent from '../karmic-panel/karmic-panel.component';
 import {useChartResultStyles} from './chart-result.style';
 import {IChartResult} from './chart-result';
 
@@ -90,6 +92,13 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                                 <PointsTableComponent chart={chart} activeId={activeId} onActivate={handleActivate} onSelect={handleSelectFromTable}/>
                             </section>
 
+                            {chart.extraPoints.length ? (
+                                <section className={classes.section} aria-labelledby='sec-extra'>
+                                    <h2 id='sec-extra'>{translate('section_extra_points')}</h2>
+                                    <ExtraPointsComponent chart={chart}/>
+                                </section>
+                            ) : null}
+
                             {chart.timeUnknown ? null : (
                                 <section className={classes.section} aria-labelledby='sec-houses'>
                                     <h2 id='sec-houses'>{translate('section_houses')}</h2>
@@ -117,7 +126,8 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                     )},
                     {key: 'destiny', label: translate('tab_destiny'), children: matrix
                         ? <DestinyMatrixComponent matrix={matrix}/>
-                        : matrixFailed ? <Alert type='warning' showIcon message={translate('destiny_error')}/> : <LoaderComponent/>},
+                        : matrixFailed ? <Alert type='warning' showIcon title={translate('destiny_error')}/> : <LoaderComponent/>},
+                    {key: 'karmic', label: translate('tab_karmic'), children: <KarmicPanelComponent chart={chart}/>},
                     {key: 'transits', label: translate('tab_transits'), children: <TransitsPanelComponent chart={chart}/>},
                     {key: 'forecast', label: translate('tab_forecast'), children: <ForecastPanelComponent chart={chart}/>},
                     {key: 'vedic', label: translate('tab_vedic'), children: <VedicPanelComponent/>},
@@ -154,17 +164,17 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
 
             <div className={classes.notices}>
                 {chart.timeUnknown ? (
-                    <Alert type='info' showIcon message={translate('time_unknown_notice')}
+                    <Alert type='info' showIcon title={translate('time_unknown_notice')}
                            description={chart.moonRange ? translate('moon_range', {
                                start: `${content.signs[chart.moonRange.start.sign as keyof typeof content.signs]?.name} ${formatDegree(chart.moonRange.start.degree, chart.moonRange.start.minute)}`,
                                end: `${content.signs[chart.moonRange.end.sign as keyof typeof content.signs]?.name} ${formatDegree(chart.moonRange.end.degree, chart.moonRange.end.minute)}`,
                            }) : undefined}/>
                 ) : null}
                 {chart.dstNote ? (
-                    <Alert type='warning' showIcon message={translate(chart.dstNote === 'ambiguous' ? 'dst_ambiguous' : 'dst_nonexistent')}/>
+                    <Alert type='warning' showIcon title={translate(chart.dstNote === 'ambiguous' ? 'dst_ambiguous' : 'dst_nonexistent')}/>
                 ) : null}
                 {!chart.timeUnknown && chart.houseSystem !== chart.houseSystemRequested ? (
-                    <Alert type='warning' showIcon message={translate('house_system_fallback', {
+                    <Alert type='warning' showIcon title={translate('house_system_fallback', {
                         requested: systemName(chart.houseSystemRequested),
                         used: systemName(chart.houseSystem),
                     })}/>

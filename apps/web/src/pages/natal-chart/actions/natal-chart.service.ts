@@ -11,6 +11,9 @@ import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
 import {ProgressionModel, ReturnModel} from '../models/forecast.model';
 import TimelineModel from '../models/timeline.model';
+import CyclesModel from '../models/cycles.model';
+import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
+import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 
 export const getPlaces = (query: string): Promise<PlaceModel[]> => {
     return axiosPublic.get(API.places, {params: {q: query, limit: 8}})
@@ -100,5 +103,31 @@ export const getTimeline = (input: IBirthInput, start: string, days: number): Pr
     return axiosPublic.post(API.timeline, {...input, start, days})
         .then((res) => {
             return new TimelineModel(res.data);
+        });
+};
+
+export const getCycles = (input: IBirthInput): Promise<CyclesModel> => {
+    return axiosPublic.post(API.cycles, input)
+        .then((res) => {
+            return new CyclesModel(res.data);
+        });
+};
+
+export interface INumerologyPerson {
+    date: string;
+    fullName: string | null;
+}
+
+export const getNumerologyCompatibility = (first: INumerologyPerson, second: INumerologyPerson): Promise<NumerologyCompatibilityModel> => {
+    return axiosPublic.post(API.numerologyCompatibility, {first, second})
+        .then((res) => {
+            return new NumerologyCompatibilityModel(res.data);
+        });
+};
+
+export const getChineseCompatibility = (first: string, second: string): Promise<ChineseCompatibilityModel> => {
+    return axiosPublic.post(API.chineseCompatibility, {first, second})
+        .then((res) => {
+            return new ChineseCompatibilityModel(res.data);
         });
 };

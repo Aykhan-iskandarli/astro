@@ -11,6 +11,10 @@ export const API = {
     progressions: '/api/charts/progressions',
     composite: '/api/charts/composite',
     timeline: '/api/charts/timeline',
+    cycles: '/api/charts/cycles',
+    chineseCompatibility: '/api/chinese/compatibility',
+    skyMoon: '/api/sky/moon',
+    numerologyCompatibility: '/api/numerology/compatibility',
     sky: '/api/sky',
     skyCalendar: '/api/sky/calendar',
 };

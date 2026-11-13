@@ -873,6 +873,23 @@
       "exalted": "Uçça (yüksəlişdə)",
       "debilitated": "Niça (düşüşdə)",
       "own": "Svakşetra (öz bürcündə)"
+    },
+    "sadeSati": {
+      "intro": "Sade Sati — Saturnun natal Ayınızın bürcündən əvvəlki, həmin və sonrakı bürcdən keçdiyi təxminən 7.5 illik dövrdür. Vedik ənənədə bu, məsuliyyət, sınaq və yetkinləşmə vaxtı sayılır: ağır görünsə də, səbr və nizam-intizamla möhkəm nəticələr verir.",
+      "phases": {
+        "rising": {
+          "name": "Yüksəliş",
+          "meaning": "Saturn Ayın bürcündən əvvəlki bürcdədir: xərclər, yorğunluq və köhnəni buraxmaq mövzuları; daxili hazırlıq dövrü."
+        },
+        "peak": {
+          "name": "Zirvə",
+          "meaning": "Saturn Ayın bürcündədir: emosional təzyiq və məsuliyyət ən güclüdür; sağlamlığa və münasibətlərə diqqət, səbir."
+        },
+        "setting": {
+          "name": "Enmə",
+          "meaning": "Saturn Ayın bürcündən sonrakı bürcdədir: maliyyə və ailə məsələlərində nizam; zəhmətin bəhrəsi yavaş-yavaş görünür."
+        }
+      }
     }
   },
   "numerology": {
@@ -970,6 +987,18 @@
       "personalMonth": {
         "name": "Şəxsi ay",
         "meaning": "Bu ayın enerjisi."
+      },
+      "personalDay": {
+        "name": "Şəxsi gün",
+        "meaning": "Bu günün enerjisi: şəxsi ay və bugünkü tarixdən."
+      },
+      "pinnacle": {
+        "name": "Zirvə",
+        "meaning": "Həyatın dörd dövründən birinin əsas mövzusu və imkanı."
+      },
+      "challenge": {
+        "name": "Sınaq",
+        "meaning": "Həmin dövrdə üzərində işləməli olduğunuz mövzu."
       }
     },
     "karmicDebt": {
@@ -977,6 +1006,80 @@
       "14": "Azadlıqdan düzgün istifadə: ifratlardan və asılılıqlardan qaçmaq.",
       "16": "Eqonun yenidən qurulması: qürurdan təvazökarlığa.",
       "19": "Müstəqilliyi düzgün öyrənmək: kömək istəməyi bacarmaq."
+    },
+    "challenges": {
+      "0": "Seçim sınağı: bütün yollar açıqdır, istiqaməti özünüz seçməlisiniz.",
+      "1": "Özünə inam: başqalarının fikrindən asılı olmadan öz ayaqları üstündə durmaq.",
+      "2": "Həssaslıq: hər sözü ürəyə salmamaq və öz ehtiyaclarını da dilə gətirmək.",
+      "3": "Özünü ifadə: fikir və hissləri cəsarətlə, dağınıqlığa düşmədən bölüşmək.",
+      "4": "Nizam və səbr: məsuliyyətdən qaçmadan, addım-addım möhkəm təməl qurmaq.",
+      "5": "Azadlıq: dəyişikliyə ehtiyacla sabitlik arasında balans tapmaq, ifratlardan qaçmaq.",
+      "6": "Məsuliyyət: başqalarına qayğı göstərərkən özünü unutmamaq və mükəmməllik tələb etməmək.",
+      "7": "İnam: tənhalığa qapanmadan dərinliyə getmək, insanlara və həyata güvənmək.",
+      "8": "Güc və pul: maddi uğurla dəyərlər arasında balans tapmaq, nəzarətdən düzgün istifadə etmək."
+    },
+    "relations": {
+      "same": {
+        "name": "Eyni ədəd",
+        "meaning": "Bir-birinizi asanlıqla başa düşürsünüz; eyni güclü və zəif tərəfləri paylaşırsınız."
+      },
+      "harmonious": {
+        "name": "Uyğun ədədlər",
+        "meaning": "Ədədləriniz eyni ailədəndir (1-5-7, 2-4-8, 3-6-9): təbii uyğunluq və oxşar temperament."
+      },
+      "different": {
+        "name": "Fərqli ədədlər",
+        "meaning": "Temperamentləriniz fərqlidir: bir-birinizi tamamlaya bilərsiniz, amma anlaşmaq üçün daha çox səy lazımdır."
+      }
+    },
+    "loShu": {
+      "intro": "Lo Shu sehrli kvadratı: doğum tarixinin rəqəmləri (sıfırlar nəzərə alınmır) 4-9-2 / 3-5-7 / 8-1-6 düzülüşündə yerləşdirilir. Təkrarlanan rəqəm o keyfiyyətin gücünü, olmayan rəqəm üzərində işləməli olduğunuz sahəni göstərir.",
+      "missing": {
+        "1": "Özünü ifadə etmək və öz fikrini müdafiə etmək üzərində işləmək lazımdır.",
+        "2": "Həssaslığı və intuisiyanı inkişaf etdirmək, başqalarını dinləməyi öyrənmək.",
+        "3": "Təxəyyülü və yaddaşı məşq etmək, fikirləri planlaşdırmaq.",
+        "4": "Nizam və praktiklik üzərində işləmək, işləri sona çatdırmaq.",
+        "5": "Emosional tarazlıq və məqsədə fokuslanmaq.",
+        "6": "Ailə və ev məsuliyyətinə diqqət, yaradıcılığı inkişaf etdirmək.",
+        "7": "Təcrübədən öyrənmək və itkiləri dərsə çevirmək.",
+        "8": "Detallara diqqət və maliyyə nizamı.",
+        "9": "İdealizm, humanizm və böyük məqsəd hissini inkişaf etdirmək."
+      },
+      "lines": {
+        "mental": {
+          "name": "Zehin xətti (4-9-2)",
+          "meaning": "Güclü intellekt, planlaşdırma və yaxşı yaddaş."
+        },
+        "emotional": {
+          "name": "Hiss xətti (3-5-7)",
+          "meaning": "Emosional zənginlik, empatiya və mənəvi dərinlik."
+        },
+        "practical": {
+          "name": "Praktik xətt (8-1-6)",
+          "meaning": "Maddi işlərdə bacarıq və təşkilatçılıq."
+        },
+        "thought": {
+          "name": "Düşüncə xətti (4-3-8)",
+          "meaning": "İdeyaları planlaşdırmaq və həyata keçirmək bacarığı."
+        },
+        "will": {
+          "name": "İradə xətti (9-5-1)",
+          "meaning": "Qətiyyət və məqsədə doğru dözümlülük."
+        },
+        "action": {
+          "name": "Fəaliyyət xətti (2-7-6)",
+          "meaning": "Fikirləri əmələ çevirmək və aktivlik."
+        },
+        "determination": {
+          "name": "Uğur xətti (4-5-6)",
+          "meaning": "Ardıcıllıq və uğura aparan iradə."
+        },
+        "spiritual": {
+          "name": "Şəfqət xətti (2-5-8)",
+          "meaning": "İntuisiya, xeyirxahlıq və daxili tarazlıq."
+        }
+      },
+      "emptyLine": "Bu xəttin heç bir rəqəmi yoxdur: həmin sahədə daha çox şüurlu səy lazımdır."
     }
   },
   "chinese": {
@@ -1201,6 +1304,32 @@
       "B": "Quan — güc",
       "C": "Ke — şöhrət",
       "D": "Ji — maneə"
+    },
+    "relations": {
+      "same": {
+        "name": "Eyni heyvan",
+        "meaning": "Bir-birinizi yaxşı başa düşürsünüz, amma eyni zəif tərəfləri də paylaşırsınız."
+      },
+      "sixHarmony": {
+        "name": "Altı harmoniya (Liu He)",
+        "meaning": "Ən uyğun cütlərdən biri: təbii yaxınlıq və bir-birini tamamlamaq."
+      },
+      "threeHarmony": {
+        "name": "Üç harmoniya (San He)",
+        "meaning": "Eyni üçlükdən olan heyvanlar: ortaq dəyərlər və asan əməkdaşlıq."
+      },
+      "clash": {
+        "name": "Toqquşma (Liu Chong)",
+        "meaning": "Əks heyvanlar: güclü cazibə, amma tez-tez fikir ayrılığı; səbir və güzəşt tələb edir."
+      },
+      "harm": {
+        "name": "Zərər (Liu Hai)",
+        "meaning": "Gizli gərginlik və anlaşılmazlıqlar ola bilər; açıq ünsiyyət vacibdir."
+      },
+      "neutral": {
+        "name": "Neytral",
+        "meaning": "Xüsusi klassik əlaqə yoxdur: münasibət şəxsi səyə və digər amillərə bağlıdır."
+      }
     }
   },
   "placements": {
@@ -1561,5 +1690,298 @@
     "pluto": "Pluton dövrü: güc və daxili həyatın yavaş, dərin dəyişimi; kvadrat nəslin orta yaş nişanıdır.",
     "chiron": "Xiron dövrü (təxminən 50 il): köhnə yaralar sağalmaq üçün yenidən üzə çıxır; qayıdış təxminən 50 yaşda olur.",
     "northNode": "Düyün dövrü (təxminən 18,6 il): həyat istiqaməti və məqsəddə dönüş nöqtəsi."
+  },
+  "extraPoints": {
+    "ceres": {
+      "name": "Ceres",
+      "keywords": "qayğı, qidalanma, itki və bərpa",
+      "short": "Ceres necə qayğı göstərdiyinizi və qayğını necə qəbul etdiyinizi göstərir: qidalanma, valideynlik və itkidən sonra bərpa."
+    },
+    "pallas": {
+      "name": "Pallas",
+      "keywords": "müdriklik, strategiya, yaradıcı zəka",
+      "short": "Pallas problemləri necə həll etdiyinizi göstərir: nümunələri görmək, strategiya qurmaq və yaradıcı zəka."
+    },
+    "juno": {
+      "name": "Yunona",
+      "keywords": "tərəfdaşlıq, öhdəlik, sədaqət",
+      "short": "Yunona uzunmüddətli münasibətdə nəyə ehtiyac duyduğunuzu göstərir: öhdəlik, bərabərlik və sədaqət."
+    },
+    "vesta": {
+      "name": "Vesta",
+      "keywords": "diqqət, fədakarlıq, daxili od",
+      "short": "Vesta özünüzü tam həsr etdiyiniz sahəni göstərir: diqqəti cəmləmək, fədakarlıq və daxili od."
+    },
+    "vertex": {
+      "name": "Verteks",
+      "keywords": "taleyüklü görüşlər, gözlənilməz dönüşlər",
+      "short": "Verteks taleyüklü görünən görüşlərin və həyatı dəyişən gözlənilməz hadisələrin nöqtəsi sayılır."
+    },
+    "partOfSpirit": {
+      "name": "Ruh nöqtəsi",
+      "keywords": "niyyət, iradə, məqsəd",
+      "short": "Ruh nöqtəsi Bəxt nöqtəsinin cütüdür: şüurlu niyyətinizi və öz iradənizlə yaratdıqlarınızı göstərir."
+    },
+    "selena": {
+      "name": "Selena (Ağ Ay)",
+      "keywords": "işıq, mükafat, qoruyucu",
+      "short": "Selena ənənəvi olaraq ruhun işıqlı tərəfini, keçmiş yaxşılıqların mükafatını və “qoruyucu mələyi” göstərir."
+    }
+  },
+  "cycles": {
+    "returns": {
+      "jupiter": {
+        "name": "Yupiter qayıdışı",
+        "meaning": "Təxminən hər 12 ildən bir: yeni böyümə dövrünün başlanğıcı, imkanlar və genişlənmə."
+      },
+      "saturn": {
+        "name": "Saturn qayıdışı",
+        "meaning": "Təxminən 29–30 və 58–60 yaşlarda: yetkinlik imtahanı, həyatın strukturlarını yenidən qurmaq və məsuliyyət."
+      },
+      "chiron": {
+        "name": "Xiron qayıdışı",
+        "meaning": "Təxminən 50 yaşda: köhnə yaraları anlamaq və onları müdrikliyə, başqalarına kömək etmək bacarığına çevirmək."
+      }
+    },
+    "profection": {
+      "name": "Profeksiya ili",
+      "meaning": "Hər yaş bir evi və bürcü “aktivləşdirir”: ilin mövzusu həmin evdir, ilin ağası isə həmin bürcün planetidir."
+    }
+  },
+  "karmic": {
+    "intro": "Karmik astrologiyada Ay düyünləri ruhun keçmişdən gətirdiyi vərdişləri və bu həyatda getməli olduğu istiqaməti göstərir. Xiron dərin yaranı və onun müdrikliyə çevrilməsini, Lilit isə bastırılmış, kölgədə qalan tərəfi göstərir.",
+    "nodeAxis": {
+      "aries": {
+        "past": "Keçmişdən gələn güclü tərəfiniz uyğunlaşmaq, başqalarını razı salmaq və münasibətlərdə balans qurmaqdır. Amma həddindən artıq güzəştə getmək və qərarı başqalarına buraxmaq sizi geri saxlaya bilər.",
+        "future": "Yolunuz müstəqilliyə, cəsarətə və öz istəyinizi açıq deməyə aparır. İlk addımı özünüz atmağı və öz başınıza qərar verməyi öyrənirsiniz.",
+        "advice": "Başqasının razılığını gözləmədən hərəkətə keçin: sağlam eqoizm sizin dərsinizdir."
+      },
+      "taurus": {
+        "past": "Böhranlara, dərin hisslərə və başqalarının resursları ilə işləməyə öyrəşmisiniz. Dram, nəzarət və hər şeyi kökündən dəyişmək ehtiyacı tanış zonadır.",
+        "future": "Yolunuz sakitliyə, sadə həzzlərə və öz dəyərlərinizi qurmağa aparır. Öz əlinizlə sabitlik yaratmağı və indiki andan zövq almağı öyrənirsiniz.",
+        "advice": "Hər şeyi dərindən qazmaq əvəzinə yavaşlayın: sabitlik zəiflik deyil."
+      },
+      "gemini": {
+        "past": "Böyük həqiqətlər, inanclar və öz fikrinizin doğruluğuna əminlik tanış zonadır. Hər şeyi bildiyinizi düşünmək və başqalarını öyrətməyə tələsmək sizi məhdudlaşdıra bilər.",
+        "future": "Yolunuz maraqla soruşmağa, dinləməyə və müxtəlif baxışları öyrənməyə aparır. Ünsiyyət, öyrənmə və yaxın ətrafla əlaqə sizi böyüdür.",
+        "advice": "Cavab verməzdən əvvəl sual verin: detallar böyük mənzərə qədər vacibdir."
+      },
+      "cancer": {
+        "past": "Məsuliyyət, karyera, nəzarət və güclü görünmək sizə tanışdır. Hissləri gizlətmək və hər şeyi tək daşımaq vərdiş ola bilər.",
+        "future": "Yolunuz hisslərinizə, ailəyə və daxili təhlükəsizliyə aparır. Zəif tərəfinizi göstərməyi, qayğı qəbul etməyi və emosional yaxınlığı öyrənirsiniz.",
+        "advice": "Uğuru yalnız statusla ölçməyin: evdə və ürəkdə də kök salın."
+      },
+      "leo": {
+        "past": "Qrup, dostlar, ideyalar və kənardan müşahidə etmək tanış zonadır. Fərdiliyinizi kollektivin arxasında gizlətməyə meyliniz ola bilər.",
+        "future": "Yolunuz özünüzü ürəkdən ifadə etməyə, yaradıcılığa və diqqət mərkəzində olmağa cəsarət etməyə aparır.",
+        "advice": "Fikirlərinizə öz adınızı yazın: parlamaqdan qorxmayın."
+      },
+      "virgo": {
+        "past": "Xəyal, mərhəmət, intuisiya və axına buraxmaq sizə tanışdır. Reallıqdan qaçmaq və qurban rolu sınağınız ola bilər.",
+        "future": "Yolunuz nizama, praktik xidmətə və gündəlik işin dəyərinə aparır. Konkret addımlar, sağlamlıq və vərdişlər üzərində işləməyi öyrənirsiniz.",
+        "advice": "Xəyalı plana çevirin: kiçik, müntəzəm addımlar sizi irəli aparır."
+      },
+      "libra": {
+        "past": "Müstəqillik, döyüşkənlik və hər şeyi təkbaşına etmək tanış zonadır. Başqalarının ehtiyaclarını görməmək sınağınız ola bilər.",
+        "future": "Yolunuz əməkdaşlığa, tərəfdaşlığa və diplomatiyaya aparır. Başqasının baxışını anlamağı və birlikdə qərar verməyi öyrənirsiniz.",
+        "advice": "Qalib gəlmək əvəzinə razılığa gəlməyə çalışın."
+      },
+      "scorpio": {
+        "past": "Sabitlik, rahatlıq, maddi təhlükəsizlik və dəyişikliyə müqavimət tanış zonadır. İlişib qalmaq və sahiblik hissi sizi saxlaya bilər.",
+        "future": "Yolunuz dərin dəyişimə, emosional yaxınlığa və resursları başqaları ilə bölüşməyə aparır. Köhnəni buraxıb yenidən doğulmağı öyrənirsiniz.",
+        "advice": "Dəyişiklikdən qorxmayın: buraxdıqca güclənirsiniz."
+      },
+      "sagittarius": {
+        "past": "Məlumat toplamaq, çox danışmaq və hər şeyi bir az bilmək tanış zonadır. Detallarda itmək və qərarsızlıq sınağınız ola bilər.",
+        "future": "Yolunuz böyük mənaya, fəlsəfəyə, səyahətə və öz həqiqətinizə aparır. İntuisiyanıza güvənməyi və inancla yaşamağı öyrənirsiniz.",
+        "advice": "Hər şeyi bilmək lazım deyil: ürəyinizin doğru bildiyinə inanın."
+      },
+      "capricorn": {
+        "past": "Ailə, emosional təhlükəsizlik, keçmişə bağlılıq və qayğı tanış zonadır. Asılılıq və hisslərin sizi idarə etməsi sınağınız ola bilər.",
+        "future": "Yolunuz məsuliyyətə, peşəkar uğura və öz həyatınızın sahibi olmağa aparır. Struktur qurmağı və yetkin lider olmağı öyrənirsiniz.",
+        "advice": "Rahat yuvadan çıxın: məqsəd qoyub ona ardıcıl gedin."
+      },
+      "aquarius": {
+        "past": "Diqqət, tanınma, yaradıcı özünüifadə və şəxsi dram tanış zonadır. Hər şeyin sizin ətrafınızda dönməsi ehtiyacı sınağınız ola bilər.",
+        "future": "Yolunuz kollektivə, dostluğa, ideyalara və ümumi fayda üçün işləməyə aparır. Fərdiliyinizi cəmiyyətə xidmətdə istifadə etməyi öyrənirsiniz.",
+        "advice": "Alqış gözləmədən töhfə verin: komanda sizi böyüdür."
+      },
+      "pisces": {
+        "past": "Analiz, nizam, tənqid və mükəmməllik axtarışı tanış zonadır. Hər şeyi nəzarətdə saxlamaq istəyi və narahatlıq sınağınız ola bilər.",
+        "future": "Yolunuz inama, mərhəmətə, intuisiyaya və mənəviyyata aparır. Axına buraxmağı və bütövə güvənməyi öyrənirsiniz.",
+        "advice": "Hər detalı düzəltməyə çalışmayın: bəzən buraxmaq ən doğru addımdır."
+      }
+    },
+    "nodeHouse": {
+      "1": {
+        "past": "Keçmiş vərdiş: həyatı tərəfdaşa və münasibətlərə görə qurmaq.",
+        "future": "İnkişaf sahəsi: öz şəxsiyyətinizi, istəklərinizi və müstəqilliyinizi kəşf etmək."
+      },
+      "2": {
+        "past": "Keçmiş vərdiş: başqalarının pulu, gücü və böhranlarla yaşamaq.",
+        "future": "İnkişaf sahəsi: öz dəyərlərinizi, öz gəlirinizi və daxili sabitliyinizi qurmaq."
+      },
+      "3": {
+        "past": "Keçmiş vərdiş: uzaq ideallar, inanclar və hər şeyi bildiyini düşünmək.",
+        "future": "İnkişaf sahəsi: yaxın ətraf, öyrənmək və gündəlik ünsiyyət."
+      },
+      "4": {
+        "past": "Keçmiş vərdiş: karyera, status və ictimai rola qapanmaq.",
+        "future": "İnkişaf sahəsi: ev, ailə və daxili köklər."
+      },
+      "5": {
+        "past": "Keçmiş vərdiş: qrupun içində əriyib kənarda qalmaq.",
+        "future": "İnkişaf sahəsi: yaradıcılıq, sevgi, sevinc və özünü ifadə."
+      },
+      "6": {
+        "past": "Keçmiş vərdiş: təkliyə, xəyallara və reallıqdan qaçmağa çəkilmək.",
+        "future": "İnkişaf sahəsi: gündəlik iş, sağlamlıq və faydalı xidmət."
+      },
+      "7": {
+        "past": "Keçmiş vərdiş: hər şeyi təkbaşına etmək və yalnız özünü düşünmək.",
+        "future": "İnkişaf sahəsi: tərəfdaşlıq, əməkdaşlıq və bərabər münasibətlər."
+      },
+      "8": {
+        "past": "Keçmiş vərdiş: öz mülkünə və rahatlığa möhkəm bağlılıq.",
+        "future": "İnkişaf sahəsi: dərin yaxınlıq, ortaq resurslar və dəyişim."
+      },
+      "9": {
+        "past": "Keçmiş vərdiş: detallara, xırda söhbətlərə və məlumata qapanmaq.",
+        "future": "İnkişaf sahəsi: məna, fəlsəfə, təhsil və uzaq üfüqlər."
+      },
+      "10": {
+        "past": "Keçmiş vərdiş: ailə və ev rahatlığının içində qalmaq.",
+        "future": "İnkişaf sahəsi: peşə, məsuliyyət və ictimai rol."
+      },
+      "11": {
+        "past": "Keçmiş vərdiş: şəxsi diqqətə və yalnız özünə yönələn yaradıcılığa bağlılıq.",
+        "future": "İnkişaf sahəsi: dostluq, komanda və ümumi məqsədlər."
+      },
+      "12": {
+        "past": "Keçmiş vərdiş: işə, nəzarətə və gündəlik qayğılara qapanmaq.",
+        "future": "İnkişaf sahəsi: mənəviyyat, intuisiya, təklikdə dincəlmək və buraxmaq."
+      }
+    },
+    "nodeContacts": {
+      "northNode": "Şimal düyünü ilə birləşən planet gələcək yolunuzda sizə kömək edən enerjidir: onu inkişaf etdirdikcə yol açılır.",
+      "southNode": "Cənub düyünü ilə birləşən planet keçmişdən gələn hazır istedaddır: ona arxalana bilərsiniz, amma yalnız onunla kifayətlənməyin.",
+      "square": "Düyünlər oxuna kvadrat olan planet “buraxılmış addım” sayılır: keçmişdə yarımçıq qalan və bu həyatda tamamlanmalı olan mövzu."
+    },
+    "chironSign": {
+      "aries": "Yara özünü təsdiqləmək və mövcud olmaq haqqı ilə bağlıdır: özünüzü göstərməkdə tərəddüd edə bilərsiniz. Şəfa başqalarına cəsarət və öz yerini tutmağı öyrətməkdən gəlir.",
+      "taurus": "Yara təhlükəsizlik, bədən və dəyər hissi ilə bağlıdır: “kifayət qədər deyil” hissi ola bilər. Şəfa sadə həzzlərdə və öz dəyərinizi tanımaqda sabitlik tapmaqdan gəlir.",
+      "gemini": "Yara danışmaq, öyrənmək və başa düşülmək ilə bağlıdır: fikrinizin dəyərsiz olduğunu düşünə bilərsiniz. Şəfa sözlə başqalarına aydınlıq və rahatlıq verməkdən gəlir.",
+      "cancer": "Yara ailə, qayğı və emosional təhlükəsizlik ilə bağlıdır: sevilməmək və ya qorunmamaq hissi ola bilər. Şəfa başqalarına və özünüzə dərin qayğı göstərməkdən gəlir.",
+      "leo": "Yara özünü ifadə etmək və görünmək ilə bağlıdır: diqqət ehtiyacı ilə utanc arasında qala bilərsiniz. Şəfa başqalarının parlamasına kömək etməkdən və öz yaradıcılığınızı qəbul etməkdən gəlir.",
+      "virgo": "Yara mükəmməllik, sağlamlıq və faydalı olmaq ilə bağlıdır: heç vaxt kifayət qədər yaxşı olmadığınızı düşünə bilərsiniz. Şəfa qüsurları qəbul edərək praktik kömək göstərməkdən gəlir.",
+      "libra": "Yara münasibətlər, ədalət və qəbul olunmaq ilə bağlıdır: tərk edilmək qorxusu ola bilər. Şəfa sağlam sərhədli, bərabər münasibətlər qurmağı öyrənib öyrətməkdən gəlir.",
+      "scorpio": "Yara güvən, yaxınlıq və itki ilə bağlıdır: xəyanət qorxusu ola bilər. Şəfa başqalarını böhrandan keçirməkdən və dərin dəyişimə kömək etməkdən gəlir.",
+      "sagittarius": "Yara inanc, məna və həqiqət ilə bağlıdır: həyatın mənası barədə şübhələr ola bilər. Şəfa öz təcrübənizdən çıxan müdrikliyi bölüşməkdən gəlir.",
+      "capricorn": "Yara uğur, avtoritet və tanınma ilə bağlıdır: nə qədər çalışsanız da kifayət etmədiyi hissi ola bilər. Şəfa başqalarına sağlam məsuliyyət və dayanıqlıq nümunəsi olmaqdan gəlir.",
+      "aquarius": "Yara aidiyyət və fərqli olmaq ilə bağlıdır: qrupda özünüzü yad hiss edə bilərsiniz. Şəfa fərqli olanların öz yerini tapmasına kömək etməkdən gəlir.",
+      "pisces": "Yara sərhədlər, mənəviyyat və həddən artıq həssaslıqla bağlıdır: dünyadan qaçmaq istəyi ola bilər. Şəfa mərhəmət və intuisiya ilə başqalarına təsəlli verməkdən gəlir."
+    },
+    "chironHouse": {
+      "1": "Yara və şəfa sahəsi: özünüz, bədəniniz və ilk təəssürat.",
+      "2": "Yara və şəfa sahəsi: pul, mülk və özünə dəyər.",
+      "3": "Yara və şəfa sahəsi: ünsiyyət, təhsil, qardaş-bacılar.",
+      "4": "Yara və şəfa sahəsi: ailə, ev və köklər.",
+      "5": "Yara və şəfa sahəsi: yaradıcılıq, sevgi və uşaqlar.",
+      "6": "Yara və şəfa sahəsi: iş, sağlamlıq və gündəlik həyat.",
+      "7": "Yara və şəfa sahəsi: tərəfdaşlıq və nikah.",
+      "8": "Yara və şəfa sahəsi: yaxınlıq, böhranlar və ortaq resurslar.",
+      "9": "Yara və şəfa sahəsi: inanc, dünyagörüşü və təhsil.",
+      "10": "Yara və şəfa sahəsi: karyera, status və ictimai rol.",
+      "11": "Yara və şəfa sahəsi: dostluq, qruplar və gələcək arzuları.",
+      "12": "Yara və şəfa sahəsi: daxili dünya, təklik və gizli qorxular."
+    },
+    "lilithSign": {
+      "aries": "Kölgə: hirs və öz istəyini sərt şəkildə tələb etmək; bastırılan iradə partlayış kimi çıxa bilər. Gücü: qorxmadan özünüz olmaq.",
+      "taurus": "Kölgə: həzzə, maddiyyata həddən artıq bağlılıq və ya onu tamamilə inkar etmək. Gücü: bədəninizi və həzzi utanmadan qəbul etmək.",
+      "gemini": "Kölgə: sözlə manipulyasiya, dedi-qodu və ya susdurulmuş fikirlər. Gücü: qadağan olunmuş mövzularda açıq danışmaq.",
+      "cancer": "Kölgə: emosional asılılıq, ailə ilə bağlı köhnə ağrı. Gücü: hisslərinizə görə üzr istəməmək.",
+      "leo": "Kölgə: qürur, tanınmaq üçün hər şeyə hazır olmaq və ya özünü tamamilə gizlətmək. Gücü: alqış gözləmədən parlamaq.",
+      "virgo": "Kölgə: həddən artıq tənqid, nəzarət və mükəmməlliyə ehtiras. Gücü: qüsurlu olmağa özünüzə icazə vermək.",
+      "libra": "Kölgə: münasibətlərdə özünü itirmək və ya tərəfdaşı idarə etmək. Gücü: tərəfdaşlıqda öz şərtlərinizi qorumaq.",
+      "scorpio": "Kölgə: qısqanclıq, nəzarət və güc oyunları. Gücü: qorxusuz yaxınlıq və dərin dürüstlük.",
+      "sagittarius": "Kölgə: dogmatizm, öz həqiqətini başqalarına zorla qəbul etdirmək. Gücü: öz inancınızı sərbəst yaşamaq.",
+      "capricorn": "Kölgə: hakimiyyət ehtirası, soyuqluq və ya avtoritetə qarşı üsyan. Gücü: öz qaydalarınızla uğur qurmaq.",
+      "aquarius": "Kölgə: soyuq məsafə və hər şeyə qarşı çıxmaq. Gücü: fərqliliyinizi utanmadan yaşamaq.",
+      "pisces": "Kölgə: qaçış, illüziya və qurban rolu. Gücü: intuisiyanıza tam güvənmək."
+    },
+    "selenaSign": {
+      "aries": "İşıqlı yol: cəsarət, haqsızlığa qarşı çıxmaq və başqalarını qorumaq. Bu keyfiyyətlərdə çətin anlarda sizə kömək gəlir.",
+      "taurus": "İşıqlı yol: səxavət, yaratdığınız dəyəri bölüşmək və təbiətə qayğı. Sadəlik sizi qoruyur.",
+      "gemini": "İşıqlı yol: həqiqəti danışmaq, bilik paylaşmaq və insanları bir-birinə bağlamaq.",
+      "cancer": "İşıqlı yol: qayğı, ailəni qorumaq və başqaları üçün emosional sığınacaq olmaq.",
+      "leo": "İşıqlı yol: səmimi yaradıcılıq, başqalarını ruhlandırmaq və ürəkdən sevgi.",
+      "virgo": "İşıqlı yol: təmənnasız xidmət və köməyə ehtiyacı olana praktik dəstək.",
+      "libra": "İşıqlı yol: ədalət, insanları barışdırmaq və münasibətlərdə dürüstlük.",
+      "scorpio": "İşıqlı yol: başqalarına böhrandan çıxmağa kömək etmək və dərin sədaqət.",
+      "sagittarius": "İşıqlı yol: inam, müdrikliyi bölüşmək və başqalarına yol göstərmək.",
+      "capricorn": "İşıqlı yol: məsuliyyət, sözünüzün üstündə durmaq və zəifləri qorumaq.",
+      "aquarius": "İşıqlı yol: dostluq, azadlıq və hamı üçün daha yaxşı gələcəyə töhfə.",
+      "pisces": "İşıqlı yol: mərhəmət, bağışlamaq və mənəvi dəstək."
+    }
+  },
+  "moonCalendar": {
+    "voc": "Boş Ay: Ay bürcdəki son dəqiq aspektini etdikdən sonra növbəti bürcə keçənə qədərki vaxt. Ənənəyə görə bu müddətdə yeni işlərə başlamaq, mühüm qərarlar və müqavilələr tövsiyə olunmur; rutin işlər, istirahət və düşünmək üçün uyğundur.",
+    "lunarDay": "Ay günü yeni Ay anından başlayır; sonrakı hər Ay günü seçdiyiniz şəhərdə Ayın çıxdığı anda başlayır. Ona görə Ay günləri təqvim günləri ilə üst-üstə düşmür və şəhərdən asılıdır.",
+    "days": {
+      "1": "Niyyət və planlar günü: gələcək ay üçün düşünün, böyük işə tələsməyin.",
+      "2": "Resurs toplamaq: qidaya diqqət, səxavət və kiçik hədiyyələr.",
+      "3": "Aktivlik: idman və enerjini hərəkətə çevirmək; mübahisədən qaçın.",
+      "4": "Ehtiyatlı seçimlər: düşünülmüş qərarlar, ailə köklərini xatırlamaq.",
+      "5": "Bədənə qulaq asmaq: sağlam qidalanma və yeni bilik.",
+      "6": "Ünsiyyət və bağışlamaq: nəfəs alın, xəyal qurun, yüngül söhbətlər.",
+      "7": "Sözün gücü: vədlərə və danışıqlara diqqət.",
+      "8": "Dəyişim və təmizlənmə: köhnəni buraxmaq üçün uyğun gün.",
+      "9": "Emosional həssaslıq: illüziyalardan uzaq durun, sakitlik seçin.",
+      "10": "Ailə və ənənələr: evlə bağlı işlər, yaxınlarla vaxt.",
+      "11": "Güclü enerji: vacib işləri irəli aparın, amma həddi aşmayın.",
+      "12": "Mərhəmət günü: xeyirxahlıq və ürəkdən gələn istəklər.",
+      "13": "Öyrənmək: məlumat toplamaq və yarımçıq işlərə qayıtmaq.",
+      "14": "Uğurlu işgüzar addımlar: təşəbbüs, danışıqlar və müqavilələr.",
+      "15": "Dalğalı hisslər (tam Aya yaxın): impulsiv qərarlardan çəkinin.",
+      "16": "Harmoniya və ölçülülük: sakit həzz, balans.",
+      "17": "Sevinc və görüşlər: ünsiyyət, bayram, dostlar.",
+      "18": "Güzgü günü: başqalarında gördüyünüz sizin özünüzdən xəbər verir; təvazökarlıq.",
+      "19": "Diqqət və daxili təmizlik: aldadıcı təkliflərə ehtiyatla yanaşın.",
+      "20": "Cəsarət: qorxuları aşmaq və ruhu yüksəltmək.",
+      "21": "Fəallıq və səyahət: yaradıcı enerji, komanda işi.",
+      "22": "Bilik və müdriklik: öyrətmək və öyrənmək.",
+      "23": "Güclü, bəzən sərt enerji: özünüzü nəzarətdə saxlayın.",
+      "24": "Yaradıcı güc: fiziki fəallıq və gücü bərpa etmək.",
+      "25": "Sakitlik və səbir: böyük qərarları təxirə salın, düşünün.",
+      "26": "Söz və vaxta qənaət: artıq danışmayın, boş işlərdən qaçın.",
+      "27": "İntuisiya və mənəviyyat: yaradıcılıq, səyahət, ilham.",
+      "28": "Daxili harmoniya: təbiətdə vaxt keçirmək, şükür.",
+      "29": "Ayın ən ağır günü: təmizlənmə və işləri yekunlaşdırmaq; yeni işə başlamayın.",
+      "30": "Yekun günü: dövrü tamamlamaq, bağışlamaq və borcları qaytarmaq. (Bu gün hər ay olmaya bilər.)"
+    },
+    "moonSigns": {
+      "aries": "Yeni təşəbbüslər, idman və tez qərarlar üçün uyğundur; tələskənlikdən çəkinin.",
+      "taurus": "Maliyyə, alış-veriş, özünə qayğı və bağçılıq kimi sakit, sabit işlər üçün uyğundur.",
+      "gemini": "Danışıqlar, yazışma, öyrənmək və qısa səfərlər üçün uyğundur.",
+      "cancer": "Ev, ailə, yemək bişirmək və səmimi söhbətlər üçün uyğundur.",
+      "leo": "Yaradıcılıq, təqdimat, şənlik və özünü göstərmək üçün uyğundur.",
+      "virgo": "Planlaşdırma, təmizlik, sağlam vərdişlər və detallı iş üçün uyğundur.",
+      "libra": "Görüşlər, razılaşmalar, sənət və gözəllik üçün uyğundur.",
+      "scorpio": "Dərin araşdırma, köhnəni buraxmaq və maliyyə strategiyası üçün uyğundur.",
+      "sagittarius": "Səyahət, təhsil, böyük planlar və idman üçün uyğundur.",
+      "capricorn": "Karyera, struktur və uzunmüddətli işlər üçün uyğundur.",
+      "aquarius": "Dostlar, qrup layihələri, texnologiya və yeni ideyalar üçün uyğundur.",
+      "pisces": "İstirahət, yaradıcılıq, meditasiya və xeyriyyə üçün uyğundur."
+    },
+    "phases": {
+      "newMoon": "Yeni Ay",
+      "waxingCrescent": "Böyüyən oraq",
+      "firstQuarter": "İlk dörddəbir",
+      "waxingGibbous": "Böyüyən Ay",
+      "fullMoon": "Tam Ay",
+      "disseminating": "Azalan Ay",
+      "lastQuarter": "Son dörddəbir",
+      "balsamic": "Azalan oraq"
+    }
   }
 }

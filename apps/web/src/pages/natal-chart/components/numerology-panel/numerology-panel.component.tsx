@@ -8,6 +8,7 @@ import LoaderComponent from 'core/shared/loader/loader.component';
 import useLocalization, {useContent} from 'assets/lang';
 import {useGetNumerology} from '../../actions/natal-chart.query';
 import {INumerologyNumber} from '../../models/numerology.model';
+import NumerologyExtrasComponent from '../numerology-extras/numerology-extras.component';
 import {useNumerologyPanelStyles} from './numerology-panel.style';
 
 const ORDER = ['lifePath', 'expression', 'soulUrge', 'personality', 'birthday', 'maturity'] as const;
@@ -77,14 +78,17 @@ const NumerologyPanelComponent = () => {
             {!data ? <LoaderComponent/> : (
                 <div className={classNames(classes.body, {[classes.busy]: isFetching})}>
                     {data.ignored.length ? (
-                        <Alert type='warning' showIcon message={translate('numerology_ignored', {chars: data.ignored.join(' ')})}/>
+                        <Alert type='warning' showIcon title={translate('numerology_ignored', {chars: data.ignored.join(' ')})}/>
                     ) : null}
                     <div className={classes.grid}>
                         {ORDER.map((k, i) => card(k, data.numbers[k], i))}
                         {card('personalYear', data.personalYear !== null ? {value: data.personalYear} : null, ORDER.length,
                             data.personalYearOf ? `${n.kinds.personalYear.meaning} ${translate('personal_year_of', {year: data.personalYearOf})}` : undefined)}
                         {card('personalMonth', data.personalMonth !== null ? {value: data.personalMonth} : null, ORDER.length + 1)}
+                        {card('personalDay', data.personalDay !== null ? {value: data.personalDay} : null, ORDER.length + 2)}
                     </div>
+
+                    {birthInput ? <NumerologyExtrasComponent data={data} birthDate={birthInput.date} fullName={debouncedName}/> : null}
 
                     {data.letters.length ? (
                         <section className={classes.section} aria-labelledby='num-letters'>

@@ -38,6 +38,16 @@ for (const [l, c] of Object.entries(langs)) {
         if (Object.keys(byHouse).length !== 12) { console.error(`${l}.inHouse.${point}: expected 12 houses`); errors++; }
     }
     if (Object.keys(c.aspectPairs ?? {}).length !== 45) { console.error(`${l}.aspectPairs: expected 45`); errors++; }
+    // Karmic path: every sign / house must have a text
+    for (const section of ['nodeAxis', 'chironSign', 'lilithSign', 'selenaSign']) {
+        if (!SIGN_KEYS.every((s) => s in (c.karmic?.[section] ?? {}))) { console.error(`${l}.karmic.${section}: missing signs`); errors++; }
+    }
+    if (Object.keys(c.moonCalendar?.days ?? {}).length !== 30) { console.error(`${l}.moonCalendar.days: expected 30`); errors++; }
+    if (!SIGN_KEYS.every((s) => s in (c.moonCalendar?.moonSigns ?? {}))) { console.error(`${l}.moonCalendar.moonSigns: missing signs`); errors++; }
+    if (Object.keys(c.numerology?.loShu?.missing ?? {}).length !== 9) { console.error(`${l}.numerology.loShu.missing: expected 9`); errors++; }
+    for (const section of ['nodeHouse', 'chironHouse']) {
+        if (Object.keys(c.karmic?.[section] ?? {}).length !== 12) { console.error(`${l}.karmic.${section}: expected 12 houses`); errors++; }
+    }
 }
 if (errors) { console.error(`${errors} content error(s)`); process.exit(1); }
 console.log(`content ok: ${keys[base].size} keys × ${Object.keys(langs).length} languages`);

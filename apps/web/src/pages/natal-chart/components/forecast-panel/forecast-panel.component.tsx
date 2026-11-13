@@ -14,10 +14,13 @@ import ChartWheelComponent from '../chart-wheel/chart-wheel.component';
 import InterpretationPanelComponent from '../interpretation-panel/interpretation-panel.component';
 import PointsTableComponent from '../points-table/points-table.component';
 import TransitTimelineComponent from '../transit-timeline/transit-timeline.component';
+import LifeCyclesComponent from '../life-cycles/life-cycles.component';
 import {useForecastPanelStyles} from './forecast-panel.style';
 import {IForecastPanel} from './forecast-panel';
 
-type Mode = 'timeline' | 'solar' | 'lunar' | 'progressions';
+type Mode = 'timeline' | 'cycles' | 'solar' | 'lunar' | 'progressions';
+// Modes with their own panel: no return/progression controls or chart below
+const STANDALONE: Mode[] = ['timeline', 'cycles'];
 const MIN = dayjs('1800-01-01');
 const MAX = dayjs('2999-12-31');
 
@@ -93,6 +96,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
 
     const modes = useMemo(() => [
         {value: 'timeline', label: translate('forecast_timeline')},
+        {value: 'cycles', label: translate('forecast_cycles')},
         {value: 'solar', label: translate('forecast_solar')},
         {value: 'lunar', label: translate('forecast_lunar')},
         {value: 'progressions', label: translate('forecast_progressions')},
@@ -118,8 +122,9 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
             </header>
 
             {mode === 'timeline' ? <TransitTimelineComponent/> : null}
+            {mode === 'cycles' ? <LifeCyclesComponent/> : null}
 
-            {mode === 'timeline' ? null : <div className={classes.controls}>
+            {STANDALONE.includes(mode) ? null : <div className={classes.controls}>
                 {mode === 'solar' ? (
                     <label className={classes.control}>
                         <span>{translate('forecast_year')}</span>
@@ -151,7 +156,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
                 )}
             </div>}
 
-            {mode === 'timeline' ? null : mode !== 'progressions' ? (
+            {STANDALONE.includes(mode) ? null : mode !== 'progressions' ? (
                 !ret?.chart ? <LoaderComponent/> : (
                     <div className={classNames(classes.body, {[classes.busy]: retBusy})}>
                         <p className={classes.info}>{translate(mode === 'solar' ? 'forecast_solar_info' : 'forecast_lunar_info')}</p>

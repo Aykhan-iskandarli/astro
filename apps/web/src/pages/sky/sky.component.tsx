@@ -48,7 +48,7 @@ function SkyComponent() {
                     {sky?.at ? <p className={classes.muted}>{formatLocal(sky.at)}</p> : null}
                 </header>
 
-                {isError ? <Alert type='error' showIcon message={translate('today_error')}/> : null}
+                {isError ? <Alert type='error' showIcon title={translate('today_error')}/> : null}
                 {isLoading ? <LoaderComponent/> : null}
 
                 {sky && moon && voc ? (

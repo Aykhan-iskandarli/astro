@@ -9,6 +9,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {ITranslationKey} from 'assets/lang/lang';
 import {useGetBazi} from '../../actions/natal-chart.query';
 import {IPillar} from '../../models/bazi.model';
+import ChineseCompatComponent from '../chinese-compat/chinese-compat.component';
 import {useChinesePanelStyles} from './chinese-panel.style';
 
 // iztro (~200 kB) is only loaded when this tab is opened
@@ -148,9 +149,11 @@ const ChinesePanelComponent = () => {
                     <Suspense fallback={<LoaderComponent/>}>
                         <ZiweiChartComponent date={birthInput.date} time={birthInput.time} gender={gender} age={age}/>
                     </Suspense>
-                ) : <Alert type='info' showIcon message={translate('ziwei_time_required')}/>}
+                ) : <Alert type='info' showIcon title={translate('ziwei_time_required')}/>}
                 <p className={classes.note}>{translate('ziwei_note')}</p>
             </section>
+
+            <ChineseCompatComponent birthDate={birthInput.date}/>
         </div>
     );
 };
