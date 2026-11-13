@@ -56,10 +56,22 @@ const styles = {
     wheelWrap: {
         padding: rem(8),
     },
+    // The interpretation must never change the row height: otherwise hovering a table row below swaps in a
+    // longer text, the row grows, the table moves under the cursor and hover flickers between rows.
+    // `contain: size` makes the aside contribute no height, so the wheel alone sets the row; the panel sticks
+    // inside it and scrolls when its text is longer than the wheel.
     side: {
-        position: 'sticky',
-        top: rem(96),
-        [breakpoint(sizes.breakpointLg)]: {position: 'static'},
+        alignSelf: 'stretch',
+        contain: 'size',
+        '& > [aria-live]': {
+            position: 'sticky',
+            top: rem(96),
+            maxHeight: 'min(calc(100vh - 128px), 100%)',
+        },
+        [breakpoint(sizes.breakpointLg)]: {
+            contain: 'none',
+            '& > [aria-live]': {position: 'static', maxHeight: 'calc(100vh - 128px)'},
+        },
     },
     section: {
         display: 'flex',
