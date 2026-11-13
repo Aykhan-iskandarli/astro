@@ -1,6 +1,7 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import SkyModel, {CalendarModel} from '../models/sky.model';
-import {getCalendar, getMoonCalendar, getSky, IMoonPlace} from './sky.service';
+import {getCalendar, getMoonCalendar, getSky, getSkyDay, IMoonPlace} from './sky.service';
+import SkyDayModel from '../models/sky-day.model';
 import MoonCalendarModel from '../models/moon-calendar.model';
 
 // The sky is not personal data: it can be cached normally. Refreshed every 10 minutes while the page is open.
@@ -35,6 +36,16 @@ export const useGetMoonCalendar = (start: string, end: string, place: IMoonPlace
         queryFn: () => {
             return getMoonCalendar(start, end, place);
         },
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        retry: 1,
+    });
+};
+
+export const useGetSkyDay = (date: string, place: IMoonPlace) => {
+    return useQuery<SkyDayModel, Error>({
+        queryKey: ['sky-day', date, place.latitude, place.longitude, place.timezone],
+        queryFn: () => getSkyDay(date, place),
         placeholderData: keepPreviousData,
         staleTime: Infinity,
         retry: 1,

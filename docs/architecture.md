@@ -35,6 +35,9 @@ JSON-serialisable. Modules are registered in `astra_engine.MODULES` by id (`west
 | `western/cycles.py` | Jupiter, Saturn and Chiron returns over 100 years (all exact passes: 1, 3 or 5 with retrograde loops; adaptive scan bounded by each body's maximum speed, bisection to under a second) and whole-sign annual profections with the traditional lord of the year. |
 | `sky/moon.py` | Moon calendar for a city: lunar days (day 1 at the exact New Moon, then each moonrise at the place), Moon sign changes, calendar phase (centred on the exact lunations) and void-of-course periods (last exact Ptolemaic aspect to Sun–Pluto until the next sign). Positions are sampled once on a 2-hour grid and refined by bisection. |
 | `vedic/chart.py` → `sadeSati` | Sidereal (Lahiri) Saturn over the sign before, of and after the natal Moon, for 100 years; each phase from first entry to last exit, periods merged across short retrograde exits. |
+| `western/details.py`, `western/timing.py` | Declinations (out of bounds vs true obliquity), antiscia (1.5°), prenatal eclipses (Swiss Ephemeris backward search); receptions, dominants, firdaria and zodiacal releasing via kerykeion; solar arc = progressed Sun − natal Sun, aspects within 1°. |
+| `vedic/match.py` | Ashtakoota (36 points) and Manglik; conventions in the module docstring. |
+| `other/systems.py`, `sky/day.py` | Tarot birth cards (Greer), Tzolkin (GMT 584283), Kua (Eight Mansions); Panchang at sunrise (Lahiri) and planetary hours (kerykeion). |
 
 Conventions: tropical zodiac, true node, mean Lilith, sect-aware Part of Fortune and Part of Spirit.
 `extraPoints` (Ceres, Pallas, Juno, Vesta, Vertex, Part of Spirit) are returned separately: they are not drawn on the

@@ -13,6 +13,8 @@ from pydantic.alias_generators import to_camel
 from astra_engine import MODULES, SKY, BirthData
 from astra_engine._backend import LIBRARY_VERSION
 from astra_engine.chinese import bazi as bazi_module
+from astra_engine.other import systems as other_systems
+from astra_engine.vedic import match as vedic_match
 from astra_engine.numerology import core as numerology_core
 
 from .geo import load_index
@@ -108,9 +110,26 @@ class NumerologyCompatibilityRequest(BaseModel):
     second: NumerologyPerson
 
 
+class NameAnalysisRequest(BaseModel):
+    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
+
+    full_name: str = Field(min_length=1, max_length=120)
+    date: Date | None = None
+
+
 class ChineseCompatibilityRequest(BaseModel):
     first: Date
     second: Date
+
+
+class GunaMilanRequest(BaseModel):
+    groom: NatalRequest
+    bride: NatalRequest
+
+
+class OtherSystemsRequest(BaseModel):
+    date: Date
+    gender: Literal["male", "female"] = "male"
 
 
 class CyclesRequest(NatalRequest):
@@ -181,6 +200,14 @@ def numerology(req: NumerologyRequest) -> dict:
     except ValidationError as e:
         raise HTTPException(status_code=422, detail=[err["msg"] for err in e.errors()]) from e
     return MODULES["numerology.core"].calculate(birth, full_name=req.full_name)
+
+
+@app.post("/api/numerology/name")
+def name_analysis(req: NameAnalysisRequest) -> dict:
+    """Name analysis from the full name alone; the birth date is optional (adds life path and maturity)."""
+    if req.date is not None and not 1800 <= req.date.year <= 2999:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return numerology_core.name_analysis(req.full_name, req.date)
 
 
 @app.post("/api/numerology/compatibility")
@@ -278,6 +305,56 @@ def chinese_compatibility(req: ChineseCompatibilityRequest) -> dict:
         if not 1800 <= d.year <= 2999:
             raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
     return bazi_module.compatibility(req.first, req.second)
+
+
+@app.post("/api/charts/details")
+def chart_details(req: NatalRequest) -> dict:
+    """Declinations, antiscia, mutual receptions, dominants and prenatal eclipses."""
+    return MODULES["western.details"].calculate(_birth(req))
+
+
+@app.post("/api/charts/timing")
+def chart_timing(req: CyclesRequest) -> dict:
+    """Firdaria, zodiacal releasing and solar arc directions (for the date 'on', default today)."""
+    if req.on is not None and not 1800 <= req.on.year <= 2999:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.timing"].calculate(_birth(req), on=req.on)
+
+
+@app.post("/api/charts/cartography")
+def cartography(req: NatalRequest) -> dict:
+    return MODULES["western.cartography"].calculate(_birth(req))
+
+
+@app.post("/api/charts/davison")
+def davison_chart(req: SynastryRequest) -> dict:
+    return MODULES["western.davison"].calculate(_birth(req.first), _birth(req.second), house_system=req.house_system)
+
+
+@app.post("/api/charts/guna-milan")
+def guna_milan(req: GunaMilanRequest) -> dict:
+    return vedic_match.calculate(_birth(req.groom), _birth(req.bride))
+
+
+@app.post("/api/other")
+def other(req: OtherSystemsRequest) -> dict:
+    """Tarot birth cards, Maya Tzolkin and Kua number from the birth date."""
+    if not 1800 <= req.date.year <= 2999:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return other_systems.calculate(req.date, req.gender)
+
+
+@app.get("/api/sky/day")
+def sky_day(date: Date, lat: float = Query(ge=-66, le=66), lon: float = Query(ge=-180, le=180),
+            tz: str = Query(max_length=64)) -> dict:
+    """Planetary hours and Panchang for a day at a place (needs a sunrise, so polar latitudes are excluded)."""
+    if not 1800 <= date.year <= 2999:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    try:
+        BirthData(date=date, latitude=lat, longitude=lon, timezone=tz)
+    except ValidationError as e:
+        raise HTTPException(status_code=422, detail=[err["msg"] for err in e.errors()]) from e
+    return SKY["sky.day"].calculate(date, lat, lon, tz)
 
 
 @app.post("/api/charts/timeline")

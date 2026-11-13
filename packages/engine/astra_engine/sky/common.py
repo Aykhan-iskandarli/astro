@@ -25,7 +25,11 @@ def kery_planet(name: str | None) -> str | None:
     if not name:
         return None
     low = name.lower()
-    return "northNode" if low in ("true_north_lunar_node", "mean_north_lunar_node") else low
+    if low in ("true_north_lunar_node", "mean_north_lunar_node", "north_node"):
+        return "northNode"
+    if low in ("true_south_lunar_node", "mean_south_lunar_node", "south_node"):
+        return "southNode"
+    return low
 
 
 def jd_of(dt: datetime) -> float:

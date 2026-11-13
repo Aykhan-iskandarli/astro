@@ -15,12 +15,13 @@ import InterpretationPanelComponent from '../interpretation-panel/interpretation
 import PointsTableComponent from '../points-table/points-table.component';
 import TransitTimelineComponent from '../transit-timeline/transit-timeline.component';
 import LifeCyclesComponent from '../life-cycles/life-cycles.component';
+import TimingPanelComponent from '../timing-panel/timing-panel.component';
 import {useForecastPanelStyles} from './forecast-panel.style';
 import {IForecastPanel} from './forecast-panel';
 
-type Mode = 'timeline' | 'cycles' | 'solar' | 'lunar' | 'progressions';
+type Mode = 'timeline' | 'cycles' | 'timing' | 'solar' | 'lunar' | 'progressions';
 // Modes with their own panel: no return/progression controls or chart below
-const STANDALONE: Mode[] = ['timeline', 'cycles'];
+const STANDALONE: Mode[] = ['timeline', 'cycles', 'timing'];
 const MIN = dayjs('1800-01-01');
 const MAX = dayjs('2999-12-31');
 
@@ -97,6 +98,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
     const modes = useMemo(() => [
         {value: 'timeline', label: translate('forecast_timeline')},
         {value: 'cycles', label: translate('forecast_cycles')},
+        {value: 'timing', label: translate('forecast_timing')},
         {value: 'solar', label: translate('forecast_solar')},
         {value: 'lunar', label: translate('forecast_lunar')},
         {value: 'progressions', label: translate('forecast_progressions')},
@@ -123,6 +125,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
 
             {mode === 'timeline' ? <TransitTimelineComponent/> : null}
             {mode === 'cycles' ? <LifeCyclesComponent/> : null}
+            {mode === 'timing' ? <TimingPanelComponent/> : null}
 
             {STANDALONE.includes(mode) ? null : <div className={classes.controls}>
                 {mode === 'solar' ? (

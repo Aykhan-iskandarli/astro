@@ -33,6 +33,13 @@ export interface ILoShu {
     lines: {id: string; numbers: number[]; complete: boolean; empty: boolean}[];
 }
 
+export interface IPsychomatrix {
+    workNumbers: number[];
+    variant: 'classic' | '2000+';
+    counts: Record<string, number>;
+    lines: Record<string, number>;
+}
+
 export default class NumerologyModel {
     public numbers: Record<string, INumerologyNumber | null> = {};
     public personalYear: number | null = null;
@@ -41,6 +48,7 @@ export default class NumerologyModel {
     public personalDay: number | null = null;
     public pinnacles: INumerologyPinnacle[] = [];
     public loShu: ILoShu | null = null;
+    public psychomatrix: IPsychomatrix | null = null;
     public letters: INumerologyLetter[] = [];
     public ignored: string[] = [];
 
@@ -57,9 +65,10 @@ export default class NumerologyModel {
         }
     }
 
-    private _setPinnacles({pinnacles, loShu}: any) {
+    private _setPinnacles({pinnacles, loShu, psychomatrix}: any) {
         this.pinnacles = pinnacles ?? [];
         this.loShu = loShu ?? null;
+        this.psychomatrix = psychomatrix ?? null;
     }
 
     private _setPersonal({personalYear, personalMonth, personalDay}: any) {

@@ -11,8 +11,8 @@ from .chinese import bazi
 from .destiny import matrix as destiny_matrix
 from .numerology import core as numerology
 from .vedic import chart as vedic_chart
-from .sky import calendar as sky_calendar, moon as sky_moon, now as sky_now
-from .western import composite, cycles, natal, progressions, returns, synastry, timeline, transits
+from .sky import calendar as sky_calendar, day as sky_day, moon as sky_moon, now as sky_now
+from .western import cartography, composite, cycles, davison, details, natal, progressions, returns, synastry, timeline, timing, transits
 
 
 class EngineModule(Protocol):
@@ -33,11 +33,15 @@ MODULES: dict[str, EngineModule] = {
     progressions.MODULE_ID: progressions,        # Phase 7
     composite.MODULE_ID: composite,              # Phase 7
     timeline.MODULE_ID: timeline,                # transit timeline
-    cycles.MODULE_ID: cycles,                    # planetary returns (Jupiter/Saturn/Chiron) + profections
+    cycles.MODULE_ID: cycles,
+    details.MODULE_ID: details,                  # declinations, antiscia, receptions, dominants, prenatal eclipses
+    timing.MODULE_ID: timing,
+    davison.MODULE_ID: davison,
+    cartography.MODULE_ID: cartography,          # astrocartography lines                  # relationship chart for the midpoint in time and space                    # firdaria, zodiacal releasing, solar arc                    # planetary returns (Jupiter/Saturn/Chiron) + profections
 }
 
 # The sky itself is not tied to a birth chart: calculate(at) / calculate(start, end)
 SKY: dict[str, EngineModule] = {sky_now.MODULE_ID: sky_now, sky_calendar.MODULE_ID: sky_calendar,
-                                 sky_moon.MODULE_ID: sky_moon}
+                                 sky_moon.MODULE_ID: sky_moon, sky_day.MODULE_ID: sky_day}
 
 __all__ = ["BirthData", "MODULES", "SKY", "EngineModule", "resolve_utc"]

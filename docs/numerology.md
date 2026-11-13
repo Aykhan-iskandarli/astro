@@ -29,6 +29,19 @@ given. Number families 1-5-7, 2-4-8, 3-6-9: same root number = "same", same fami
 Eight lines (three rows, three columns, two diagonals) are reported as complete (every digit present) or empty (none).
 Only the date is used; some schools add the life path or other numbers.
 
+**Pythagoras square (psychomatrix, A. Aleksandrov):** work numbers from DD.MM.YYYY — 1st = sum of all date digits,
+2nd = digit sum of the 1st, 3rd = 1st − 2 × first non-zero digit of the day (births before 2000) or 1st + 19 (births
+from 2000, the common modern variant), 4th = digit sum of the 3rd. All digits of the date and the work numbers are
+counted (zeros ignored) into cells 1–9; columns 1-2-3 / 4-5-6 / 7-8-9, rows 1-4-7 / 2-5-8 / 3-6-9 and diagonals 1-5-9 /
+3-5-7 are summed as lines. Texts use five levels per cell (0, 1, 2, 3, 4+) and three per line (≤2, 3–5, ≥6).
+
+**Name analysis** (`POST /api/numerology/name`, page `/name-analysis`; birth date optional):
+cornerstone (first letter), capstone (last letter of the first name), first vowel, inclusion table (count of each
+number 1–9), karmic lessons (numbers missing from the name), hidden passion (most frequent number, ties listed),
+subconscious self (9 − number of karmic lessons), balance number (initials), planes of expression (Decoz letter
+groups: physical E W D M; mental A H J N P G L; emotional I O R Z B S T X; intuitive K F Q U Y C V) and the Chaldean
+total for comparison (A I J Q Y=1, B K R=2, C G L S=3, D M T=4, E H N X=5, U V W=6, O Z=7, F P=8; no 9).
+
 ## Owner decisions / conventions
 
 - **Letter table:** Pythagorean A=1 … I=9, J=1 …. Azerbaijani letters take the value of their base Latin letter:

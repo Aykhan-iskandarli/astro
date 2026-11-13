@@ -7,6 +7,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {useGetNumerology, useGetNumerologyCompatibility} from '../../actions/natal-chart.query';
 import {INumerologyPerson} from '../../actions/natal-chart.service';
 import LoShuComponent from '../lo-shu/lo-shu.component';
+import PsychomatrixComponent from '../psychomatrix/psychomatrix.component';
 import {useNumerologyExtrasStyles} from './numerology-extras.style';
 import {INumerologyExtras} from './numerology-extras';
 
@@ -46,6 +47,7 @@ const NumerologyExtrasComponent = ({data, birthDate, fullName}: INumerologyExtra
 
     return (
         <>
+            {data.psychomatrix ? <PsychomatrixComponent data={data.psychomatrix}/> : null}
             {data.loShu ? <LoShuComponent loShu={data.loShu}/> : null}
 
             {data.pinnacles.length ? (

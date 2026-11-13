@@ -136,3 +136,60 @@ def test_lo_shu_grid():
 
 def test_lo_shu_in_calculate():
     assert "loShu" in num.calculate(birth(date(1990, 6, 15)), today=date(2026, 11, 13))
+
+
+def test_name_analysis_worked_example():
+    # AYSEL MƏMMƏDOVA: A1 Y7 S1 E5 L3 | M4 Ə5 M4 M4 Ə5 D4 O6 V4 A1
+    out = num.name_analysis("Aysel Məmmədova")
+    assert out["expression"]["value"] == 9                      # 17 + 37 = 54 -> 9
+    assert out["cornerstone"]["letter"] == "a" and out["capstone"]["letter"] == "l"
+    assert out["firstVowel"]["letter"] == "a"
+    assert out["inclusion"] == {"1": 3, "2": 0, "3": 1, "4": 5, "5": 3, "6": 1, "7": 1, "8": 0, "9": 0}
+    assert out["karmicLessons"] == [2, 8, 9]
+    assert out["hiddenPassion"] == [4]
+    assert out["subconsciousSelf"] == 6
+    assert out["balance"]["value"] == 5                           # initials A(1) + M(4)
+    assert sum(out["planes"].values()) == 14
+    assert out["planes"]["physical"] == 7                         # E, M, M, M, D + Ə Ə (-> e)
+    assert out["dominantPlane"] == "physical"
+    # Chaldean: A1 Y1 S3 E5 L3 = 13; M4 Ə5 M4 M4 Ə5 D4 O7 V6 A1 = 40 -> 53 -> 8
+    assert out["chaldean"] == {"compound": 53, "value": 8}
+    assert out["lifePath"] is None
+
+
+def test_name_analysis_with_date_and_edge_cases():
+    out = num.name_analysis("Aysel", date(1990, 6, 15))
+    assert out["lifePath"]["value"] == 4 and out["maturity"] is not None
+    empty = num.name_analysis("Айсель")                            # Cyrillic only: nothing to count
+    assert empty["expression"] is None and empty["cornerstone"] is None and empty["ignored"]
+    assert empty["subconsciousSelf"] is None
+
+
+def test_planes_cover_the_alphabet():
+    letters = set().union(*num.PLANES.values())
+    assert letters == set("abcdefghijklmnopqrstuvwxyz") and sum(len(v) for v in num.PLANES.values()) == 26
+    assert set(num.CHALDEAN) == set("abcdefghijklmnopqrstuvwxyz") and 9 not in num.CHALDEAN.values()
+
+
+def test_psychomatrix_classic():
+    # 15.06.1990: digits 1 5 0 6 1 9 9 0 -> 1st 31, 2nd 4, 3rd 31 - 2*1 = 29, 4th 11
+    out = num.psychomatrix(date(1990, 6, 15))
+    assert out["workNumbers"] == [31, 4, 29, 11] and out["variant"] == "classic"
+    # digits: 15061990 + 31 + 4 + 29 + 11
+    assert out["counts"] == {"1": 5, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1, "7": 0, "8": 0, "9": 3}
+    assert out["lines"]["selfEsteem"] == 7 and out["lines"]["talent"] == 3 and out["lines"]["spirit"] == 9
+
+
+def test_psychomatrix_day_with_leading_zero_and_2000s():
+    # 05.03.1985: 1st = 0+5+0+3+1+9+8+5 = 31; first non-zero day digit is 5 -> 3rd = 31 - 10 = 21; 4th = 3
+    out = num.psychomatrix(date(1985, 3, 5))
+    assert out["workNumbers"] == [31, 4, 21, 3]
+    # 12.04.2003: 1st = 1+2+0+4+2+0+0+3 = 12; 2nd 3; 3rd = 12 + 19 = 31; 4th 4
+    out = num.psychomatrix(date(2003, 4, 12))
+    assert out["workNumbers"] == [12, 3, 31, 4] and out["variant"] == "2000+"
+
+
+def test_psychomatrix_in_outputs():
+    assert num.calculate(birth(date(1990, 6, 15)), today=date(2026, 11, 13))["psychomatrix"]["workNumbers"][0] == 31
+    assert num.name_analysis("Aysel")["psychomatrix"] is None
+    assert num.name_analysis("Aysel", date(1990, 6, 15))["psychomatrix"]["workNumbers"][0] == 31

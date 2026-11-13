@@ -890,7 +890,166 @@
           "meaning": "Saturn Ayın bürcündən sonrakı bürcdədir: maliyyə və ailə məsələlərində nizam; zəhmətin bəhrəsi yavaş-yavaş görünür."
         }
       }
-    }
+    },
+    "match": {
+      "intro": "Guna Milan (Ashtakoota) — Hindistanda evlilik uyğunluğunun əsas üsulu. Hər iki tərəfin sideral Ayının nakshatrası və bürcü səkkiz göstəricidə (koota) müqayisə olunur; maksimum 36 bal. Ənənəyə görə 18 və yuxarı bal qəbul ediləndir.",
+      "kootas": {
+        "varna": {
+          "name": "Varna (1)",
+          "meaning": "Mənəvi inkişaf və dəyərlərin uyğunluğu."
+        },
+        "vashya": {
+          "name": "Vashya (2)",
+          "meaning": "Qarşılıqlı cazibə və münasibətdə təsir balansı."
+        },
+        "tara": {
+          "name": "Tara (3)",
+          "meaning": "Taleyin, sağlamlığın və rifahın uyğunluğu."
+        },
+        "yoni": {
+          "name": "Yoni (4)",
+          "meaning": "Fiziki və intim uyğunluq (nakshatra heyvanları)."
+        },
+        "maitri": {
+          "name": "Graha Maitri (5)",
+          "meaning": "Bürc hakimlərinin dostluğu: zehni və emosional anlaşma."
+        },
+        "gana": {
+          "name": "Gana (6)",
+          "meaning": "Temperament: Deva (ilahi), Manushya (insani), Rakshasa (sərt)."
+        },
+        "bhakoot": {
+          "name": "Bhakoot (7)",
+          "meaning": "Ay bürclərinin qarşılıqlı mövqeyi: ailə rifahı və birgə inkişaf."
+        },
+        "nadi": {
+          "name": "Nadi (8)",
+          "meaning": "Enerji və sağlamlıq uyğunluğu; ən ağır çəkili göstərici."
+        }
+      },
+      "verdicts": {
+        "excellent": "Çox yüksək uyğunluq (28 və yuxarı).",
+        "good": "Yaxşı, qəbul edilən uyğunluq (18–27).",
+        "weak": "Zəif uyğunluq (18-dən aşağı): ənənəyə görə əlavə təhlil tövsiyə olunur."
+      },
+      "manglik": "Manglik (Kuja) dosha: Mars lagnadan və ya Aydan 1, 2, 4, 7, 8 və ya 12-ci evdədirsə. Ənənəyə görə hər iki tərəf Manglikdirsə, dosha neytrallaşır.",
+      "values": {
+        "brahmin": "Brahman",
+        "kshatriya": "Kşatriya",
+        "vaishya": "Vaişya",
+        "shudra": "Şudra",
+        "chatushpada": "Dördayaqlı",
+        "manava": "İnsan",
+        "jalachara": "Su",
+        "vanachara": "Vəhşi",
+        "keeta": "Həşərat",
+        "horse": "At",
+        "elephant": "Fil",
+        "sheep": "Qoyun",
+        "serpent": "İlan",
+        "dog": "İt",
+        "cat": "Pişik",
+        "rat": "Siçovul",
+        "cow": "İnək",
+        "buffalo": "Camış",
+        "tiger": "Pələng",
+        "deer": "Maral",
+        "monkey": "Meymun",
+        "mongoose": "Manqust",
+        "lion": "Aslan",
+        "deva": "Deva",
+        "manushya": "Manuşya",
+        "rakshasa": "Rakşasa",
+        "adi": "Adi",
+        "madhya": "Madhya",
+        "antya": "Antya"
+      }
+    },
+    "divisional": {
+      "d3": {
+        "name": "D3 Drekkana",
+        "meaning": "Qardaş-bacılar, cəsarət və təşəbbüs."
+      },
+      "d7": {
+        "name": "D7 Saptamsa",
+        "meaning": "Uşaqlar və nəsil."
+      },
+      "d10": {
+        "name": "D10 Dasamsa",
+        "meaning": "Karyera, peşə və ictimai uğur."
+      },
+      "d12": {
+        "name": "D12 Dwadasamsa",
+        "meaning": "Valideynlər və nəsil irsi."
+      }
+    },
+    "yogas": {
+      "gajaKesari": {
+        "name": "Gaja Kesari",
+        "meaning": "Yupiter Aydan kendrada: müdriklik, hörmət və uğur."
+      },
+      "budhaAditya": {
+        "name": "Budha-Aditya",
+        "meaning": "Günəş və Merkuri bir bürcdə: zəka və nitq bacarığı."
+      },
+      "chandraMangala": {
+        "name": "Chandra-Mangala",
+        "meaning": "Ay və Mars bir bürcdə: işgüzarlıq və maddi qazanc."
+      },
+      "ruchaka": {
+        "name": "Ruchaka (Mars)",
+        "meaning": "Cəsarət, güc və liderlik."
+      },
+      "bhadra": {
+        "name": "Bhadra (Merkuri)",
+        "meaning": "Zəka, nitq və ticarət bacarığı."
+      },
+      "hamsa": {
+        "name": "Hamsa (Yupiter)",
+        "meaning": "Müdriklik, mənəviyyat və hörmət."
+      },
+      "malavya": {
+        "name": "Malavya (Venera)",
+        "meaning": "Gözəllik, rahatlıq və sənət."
+      },
+      "sasa": {
+        "name": "Sasa (Saturn)",
+        "meaning": "Dözüm, nizam və hakimiyyət."
+      },
+      "sunapha": {
+        "name": "Sunapha",
+        "meaning": "Aydan ikinci evdə planet: öz zəhməti ilə qazanılan rifah."
+      },
+      "anapha": {
+        "name": "Anapha",
+        "meaning": "Aydan on ikinci evdə planet: xoş xasiyyət və rahatlıq."
+      },
+      "durudhara": {
+        "name": "Durudhara",
+        "meaning": "Ayın hər iki tərəfində planet: səxavət və bolluq."
+      },
+      "kemadruma": {
+        "name": "Kemadruma",
+        "meaning": "Ayın hər iki tərəfi boşdur: müstəqillik, bəzən təklik hissi."
+      },
+      "vesi": {
+        "name": "Vesi",
+        "meaning": "Günəşdən ikinci evdə planet: balanslı, dürüst xarakter."
+      },
+      "vasi": {
+        "name": "Vasi",
+        "meaning": "Günəşdən on ikinci evdə planet: səxavət və bacarıq."
+      },
+      "ubhayachari": {
+        "name": "Ubhayachari",
+        "meaning": "Günəşin hər iki tərəfində planet: tanınma və uğur."
+      },
+      "adhi": {
+        "name": "Adhi",
+        "meaning": "Xeyirli planetlər Aydan 6–8-ci evlərdə: liderlik və rifah."
+      }
+    },
+    "ashtakavarga": "Ashtakavarga: hər bürc üçün planetlərin “xeyir nöqtələri” (bindu). Sarvashtakavarga cəmi həmişə 337-dir; 28-dən çox bindu olan bürc güclü, az olan zəif sayılır."
   },
   "numerology": {
     "numbers": {
@@ -1080,6 +1239,277 @@
         }
       },
       "emptyLine": "Bu xəttin heç bir rəqəmi yoxdur: həmin sahədə daha çox şüurlu səy lazımdır."
+    },
+    "name": {
+      "intro": "Adınızı və soyadınızı yazın: hər hərfin Pifaqor cədvəlində bir ədədi var (A=1 … I=9, J=1 …). Bu ədədlərin cəmi, təkrarlanması və boşluqları xarakteriniz barədə müxtəlif tərəfləri göstərir. Doğum tarixi istəyə bağlıdır.",
+      "kinds": {
+        "cornerstone": {
+          "name": "İlk hərf",
+          "meaning": "Adınızın ilk hərfi: yeni işə və həyata necə yanaşdığınız."
+        },
+        "capstone": {
+          "name": "Son hərf",
+          "meaning": "Adınızın son hərfi: işləri necə tamamladığınız."
+        },
+        "firstVowel": {
+          "name": "İlk sait",
+          "meaning": "Adınızdakı ilk sait: daxili reaksiyanız, ilk hissiniz."
+        },
+        "karmicLessons": {
+          "name": "Karmik dərslər",
+          "meaning": "Adınızda olmayan ədədlər: bu həyatda öyrənməli olduğunuz keyfiyyətlər."
+        },
+        "hiddenPassion": {
+          "name": "Gizli ehtiras",
+          "meaning": "Adınızda ən çox təkrarlanan ədəd: güclü istedad və daxili meyl."
+        },
+        "subconsciousSelf": {
+          "name": "Şüuraltı mən",
+          "meaning": "Adınızda neçə fərqli ədəd olduğu: gözlənilməz vəziyyətlərdə özünə inam."
+        },
+        "balance": {
+          "name": "Tarazlıq ədədi",
+          "meaning": "Ad və soyadın baş hərflərindən: çətin anda tarazlığı necə bərpa etdiyiniz."
+        },
+        "planes": {
+          "name": "İfadə planları",
+          "meaning": "Hərflərin fiziki, zehni, emosional və intuitiv qruplara bölgüsü: dünyanı əsasən hansı yolla qavradığınız."
+        },
+        "chaldean": {
+          "name": "Xaldey ədədi",
+          "meaning": "Qədim Xaldey cədvəli ilə hesablanmış ad ədədi (müqayisə üçün; bu sistemdə 9 hərfə verilmir)."
+        },
+        "inclusion": {
+          "name": "Ədədlərin paylanması",
+          "meaning": "Hər ədədin adınızda neçə dəfə rast gəlindiyi."
+        }
+      },
+      "letters": {
+        "a": "A: təşəbbüskar və müstəqil; yeni işə cəsarətlə başlayır.",
+        "b": "B: həssas və əməkdaş; harmoniya və yaxınlıq axtarır.",
+        "c": "C: ifadəli və yaradıcı; ünsiyyətdə rahatdır.",
+        "d": "D: praktik və möhkəm; plan qurub ona sadiq qalır.",
+        "e": "E: azad və maraqlı; yeniliyə və dəyişikliyə açıqdır.",
+        "f": "F: qayğıkeş və məsuliyyətli; ailəyə və yaxınlarına bağlıdır.",
+        "g": "G: düşüncəli və müstəqil; dərinliyə və mənaya meyllidir.",
+        "h": "H: iddialı və bacarıqlı; uğur və güc hədəfləyir.",
+        "i": "I: həssas və mərhəmətli; insanlara qarşı ürəkaçıqdır.",
+        "j": "J: ədalətli və iradəli; sözünün üstündə durur.",
+        "k": "K: intuitiv və ilhamlı; güclü daxili duyğusu var.",
+        "l": "L: məntiqli və səmimi; düşünüb sonra hərəkət edir.",
+        "m": "M: çalışqan və dözümlü; işə məsuliyyətlə yanaşır.",
+        "n": "N: yaradıcı və orijinal; fərqli fikirləri sevir.",
+        "o": "O: sadiq və qoruyucu; dəyərlərinə möhkəm bağlıdır.",
+        "p": "P: bilikli və analitik; detallara diqqət edir.",
+        "q": "Q: orijinal və sirli; öz yolu ilə gedir.",
+        "r": "R: mərhəmətli və güclü; başqalarına kömək etməyə hazırdır.",
+        "s": "S: emosional və cazibədar; hissləri ilə idarə olunur.",
+        "t": "T: həssas və mənəvi; daxili tarazlıq axtarır.",
+        "u": "U: geniş ürəkli və yaradıcı; şansa və ilhama güvənir.",
+        "v": "V: qurucu və vizyoner; böyük planları reallaşdırır.",
+        "w": "W: ifadəli və dinamik; dəyişikliklərdən güc alır.",
+        "x": "X: həssas və çoxtərəfli; başqalarının əhvalını duyur.",
+        "y": "Y: azadlıqsevər və müstəqil; öz qərarlarını özü verir.",
+        "z": "Z: optimist və müdrik; çətinlikdə də ümidini itirmir."
+      },
+      "karmicLessons": {
+        "1": "Təşəbbüs və özünə inam: qərarı özünüz verməyi və liderliyi öyrənmək.",
+        "2": "Səbir və əməkdaşlıq: başqaları ilə incə, diplomatik davranmaq.",
+        "3": "Özünü ifadə: fikir və hisslərinizi açıq və sevinclə bölüşmək.",
+        "4": "Nizam və zəhmət: işi planlı, ardıcıl və sona qədər görmək.",
+        "5": "Dəyişikliyə uyğunlaşmaq: azadlıqdan və yenilikdən qorxmamaq.",
+        "6": "Məsuliyyət: ailə və yaxınlar üçün qayğı və öhdəlik götürmək.",
+        "7": "Dərinlik və inam: daxili dünyaya, biliyə və intuisiyaya güvənmək.",
+        "8": "Maddi idarəetmə: pul, güc və avtoritetlə sağlam münasibət.",
+        "9": "Mərhəmət və geniş baxış: başqalarına təmənnasız kömək etmək."
+      },
+      "subconscious": {
+        "1": "Gözlənilməz vəziyyətlərdə tez həyəcanlana bilərsiniz; dəstək və plan sizə güc verir.",
+        "2": "Gözlənilməz vəziyyətlərdə tez həyəcanlana bilərsiniz; dəstək və plan sizə güc verir.",
+        "3": "Çətin anlarda tərəddüd edə bilərsiniz; addım-addım hərəkət sizi sabit saxlayır.",
+        "4": "Praktik və təmkinlisiniz; çətinlikdə nizamla çıxış yolu tapırsınız.",
+        "5": "Çevik və uyğunlaşansınız; yeni vəziyyətə tez öyrəşirsiniz.",
+        "6": "Məsuliyyətlisiniz; çətinlikdə başqalarını da düşünürsünüz.",
+        "7": "Analitiksiniz; problemi əvvəlcə anlamağa çalışırsınız.",
+        "8": "Özünüzə güvənirsiniz və gərgin vəziyyətdə təşkilatçılıq edirsiniz.",
+        "9": "Çox yönlü və sakitsiniz; hər vəziyyətə geniş baxa bilirsiniz."
+      },
+      "balance": {
+        "1": "Çətin anda öz gücünüzə arxalanın, amma kömək istəməkdən çəkinməyin.",
+        "2": "Çətin anda diplomatiya və səbir sizə tarazlıq qaytarır.",
+        "3": "Çətin anda ünsiyyət və yumor gərginliyi azaldır.",
+        "4": "Çətin anda plan qurun və addım-addım irəliləyin.",
+        "5": "Çətin anda çevik olun: dəyişikliyə müqavimət yorur.",
+        "6": "Çətin anda başqalarına qayğı göstərmək sizi də sakitləşdirir.",
+        "7": "Çətin anda təkliyə çəkilib düşünmək sizə aydınlıq verir.",
+        "8": "Çətin anda nəzarəti saxlayın, amma sərtlikdən qaçın.",
+        "9": "Çətin anda geniş baxın: şəxsi incikliyi buraxmaq yol açır."
+      },
+      "planes": {
+        "physical": {
+          "name": "Fiziki",
+          "meaning": "Bədən, hərəkət və konkret iş: dünyanı təcrübə ilə qavrayırsınız."
+        },
+        "mental": {
+          "name": "Zehni",
+          "meaning": "Məntiq, analiz və fikir: dünyanı düşünərək qavrayırsınız."
+        },
+        "emotional": {
+          "name": "Emosional",
+          "meaning": "Hiss, empatiya və yaradıcılıq: dünyanı ürəklə qavrayırsınız."
+        },
+        "intuitive": {
+          "name": "İntuitiv",
+          "meaning": "Daxili duyğu və ilham: dünyanı sezgi ilə qavrayırsınız."
+        }
+      }
+    },
+    "psychomatrix": {
+      "intro": "Pifaqor kvadratı (psixomatrisa): doğum tarixinin rəqəmlərindən dörd “iş ədədi” hesablanır, sonra tarixin və bu ədədlərin bütün rəqəmləri 3×3 cədvəldə sayılır. Hər xana bir keyfiyyətdir; rəqəm nə qədər çox təkrarlanırsa, o keyfiyyət bir o qədər güclüdür.",
+      "workNumbers": "İş ədədləri",
+      "variant2000": "2000-ci ildən sonra doğulanlar üçün 3-cü ədəd = 1-ci + 19 (yayğın müasir variant).",
+      "cells": {
+        "1": {
+          "name": "Xarakter, iradə",
+          "levels": {
+            "0": "Xarakter zəif ifadə olunub: başqalarının təsirinə düşə bilərsiniz; özünə inamı inkişaf etdirin.",
+            "1": "Özünü önə çəkmək meyli: iradəni başqalarına qarşı deyil, məqsəd üçün işlətmək dərsinizdir.",
+            "2": "Yumşaq, diplomatik xarakter: özünüzü yaxşı təqdim edirsiniz, amma qarşıdurmadan qaçırsınız.",
+            "3": "Balanslı, sabit xarakter: lazım olanda təkid edir, lazım olanda güzəştə gedirsiniz.",
+            "4": "Güclü iradə və liderlik: tələbkar və qətiyyətlisiniz, bəzən həddən artıq sərt."
+          }
+        },
+        "2": {
+          "name": "Enerji",
+          "levels": {
+            "0": "Enerji azdır: tez yorulursunuz; yuxu, idman və təbiət vacibdir.",
+            "1": "Enerji orta-azdır: çox ünsiyyət yorucu ola bilər, fasilələr lazımdır.",
+            "2": "Kifayət qədər enerji: aktiv həyat üçün normal güc.",
+            "3": "Güclü enerji: başqalarını ruhlandırır, insanlara güc verirsiniz.",
+            "4": "Çox güclü enerji: onu hərəkətə, idmana və yaradıcılığa yönəltmək lazımdır."
+          }
+        },
+        "3": {
+          "name": "Maraq, idrak",
+          "levels": {
+            "0": "Dəqiq elmlərə maraq zəifdir: humanitar sahələr daha yaxındır.",
+            "1": "Nizam və səliqəyə meyl var, amma dəqiq elmlərə xüsusi maraq yoxdur.",
+            "2": "Öyrənməyə, texnikaya və dəqiq sahələrə yaxşı qabiliyyət.",
+            "3": "Güclü analitik zehin: elm, texnika və tədqiqat üçün istedad.",
+            "4": "Çox güclü elmi maraq: bəzən insanlardan çox ideyalara fokuslanırsınız."
+          }
+        },
+        "4": {
+          "name": "Sağlamlıq",
+          "levels": {
+            "0": "Bədən ehtiyat tələb edir: rejim, hərəkət və qayğı vacibdir.",
+            "1": "Orta dözümlülük: düzgün rejimlə yaxşı saxlanılır.",
+            "2": "Yaxşı dözümlülük və fiziki güc.",
+            "3": "Çox güclü bədən: fiziki yükə yaxşı tab gətirirsiniz.",
+            "4": "Böyük fiziki ehtiyat və möhkəmlik."
+          }
+        },
+        "5": {
+          "name": "Məntiq, intuisiya",
+          "levels": {
+            "0": "İntuisiya zəifdir: çox şeyi təcrübə və səhvlər üzərində öyrənirsiniz.",
+            "1": "Məntiq var, amma tələsik qərarlar səhvə apara bilər: düşünüb qərar verin.",
+            "2": "Güclü məntiq və intuisiya: hadisələri əvvəlcədən sezirsiniz.",
+            "3": "Çox güclü intuisiya: insanları və vəziyyətləri dərindən oxuyursunuz.",
+            "4": "Uzaqgörənlik: bəzən hadisələri qabaqcadan hiss edirsiniz."
+          }
+        },
+        "6": {
+          "name": "Əmək, bacarıq",
+          "levels": {
+            "0": "Fiziki iş çətin gəlir: zehni və yaradıcı sahələr daha uyğundur.",
+            "1": "Əl işi və fiziki zəhmət istəyə bağlıdır: öyrənmək mümkündür.",
+            "2": "Əl qabiliyyəti və işgüzarlıq: həm fiziki, həm zehni işə uyğunsunuz.",
+            "3": "Zəhmətkeşlik: işi sevir və dayanmadan çalışırsınız.",
+            "4": "Çox güclü işgüzarlıq: işsiz qala bilmirsiniz."
+          }
+        },
+        "7": {
+          "name": "Şans, istedad",
+          "levels": {
+            "0": "İstedad zəhmətlə inkişaf etdirilməlidir: uğur əmək hesabına gəlir.",
+            "1": "Kiçik istedad və şans: onu kəşf edib inkişaf etdirmək lazımdır.",
+            "2": "Aydın istedad və şans: bir sahədə parlaq ola bilərsiniz.",
+            "3": "Böyük istedad: sənət, elm və ya yaradıcılıqda xüsusi qabiliyyət.",
+            "4": "Çox güclü istedad: onu düzgün yönəltmək xüsusilə vacibdir."
+          }
+        },
+        "8": {
+          "name": "Borc, məsuliyyət",
+          "levels": {
+            "0": "Məsuliyyət hissi zəifdir: başqalarına qayğı göstərməyi öyrənmək lazımdır.",
+            "1": "Vəzifə hissi var, amma həmişə ön planda deyil.",
+            "2": "Güclü məsuliyyət: valideynlərə və yaxınlara qayğı.",
+            "3": "Başqalarına xidmətə yönəlmisiniz: müəllim, həkim, köməkçi ruhu.",
+            "4": "Çox güclü vəzifə hissi: başqaları üçün özünüzü unutmayın."
+          }
+        },
+        "9": {
+          "name": "Yaddaş, zehin",
+          "levels": {
+            "0": "Yaddaş və diqqət məşq tələb edir.",
+            "1": "Orta zehin: öyrənmək üçün səy lazımdır.",
+            "2": "Yaxşı yaddaş və öyrənmə qabiliyyəti.",
+            "3": "Güclü zehin: tez anlayır və yadda saxlayırsınız.",
+            "4": "Çox güclü zehin: dərin analiz, bəzən başqalarına qarşı səbirsizlik."
+          }
+        }
+      },
+      "lines": {
+        "selfEsteem": {
+          "name": "Özünəqiymət (1-2-3)",
+          "low": "Özünüzü az qiymətləndirirsiniz; uğurlarınızı görməyi öyrənin.",
+          "mid": "Sağlam özünəqiymət.",
+          "high": "Yüksək özünəqiymət; bəzən başqalarının fikrinə az qulaq asırsınız."
+        },
+        "work": {
+          "name": "Maddi təminat (4-5-6)",
+          "low": "Pul qazanmaq üçün daha çox səy və plan lazımdır.",
+          "mid": "Özünüzü maddi cəhətdən təmin etməyi bacarırsınız.",
+          "high": "Güclü maddi bacarıq: qazanmağı və təşkil etməyi bacarırsınız."
+        },
+        "talent": {
+          "name": "İstedad (7-8-9)",
+          "low": "İstedadı zəhmətlə üzə çıxarmaq lazımdır.",
+          "mid": "Aydın istedad var: onu inkişaf etdirin.",
+          "high": "Böyük istedad: onu dəyərləndirmək sizin vəzifənizdir."
+        },
+        "purpose": {
+          "name": "Məqsədyönlülük (1-4-7)",
+          "low": "Məqsəd qoymaq və ona sadiq qalmaq çətin ola bilər.",
+          "mid": "Məqsədə doğru getməyi bacarırsınız.",
+          "high": "Çox məqsədyönlüsünüz: hədəfə çatmadan dayanmırsınız."
+        },
+        "family": {
+          "name": "Ailə (2-5-8)",
+          "low": "Ailə həyatı sizin üçün əsas prioritet olmaya bilər.",
+          "mid": "Ailəyə dəyər verirsiniz.",
+          "high": "Ailə sizin üçün çox vacibdir; yaxınlar üçün çox şeyə hazırsınız."
+        },
+        "habits": {
+          "name": "Sabitlik, vərdişlər (3-6-9)",
+          "low": "Dəyişikliyi sevirsiniz, rutin sıxır.",
+          "mid": "Sabitliklə dəyişiklik arasında balans.",
+          "high": "Sabitlik və ənənələr sizin üçün çox vacibdir."
+        },
+        "spirit": {
+          "name": "Mənəviyyat (1-5-9)",
+          "low": "Mənəvi suallar hələ ön planda deyil.",
+          "mid": "Mənəvi axtarış və inam var.",
+          "high": "Güclü mənəvi istiqamət və dərin inam."
+        },
+        "temperament": {
+          "name": "Temperament (3-5-7)",
+          "low": "Sakit, təmkinli temperament.",
+          "mid": "Orta temperament: emosiyalar balanslıdır.",
+          "high": "Ehtiraslı temperament və güclü cazibə."
+        }
+      }
     }
   },
   "chinese": {
@@ -1982,6 +2412,267 @@
       "disseminating": "Azalan Ay",
       "lastQuarter": "Son dörddəbir",
       "balsamic": "Azalan oraq"
+    }
+  },
+  "other": {
+    "tzolkin": {
+      "intro": "Maya Tzolkin — 260 günlük müqəddəs təqvim: 13 ton və 20 gün işarəsi. Doğum gününüzün işarəsi xarakterinizin əsas enerjisini, ton isə onun necə ifadə olunduğunu göstərir. Ənənəvi Maya sayı (GMT korrelyasiyası) istifadə olunur.",
+      "signs": {
+        "imix": {
+          "name": "Timsah (Imix)",
+          "meaning": "Başlanğıc, qidalandırma, yaradıcı qüvvə."
+        },
+        "ik": {
+          "name": "Külək (Ik)",
+          "meaning": "Nəfəs, ünsiyyət, ruh."
+        },
+        "akbal": {
+          "name": "Gecə (Akbal)",
+          "meaning": "Daxili dünya, yuxular, sirr."
+        },
+        "kan": {
+          "name": "Toxum (Kan)",
+          "meaning": "Potensial, böyümə, bolluq."
+        },
+        "chicchan": {
+          "name": "İlan (Chicchan)",
+          "meaning": "Həyat enerjisi, instinkt, ehtiras."
+        },
+        "cimi": {
+          "name": "Keçid (Cimi)",
+          "meaning": "Dəyişim, buraxmaq, yenilənmə."
+        },
+        "manik": {
+          "name": "Maral (Manik)",
+          "meaning": "Şəfa, əl işi, xidmət."
+        },
+        "lamat": {
+          "name": "Ulduz (Lamat)",
+          "meaning": "Gözəllik, harmoniya, bolluq."
+        },
+        "muluc": {
+          "name": "Su (Muluc)",
+          "meaning": "Hisslər, təmizlənmə, axın."
+        },
+        "oc": {
+          "name": "İt (Oc)",
+          "meaning": "Sədaqət, sevgi, dostluq."
+        },
+        "chuen": {
+          "name": "Meymun (Chuen)",
+          "meaning": "Oyun, yaradıcılıq, sənət."
+        },
+        "eb": {
+          "name": "Yol (Eb)",
+          "meaning": "Həyat yolu, xidmət, insanlıq."
+        },
+        "ben": {
+          "name": "Qamış (Ben)",
+          "meaning": "Ev, ailə, möhkəmlik."
+        },
+        "ix": {
+          "name": "Yaquar (Ix)",
+          "meaning": "Sehr, intuisiya, gizli güc."
+        },
+        "men": {
+          "name": "Qartal (Men)",
+          "meaning": "Vizyon, yüksək baxış, azadlıq."
+        },
+        "cib": {
+          "name": "Bayquş (Cib)",
+          "meaning": "Müdriklik, əcdadlar, düşüncə."
+        },
+        "caban": {
+          "name": "Yer (Caban)",
+          "meaning": "Hərəkət, sinxronluq, təbiət."
+        },
+        "etznab": {
+          "name": "Çaxmaq daşı (Etznab)",
+          "meaning": "Həqiqət, aydınlıq, qərar."
+        },
+        "cauac": {
+          "name": "Fırtına (Cauac)",
+          "meaning": "Təmizlənmə, enerji, dəyişiklik."
+        },
+        "ahau": {
+          "name": "Günəş (Ahau)",
+          "meaning": "İşıq, tamlıq, ustalıq."
+        }
+      },
+      "tones": {
+        "1": "Başlanğıc və birlik: təşəbbüs.",
+        "2": "İkilik: seçim və tarazlıq.",
+        "3": "Hərəkət: fəallıq və əlaqə.",
+        "4": "Forma: sabitlik və quruluş.",
+        "5": "Mərkəz: güc və toplanma.",
+        "6": "Axın: tarazlıq və ritm.",
+        "7": "Əks olunma: zirvə və diqqət.",
+        "8": "Harmoniya: ədalət və uyğunluq.",
+        "9": "Səbir: dözüm və genişlənmə.",
+        "10": "Təzahür: niyyətin reallaşması.",
+        "11": "Dəyişim: köhnədən azad olmaq.",
+        "12": "Anlayış: paylaşmaq və əməkdaşlıq.",
+        "13": "Yüksəliş: tamamlanma və yeni dövr."
+      }
+    },
+    "kua": {
+      "intro": "Kua ədədi (Feng Shui, “Səkkiz ev” məktəbi): doğum ilinə (Çin ili Lichun-da, ~4 fevral dəyişir) və cinsə görə hesablanır. Sizin üçün əlverişli istiqamətləri göstərir: iş masası, yataq və ya qapı üçün.",
+      "groups": {
+        "east": "Şərq qrupu (1, 3, 4, 9)",
+        "west": "Qərb qrupu (2, 6, 7, 8)"
+      },
+      "kinds": {
+        "shengQi": {
+          "name": "Sheng Qi",
+          "meaning": "Uğur və maddi rifah."
+        },
+        "tianYi": {
+          "name": "Tian Yi",
+          "meaning": "Sağlamlıq."
+        },
+        "yanNian": {
+          "name": "Yan Nian",
+          "meaning": "Münasibətlər və ailə."
+        },
+        "fuWei": {
+          "name": "Fu Wei",
+          "meaning": "Şəxsi inkişaf və sakitlik."
+        }
+      },
+      "directions": {
+        "N": "Şimal",
+        "S": "Cənub",
+        "E": "Şərq",
+        "W": "Qərb",
+        "NE": "Şimal-şərq",
+        "NW": "Şimal-qərb",
+        "SE": "Cənub-şərq",
+        "SW": "Cənub-qərb"
+      }
+    }
+  },
+  "details": {
+    "stars": {
+      "aldebaran": {
+        "name": "Aldebaran",
+        "meaning": "Şərəf, cəsarət və uğur; dürüstlüklə qorunmalıdır."
+      },
+      "regulus": {
+        "name": "Regulus",
+        "meaning": "Liderlik və şöhrət; intiqam hissindən qaçmaq şərtilə."
+      },
+      "antares": {
+        "name": "Antares",
+        "meaning": "Ehtiras və döyüşkənlik; ifrata varmaq riski."
+      },
+      "fomalhaut": {
+        "name": "Fomalhaut",
+        "meaning": "İdeallar, ilham və sənət; saflığı qorumaq."
+      },
+      "spica": {
+        "name": "Spica",
+        "meaning": "İstedad, xeyir və qoruma; ən uğurlu ulduzlardan."
+      },
+      "algol": {
+        "name": "Algol",
+        "meaning": "Güclü, intensiv enerji; ehtiras və hirsin idarəsi."
+      },
+      "sirius": {
+        "name": "Sirius",
+        "meaning": "Parlaqlıq, şöhrət və şərəf; böyük ambisiya."
+      },
+      "arcturus": {
+        "name": "Arcturus",
+        "meaning": "Yeni yollar açmaq, müəllimlik və yol göstərmək."
+      },
+      "vega": {
+        "name": "Vega",
+        "meaning": "Sənət, musiqi və cazibə; ictimai rəğbət."
+      },
+      "betelgeuse": {
+        "name": "Betelgeuse",
+        "meaning": "Uğur, şöhrət və fəal enerji."
+      },
+      "rigel": {
+        "name": "Rigel",
+        "meaning": "Bilik, təhsil və ixtiraçılıq."
+      },
+      "pollux": {
+        "name": "Pollux",
+        "meaning": "Cəsarət və rəqabət ruhu; sərtlikdən çəkinmək."
+      },
+      "procyon": {
+        "name": "Procyon",
+        "meaning": "Sürətli yüksəliş və fəallıq; davamlılıq dərsi."
+      },
+      "capella": {
+        "name": "Capella",
+        "meaning": "Maraq, öyrənmək və müstəqillik."
+      },
+      "alcyone": {
+        "name": "Alcyone (Ülkər)",
+        "meaning": "Görmə qabiliyyəti, intuisiya və kədərdən müdriklik."
+      },
+      "canopus": {
+        "name": "Canopus",
+        "meaning": "Səyahət, kəşf və yol göstərmək."
+      },
+      "altair": {
+        "name": "Altair",
+        "meaning": "Cəsarət, iddia və sürətli hərəkət."
+      },
+      "deneb": {
+        "name": "Deneb",
+        "meaning": "İdeallar, istedad və yüksək məqsədlər."
+      }
+    },
+    "lots": {
+      "eros": {
+        "name": "Eros nöqtəsi",
+        "meaning": "Sevgi, istək və nəyə cəzb olunduğunuz."
+      },
+      "necessity": {
+        "name": "Zərurət nöqtəsi",
+        "meaning": "Məhdudiyyətlər, çətinliklər və mübarizə sahələri."
+      },
+      "courage": {
+        "name": "Cəsarət nöqtəsi",
+        "meaning": "Cəsarət, iradə və bəzən risklər."
+      },
+      "victory": {
+        "name": "Qələbə nöqtəsi",
+        "meaning": "Uğur, inam və imkanlar."
+      },
+      "nemesis": {
+        "name": "Nemesis nöqtəsi",
+        "meaning": "Gizli düşmənlər, itkilər və karmik sınaqlar."
+      }
+    },
+    "harmonics": {
+      "5": "H5: yaradıcılıq, bacarıq və özünüifadə üslubu.",
+      "7": "H7: ilham, mistika və xəyal gücü.",
+      "9": "H9: daxili sevinc, mənəvi yetkinlik və nikah (navamsa ilə əlaqəli)."
+    }
+  },
+  "cartography": {
+    "intro": "Astrokartoqrafiya: doğum anında hər planetin hansı yerlərdə üfüqdə (ASC/DSC) və ya meridianda (MC/IC) olduğunu göstərir. Ənənəyə görə planet xəttinə yaxın yerlərdə həmin planetin mövzuları güclənir.",
+    "types": {
+      "mc": {
+        "name": "MC xətti",
+        "meaning": "Karyera, tanınma və ictimai rol."
+      },
+      "ic": {
+        "name": "IC xətti",
+        "meaning": "Ev, ailə və kök salmaq."
+      },
+      "asc": {
+        "name": "ASC xətti",
+        "meaning": "Şəxsiyyət, enerji və özünüifadə."
+      },
+      "dsc": {
+        "name": "DSC xətti",
+        "meaning": "Münasibətlər və tərəfdaşlıq."
+      }
     }
   }
 }

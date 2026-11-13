@@ -13,6 +13,7 @@ import {ProgressionModel, ReturnModel} from '../models/forecast.model';
 import TimelineModel from '../models/timeline.model';
 import CyclesModel from '../models/cycles.model';
 import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
+import {CartographyModel, DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
 import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 
 export const getPlaces = (query: string): Promise<PlaceModel[]> => {
@@ -129,5 +130,47 @@ export const getChineseCompatibility = (first: string, second: string): Promise<
     return axiosPublic.post(API.chineseCompatibility, {first, second})
         .then((res) => {
             return new ChineseCompatibilityModel(res.data);
+        });
+};
+
+export const getDetails = (input: IBirthInput): Promise<DetailsModel> => {
+    return axiosPublic.post(API.details, input)
+        .then((res) => {
+            return new DetailsModel(res.data);
+        });
+};
+
+export const getTiming = (input: IBirthInput, on: string): Promise<TimingModel> => {
+    return axiosPublic.post(API.timing, {...input, on})
+        .then((res) => {
+            return new TimingModel(res.data);
+        });
+};
+
+export const getGunaMilan = (groom: IBirthInput, bride: IBirthInput): Promise<GunaMilanModel> => {
+    return axiosPublic.post(API.gunaMilan, {groom, bride})
+        .then((res) => {
+            return new GunaMilanModel(res.data);
+        });
+};
+
+export const getOtherSystems = (date: string, gender: 'male' | 'female'): Promise<OtherSystemsModel> => {
+    return axiosPublic.post(API.other, {date, gender})
+        .then((res) => {
+            return new OtherSystemsModel(res.data);
+        });
+};
+
+export const getCartography = (input: IBirthInput): Promise<CartographyModel> => {
+    return axiosPublic.post(API.cartography, input)
+        .then((res) => {
+            return new CartographyModel(res.data);
+        });
+};
+
+export const getDavison = (first: IBirthInput, second: IBirthInput): Promise<NatalChartModel> => {
+    return axiosPublic.post(API.davison, {first, second, houseSystem: first.houseSystem})
+        .then((res) => {
+            return new NatalChartModel(res.data);
         });
 };

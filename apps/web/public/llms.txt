@@ -5,6 +5,7 @@
 ### Main pages
 - [Home](https://astra.example/): introduction and a journey through the planets' archetypes
 - [Natal chart](https://astra.example/natal-chart): enter birth date, time and place to calculate a chart
+- [Name analysis](https://astra.example/name-analysis): numerology of a first name and surname (birth date optional)
 
 ### Legal
 - [Privacy policy](https://astra.example/privacy-policy)

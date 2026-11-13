@@ -3,6 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://astra.example/</loc></url>
   <url><loc>https://astra.example/natal-chart</loc></url>
+  <url><loc>https://astra.example/name-analysis</loc></url>
   <url><loc>https://astra.example/today</loc></url>
   <url><loc>https://astra.example/calendar</loc></url>
   <url><loc>https://astra.example/privacy-policy</loc></url>

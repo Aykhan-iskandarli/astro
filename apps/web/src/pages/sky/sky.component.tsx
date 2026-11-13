@@ -9,6 +9,7 @@ import LoaderComponent from 'core/shared/loader/loader.component';
 import CosmicBackgroundComponent from 'core/shared/cosmic-background/cosmic-background.component';
 import useLocalization, {useContent} from 'assets/lang';
 import {useGetSky} from './actions/sky.query';
+import DayPanelComponent from './components/day-panel/day-panel.component';
 import MoonPhaseComponent from './components/moon-phase/moon-phase.component';
 import PersonalTransitsComponent from './components/personal-transits/personal-transits.component';
 import {eventLabel} from './components/event-label/event-label';
@@ -130,6 +131,8 @@ function SkyComponent() {
                             </ul>
                             <Link to={Routes.calendar}><Button>{translate('today_open_calendar')}</Button></Link>
                         </section>
+
+                        <DayPanelComponent/>
                     </>
                 ) : null}
             </div>

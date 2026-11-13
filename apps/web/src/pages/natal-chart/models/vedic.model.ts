@@ -53,6 +53,9 @@ export default class VedicModel {
     public dashaBalanceYears: number | null = null;
     public mahadashas: IDashaPeriod[] = [];
     public sadeSati: ISadeSati | null = null;
+    public divisional: Record<string, {d3: string; d7: string; d10: string; d12: string}> = {};
+    public yogas: {id: string; planets: string[]}[] = [];
+    public ashtakavarga: {signs: string[]; bav: Record<string, number[]>; sav: number[]; total: number} | null = null;
 
     constructor(item: any) {
         this._setAyanamsa(item);
@@ -63,8 +66,11 @@ export default class VedicModel {
         this._setSadeSati(item);
     }
 
-    private _setSadeSati({sadeSati}: any) {
+    private _setSadeSati({sadeSati, extras}: any) {
         this.sadeSati = sadeSati ?? null;
+        this.divisional = extras?.divisional ?? {};
+        this.yogas = extras?.yogas ?? [];
+        this.ashtakavarga = extras?.ashtakavarga ?? null;
     }
 
     private _setAyanamsa({ayanamsa}: any) {

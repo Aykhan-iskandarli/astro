@@ -1,11 +1,12 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
 import {
-    getBazi, getChineseCompatibility, getComposite, getCycles, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
+    getBazi, getCartography, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
     INumerologyPerson, IReturnParams,
 } from './natal-chart.service';
 import CyclesModel from '../models/cycles.model';
 import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
+import {CartographyModel, DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
 import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
@@ -210,6 +211,81 @@ export const useGetChineseCompatibility = (first: string | null, second: string 
         enabled: !!first && !!second,
         placeholderData: keepPreviousData,
         staleTime: Infinity,
+        retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetDetails = (input: IBirthInput | null) => {
+    return useQuery<DetailsModel, Error>({
+        queryKey: ['details', input],
+        queryFn: () => getDetails(input!),
+        enabled: !!input,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetTiming = (input: IBirthInput | null, on: string, enabled: boolean) => {
+    return useQuery<TimingModel, Error>({
+        queryKey: ['timing', input, on],
+        queryFn: () => getTiming(input!, on),
+        enabled: !!input && enabled,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetGunaMilan = (groom: IBirthInput | null, bride: IBirthInput | null) => {
+    return useQuery<GunaMilanModel, Error>({
+        queryKey: ['guna-milan', groom, bride],
+        queryFn: () => getGunaMilan(groom!, bride!),
+        enabled: !!groom && !!bride,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetOtherSystems = (date: string | null, gender: 'male' | 'female') => {
+    return useQuery<OtherSystemsModel, Error>({
+        queryKey: ['other-systems', date, gender],
+        queryFn: () => getOtherSystems(date!, gender),
+        enabled: !!date,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetCartography = (input: IBirthInput | null) => {
+    return useQuery<CartographyModel, Error>({
+        queryKey: ['cartography', input],
+        queryFn: () => getCartography(input!),
+        enabled: !!input,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetDavison = (first: IBirthInput | null, second: IBirthInput | null, enabled: boolean) => {
+    return useQuery<NatalChartModel, Error>({
+        queryKey: ['davison', first, second],
+        queryFn: () => getDavison(first!, second!),
+        enabled: !!first && !!second && enabled,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
         retry: false,
         refetchOnWindowFocus: false,
     });

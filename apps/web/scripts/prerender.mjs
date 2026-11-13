@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {preview} from 'vite';
 import {chromium} from 'playwright-core';
 
-const ROUTES = ['/', '/natal-chart', '/privacy-policy']; // keep in sync with publicRoutes (src/router/routes.ts)
+const ROUTES = ['/', '/natal-chart', '/name-analysis', '/privacy-policy']; // keep in sync with publicRoutes (src/router/routes.ts)
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = join(root, 'dist');
 

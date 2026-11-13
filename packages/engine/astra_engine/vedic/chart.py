@@ -154,7 +154,7 @@ def calculate(birth: BirthData, now: datetime | None = None, **_options) -> dict
     moon = next(g for g in grahas if g["id"] == "moon")
     ref = now or datetime.now(timezone.utc)
     today_jd = swe.julday(ref.year, ref.month, ref.day, 12)
-    return {
+    result = {
         "module": MODULE_ID,
         "meta": {"engineVersion": MODULE_VERSION, "ayanamsaName": "lahiri", "node": "mean",
                  "houses": "wholeSign", "timeUnknown": time_unknown},
@@ -164,6 +164,9 @@ def calculate(birth: BirthData, now: datetime | None = None, **_options) -> dict
         "dasha": vimshottari(moon["longitude"], utc, now),
         "sadeSati": sade_sati(SIGNS.index(moon["sign"]), jd, today_jd),
     }
+    from . import extras  # divisional charts, yogas, ashtakavarga (imports this module)
+    result["extras"] = extras.calculate(result)
+    return result
 
 
 # --- Sade Sati -------------------------------------------------------------------------------------------------

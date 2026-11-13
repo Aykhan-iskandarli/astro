@@ -1,4 +1,4 @@
-import {useCallback, useRef, useState} from 'react';
+import {lazy, Suspense, useCallback, useRef, useState} from 'react';
 import {Alert, Button} from 'antd';
 import {motion} from 'framer-motion';
 import {formatDegree} from 'core/helpers/astro';
@@ -22,6 +22,11 @@ import TabStripComponent from '../tab-strip/tab-strip.component';
 import BigThreeComponent from '../big-three/big-three.component';
 import ExtraPointsComponent from '../extra-points/extra-points.component';
 import KarmicPanelComponent from '../karmic-panel/karmic-panel.component';
+import NatalDetailsComponent from '../natal-details/natal-details.component';
+import OtherPanelComponent from '../other-panel/other-panel.component';
+
+// The world map (~55 KB of outline) loads only when its tab is opened
+const CartographyPanelComponent = lazy(() => import('../cartography-panel/cartography-panel.component'));
 import {useChartResultStyles} from './chart-result.style';
 import {IChartResult} from './chart-result';
 
@@ -99,6 +104,11 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                                 </section>
                             ) : null}
 
+                            <section className={classes.section} aria-labelledby='sec-details'>
+                                <h2 id='sec-details'>{translate('section_details')}</h2>
+                                <NatalDetailsComponent/>
+                            </section>
+
                             {chart.timeUnknown ? null : (
                                 <section className={classes.section} aria-labelledby='sec-houses'>
                                     <h2 id='sec-houses'>{translate('section_houses')}</h2>
@@ -134,6 +144,8 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                     {key: 'numerology', label: translate('tab_numerology'), children: <NumerologyPanelComponent/>},
                     {key: 'chinese', label: translate('tab_chinese'), children: <ChinesePanelComponent/>},
                     {key: 'synastry', label: translate('tab_synastry'), children: <SynastryPanelComponent/>},
+                    {key: 'other', label: translate('tab_other'), children: <OtherPanelComponent/>},
+                    {key: 'map', label: translate('tab_map'), children: <Suspense fallback={<LoaderComponent/>}><CartographyPanelComponent/></Suspense>},
     ];
 
     return (

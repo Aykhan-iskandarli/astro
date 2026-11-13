@@ -11,6 +11,7 @@ import {useGetVedic} from '../../actions/natal-chart.query';
 import {IVedicPoint} from '../../models/vedic.model';
 import SouthIndianChartComponent from '../south-indian-chart/south-indian-chart.component';
 import SadeSatiComponent from '../sade-sati/sade-sati.component';
+import VedicExtrasComponent from '../vedic-extras/vedic-extras.component';
 import {useVedicPanelStyles} from './vedic-panel.style';
 
 const VEDIC_GLYPHS: Record<string, string> = {...POINT_GLYPHS, rahu: POINT_GLYPHS.northNode, ketu: POINT_GLYPHS.southNode};
@@ -161,6 +162,8 @@ const VedicPanelComponent = () => {
                     })}
                 </ol>
             </section>
+
+            <VedicExtrasComponent vedic={vedic}/>
 
             {vedic.sadeSati ? (
                 <SadeSatiComponent sadeSati={vedic.sadeSati}

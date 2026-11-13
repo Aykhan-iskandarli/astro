@@ -45,6 +45,7 @@ for (const [l, c] of Object.entries(langs)) {
     if (Object.keys(c.moonCalendar?.days ?? {}).length !== 30) { console.error(`${l}.moonCalendar.days: expected 30`); errors++; }
     if (!SIGN_KEYS.every((s) => s in (c.moonCalendar?.moonSigns ?? {}))) { console.error(`${l}.moonCalendar.moonSigns: missing signs`); errors++; }
     if (Object.keys(c.numerology?.loShu?.missing ?? {}).length !== 9) { console.error(`${l}.numerology.loShu.missing: expected 9`); errors++; }
+    if (Object.keys(c.numerology?.name?.letters ?? {}).length !== 26) { console.error(`${l}.numerology.name.letters: expected 26`); errors++; }
     for (const section of ['nodeHouse', 'chironHouse']) {
         if (Object.keys(c.karmic?.[section] ?? {}).length !== 12) { console.error(`${l}.karmic.${section}: expected 12 houses`); errors++; }
     }

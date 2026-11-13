@@ -890,7 +890,166 @@
           "meaning": "Saturn in the sign after the Moon: order in money and family matters; the fruit of the effort gradually shows."
         }
       }
-    }
+    },
+    "match": {
+      "intro": "Guna Milan (Ashtakoota) is the main Indian method of marriage matching. Both partners’ sidereal Moon nakshatra and sign are compared in eight factors (kootas); the maximum is 36 points. Traditionally 18 or more is acceptable.",
+      "kootas": {
+        "varna": {
+          "name": "Varna (1)",
+          "meaning": "Spiritual development and shared values."
+        },
+        "vashya": {
+          "name": "Vashya (2)",
+          "meaning": "Mutual attraction and balance of influence."
+        },
+        "tara": {
+          "name": "Tara (3)",
+          "meaning": "Harmony of fortune, health and well-being."
+        },
+        "yoni": {
+          "name": "Yoni (4)",
+          "meaning": "Physical and intimate compatibility (nakshatra animals)."
+        },
+        "maitri": {
+          "name": "Graha Maitri (5)",
+          "meaning": "Friendship of the sign lords: mental and emotional understanding."
+        },
+        "gana": {
+          "name": "Gana (6)",
+          "meaning": "Temperament: Deva (divine), Manushya (human), Rakshasa (fierce)."
+        },
+        "bhakoot": {
+          "name": "Bhakoot (7)",
+          "meaning": "Relative position of the Moon signs: family welfare and growing together."
+        },
+        "nadi": {
+          "name": "Nadi (8)",
+          "meaning": "Energy and health compatibility; the most heavily weighted factor."
+        }
+      },
+      "verdicts": {
+        "excellent": "Very high compatibility (28 or more).",
+        "good": "Good, acceptable compatibility (18–27).",
+        "weak": "Weak compatibility (below 18): traditionally further analysis is advised."
+      },
+      "manglik": "Manglik (Kuja) dosha: Mars in the 1st, 2nd, 4th, 7th, 8th or 12th house from the lagna or the Moon. Traditionally, when both partners are Manglik the dosha is neutralised.",
+      "values": {
+        "brahmin": "Brahmin",
+        "kshatriya": "Kshatriya",
+        "vaishya": "Vaishya",
+        "shudra": "Shudra",
+        "chatushpada": "Quadruped",
+        "manava": "Human",
+        "jalachara": "Water",
+        "vanachara": "Wild",
+        "keeta": "Insect",
+        "horse": "Horse",
+        "elephant": "Elephant",
+        "sheep": "Sheep",
+        "serpent": "Serpent",
+        "dog": "Dog",
+        "cat": "Cat",
+        "rat": "Rat",
+        "cow": "Cow",
+        "buffalo": "Buffalo",
+        "tiger": "Tiger",
+        "deer": "Deer",
+        "monkey": "Monkey",
+        "mongoose": "Mongoose",
+        "lion": "Lion",
+        "deva": "Deva",
+        "manushya": "Manushya",
+        "rakshasa": "Rakshasa",
+        "adi": "Adi",
+        "madhya": "Madhya",
+        "antya": "Antya"
+      }
+    },
+    "divisional": {
+      "d3": {
+        "name": "D3 Drekkana",
+        "meaning": "Siblings, courage and initiative."
+      },
+      "d7": {
+        "name": "D7 Saptamsa",
+        "meaning": "Children and progeny."
+      },
+      "d10": {
+        "name": "D10 Dasamsa",
+        "meaning": "Career, profession and public success."
+      },
+      "d12": {
+        "name": "D12 Dwadasamsa",
+        "meaning": "Parents and ancestral inheritance."
+      }
+    },
+    "yogas": {
+      "gajaKesari": {
+        "name": "Gaja Kesari",
+        "meaning": "Jupiter in a kendra from the Moon: wisdom, respect and success."
+      },
+      "budhaAditya": {
+        "name": "Budha-Aditya",
+        "meaning": "Sun and Mercury in one sign: intelligence and eloquence."
+      },
+      "chandraMangala": {
+        "name": "Chandra-Mangala",
+        "meaning": "Moon and Mars in one sign: enterprise and material gain."
+      },
+      "ruchaka": {
+        "name": "Ruchaka (Mars)",
+        "meaning": "Courage, strength and leadership."
+      },
+      "bhadra": {
+        "name": "Bhadra (Mercury)",
+        "meaning": "Intelligence, speech and business skill."
+      },
+      "hamsa": {
+        "name": "Hamsa (Jupiter)",
+        "meaning": "Wisdom, spirituality and respect."
+      },
+      "malavya": {
+        "name": "Malavya (Venus)",
+        "meaning": "Beauty, comfort and art."
+      },
+      "sasa": {
+        "name": "Sasa (Saturn)",
+        "meaning": "Endurance, order and authority."
+      },
+      "sunapha": {
+        "name": "Sunapha",
+        "meaning": "A planet in the 2nd from the Moon: wealth earned by one’s own effort."
+      },
+      "anapha": {
+        "name": "Anapha",
+        "meaning": "A planet in the 12th from the Moon: good nature and comfort."
+      },
+      "durudhara": {
+        "name": "Durudhara",
+        "meaning": "Planets on both sides of the Moon: generosity and plenty."
+      },
+      "kemadruma": {
+        "name": "Kemadruma",
+        "meaning": "Both sides of the Moon empty: independence, sometimes a sense of solitude."
+      },
+      "vesi": {
+        "name": "Vesi",
+        "meaning": "A planet in the 2nd from the Sun: a balanced, honest character."
+      },
+      "vasi": {
+        "name": "Vasi",
+        "meaning": "A planet in the 12th from the Sun: generosity and skill."
+      },
+      "ubhayachari": {
+        "name": "Ubhayachari",
+        "meaning": "Planets on both sides of the Sun: recognition and success."
+      },
+      "adhi": {
+        "name": "Adhi",
+        "meaning": "Benefics in the 6th–8th from the Moon: leadership and prosperity."
+      }
+    },
+    "ashtakavarga": "Ashtakavarga: the planets’ “benefic points” (bindus) for each sign. The Sarvashtakavarga total is always 337; a sign with more than 28 bindus is considered strong, fewer weak."
   },
   "numerology": {
     "numbers": {
@@ -1080,6 +1239,277 @@
         }
       },
       "emptyLine": "None of this line’s digits are present: this area needs more conscious effort."
+    },
+    "name": {
+      "intro": "Type your first name and surname: each letter has a number in the Pythagorean table (A=1 … I=9, J=1 …). The total of these numbers, the ones that repeat and the ones that are missing describe different sides of your character. The birth date is optional.",
+      "kinds": {
+        "cornerstone": {
+          "name": "Cornerstone",
+          "meaning": "The first letter of your name: how you approach new things and life."
+        },
+        "capstone": {
+          "name": "Capstone",
+          "meaning": "The last letter of your first name: how you finish things."
+        },
+        "firstVowel": {
+          "name": "First vowel",
+          "meaning": "The first vowel of your name: your inner reaction, your first feeling."
+        },
+        "karmicLessons": {
+          "name": "Karmic lessons",
+          "meaning": "Numbers missing from your name: qualities to learn in this life."
+        },
+        "hiddenPassion": {
+          "name": "Hidden passion",
+          "meaning": "The number that repeats most in your name: a strong talent and inner drive."
+        },
+        "subconsciousSelf": {
+          "name": "Subconscious self",
+          "meaning": "How many different numbers your name contains: self-confidence in unexpected situations."
+        },
+        "balance": {
+          "name": "Balance number",
+          "meaning": "From the initials of your names: how you regain balance in hard moments."
+        },
+        "planes": {
+          "name": "Planes of expression",
+          "meaning": "How your letters divide into physical, mental, emotional and intuitive groups: the main way you take in the world."
+        },
+        "chaldean": {
+          "name": "Chaldean number",
+          "meaning": "Your name number in the ancient Chaldean table (for comparison; this system gives no letter the value 9)."
+        },
+        "inclusion": {
+          "name": "Number distribution",
+          "meaning": "How many times each number occurs in your name."
+        }
+      },
+      "letters": {
+        "a": "A: enterprising and independent; starts new things with courage.",
+        "b": "B: sensitive and cooperative; seeks harmony and closeness.",
+        "c": "C: expressive and creative; at ease in communication.",
+        "d": "D: practical and solid; makes a plan and sticks to it.",
+        "e": "E: free and curious; open to novelty and change.",
+        "f": "F: caring and responsible; devoted to family and loved ones.",
+        "g": "G: thoughtful and independent; drawn to depth and meaning.",
+        "h": "H: ambitious and capable; aims for success and power.",
+        "i": "I: sensitive and compassionate; open-hearted with people.",
+        "j": "J: fair and strong-willed; keeps their word.",
+        "k": "K: intuitive and inspired; has a strong inner sense.",
+        "l": "L: logical and sincere; thinks first, then acts.",
+        "m": "M: hard-working and enduring; takes work seriously.",
+        "n": "N: creative and original; loves different ideas.",
+        "o": "O: loyal and protective; firmly attached to their values.",
+        "p": "P: knowledgeable and analytical; pays attention to detail.",
+        "q": "Q: original and mysterious; goes their own way.",
+        "r": "R: compassionate and strong; ready to help others.",
+        "s": "S: emotional and charming; led by feelings.",
+        "t": "T: sensitive and spiritual; seeks inner balance.",
+        "u": "U: big-hearted and creative; trusts luck and inspiration.",
+        "v": "V: a builder and visionary; makes big plans real.",
+        "w": "W: expressive and dynamic; draws strength from change.",
+        "x": "X: sensitive and many-sided; senses others’ moods.",
+        "y": "Y: freedom-loving and independent; makes their own decisions.",
+        "z": "Z: optimistic and wise; keeps hope even in hard times."
+      },
+      "karmicLessons": {
+        "1": "Initiative and self-confidence: learning to decide for yourself and to lead.",
+        "2": "Patience and cooperation: being gentle and diplomatic with others.",
+        "3": "Self-expression: sharing thoughts and feelings openly and with joy.",
+        "4": "Order and effort: doing work in a planned, steady way, to the end.",
+        "5": "Adapting to change: not fearing freedom and novelty.",
+        "6": "Responsibility: taking on care and commitment for family and loved ones.",
+        "7": "Depth and faith: trusting your inner world, knowledge and intuition.",
+        "8": "Managing the material: a healthy relationship with money, power and authority.",
+        "9": "Compassion and a wide view: helping others selflessly."
+      },
+      "subconscious": {
+        "1": "You may get flustered in unexpected situations; support and a plan give you strength.",
+        "2": "You may get flustered in unexpected situations; support and a plan give you strength.",
+        "3": "You may hesitate in hard moments; moving step by step keeps you steady.",
+        "4": "Practical and composed; in difficulty you find the way out through order.",
+        "5": "Flexible and adaptable; you get used to new situations quickly.",
+        "6": "Responsible; in difficulty you think of others too.",
+        "7": "Analytical; you first try to understand the problem.",
+        "8": "Self-confident; you take charge in tense situations.",
+        "9": "Versatile and calm; you can take a broad view of any situation."
+      },
+      "balance": {
+        "1": "In hard moments rely on your own strength, but do not hesitate to ask for help.",
+        "2": "In hard moments diplomacy and patience restore your balance.",
+        "3": "In hard moments communication and humour ease the tension.",
+        "4": "In hard moments make a plan and move forward step by step.",
+        "5": "In hard moments stay flexible: resisting change wears you out.",
+        "6": "In hard moments caring for others calms you too.",
+        "7": "In hard moments stepping back to reflect alone brings clarity.",
+        "8": "In hard moments keep control, but avoid harshness.",
+        "9": "In hard moments take the wide view: letting go of personal hurt opens the way."
+      },
+      "planes": {
+        "physical": {
+          "name": "Physical",
+          "meaning": "Body, movement and concrete work: you take in the world through experience."
+        },
+        "mental": {
+          "name": "Mental",
+          "meaning": "Logic, analysis and ideas: you take in the world by thinking."
+        },
+        "emotional": {
+          "name": "Emotional",
+          "meaning": "Feeling, empathy and creativity: you take in the world with the heart."
+        },
+        "intuitive": {
+          "name": "Intuitive",
+          "meaning": "Inner sense and inspiration: you take in the world through intuition."
+        }
+      }
+    },
+    "psychomatrix": {
+      "intro": "Pythagoras square (psychomatrix): four “work numbers” are calculated from the digits of the birth date, then every digit of the date and of these numbers is counted in a 3×3 grid. Each cell is a quality; the more often its digit repeats, the stronger the quality.",
+      "workNumbers": "Work numbers",
+      "variant2000": "For births from 2000 the 3rd number is the 1st + 19 (the common modern variant).",
+      "cells": {
+        "1": {
+          "name": "Character, will",
+          "levels": {
+            "0": "Character is weakly expressed: you may be swayed by others; build self-confidence.",
+            "1": "A tendency to put yourself first: the lesson is to use your will for goals, not against people.",
+            "2": "Gentle, diplomatic character: you present yourself well but avoid confrontation.",
+            "3": "Balanced, steady character: you insist when needed and compromise when needed.",
+            "4": "Strong will and leadership: demanding and decisive, sometimes too hard."
+          }
+        },
+        "2": {
+          "name": "Energy",
+          "levels": {
+            "0": "Low energy: you tire quickly; sleep, exercise and nature matter.",
+            "1": "Below-average energy: a lot of socialising can drain you; you need breaks.",
+            "2": "Enough energy: normal strength for an active life.",
+            "3": "Strong energy: you inspire others and give people strength.",
+            "4": "Very strong energy: channel it into movement, sport and creativity."
+          }
+        },
+        "3": {
+          "name": "Interest, cognition",
+          "levels": {
+            "0": "Little interest in exact sciences: the humanities are closer to you.",
+            "1": "A liking for order and neatness, but no special interest in exact sciences.",
+            "2": "Good aptitude for learning, technology and exact fields.",
+            "3": "A strong analytical mind: talent for science, technology and research.",
+            "4": "Very strong scientific interest: you sometimes focus on ideas more than on people."
+          }
+        },
+        "4": {
+          "name": "Health",
+          "levels": {
+            "0": "The body needs care: routine, movement and attention matter.",
+            "1": "Average stamina: keeps well with a good routine.",
+            "2": "Good stamina and physical strength.",
+            "3": "A very strong body: you handle physical load well.",
+            "4": "Large physical reserves and robustness."
+          }
+        },
+        "5": {
+          "name": "Logic, intuition",
+          "levels": {
+            "0": "Weak intuition: you learn much through trial and error.",
+            "1": "Logic is there, but hasty decisions can lead to mistakes: think before deciding.",
+            "2": "Strong logic and intuition: you sense events in advance.",
+            "3": "Very strong intuition: you read people and situations deeply.",
+            "4": "Foresight: you sometimes feel events before they happen."
+          }
+        },
+        "6": {
+          "name": "Work, skill",
+          "levels": {
+            "0": "Physical work is hard for you: mental and creative fields suit you better.",
+            "1": "Manual and physical work only when you want to: it can be learnt.",
+            "2": "Practical skill and diligence: suited to both physical and mental work.",
+            "3": "Hard-working: you love work and keep going.",
+            "4": "Very strong work drive: you cannot stay idle."
+          }
+        },
+        "7": {
+          "name": "Luck, talent",
+          "levels": {
+            "0": "Talent has to be developed through effort: success comes from work.",
+            "1": "A small talent and some luck: discover and develop it.",
+            "2": "Clear talent and luck: you can shine in one field.",
+            "3": "Great talent: a special gift in art, science or creative work.",
+            "4": "Very strong talent: directing it well matters especially."
+          }
+        },
+        "8": {
+          "name": "Duty, responsibility",
+          "levels": {
+            "0": "A weak sense of responsibility: learn to care for others.",
+            "1": "A sense of duty is there, but not always in front.",
+            "2": "Strong responsibility: care for parents and loved ones.",
+            "3": "Oriented to serving others: the spirit of a teacher, doctor or helper.",
+            "4": "A very strong sense of duty: do not forget yourself for others."
+          }
+        },
+        "9": {
+          "name": "Memory, mind",
+          "levels": {
+            "0": "Memory and attention need training.",
+            "1": "Average mind: learning takes effort.",
+            "2": "Good memory and ability to learn.",
+            "3": "A strong mind: you understand and remember quickly.",
+            "4": "A very strong mind: deep analysis, sometimes impatience with others."
+          }
+        }
+      },
+      "lines": {
+        "selfEsteem": {
+          "name": "Self-esteem (1-2-3)",
+          "low": "You underrate yourself; learn to see your successes.",
+          "mid": "Healthy self-esteem.",
+          "high": "High self-esteem; you sometimes listen too little to others."
+        },
+        "work": {
+          "name": "Material security (4-5-6)",
+          "low": "Earning takes more effort and planning.",
+          "mid": "You can provide for yourself materially.",
+          "high": "Strong material skill: you know how to earn and organise."
+        },
+        "talent": {
+          "name": "Talent (7-8-9)",
+          "low": "Talent has to be brought out through effort.",
+          "mid": "Clear talent: develop it.",
+          "high": "Great talent: making use of it is your task."
+        },
+        "purpose": {
+          "name": "Purpose (1-4-7)",
+          "low": "Setting goals and sticking to them can be hard.",
+          "mid": "You can move towards a goal.",
+          "high": "Very goal-driven: you do not stop until you get there."
+        },
+        "family": {
+          "name": "Family (2-5-8)",
+          "low": "Family life may not be your main priority.",
+          "mid": "You value family.",
+          "high": "Family matters a great deal; you will do much for loved ones."
+        },
+        "habits": {
+          "name": "Stability, habits (3-6-9)",
+          "low": "You like change; routine feels confining.",
+          "mid": "A balance between stability and change.",
+          "high": "Stability and traditions matter a lot to you."
+        },
+        "spirit": {
+          "name": "Spirituality (1-5-9)",
+          "low": "Spiritual questions are not in front yet.",
+          "mid": "There is spiritual search and faith.",
+          "high": "A strong spiritual direction and deep faith."
+        },
+        "temperament": {
+          "name": "Temperament (3-5-7)",
+          "low": "A calm, reserved temperament.",
+          "mid": "Average temperament: balanced emotions.",
+          "high": "A passionate temperament and strong attraction."
+        }
+      }
     }
   },
   "chinese": {
@@ -1982,6 +2412,267 @@
       "disseminating": "Waning gibbous",
       "lastQuarter": "Last quarter",
       "balsamic": "Waning crescent"
+    }
+  },
+  "other": {
+    "tzolkin": {
+      "intro": "The Maya Tzolkin is the 260-day sacred calendar: 13 tones and 20 day signs. The sign of your birth day shows the core energy of your character, the tone how it is expressed. The traditional Maya count (GMT correlation) is used.",
+      "signs": {
+        "imix": {
+          "name": "Crocodile (Imix)",
+          "meaning": "Beginnings, nurturing, creative force."
+        },
+        "ik": {
+          "name": "Wind (Ik)",
+          "meaning": "Breath, communication, spirit."
+        },
+        "akbal": {
+          "name": "Night (Akbal)",
+          "meaning": "The inner world, dreams, mystery."
+        },
+        "kan": {
+          "name": "Seed (Kan)",
+          "meaning": "Potential, growth, abundance."
+        },
+        "chicchan": {
+          "name": "Serpent (Chicchan)",
+          "meaning": "Life force, instinct, passion."
+        },
+        "cimi": {
+          "name": "Transition (Cimi)",
+          "meaning": "Change, letting go, renewal."
+        },
+        "manik": {
+          "name": "Deer (Manik)",
+          "meaning": "Healing, handwork, service."
+        },
+        "lamat": {
+          "name": "Star (Lamat)",
+          "meaning": "Beauty, harmony, abundance."
+        },
+        "muluc": {
+          "name": "Water (Muluc)",
+          "meaning": "Feelings, purification, flow."
+        },
+        "oc": {
+          "name": "Dog (Oc)",
+          "meaning": "Loyalty, love, friendship."
+        },
+        "chuen": {
+          "name": "Monkey (Chuen)",
+          "meaning": "Play, creativity, art."
+        },
+        "eb": {
+          "name": "Road (Eb)",
+          "meaning": "Life path, service, humanity."
+        },
+        "ben": {
+          "name": "Reed (Ben)",
+          "meaning": "Home, family, steadfastness."
+        },
+        "ix": {
+          "name": "Jaguar (Ix)",
+          "meaning": "Magic, intuition, hidden power."
+        },
+        "men": {
+          "name": "Eagle (Men)",
+          "meaning": "Vision, a high view, freedom."
+        },
+        "cib": {
+          "name": "Owl (Cib)",
+          "meaning": "Wisdom, ancestors, reflection."
+        },
+        "caban": {
+          "name": "Earth (Caban)",
+          "meaning": "Movement, synchronicity, nature."
+        },
+        "etznab": {
+          "name": "Flint (Etznab)",
+          "meaning": "Truth, clarity, decision."
+        },
+        "cauac": {
+          "name": "Storm (Cauac)",
+          "meaning": "Cleansing, energy, change."
+        },
+        "ahau": {
+          "name": "Sun (Ahau)",
+          "meaning": "Light, wholeness, mastery."
+        }
+      },
+      "tones": {
+        "1": "Beginning and unity: initiative.",
+        "2": "Duality: choice and balance.",
+        "3": "Movement: activity and connection.",
+        "4": "Form: stability and structure.",
+        "5": "Centre: power and gathering.",
+        "6": "Flow: balance and rhythm.",
+        "7": "Reflection: peak and focus.",
+        "8": "Harmony: justice and accord.",
+        "9": "Patience: endurance and expansion.",
+        "10": "Manifestation: intention made real.",
+        "11": "Change: release from the old.",
+        "12": "Understanding: sharing and cooperation.",
+        "13": "Ascension: completion and a new cycle."
+      }
+    },
+    "kua": {
+      "intro": "The Kua number (Feng Shui, “Eight Mansions” school) is calculated from the birth year (the Chinese year changes at Lichun, ~4 February) and gender. It shows your favourable directions: for a desk, a bed or a door.",
+      "groups": {
+        "east": "East group (1, 3, 4, 9)",
+        "west": "West group (2, 6, 7, 8)"
+      },
+      "kinds": {
+        "shengQi": {
+          "name": "Sheng Qi",
+          "meaning": "Success and wealth."
+        },
+        "tianYi": {
+          "name": "Tian Yi",
+          "meaning": "Health."
+        },
+        "yanNian": {
+          "name": "Yan Nian",
+          "meaning": "Relationships and family."
+        },
+        "fuWei": {
+          "name": "Fu Wei",
+          "meaning": "Personal growth and calm."
+        }
+      },
+      "directions": {
+        "N": "North",
+        "S": "South",
+        "E": "East",
+        "W": "West",
+        "NE": "North-east",
+        "NW": "North-west",
+        "SE": "South-east",
+        "SW": "South-west"
+      }
+    }
+  },
+  "details": {
+    "stars": {
+      "aldebaran": {
+        "name": "Aldebaran",
+        "meaning": "Honour, courage and success; to be kept through integrity."
+      },
+      "regulus": {
+        "name": "Regulus",
+        "meaning": "Leadership and fame, provided revenge is avoided."
+      },
+      "antares": {
+        "name": "Antares",
+        "meaning": "Passion and a fighting spirit; a risk of extremes."
+      },
+      "fomalhaut": {
+        "name": "Fomalhaut",
+        "meaning": "Ideals, inspiration and art; keeping purity."
+      },
+      "spica": {
+        "name": "Spica",
+        "meaning": "Talent, good fortune and protection; one of the most fortunate stars."
+      },
+      "algol": {
+        "name": "Algol",
+        "meaning": "Strong, intense energy; managing passion and anger."
+      },
+      "sirius": {
+        "name": "Sirius",
+        "meaning": "Brilliance, fame and honour; great ambition."
+      },
+      "arcturus": {
+        "name": "Arcturus",
+        "meaning": "Opening new paths, teaching and guiding."
+      },
+      "vega": {
+        "name": "Vega",
+        "meaning": "Art, music and charm; public favour."
+      },
+      "betelgeuse": {
+        "name": "Betelgeuse",
+        "meaning": "Success, fame and active energy."
+      },
+      "rigel": {
+        "name": "Rigel",
+        "meaning": "Knowledge, education and inventiveness."
+      },
+      "pollux": {
+        "name": "Pollux",
+        "meaning": "Courage and a competitive spirit; avoid harshness."
+      },
+      "procyon": {
+        "name": "Procyon",
+        "meaning": "Quick rise and activity; a lesson in persistence."
+      },
+      "capella": {
+        "name": "Capella",
+        "meaning": "Curiosity, learning and independence."
+      },
+      "alcyone": {
+        "name": "Alcyone (Pleiades)",
+        "meaning": "Vision, intuition and wisdom from sorrow."
+      },
+      "canopus": {
+        "name": "Canopus",
+        "meaning": "Travel, discovery and guidance."
+      },
+      "altair": {
+        "name": "Altair",
+        "meaning": "Boldness, ambition and swift action."
+      },
+      "deneb": {
+        "name": "Deneb",
+        "meaning": "Ideals, talent and lofty aims."
+      }
+    },
+    "lots": {
+      "eros": {
+        "name": "Lot of Eros",
+        "meaning": "Love, desire and what attracts you."
+      },
+      "necessity": {
+        "name": "Lot of Necessity",
+        "meaning": "Constraints, difficulties and areas of struggle."
+      },
+      "courage": {
+        "name": "Lot of Courage",
+        "meaning": "Courage, will and sometimes risk."
+      },
+      "victory": {
+        "name": "Lot of Victory",
+        "meaning": "Success, faith and opportunity."
+      },
+      "nemesis": {
+        "name": "Lot of Nemesis",
+        "meaning": "Hidden enemies, losses and karmic tests."
+      }
+    },
+    "harmonics": {
+      "5": "H5: creativity, skill and style of self-expression.",
+      "7": "H7: inspiration, mysticism and the power of imagination.",
+      "9": "H9: inner joy, spiritual maturity and marriage (related to the navamsa)."
+    }
+  },
+  "cartography": {
+    "intro": "Astrocartography shows where on Earth each planet was on the horizon (ASC/DSC) or the meridian (MC/IC) at your birth. Traditionally, near a planet’s line its themes are emphasised.",
+    "types": {
+      "mc": {
+        "name": "MC line",
+        "meaning": "Career, recognition and public role."
+      },
+      "ic": {
+        "name": "IC line",
+        "meaning": "Home, family and putting down roots."
+      },
+      "asc": {
+        "name": "ASC line",
+        "meaning": "Identity, energy and self-expression."
+      },
+      "dsc": {
+        "name": "DSC line",
+        "meaning": "Relationships and partnership."
+      }
     }
   }
 }

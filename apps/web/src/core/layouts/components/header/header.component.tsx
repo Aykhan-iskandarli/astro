@@ -15,6 +15,7 @@ const LANGS: ILang[] = ['az', 'en'];
 const NAV = [
     {to: Routes.default, key: 'nav_home', end: true},
     {to: Routes.natalChart, key: 'nav_chart', end: false},
+    {to: Routes.nameAnalysis, key: 'nav_name', end: false},
     {to: Routes.today, key: 'nav_today', end: false},
     {to: Routes.calendar, key: 'nav_calendar', end: false},
 ] as const;

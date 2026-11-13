@@ -164,3 +164,35 @@ def test_saturn_speed_bound():
     start = swe.julday(1801, 1, 1, 0)
     fastest = max(abs(swe.calc_ut(start + d, swe.SATURN, swe.FLG_SWIEPH | swe.FLG_SPEED)[0][3]) for d in range(0, 598 * 365, 3))
     assert fastest < _vedic.SATURN_SPEED_BOUND * 0.95
+
+
+from astra_engine.vedic import extras as _extras  # noqa: E402
+
+
+def test_ashtakavarga_bindu_totals():
+    totals = {t: sum(len(h) for h in table) for t, table in _extras.ASHTAKAVARGA.items()}
+    assert totals == {"sun": 48, "moon": 49, "mars": 39, "mercury": 54, "jupiter": 56, "venus": 52, "saturn": 39}
+    out = _vedic.calculate(BIRTHS["baku-1990"])["extras"]["ashtakavarga"]
+    assert out["total"] == 337 and all(sum(v) == totals[k] for k, v in out["bav"].items())
+    assert all(0 <= x <= 8 for v in out["bav"].values() for x in v)
+
+
+def test_divisional_rules():
+    # Aries 0-3° (odd sign): D10 Aries, D7 Aries, D3 Aries, D12 Aries
+    assert _extras.divisional(1.0) == {"d3": "aries", "d7": "aries", "d10": "aries", "d12": "aries"}
+    # Taurus 1° (even sign): D10 starts from the 9th (Capricorn), D7 from the 7th (Scorpio)
+    assert _extras.divisional(31.0)["d10"] == "capricorn" and _extras.divisional(31.0)["d7"] == "scorpio"
+    # Aries 25°: D3 third part -> 9th from Aries = Sagittarius; D12 part 25 / 2.5 = 10 -> Aries + 10 = Aquarius
+    assert _extras.divisional(25.0)["d3"] == "sagittarius" and _extras.divisional(25.0)["d12"] == "aquarius"
+
+
+def test_yogas_shape_and_kemadruma_exclusive():
+    for b in BIRTHS.values():
+        ids = [y["id"] for y in _vedic.calculate(b)["extras"]["yogas"]]
+        assert sum(x in ids for x in ("sunapha", "anapha", "durudhara", "kemadruma")) == 1
+        assert sum(x in ids for x in ("vesi", "vasi", "ubhayachari")) <= 1
+
+
+def test_ashtakavarga_needs_lagna():
+    b = BIRTHS["baku-1990"].model_copy(update={"time": None})
+    assert _vedic.calculate(b)["extras"]["ashtakavarga"] is None

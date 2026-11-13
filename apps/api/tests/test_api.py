@@ -207,3 +207,38 @@ def test_chinese_compatibility_endpoint():
 def test_vedic_has_sade_sati():
     body = client.post("/api/charts/vedic", json=BAKU).json()
     assert body["sadeSati"]["periods"]
+
+
+def test_name_analysis_endpoint():
+    r = client.post("/api/numerology/name", json={"fullName": "Aysel Məmmədova"})
+    assert r.status_code == 200 and r.json()["expression"]["value"] == 9 and r.json()["lifePath"] is None
+    r = client.post("/api/numerology/name", json={"fullName": "Aysel", "date": "1990-06-15"})
+    assert r.json()["lifePath"]["value"] == 4
+    assert client.post("/api/numerology/name", json={"fullName": ""}).status_code == 422
+
+
+def test_details_timing_endpoints():
+    d = client.post("/api/charts/details", json=BAKU).json()
+    assert {"declinations", "antiscia", "receptions", "dominants", "prenatalEclipses"} <= set(d)
+    t = client.post("/api/charts/timing", json={**BAKU, "on": "2026-11-13"}).json()
+    assert t["firdaria"]["periods"] and t["solarArc"]["arc"] > 30
+
+
+def test_guna_milan_other_and_day_endpoints():
+    r = client.post("/api/charts/guna-milan", json={"groom": BAKU, "bride": {**BAKU, "date": "1992-03-08"}})
+    assert r.status_code == 200 and r.json()["max"] == 36
+    o = client.post("/api/other", json={"date": "1990-06-15", "gender": "female"}).json()
+    assert o["kua"]["number"] == 8 and o["tarot"] == [4]
+    day = client.get("/api/sky/day", params={"date": "2026-11-13", "lat": 40.4, "lon": 49.9, "tz": "Asia/Baku"})
+    assert day.status_code == 200 and day.json()["dayRuler"] == "venus"
+    assert client.get("/api/sky/day", params={"date": "2026-11-13", "lat": 80, "lon": 0, "tz": "UTC"}).status_code == 422
+
+
+def test_davison_endpoint():
+    r = client.post("/api/charts/davison", json={"first": BAKU, "second": {**BAKU, "date": "1992-03-08"}})
+    assert r.status_code == 200 and r.json()["meta"]["davison"]["utc"].startswith("1991")
+
+
+def test_cartography_endpoint():
+    r = client.post("/api/charts/cartography", json=BAKU)
+    assert r.status_code == 200 and len(r.json()["lines"]) == 40

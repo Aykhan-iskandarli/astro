@@ -16,6 +16,7 @@ import ChartWheelComponent from '../chart-wheel/chart-wheel.component';
 import BirthFormComponent from '../birth-form/birth-form.component';
 import SavedChartsComponent from '../saved-charts/saved-charts.component';
 import CompositeViewComponent from '../composite-view/composite-view.component';
+import CompatSummaryComponent from '../compat-summary/compat-summary.component';
 import {useSynastryPanelStyles} from './synastry-panel.style';
 
 const ELEMENT_COLORS: Record<string, string> = {fire: colors.fire, earth: colors.earth, air: colors.air, water: colors.water};
@@ -27,10 +28,10 @@ const SynastryPanelComponent = () => {
     const birthInput = useStore('birthInput');
     const [partner, setPartner] = useState<IBirthInput | null>(null);
     const [hovered, setHovered] = useState<string | null>(null);
-    const [view, setView] = useState<'synastry' | 'composite'>('synastry');
+    const [view, setView] = useState<'synastry' | 'composite' | 'davison'>('synastry');
 
     const handleView = useCallback((v: string | number) => {
-        setView(v as 'synastry' | 'composite');
+        setView(v as 'synastry' | 'composite' | 'davison');
     }, []);
     const {mutate: createSynastry, data: result, isPending, reset} = useCreateSynastry();
 
@@ -113,8 +114,9 @@ const SynastryPanelComponent = () => {
                     <Segmented className={classes.viewSwitch} size='large' value={view} onChange={handleView} options={[
                         {value: 'synastry', label: translate('synastry_view')},
                         {value: 'composite', label: translate('composite_view')},
+                        {value: 'davison', label: translate('davison_view')},
                     ]}/>
-                    {view === 'composite' ? <CompositeViewComponent first={birthInput} second={partner}/> : (
+                    {view !== 'synastry' ? <CompositeViewComponent first={birthInput} second={partner} kind={view}/> : (
                     <>
                     <section className={classes.score} aria-labelledby='syn-score'>
                         <motion.div className={classes.scoreValue} initial={{scale: 0.6, opacity: 0}} animate={{scale: 1, opacity: 1}}
@@ -195,6 +197,9 @@ const SynastryPanelComponent = () => {
                     </section>
                     </>
                     )}
+                    {birthInput && partner ? (
+                        <CompatSummaryComponent first={birthInput} second={partner} firstName={firstName} secondName={secondName}/>
+                    ) : null}
                 </>
             )}
         </div>
