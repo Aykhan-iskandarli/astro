@@ -3,6 +3,7 @@
 //   2. Web dev server (Vite) in the foreground, proxying /api to the container
 // Ctrl+C stops the web server and the API container.
 import {spawn, spawnSync} from 'node:child_process';
+import {connect} from 'node:net';
 
 const API_HEALTH = 'http://localhost:8000/api/health';
 const WEB_URL = 'http://localhost:3000';
@@ -46,6 +47,18 @@ for (;;) {
     await new Promise((r) => setTimeout(r, 1000));
 }
 console.log(' ready');
+
+// A second `npm start` while one is already running: Vite would fail on the taken port (strictPort), and the
+// exit handler below would then stop the API that the first instance is still using. Leave everything running.
+const webRunning = await new Promise((resolve) => {
+    const socket = connect(3000, 'localhost');
+    socket.once('connect', () => { socket.destroy(); resolve(true); });
+    socket.once('error', () => resolve(false));
+});
+if (webRunning) {
+    console.log(`\n✔ The web app is already running → ${WEB_URL} (another \`npm start\`). API is up; nothing else to do.\n`);
+    process.exit(0);
+}
 
 console.log(`▶ Starting web app → ${WEB_URL}\n`);
 const web = spawn('npm', ['run', 'dev', '-w', 'apps/web'], {stdio: 'inherit', shell: isWin});
