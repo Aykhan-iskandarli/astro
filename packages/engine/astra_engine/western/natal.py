@@ -20,7 +20,7 @@ from .patterns import find_patterns
 from kerykeion import AstrologicalSubjectFactory  # noqa: E402  (after _backend)
 
 MODULE_ID = "western.natal"
-MODULE_VERSION = "0.1.0"
+MODULE_VERSION = "0.2.0"
 
 # (our id, kerykeion attribute, kind)
 POINTS = [
@@ -33,12 +33,22 @@ POINTS = [
     ("partOfFortune", "pars_fortunae", "point"),
 ]
 TIME_DEPENDENT = {"partOfFortune"}  # needs the Ascendant
+# Shown in their own table only: not on the wheel, not in aspects, patterns or balance.
+# Eris needs s136199s.se1 and fixed stars need sefstars.txt (not bundled). Kerykeion's Pars_Amoris/Pars_Fidei use
+# non-traditional formulas, so they are left out on purpose.
+EXTRA_POINTS = [
+    ("ceres", "ceres", "asteroid"), ("pallas", "pallas", "asteroid"), ("juno", "juno", "asteroid"),
+    ("vesta", "vesta", "asteroid"), ("vertex", "vertex", "point"), ("partOfSpirit", "pars_spiritus", "point"),
+    ("selena", "white_moon", "point"),  # Selena / White Moon: needs ephe/seorbel.txt (7-year mean motion)
+]
+EXTRA_TIME_DEPENDENT = {"vertex", "partOfSpirit"}
 ANGLES = [("asc", "ascendant"), ("mc", "medium_coeli"), ("dc", "descendant"), ("ic", "imum_coeli")]
 HOUSE_ATTRS = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth",
                "ninth", "tenth", "eleventh", "twelfth"]
 KERYKEION_ACTIVE = [
     "Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto",
     "True_North_Lunar_Node", "True_South_Lunar_Node", "Mean_Lilith", "Chiron", "Pars_Fortunae",
+    "Ceres", "Pallas", "Juno", "Vesta", "Vertex", "Pars_Spiritus", "White_Moon",
     "Ascendant", "Medium_Coeli", "Descendant", "Imum_Coeli",
 ]
 HOUSE_SYSTEM_NAMES = {"P": "placidus", "K": "koch", "W": "wholeSign", "A": "equal", "O": "porphyry"}
@@ -159,6 +169,17 @@ def calculate(birth: BirthData, house_system: HouseSystem = "P") -> dict:
            for pid, attr, _ in POINTS if not (time_unknown and pid in TIME_DEPENDENT)}
     angle_lons = None if time_unknown else {aid: getattr(subject, attr).abs_pos for aid, attr in ANGLES}
     body = assemble(raw, None if time_unknown else cusps, angle_lons)
+    extra = []
+    for pid, attr, kind in EXTRA_POINTS:
+        if time_unknown and pid in EXTRA_TIME_DEPENDENT:
+            continue
+        p = getattr(subject, attr, None)
+        if p is None:  # kerykeion could not calculate it (e.g. missing ephemeris file)
+            continue
+        extra.append({"id": pid, "kind": kind, **_position(p.abs_pos),
+                      "house": None if time_unknown else house_of(p.abs_pos, cusps),
+                      "retrograde": bool(p.retrograde) if kind == "asteroid" else False,
+                      "speed": round(p.speed, 6) if p.speed is not None and kind == "asteroid" else None})
 
     return {
         "module": MODULE_ID,
@@ -178,6 +199,7 @@ def calculate(birth: BirthData, house_system: HouseSystem = "P") -> dict:
             "julianDay": None if time_unknown else round(subject.julian_day, 6),
         },
         **body,
+        "extraPoints": extra,
         "moonRange": _moon_range(birth) if time_unknown else None,
     }
 

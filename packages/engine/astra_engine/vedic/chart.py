@@ -14,7 +14,7 @@ from .._backend import swe
 from ..common.birth import BirthData, resolve_utc
 
 MODULE_ID = "vedic.chart"
-MODULE_VERSION = "0.1.0"
+MODULE_VERSION = "0.2.0"
 
 SIGNS = ["aries", "taurus", "gemini", "cancer", "leo", "virgo",
          "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"]
@@ -152,6 +152,8 @@ def calculate(birth: BirthData, now: datetime | None = None, **_options) -> dict
     grahas.append(_point("ketu", (rahu["longitude"] + 180) % 360, None, lagna_sign))
 
     moon = next(g for g in grahas if g["id"] == "moon")
+    ref = now or datetime.now(timezone.utc)
+    today_jd = swe.julday(ref.year, ref.month, ref.day, 12)
     return {
         "module": MODULE_ID,
         "meta": {"engineVersion": MODULE_VERSION, "ayanamsaName": "lahiri", "node": "mean",
@@ -160,4 +162,87 @@ def calculate(birth: BirthData, now: datetime | None = None, **_options) -> dict
         "lagna": _point("lagna", lagna, None, lagna_sign) if lagna is not None else None,
         "grahas": grahas,
         "dasha": vimshottari(moon["longitude"], utc, now),
+        "sadeSati": sade_sati(SIGNS.index(moon["sign"]), jd, today_jd),
     }
+
+
+# --- Sade Sati -------------------------------------------------------------------------------------------------
+# The ~7.5 years while sidereal Saturn transits the sign before the natal Moon sign (rising), the Moon sign (peak)
+# and the sign after it (setting). A retrograde step back out of the window that lasts less than MERGE_GAP_DAYS
+# does not end the period.
+SADE_SATI_HORIZON_YEARS = 100
+SADE_SATI_MERGE_GAP_DAYS = 400
+SATURN_SPEED_BOUND = 0.17  # °/day, above Saturn's fastest geocentric motion (see tests)
+PHASES = {-1: "rising", 0: "peak", 1: "setting"}
+
+
+def _saturn_sid(jd: float) -> float:
+    return swe.calc_ut(jd, swe.SATURN, FLAGS)[0][0]
+
+
+def saturn_sign_changes(start_jd: float, end_jd: float) -> list[tuple[float, int]]:
+    """[(jd, new sign index)] for every sidereal sign change of Saturn, refined to well under a minute."""
+    changes = []
+    a = start_jd
+    sa = int(_saturn_sid(a) // 30)
+    while a < end_jd:
+        lon = _saturn_sid(a)
+        to_edge = min(lon % 30, 30 - lon % 30)
+        b = min(a + max(1.0, (to_edge - 0.2) / SATURN_SPEED_BOUND), end_jd)
+        sb = int(_saturn_sid(b) // 30)
+        if sb != sa:
+            lo, hi = a, b
+            for _ in range(40):
+                mid = (lo + hi) / 2
+                if int(_saturn_sid(mid) // 30) == sa:
+                    lo = mid
+                else:
+                    hi = mid
+            changes.append((hi, sb))
+        a, sa = b, sb
+    return changes
+
+
+def _iso_jd(jd: float) -> str:
+    y, m, d, h = swe.revjul(jd)
+    dt = datetime(y, m, d, tzinfo=timezone.utc) + timedelta(hours=h)
+    return dt.replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def sade_sati(moon_sign: int, birth_jd: float, today_jd: float) -> dict:
+    swe.set_sid_mode(swe.SIDM_LAHIRI)
+    end_jd = min(birth_jd + SADE_SATI_HORIZON_YEARS * 365.25, swe.julday(2999, 12, 1, 0))
+    # Timeline of (start jd, sign) segments
+    segments = [(birth_jd, int(_saturn_sid(birth_jd) // 30))]
+    segments += saturn_sign_changes(birth_jd, end_jd)
+    bounds = [s[0] for s in segments[1:]] + [end_jd]
+    window = []
+    for (start, sign), stop in zip(segments, bounds):
+        rel = (sign - moon_sign + 6) % 12 - 6  # -1, 0, 1 = rising, peak, setting
+        if rel in PHASES:
+            window.append({"start": start, "end": stop, "phase": PHASES[rel], "sign": SIGNS[sign]})
+    periods: list[list[dict]] = []
+    for seg in window:
+        if periods and seg["start"] - periods[-1][-1]["end"] < SADE_SATI_MERGE_GAP_DAYS:
+            periods[-1].append(seg)
+        else:
+            periods.append([seg])
+    out = []
+    for segs in periods:
+        start, end = segs[0]["start"], segs[-1]["end"]
+        # One entry per phase, from Saturn's first entry into that sign to its last exit. Retrograde loops make
+        # neighbouring phases overlap; that is how Sade Sati tables are usually given.
+        phases = []
+        for name in ("rising", "peak", "setting"):
+            mine = [seg for seg in segs if seg["phase"] == name]
+            if mine:
+                phases.append({"phase": name, "sign": mine[0]["sign"],
+                               "start": min(x["start"] for x in mine), "end": max(x["end"] for x in mine)})
+        out.append({
+            "start": _iso_jd(start), "end": _iso_jd(end),
+            "startClipped": start <= birth_jd, "endClipped": end >= end_jd,
+            "status": "past" if end < today_jd else ("now" if start <= today_jd else "future"),
+            "phases": [{"phase": p["phase"], "sign": p["sign"], "start": _iso_jd(p["start"]), "end": _iso_jd(p["end"])}
+                       for p in phases],
+        })
+    return {"moonSign": SIGNS[moon_sign], "horizonYears": SADE_SATI_HORIZON_YEARS, "periods": out}

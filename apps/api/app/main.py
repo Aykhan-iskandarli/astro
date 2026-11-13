@@ -12,6 +12,8 @@ from pydantic.alias_generators import to_camel
 
 from astra_engine import MODULES, SKY, BirthData
 from astra_engine._backend import LIBRARY_VERSION
+from astra_engine.chinese import bazi as bazi_module
+from astra_engine.numerology import core as numerology_core
 
 from .geo import load_index
 
@@ -94,6 +96,27 @@ class NumerologyRequest(BaseModel):
     date: Date
 
 
+class NumerologyPerson(BaseModel):
+    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
+
+    full_name: str | None = Field(default=None, max_length=120)
+    date: Date
+
+
+class NumerologyCompatibilityRequest(BaseModel):
+    first: NumerologyPerson
+    second: NumerologyPerson
+
+
+class ChineseCompatibilityRequest(BaseModel):
+    first: Date
+    second: Date
+
+
+class CyclesRequest(NatalRequest):
+    on: Date | None = None  # default: today
+
+
 class DestinyMatrixRequest(BaseModel):
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
 
@@ -160,6 +183,23 @@ def numerology(req: NumerologyRequest) -> dict:
     return MODULES["numerology.core"].calculate(birth, full_name=req.full_name)
 
 
+@app.post("/api/numerology/compatibility")
+def numerology_compatibility(req: NumerologyCompatibilityRequest) -> dict:
+    for p in (req.first, req.second):
+        try:
+            BirthData(date=p.date, latitude=0, longitude=0, timezone="UTC")
+        except ValidationError as e:
+            raise HTTPException(status_code=422, detail=[err["msg"] for err in e.errors()]) from e
+    return numerology_core.compatibility((req.first.date, req.first.full_name), (req.second.date, req.second.full_name))
+
+
+@app.post("/api/charts/cycles")
+def life_cycles(req: CyclesRequest) -> dict:
+    if req.on is not None and not 1800 <= req.on.year <= 2999:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.cycles"].calculate(_birth(req), on=req.on)
+
+
 @app.post("/api/charts/bazi")
 def bazi_chart(req: BaziRequest) -> dict:
     return MODULES["chinese.bazi"].calculate(_birth(req), gender=req.gender)
@@ -215,6 +255,29 @@ def sky_calendar(start: Date, end: Date) -> dict:
         return SKY["sky.calendar"].calculate(start, end)
     except ValueError as e:
         raise HTTPException(status_code=422, detail=[str(e)]) from e
+
+
+@app.get("/api/sky/moon")
+def sky_moon(start: Date, end: Date, lat: float = Query(ge=-90, le=90), lon: float = Query(ge=-180, le=180),
+             tz: str = Query(max_length=64)) -> dict:
+    """Moon calendar for a place: lunar days (from moonrise), Moon sign, phase, void-of-course periods."""
+    if not (1800 <= start.year and end.year <= 2999):
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    try:
+        BirthData(date=start, latitude=lat, longitude=lon, timezone=tz)  # validates the IANA zone
+        return SKY["sky.moon"].calculate(start, end, lat, lon, tz)
+    except ValidationError as e:
+        raise HTTPException(status_code=422, detail=[err["msg"] for err in e.errors()]) from e
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=[str(e)]) from e
+
+
+@app.post("/api/chinese/compatibility")
+def chinese_compatibility(req: ChineseCompatibilityRequest) -> dict:
+    for d in (req.first, req.second):
+        if not 1800 <= d.year <= 2999:
+            raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return bazi_module.compatibility(req.first, req.second)
 
 
 @app.post("/api/charts/timeline")

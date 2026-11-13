@@ -88,3 +88,35 @@ def test_time_unknown_has_three_pillars():
 
 def test_registered():
     assert MODULES["chinese.bazi"] is bazi
+
+
+from datetime import date as _date  # noqa: E402
+
+from astra_engine.chinese import bazi as _bazi  # noqa: E402
+
+
+@pytest.mark.parametrize("a,b,rel", [
+    ("rat", "ox", "sixHarmony"), ("tiger", "pig", "sixHarmony"), ("horse", "goat", "sixHarmony"),
+    ("monkey", "rat", "threeHarmony"), ("rat", "dragon", "threeHarmony"), ("tiger", "dog", "threeHarmony"),
+    ("rat", "horse", "clash"), ("tiger", "monkey", "clash"), ("snake", "pig", "clash"),
+    ("rat", "goat", "harm"), ("rabbit", "dragon", "harm"), ("rooster", "dog", "harm"),
+    ("dog", "dog", "same"), ("rat", "tiger", "neutral"),
+])
+def test_branch_relations(a, b, rel):
+    i, j = _bazi.ANIMALS.index(a), _bazi.ANIMALS.index(b)
+    assert _bazi.branch_relation(i, j) == rel
+    assert _bazi.branch_relation(j, i) == rel
+
+
+def test_relation_table_is_complete():
+    # every animal: 1 six-harmony partner, 2 three-harmony partners, 1 clash, 1 harm, 1 same, 6 neutral
+    for i in range(12):
+        rels = [_bazi.branch_relation(i, j) for j in range(12)]
+        assert [rels.count(r) for r in ("same", "sixHarmony", "threeHarmony", "clash", "harm", "neutral")] == [1, 1, 2, 1, 1, 6]
+
+
+def test_year_branch_changes_at_lichun():
+    assert _bazi.year_branch(_date(1990, 2, 3))["animal"] == "snake"   # before Lichun 1990 (4 Feb)
+    assert _bazi.year_branch(_date(1990, 2, 5))["animal"] == "horse"
+    out = _bazi.compatibility(_date(1990, 6, 15), _date(1988, 3, 2))
+    assert (out["first"]["animal"], out["second"]["animal"], out["relation"]) == ("horse", "dragon", "neutral")

@@ -24,7 +24,7 @@ test = ["pytest>=8"]
 include = ["astra_engine*"]
 
 [tool.setuptools.package-data]
-astra_engine = ["ephe/*.se1"]
+astra_engine = ["ephe/*.se1", "ephe/seorbel.txt"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

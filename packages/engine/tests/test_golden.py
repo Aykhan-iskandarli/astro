@@ -74,3 +74,48 @@ def test_part_of_fortune_sect_formula(birth):
 def test_night_birth_is_night():
     from conftest import BIRTHS
     assert natal.calculate(BIRTHS["newyork-1975-night"])["sect"] == "night"
+
+
+EXTRA_REF = {"ceres": swe.CERES, "pallas": swe.PALLAS, "juno": swe.JUNO, "vesta": swe.VESTA}
+
+
+def test_extra_points_match_reference(birth):
+    """Asteroids vs raw pyswisseph; Vertex vs swe.houses_ex; Part of Spirit vs its sect formula."""
+    _, b = birth
+    out = natal.calculate(b)
+    extra = {p["id"]: p for p in out["extraPoints"]}
+    assert set(extra) == {"ceres", "pallas", "juno", "vesta", "vertex", "partOfSpirit", "selena"}
+    utc = resolve_utc(b.date, b.time, b.timezone).utc
+    jd = swe.julday(utc.year, utc.month, utc.day, utc.hour + utc.minute / 60 + utc.second / 3600)
+    for pid, sid in EXTRA_REF.items():
+        xx, flag = swe.calc_ut(jd, sid, FLAGS)
+        assert flag & swe.FLG_SWIEPH, pid
+        assert diff(extra[pid]["longitude"], xx[0]) < TOL_DEG, pid
+        assert extra[pid]["retrograde"] == (xx[3] < 0), pid
+    _, ascmc = swe.houses_ex(jd, b.latitude, b.longitude, b"P")
+    assert diff(extra["vertex"]["longitude"], ascmc[3]) < TOL_DEG
+    sun = swe.calc_ut(jd, swe.SUN, FLAGS)[0][0]
+    moon = swe.calc_ut(jd, swe.MOON, FLAGS)[0][0]
+    asc = ascmc[0]
+    spirit = asc + sun - moon if out["sect"] == "day" else asc + moon - sun
+    assert diff(extra["partOfSpirit"]["longitude"], norm(spirit)) < TOL_DEG
+
+
+def test_extra_points_without_birth_time(birth):
+    _, b = birth
+    out = natal.calculate(b.model_copy(update={"time": None}))
+    ids = [p["id"] for p in out["extraPoints"]]
+    assert ids == ["ceres", "pallas", "juno", "vesta", "selena"]
+    assert all(p["house"] is None for p in out["extraPoints"])
+
+
+def test_selena_follows_its_definition(birth):
+    """Selena (White Moon) in seorbel.txt: longitude 242.2205555 + 5143.5418158 * T (Julian centuries from J2000),
+    i.e. exactly one turn in 7 years. Checked independently of Swiss Ephemeris."""
+    _, b = birth
+    selena = next(p for p in natal.calculate(b)["extraPoints"] if p["id"] == "selena")
+    utc = resolve_utc(b.date, b.time, b.timezone).utc
+    jd = swe.julday(utc.year, utc.month, utc.day, utc.hour + utc.minute / 60 + utc.second / 3600)
+    t = (jd + swe.deltat(jd) - 2451545.0) / 36525
+    assert diff(selena["longitude"], norm(242.2205555 + 5143.5418158 * t)) < TOL_DEG
+    assert selena["retrograde"] is False

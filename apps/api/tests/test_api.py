@@ -151,3 +151,59 @@ def test_timeline_endpoint():
     r = client.post("/api/charts/timeline", json=body)
     assert r.status_code == 200 and all("at" in e for e in r.json()["events"])
     assert client.post("/api/charts/timeline", json={**body, "days": 900}).status_code == 422
+
+
+BAKU = {"date": "1990-06-15", "time": "14:30", "latitude": 40.4093, "longitude": 49.8671, "timezone": "Asia/Baku"}
+
+
+def test_natal_extra_points():
+    body = client.post("/api/charts/natal", json=BAKU).json()
+    assert [p["id"] for p in body["extraPoints"]] == ["ceres", "pallas", "juno", "vesta", "vertex", "partOfSpirit", "selena"]
+    assert all(p["id"] not in {"ceres", "vertex"} for p in body["points"])  # kept off the wheel and aspects
+
+
+def test_cycles_endpoint():
+    r = client.post("/api/charts/cycles", json={**BAKU, "on": "2026-11-13"})
+    assert r.status_code == 200
+    body = r.json()
+    assert set(body["returns"]) == {"jupiter", "saturn", "chiron"}
+    assert body["profections"]["current"]["age"] == 36
+    assert client.post("/api/charts/cycles", json={**BAKU, "on": "1700-01-01"}).status_code == 422
+
+
+def test_cycles_near_the_end_of_the_ephemeris():
+    r = client.post("/api/charts/cycles", json={**BAKU, "date": "2950-01-01"})
+    assert r.status_code == 200
+
+
+def test_numerology_extensions_and_compatibility():
+    body = client.post("/api/numerology", json={"date": "1990-06-15", "fullName": "Aysel"}).json()
+    assert body["personalDay"]["value"] in range(1, 10)
+    assert len(body["pinnacles"]) == 4
+    r = client.post("/api/numerology/compatibility", json={"first": {"date": "1990-06-15", "fullName": "Aysel"},
+                                                           "second": {"date": "1988-03-02", "fullName": "Orxan"}})
+    assert r.status_code == 200
+    assert [p["kind"] for p in r.json()["pairs"]] == ["lifePath", "expression", "soulUrge"]
+    bad = {"first": {"date": "1700-01-01"}, "second": {"date": "1988-03-02"}}
+    assert client.post("/api/numerology/compatibility", json=bad).status_code == 422
+
+
+def test_moon_calendar_endpoint():
+    r = client.get("/api/sky/moon", params={"start": "2026-11-01", "end": "2026-11-08", "lat": 40.4, "lon": 49.9,
+                                             "tz": "Asia/Baku"})
+    assert r.status_code == 200
+    assert len(r.json()["days"]) == 7
+    bad = {"start": "2026-11-01", "end": "2026-11-08", "lat": 40.4, "lon": 49.9}
+    assert client.get("/api/sky/moon", params={**bad, "tz": "Nope/Nope"}).status_code == 422
+    assert client.get("/api/sky/moon", params={**bad, "tz": "Asia/Baku", "end": "2027-11-08"}).status_code == 422
+
+
+def test_chinese_compatibility_endpoint():
+    r = client.post("/api/chinese/compatibility", json={"first": "1990-06-15", "second": "1988-03-02"})
+    assert r.status_code == 200
+    assert (r.json()["first"]["animal"], r.json()["second"]["animal"]) == ("horse", "dragon")
+
+
+def test_vedic_has_sade_sati():
+    body = client.post("/api/charts/vedic", json=BAKU).json()
+    assert body["sadeSati"]["periods"]

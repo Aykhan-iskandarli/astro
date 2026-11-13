@@ -111,3 +111,56 @@ def test_time_unknown_has_no_lagna_or_houses():
 
 def test_registered():
     assert MODULES["vedic.chart"] is vedic
+
+
+from datetime import datetime as _dt, timezone as _tz  # noqa: E402
+
+from astra_engine.vedic import chart as _vedic  # noqa: E402
+
+
+def _jd_iso(iso):
+    d = _dt.fromisoformat(iso.replace("Z", "+00:00"))
+    return swe.julday(d.year, d.month, d.day, d.hour + d.minute / 60 + d.second / 3600)
+
+
+def test_sade_sati_periods(birth):
+    _, b = birth
+    out = _vedic.calculate(b, now=_dt(2026, 11, 13, tzinfo=_tz.utc))
+    ss = out["sadeSati"]
+    moon = next(g for g in out["grahas"] if g["id"] == "moon")
+    assert ss["moonSign"] == moon["sign"]
+    assert 2 <= len(ss["periods"]) <= 5  # Saturn's ~29.5-year cycle over 100 years
+    swe.set_sid_mode(swe.SIDM_LAHIRI)
+    flags = swe.FLG_SWIEPH | swe.FLG_SIDEREAL
+    moon_idx = _vedic.SIGNS.index(ss["moonSign"])
+    for p in ss["periods"]:
+        years = (_jd_iso(p["end"]) - _jd_iso(p["start"])) / 365.25
+        if not (p["startClipped"] or p["endClipped"]):
+            assert 6.5 < years < 9.5, p  # about 7.5 years
+            assert [x["phase"] for x in p["phases"]] == ["rising", "peak", "setting"]
+        for ph in p["phases"]:
+            # Saturn is in the phase sign just after its first entry and just before its last exit
+            rel = {"rising": -1, "peak": 0, "setting": 1}[ph["phase"]]
+            for jd in (_jd_iso(ph["start"]) + 0.01, _jd_iso(ph["end"]) - 0.01):
+                sat = int(swe.calc_ut(jd, swe.SATURN, flags)[0][0] // 30)
+                assert _vedic.SIGNS[sat] == ph["sign"]
+                assert (sat - moon_idx + 6) % 12 - 6 == rel
+        starts = [_jd_iso(x["start"]) for x in p["phases"]]
+        assert starts == sorted(starts)
+
+
+def test_saturn_sign_changes_are_exact():
+    swe.set_sid_mode(swe.SIDM_LAHIRI)
+    flags = swe.FLG_SWIEPH | swe.FLG_SIDEREAL
+    start = swe.julday(2000, 1, 1, 0)
+    changes = _vedic.saturn_sign_changes(start, start + 30 * 365.25)
+    assert len(changes) >= 12  # a full circuit, plus retrograde re-entries
+    for jd, sign in changes:
+        assert int(swe.calc_ut(jd + 0.001, swe.SATURN, flags)[0][0] // 30) == sign
+        assert int(swe.calc_ut(jd - 0.001, swe.SATURN, flags)[0][0] // 30) != sign
+
+
+def test_saturn_speed_bound():
+    start = swe.julday(1801, 1, 1, 0)
+    fastest = max(abs(swe.calc_ut(start + d, swe.SATURN, swe.FLG_SWIEPH | swe.FLG_SPEED)[0][3]) for d in range(0, 598 * 365, 3))
+    assert fastest < _vedic.SATURN_SPEED_BOUND * 0.95

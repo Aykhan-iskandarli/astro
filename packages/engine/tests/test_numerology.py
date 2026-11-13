@@ -73,3 +73,66 @@ def test_without_name_only_date_numbers():
 
 def test_registered():
     assert MODULES["numerology.core"] is num
+
+
+def test_pinnacles_and_challenges_worked_example():
+    # 15.06.1990: month 6, day 15 -> 6, year 1990 -> 19 -> 1; life path 4 (13/4)
+    # pinnacles 6+6=12->3, 6+1=7, 3+7=10->1, 6+1=7; challenges |6-6|=0, |6-1|=5, |0-5|=5, |6-1|=5
+    # first pinnacle ends at 36 - 4 = 32, then 33-41, 42-50, 51+
+    out = num.pinnacles(date(1990, 6, 15), 4, today=date(2026, 11, 13))
+    assert [p["value"] for p in out] == [3, 7, 1, 7]
+    assert [p["challenge"] for p in out] == [0, 5, 5, 5]
+    assert [(p["fromAge"], p["toAge"]) for p in out] == [(0, 32), (33, 41), (42, 50), (51, None)]
+    assert [p["current"] for p in out] == [False, True, False, False]  # age 36
+    assert (out[1]["fromYear"], out[1]["toYear"]) == (2023, 2031)
+
+
+def test_pinnacle_keeps_master_numbers():
+    # 11.09.1999: month 9, day 11 -> 2; first pinnacle 9 + 2 = 11 is kept as a master number
+    out = num.pinnacles(date(1999, 9, 11), 11, today=date(2026, 1, 1))
+    assert out[0]["value"] == 11 and out[0]["master"] is True
+    assert out[0]["toAge"] == 34  # master life path 11 counts as 2
+
+
+def test_personal_day():
+    # personal year 2026 for 15.06: 6 + 6 + 1 = 13 -> 4; November: 4 + 11 = 15 -> 6; 13th: 6 + 4 = 10 -> 1
+    out = num.calculate(birth(date(1990, 6, 15)), today=date(2026, 11, 13))
+    assert out["personalYear"]["value"] == 4
+    assert out["personalMonth"]["value"] == 6
+    assert out["personalDay"] == {"value": 1, "date": "2026-11-13"}
+    assert len(out["pinnacles"]) == 4
+
+
+@pytest.mark.parametrize("a,b,rel", [(1, 5, "harmonious"), (5, 7, "harmonious"), (2, 8, "harmonious"),
+                                     (3, 9, "harmonious"), (1, 2, "different"), (4, 9, "different"),
+                                     (6, 6, "same"), (11, 2, "same"), (22, 8, "harmonious"), (33, 3, "harmonious")])
+def test_relation(a, b, rel):
+    assert num.relation(a, b) == rel
+    assert num.relation(b, a) == rel
+
+
+def test_compatibility_with_and_without_names():
+    out = num.compatibility((date(1990, 6, 15), "Aysel Məmmədova"), (date(1988, 3, 2), None))
+    assert [p["kind"] for p in out["pairs"]] == ["lifePath"]  # second person has no name
+    out = num.compatibility((date(1990, 6, 15), "Aysel"), (date(1988, 3, 2), "Orxan"))
+    assert [p["kind"] for p in out["pairs"]] == ["lifePath", "expression", "soulUrge"]
+    lp = out["pairs"][0]
+    assert (lp["first"], lp["second"]) == (4, 4)  # 1988-03-02: 2 + 3 + (26 -> 8) = 13 -> 4
+    assert lp["relation"] == "same"
+
+
+def test_lo_shu_grid():
+    # 15.06.1990 -> digits 1 5 0 6 1 9 9 0 -> 1,5,6,1,9,9 (zeros ignored)
+    out = num.lo_shu(date(1990, 6, 15))
+    assert out["counts"] == {"1": 2, "2": 0, "3": 0, "4": 0, "5": 1, "6": 1, "7": 0, "8": 0, "9": 2}
+    assert out["missing"] == [2, 3, 4, 7, 8]
+    lines = {line["id"]: line for line in out["lines"]}
+    assert lines["will"]["complete"] is True          # 9 5 1
+    assert lines["emotional"]["complete"] is False    # 3 5 7: only 5
+    assert lines["thought"]["empty"] is True          # 4 3 8: none
+    assert sorted(n for row in out["grid"] for n in row) == list(range(1, 10))
+    assert all(sum(row) == 15 for row in out["grid"])  # the magic square
+
+
+def test_lo_shu_in_calculate():
+    assert "loShu" in num.calculate(birth(date(1990, 6, 15)), today=date(2026, 11, 13))

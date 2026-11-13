@@ -32,7 +32,13 @@ JSON-serialisable. Modules are registered in `astra_engine.MODULES` by id (`west
 | `western/dignities.py` | Domicile, exaltation, detriment, fall (traditional + modern rulers; exaltations for the seven classical planets only). |
 | `western/balance.py`, `western/lunar.py` | Element/modality/polarity counts over ten planets; eight-phase lunar cycle. |
 
-Conventions: tropical zodiac, true node, mean Lilith, sect-aware Part of Fortune.
+| `western/cycles.py` | Jupiter, Saturn and Chiron returns over 100 years (all exact passes: 1, 3 or 5 with retrograde loops; adaptive scan bounded by each body's maximum speed, bisection to under a second) and whole-sign annual profections with the traditional lord of the year. |
+| `sky/moon.py` | Moon calendar for a city: lunar days (day 1 at the exact New Moon, then each moonrise at the place), Moon sign changes, calendar phase (centred on the exact lunations) and void-of-course periods (last exact Ptolemaic aspect to Sun–Pluto until the next sign). Positions are sampled once on a 2-hour grid and refined by bisection. |
+| `vedic/chart.py` → `sadeSati` | Sidereal (Lahiri) Saturn over the sign before, of and after the natal Moon, for 100 years; each phase from first entry to last exit, periods merged across short retrograde exits. |
+
+Conventions: tropical zodiac, true node, mean Lilith, sect-aware Part of Fortune and Part of Spirit.
+`extraPoints` (Ceres, Pallas, Juno, Vesta, Vertex, Part of Spirit) are returned separately: they are not drawn on the
+wheel and take no part in aspects, patterns or balance.
 Time unknown → noon chart, no houses/angles/Part of Fortune, plus the Moon's range over the day.
 
 **Tests:** golden tests compare every point, ASC/MC/DC/IC and all cusps in four house systems against raw

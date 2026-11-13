@@ -50,8 +50,8 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ## Test
 
 ```bash
-docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (195)
-docker compose run --rm api pytest -q                           # API (16)
+docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (277)
+docker compose run --rm api pytest -q                           # API (25)
 npm test                                                        # content consistency + web unit tests
 npm run typecheck -w apps/web
 ```
@@ -71,6 +71,7 @@ for unknown paths — never to `dist/index.html` (that is the prerendered home p
 
 ```nginx
 root /srv/astra/dist;
+access_log off;   # the privacy policy promises no request logs (query strings can hold personal data)
 location /api/ { proxy_pass http://api:8000; }
 location /assets/ { add_header Cache-Control "public, max-age=31536000, immutable"; }
 location / {
@@ -91,6 +92,10 @@ location / {
 | `ASTRA_SOURCE_URL` | API | placeholder | Reported by `/api/health` |
 | `ASTRA_CORS_ORIGINS` | API | none | Comma-separated origins, only if the API is served cross-origin |
 | `ASTRA_CITIES_PATH` | API | `/data/cities.json` | Offline city index |
+| `VITE_PRIVACY_EMAIL` | web build | none (shown as "to be set") | Contact address in the privacy policy |
+| `VITE_HOSTING_LOCATION` | web build | none (shown as "to be set") | Hosting provider and country in the privacy policy |
+
+The privacy policy text is in `apps/web/src/pages/privacy-policy/privacy-policy.data.ts`; it describes what the code does and must be updated together with any change to data handling.
 
 Before launch, replace the `astra.example` domain in `apps/web/public/robots.txt`, `sitemap.xml` and
 `llms.txt`.

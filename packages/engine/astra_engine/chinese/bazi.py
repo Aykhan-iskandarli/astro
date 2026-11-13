@@ -112,3 +112,38 @@ def calculate(birth: BirthData, gender: str = "male", **_options) -> dict:
                  "start": {"years": yun.getStartYear(), "months": yun.getStartMonth(), "days": yun.getStartDay()},
                  "pillars": luck},
     }
+
+
+# Zodiac compatibility between two year branches (classical relations; index = position in BRANCHES)
+#   six harmonies (liu he): i + j = 1 (mod 12)      three harmonies (san he): same i mod 4
+#   six clashes (liu chong): |i - j| = 6            six harms (liu hai): i + j = 7 (mod 12)
+def branch_relation(i: int, j: int) -> str:
+    if i == j:
+        return "same"
+    if (i + j) % 12 == 1:
+        return "sixHarmony"
+    if i % 4 == j % 4:
+        return "threeHarmony"
+    if abs(i - j) == 6:
+        return "clash"
+    if (i + j) % 12 == 7:
+        return "harm"
+    return "neutral"
+
+
+def year_branch(d) -> dict:
+    """Year branch of a birth date. The year changes at Lichun (start of spring, around 4 February); with no birth
+    time the date is taken at noon China Standard Time, so a birth on the Lichun day itself may be ambiguous."""
+    ec = Solar.fromYmdHms(d.year, d.month, d.day, 12, 0, 0).getLunar().getEightChar()
+    return branch_info(ec.getYear()[1])
+
+
+def compatibility(first, second) -> dict:
+    a, b = year_branch(first), year_branch(second)
+    return {
+        "module": "chinese.compatibility",
+        "meta": {"engineVersion": MODULE_VERSION, "yearStart": "lichun"},
+        "first": {"date": first.isoformat(), **a},
+        "second": {"date": second.isoformat(), **b},
+        "relation": branch_relation(BRANCHES.index(a["id"]), BRANCHES.index(b["id"])),
+    }
