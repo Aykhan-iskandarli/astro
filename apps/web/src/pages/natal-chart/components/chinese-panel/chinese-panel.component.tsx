@@ -9,6 +9,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {ITranslationKey} from 'assets/lang/lang';
 import {useGetBazi} from '../../actions/natal-chart.query';
 import {IPillar} from '../../models/bazi.model';
+import ChineseAnnualComponent from '../chinese-annual/chinese-annual.component';
 import ChineseCompatComponent from '../chinese-compat/chinese-compat.component';
 import {useChinesePanelStyles} from './chinese-panel.style';
 
@@ -140,6 +141,11 @@ const ChinesePanelComponent = () => {
                         <p className={classes.note}>{translate('bazi_note')}</p>
                     </>
                 ) : null}
+            </section>
+
+            <section className={classes.section} aria-labelledby='cn-annual'>
+                <h3 id='cn-annual'>{translate('cn_annual_title')}</h3>
+                <ChineseAnnualComponent gender={gender}/>
             </section>
 
             <section className={classes.section} aria-labelledby='cn-ziwei'>

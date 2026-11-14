@@ -1760,6 +1760,50 @@
         "name": "Neutral",
         "meaning": "No special classical link: the relationship depends on personal effort and other factors."
       }
+    },
+    "annual": {
+      "tenGod": {
+        "friend": "A year of peers and self-reliance. You lean on your own strength and cooperation with equals goes well, but money can be shared or spread thin.",
+        "robWealth": "A year of rivalry and boldness. Competition grows and spending or risk-taking tends to rise; keep finances and joint ventures clear.",
+        "eatingGod": "A year of creativity and enjoyment. Ideas come easily, you express yourself freely and life feels more relaxed.",
+        "hurtingOfficer": "A year of sharp talent and questioning. You are brilliant and outspoken, restless with rules and bosses; choose your words with people in authority.",
+        "indirectWealth": "A year of active money and opportunity. Trade, side income and contacts move; gains come through initiative.",
+        "directWealth": "A year of steady income and order. Salary, savings and practical commitments stand out; relationships tend to settle.",
+        "sevenKillings": "A year of pressure and challenge. Demands and competition push you to act decisively; strong discipline turns it into achievement.",
+        "directOfficer": "A year of duty and recognition. Rules, responsibilities and career position come forward; a good time to earn trust.",
+        "indirectResource": "A year of unusual learning. Study, intuition and unconventional ideas or mentors; support arrives in unexpected ways.",
+        "directResource": "A year of support and learning. Teachers, protection, study and rest; a good year to build knowledge and credentials."
+      },
+      "relation": {
+        "year": {
+          "same": "Your own animal year: traditionally a time of renewal and larger changes in public life; take extra care and avoid rash moves.",
+          "sixHarmony": "Six harmony with your birth branch: support from family and the wider circle, and an easier public image.",
+          "threeHarmony": "The same trine as your birth animal: shared values and easy cooperation with people around you.",
+          "clash": "A clash with your birth animal (Tai Sui clash): traditionally a year of movement and disruption in public life, family or place; flexibility helps.",
+          "harm": "Harm to your birth animal: small frictions with relatives or the wider circle; be tactful."
+        },
+        "month": {
+          "same": "It repeats your career branch: work themes return and intensify.",
+          "sixHarmony": "It combines with your career branch: supportive colleagues and a smoother working environment.",
+          "threeHarmony": "It forms a trine with your career branch: teamwork and shared goals come easily.",
+          "clash": "It clashes with your career branch: change at work, a move or a new role is likely; stay flexible.",
+          "harm": "It harms your career branch: quiet friction at work or with a parent; avoid hidden resentment."
+        },
+        "day": {
+          "same": "It repeats your day branch: personal and relationship themes return and intensify; self-awareness matters.",
+          "sixHarmony": "It combines with your spouse palace: closeness and a favourable year for partnership.",
+          "threeHarmony": "It forms a trine with your spouse palace: ease and shared aims in close relationships.",
+          "clash": "It clashes with your spouse palace: tension or change in close relationships and your own routine; be patient.",
+          "harm": "It harms your spouse palace: small misunderstandings with a partner; speak openly."
+        },
+        "hour": {
+          "same": "It repeats your hour branch: plans, children and long-term themes return and intensify.",
+          "sixHarmony": "It combines with your hour branch: helpful for plans, children and long-term projects.",
+          "threeHarmony": "It forms a trine with your hour branch: long-term aims and creative work flow.",
+          "clash": "It clashes with your hour branch: plans, children or later-life matters may change course.",
+          "harm": "It harms your hour branch: small worries around plans or children."
+        }
+      }
     }
   },
   "placements": {

@@ -1760,6 +1760,50 @@
         "name": "Neytral",
         "meaning": "Xüsusi klassik əlaqə yoxdur: münasibət şəxsi səyə və digər amillərə bağlıdır."
       }
+    },
+    "annual": {
+      "tenGod": {
+        "friend": "Yoldaşlar və özünə güvən ili. Öz gücünüzə arxalanırsınız, bərabər adamlarla əməkdaşlıq yaxşı gedir; pul isə bölünə və ya səpələnə bilər.",
+        "robWealth": "Rəqabət və cəsarət ili. Yarış güclənir, xərc və risk meyli artır; maliyyəni və ortaq işləri aydın saxlamaq lazımdır.",
+        "eatingGod": "Yaradıcılıq və zövq ili. Fikirlər asan gəlir, özünüzü rahat ifadə edirsiniz, həyat daha sakit axır.",
+        "hurtingOfficer": "Kəskin istedad və sual vermə ili. Parlaq və açıq danışırsınız, qaydalara və rəislərə dözümsüzlük artır; səlahiyyət sahibləri ilə sözü seçin.",
+        "indirectWealth": "Hərəkətli pul və fürsət ili. Ticarət, əlavə gəlir və tanışlıq canlanır; qazanc təşəbbüslə gəlir.",
+        "directWealth": "Sabit gəlir və nizam ili. Maaş, yığım və real öhdəliklər önə çıxır; münasibətlər sabitləşməyə meyl edir.",
+        "sevenKillings": "Təzyiq və sınaq ili. Tələblər və rəqabət qətiyyətli hərəkətə sövq edir; güclü intizam bunu nailiyyətə çevirir.",
+        "directOfficer": "Vəzifə və tanınma ili. Qaydalar, məsuliyyət və karyera mövqeyi önə çıxır; etibar qazanmaq üçün yaxşı vaxtdır.",
+        "indirectResource": "Qeyri-adi öyrənmə ili. Öyrənmə, intuisiya və qeyri-ənənəvi fikirlər və ya müəllimlər; dəstək gözlənilməz yoldan gəlir.",
+        "directResource": "Dəstək və öyrənmə ili. Müəllimlər, himayə, təhsil və istirahət; bilik və ixtisas toplamaq üçün yaxşı ildir."
+      },
+      "relation": {
+        "year": {
+          "same": "Doğum heyvanınızın ili: ənənəyə görə yenilənmə və ictimai həyatda böyük dəyişikliklər vaxtıdır; ehtiyatlı olun, tələsik addım atmayın.",
+          "sixHarmony": "Doğum budağınızla altılı harmoniya: ailədən və yaxın dairədən dəstək, ictimai görünüşdə rahatlıq.",
+          "threeHarmony": "Doğum heyvanınızla eyni üçlük: ortaq dəyərlər və ətrafdakılarla asan əməkdaşlıq.",
+          "clash": "Doğum heyvanınızla toqquşma (Tai Sui toqquşması): ənənəyə görə ictimai həyatda, ailədə və ya məskəndə hərəkət və pozulma ili; çeviklik kömək edir.",
+          "harm": "Doğum heyvanınıza zərər: qohumlarla və ya geniş dairə ilə xırda sürtünmələr; nəzakətli olun."
+        },
+        "month": {
+          "same": "Karyera budağınızı təkrarlayır: iş mövzuları təkrarlanır və güclənir.",
+          "sixHarmony": "Karyera budağınızla birləşir: dəstəkləyici həmkarlar və daha hamar iş mühiti.",
+          "threeHarmony": "Karyera budağınızla üçlük yaradır: komanda işi və ortaq məqsədlər asan alınır.",
+          "clash": "Karyera budağınızla toqquşur: işdə dəyişiklik, köçmə və ya yeni rol ehtimalı var; çevik qalın.",
+          "harm": "Karyera budağınıza zərər verir: işdə və ya valideynlə səssiz sürtünmə; gizli küskünlükdən çəkinin."
+        },
+        "day": {
+          "same": "Gün budağınızı təkrarlayır: şəxsi və münasibət mövzuları təkrarlanır və güclənir; özünüzü tanımaq vacibdir.",
+          "sixHarmony": "Həyat yoldaşı sarayınızla birləşir: yaxınlıq və tərəfdaşlıq üçün əlverişli il.",
+          "threeHarmony": "Həyat yoldaşı sarayınızla üçlük yaradır: yaxın münasibətlərdə rahatlıq və ortaq məqsəd.",
+          "clash": "Həyat yoldaşı sarayınızla toqquşur: yaxın münasibətlərdə və öz gündəlik düzəninizdə gərginlik və ya dəyişiklik; səbirli olun.",
+          "harm": "Həyat yoldaşı sarayınıza zərər verir: tərəfdaşla xırda anlaşılmazlıqlar; açıq danışın."
+        },
+        "hour": {
+          "same": "Saat budağınızı təkrarlayır: planlar, uşaqlar və uzunmüddətli mövzular təkrarlanır və güclənir.",
+          "sixHarmony": "Saat budağınızla birləşir: planlar, uşaqlar və uzunmüddətli layihələr üçün faydalıdır.",
+          "threeHarmony": "Saat budağınızla üçlük yaradır: uzunmüddətli məqsədlər və yaradıcı iş asan gedir.",
+          "clash": "Saat budağınızla toqquşur: planlar, uşaqlar və ömrün sonrakı illəri ilə bağlı məsələlər istiqamətini dəyişə bilər.",
+          "harm": "Saat budağınıza zərər verir: planlar və ya uşaqlar ətrafında xırda narahatlıqlar."
+        }
+      }
     }
   },
   "placements": {

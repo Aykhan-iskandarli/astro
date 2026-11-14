@@ -147,3 +147,48 @@ def compatibility(first, second) -> dict:
         "second": {"date": second.isoformat(), **b},
         "relation": branch_relation(BRANCHES.index(a["id"]), BRANCHES.index(b["id"])),
     }
+
+
+PILLAR_KEYS = ("year", "month", "day", "hour")
+
+
+def annual(birth: BirthData, gender: str = "male", start_year: int = 2027, years: int = 5, **_options) -> dict:
+    """Annual pillars (liu nian) for several years, read against the birth chart.
+
+    The pillar of a Chinese year follows the stem-branch of the year that begins at Lichun (about 4 February), so
+    a Gregorian year is represented by the pillar that holds for most of it (taken on 1 July). For each year:
+    the ten god of the year stem against the day master, the luck pillar (da yun) running in that year, and the
+    classical relation of the year branch to the branch of each natal pillar (same, six harmony, three harmony,
+    clash, harm). A year whose branch equals the natal year branch is the "own animal" year (ben ming nian)."""
+    if not 1 <= years <= 30:
+        raise ValueError("years must be 1..30")
+    if not 1900 <= start_year <= 2090:
+        raise ValueError("start year must be 1900..2090")
+    natal = calculate(birth, gender)
+    dm = natal["dayMaster"]
+    luck = natal["luck"]["pillars"]
+    out = []
+    for y in range(start_year, start_year + years):
+        gz = Solar.fromYmdHms(y, 7, 1, 12, 0, 0).getLunar().getYearInGanZhiExact()
+        stem, branch = stem_info(gz[0]), branch_info(gz[1])
+        bi = BRANCHES.index(branch["id"])
+        relations = {}
+        for key in PILLAR_KEYS:
+            p = natal["pillars"][key]
+            if p:
+                rel = branch_relation(bi, BRANCHES.index(p["branch"]["id"]))
+                if rel != "neutral":
+                    relations[key] = rel
+        current = next((l for l in luck if l["startYear"] <= y <= l["endYear"]), None)
+        out.append({
+            "year": y, "ganZhi": gz, "stem": stem, "branch": branch,
+            "tenGod": ten_god(dm, stem),
+            "ownAnimal": branch["id"] == natal["pillars"]["year"]["branch"]["id"],
+            "relations": relations,
+            "luck": current,
+        })
+    return {"module": MODULE_ID + ".annual",
+            "meta": {"engineVersion": MODULE_VERSION, "library": "lunar_python 1.4.9 (MIT)",
+                     "yearRule": "Chinese year begins at Lichun; the pillar shown is the one in force on 1 July",
+                     "timeUnknown": natal["meta"]["timeUnknown"], "gender": gender},
+            "dayMaster": dm, "years": out}

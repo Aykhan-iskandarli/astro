@@ -7,6 +7,7 @@ export const API = {
     vedic: '/api/charts/vedic',
     numerology: '/api/numerology',
     bazi: '/api/charts/bazi',
+    baziYears: '/api/charts/bazi-years',
     returns: '/api/charts/returns',
     progressions: '/api/charts/progressions',
     composite: '/api/charts/composite',

@@ -517,6 +517,15 @@ export const en: Record<keyof typeof az, string> = {
     year_retro: 'Retrogrades',
     year_note: 'A forecast shows a general direction, not a verdict. Dates are calculated with the Swiss Ephemeris; the texts are drafts.',
 
+    // chinese annual pillars
+    cn_annual_title: 'Annual pillars (Liu Nian)',
+    cn_annual_intro: 'Each year has its own stem and branch. They are read against your day master and the branches of your four pillars. Select a year.',
+    cn_annual_own: 'your animal',
+    cn_annual_luck: 'Luck pillar: {pillar} ({god}), {from}–{to}',
+    cn_annual_quiet: 'This year forms no clash or harmony with your natal branches.',
+    cn_annual_error: 'Could not calculate the annual pillars.',
+    cn_annual_note: 'The Chinese year begins at Lichun (about 4 February); the pillar shown is the one in force for most of the Gregorian year. These are traditional readings, not predictions.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

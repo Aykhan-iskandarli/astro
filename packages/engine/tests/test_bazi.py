@@ -120,3 +120,32 @@ def test_year_branch_changes_at_lichun():
     assert _bazi.year_branch(_date(1990, 2, 5))["animal"] == "horse"
     out = _bazi.compatibility(_date(1990, 6, 15), _date(1988, 3, 2))
     assert (out["first"]["animal"], out["second"]["animal"], out["relation"]) == ("horse", "dragon", "neutral")
+
+
+def test_annual_pillars_match_known_years_and_relations():
+    b = BirthData(date=date(1990, 6, 15), time=time(14, 30), latitude=39.9, longitude=116.4, timezone="Asia/Shanghai")
+    out = bazi.annual(b, "male", 2026, 3)
+    # Known stem-branch years: 2026 Fire Horse, 2027 Fire Goat, 2028 Earth Monkey
+    assert [y["ganZhi"] for y in out["years"]] == ["丙午", "丁未", "戊申"]
+    # Day master is Xin (yin metal): yang fire controls it with opposite polarity (direct officer), yin fire with the same (seven killings)
+    assert [y["tenGod"] for y in out["years"]] == ["directOfficer", "sevenKillings", "directResource"]
+    by = {y["year"]: y for y in out["years"]}
+    assert by[2026]["ownAnimal"] and not by[2027]["ownAnimal"]  # born in a Horse year
+    assert by[2027]["relations"] == {"year": "sixHarmony", "month": "sixHarmony", "day": "threeHarmony", "hour": "same"}
+    assert by[2028]["relations"] == {"day": "harm"}
+    # the luck pillar of the year is the one whose range holds it
+    luck = bazi.calculate(b)["luck"]["pillars"]
+    for y in out["years"]:
+        assert y["luck"]["startYear"] <= y["year"] <= y["luck"]["endYear"]
+    assert by[2027]["luck"]["ganZhi"] == [p for p in luck if p["startYear"] == 2027][0]["ganZhi"]
+
+
+def test_annual_pillar_is_sixty_year_cycle_and_validates():
+    b = BirthData(date=date(1990, 6, 15), time=None, latitude=39.9, longitude=116.4, timezone="Asia/Shanghai")
+    out = bazi.annual(b, "female", 1990, 30)
+    assert out["years"][0]["ganZhi"] == "庚午" and "hour" not in out["years"][0]["relations"]
+    again = bazi.annual(b, "female", 2050, 1)["years"][0]["ganZhi"]
+    assert again == out["years"][0]["ganZhi"]  # 60 years later the pillar repeats
+    for bad in ({"years": 0}, {"years": 31}, {"start_year": 1800}):
+        with pytest.raises(ValueError):
+            bazi.annual(b, "male", **{"start_year": 2027, **bad})

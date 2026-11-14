@@ -269,3 +269,11 @@ def test_forecast_endpoints():
     assert client.post("/api/charts/lifeline", json={**BAKU, "years": 99}).status_code == 422
     assert client.post("/api/charts/retrogrades", json={**BAKU, "days": 5000}).status_code == 422
     assert client.post("/api/charts/year", json={**BAKU, "year": 1500}).status_code == 422
+
+
+def test_bazi_years_endpoint():
+    r = client.post("/api/charts/bazi-years", json={**BAKU, "startYear": 2026, "years": 3})
+    assert r.status_code == 200
+    assert [y["ganZhi"] for y in r.json()["years"]] == ["丙午", "丁未", "戊申"]
+    assert client.post("/api/charts/bazi-years", json={**BAKU, "years": 99}).status_code == 422
+    assert client.post("/api/charts/bazi-years", json={**BAKU, "startYear": 1800}).status_code == 422

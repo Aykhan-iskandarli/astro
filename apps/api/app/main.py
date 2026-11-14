@@ -68,6 +68,11 @@ class BaziRequest(NatalRequest):
     gender: Literal["male", "female"] = "male"
 
 
+class BaziYearsRequest(BaziRequest):
+    start_year: int = Field(default=2027, ge=1900, le=2090)
+    years: int = Field(default=5, ge=1, le=30)
+
+
 class PlaceInput(BaseModel):
     latitude: float = Field(ge=-90, le=90)
     longitude: float = Field(ge=-180, le=180)
@@ -258,6 +263,11 @@ def life_cycles(req: CyclesRequest) -> dict:
 @app.post("/api/charts/bazi")
 def bazi_chart(req: BaziRequest) -> dict:
     return MODULES["chinese.bazi"].calculate(_birth(req), gender=req.gender)
+
+
+@app.post("/api/charts/bazi-years")
+def bazi_years(req: BaziYearsRequest) -> dict:
+    return bazi_module.annual(_birth(req), gender=req.gender, start_year=req.start_year, years=req.years)
 
 
 @app.post("/api/charts/returns")

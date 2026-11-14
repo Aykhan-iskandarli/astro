@@ -515,6 +515,15 @@ export const az = {
     year_retro: 'Retroqradlar',
     year_note: 'Proqnoz ümumi istiqamət göstərir, qəti hökm vermir. Tarixlər Swiss Ephemeris ilə hesablanıb, mətnlər isə qaralamadır.',
 
+    // chinese annual pillars
+    cn_annual_title: 'İllik sütunlar (Liu Nian)',
+    cn_annual_intro: 'Hər ilin öz gövdə və budağı var. Onlar gün ağasına və dörd sütunun budaqlarına qarşı oxunur. İlin üzərinə basın.',
+    cn_annual_own: 'öz heyvanınız',
+    cn_annual_luck: 'Bəxt sütunu: {pillar} ({god}), {from}–{to}',
+    cn_annual_quiet: 'Bu il natal budaqlarınızla nə toqquşma, nə də harmoniya yaradır.',
+    cn_annual_error: 'İllik sütunları hesablamaq alınmadı.',
+    cn_annual_note: 'Çin ili Lichun-da (təxminən 4 fevral) başlayır; göstərilən sütun qreqorian ilinin əksər hissəsində qüvvədə olandır. Bunlar ənənəvi oxunuşlardır, qəti proqnoz deyil.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

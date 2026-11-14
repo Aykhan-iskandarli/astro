@@ -30,7 +30,7 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
   Sade Sati.
 - **Numerology**: core numbers, pinnacles and challenges, personal year/month/day, Lo Shu grid, Pythagoras
   square (psychomatrix), compatibility.
-- **Chinese**: BaZi four pillars and luck pillars, Zi Wei Dou Shu, Chinese zodiac compatibility.
+- **Chinese**: BaZi four pillars, luck pillars and annual pillars, Zi Wei Dou Shu, Chinese zodiac compatibility.
 - **Compatibility**: synastry with a score, composite and Davison charts, Guna Milan + Manglik, summary.
 - **Other systems**: Tarot birth cards, Maya Tzolkin, Kua number.
 - **Astrocartography**: planet lines on a world map (bundled Natural Earth outline, no external requests).
@@ -99,9 +99,9 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ## Test
 
 ```bash
-docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (357)
-docker compose run --rm api pytest -q                           # API (32)
-npm test                                                        # content consistency (1985 keys) + web unit tests (32)
+docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (359)
+docker compose run --rm api pytest -q                           # API (33)
+npm test                                                        # content consistency (2015 keys) + web unit tests (32)
 npm run typecheck -w apps/web
 ```
 
