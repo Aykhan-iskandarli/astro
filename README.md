@@ -48,6 +48,9 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - `/year-forecast`: one chosen year read in your chart: the annual profection(s), the solar return, the firdaria
   sub-periods, the busiest months (exact aspects from Jupiter-Pluto, month by month), the slow planets' houses,
   New/Full Moons and eclipses with their natal houses, and the year's retrogrades.
+- `/choose-day`: choosing days. For one month and a topic (career, money, relationships, communication and travel, home,
+  yourself) and an intention (begin or finish): the days and hours when the Moon is in the houses of that topic, outside
+  its void-of-course hours, with a fitting phase, and with Mercury retrograde flagged where it matters.
 - `/glossary`: plain-language explanations of the terms used on the site (also shown as tooltips).
 - `/profiles`: saved charts as people (relation, "my chart"), with a JSON backup and restore; the data stays in
   the browser.
@@ -99,9 +102,9 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ## Test
 
 ```bash
-docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (359)
-docker compose run --rm api pytest -q                           # API (33)
-npm test                                                        # content consistency (2015 keys) + web unit tests (32)
+docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (368)
+docker compose run --rm api pytest -q                           # API (34)
+npm test                                                        # content consistency (2015 keys) + web unit tests (42)
 npm run typecheck -w apps/web
 ```
 

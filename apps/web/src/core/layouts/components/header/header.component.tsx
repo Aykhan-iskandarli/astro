@@ -19,6 +19,7 @@ const NAV = [
     {to: Routes.today, key: 'nav_today', end: false},
     {to: Routes.calendar, key: 'nav_calendar', end: false},
     {to: Routes.yearForecast, key: 'nav_year', end: false},
+    {to: Routes.chooseDay, key: 'nav_choose', end: false},
     {to: Routes.profiles, key: 'nav_profiles', end: false},
 ] as const;
 

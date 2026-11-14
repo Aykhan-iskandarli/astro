@@ -7,6 +7,8 @@ from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
+
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from pydantic.alias_generators import to_camel
 
@@ -122,6 +124,12 @@ class MoonDayRequest(NatalRequest):
 class MoonLunationsRequest(NatalRequest):
     start: Date | None = None
     days: int = Field(default=90, ge=1, le=400)
+
+
+class ElectionalRequest(NatalRequest):
+    start: Date | None = None
+    days: int = Field(default=30, ge=1, le=62)
+    viewer_timezone: str = "UTC"  # the time zone in which the days are cut (not the birth time zone)
 
 
 class NumerologyRequest(BaseModel):
@@ -442,6 +450,19 @@ def personal_moon_lunations(req: MoonLunationsRequest) -> dict:
         raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
     return MODULES["western.personalmoon"].calculate(_birth(req), kind="lunations", start=req.start, days=req.days,
                                                      house_system=req.house_system)
+
+
+@app.post("/api/charts/electional")
+def electional_days(req: ElectionalRequest) -> dict:
+    """Day-by-day facts for choosing a day: Moon phase, natal house windows, void-of-course periods, retrogrades."""
+    if req.start is not None and not 1800 <= req.start.year <= 2998:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    try:
+        ZoneInfo(req.viewer_timezone)
+    except (ZoneInfoNotFoundError, ValueError) as e:
+        raise HTTPException(status_code=422, detail=["unknown time zone"]) from e
+    return MODULES["western.electional"].calculate(_birth(req), start=req.start, days=req.days,
+                                                   timezone_name=req.viewer_timezone, house_system=req.house_system)
 
 
 @app.post("/api/charts/astrocartography")

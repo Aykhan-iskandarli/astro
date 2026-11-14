@@ -6,6 +6,7 @@ export enum Routes {
     nameAnalysis = '/name-analysis',
     glossary = '/glossary',
     yearForecast = '/year-forecast',
+    chooseDay = '/choose-day',
     profiles = '/profiles',
     privacyPolicy = '/privacy-policy',
 }

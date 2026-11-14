@@ -277,3 +277,10 @@ def test_bazi_years_endpoint():
     assert [y["ganZhi"] for y in r.json()["years"]] == ["丙午", "丁未", "戊申"]
     assert client.post("/api/charts/bazi-years", json={**BAKU, "years": 99}).status_code == 422
     assert client.post("/api/charts/bazi-years", json={**BAKU, "startYear": 1800}).status_code == 422
+
+
+def test_electional_endpoint():
+    r = client.post("/api/charts/electional", json={**BAKU, "start": "2027-03-01", "days": 7, "viewerTimezone": "Asia/Baku"})
+    assert r.status_code == 200 and len(r.json()["days"]) == 7 and r.json()["days"][0]["houses"]
+    assert client.post("/api/charts/electional", json={**BAKU, "days": 99}).status_code == 422
+    assert client.post("/api/charts/electional", json={**BAKU, "viewerTimezone": "Mars/Base"}).status_code == 422

@@ -1,7 +1,7 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
 import {
-    getAstrocartography, getBazi, getBaziYears, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
+    getAstrocartography, getElectional, getBazi, getBaziYears, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
     getLifeline, getRetrogrades, getYear, IAcgProbe, INumerologyPerson, IReturnParams,
 } from './natal-chart.service';
 import CyclesModel from '../models/cycles.model';
@@ -15,6 +15,7 @@ import TransitsModel from '../models/transits.model';
 import VedicModel from '../models/vedic.model';
 import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
+import ElectionalModel from '../models/electional.model';
 import BaziYearsModel from '../models/bazi-years.model';
 import NatalChartModel from '../models/natal-chart.model';
 import {ProgressionModel, ReturnModel} from '../models/forecast.model';
@@ -93,6 +94,23 @@ export const useGetBaziYears = (input: IBirthInput | null, gender: 'male' | 'fem
         queryKey: ['bazi-years', input, gender, startYear, years],
         queryFn: () => {
             return getBaziYears(input!, gender, startYear, years);
+        },
+        enabled: !!input,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetElectional = (input: IBirthInput | null, start: string, days: number, viewerTimezone: string) => {
+    return useQuery<ElectionalModel, Error>({
+        queryKey: ['electional', input, start, days, viewerTimezone],
+        queryFn: () => {
+            return getElectional(input!, start, days, viewerTimezone);
         },
         enabled: !!input,
         placeholderData: keepPreviousData,
