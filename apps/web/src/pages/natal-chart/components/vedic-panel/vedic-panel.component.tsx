@@ -107,7 +107,7 @@ const VedicPanelComponent = () => {
                 </p>
             </header>
 
-            {vedic.timeUnknown ? <Alert type='info' showIcon message={translate('vedic_time_unknown')}/> : null}
+            {vedic.timeUnknown ? <Alert type='info' showIcon title={translate('vedic_time_unknown')}/> : null}
 
             <div className={classes.charts}>
                 <SouthIndianChartComponent title={translate('vedic_d1')} placements={d1} lagnaSign={vedic.lagna?.sign ?? null}

@@ -77,7 +77,7 @@ const NumerologyPanelComponent = () => {
             {!data ? <LoaderComponent/> : (
                 <div className={classNames(classes.body, {[classes.busy]: isFetching})}>
                     {data.ignored.length ? (
-                        <Alert type='warning' showIcon message={translate('numerology_ignored', {chars: data.ignored.join(' ')})}/>
+                        <Alert type='warning' showIcon title={translate('numerology_ignored', {chars: data.ignored.join(' ')})}/>
                     ) : null}
                     <div className={classes.grid}>
                         {ORDER.map((k, i) => card(k, data.numbers[k], i))}

@@ -24,7 +24,7 @@ const persistConfig = {
     key: 'astra',
     storage,
     // Privacy: birthInput is deliberately NOT persisted. savedCharts only fills on an explicit "save".
-    whitelist: ['locale', 'savedCharts'],
+    whitelist: ['locale', 'savedCharts', 'primaryChartId'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -7,16 +7,17 @@ import {useStore} from 'store/store.config';
 import {setAmbientSound, setLocale} from 'store/store.reducer';
 import {Routes} from 'router/routes';
 import {startAmbient, stopAmbient} from 'core/helpers/ambient-sound';
-import useLocalization from 'assets/lang';
+import useLocalization, {ensureLocale} from 'assets/lang';
 import {ILang} from 'assets/lang/lang';
 import {useHeaderStyles} from './header.style';
 
-const LANGS: ILang[] = ['az', 'en'];
+const LANGS: ILang[] = ['az', 'en', 'ru'];
 const NAV = [
     {to: Routes.default, key: 'nav_home', end: true},
     {to: Routes.natalChart, key: 'nav_chart', end: false},
     {to: Routes.today, key: 'nav_today', end: false},
     {to: Routes.calendar, key: 'nav_calendar', end: false},
+    {to: Routes.profiles, key: 'nav_profiles', end: false},
 ] as const;
 
 const HeaderComponent = () => {
@@ -51,8 +52,10 @@ const HeaderComponent = () => {
         setMenuOpen(false);
     }, []);
 
-    const handleLocale = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-        dispatch(setLocale(e.currentTarget.dataset.lang as ILang));
+    const handleLocale = useCallback(async (e: React.MouseEvent<HTMLButtonElement>) => {
+        const lang = e.currentTarget.dataset.lang as ILang;
+        await ensureLocale(lang).catch(() => undefined);
+        dispatch(setLocale(lang));
     }, [dispatch]);
 
     const handleSound = useCallback(() => {

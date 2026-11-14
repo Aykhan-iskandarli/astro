@@ -11,6 +11,8 @@ export const API = {
     progressions: '/api/charts/progressions',
     composite: '/api/charts/composite',
     timeline: '/api/charts/timeline',
+    astrocartography: '/api/charts/astrocartography',
+    techniques: '/api/charts/techniques',
     sky: '/api/sky',
     skyCalendar: '/api/sky/calendar',
 };

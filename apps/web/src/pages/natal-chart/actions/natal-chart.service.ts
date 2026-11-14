@@ -11,6 +11,8 @@ import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
 import {ProgressionModel, ReturnModel} from '../models/forecast.model';
 import TimelineModel from '../models/timeline.model';
+import AstrocartographyModel from '../models/astrocartography.model';
+import TimeLordsModel from '../models/time-lords.model';
 
 export const getPlaces = (query: string): Promise<PlaceModel[]> => {
     return axiosPublic.get(API.places, {params: {q: query, limit: 8}})
@@ -100,5 +102,26 @@ export const getTimeline = (input: IBirthInput, start: string, days: number): Pr
     return axiosPublic.post(API.timeline, {...input, start, days})
         .then((res) => {
             return new TimelineModel(res.data);
+        });
+};
+
+export interface IAcgProbe {
+    latitude: number;
+    longitude: number;
+    timezone: string;
+    name: string;
+}
+
+export const getAstrocartography = (input: IBirthInput, probe: IAcgProbe | null): Promise<AstrocartographyModel> => {
+    return axiosPublic.post(API.astrocartography, {...input, probe})
+        .then((res) => {
+            return new AstrocartographyModel(res.data);
+        });
+};
+
+export const getTimeLords = (input: IBirthInput, on: string): Promise<TimeLordsModel> => {
+    return axiosPublic.post(API.techniques, {...input, on})
+        .then((res) => {
+            return new TimeLordsModel(res.data);
         });
 };

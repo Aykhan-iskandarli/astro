@@ -5,6 +5,7 @@ import {ToastContainer} from 'react-toastify';
 import {ConfigProvider} from 'antd';
 import azAZ from 'antd/locale/az_AZ';
 import enUS from 'antd/locale/en_US';
+import ruRU from 'antd/locale/ru_RU';
 import {MotionConfig} from 'framer-motion';
 import {useStore} from './store/store.config';
 import router from './router/router';
@@ -18,6 +19,7 @@ const ReactQueryDevtools = import.meta.env.DEV
     : () => null;
 
 const queryClient = new QueryClient();
+const ANTD_LOCALES = {az: azAZ, en: enUS, ru: ruRU};
 
 function App() {
     const loader = useStore('loader');
@@ -30,7 +32,7 @@ function App() {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <ConfigProvider theme={themeConfig} locale={locale === 'az' ? azAZ : enUS}>
+            <ConfigProvider theme={themeConfig} locale={ANTD_LOCALES[locale] ?? azAZ}>
                 {/* reducedMotion='user': every framer-motion animation respects prefers-reduced-motion */}
                 <MotionConfig reducedMotion='user'>
                     <div className='App'>

@@ -24,7 +24,7 @@ const SeoComponent = ({titleKey, descriptionKey, path, image, noIndex, jsonLd}: 
             <meta property='og:description' content={description}/>
             <meta property='og:url' content={url}/>
             <meta property='og:image' content={ogImage}/>
-            <meta property='og:locale' content={locale === 'az' ? 'az_AZ' : 'en_US'}/>
+            <meta property='og:locale' content={{az: 'az_AZ', en: 'en_US', ru: 'ru_RU'}[locale] ?? 'az_AZ'}/>
             <meta name='twitter:card' content='summary_large_image'/>
 
             {jsonLd ? <script type='application/ld+json'>{JSON.stringify(jsonLd)}</script> : null}

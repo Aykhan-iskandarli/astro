@@ -2,7 +2,7 @@
 import {readFileSync} from 'node:fs';
 
 const load = (lang) => JSON.parse(readFileSync(new URL(`../src/${lang}.json`, import.meta.url), 'utf8'));
-const langs = {az: load('az'), en: load('en')};
+const langs = {az: load('az'), en: load('en'), ru: load('ru')};
 
 const flatten = (obj, prefix = '') => Object.entries(obj).flatMap(([k, v]) =>
     v && typeof v === 'object' ? flatten(v, `${prefix}${k}.`) : [[`${prefix}${k}`, v]]);

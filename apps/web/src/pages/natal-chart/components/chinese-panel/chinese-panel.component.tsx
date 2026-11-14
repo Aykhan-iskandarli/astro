@@ -148,7 +148,7 @@ const ChinesePanelComponent = () => {
                     <Suspense fallback={<LoaderComponent/>}>
                         <ZiweiChartComponent date={birthInput.date} time={birthInput.time} gender={gender} age={age}/>
                     </Suspense>
-                ) : <Alert type='info' showIcon message={translate('ziwei_time_required')}/>}
+                ) : <Alert type='info' showIcon title={translate('ziwei_time_required')}/>}
                 <p className={classes.note}>{translate('ziwei_note')}</p>
             </section>
         </div>

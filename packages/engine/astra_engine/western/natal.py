@@ -11,8 +11,10 @@ from datetime import datetime, time
 from .._backend import LIBRARY_VERSION, swe
 from ..common.birth import BirthData, HouseSystem, resolve_utc
 from ..common.zodiac import house_of, norm, sign_of, split_degree
+from ..sky.common import jd_of
 from .aspects import AspectPoint, find_aspects
 from .balance import balance
+from . import extra_points
 from .dignities import dignity_of, rulers_of
 from .lunar import lunar_phase
 from .patterns import find_patterns
@@ -159,6 +161,11 @@ def calculate(birth: BirthData, house_system: HouseSystem = "P") -> dict:
            for pid, attr, _ in POINTS if not (time_unknown and pid in TIME_DEPENDENT)}
     angle_lons = None if time_unknown else {aid: getattr(subject, attr).abs_pos for aid, attr in ANGLES}
     body = assemble(raw, None if time_unknown else cusps, angle_lons)
+    # Extra points; with an unknown time the noon positions are used and the fast Moon is left out of
+    # the fixed-star check (it moves ~13° a day)
+    star_points = [p for p in body["points"] if not (time_unknown and p["id"] == "moon")]
+    extras = extra_points.calculate(jd_of(utc), birth.latitude, birth.longitude, body["houses"] and cusps,
+                                    star_points, body["angles"])
 
     return {
         "module": MODULE_ID,
@@ -179,6 +186,7 @@ def calculate(birth: BirthData, house_system: HouseSystem = "P") -> dict:
         },
         **body,
         "moonRange": _moon_range(birth) if time_unknown else None,
+        "extras": extras,
     }
 
 

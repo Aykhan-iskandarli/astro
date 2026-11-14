@@ -1,8 +1,11 @@
 import {useCallback, useRef, useState} from 'react';
 import {Alert, Button} from 'antd';
 import {motion} from 'framer-motion';
-import {formatDegree} from 'core/helpers/astro';
+import {formatDegree, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
+import {downloadBlob, shareCardPng, shareOrDownload, svgToPng} from 'core/helpers/export-image';
+import {errorToast} from 'core/shared/toast/toast';
 import LoaderComponent from 'core/shared/loader/loader.component';
+import TermComponent from 'core/shared/term/term.component';
 import useLocalization, {useContent} from 'assets/lang';
 import ChartWheelComponent from '../chart-wheel/chart-wheel.component';
 import InterpretationPanelComponent from '../interpretation-panel/interpretation-panel.component';
@@ -20,6 +23,8 @@ import ChinesePanelComponent from '../chinese-panel/chinese-panel.component';
 import ForecastPanelComponent from '../forecast-panel/forecast-panel.component';
 import TabStripComponent from '../tab-strip/tab-strip.component';
 import BigThreeComponent from '../big-three/big-three.component';
+import ExtraPointsComponent from '../extra-points/extra-points.component';
+import AstrocartographyPanelComponent from '../astrocartography-panel/astrocartography-panel.component';
 import {useChartResultStyles} from './chart-result.style';
 import {IChartResult} from './chart-result';
 
@@ -28,6 +33,7 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
     const content = useContent();
     const classes = useChartResultStyles();
     const [hovered, setHovered] = useState<string | null>(null);
+    const [exporting, setExporting] = useState<'png' | 'card' | null>(null);
     const [selected, setSelected] = useState<string>('sun');
     const [tab, setTab] = useState<string>('natal');
     // Panels render on first visit and stay mounted (keeps transit dates, partner input, etc.)
@@ -61,6 +67,50 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
         stageRef.current?.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
     }, []);
 
+    const fileBase = (chart.name || 'astra-chart').replace(/[^\p{L}\p{N}-]+/gu, '-').toLowerCase();
+    const wheelSvg = () => stageRef.current?.querySelector('svg') as SVGSVGElement | null;
+
+    const handleDownloadPng = useCallback(async () => {
+        const svg = wheelSvg();
+        if (!svg) return;
+        setExporting('png');
+        try {
+            downloadBlob(await svgToPng(svg), `${fileBase}.png`);
+        } catch (e) {
+            console.error('PNG export failed', e);
+            errorToast(translate('export_failed'));
+        } finally {
+            setExporting(null);
+        }
+    }, [fileBase, translate]);
+
+    const handleShare = useCallback(async () => {
+        const svg = wheelSvg();
+        if (!svg) return;
+        setExporting('card');
+        try {
+            const find = (id: string) => chart.points.find((p) => p.id === id) ?? chart.angles.find((a) => a.id === id);
+            const rows = (chart.timeUnknown ? ['sun', 'moon'] : ['sun', 'moon', 'asc']).map((id) => {
+                const p = find(id);
+                return {
+                    glyph: `${glyph(POINT_GLYPHS[id])} ${glyph(SIGN_GLYPHS[p?.sign ?? ''])}`,
+                    label: content.points[id as keyof typeof content.points]?.name ?? id,
+                    value: content.signs[p?.sign as keyof typeof content.signs]?.name ?? '',
+                };
+            });
+            const subtitle = [chart.date?.split('-').reverse().join('.'), chart.localDatetime?.slice(11, 16), chart.place]
+                .filter(Boolean).join(' · ');
+            const blob = await shareCardPng({wheel: svg, title: chart.name || translate('unnamed_chart'), subtitle, rows,
+                footer: translate('share_footer')});
+            await shareOrDownload(blob, `${fileBase}-card.png`, translate('site_name'));
+        } catch (e) {
+            console.error('Share card failed', e);
+            errorToast(translate('export_failed'));
+        } finally {
+            setExporting(null);
+        }
+    }, [chart, content, translate, fileBase]);
+
     const handleSelect = useCallback((id: string) => {
         setSelected(id);
     }, []);
@@ -92,13 +142,13 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
 
                             {chart.timeUnknown ? null : (
                                 <section className={classes.section} aria-labelledby='sec-houses'>
-                                    <h2 id='sec-houses'>{translate('section_houses')}</h2>
+                                    <h2 id='sec-houses'><TermComponent id='house'>{translate('section_houses')}</TermComponent></h2>
                                     <HousesTableComponent chart={chart}/>
                                 </section>
                             )}
 
                             <section className={classes.section} aria-labelledby='sec-aspects'>
-                                <h2 id='sec-aspects'>{translate('section_aspects')}</h2>
+                                <h2 id='sec-aspects'><TermComponent id='aspect'>{translate('section_aspects')}</TermComponent></h2>
                                 <AspectGridComponent chart={chart} activeId={activeId} onActivate={handleActivate}/>
                             </section>
 
@@ -106,6 +156,13 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                                 <h2 id='sec-patterns'>{translate('section_patterns')}</h2>
                                 <PatternsListComponent patterns={chart.patterns}/>
                             </section>
+
+                            {chart.extras ? (
+                                <section className={classes.section} aria-labelledby='sec-extras'>
+                                    <h2 id='sec-extras'>{translate('section_extras')}</h2>
+                                    <ExtraPointsComponent extras={chart.extras}/>
+                                </section>
+                            ) : null}
 
                             {chart.balance ? (
                                 <section className={classes.section} aria-labelledby='sec-balance'>
@@ -117,9 +174,10 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                     )},
                     {key: 'destiny', label: translate('tab_destiny'), children: matrix
                         ? <DestinyMatrixComponent matrix={matrix}/>
-                        : matrixFailed ? <Alert type='warning' showIcon message={translate('destiny_error')}/> : <LoaderComponent/>},
+                        : matrixFailed ? <Alert type='warning' showIcon title={translate('destiny_error')}/> : <LoaderComponent/>},
                     {key: 'transits', label: translate('tab_transits'), children: <TransitsPanelComponent chart={chart}/>},
                     {key: 'forecast', label: translate('tab_forecast'), children: <ForecastPanelComponent chart={chart}/>},
+                    {key: 'acg', label: translate('tab_acg'), children: <AstrocartographyPanelComponent/>},
                     {key: 'vedic', label: translate('tab_vedic'), children: <VedicPanelComponent/>},
                     {key: 'numerology', label: translate('tab_numerology'), children: <NumerologyPanelComponent/>},
                     {key: 'chinese', label: translate('tab_chinese'), children: <ChinesePanelComponent/>},
@@ -149,22 +207,24 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                     <Button type='default' onClick={onSave} disabled={saved}>
                         {saved ? translate('saved_chart') : translate('save_chart')}
                     </Button>
+                    <Button onClick={handleDownloadPng} loading={exporting === 'png'}>{translate('export_png')}</Button>
+                    <Button onClick={handleShare} loading={exporting === 'card'}>{translate('share_card')}</Button>
                 </div>
             </header>
 
             <div className={classes.notices}>
                 {chart.timeUnknown ? (
-                    <Alert type='info' showIcon message={translate('time_unknown_notice')}
+                    <Alert type='info' showIcon title={translate('time_unknown_notice')}
                            description={chart.moonRange ? translate('moon_range', {
                                start: `${content.signs[chart.moonRange.start.sign as keyof typeof content.signs]?.name} ${formatDegree(chart.moonRange.start.degree, chart.moonRange.start.minute)}`,
                                end: `${content.signs[chart.moonRange.end.sign as keyof typeof content.signs]?.name} ${formatDegree(chart.moonRange.end.degree, chart.moonRange.end.minute)}`,
                            }) : undefined}/>
                 ) : null}
                 {chart.dstNote ? (
-                    <Alert type='warning' showIcon message={translate(chart.dstNote === 'ambiguous' ? 'dst_ambiguous' : 'dst_nonexistent')}/>
+                    <Alert type='warning' showIcon title={translate(chart.dstNote === 'ambiguous' ? 'dst_ambiguous' : 'dst_nonexistent')}/>
                 ) : null}
                 {!chart.timeUnknown && chart.houseSystem !== chart.houseSystemRequested ? (
-                    <Alert type='warning' showIcon message={translate('house_system_fallback', {
+                    <Alert type='warning' showIcon title={translate('house_system_fallback', {
                         requested: systemName(chart.houseSystemRequested),
                         used: systemName(chart.houseSystem),
                     })}/>

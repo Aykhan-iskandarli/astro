@@ -15,7 +15,7 @@ function PrivacyPolicyComponent() {
         <article className={`container ${page}`}>
             <SeoComponent titleKey='seo_privacy_title' descriptionKey='seo_privacy_description' path={Routes.privacyPolicy}/>
             <h1>{translate('privacy_title')}</h1>
-            <Alert type='warning' showIcon message={translate('privacy_draft')}/>
+            <Alert type='warning' showIcon title={translate('privacy_draft')}/>
             {SECTIONS.map((s) => (
                 <section key={s} className={section}>
                     <h2>{translate(`privacy_${s}_title`)}</h2>

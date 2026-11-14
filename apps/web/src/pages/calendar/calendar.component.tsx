@@ -72,7 +72,7 @@ function CalendarComponent() {
                     <Checkbox.Group<Kind> options={options} value={kinds} onChange={handleKinds}/>
                 </div>
 
-                {isError ? <Alert type='error' showIcon message={translate('today_error')}/> : null}
+                {isError ? <Alert type='error' showIcon title={translate('today_error')}/> : null}
                 {isFetching && !data ? <LoaderComponent/> : null}
 
                 {data ? (

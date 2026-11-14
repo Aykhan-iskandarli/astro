@@ -13,7 +13,7 @@ components are used as dependencies or data files.
 | [pyswisseph](https://github.com/astrorigin/pyswisseph) | 2.10.3.2 | AGPL-3.0 | `pyswisseph-2.10.3.2.dist-info/licenses/LICENSE.txt` | Swiss Ephemeris bindings; also the golden-test reference |
 | Swiss Ephemeris (C library, inside pyswisseph) | 2.10.03 | AGPL-3.0 (dual-licensed by Astrodienst AG: AGPL or Swiss Ephemeris Professional License) | pyswisseph LICENSE | Ephemeris calculations |
 | Swiss Ephemeris data files `sepl_18/24`, `semo_18/24`, `seas_18/24` (`packages/engine/astra_engine/ephe/`) | — | Same dual license as Swiss Ephemeris (Astrodienst AG) | shipped with stellium 0.22.0 (AGPL-3.0) / Astrodienst | Planet, Moon and asteroid (Chiron) ephemerides, 1800–2999 |
-| [libephemeris](https://github.com/g-battaglia/libephemeris) | 3.2.2 | AGPL-3.0-only | `libephemeris-3.2.2.dist-info/licenses/LICENSE` | Installed as a hard dependency of kerykeion; **not used at runtime** (we force the swisseph backend) |
+| [libephemeris](https://github.com/g-battaglia/libephemeris) | 3.2.2 | AGPL-3.0-only | `libephemeris-3.2.2.dist-info/licenses/LICENSE` | Installed as a hard dependency of kerykeion. Not used for planets (we force the swisseph backend); used **only for its fixed-star catalogue** (Hipparcos-based) — `sefstars.txt` is deliberately not used |
 | [FastAPI](https://github.com/fastapi/fastapi) | 0.162.2 | MIT | dist-info `LICENSE` | HTTP API |
 | [Starlette](https://github.com/encode/starlette) | 1.10.0 | BSD-3-Clause | dist-info `LICENSE.md` | FastAPI dependency |
 | [Uvicorn](https://github.com/encode/uvicorn) | 0.54.0 | BSD-3-Clause | dist-info `LICENSE.md` | ASGI server |
@@ -53,6 +53,9 @@ components are used as dependencies or data files.
 | @fontsource/playfair-display (Playfair Display font) | 5.3.0 | SIL OFL-1.1 | ✓ |
 | @fontsource-variable/inter (Inter font) | 5.3.0 | SIL OFL-1.1 | ✓ |
 | @fontsource/noto-sans-symbols (Noto Sans Symbols font) | 5.3.0 | SIL OFL-1.1 | ✓ |
+| [world-atlas](https://github.com/topojson/world-atlas) | 2.0.2 | ISC (package); map data from [Natural Earth](https://www.naturalearthdata.com/), public domain | ✓ | Coastlines for the astrocartography map (`land-110m.json`) |
+| [topojson-client](https://github.com/topojson/topojson-client) | 3.1.0 | ISC | ✓ | TopoJSON → GeoJSON for the astrocartography map |
+| [d3-geo](https://github.com/d3/d3-geo) (+ its dependency d3-array 3.2.4, pinned via `overrides`) | 3.1.1 | ISC | ✓ | Equirectangular projection and antimeridian cutting for the astrocartography map |
 
 ## Web app — development only
 

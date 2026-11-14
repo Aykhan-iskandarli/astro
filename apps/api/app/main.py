@@ -82,6 +82,14 @@ class ProgressionRequest(NatalRequest):
     target: DateTime | None = None
 
 
+class AstrocartographyRequest(NatalRequest):
+    probe: PlaceInput | None = None  # optional place to list the lines passing near it
+
+
+class TechniquesRequest(NatalRequest):
+    on: Date | None = None  # default: today (UTC)
+
+
 class TimelineRequest(NatalRequest):
     start: Date | None = None
     days: int = Field(default=365, ge=1, le=400)
@@ -223,3 +231,21 @@ def transit_timeline(req: TimelineRequest) -> dict:
         raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
     return MODULES["western.timeline"].calculate(_birth(req), start=req.start, days=req.days,
                                                  house_system=req.house_system)
+
+
+@app.post("/api/charts/astrocartography")
+def astrocartography(req: AstrocartographyRequest) -> dict:
+    if req.time is None:
+        raise HTTPException(status_code=422, detail=["astrocartography needs an exact birth time"])
+    probe = (req.probe.latitude, req.probe.longitude) if req.probe else None
+    return MODULES["western.astrocartography"].calculate(_birth(req), probe=probe)
+
+
+@app.post("/api/charts/techniques")
+def timing_techniques(req: TechniquesRequest) -> dict:
+    """Annual profections, firdaria and solar arc directions for a date."""
+    if req.time is None:
+        raise HTTPException(status_code=422, detail=["timing techniques need an exact birth time"])
+    if req.on is not None and not 1800 <= req.on.year <= 2998:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.timelords"].calculate(_birth(req), on=req.on, house_system=req.house_system)

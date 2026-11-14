@@ -1561,5 +1561,285 @@
     "pluto": "Pluton dövrü: güc və daxili həyatın yavaş, dərin dəyişimi; kvadrat nəslin orta yaş nişanıdır.",
     "chiron": "Xiron dövrü (təxminən 50 il): köhnə yaralar sağalmaq üçün yenidən üzə çıxır; qayıdış təxminən 50 yaşda olur.",
     "northNode": "Düyün dövrü (təxminən 18,6 il): həyat istiqaməti və məqsəddə dönüş nöqtəsi."
+  },
+  "acg": {
+    "sun": {
+      "mc": "Burada görünürsünüz: tanınma, liderlik və aydın ictimai rol daha asan gəlir.",
+      "ic": "Özünüzü evdəki kimi hiss edəcəyiniz yer: ailə, köklər və güclü şəxsi dayaq.",
+      "asc": "Burada özünüzü canlı və inamlı hiss edirsiniz; şəxsiyyətiniz parlayır, başqaları sizi görür.",
+      "dsc": "Burada həyatınıza önəmli tərəfdaşlar və özünəinamlı, isti insanlar daxil olur."
+    },
+    "moon": {
+      "mc": "İctimai həyat emosional, qayğıkeş çalar alır; insanlarla və ya ictimaiyyətlə işləyə bilərsiniz.",
+      "ic": "Özünüzü evdəki kimi hiss etmək üçün ən güclü yerlərdən biri: emosional təhlükəsizlik, ailə və bağlılıq.",
+      "asc": "Burada daha həssas və açıqsınız; əhval və intuisiya üzə çıxır.",
+      "dsc": "Buradakı münasibətlər emosional və qayğılıdır; yaxınlıq və qayğı axtarırsınız."
+    },
+    "mercury": {
+      "mc": "Ünsiyyət, yazı, müəllimlik, ticarət və ya texnologiya sahəsində karyera üçün əlverişlidir.",
+      "ic": "Söhbət, öyrənmə və fikirlərlə dolu canlı ev həyatı.",
+      "asc": "Burada zehniniz cəld və maraqlıdır; asanlıqla danışır, öyrənir və əlaqə qurursunuz.",
+      "dsc": "Ağıllı, danışqan insanlarla qarşılaşırsınız; tərəfdaşlıqlar dialoq və fikir mübadiləsi üzərində qurulur."
+    },
+    "venus": {
+      "mc": "Burada cazibəniz karyeranıza kömək edir; incəsənət, gözəllik, diplomatiya və populyarlıq üçün əlverişlidir.",
+      "ic": "Xoş, gözəl ev və harmonik ailə həyatı; həyatdan zövq almaq üçün yer.",
+      "asc": "Burada özünüzü cazibədar və rahat hiss edirsiniz; insanlar istiliyinizə və üslubunuza cavab verir.",
+      "dsc": "Sevgi və tərəfdaşlıq üçün klassik xətt: romantika və harmonik münasibətlər."
+    },
+    "mars": {
+      "mc": "Burada iddia və hərəkət gücü artır: rəqabətli karyera, liderlik, amma həm də daha çox münaqişə.",
+      "ic": "Enerji evə və mülkə yönəlir; evdə gərginlik və ya çox fəallıq ola bilər.",
+      "asc": "Burada özünüzü enerjili, cəsarətli və səbirsiz hiss edirsiniz; idman və fəaliyyət üçün yaxşıdır, ehtiyatlı olun.",
+      "dsc": "Ehtiraslı, amma mübarizəli münasibətlər; güclü iradəli tərəfdaşlar və açıq rəqiblər."
+    },
+    "jupiter": {
+      "mc": "Karyera üçün ən uğurlu xətlərdən biri: inkişaf, tanınma və imkanlar.",
+      "ic": "Səxavətli, geniş ev həyatı; məskunlaşmaq və ailə qurmaq üçün yaxşı yer.",
+      "asc": "Burada özünüzü nikbin və inamlı hiss edirsiniz; həyat sanki açılır.",
+      "dsc": "Həm sevgidə, həm işdə səxavətli, köməkçi tərəfdaşlar və faydalı münasibətlər."
+    },
+    "saturn": {
+      "mc": "Gərgin əmək və məsuliyyətlə qurulan karyera; yavaş, amma davamlı nailiyyət, təzyiqlə birlikdə.",
+      "ic": "Ev ağır və ya tələbkar hiss oluna bilər; həm də möhkəm, uzunmüddətli təməl qurmaq üçün yer.",
+      "asc": "Burada özünüzü daha ciddi və məhdud hiss edirsiniz; intizam artır, spontanlıq azalır.",
+      "dsc": "Ciddi, öhdəlikli və bəzən çətin münasibətlər; yaşlı və ya tələbkar tərəfdaşlar."
+    },
+    "uranus": {
+      "mc": "Qeyri-adi, müstəqil karyera və istiqamətdə qəfil dəyişikliklər; yenilik üçün əlverişlidir.",
+      "ic": "Qeyri-sabit və ya qeyri-adi ev həyatı; tez-tez köçmək və azadlıq ehtiyacı.",
+      "asc": "Burada özünüzü daha azad və orijinal, amma həm də narahat hiss edirsiniz; həyat sürprizlər gətirir.",
+      "dsc": "Həyəcanlı, amma qeyri-sabit münasibətlər; qeyri-adi tərəfdaşlar və şəxsi məkan ehtiyacı."
+    },
+    "neptune": {
+      "mc": "İncəsənət, musiqi, kino, müalicə və ya mənəviyyat sahəsində karyera; ictimai obrazınız qeyri-müəyyən ola bilər.",
+      "ic": "Xəyalpərəst, mənəvi ev; gözəldir, amma praktik məsələlər qarışa bilər.",
+      "asc": "Burada daha həssas, intuitiv və təsirə açıq olursunuz; enerjinizi qoruyun.",
+      "dsc": "Romantik, ideallaşdırılmış münasibətlər; gözəldir, amma tərəfdaşları olduğu kimi görün."
+    },
+    "pluto": {
+      "mc": "Karyerada güc və təsir, çox vaxt dərin dəyişim və gərgin vəziyyətlər vasitəsilə.",
+      "ic": "Ev və ailənin dərin dəyişimi; köhnə nümunələr sağalmaq üçün üzə çıxır.",
+      "asc": "Güclü xətt: burada dərindən dəyişir və öz gücünüzü hiss edirsiniz.",
+      "dsc": "Güclü cazibə və güc dinamikası olan intensiv, dəyişdirici münasibətlər."
+    }
+  },
+  "extraPoints": {
+    "ceres": {
+      "name": "Ceres",
+      "short": "Ceres necə qayğı göstərdiyinizi və qayğı görmək istədiyinizi göstərir: qida, himayə, vermək və buraxmaq dövrü."
+    },
+    "pallas": {
+      "name": "Pallas",
+      "short": "Pallas praktik müdrikliyinizi göstərir: strategiya, nümunələri görmək və yaradıcı zəka."
+    },
+    "juno": {
+      "name": "Yunona",
+      "short": "Yunona öhdəlikli tərəfdaşlıqdan nə gözlədiyinizi göstərir: sədaqət, bərabərlik və axtardığınız bağ."
+    },
+    "vesta": {
+      "name": "Vesta",
+      "short": "Vesta nəyə diqqət və fədakarlıq göstərdiyinizi göstərir: qoruduğunuz və həsr olunduğunuz daxili od."
+    },
+    "vertex": {
+      "name": "Verteks",
+      "short": "Verteks taleyüklü görünən görüşlər və sanki kənardan gələn dönüş nöqtələri ilə bağlıdır."
+    }
+  },
+  "fixedStars": {
+    "regulus": {
+      "name": "Requlus",
+      "meaning": "Uğur və liderlik ulduzu; şərəf, amma dürüstlüklə qorunmalıdır."
+    },
+    "spica": {
+      "name": "Spika",
+      "meaning": "İstedad, lütf və qoruma hədiyyəsi; tanınma gətirən bacarıq."
+    },
+    "aldebaran": {
+      "name": "Aldebaran",
+      "meaning": "Dürüstlük və cəsarət ulduzu; vicdanlı əməklə uğur."
+    },
+    "antares": {
+      "name": "Antares",
+      "meaning": "Güc və cəsarətli addımlar ulduzu; müdrikliklə idarə olunmalı güclü ehtiraslar."
+    },
+    "fomalhaut": {
+      "name": "Fomalhaut",
+      "meaning": "İdeallar və təxəyyül ulduzu; aydın məqsədə ehtiyacı olan xəyallar."
+    },
+    "algol": {
+      "name": "Algol",
+      "meaning": "Kəskin güc ulduzu; güclü emosiyaları və gizli gücü idarə etməyi öyrənmək."
+    },
+    "sirius": {
+      "name": "Sirius",
+      "meaning": "Ən parlaq ulduz: iddia, sədaqət və ictimaiyyət qarşısında parlamaq imkanı."
+    },
+    "betelgeuse": {
+      "name": "Betelqeyze",
+      "meaning": "Çox vaxt qətiyyətli addımla qazanılan uğur, enerji və tanınma."
+    },
+    "rigel": {
+      "name": "Rigel",
+      "meaning": "Öyrənmə, öyrətmə və bilik vasitəsilə yüksəlmək istəyi."
+    },
+    "vega": {
+      "name": "Veqa",
+      "meaning": "Bədii və musiqi istedadı, cazibə və idealizm."
+    },
+    "arcturus": {
+      "name": "Arktur",
+      "meaning": "Öncül ruh: sonradan başqalarının da gedəcəyi yeni yolu tapmaq."
+    },
+    "pollux": {
+      "name": "Polluks",
+      "meaning": "Cəsarət, rəqabət və kəskin, qətiyyətli zehin."
+    },
+    "procyon": {
+      "name": "Prosion",
+      "meaning": "Tez gələn uğur və ardıcıllıq tələb edən qəfil imkanlar."
+    },
+    "alcyone": {
+      "name": "Alsiona (Ülkər)",
+      "meaning": "Uzaqgörənlik, həssaslıq və anlayışı dərinləşdirən həsrət hissi."
+    },
+    "capella": {
+      "name": "Kapella",
+      "meaning": "Maraq, müstəqillik, öyrənmə və səyahət sevgisi."
+    }
+  },
+  "glossary": {
+    "natalChart": {
+      "term": "Natal xəritə",
+      "definition": "Doğulduğunuz dəqiq an və yer üçün səmanın xəritəsi: Günəş, Ay və planetlərin bürclərdə və evlərdə harada olduğu."
+    },
+    "sign": {
+      "term": "Bürc",
+      "definition": "Ekliptikanın (Günəşin görünən yolunun) on iki 30°-lik hissəsindən biri. Planetin bürcü onun enerjisinin necə ifadə olunduğunu təsvir edir."
+    },
+    "house": {
+      "term": "Ev",
+      "definition": "Doğum vaxtı və yerinə əsaslanan, xəritənin on iki sektorundan biri. Evlər planet enerjilərinin həyatın hansı sahəsində təzahür etdiyini göstərir."
+    },
+    "houseSystem": {
+      "term": "Ev sistemi",
+      "definition": "Səmanı on iki evə bölmək üsulu (Placidus, Koch, Bütöv bürc, Bərabər…). Fərqli sistemlərdə planet başqa evə düşə bilər."
+    },
+    "ascendant": {
+      "term": "Assendent (ASC)",
+      "definition": "Doğum anında şərq üfüqündə doğan bürc dərəcəsi. Dünyanı necə qarşıladığınızı göstərir və 1-ci evi başladır."
+    },
+    "midheaven": {
+      "term": "Orta səma (MC)",
+      "definition": "Doğum anında ekliptikanın səmadakı ən yüksək nöqtəsi. Karyera, nüfuz və həyat istiqaməti ilə bağlıdır."
+    },
+    "aspect": {
+      "term": "Aspekt",
+      "definition": "Xəritədə iki nöqtə arasındakı mənalı bucaq (0°, 60°, 90°, 120°, 180°…). Aspektlər planet enerjilərinin bir-birinə necə təsir etdiyini göstərir."
+    },
+    "orb": {
+      "term": "Orb",
+      "definition": "Aspektin dəqiq bucaqdan neçə dərəcə fərqləndiyi. Orb nə qədər kiçikdirsə, aspekt o qədər güclüdür."
+    },
+    "applying": {
+      "term": "Yaxınlaşan / uzaqlaşan",
+      "definition": "Yaxınlaşan aspekt dəqiqliyə doğru gedir (güclənir); uzaqlaşan aspekt dəqiq nöqtəni keçib (zəifləyir)."
+    },
+    "retrograde": {
+      "term": "Retroqrad",
+      "definition": "Yerdən baxanda planet bir müddət bürclər üzrə geriyə hərəkət edirmiş kimi görünür. Ənənəvi olaraq planetin mövzularına təkrar baxmaq dövrüdür."
+    },
+    "station": {
+      "term": "Stansiya",
+      "definition": "Planetin retroqrad (SR) və ya düz (SD) hərəkətə keçməzdən əvvəl dayanmış kimi göründüyü an. Stansiyalar ətrafında planetin mövzuları güclü hiss olunur."
+    },
+    "dignity": {
+      "term": "Əsas ləyaqət",
+      "definition": "Planetin bürcdə nə dərəcədə rahat olduğu: öz evi və yüksəlişi onu gücləndirir, sürgün və düşüş isə çətinlik yaradır."
+    },
+    "sect": {
+      "term": "Sekt (gündüz / gecə xəritəsi)",
+      "definition": "Doğum anında Günəşin üfüqdən yuxarıda (gündüz) və ya aşağıda (gecə) olması. Firdariya kimi klassik texnikalar bundan asılıdır."
+    },
+    "nodes": {
+      "term": "Ay düyünləri",
+      "definition": "Ayın orbitinin ekliptikanı kəsdiyi iki nöqtə. Şimal düyünü inkişaf və istiqamətlə, Cənub düyünü tanış keçmişlə bağlıdır."
+    },
+    "lilith": {
+      "term": "Lilit (Qara Ay)",
+      "definition": "Ay orbitinin ən uzaq nöqtəsi (orta apogey). Xam, ram olunmamış instinktlər və boğduğumuz şeylərlə əlaqələndirilir."
+    },
+    "partOfFortune": {
+      "term": "Bəxt nöqtəsi",
+      "definition": "Hesablanan nöqtə (gündüz Assendent + Ay − Günəş): rifah və işlərin asan getdiyi sahə ilə bağlıdır."
+    },
+    "transit": {
+      "term": "Tranzit",
+      "definition": "Planetin hazırda səmadakı mövqeyinin natal xəritənizlə müqayisəsi. Tranzitlər müəyyən vaxtda həyatınızda nəyin aktivləşdiyini təsvir edir."
+    },
+    "progression": {
+      "term": "İkinci dərəcəli proqressiya",
+      "definition": "Doğumdan sonrakı hər günün həyatın bir ilinə bərabər tutulduğu proqnoz üsulu (\"gün bir il üçün\")."
+    },
+    "solarArc": {
+      "term": "Solar arc",
+      "definition": "Bütün natal nöqtələr proqressiv Günəşin keçdiyi qövs qədər irəli çəkilir (təxminən ildə 1°)."
+    },
+    "return": {
+      "term": "Günəş / Ay qayıdışı",
+      "definition": "Günəşin (hər il) və ya Ayın (hər ay) dəqiq natal mövqeyinə qayıtdığı an üçün qurulan xəritə; qarşıdakı dövrün tonunu müəyyən edir."
+    },
+    "profection": {
+      "term": "İllik profeksiya",
+      "definition": "Klassik texnika: həyatın hər ili Assendentdən sonrakı bürcü aktivləşdirir; həmin bürcün hökmdarı ilin hökmdarı olur."
+    },
+    "firdaria": {
+      "term": "Firdariya",
+      "definition": "Fars planet dövrləri sistemi: həyat sabit uzunluqlu mərhələlərə bölünür, hər birini bir planet idarə edir və yeddi alt dövrü var."
+    },
+    "synastry": {
+      "term": "Sinastriya",
+      "definition": "İki insanın planetlərinin bir-birinə necə təsir etdiyini görmək üçün iki natal xəritənin müqayisəsi."
+    },
+    "composite": {
+      "term": "Kompozit xəritə",
+      "definition": "İki insanın planetlərinin orta nöqtələrindən qurulan tək xəritə; münasibətin özünü təsvir edir."
+    },
+    "voidOfCourse": {
+      "term": "Boş kursda Ay",
+      "definition": "Ayın bürcdəki son əsas aspekti ilə növbəti bürcə keçidi arasındakı vaxt. Ənənəvi olaraq yeni işlərə başlamaq üçün əlverişsiz sayılır."
+    },
+    "lunation": {
+      "term": "Lunasiya",
+      "definition": "Ayın aylıq dövrünün fazası: Yeni Ay, İlk rüb, Tam Ay və Son rüb."
+    },
+    "ingress": {
+      "term": "Bürc keçidi (ingress)",
+      "definition": "Planetin yeni bürcə daxil olduğu an."
+    },
+    "astrocartography": {
+      "term": "Astrokartoqrafiya",
+      "definition": "Doğulduğunuz anda hər planetin harada doğduğunu, batdığını, zirvədə və ya ən aşağı nöqtədə olduğunu göstərən dünya xəritəsi."
+    },
+    "ayanamsa": {
+      "term": "Ayanamşa",
+      "definition": "Tropik və siderik bürclər arasındakı fərq (bu gün təxminən 24°). Vedik astrologiya siderik bürcdən (Lahiri) istifadə edir."
+    },
+    "dasha": {
+      "term": "Daşa",
+      "definition": "Vedik planet dövrləri sistemi (Vimşottari): başlanğıcı Ayın nakşatrasından asılı olan 120 illik dövr."
+    },
+    "nakshatra": {
+      "term": "Nakşatra",
+      "definition": "Vedik astrologiyada istifadə olunan 27 Ay məskənindən biri (hər biri 13°20′)."
+    },
+    "element": {
+      "term": "Element",
+      "definition": "Od, torpaq, hava və ya su: bürclərin qruplaşdığı dörd temperament."
+    },
+    "modality": {
+      "term": "Keyfiyyət (modallıq)",
+      "definition": "Kardinal, sabit və ya dəyişkən: bürcün necə hərəkət etdiyi (başlamaq, saxlamaq və ya uyğunlaşmaq)."
+    }
   }
 }

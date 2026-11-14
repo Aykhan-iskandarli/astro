@@ -1,6 +1,6 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
-import {getBazi, getComposite, getNumerology, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic, IReturnParams} from './natal-chart.service';
+import {getBazi, getComposite, getNumerology, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic, IReturnParams, getAstrocartography, IAcgProbe, getTimeLords} from './natal-chart.service';
 import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
 import VedicModel from '../models/vedic.model';
@@ -9,6 +9,8 @@ import BaziModel from '../models/bazi.model';
 import NatalChartModel from '../models/natal-chart.model';
 import {ProgressionModel, ReturnModel} from '../models/forecast.model';
 import TimelineModel from '../models/timeline.model';
+import AstrocartographyModel from '../models/astrocartography.model';
+import TimeLordsModel from '../models/time-lords.model';
 
 export const useGetPlaces = (query: string) => {
     return useQuery<PlaceModel[], Error>({
@@ -152,6 +154,40 @@ export const useGetTimeline = (input: IBirthInput | null, start: string, days: n
             return getTimeline(input!, start, days);
         },
         enabled: !!input && enabled,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetAstrocartography = (input: IBirthInput | null, probe: IAcgProbe | null) => {
+    return useQuery<AstrocartographyModel, Error>({
+        queryKey: ['astrocartography', input, probe],
+        queryFn: () => {
+            return getAstrocartography(input!, probe);
+        },
+        enabled: !!input?.time,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetTimeLords = (input: IBirthInput | null, on: string, enabled: boolean) => {
+    return useQuery<TimeLordsModel, Error>({
+        queryKey: ['timelords', input, on],
+        queryFn: () => {
+            return getTimeLords(input!, on);
+        },
+        enabled: !!input?.time && enabled,
         placeholderData: keepPreviousData,
         staleTime: Infinity,
         gcTime: 5 * 60 * 1000,

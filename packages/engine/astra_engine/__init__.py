@@ -12,7 +12,8 @@ from .destiny import matrix as destiny_matrix
 from .numerology import core as numerology
 from .vedic import chart as vedic_chart
 from .sky import calendar as sky_calendar, now as sky_now
-from .western import composite, natal, progressions, returns, synastry, timeline, transits
+from .western import (astrocartography, composite, natal, progressions, returns, synastry, time_lords,
+                      timeline, transits)
 
 
 class EngineModule(Protocol):
@@ -33,6 +34,8 @@ MODULES: dict[str, EngineModule] = {
     progressions.MODULE_ID: progressions,        # Phase 7
     composite.MODULE_ID: composite,              # Phase 7
     timeline.MODULE_ID: timeline,                # transit timeline
+    astrocartography.MODULE_ID: astrocartography,  # ACG lines
+    time_lords.MODULE_ID: time_lords,            # profections, firdaria, solar arc
 }
 
 # The sky itself is not tied to a birth chart: calculate(at) / calculate(start, end)

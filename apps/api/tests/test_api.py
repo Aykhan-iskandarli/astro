@@ -151,3 +151,21 @@ def test_timeline_endpoint():
     r = client.post("/api/charts/timeline", json=body)
     assert r.status_code == 200 and all("at" in e for e in r.json()["events"])
     assert client.post("/api/charts/timeline", json={**body, "days": 900}).status_code == 422
+
+
+def test_astrocartography_endpoint():
+    body = {"date": "1990-06-15", "time": "14:30", "latitude": 40.4093, "longitude": 49.8671,
+            "timezone": "Asia/Baku", "probe": {"latitude": 51.5074, "longitude": -0.1278, "timezone": "Europe/London"}}
+    r = client.post("/api/charts/astrocartography", json=body)
+    assert r.status_code == 200 and len(r.json()["lines"]) == 40 and isinstance(r.json()["near"], list)
+    assert client.post("/api/charts/astrocartography", json={**body, "time": None}).status_code == 422
+
+
+def test_techniques_endpoint():
+    body = {"date": "1990-06-15", "time": "14:30", "latitude": 40.4093, "longitude": 49.8671,
+            "timezone": "Asia/Baku", "on": "2026-11-11"}
+    r = client.post("/api/charts/techniques", json=body)
+    assert r.status_code == 200
+    data = r.json()
+    assert data["profections"]["currentAge"] == 36 and data["firdaria"]["periods"] and "arc" in data["solarArc"]
+    assert client.post("/api/charts/techniques", json={**body, "time": None}).status_code == 422

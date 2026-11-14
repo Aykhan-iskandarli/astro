@@ -227,6 +227,74 @@ export interface IBalance {
     missing: {element: string[]; modality: string[]};
 }
 
+export class ExtraPointModel extends ChartPositionModel {
+    public house: number | null = null;
+    public retrograde: boolean = false;
+
+    constructor(item: any) {
+        super(item);
+        this._setHouse(item);
+        this._setRetrograde(item);
+    }
+
+    private _setHouse({house}: any) {
+        this.house = house ?? null;
+    }
+
+    private _setRetrograde({retrograde}: any) {
+        this.retrograde = retrograde ?? false;
+    }
+}
+
+export class FixedStarContactModel extends ChartPositionModel {
+    public star: string | null = null;
+    public point: string | null = null;
+    public orb: number = 0;
+
+    constructor(item: any) {
+        super(item, item?.star);
+        this._setStar(item);
+        this._setPoint(item);
+        this._setOrb(item);
+    }
+
+    private _setStar({star}: any) {
+        this.star = star ?? null;
+    }
+
+    private _setPoint({point}: any) {
+        this.point = point ?? null;
+    }
+
+    private _setOrb({orb}: any) {
+        this.orb = orb ?? 0;
+    }
+}
+
+export class ExtrasModel {
+    public asteroids: ExtraPointModel[] = [];
+    public vertex: ExtraPointModel | null = null;
+    public fixedStars: FixedStarContactModel[] = [];
+
+    constructor(item: any) {
+        this._setAsteroids(item);
+        this._setVertex(item);
+        this._setFixedStars(item);
+    }
+
+    private _setAsteroids({asteroids}: any) {
+        this.asteroids = asteroids?.map((a: any) => new ExtraPointModel(a)) ?? [];
+    }
+
+    private _setVertex({vertex}: any) {
+        this.vertex = vertex ? new ExtraPointModel(vertex) : null;
+    }
+
+    private _setFixedStars({fixedStars}: any) {
+        this.fixedStars = fixedStars?.map((f: any) => new FixedStarContactModel(f)) ?? [];
+    }
+}
+
 export default class NatalChartModel {
     public name: string | null = null;
     public place: string | null = null;
@@ -251,6 +319,7 @@ export default class NatalChartModel {
     public lunarPhase: string | null = null;
     public sect: 'day' | 'night' | null = null;
     public moonRange: {start: ChartPositionModel; end: ChartPositionModel} | null = null;
+    public extras: ExtrasModel | null = null;
 
     constructor(item: any) {
         this._setInput(item);
@@ -264,6 +333,7 @@ export default class NatalChartModel {
         this._setLunarPhase(item);
         this._setSect(item);
         this._setMoonRange(item);
+        this._setExtras(item);
     }
 
     private _setInput({input}: any) {
@@ -316,6 +386,10 @@ export default class NatalChartModel {
 
     private _setSect({sect}: any) {
         this.sect = sect ?? null;
+    }
+
+    private _setExtras({extras}: any) {
+        this.extras = extras ? new ExtrasModel(extras) : null;
     }
 
     private _setMoonRange({moonRange}: any) {
