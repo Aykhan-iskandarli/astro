@@ -3259,5 +3259,73 @@
       "11": "A year of friends and goals: groups, networks, allies and long-term hopes are in focus.",
       "12": "A year of retreat and inner work: rest, solitude, hidden matters and endings prepare the next cycle."
     }
+  },
+  "transformations": {
+    "planet": {
+      "jupiter": "Jupiter moves through the zodiac in about twelve years, so each of its contacts is brief: usually a few months, with up to three exact dates. It brings growth, opportunity, confidence and generosity, and it magnifies whatever it touches: good plans grow, but so do excess, overspending and overconfidence. Its periods are often remembered as the time a door opened: a trip, a teacher, a job offer, a move, a wider circle. The best use is to say yes to what is already promising and to add some structure so that the growth lasts.",
+      "saturn": "Saturn takes about twenty-nine and a half years to go round the zodiac. Its contacts last longer, often most of a year with three exact dates, and they ask for maturity: commitment, discipline, realism and responsibility. Pressure, delays or a sense of heaviness are common, but so is the reward of work done properly. Saturn rarely takes away what was built on solid ground; it tests what was built on hope alone. Its periods are good for finishing, structuring, saying no, and building habits and obligations you will still want in ten years.",
+      "uranus": "Uranus needs about eighty-four years for one circuit, so its contacts are rare and each lasts a year or more, with several passes. It breaks routines: sudden changes, a need for freedom, unexpected people and events, new technology, impatience with whatever has become a cage. The change often looks sudden from outside but has been building inside. Handled well, it frees you from something outdated and shows who you are without it; handled badly, it becomes impulsive breaks for the sake of breaking. Keep one stable base, and let the changes that are needed happen on purpose.",
+      "neptune": "Neptune circles the zodiac in about one hundred and sixty-five years, so most people meet each of its contacts once in a lifetime. It works slowly and softly, like fog or tide: it dissolves boundaries and raises inspiration, compassion, longing and faith, and also confusion, illusion, escapism and disappointment. Things you thought were clear may lose their outline, and ideals may be tested against reality. It is a good time for art, spiritual practice, rest and forgiveness, and a poor time for signing what you do not understand or trusting promises that sound too good. Ask for facts when something matters.",
+      "pluto": "Pluto takes about two hundred and forty-eight years to go round, and its contacts can last two years or more. It works at the root: power, control, loss, rebirth. What no longer serves is pulled out and what is hidden comes into view, often through intense relationships, crises or a decision not to go on as before. It is rarely comfortable, but it is the most thorough kind of renewal: afterwards you are less afraid of what you were afraid of. Do not fight the process for control; work on the part that is yours, and let go of what has already ended."
+    },
+    "aspect": {
+      "conjunction": "A conjunction is the strongest contact: the transiting planet sits on top of your natal point and merges with it. It opens a new chapter in that area of life, with the theme at its most visible and hard to ignore. The beginning is often felt as a seed rather than a result; what you do now sets the tone for years.",
+      "square": "A square creates friction and pushes you to act. Two sides of you pull in different directions and neither can be ignored, so tension builds until something is decided. It is the aspect of effort and of breakthrough through difficulty: uncomfortable while it lasts, but it is where much of the growth happens.",
+      "opposition": "An opposition sets two things face to face, often through other people or outer events: what you meet across the table mirrors something in you. The task is balance and perspective, not choosing one side. These periods show what has been one-sided, and relationships usually carry the theme.",
+      "trine": "A trine flows easily. The two energies support each other and things go with less effort, so it brings talent, luck and ease. Its weakness is that ease does not push you: the gift can be wasted if nothing is done with it. Use it on something you want to last.",
+      "sextile": "A sextile is a quiet opportunity: a door that opens if you step toward it. It is gentler than a trine or a square and rarely forces anything, so it is easy to miss. Say yes to invitations, conversations and small chances in this area and they can grow into something solid."
+    },
+    "target": {
+      "sun": "Your natal Sun is your core: identity, vitality, purpose and the way you want to shine. A contact here touches how you see yourself and what you are living for. Expect questions about direction, changes in confidence or in your role, and often a clearer sense of who you are becoming.",
+      "moon": "Your natal Moon is your inner life: feelings, needs, habits, home and the sense of safety. A contact here is felt in mood and in daily life: changes at home or in the family, shifts in what comforts you, and emotions that ask for attention. Look after sleep, routine and the people who feel like home.",
+      "mercury": "Your natal Mercury is thought and communication: how you learn, speak, decide and process information. A contact here brings new ideas, study, paperwork, negotiations, short trips or mental overload. Choose your words and signatures with care, because what you say now leaves a mark.",
+      "venus": "Your natal Venus is love, values, pleasure and your relationship with money. A contact here brings changes in relationships, taste, spending and earning: you rethink whom and what you value. A new acquaintance, a parting, a reconciliation or a financial decision can all be faces of this theme.",
+      "mars": "Your natal Mars is energy, desire, courage and anger: how you act, compete and defend your boundaries. A contact here raises drive, rivalry, physical energy and friction. Put the energy into exercise, work and clear action, and avoid hasty reactions.",
+      "jupiter": "Your natal Jupiter is faith, growth, outlook and luck. A contact here reshapes your beliefs, the scale of your plans and what you trust. Education, travel, law or a spiritual search are the usual routes of this theme.",
+      "saturn": "Your natal Saturn is structure, responsibility, limits and maturity: what you carry on your own shoulders and what you can build. A contact here brings a re-evaluation of career, obligations and discipline. Strengthen what is truly yours and let go of what you took on from other people's expectations.",
+      "uranus": "Your natal Uranus is individuality, freedom and awakening: what sets you apart and gets you out of the cage. A contact here opens new sides of your identity and shows what you have to leave behind. Sudden choices and unexpected meetings are common.",
+      "neptune": "Your natal Neptune is ideals, intuition, dreams and spirituality. A contact here touches what you believe in, what you dream of and what mystery draws you. Feelings deepen, but boundaries and reality checks are needed.",
+      "pluto": "Your natal Pluto is power, depth and renewal: what you cannot let go of and what you fear. A contact here reaches the deepest layers: control, loss, secrets coming to light and rebirth. It is slow, serious change; patience and honesty help.",
+      "asc": "Your Ascendant is your doorway to the world: body, appearance and the way you start new things. A contact here can change how you look, how you present yourself and your approach to life. It is often a new start, a new image or a new setting.",
+      "mc": "Your Midheaven (MC) is career, public image and life direction. A contact here redefines your professional path, your reputation and what you present to the world. A change of job, promotion, a shift of purpose or public attention are the usual routes."
+    },
+    "cycle": {
+      "saturn-conjunction": {
+        "name": "Saturn return",
+        "text": "The Saturn return happens when Saturn comes back to the place it held at your birth: around ages 28 to 30, and again near 58 and 88. It is the classic coming of age of adult life. Questions arrive about what you are building: career, partnerships, where you live, what you owe yourself and others. What was borrowed from other people's expectations tends to fall away, and what is truly yours stays and gets stronger. It is rarely easy, but people usually describe it afterwards as the time they grew up on their own terms. Because of retrograde motion the return is felt in three waves over about a year."
+      },
+      "saturn-square": {
+        "name": "Saturn square",
+        "text": "The Saturn square happens when Saturn is a quarter of the circle from its birth place, about every seven years (around 7, 22, 37, 51 and 66). It is a checkpoint: an old structure no longer fits and something concrete has to be built or changed. It asks for a decision rather than a feeling; the usual themes are work, responsibilities and the limit of what you carry."
+      },
+      "saturn-opposition": {
+        "name": "Saturn opposition",
+        "text": "The Saturn opposition falls at half the circle: around ages 14 to 15 and 44. It is the midpoint of the cycle. Near 44 it is the midlife check: you compare what you have built with what you want. Relationships and responsibilities hold up a mirror, and sometimes other people show you your own limits. The task is balance between obligations and your own needs."
+      },
+      "jupiter-conjunction": {
+        "name": "Jupiter return",
+        "text": "Jupiter returns to its birth place roughly every twelve years (around ages 12, 24, 36, 48 and 60). It is a renewal of faith and direction: optimism rises and a new chapter of growth, learning or travel opens. A good time to set goals and take a bigger step. Just avoid excess: Jupiter magnifies everything, the good and the waste."
+      },
+      "jupiter-opposition": {
+        "name": "Jupiter opposition",
+        "text": "Jupiter opposes its birth place six years after a return (around ages 6, 18, 30 and 42). It is the midpoint of the cycle: opportunities come through other people, and you can see what the last growth phase gave you. Watch that you do not overextend."
+      },
+      "uranus-square": {
+        "name": "Uranus square",
+        "text": "The Uranus square happens around ages 20 to 22. It is the first break-away: independence, leaving family expectations and choosing your own road. Sudden decisions, moving out, new friends and a rebuilt identity are common. Freedom is very attractive; it matters to know what you are leaving and what you are joining."
+      },
+      "uranus-trine": {
+        "name": "Uranus trine",
+        "text": "The Uranus trine happens around age 28. It is a gentle awakening: change arrives with ease rather than force, and new freedoms and talents appear. A calm moment to try something different; it often overlaps the Saturn return and softens its pressure."
+      },
+      "uranus-opposition": {
+        "name": "Uranus opposition",
+        "text": "The Uranus opposition happens around ages 40 to 44 and is known as the midlife awakening. An urge arises to change whatever has become routine: restructuring, sometimes a sharp turn, a re-evaluation of relationships and career. A change that looks sudden has usually been building for years. It is a chance to find your real wants; change on purpose rather than tearing down for its own sake."
+      },
+      "neptune-square": {
+        "name": "Neptune square",
+        "text": "The Neptune square happens around ages 40 to 42. It is a time of disillusion and spiritual searching: what you believed in is questioned, dreams never lived come into view and the need for meaning grows. Confusion and tiredness are possible, but so is replacing expectations with something more honest. Make important decisions with documents and checked facts."
+      }
+    }
   }
 }

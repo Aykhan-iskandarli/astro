@@ -13,7 +13,7 @@ from .numerology import core as numerology
 from .vedic import chart as vedic_chart
 from .sky import calendar as sky_calendar, day as sky_day, moon as sky_moon, now as sky_now
 from .western import (astrocartography, composite, cycles, davison, details, electional, forecast, natal, personal_moon,
-                      progressions, returns, synastry, timeline, timing, transits)
+                      progressions, returns, synastry, timeline, timing, transformations, transits)
 
 
 class EngineModule(Protocol):
@@ -42,6 +42,7 @@ MODULES: dict[str, EngineModule] = {
     personal_moon.MODULE_ID: personal_moon,      # the Moon's day and the lunations in the natal chart
     forecast.MODULE_ID: forecast,                # life timeline of slow planets, retrograde calendar, year forecast
     electional.MODULE_ID: electional,            # day-by-day facts for choosing a day, read in the natal chart
+    transformations.MODULE_ID: transformations,  # long slow-planet transits (episodes) to the natal chart over years
 }
 
 # The sky itself is not tied to a birth chart: calculate(at) / calculate(start, end)

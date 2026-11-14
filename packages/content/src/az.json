@@ -3259,5 +3259,73 @@
       "11": "Dostlar və hədəflər ili: qruplar, şəbəkələr, müttəfiqlər və uzunmüddətli ümidlər mərkəzdədir.",
       "12": "Çəkilmə və daxili iş ili: istirahət, təklik, gizli məsələlər və sonlar növbəti dövrü hazırlayır."
     }
+  },
+  "transformations": {
+    "planet": {
+      "jupiter": "Yupiter bürclər qurşağını təxminən on iki ilə keçir, ona görə hər təması qısadır: adətən bir neçə ay və üç dəqiq tarixə qədər. O, böyümə, imkan, inam və səxavət gətirir və toxunduğu hər şeyi böyüdür: yaxşı planlar artır, lakin israf, ifrat xərc və həddindən artıq inam da böyüyür. Onun dövrləri çox vaxt “bir qapı açıldı” kimi xatırlanır: səyahət, müəllim, iş təklifi, köçmə, genişlənən dairə. Ən yaxşı yol artıq perspektivli olana “bəli” deyib böyümənin davamlı olması üçün bir az nizam əlavə etməkdir.",
+      "saturn": "Saturn bürclər qurşağını təxminən iyirmi doqquz il yarımda keçir. Onun təmasları daha uzun çəkir, çox vaxt ilin böyük hissəsi və üç dəqiq tarixlə, və yetkinlik tələb edir: öhdəlik, intizam, realizm, məsuliyyət. Təzyiq, gecikmə və ağırlıq hissi tez-tez olur, amma düzgün görülmüş işin mükafatı da olur. Saturn möhkəm zəmində qurulanı nadir hallarda alır; yalnız ümidə söykənəni yoxlayır. Saturn dövrləri bitirmək, qaydaya salmaq, “yox” demək və on ildən sonra da istəyəcəyiniz vərdişlər və öhdəliklər qurmaq üçün yaxşıdır.",
+      "uranus": "Uran bir dövrəni təxminən səksən dörd ilə tamamlayır, ona görə təmasları nadirdir və hər biri bir ildən çox çəkir, bir neçə keçidlə. O, qaydaları pozur: qəfil dəyişikliklər, azadlığa ehtiyac, gözlənilməz insanlar və hadisələr, yeni texnologiya, qəfəsə çevrilmiş hər şeyə dözümsüzlük. Dəyişiklik kənardan qəfil görünür, amma içəridə çoxdan yetişib. Yaxşı keçəndə köhnəlmiş bir şeydən azad edir və onsuz kim olduğunuzu göstərir; pis keçəndə sırf pozmaq xatirinə impulsiv qırılmalara çevrilir. Bir sabit dayaq saxlayın, lazım olan dəyişikliklərə isə bilərəkdən yol verin.",
+      "neptune": "Neptun bürclər qurşağını təxminən yüz altmış beş ilə keçir, ona görə əksər insan onun hər təması ilə ömründə yalnız bir dəfə qarşılaşır. O, yavaş və yumşaq işləyir, duman və ya qabarma kimi: sərhədləri əridir, ilham, mərhəmət, həsrət və inamı yüksəldir, eyni zamanda çaşqınlıq, illüziya, qaçış və məyusluğu. Aydın bildiyiniz şeylər konturunu itirə, ideallar reallıqla sınağa çəkilə bilər. İncəsənət, mənəvi təcrübə, istirahət və bağışlama üçün yaxşı vaxtdır; anlamadığınızı imzalamaq və həddindən yaxşı səslənən vədlərə inanmaq üçün isə pis. Önəmli olanda fakt istəyin.",
+      "pluto": "Pluton dövrəni təxminən iki yüz qırx səkkiz ilə tamamlayır və təmasları iki il və daha çox davam edə bilər. O, kökdə işləyir: güc, nəzarət, itki, yenidən doğuluş. Artıq xidmət etməyən çıxarılır, gizli olan üzə çıxır, çox vaxt güclü münasibətlər, böhranlar və ya “əvvəlki kimi davam etməyəcəm” qərarı ilə. Nadir hallarda rahatdır, amma yenilənmənin ən köklü növüdür: sonra qorxduğunuz şeydən daha az qorxursunuz. Prosesə nəzarət uğrunda qarşı durmayın; sizə aid hissə üzərində işləyin, artıq bitəni buraxın."
+    },
+    "aspect": {
+      "conjunction": "Qoşulma ən güclü təmasdır: tranzit planet natal nöqtənizin üstünə oturur və onunla birləşir. Həyatın həmin sahəsində yeni fəsil açır, mövzu ən görünən olur və görməzlikdən gəlmək çətindir. Başlanğıc çox vaxt nəticə deyil, toxum kimi hiss olunur; indi etdikləriniz illərlə tonu müəyyən edir.",
+      "square": "Kvadrat sürtünmə yaradır və hərəkətə məcbur edir. Sizin iki tərəfiniz müxtəlif istiqamətə çəkir və heç birini görməməzlikdən gəlmək olmur, buna görə nəsə qərara alınana qədər gərginlik yığılır. Bu, səy və çətinliyin içindən irəliləyişin aspektidir: davam edərkən narahatdır, amma böyümənin çoxu burada baş verir.",
+      "opposition": "Oppozisiya iki şeyi üz-üzə qoyur, çox vaxt başqa insanlar və ya kənar hadisələr vasitəsilə: masanın o tayında gördüyünüz sizdə olan nəyisə əks etdirir. Vəzifə tərəf seçmək yox, tarazlıq və baxış bucağıdır. Bu dövrlər birtərəfli qalanı üzə çıxarır, mövzunu adətən münasibətlər daşıyır.",
+      "trine": "Üçbucaq asanlıqla axır. İki enerji bir-birini dəstəkləyir və işlər az səylə gedir, ona görə istedad, uğur və rahatlıq gətirir. Zəif cəhəti odur ki, rahatlıq sizi tələsdirmir: bununla heç nə edilməsə, bu hədiyyə boşa çıxa bilər. Onu davamlı olmasını istədiyiniz bir şeyə yönəldin.",
+      "sextile": "Seksil sakit imkandır: ona doğru addım atsanız açılan qapı. Üçbucaq və ya kvadratdan yumşaqdır, nadir hallarda nəyisə məcbur edir, ona görə qaçırmaq asandır. Bu sahədə dəvətlərə, söhbətlərə və kiçik şanslara “bəli” deyin: onlar möhkəm bir şeyə çevrilə bilər."
+    },
+    "target": {
+      "sun": "Natal Günəşiniz özəyinizdir: kimlik, həyat enerjisi, məqsəd və parlamaq istədiyiniz yol. Burada təmas özünüzü necə gördüyünüzə və nə üçün yaşadığınıza toxunur. İstiqamət haqqında suallar, inamda və ya rolunuzda dəyişikliklər və çox vaxt kim olduğunuz haqqında daha aydın hiss gözləyin.",
+      "moon": "Natal Ayınız daxili həyatınızdır: hisslər, ehtiyaclar, vərdişlər, ev və təhlükəsizlik duyğusu. Burada təmas əhval-ruhiyyədə və gündəlik həyatda hiss olunur: evdə və ya ailədə dəyişikliklər, sizi sakitləşdirənin dəyişməsi, diqqət istəyən duyğular. Yuxuya, gündəlik rejimə və sizə ev kimi gələn insanlara qayğı göstərin.",
+      "mercury": "Natal Merkuriniz düşüncə və ünsiyyətdir: necə öyrənir, danışır, qərar verir və məlumatı necə işləyirsiniz. Burada təmas yeni fikirlər, öyrənmə, sənədlər, danışıqlar, qısa səfərlər və ya zehni yüklənmə gətirir. Sözlərinizi və imzalarınızı diqqətlə seçin, çünki indi dediklərinizin izi qalır.",
+      "venus": "Natal Venerəniz sevgi, dəyərlər, zövq və pula münasibətdir. Burada təmas münasibətlərdə, zövqdə, xərc və qazancda dəyişikliklər gətirir: kimi və nəyi dəyərləndirdiyinizi yenidən düşünürsünüz. Yeni tanışlıq, ayrılıq, sülh və ya maliyyə qərarı bu mövzunun bir üzü ola bilər.",
+      "mars": "Natal Marsınız enerji, istək, cəsarət və hirsdir: necə hərəkət edir, mübarizə aparır və sərhədlərinizi qoruyursunuz. Burada təmas iş enerjisini, rəqabəti, bədənin vəziyyətini və sürtünməni artırır. Enerjini idmana, işə və aydın hərəkətə yönəldin; tələsik reaksiyalardan çəkinin.",
+      "jupiter": "Natal Yupiteriniz inam, böyümə, dünyagörüşü və şansdır. Burada təmas inanclarınızı, planlarınızın miqyasını və nəyə güvəndiyinizi yenidən qurur. Təhsil, səyahət, hüquq və ya mənəvi axtarış bu mövzunun adi yollarıdır.",
+      "saturn": "Natal Saturnunuz quruluş, məsuliyyət, hədlər və yetkinlikdir: nəyi öz çiyninizdə daşıyırsınız və nəyi qura bilərsiniz. Burada təmas karyeranın, öhdəliklərin və intizamın yenidən qiymətləndirilməsi gətirir. Sizə məxsus olanı möhkəmləndirin, başqalarının gözləntisindən götürüləni buraxın.",
+      "uranus": "Natal Uranınız fərdilik, azadlıq və oyanışdır: sizi digərlərindən ayıran və qəfəsdən çıxaran. Burada təmas kimliyinizin yeni üzlərini açır, nəyi tərk etməli olduğunuzu göstərir. Qəfil seçimlər və gözlənilməz tanışlıqlar adi haldır.",
+      "neptune": "Natal Neptununuz ideallar, intuisiya, xəyallar və ruhaniyyətdir. Burada təmas inandığınız şeyə, xəyallarınıza və hansı sirrə can atdığınıza toxunur. Hissləriniz güclənir, amma sərhədləri qorumaq və reallığı yoxlamaq lazımdır.",
+      "pluto": "Natal Plutonunuz güc, dərinlik və yenilənmədir: nəyi buraxa bilmədiyiniz və nədən qorxduğunuz. Burada təmas ən dərin qatlara çatır: nəzarət, itki, aşkarlanan sirlər və yenidən doğuluş mövzuları. Bu, yavaş və ciddi dəyişiklikdir; səbr və dürüstlük kömək edir.",
+      "asc": "Assendentiniz dünyaya çıxış qapınızdır: bədən, görünüş və yeni şeylərə başlama tərzi. Burada təmas görünüşünüzü, özünüzü təqdim etməyinizi və həyata yanaşmanızı dəyişə bilər. Çox vaxt yeni başlanğıc, yeni imic və ya yeni mühit olur.",
+      "mc": "Orta Səmanız (MC) karyera, ictimai imic və həyat istiqamətinizdir. Burada təmas peşə yolunuzu, nüfuzunuzu və dünyaya nəyi təqdim etdiyinizi yenidən müəyyən edir. İş dəyişikliyi, yüksəliş, məqsədin dəyişməsi və ya ictimai diqqət bu mövzunun adi yollarıdır."
+    },
+    "cycle": {
+      "saturn-conjunction": {
+        "name": "Saturn qayıdışı",
+        "text": "Saturn qayıdışı Saturn doğuşda olduğu yerə qayıdanda baş verir: təxminən 28–30 yaşda, sonra 58 və 88 yaş ətrafında. Bu, yetkin həyatın klassik “böyümə” dövrüdür. Nə qurduğunuz haqqında suallar gəlir: karyera, münasibətlər, yaşayış yeri, özünüzə və başqalarına nə borclusunuz. Başqalarının gözləntisindən götürülən tökülür, həqiqətən sizin olan qalır və güclənir. Nadir hallarda asan olur, amma adamlar sonradan bunu “öz hesabına böyüdüyüm vaxt” kimi xatırlayır. Retroqrad hərəkətə görə qayıdış təxminən bir il ərzində üç dalğa ilə hiss olunur."
+      },
+      "saturn-square": {
+        "name": "Saturn kvadratı",
+        "text": "Saturn kvadratı Saturn doğuş yerindən dairənin dörddə biri qədər uzaqda olanda baş verir: təxminən hər yeddi ildən bir (7, 22, 37, 51, 66 yaş ətrafında). Bu, yoxlama məntəqəsidir: köhnə quruluş artıq uyğun gəlmir və konkret bir şeyi qurmaq və ya dəyişmək lazımdır. O, hiss yox, qərar tələb edir; adi mövzular iş, məsuliyyətlər və daşıdığınızın həddidir."
+      },
+      "saturn-opposition": {
+        "name": "Saturn oppozisiyası",
+        "text": "Saturn oppozisiyası dairənin yarısında baş verir: təxminən 14–15 və 44 yaşda. Bu, dövrün orta nöqtəsidir. 44 yaş ətrafında o, orta yaş yoxlamasıdır: nə qurduğunuzla nə istədiyinizi müqayisə edirsiniz. Münasibətlər və məsuliyyətlər güzgü tutur, bəzən başqa insanlar sizə öz hədlərinizi göstərir. Vəzifə tarazlıq tapmaqdır: öhdəliklər və öz ehtiyaclarınız arasında."
+      },
+      "jupiter-conjunction": {
+        "name": "Yupiter qayıdışı",
+        "text": "Yupiter təxminən hər on iki ildən bir doğuş yerinə qayıdır (12, 24, 36, 48, 60 yaş ətrafında). Bu, inamın və istiqamətin yenilənməsidir: nikbinlik artır, böyümə, öyrənmə və ya səyahətdən ibarət yeni fəsil açılır. Məqsəd qoymaq və bir addım böyük atmaq üçün yaxşı vaxtdır. Yalnız ifrata qaçmayın: Yupiter hər şeyi böyüdür, yaxşını da, israfı da."
+      },
+      "jupiter-opposition": {
+        "name": "Yupiter oppozisiyası",
+        "text": "Yupiter doğuş yerinin qarşısına qayıdışdan altı il sonra gəlir (6, 18, 30, 42 yaş ətrafında). Bu, dövrün orta nöqtəsidir: imkanlar başqa insanlar vasitəsilə gəlir və son böyümə mərhələsinin nə verdiyini görmək olur. Özünüzü həddindən artıq yaymamağa diqqət edin."
+      },
+      "uranus-square": {
+        "name": "Uran kvadratı",
+        "text": "Uran kvadratı təxminən 20–22 yaşda baş verir. Bu, birinci uzaqlaşmadır: müstəqillik, ailə gözləntilərindən ayrılma və öz yolunu seçmək. Qəfil qərarlar, köçmə, yeni dostlar və kimliyin yenidən qurulması adi haldır. Azadlıq çox cəlbedicidir; nəyi tərk etdiyinizi və nəyə qoşulduğunuzu bilmək vacibdir."
+      },
+      "uranus-trine": {
+        "name": "Uran üçbucağı",
+        "text": "Uran üçbucağı təxminən 28 yaşda baş verir. Bu, yumşaq oyanışdır: dəyişiklik zorla yox, rahatlıqla gəlir, yeni azadlıqlar və istedadlar üzə çıxır. Dəyişikliyə cəhd etmək üçün əlverişli sakit vaxtdır; çox vaxt Saturn qayıdışı ilə üst-üstə düşür və onun təzyiqini yumşaldır."
+      },
+      "uranus-opposition": {
+        "name": "Uran oppozisiyası",
+        "text": "Uran oppozisiyası təxminən 40–44 yaşda baş verir və orta yaş oyanışı kimi tanınır. Rutinə çevrilmiş hər şeyi dəyişmək istəyi yaranır: yenidən quruluş, bəzən kəskin dönüş, münasibətlərin və karyeranın yenidən qiymətləndirilməsi. Qəfil görünən dəyişiklik çox vaxt illərdir yığılıb. Bu, öz həqiqi istəklərinizi tapmaq üçün şansdır; bilərəkdən dəyişin, dağıtmaq üçün dağıtmayın."
+      },
+      "neptune-square": {
+        "name": "Neptun kvadratı",
+        "text": "Neptun kvadratı təxminən 40–42 yaşda baş verir. Bu, aldanmaların aradan qalxması və mənəvi axtarış dövrüdür: inandığınız şeylər sorğulanır, heç vaxt yaşanmamış xəyallar görünür, məna ehtiyacı artır. Çaşqınlıq və yorğunluq ola bilər, amma gözləntilərin daha səmimi bir şeylə əvəzlənməsi də olur. Mühüm qərarları sənədlərlə və yoxlanmış faktlarla verin."
+      }
+    }
   }
 }

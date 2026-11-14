@@ -9,6 +9,7 @@ import SynastryModel from '../models/synastry.model';
 import VedicModel from '../models/vedic.model';
 import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
+import TransformationsModel from '../models/transformations.model';
 import ElectionalModel from '../models/electional.model';
 import BaziYearsModel from '../models/bazi-years.model';
 import {ProgressionModel, ReturnModel} from '../models/forecast.model';
@@ -87,6 +88,13 @@ export const getElectional = (input: IBirthInput, start: string, days: number, v
     return axiosPublic.post(API.electional, {...input, start, days, viewerTimezone})
         .then((res) => {
             return new ElectionalModel(res.data);
+        });
+};
+
+export const getTransformations = (input: IBirthInput, startYear: number, years: number): Promise<TransformationsModel> => {
+    return axiosPublic.post(API.transformations, {...input, startYear, years})
+        .then((res) => {
+            return new TransformationsModel(res.data);
         });
 };
 

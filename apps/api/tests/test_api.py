@@ -284,3 +284,13 @@ def test_electional_endpoint():
     assert r.status_code == 200 and len(r.json()["days"]) == 7 and r.json()["days"][0]["houses"]
     assert client.post("/api/charts/electional", json={**BAKU, "days": 99}).status_code == 422
     assert client.post("/api/charts/electional", json={**BAKU, "viewerTimezone": "Mars/Base"}).status_code == 422
+
+
+def test_transformations_endpoint():
+    r = client.post("/api/charts/transformations", json={**BAKU, "startYear": 2025, "years": 5})
+    assert r.status_code == 200 and r.json()["episodes"] and r.json()["from"] == 2025
+    date_only = {"date": "1997-03-14", "latitude": 0, "longitude": 0, "timezone": "UTC"}
+    d = client.post("/api/charts/transformations", json={**date_only, "startYear": 2026, "years": 3})
+    assert d.status_code == 200 and d.json()["meta"]["timeUnknown"] is True
+    assert client.post("/api/charts/transformations", json={**BAKU, "years": 99}).status_code == 422
+    assert client.post("/api/charts/transformations", json={**BAKU, "startYear": 1500}).status_code == 422

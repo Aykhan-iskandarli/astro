@@ -126,6 +126,11 @@ class MoonLunationsRequest(NatalRequest):
     days: int = Field(default=90, ge=1, le=400)
 
 
+class TransformationsRequest(NatalRequest):
+    start_year: int | None = Field(default=None, ge=1800, le=2960)
+    years: int = Field(default=5, ge=1, le=30)
+
+
 class ElectionalRequest(NatalRequest):
     start: Date | None = None
     days: int = Field(default=30, ge=1, le=62)
@@ -450,6 +455,13 @@ def personal_moon_lunations(req: MoonLunationsRequest) -> dict:
         raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
     return MODULES["western.personalmoon"].calculate(_birth(req), kind="lunations", start=req.start, days=req.days,
                                                      house_system=req.house_system)
+
+
+@app.post("/api/charts/transformations")
+def transformations(req: TransformationsRequest) -> dict:
+    """Long transits of Jupiter-Pluto to the natal chart as episodes (all exact passes), over several years."""
+    return MODULES["western.transformations"].calculate(_birth(req), start_year=req.start_year, years=req.years,
+                                                        house_system=req.house_system)
 
 
 @app.post("/api/charts/electional")

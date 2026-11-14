@@ -51,6 +51,9 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - `/choose-day`: choosing days. For one month and a topic (career, money, relationships, communication and travel, home,
   yourself) and an intention (begin or finish): the days and hours when the Moon is in the houses of that topic, outside
   its void-of-course hours, with a fitting phase, and with Mercury retrograde flagged where it matters.
+- `/transformations`: what a birth date points to in a chosen year. Only the birth date is needed. The long transits of
+  Jupiter-Pluto to the natal planets grouped as life cycles (Saturn return, Uranus opposition, ...), major changes and
+  other contacts, each with its exact dates, the age, a short line and a full reading to expand.
 - `/glossary`: plain-language explanations of the terms used on the site (also shown as tooltips).
 - `/profiles`: saved charts as people (relation, "my chart"), with a JSON backup and restore; the data stays in
   the browser.
@@ -102,9 +105,9 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ## Test
 
 ```bash
-docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (368)
-docker compose run --rm api pytest -q                           # API (34)
-npm test                                                        # content consistency (2015 keys) + web unit tests (42)
+docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (375)
+docker compose run --rm api pytest -q                           # API (35)
+npm test                                                        # content consistency (2055 keys) + web unit tests (49)
 npm run typecheck -w apps/web
 ```
 

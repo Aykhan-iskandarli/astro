@@ -7,6 +7,7 @@ export enum Routes {
     glossary = '/glossary',
     yearForecast = '/year-forecast',
     chooseDay = '/choose-day',
+    transformations = '/transformations',
     profiles = '/profiles',
     privacyPolicy = '/privacy-policy',
 }

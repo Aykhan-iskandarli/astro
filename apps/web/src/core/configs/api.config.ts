@@ -25,6 +25,7 @@ export const API = {
     lifeline: '/api/charts/lifeline',
     retrogrades: '/api/charts/retrogrades',
     year: '/api/charts/year',
+    transformations: '/api/charts/transformations',
     electional: '/api/charts/electional',
     moonDay: '/api/charts/moon-day',
     moonLunations: '/api/charts/moon-lunations',
