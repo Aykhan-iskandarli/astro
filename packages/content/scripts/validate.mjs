@@ -1,8 +1,9 @@
-// Content test: every language must have exactly the same keys, and no empty strings.
+// Content test: az and en must have exactly the same keys. Other languages (ru) are translated in stages: they may
+// lack keys (the app shows English for those) but must not have keys the base does not have. No empty strings anywhere.
 import {readFileSync} from 'node:fs';
 
 const load = (lang) => JSON.parse(readFileSync(new URL(`../src/${lang}.json`, import.meta.url), 'utf8'));
-const langs = {az: load('az'), en: load('en')};
+const langs = {az: load('az'), en: load('en'), ru: load('ru')};
 
 const flatten = (obj, prefix = '') => Object.entries(obj).flatMap(([k, v]) =>
     v && typeof v === 'object' ? flatten(v, `${prefix}${k}.`) : [[`${prefix}${k}`, v]]);
@@ -10,8 +11,11 @@ const flatten = (obj, prefix = '') => Object.entries(obj).flatMap(([k, v]) =>
 const keys = Object.fromEntries(Object.entries(langs).map(([l, c]) => [l, new Map(flatten(c))]));
 let errors = 0;
 const [base, ...others] = Object.keys(keys);
+const PARTIAL = new Set(['ru']);
 for (const other of others) {
-    for (const k of keys[base].keys()) if (!keys[other].has(k)) { console.error(`missing in ${other}: ${k}`); errors++; }
+    if (!PARTIAL.has(other)) {
+        for (const k of keys[base].keys()) if (!keys[other].has(k)) { console.error(`missing in ${other}: ${k}`); errors++; }
+    }
     for (const k of keys[other].keys()) if (!keys[base].has(k)) { console.error(`missing in ${base}: ${k}`); errors++; }
 }
 for (const [l, m] of Object.entries(keys)) {
@@ -30,7 +34,8 @@ for (const [l, c] of Object.entries(langs)) {
     }
 }
 const SIGN_KEYS = Object.keys(langs.en.signs);
-for (const [l, c] of Object.entries(langs)) {
+const FULL = Object.fromEntries(Object.entries(langs).filter(([l]) => !PARTIAL.has(l)));
+for (const [l, c] of Object.entries(FULL)) {
     for (const [point, bySign] of Object.entries(c.placements ?? {})) {
         if (!SIGN_KEYS.every((s) => s in bySign)) { console.error(`${l}.placements.${point}: missing signs`); errors++; }
     }
@@ -51,4 +56,6 @@ for (const [l, c] of Object.entries(langs)) {
     }
 }
 if (errors) { console.error(`${errors} content error(s)`); process.exit(1); }
-console.log(`content ok: ${keys[base].size} keys × ${Object.keys(langs).length} languages`);
+const coverage = Object.keys(langs).filter((l) => PARTIAL.has(l))
+    .map((l) => `${l} ${Math.round((100 * keys[l].size) / keys[base].size)}%`).join(', ');
+console.log(`content ok: ${keys[base].size} keys; full: ${Object.keys(FULL).join(', ')}${coverage ? `; partial: ${coverage}` : ''}`);

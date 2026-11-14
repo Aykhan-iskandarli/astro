@@ -143,20 +143,3 @@ def test_davison_midpoint():
     assert abs(abs(davison.midpoint(east, west)[2]) - 180) < 1e-6
     out = davison.calculate(a, b)
     assert out["module"] == "western.davison" and len(out["points"]) == 15 and out["houses"]
-
-
-def test_cartography_mc_line_is_where_the_planet_culminates():
-    from astra_engine.western import cartography
-    b = BIRTHS["baku-1990"]
-    out = cartography.calculate(b)
-    assert len(out["lines"]) == 40 and {l["type"] for l in out["lines"]} == {"mc", "ic", "asc", "dsc"}
-    jd = _jd(b)
-    gst = swe.sidtime(jd) * 15  # Greenwich sidereal time in degrees
-    for pid, body in (("sun", swe.SUN), ("jupiter", swe.JUPITER)):
-        ra = swe.calc_ut(jd, body, swe.FLG_SWIEPH | swe.FLG_EQUATORIAL)[0][0]
-        mc = next(l for l in out["lines"] if l["planet"] == pid and l["type"] == "mc")
-        lon = mc["points"][0][0]
-        assert all(abs(p[0] - lon) < 1e-6 for p in mc["points"])          # a meridian
-        assert abs(((gst + lon) - ra + 180) % 360 - 180) < 0.05           # local sidereal time = RA
-        ic = next(l for l in out["lines"] if l["planet"] == pid and l["type"] == "ic")
-        assert abs(abs(((ic["points"][0][0] - lon) + 180) % 360 - 180) - 180) < 1e-6

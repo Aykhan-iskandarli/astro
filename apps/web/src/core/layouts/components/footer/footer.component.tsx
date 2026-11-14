@@ -20,6 +20,7 @@ const FooterComponent = () => {
                     <li><Link to={Routes.nameAnalysis}>{translate('nav_name')}</Link></li>
                     <li><Link to={Routes.today}>{translate('nav_today')}</Link></li>
                     <li><Link to={Routes.calendar}>{translate('nav_calendar')}</Link></li>
+                    <li><Link to={Routes.glossary}>{translate('nav_glossary')}</Link></li>
                     <li><Link to={Routes.privacyPolicy}>{translate('nav_privacy')}</Link></li>
                     <li><a href={environment.sourceUrl} target='_blank' rel='noopener noreferrer'>{translate('footer_source')}</a></li>
                 </ul>

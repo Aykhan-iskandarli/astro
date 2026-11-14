@@ -239,6 +239,9 @@ def test_davison_endpoint():
     assert r.status_code == 200 and r.json()["meta"]["davison"]["utc"].startswith("1991")
 
 
-def test_cartography_endpoint():
-    r = client.post("/api/charts/cartography", json=BAKU)
-    assert r.status_code == 200 and len(r.json()["lines"]) == 40
+def test_astrocartography_endpoint():
+    body = {"date": "1990-06-15", "time": "14:30", "latitude": 40.4093, "longitude": 49.8671,
+            "timezone": "Asia/Baku", "probe": {"latitude": 51.5074, "longitude": -0.1278, "timezone": "Europe/London"}}
+    r = client.post("/api/charts/astrocartography", json=body)
+    assert r.status_code == 200 and len(r.json()["lines"]) == 40 and isinstance(r.json()["near"], list)
+    assert client.post("/api/charts/astrocartography", json={**body, "time": None}).status_code == 422

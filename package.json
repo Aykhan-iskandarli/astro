@@ -12,5 +12,8 @@
     "build": "npm run build -w apps/web",
     "test": "npm run test -w packages/content && npm run test -w apps/web",
     "lint": "npm run lint -w apps/web"
+  },
+  "overrides": {
+    "d3-array": "3.2.4"
   }
 }

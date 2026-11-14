@@ -4,6 +4,8 @@ export enum Routes {
     today = '/today',
     calendar = '/calendar',
     nameAnalysis = '/name-analysis',
+    glossary = '/glossary',
+    profiles = '/profiles',
     privacyPolicy = '/privacy-policy',
 }
 
@@ -24,4 +26,4 @@ export const goToWithQuery = (route: string, param: Record<string, string | numb
 
 /** Public, indexable routes (used for sitemap generation). */
 // /today and /calendar show live sky data, so they are listed in the sitemap but not prerendered.
-export const publicRoutes = [Routes.default, Routes.natalChart, Routes.nameAnalysis, Routes.today, Routes.calendar, Routes.privacyPolicy];
+export const publicRoutes = [Routes.default, Routes.natalChart, Routes.nameAnalysis, Routes.today, Routes.calendar, Routes.glossary, Routes.privacyPolicy];

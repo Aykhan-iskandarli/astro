@@ -20,7 +20,7 @@ export const API = {
     gunaMilan: '/api/charts/guna-milan',
     other: '/api/other',
     skyDay: '/api/sky/day',
-    cartography: '/api/charts/cartography',
+    astrocartography: '/api/charts/astrocartography',
     davison: '/api/charts/davison',
     numerologyCompatibility: '/api/numerology/compatibility',
     sky: '/api/sky',

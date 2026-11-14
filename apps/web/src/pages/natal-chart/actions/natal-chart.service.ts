@@ -13,7 +13,8 @@ import {ProgressionModel, ReturnModel} from '../models/forecast.model';
 import TimelineModel from '../models/timeline.model';
 import CyclesModel from '../models/cycles.model';
 import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
-import {CartographyModel, DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
+import {DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
+import AstrocartographyModel from '../models/astrocartography.model';
 import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 
 export const getPlaces = (query: string): Promise<PlaceModel[]> => {
@@ -161,10 +162,17 @@ export const getOtherSystems = (date: string, gender: 'male' | 'female'): Promis
         });
 };
 
-export const getCartography = (input: IBirthInput): Promise<CartographyModel> => {
-    return axiosPublic.post(API.cartography, input)
+export interface IAcgProbe {
+    latitude: number;
+    longitude: number;
+    timezone: string;
+    name: string;
+}
+
+export const getAstrocartography = (input: IBirthInput, probe: IAcgProbe | null): Promise<AstrocartographyModel> => {
+    return axiosPublic.post(API.astrocartography, {...input, probe})
         .then((res) => {
-            return new CartographyModel(res.data);
+            return new AstrocartographyModel(res.data);
         });
 };
 

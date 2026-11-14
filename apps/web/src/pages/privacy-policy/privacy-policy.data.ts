@@ -13,7 +13,8 @@ export interface IPrivacySection {
     after?: string[];
 }
 
-export const PRIVACY_POLICY: Record<ILang, IPrivacySection[]> = {
+// Languages without their own text (ru for now) fall back to English in the page.
+export const PRIVACY_POLICY: Partial<Record<ILang, IPrivacySection[]>> & {az: IPrivacySection[]; en: IPrivacySection[]} = {
     az: [
         {
             title: 'Biz kimik',

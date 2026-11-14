@@ -14,10 +14,13 @@ export interface IBirthInput {
     houseSystem: IHouseSystem;
 }
 
+export type IRelation = 'self' | 'partner' | 'family' | 'friend' | 'other';
+
 export interface ISavedChart {
     id: string;
     savedAt: string;
     input: IBirthInput;
+    relation?: IRelation;      // profiles: who this chart belongs to
 }
 
 export interface IState {
@@ -26,4 +29,5 @@ export interface IState {
     ambientSound: boolean;
     birthInput: IBirthInput | null;   // NOT persisted
     savedCharts: ISavedChart[];       // persisted, opt-in only
+    primaryChartId: string | null;    // persisted: the profile marked as "my chart"
 }

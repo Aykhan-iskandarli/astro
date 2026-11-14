@@ -1,12 +1,13 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
 import {
-    getBazi, getCartography, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
-    INumerologyPerson, IReturnParams,
+    getAstrocartography, getBazi, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
+    IAcgProbe, INumerologyPerson, IReturnParams,
 } from './natal-chart.service';
 import CyclesModel from '../models/cycles.model';
 import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
-import {CartographyModel, DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
+import {DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
+import AstrocartographyModel from '../models/astrocartography.model';
 import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
@@ -267,14 +268,19 @@ export const useGetOtherSystems = (date: string | null, gender: 'male' | 'female
     });
 };
 
-export const useGetCartography = (input: IBirthInput | null) => {
-    return useQuery<CartographyModel, Error>({
-        queryKey: ['cartography', input],
-        queryFn: () => getCartography(input!),
-        enabled: !!input,
+export const useGetAstrocartography = (input: IBirthInput | null, probe: IAcgProbe | null) => {
+    return useQuery<AstrocartographyModel, Error>({
+        queryKey: ['astrocartography', input, probe],
+        queryFn: () => {
+            return getAstrocartography(input!, probe);
+        },
+        enabled: !!input?.time,
+        placeholderData: keepPreviousData,
         staleTime: Infinity,
         gcTime: 5 * 60 * 1000,
         retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
         refetchOnWindowFocus: false,
     });
 };

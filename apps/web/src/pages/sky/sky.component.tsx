@@ -6,6 +6,7 @@ import {Routes} from 'router/routes';
 import {formatDegree, formatLocal, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
 import SeoComponent from 'core/shared/seo/seo.component';
 import LoaderComponent from 'core/shared/loader/loader.component';
+import TermComponent from 'core/shared/term/term.component';
 import CosmicBackgroundComponent from 'core/shared/cosmic-background/cosmic-background.component';
 import useLocalization, {useContent} from 'assets/lang';
 import {useGetSky} from './actions/sky.query';
@@ -71,7 +72,7 @@ function SkyComponent() {
                                     {' · '}{translate(moon.waxing ? 'today_waxing' : 'today_waning')}
                                 </p>
                                 <div className={`${classes.voc} ${voc.active ? classes.vocActive : ''}`}>
-                                    <strong>{translate(voc.active ? 'voc_active_title' : 'voc_next_title')}</strong>
+                                    <strong><TermComponent id='voidOfCourse'>{translate(voc.active ? 'voc_active_title' : 'voc_next_title')}</TermComponent></strong>
                                     <p>
                                         {voc.active
                                             ? translate('voc_active', {end: formatLocal(voc.end), sign: sign(voc.nextSign)})
@@ -83,7 +84,7 @@ function SkyComponent() {
                         </section>
 
                         <section className={classes.section} aria-labelledby='sec-retro'>
-                            <h2 id='sec-retro'>{translate('today_retrogrades')}</h2>
+                            <h2 id='sec-retro'><TermComponent id='retrograde'>{translate('today_retrogrades')}</TermComponent></h2>
                             {sky.retrogrades.length ? (
                                 <ul className={classes.chips}>
                                     {sky.retrogrades.map((id) => (

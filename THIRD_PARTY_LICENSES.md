@@ -29,7 +29,7 @@ components are used as dependencies or data files.
 | Data | License | Verified from | Use |
 |---|---|---|---|
 | [GeoNames](https://www.geonames.org/) `cities5000`, `admin1CodesASCII`, `countryInfo` | **CC BY 4.0** — attribution required | `https://download.geonames.org/export/dump/readme.txt` (lines 6–7) | Offline place search → lat/lng + IANA time zone. Downloaded at Docker build time; attribution is shown in the site footer. |
-| [Natural Earth](https://www.naturalearthdata.com/) 1:110m land outline | **Public domain** (no attribution required; credited on the map anyway) | naturalearthdata.com terms of use | Simplified to one SVG path in `apps/web/src/assets/data/world-land.ts` for the astrocartography map; bundled, so the map makes no external requests. |
+| [Natural Earth](https://www.naturalearthdata.com/) 1:110m land outline | **Public domain** (no attribution required) | naturalearthdata.com terms of use | Reaches the astrocartography map through the `world-atlas` package (below); bundled with the site, so the map makes no external requests. |
 
 ## Web app (`apps/web`) — runtime
 
@@ -56,6 +56,9 @@ components are used as dependencies or data files.
 | @fontsource/playfair-display (Playfair Display font) | 5.3.0 | SIL OFL-1.1 | ✓ |
 | @fontsource-variable/inter (Inter font) | 5.3.0 | SIL OFL-1.1 | ✓ |
 | @fontsource/noto-sans-symbols (Noto Sans Symbols font) | 5.3.0 | SIL OFL-1.1 | ✓ |
+| [world-atlas](https://github.com/topojson/world-atlas) | 2.0.2 | ISC (package); map data from Natural Earth, public domain | ✓ | Coastlines for the astrocartography map (`land-110m.json`) |
+| [topojson-client](https://github.com/topojson/topojson-client) | 3.1.0 | ISC | ✓ | TopoJSON → GeoJSON for the astrocartography map |
+| [d3-geo](https://github.com/d3/d3-geo) (+ its dependency d3-array 3.2.4, pinned via `overrides`) | 3.1.1 | ISC | ✓ | Equirectangular projection and antimeridian cutting for the astrocartography map |
 
 ## Web app — development only
 

@@ -1,13 +1,34 @@
 import {createUseStyles} from 'react-jss';
 import colors from 'assets/styles/abstracts/color';
+import {reducedMotion} from 'assets/styles/abstracts/mixins';
+
+const spin = (seconds: number, reverse = false) => ({
+    animation: `$spin ${seconds}s linear infinite${reverse ? ' reverse' : ''}`,
+    [reducedMotion]: {animation: 'none'},
+});
 
 const styles = {
+    '@keyframes spin': {
+        from: {transform: 'rotate(0deg)'},
+        to: {transform: 'rotate(360deg)'},
+    },
+    root: {
+        position: 'relative',
+        pointerEvents: 'none',
+    },
+    layer: {
+        position: 'absolute',
+        inset: 0,
+        willChange: 'transform',
+    },
+    spinSlow: spin(420),
+    spinReverse: spin(260, true),
+    spinFast: spin(140),
     svg: {
         display: 'block',
         width: '100%',
         height: 'auto',
         overflow: 'visible',
-        pointerEvents: 'none',
     },
     ring: {fill: 'none', stroke: colors.gold, strokeOpacity: 0.35, strokeWidth: 1.2},
     ringSoft: {fill: 'none', stroke: colors.violet, strokeOpacity: 0.35, strokeWidth: 1},

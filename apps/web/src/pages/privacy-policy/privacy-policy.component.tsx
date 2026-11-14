@@ -35,7 +35,7 @@ function PrivacyPolicyComponent() {
         return <Fragment key={i}>{value}</Fragment>;
     });
 
-    const sections = PRIVACY_POLICY[locale] ?? PRIVACY_POLICY.az;
+    const sections = PRIVACY_POLICY[locale] ?? PRIVACY_POLICY.en;
 
     return (
         <article className={`container ${page}`}>

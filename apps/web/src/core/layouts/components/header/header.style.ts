@@ -47,8 +47,8 @@ const styles = {
         display: 'flex',
         gap: rem(4),
         marginLeft: 'auto',
-        // Tablets and phones use the menu button instead
-        [breakpoint(sizes.breakpoint)]: {display: 'none'},
+        // Tablets and phones use the menu button instead (five links do not fit below ~1100px)
+        [breakpoint(sizes.breakpointLg)]: {display: 'none'},
     },
     // The header's backdrop-filter makes it the containing block for fixed children, so the scrim is
     // positioned against the header: it starts at its bottom edge and covers the rest of the viewport.
@@ -100,7 +100,7 @@ const styles = {
     },
     tools: {
         display: 'flex',
-        [breakpoint(sizes.breakpoint)]: {marginLeft: 'auto'},
+        [breakpoint(sizes.breakpointLg)]: {marginLeft: 'auto'},
         alignItems: 'center',
         gap: rem(8),
         [breakpoint(sizes.breakpointSm)]: {gap: rem(2)},
@@ -140,7 +140,7 @@ const styles = {
     // After iconButton so its display rule wins (same specificity, later in the sheet)
     menuButton: {
         display: 'none',
-        [breakpoint(sizes.breakpoint)]: {display: 'inline-flex'},
+        [breakpoint(sizes.breakpointLg)]: {display: 'inline-flex'},
     },
 };
 

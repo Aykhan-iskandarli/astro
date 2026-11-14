@@ -21,8 +21,11 @@ const PersonalTransitsComponent = () => {
     const locale = useStore('locale');
     const birthInput = useStore('birthInput');
     const saved = useStore('savedCharts');
+    const primaryId = useStore('primaryChartId');
     const classes = usePersonalTransitsStyles();
-    const [choice, setChoice] = useState<string>(birthInput ? CURRENT : saved[0]?.id ?? CURRENT);
+    const [choice, setChoice] = useState<string>(
+        // The chart open in this session first, then the profile marked as "my chart", then the newest saved one
+        birthInput ? CURRENT : (saved.find((s) => s.id === primaryId) ?? saved[0])?.id ?? CURRENT);
     const [now] = useState(() => new Date().toISOString());
 
     const input: IBirthInput | null = choice === CURRENT ? birthInput : saved.find((s) => s.id === choice)?.input ?? null;

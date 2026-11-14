@@ -2654,25 +2654,200 @@
       "9": "H9: inner joy, spiritual maturity and marriage (related to the navamsa)."
     }
   },
-  "cartography": {
-    "intro": "Astrocartography shows where on Earth each planet was on the horizon (ASC/DSC) or the meridian (MC/IC) at your birth. Traditionally, near a planet’s line its themes are emphasised.",
-    "types": {
-      "mc": {
-        "name": "MC line",
-        "meaning": "Career, recognition and public role."
-      },
-      "ic": {
-        "name": "IC line",
-        "meaning": "Home, family and putting down roots."
-      },
-      "asc": {
-        "name": "ASC line",
-        "meaning": "Identity, energy and self-expression."
-      },
-      "dsc": {
-        "name": "DSC line",
-        "meaning": "Relationships and partnership."
-      }
+  "acg": {
+    "sun": {
+      "mc": "Here you are seen: recognition, leadership and a clear public role come more easily.",
+      "ic": "A place to feel at home in yourself: family, roots and a strong private base.",
+      "asc": "You feel vital and confident here; your personality shines and others notice you.",
+      "dsc": "Important partners and confident, warm people come into your life here."
+    },
+    "moon": {
+      "mc": "Public life takes on an emotional, caring tone; you may work with people or the public.",
+      "ic": "One of the strongest places to feel at home: emotional safety, family and belonging.",
+      "asc": "You are more sensitive and open here; moods and intuition come to the surface.",
+      "dsc": "Relationships here are emotional and nurturing; you look for closeness and care."
+    },
+    "mercury": {
+      "mc": "Good for careers in communication, writing, teaching, trade or technology.",
+      "ic": "A lively home life full of conversation, study and ideas.",
+      "asc": "Your mind is quick and curious here; you talk, learn and connect easily.",
+      "dsc": "You meet clever, talkative people; partnerships are built on dialogue and exchange."
+    },
+    "venus": {
+      "mc": "Charm helps your career here; good for art, beauty, diplomacy and public popularity.",
+      "ic": "A pleasant, beautiful home and harmonious family life; a place to enjoy life.",
+      "asc": "You feel attractive and at ease here; people respond to your warmth and style.",
+      "dsc": "A classic line for love and partnership: romance and harmonious relationships."
+    },
+    "mars": {
+      "mc": "Ambition and drive rise here: competitive careers, leadership, but also more conflict.",
+      "ic": "Energy goes into home and property; there may be tension or a lot of activity at home.",
+      "asc": "You feel energetic, bold and impatient here; good for sport and action, watch for accidents.",
+      "dsc": "Passionate but combative relationships; strong-willed partners and open rivals."
+    },
+    "jupiter": {
+      "mc": "One of the luckiest lines for career: growth, recognition and opportunity.",
+      "ic": "A generous, expansive home life; a good place to settle and grow a family.",
+      "asc": "You feel optimistic and confident here; life seems to open up.",
+      "dsc": "Generous, helpful partners and beneficial relationships, in love and in business."
+    },
+    "saturn": {
+      "mc": "Career through hard work and responsibility; slow but lasting achievement, with pressure.",
+      "ic": "Home can feel heavy or demanding; also a place to build solid, long-term foundations.",
+      "asc": "You feel more serious and restricted here; discipline grows, spontaneity fades.",
+      "dsc": "Serious, committed and sometimes difficult relationships; older or demanding partners."
+    },
+    "uranus": {
+      "mc": "Unusual, independent careers and sudden changes in direction; good for innovation.",
+      "ic": "An unsettled or unconventional home life; frequent moves and a need for freedom.",
+      "asc": "You feel freer and more original here, but also restless; life brings surprises.",
+      "dsc": "Exciting but unstable relationships; unusual partners and a need for space."
+    },
+    "neptune": {
+      "mc": "Careers in art, music, film, healing or spirituality; your public image can be vague.",
+      "ic": "A dreamy, spiritual home; beautiful, but practical matters can get confused.",
+      "asc": "You become more sensitive, intuitive and impressionable here; protect your energy.",
+      "dsc": "Romantic, idealised relationships; beautiful, but see partners as they really are."
+    },
+    "pluto": {
+      "mc": "Power and influence in your career, often through deep transformation and intense situations.",
+      "ic": "Deep transformation of home and family; old patterns come up to be healed.",
+      "asc": "An intense line: you change deeply here and feel your own power.",
+      "dsc": "Intense, transformative relationships with strong attraction and power dynamics."
+    }
+  },
+  "glossary": {
+    "natalChart": {
+      "term": "Natal chart",
+      "definition": "A map of the sky for the exact moment and place of your birth: where the Sun, Moon and planets were in the zodiac and in the houses."
+    },
+    "sign": {
+      "term": "Zodiac sign",
+      "definition": "One of twelve 30° sections of the ecliptic (the Sun's apparent path). A planet's sign describes how its energy is expressed."
+    },
+    "house": {
+      "term": "House",
+      "definition": "One of twelve sectors of the chart, based on the time and place of birth. Houses show the areas of life where planetary energies play out."
+    },
+    "houseSystem": {
+      "term": "House system",
+      "definition": "The method used to divide the sky into twelve houses (Placidus, Koch, Whole Sign, Equal…). Different systems can place a planet in a different house."
+    },
+    "ascendant": {
+      "term": "Ascendant (ASC)",
+      "definition": "The zodiac degree rising on the eastern horizon at birth. It describes how you meet the world and starts the 1st house."
+    },
+    "midheaven": {
+      "term": "Midheaven (MC)",
+      "definition": "The highest point of the ecliptic in the sky at birth. It relates to career, reputation and direction in life."
+    },
+    "aspect": {
+      "term": "Aspect",
+      "definition": "A meaningful angle between two points in the chart (0°, 60°, 90°, 120°, 180°…). Aspects show how planetary energies interact."
+    },
+    "orb": {
+      "term": "Orb",
+      "definition": "How far an aspect is from exact, in degrees. The smaller the orb, the stronger the aspect."
+    },
+    "applying": {
+      "term": "Applying / separating",
+      "definition": "An applying aspect is getting closer to exact (building up); a separating aspect has passed exactness (fading)."
+    },
+    "retrograde": {
+      "term": "Retrograde",
+      "definition": "Seen from Earth, a planet appears to move backwards through the zodiac for a while. Traditionally a time to review that planet's themes."
+    },
+    "station": {
+      "term": "Station",
+      "definition": "The moment a planet appears to stand still before turning retrograde (SR) or direct (SD). Its themes are felt strongly around stations."
+    },
+    "dignity": {
+      "term": "Essential dignity",
+      "definition": "How comfortable a planet is in a sign: domicile and exaltation strengthen it, detriment and fall challenge it."
+    },
+    "sect": {
+      "term": "Sect (day / night chart)",
+      "definition": "Whether the Sun was above (day) or below (night) the horizon at birth. Traditional techniques such as firdaria depend on it."
+    },
+    "nodes": {
+      "term": "Lunar nodes",
+      "definition": "The two points where the Moon's orbit crosses the ecliptic. The North Node is linked to growth and direction, the South Node to the familiar past."
+    },
+    "lilith": {
+      "term": "Black Moon Lilith",
+      "definition": "The far point of the Moon's orbit (mean apogee). It is associated with raw, untamed instincts and what we suppress."
+    },
+    "partOfFortune": {
+      "term": "Part of Fortune",
+      "definition": "A calculated point (Ascendant + Moon − Sun by day) linked to well-being and where things flow easily."
+    },
+    "transit": {
+      "term": "Transit",
+      "definition": "Where a planet is in the sky now, compared with your natal chart. Transits describe what is being activated in your life at a given time."
+    },
+    "progression": {
+      "term": "Secondary progression",
+      "definition": "A forecasting method where each day after birth stands for one year of life (\"a day for a year\")."
+    },
+    "solarArc": {
+      "term": "Solar arc",
+      "definition": "All natal points are moved forward by the same arc the progressed Sun has travelled (about 1° a year)."
+    },
+    "return": {
+      "term": "Solar / lunar return",
+      "definition": "A chart for the moment the Sun (yearly) or Moon (monthly) returns to its exact natal position; it sets the tone for the cycle ahead."
+    },
+    "profection": {
+      "term": "Annual profection",
+      "definition": "A traditional technique: each year of life activates the next sign from the Ascendant; the ruler of that sign becomes the lord of the year."
+    },
+    "firdaria": {
+      "term": "Firdaria",
+      "definition": "A Persian system of planetary periods: life is divided into fixed-length chapters, each ruled by a planet, with seven sub-periods."
+    },
+    "synastry": {
+      "term": "Synastry",
+      "definition": "Comparing two natal charts to see how two people's planets interact."
+    },
+    "composite": {
+      "term": "Composite chart",
+      "definition": "A single chart built from the midpoints of two people's planets; it describes the relationship itself."
+    },
+    "voidOfCourse": {
+      "term": "Void-of-course Moon",
+      "definition": "The time between the Moon's last major aspect in a sign and its entry into the next sign. Traditionally poor for starting new things."
+    },
+    "lunation": {
+      "term": "Lunation",
+      "definition": "A phase of the Moon's monthly cycle: New Moon, First Quarter, Full Moon and Last Quarter."
+    },
+    "ingress": {
+      "term": "Ingress",
+      "definition": "The moment a planet enters a new zodiac sign."
+    },
+    "astrocartography": {
+      "term": "Astrocartography",
+      "definition": "A world map showing where each planet was rising, setting, culminating or at its lowest point at the moment of your birth."
+    },
+    "ayanamsa": {
+      "term": "Ayanamsa",
+      "definition": "The difference between the tropical and sidereal zodiacs (about 24° today). Vedic astrology uses the sidereal zodiac (Lahiri)."
+    },
+    "dasha": {
+      "term": "Dasha",
+      "definition": "The Vedic system of planetary periods (Vimshottari): a 120-year cycle whose starting point depends on the Moon's nakshatra."
+    },
+    "nakshatra": {
+      "term": "Nakshatra",
+      "definition": "One of 27 lunar mansions (13°20′ each) used in Vedic astrology."
+    },
+    "element": {
+      "term": "Element",
+      "definition": "Fire, earth, air or water: the four temperaments the signs are grouped into."
+    },
+    "modality": {
+      "term": "Modality",
+      "definition": "Cardinal, fixed or mutable: how a sign acts (starting, sustaining or adapting)."
     }
   }
 }

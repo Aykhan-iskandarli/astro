@@ -174,23 +174,3 @@ export class OtherSystemsModel {
         this.kua = kua ?? null;
     }
 }
-
-export interface ICartographyLine {
-    planet: string;
-    type: 'mc' | 'ic' | 'asc' | 'dsc';
-    points: [number, number][];
-}
-
-export class CartographyModel {
-    public lines: ICartographyLine[] = [];
-    public birthplace: {latitude: number; longitude: number} | null = null;
-
-    constructor(item: any) {
-        this._set(item);
-    }
-
-    private _set({lines, birthplace}: any) {
-        this.lines = lines ?? [];
-        this.birthplace = birthplace ?? null;
-    }
-}

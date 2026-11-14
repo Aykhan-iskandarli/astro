@@ -1,4 +1,4 @@
-import {lazy, Suspense, useCallback, useMemo, useRef, useState} from 'react';
+import {lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {motion, useInView, useMotionValueEvent, useReducedMotion, useScroll} from 'framer-motion';
 import classNames from 'classnames';
 import useLocalization, {useContent} from 'assets/lang';
@@ -26,6 +26,22 @@ const SolarJourneyComponent = ({id}: ISolarJourney) => {
     const classes = useSolarJourneyStyles();
     const sectionRef = useRef<HTMLElement>(null);
     const near = useInView(sectionRef, {margin: '600px 0px 600px 0px'});
+    // The 3D scene (three.js, ~900 KB) is the heaviest part of the site. The hero fills the first screen, so the
+    // section is already "near" on load; wait for the first scroll or keypress instead of loading it up front.
+    const [engaged, setEngaged] = useState(() => typeof window !== 'undefined' && window.scrollY > 0);
+    useEffect(() => {
+        if (engaged) return undefined;
+        const engage = () => setEngaged(true);
+        const opts = {passive: true, once: true} as const;
+        window.addEventListener('scroll', engage, opts);
+        window.addEventListener('keydown', engage, {once: true});
+        window.addEventListener('touchmove', engage, opts);
+        return () => {
+            window.removeEventListener('scroll', engage);
+            window.removeEventListener('keydown', engage);
+            window.removeEventListener('touchmove', engage);
+        };
+    }, [engaged]);
     const onScreen = useInView(sectionRef, {margin: '0px'});
     const webgl = useMemo(() => hasWebGL(), []);
     const immersive = !reduce;
@@ -75,7 +91,7 @@ const SolarJourneyComponent = ({id}: ISolarJourney) => {
         >
             <div className={classes.sticky}>
                 <div className={classes.scene}>
-                    {near && webgl ? (
+                    {near && engaged && webgl ? (
                         <Suspense fallback={<div className={classes.sceneFallback}/>}>
                             <SolarSceneComponent progress={scrollYProgress} active={onScreen}/>
                         </Suspense>
