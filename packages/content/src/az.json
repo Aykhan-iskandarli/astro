@@ -3429,5 +3429,41 @@
         "pisces": "Assendentiniz Balıqlardadır: dünyaya yumşaq, xəyalpərəst və həssas görünürsünüz. İlk təəssüratınız mülayim və sirli olur; gözlər dərin və uzaq baxır. Ətrafınızın əhvalını asanlıqla hiss edirsiniz. Başqaları sizi mehriban və ilhamverici kimi qəbul edir."
       }
     }
+  },
+  "portrait": {
+    "chartRuler": {
+      "1": "Xəritə hökmdarı sizin öz evinizdədir: kimlik və həyat yolu üst-üstə düşür. Özünüz olmaq, təşəbbüs göstərmək və həyatı öz addımınızla başlatmaq sizin üçün təbiidir. Çox vaxt işlər başqalarından asılı olmadan, sizin impulsunuzdan başlayır.",
+      "2": "Xəritə hökmdarı pul və dəyərlər evindədir: həyat enerjiniz qazanmağa, qurmağa və nəyin dəyərli olduğunu müəyyənləşdirməyə yönəlir. Maddi təhlükəsizlik və öz istedadlarınızı qiymətləndirmək həyatınızın əsas mövzusudur. Özünüdəyər və gəlir bir-birinə bağlıdır.",
+      "3": "Xəritə hökmdarı ünsiyyət evindədir: həyatınız söz, öyrənmə, yazı, qısa səfərlər və yaxın mühit üzərindən axır. Məlumat toplamaq və başqalarına çatdırmaq sizin enerjinizi artırır. Qardaş-bacılar və qonşular mühüm rol oynaya bilər.",
+      "4": "Xəritə hökmdarı ev və kök evindədir: həyat enerjiniz ailəyə, yaşayış yerinə və daxili təhlükəsizliyə yönəlir. Özünüzü harada evdə hiss etdiyiniz hər şeyi müəyyən edir. Uşaqlıq mühiti və valideynlər həyat boyu təsirini saxlayır.",
+      "5": "Xəritə hökmdarı yaradıcılıq evindədir: həyat enerjiniz özünüifadə, romantika, oyun və uşaqlar üzərindən axır. Zövq almaq və səhnədə olmaq sizin üçün həyatın mənasıdır. Risk götürmək və ürəklə yaşamaq sizin yolunuzdur.",
+      "6": "Xəritə hökmdarı iş və gündəlik rejim evindədir: həyat enerjiniz xidmətə, təkmilləşməyə və sağlamlığa yönəlir. Faydalı olmaq və işi yaxşı görmək sizin üçün məna verir. Bədənə və rejimə qayğı həyatınızın keyfiyyətini birbaşa təyin edir.",
+      "7": "Xəritə hökmdarı münasibət evindədir: həyatınız tərəfdaşlıq, nikah və yaxın əməkdaşlıq vasitəsilə formalaşır. Özünüzü başqasının gözü ilə tanıyırsınız və “biz” mövzusu mərkəzdədir. Doğru tərəfdaşın seçimi həyat yolunu dəyişir.",
+      "8": "Xəritə hökmdarı dəyişim evindədir: həyat enerjiniz dərin münasibətlərə, ortaq resurslara və böhrandan yenilənməyə yönəlir. Sirlər, intimlik, miras və psixoloji dərinlik həyatınızın əsas mövzularıdır. Çox vaxt ən böyük dəyişikliklər itki və yenidən doğuluşdan keçir.",
+      "9": "Xəritə hökmdarı dünyagörüşü evindədir: həyat enerjiniz uzaq səyahətlərə, təhsilə, fəlsəfəyə və məna axtarışına yönəlir. Dünyanı genişləndirən hər şey sizi canlandırır. Xaricdə təcrübə, hüquq və inanc həyat yolunun vacib hissəsidir.",
+      "10": "Xəritə hökmdarı karyera evindədir: həyat enerjiniz peşəyə, nailiyyətə və ictimai mövqeyə yönəlir. Dünyada iz qoymaq sizin üçün həyat məqsədidir. Karyera çox vaxt şəxsiyyətinizin əsas ifadəsidir.",
+      "11": "Xəritə hökmdarı dostluq və məqsəd evindədir: həyat enerjiniz qruplara, icmalara və gələcək ideallara yönəlir. Düzgün insanlar dairəsi və ortaq layihələr sizi irəli aparır. Arzularınıza qoşulan insanlar həyatınızın əsas resursudur.",
+      "12": "Xəritə hökmdarı gizli olanın evindədir: həyat enerjiniz daxili aləmə, ruhaniyyətə və kənardan görünməyən işlərə yönəlir. Tənhalıq və düşünmək sizin üçün güc mənbəyidir. Çox vaxt həyat yolu yalnız zaman keçdikcə aydın olur."
+    },
+    "sect": {
+      "day": "Gündüz xəritəsidir: Günəş üfüqün üstündədir. Ənənəvi olaraq bu xəritədə Günəş, Yupiter və Saturn daha yaxşı işləyir, açıq, fəal və şüurlu enerji önə çıxır. Mars isə daha çətin planet sayılır.",
+      "night": "Gecə xəritəsidir: Günəş üfüqün altındadır. Ənənəvi olaraq bu xəritədə Ay, Venera və Mars daha yaxşı işləyir, daxili, qəbuledici və həssas enerji önə çıxır. Saturn isə daha çətin planet sayılır."
+    },
+    "half": {
+      "upper": "Planetlərin çoxu üfüqün üstündədir (7–12-ci evlər): həyatınız çox vaxt xaricə, ictimaiyyətə və başqaları ilə əlaqəyə yönəlir. Siz görünən, cəmiyyətdə fəal və nəticələri ilə tanınan insan ola bilərsiniz.",
+      "lower": "Planetlərin çoxu üfüqün altındadır (1–6-cı evlər): həyatınız daha çox daxili, şəxsi və subyektivdir. Kənar tanınmadan çox daxili inkişaf və yaxın dairə sizin üçün önəmlidir.",
+      "east": "Planetlərin çoxu şərq yarımkürəsindədir (10–3-cü evlər): həyatınızı çox vaxt özünüz istiqamətləndirirsiniz. Təşəbbüs, müstəqillik və öz seçimləriniz sizin üçün vacibdir; sizə şərait yaratmaq əvəzinə siz şərait yaradırsınız.",
+      "west": "Planetlərin çoxu qərb yarımkürəsindədir (4–9-cu evlər): həyatınız çox vaxt başqaları və şərait vasitəsilə formalaşır. Əməkdaşlıq, uyğunlaşma və cavab vermək sizin gücünüzdür; öz istəyinizi də açıq demək dərsinizdir."
+    },
+    "retrograde": {
+      "mercury": "Retroqrad Merkuri daha içəridən düşünən zehin verir: əvvəlcə düşünür, sonra danışırsınız. Fikirlərinizi sözə çevirmək vaxt apara bilər, amma dərinlik və orijinallıq güclü tərəfinizdir.",
+      "venus": "Retroqrad Venera sevgi və dəyərləri daha dərin və seçici yaşamaq deməkdir. Münasibətlərdə və pulda öz yolunuzu tapmaq vaxt ala bilər; səthi bağlılıqlar sizi qane etmir.",
+      "mars": "Retroqrad Mars enerjinin içəriyə yönəlməsidir: hirsi və istəyi dərhal ifadə etmək əvəzinə saxlayırsınız. Hərəkət tərzi qeyri-adi və hesablı olur; enerjini şüurlu seçmək kömək edir.",
+      "jupiter": "Retroqrad Yupiter inamı və mənanı daxildə axtarmaq deməkdir. Hazır inanclar sizi qane etmir; öz həqiqətinizi öz təcrübənizdən çıxarırsınız.",
+      "saturn": "Retroqrad Saturn daxili məsuliyyət və öz-özünə qoyduğunuz hədləri göstərir. Xarici avtoritetlərdən çox özünüzü yoxlayırsınız; yetkinlik adətən başqalarından sonra, amma daha möhkəm gəlir.",
+      "uranus": "Retroqrad Uran fərdiliyin içəridən yaşandığını göstərir: fərqli olmaq xaricdən az görünür, amma düşüncənizdə güclüdür. Nəsil dəyişimini daha çox daxili yaşayırsınız.",
+      "neptune": "Retroqrad Neptun ideal və intuisiyanın daha şəxsi və daxili olduğunu göstərir. Nəslin xəyallarını öz yolunuzla yaşayırsınız; ruhani axtarış çox vaxt tənha və dərin olur.",
+      "pluto": "Retroqrad Pluton dərin dəyişimin içəridə baş verdiyini göstərir: güc və nəzarət mövzuları xarici mübarizədən çox daxili işdir. Nəslin dəyişimini şəxsi səviyyədə keçirsiniz."
+    }
   }
 }

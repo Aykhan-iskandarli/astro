@@ -23,6 +23,7 @@ import ChinesePanelComponent from '../chinese-panel/chinese-panel.component';
 import ForecastPanelComponent from '../forecast-panel/forecast-panel.component';
 import TabStripComponent from '../tab-strip/tab-strip.component';
 import BigThreeComponent from '../big-three/big-three.component';
+import ChartPortraitComponent from '../chart-portrait/chart-portrait.component';
 import ExtraPointsComponent from '../extra-points/extra-points.component';
 import KarmicPanelComponent from '../karmic-panel/karmic-panel.component';
 import NatalDetailsComponent from '../natal-details/natal-details.component';
@@ -129,6 +130,7 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                     {key: 'natal', label: translate('tab_natal'), children: (
                         <div className={classes.tabBody}>
                             <BigThreeComponent chart={chart} onSelect={handleSelectFromSummary}/>
+                            <ChartPortraitComponent chart={chart}/>
                             <div ref={stageRef} className={classes.stage}>
                                 <div className={classes.wheelWrap}>
                                     <ChartWheelComponent chart={chart} activeId={hovered} selectedId={selected} onActivate={handleActivate} onSelect={handleSelect}/>

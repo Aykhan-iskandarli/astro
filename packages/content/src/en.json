@@ -3429,5 +3429,41 @@
         "pisces": "Your Ascendant is in Pisces: you meet the world as soft, dreamy and sensitive. Your first impression is gentle and mysterious; the eyes look deep and far. You easily sense the mood around you. Others take you as kind and inspiring."
       }
     }
+  },
+  "portrait": {
+    "chartRuler": {
+      "1": "The chart ruler sits in the house of the self: identity and life path coincide. Being yourself, taking initiative and starting life on your own steps come naturally. Things often begin from your own impulse, independent of others.",
+      "2": "The chart ruler is in the house of money and values: your life energy goes into earning, building and deciding what is worth having. Material security and valuing your own talents are central themes. Self-worth and income are linked.",
+      "3": "The chart ruler is in the house of communication: your life flows through words, learning, writing, short trips and the near environment. Collecting information and passing it on raises your energy. Siblings and neighbours can play an important part.",
+      "4": "The chart ruler is in the house of home and roots: your energy goes into family, where you live and inner security. Where you feel at home decides everything. The childhood environment and parents keep their influence throughout life.",
+      "5": "The chart ruler is in the house of creativity: your energy flows through self-expression, romance, play and children. Enjoyment and being on stage give life meaning. Taking risks and living from the heart is your way.",
+      "6": "The chart ruler is in the house of work and daily routine: your energy goes into service, improvement and health. Being useful and doing the job well gives you meaning. Looking after the body and routine directly decides your quality of life.",
+      "7": "The chart ruler is in the house of relationships: your life is shaped by partnership, marriage and close collaboration. You get to know yourself through someone else's eyes and the theme of “we” is central. Choosing the right partner changes the life path.",
+      "8": "The chart ruler is in the house of transformation: your energy goes into deep relationships, shared resources and renewal after crisis. Secrets, intimacy, inheritance and psychological depth are central themes. The biggest changes often come through loss and rebirth.",
+      "9": "The chart ruler is in the house of outlook: your energy goes into long journeys, education, philosophy and the search for meaning. Anything that widens the world energises you. Experience abroad, law and belief are important parts of the path.",
+      "10": "The chart ruler is in the house of career: your energy goes into profession, achievement and public standing. Leaving a mark on the world is your life purpose. Career is often the main expression of who you are.",
+      "11": "The chart ruler is in the house of friends and goals: your energy goes into groups, communities and future ideals. The right circle of people and shared projects carry you forward. People who join your dreams are your main resource.",
+      "12": "The chart ruler is in the house of the hidden: your energy goes into the inner world, spirituality and work unseen from outside. Solitude and reflection are sources of strength. The life path often becomes clear only with time."
+    },
+    "sect": {
+      "day": "This is a day chart: the Sun is above the horizon. Traditionally the Sun, Jupiter and Saturn work better in such a chart, and open, active, conscious energy comes forward. Mars is considered the more difficult planet.",
+      "night": "This is a night chart: the Sun is below the horizon. Traditionally the Moon, Venus and Mars work better in such a chart, and inward, receptive, sensitive energy comes forward. Saturn is considered the more difficult planet."
+    },
+    "half": {
+      "upper": "Most planets are above the horizon (houses 7–12): your life is often directed outward, to the public and to other people. You may be visible, active in society and known by your results.",
+      "lower": "Most planets are below the horizon (houses 1–6): your life is more inward, personal and subjective. Inner development and a close circle matter more to you than outside recognition.",
+      "east": "Most planets are in the eastern half (houses 10–3): you usually steer your own life. Initiative, independence and your own choices matter; rather than waiting for circumstances you create them.",
+      "west": "Most planets are in the western half (houses 4–9): your life is often shaped through other people and circumstances. Cooperation, adapting and responding are your strengths; saying what you want openly is your lesson."
+    },
+    "retrograde": {
+      "mercury": "A retrograde Mercury gives a more inward mind: you think first and speak later. Putting thoughts into words may take time, but depth and originality are your strengths.",
+      "venus": "A retrograde Venus means experiencing love and values more deeply and selectively. Finding your own way in relationships and money may take time; shallow attachments do not satisfy you.",
+      "mars": "A retrograde Mars turns energy inward: instead of expressing anger or desire at once you hold it. The way you act is unusual and measured; choosing where to put energy consciously helps.",
+      "jupiter": "A retrograde Jupiter means looking for faith and meaning within. Ready-made beliefs do not satisfy you; you draw your own truth from your own experience.",
+      "saturn": "A retrograde Saturn shows inner responsibility and the limits you set yourself. You test yourself more than outside authorities do; maturity usually arrives later than for others, but more firmly.",
+      "uranus": "A retrograde Uranus shows individuality lived from within: being different shows less outwardly but is strong in your thinking. You experience generational change more inwardly.",
+      "neptune": "A retrograde Neptune shows ideals and intuition that are more personal and inward. You live the dreams of your generation in your own way; the spiritual search is often solitary and deep.",
+      "pluto": "A retrograde Pluto shows deep change happening inside: themes of power and control are inner work more than outer struggle. You go through the generation's transformation on a personal level."
+    }
   }
 }

@@ -614,6 +614,27 @@ export const az = {
     read_house: '{name}',
     read_aspects: 'Aspektlər',
 
+    // chart portrait
+    portrait_title: 'Xəritənin portreti',
+    portrait_intro: 'Xəritədən sayılan ilk vacib şeylər: hökmdar, sekt, planetlərin yığıldığı yer, retroqradlar.',
+    portrait_ruler: 'Xəritə hökmdarı',
+    portrait_ruler_modern: 'Xəritə hökmdarı (müasir)',
+    portrait_sect: 'Sekt',
+    portrait_sect_day: 'Gündüz xəritəsi',
+    portrait_sect_night: 'Gecə xəritəsi',
+    portrait_halves: 'Yarımkürələr',
+    portrait_halves_counts: 'Üfüqdən yuxarı {upper}, aşağı {lower} · Şərq {east}, Qərb {west}',
+    portrait_balanced: 'Yarımkürələr tarazlıdır: heç birində {n} və ya daha çox planet yoxdur.',
+    portrait_stellium: 'Stellium',
+    portrait_stellium_sign: '{n} planet {sign} bürcündədir ({planets}). Bu bürcün mövzuları ({keywords}) xəritənizdə çox yüksək səslə danışır.',
+    portrait_stellium_house: '{house}: {n} planet ({planets}). Həyatınızda {theme} mövzuları əsas yer tutur.',
+    portrait_dominant: 'Dominant planet',
+    portrait_dominant_text: '{planet} bir neçə əsas nöqtənin hökmdarıdır ({of}). Bu planetin mövzuları xəritənizin ümumi tonunu təyin edir.',
+    portrait_asc: 'Assendent',
+    portrait_retro: 'Retroqrad planetlər',
+    portrait_note: 'Yarımkürə vurğusu üçün on planetdən {n} və ya daha çoxu ənənəvi şərt kimi götürülür. Mətnlər ənənəvi mənalardır.',
+    portrait_time_unknown: 'Doğum saatı bilinmir: hökmdar, sekt və yarımkürələr göstərilmir. Mətnlər ənənəvi mənalardır.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

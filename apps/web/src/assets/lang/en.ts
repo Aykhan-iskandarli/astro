@@ -616,6 +616,27 @@ export const en: Record<keyof typeof az, string> = {
     read_house: 'The {name}',
     read_aspects: 'Aspects',
 
+    // chart portrait
+    portrait_title: 'The chart portrait',
+    portrait_intro: 'The first important things counted from the chart: the ruler, the sect, where the planets gather and the retrogrades.',
+    portrait_ruler: 'Chart ruler',
+    portrait_ruler_modern: 'Chart ruler (modern)',
+    portrait_sect: 'Sect',
+    portrait_sect_day: 'Day chart',
+    portrait_sect_night: 'Night chart',
+    portrait_halves: 'Halves of the chart',
+    portrait_halves_counts: 'Above the horizon {upper}, below {lower} · East {east}, West {west}',
+    portrait_balanced: 'The halves are balanced: none holds {n} or more planets.',
+    portrait_stellium: 'Stellium',
+    portrait_stellium_sign: '{n} planets are in {sign} ({planets}). The themes of this sign ({keywords}) speak very loudly in your chart.',
+    portrait_stellium_house: 'The {house} holds {n} planets ({planets}). Themes of {theme} take a central place in your life.',
+    portrait_dominant: 'Dominant planet',
+    portrait_dominant_text: '{planet} rules several key points ({of}). Its themes set the general tone of your chart.',
+    portrait_asc: 'Ascendant',
+    portrait_retro: 'Retrograde planets',
+    portrait_note: 'For emphasis of a half, {n} or more of the ten planets is the traditional convention. The texts give traditional meanings.',
+    portrait_time_unknown: 'Birth time unknown: the ruler, sect and halves are not shown. The texts give traditional meanings.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',
