@@ -9,6 +9,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {ITranslationKey} from 'assets/lang/lang';
 import {useGetTimeline} from '../../actions/natal-chart.query';
 import {TimelineEventModel} from '../../models/timeline.model';
+import TransitReadingComponent from 'pages/natal-chart/components/transit-reading/transit-reading.component';
 import {useTransitTimelineStyles} from './transit-timeline.style';
 
 const PLANETS = ['mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
@@ -85,6 +86,7 @@ const TransitTimelineComponent = () => {
                                         {aspectPairText(locale, e.transit!, e.natal!, e.aspect!) ? (
                                             <p className={classes.text}>{aspectPairText(locale, e.transit!, e.natal!, e.aspect!)}</p>
                                         ) : null}
+                                        <TransitReadingComponent transit={e.transit!} natal={e.natal!} aspect={e.aspect!}/>
                                     </div>
                                 </li>
                             ))}

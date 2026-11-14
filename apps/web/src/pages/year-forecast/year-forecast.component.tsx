@@ -16,6 +16,7 @@ import {ITranslationKey} from 'assets/lang/lang';
 import {useGetYear} from 'pages/natal-chart/actions/natal-chart.query';
 import RetrogradeListComponent from 'pages/natal-chart/components/retrograde-list/retrograde-list.component';
 import LunationListComponent from 'pages/sky/components/lunation-list/lunation-list.component';
+import TransitReadingComponent from 'pages/natal-chart/components/transit-reading/transit-reading.component';
 import {useYearForecastStyles} from './year-forecast.style';
 
 const MIN_YEAR = 1801;
@@ -184,6 +185,7 @@ function YearForecastComponent() {
                                                             {e.passes > 1 ? <span className={classes.muted}>{` · ${translate('timeline_pass', {n: e.pass, total: e.passes})}`}</span> : null}
                                                         </p>
                                                         {aspectPairText(locale, e.transit!, e.natal!, e.aspect!) ? <p className={classes.text}>{aspectPairText(locale, e.transit!, e.natal!, e.aspect!)}</p> : null}
+                                                        <TransitReadingComponent transit={e.transit!} natal={e.natal!} aspect={e.aspect!}/>
                                                     </div>
                                                 </li>
                                             ))}

@@ -11,6 +11,7 @@ import {useChartChoice} from 'core/helpers/use-chart-choice';
 import {useGetTransits} from 'pages/natal-chart/actions/natal-chart.query';
 import PersonalMoonDayComponent from '../personal-moon-day/personal-moon-day.component';
 import PersonalLunationsComponent from '../personal-lunations/personal-lunations.component';
+import TransitReadingComponent from 'pages/natal-chart/components/transit-reading/transit-reading.component';
 import {usePersonalTransitsStyles} from './personal-transits.style';
 
 const MAX_ITEMS = 8;
@@ -67,6 +68,7 @@ const PersonalTransitsComponent = () => {
                                     {a.applying !== null ? ` · ${translate(a.applying ? 'applying' : 'separating')}` : ''}
                                 </p>
                                 {aspectPairText(locale, a.p1!, a.p2!, a.type!) ? <p className={classes.text}>{aspectPairText(locale, a.p1!, a.p2!, a.type!)}</p> : null}
+                                <TransitReadingComponent transit={a.p1!} natal={a.p2!} aspect={a.type!}/>
                             </div>
                         </li>
                     ))}

@@ -45,3 +45,16 @@ describe('aspectPairText', () => {
         expect(aspectPairText('az', 'saturn', 'pluto', 'trine')).toBe(aspectPairText('az', 'pluto', 'saturn', 'square'));
     });
 });
+
+describe('transit reading coverage', () => {
+    it('has a text for every transiting planet, aspect type and natal point the transit lists can show', async () => {
+        await loadContent('en');
+        for (const lang of ['az', 'en'] as const) {
+            const tr = getContent(lang).transformations as {planet: object; aspect: object; target: object; cycle: Record<string, {name: string; text: string}>};
+            for (const id of ['mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto']) expect(Object.keys(tr.planet)).toContain(id);
+            for (const id of ['conjunction', 'sextile', 'square', 'trine', 'opposition']) expect(Object.keys(tr.aspect)).toContain(id);
+            for (const id of ['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto', 'asc', 'mc']) expect(Object.keys(tr.target)).toContain(id);
+            for (const c of Object.values(tr.cycle)) expect(c.name && c.text).toBeTruthy();
+        }
+    });
+});

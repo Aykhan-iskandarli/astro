@@ -16,6 +16,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {ITranslationKey} from 'assets/lang/lang';
 import {useGetTransformations} from 'pages/natal-chart/actions/natal-chart.query';
 import {IEpisode} from 'pages/natal-chart/models/transformations.model';
+import TransitReadingComponent from 'pages/natal-chart/components/transit-reading/transit-reading.component';
 import {useTransformationsStyles} from './transformations.style';
 
 const MIN_YEAR = 1801;
@@ -95,26 +96,7 @@ function TransformationsComponent() {
                     })}
                 </p>
                 <p className={classes.text}>{short}</p>
-                <details className={classes.full}>
-                    <summary>{translate('tr_read_full')}</summary>
-                    {cycle ? (
-                        <section>
-                            <h5>{translate('tr_part_cycle')}: {cycle.name}</h5>
-                            <p>{cycle.text}</p>
-                        </section>
-                    ) : null}
-                    <section>
-                        <h5>{translate('tr_part_planet')}: {name(e.transit)}</h5>
-                        <p>{tr.planet[e.transit]}</p>
-                    </section>
-                    <section>
-                        <h5>{translate('tr_part_aspect')}: {content.aspects[e.aspect as keyof typeof content.aspects]?.name}</h5>
-                        <p>{tr.aspect[e.aspect]}</p>
-                    </section>
-                    <section>
-                        <h5>{translate('tr_part_target')}: {name(e.natal)}</h5>
-                        <p>{tr.target[e.natal]}</p>
-                    </section>
+                <TransitReadingComponent transit={e.transit} natal={e.natal} aspect={e.aspect}>
                     <section>
                         <h5>{translate('tr_passes')}</h5>
                         <ul className={classes.passes}>
@@ -126,7 +108,7 @@ function TransformationsComponent() {
                             ))}
                         </ul>
                     </section>
-                </details>
+                </TransitReadingComponent>
             </li>
         );
     };
