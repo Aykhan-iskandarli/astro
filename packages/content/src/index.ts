@@ -75,10 +75,18 @@ export const houseSentence = (lang: ContentLang, pointId: string, house: number)
     return specific ?? c.houses[String(house) as keyof Content['houses']]?.expression ?? null;
 };
 
-/** What a contact between two planets is about (independent of the aspect type); order does not matter. */
-export const aspectPairText = (lang: ContentLang, a: string, b: string): string | null => {
-    // A transit to the same natal planet is that planet's cycle (e.g. a Saturn return or square)
-    if (a === b) return (getContent(lang).planetCycles as Record<string, string>)[a] ?? null;
+/**
+ * What a contact between two planets is about (independent of the aspect type); order does not matter.
+ * A planet to itself is a life cycle, which depends on the aspect: with `aspect` the text of that cycle (a Saturn
+ * return, a Uranus opposition, ...) is given and nothing for an aspect that is not one; without it, the planet's
+ * general cycle text.
+ */
+export const aspectPairText = (lang: ContentLang, a: string, b: string, aspect?: string): string | null => {
+    if (a === b) {
+        if (!aspect) return (getContent(lang).planetCycles as Record<string, string>)[a] ?? null;
+        const cycle = (getContent(lang).transformations.cycle as Record<string, {name: string; text: string}>)[`${a}-${aspect}`];
+        return cycle ? `${cycle.name}: ${cycle.text.split('. ')[0]}.` : null;
+    }
     const pairs = getContent(lang).aspectPairs as Record<string, string>;
     return pairs[`${a}-${b}`] ?? pairs[`${b}-${a}`] ?? null;
 };

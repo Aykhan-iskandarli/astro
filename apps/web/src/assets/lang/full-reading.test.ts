@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {fullReading, getContent} from '@astra/content';
+import {aspectPairText, fullReading, getContent, loadContent} from '@astra/content';
 
 describe('fullReading', () => {
     it('layers the Big Three text, the planet, the sign and the house', () => {
@@ -16,7 +16,8 @@ describe('fullReading', () => {
         expect(r.planet && r.sign).toBeTruthy();
         expect(r.house).toBeNull();
     });
-    it('covers every sign, house, aspect type and point in both full languages', () => {
+    it('covers every sign, house, aspect type and point in both full languages', async () => {
+        await loadContent('en');
         for (const lang of ['az', 'en'] as const) {
             const c = getContent(lang);
             const reading = c.reading as {planet: object; sign: object; house: object; aspect: object; bigThree: Record<string, object>};
@@ -28,5 +29,19 @@ describe('fullReading', () => {
             for (let h = 1; h <= 12; h++) expect(Object.keys(reading.house)).toContain(String(h));
             for (const id of ['conjunction', 'opposition', 'trine', 'square', 'sextile']) expect(Object.keys(reading.aspect)).toContain(id);
         }
+    });
+});
+
+describe('aspectPairText', () => {
+    it('reads a planet to itself as the cycle of that aspect, and says nothing for an aspect that is not a cycle', async () => {
+        await loadContent('en');
+        expect(aspectPairText('en', 'saturn', 'saturn', 'conjunction')).toContain('Saturn return');
+        expect(aspectPairText('en', 'uranus', 'uranus', 'opposition')).toContain('Uranus opposition');
+        expect(aspectPairText('en', 'saturn', 'saturn', 'trine')).toBeNull();
+        expect(aspectPairText('en', 'saturn', 'saturn')).toBe(getContent('en').planetCycles.saturn); // without an aspect: the general text
+    });
+    it('keeps the pair text for two different planets whatever the aspect', () => {
+        expect(aspectPairText('az', 'pluto', 'saturn', 'square')).toBeTruthy();
+        expect(aspectPairText('az', 'saturn', 'pluto', 'trine')).toBe(aspectPairText('az', 'pluto', 'saturn', 'square'));
     });
 });

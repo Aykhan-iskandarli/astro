@@ -66,7 +66,7 @@ const PersonalTransitsComponent = () => {
                                     {formatOrb(a.orb!)}
                                     {a.applying !== null ? ` · ${translate(a.applying ? 'applying' : 'separating')}` : ''}
                                 </p>
-                                {aspectPairText(locale, a.p1!, a.p2!) ? <p className={classes.text}>{aspectPairText(locale, a.p1!, a.p2!)}</p> : null}
+                                {aspectPairText(locale, a.p1!, a.p2!, a.type!) ? <p className={classes.text}>{aspectPairText(locale, a.p1!, a.p2!, a.type!)}</p> : null}
                             </div>
                         </li>
                     ))}

@@ -3,7 +3,9 @@ import {Link} from 'react-router-dom';
 import {Alert, Button, DatePicker, Segmented} from 'antd';
 import dayjs, {Dayjs} from 'dayjs';
 import classNames from 'classnames';
+import {aspectPairText} from '@astra/content';
 import {Routes} from 'router/routes';
+import {useStore} from 'store/store.config';
 import {IBirthInput} from 'store/store';
 import {ASPECT_GLYPHS, aspectTone, formatDegree, formatLocal, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
 import {activeIn, byImportance, cycleKey, EpisodeGroup, groupOf, WINDOW_YEARS, windowStart} from 'core/helpers/transformations';
@@ -28,6 +30,7 @@ const BIRTH_MAX = dayjs();
 function TransformationsComponent() {
     const translate = useLocalization();
     const content = useContent();
+    const locale = useStore('locale');
     const classes = useTransformationsStyles();
     const {input: chartInput} = useChartChoice();
     const [mode, setMode] = useState<'chart' | 'date'>(chartInput ? 'chart' : 'date');
@@ -78,7 +81,8 @@ function TransformationsComponent() {
     const episodeCard = (e: IEpisode) => {
         const key = cycleKey(e);
         const cycle = key ? tr.cycle[key] : undefined;
-        const short = tr.aspect[e.aspect]?.split('. ')[0];
+        const pair = aspectPairText(locale, e.transit, e.natal, e.aspect);
+        const short = pair ?? `${tr.aspect[e.aspect]?.split('. ')[0]}.`;
         const sameAge = Math.floor(e.ageAtStart) === Math.floor(e.ageAtEnd);
         return (
             <li key={`${e.transit}-${e.natal}-${e.aspect}-${e.start}`} className={classes.card}>
@@ -105,7 +109,7 @@ function TransformationsComponent() {
                         degree: formatDegree(e.natalDegree, e.natalMinute),
                     })}
                 </p>
-                {short ? <p className={classes.text}>{short}.</p> : null}
+                <p className={classes.text}>{short}</p>
                 <details className={classes.full}>
                     <summary>{translate('tr_read_full')}</summary>
                     {cycle ? (

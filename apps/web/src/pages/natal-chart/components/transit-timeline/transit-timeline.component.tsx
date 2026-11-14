@@ -82,8 +82,8 @@ const TransitTimelineComponent = () => {
                                             {e.passes > 1 ? translate('timeline_pass', {n: e.pass, total: e.passes}) : translate('timeline_single')}
                                             {e.retrograde ? ` · ${translate('retrograde_word')}` : ''}
                                         </p>
-                                        {aspectPairText(locale, e.transit!, e.natal!) ? (
-                                            <p className={classes.text}>{aspectPairText(locale, e.transit!, e.natal!)}</p>
+                                        {aspectPairText(locale, e.transit!, e.natal!, e.aspect!) ? (
+                                            <p className={classes.text}>{aspectPairText(locale, e.transit!, e.natal!, e.aspect!)}</p>
                                         ) : null}
                                     </div>
                                 </li>

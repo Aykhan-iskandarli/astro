@@ -183,7 +183,7 @@ function YearForecastComponent() {
                                                             {` ${name(e.natal)}`}
                                                             {e.passes > 1 ? <span className={classes.muted}>{` · ${translate('timeline_pass', {n: e.pass, total: e.passes})}`}</span> : null}
                                                         </p>
-                                                        {aspectPairText(locale, e.transit!, e.natal!) ? <p className={classes.text}>{aspectPairText(locale, e.transit!, e.natal!)}</p> : null}
+                                                        {aspectPairText(locale, e.transit!, e.natal!, e.aspect!) ? <p className={classes.text}>{aspectPairText(locale, e.transit!, e.natal!, e.aspect!)}</p> : null}
                                                     </div>
                                                 </li>
                                             ))}
