@@ -12,6 +12,7 @@ import {useGetCalendar} from 'pages/sky/actions/sky.query';
 import {SkyEventModel} from 'pages/sky/models/sky.model';
 import {eventLabel} from 'pages/sky/components/event-label/event-label';
 import MoonCalendarComponent from './components/moon-calendar/moon-calendar.component';
+import PersonalYearComponent from './components/personal-year/personal-year.component';
 import {useCalendarStyles} from './calendar.style';
 
 type Kind = 'lunations' | 'eclipses' | 'ingresses' | 'stations';
@@ -124,6 +125,7 @@ function CalendarComponent() {
                             ))}
                         </div>
                         <p className={classes.muted}>{translate('calendar_timezone_note')}</p>
+                        <PersonalYearComponent year={year}/>
                     </>
                 ) : null}
                 </> : null}

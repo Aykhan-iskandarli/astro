@@ -8,6 +8,7 @@ const styles = {
         flexDirection: 'column',
         gap: rem(16),
     },
+    sub: {fontSize: rem(20), marginTop: rem(12)},
     select: {
         maxWidth: rem(360),
         width: '100%',

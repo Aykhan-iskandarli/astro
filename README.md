@@ -2,7 +2,7 @@
 
 A free, open-source astrology platform: Western, Vedic and Chinese astrology, numerology and the Destiny
 Matrix, calculated with Swiss Ephemeris precision and presented in a calm, immersive web app in
-Azerbaijani and English.
+Azerbaijani and English (Russian is being added: untranslated parts show in English).
 
 - **Accurate**: positions come from the Swiss Ephemeris (via kerykeion); golden tests compare every
   planet, node, Lilith, Chiron, angle and house cusp against raw `pyswisseph` (< 1′ tolerance).
@@ -24,7 +24,7 @@ Azerbaijani and English.
 - **Transits**: any date and time, bi-wheel.
 - **Forecast**: transit timeline (exact dates for 12 months), solar and lunar returns (with relocation),
   secondary progressions, life cycles (Jupiter/Saturn/Chiron returns, profections), firdaria, zodiacal
-  releasing, solar arc.
+  releasing, solar arc. The lunar return comes with a short monthly reading (Moon's house, Ascendant sign).
 - **Vedic**: sidereal (Lahiri) D1/D9 and D3/D7/D10/D12, nakshatras, Vimshottari dasha, yogas, Ashtakavarga,
   Sade Sati.
 - **Numerology**: core numbers, pinnacles and challenges, personal year/month/day, Lo Shu grid, Pythagoras
@@ -36,12 +36,20 @@ Azerbaijani and English.
 
 **Other pages**
 
-- `/today`: the sky now (Moon phase and sign, void-of-course Moon, retrogrades, planet positions, coming
-  lunations and stations), today's transits to your chart, Panchang and planetary hours.
+- `/today`: the sky now (Moon phase, sign and Moon mansion, void-of-course Moon, retrogrades, planet positions,
+  coming lunations and stations), Panchang and planetary hours, and for your chart: the Moon's day (its natal
+  house, house and sign changes and exact aspects to natal points in the next 24 hours), today's transits and
+  the coming Moon phases with the natal house each falls in.
 - `/calendar`: astro calendar for a year (lunations, eclipses, ingresses, stations, retrograde periods) and a
-  moon calendar (lunar days, phase, void-of-course Moon) for a chosen city.
+  moon calendar (lunar days, phase, void-of-course Moon) for a chosen city, plus the year's lunations and
+  eclipses read in your chart (natal house and natal points touched).
 - `/name-analysis`: numerology from a full name alone; the birth date is optional.
+- `/glossary`: plain-language explanations of the terms used on the site (also shown as tooltips).
+- `/profiles`: saved charts as people (relation, "my chart"), with a JSON backup and restore; the data stays in
+  the browser.
 - `/privacy-policy`.
+
+The result can be downloaded as a PNG, or as a share card (1080×1350).
 
 Interpretation texts are AI-written drafts and still need editorial review (see `packages/content`).
 The full list of phases, methods and how each was verified is in [docs/roadmap.md](docs/roadmap.md).
@@ -87,9 +95,9 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ## Test
 
 ```bash
-docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (333)
-docker compose run --rm api pytest -q                           # API (30)
-npm test                                                        # content consistency (1632 keys) + web unit tests (24)
+docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (345)
+docker compose run --rm api pytest -q                           # API (31)
+npm test                                                        # content consistency (1881 keys) + web unit tests (32)
 npm run typecheck -w apps/web
 ```
 
@@ -100,7 +108,7 @@ npm run build                     # typecheck → vite build → prerender publi
 npm run build:spa -w apps/web     # same without the prerender step
 ```
 
-The prerender step writes static HTML for `/`, `/natal-chart`, `/name-analysis` and `/privacy-policy` (fast first paint,
+The prerender step writes static HTML for `/`, `/natal-chart`, `/name-analysis`, `/glossary` and `/privacy-policy` (fast first paint,
 route-specific meta/OG tags for social previews and crawlers) as both `dist/<route>.html` and
 `dist/<route>/index.html`, and keeps the untouched SPA shell as `dist/spa.html`.
 **Hosting must serve the prerendered file when it exists and fall back to `dist/spa.html` with HTTP 404

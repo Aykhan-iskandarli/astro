@@ -71,6 +71,14 @@ function SkyComponent() {
                                     {translate('today_illumination', {value: Math.round(moon.illumination * 100)})}
                                     {' · '}{translate(moon.waxing ? 'today_waxing' : 'today_waning')}
                                 </p>
+                                {(content.moonMansions as Record<string, {name: string; meaning: string; theme: string}>)[String(moon.mansion)] ? (
+                                    <p className={classes.muted}>
+                                        <TermComponent id='moonMansion'>{translate('moon_mansion_label')}</TermComponent>
+                                        {` ${moon.mansion}/28 · `}
+                                        <strong>{(content.moonMansions as Record<string, {name: string}>)[String(moon.mansion)].name}</strong>
+                                        {` (${(content.moonMansions as Record<string, {meaning: string}>)[String(moon.mansion)].meaning}): ${(content.moonMansions as Record<string, {theme: string}>)[String(moon.mansion)].theme}.`}
+                                    </p>
+                                ) : null}
                                 <div className={`${classes.voc} ${voc.active ? classes.vocActive : ''}`}>
                                     <strong><TermComponent id='voidOfCourse'>{translate(voc.active ? 'voc_active_title' : 'voc_next_title')}</TermComponent></strong>
                                     <p>

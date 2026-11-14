@@ -95,6 +95,16 @@ class TimelineRequest(NatalRequest):
     days: int = Field(default=365, ge=1, le=400)
 
 
+class MoonDayRequest(NatalRequest):
+    start: DateTime | None = None  # ISO 8601; naive values are treated as UTC; default: now
+    hours: int = Field(default=24, ge=1, le=72)
+
+
+class MoonLunationsRequest(NatalRequest):
+    start: Date | None = None
+    days: int = Field(default=90, ge=1, le=400)
+
+
 class NumerologyRequest(BaseModel):
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
 
@@ -362,6 +372,27 @@ def transit_timeline(req: TimelineRequest) -> dict:
         raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
     return MODULES["western.timeline"].calculate(_birth(req), start=req.start, days=req.days,
                                                  house_system=req.house_system)
+
+
+@app.post("/api/charts/moon-day")
+def personal_moon_day(req: MoonDayRequest) -> dict:
+    """The Moon's path through the natal chart: house and sign changes and exact aspects to natal points."""
+    start = req.start
+    if start is not None and start.tzinfo is None:
+        start = start.replace(tzinfo=TimeZone.utc)
+    if start is not None and not 1800 <= start.year <= 2998:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.personalmoon"].calculate(_birth(req), kind="day", start=start, hours=req.hours,
+                                                     house_system=req.house_system)
+
+
+@app.post("/api/charts/moon-lunations")
+def personal_moon_lunations(req: MoonLunationsRequest) -> dict:
+    """Lunations and eclipses with the natal house and natal points they touch."""
+    if req.start is not None and not 1800 <= req.start.year <= 2998:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.personalmoon"].calculate(_birth(req), kind="lunations", start=req.start, days=req.days,
+                                                     house_system=req.house_system)
 
 
 @app.post("/api/charts/astrocartography")

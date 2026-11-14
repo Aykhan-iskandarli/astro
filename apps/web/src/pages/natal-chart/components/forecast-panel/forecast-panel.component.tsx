@@ -16,6 +16,7 @@ import PointsTableComponent from '../points-table/points-table.component';
 import TransitTimelineComponent from '../transit-timeline/transit-timeline.component';
 import LifeCyclesComponent from '../life-cycles/life-cycles.component';
 import TimingPanelComponent from '../timing-panel/timing-panel.component';
+import LunarReturnReadingComponent from '../lunar-return-reading/lunar-return-reading.component';
 import {useForecastPanelStyles} from './forecast-panel.style';
 import {IForecastPanel} from './forecast-panel';
 
@@ -167,6 +168,7 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
                             local: fmtLocal(ret.local),
                             place: ret.placeName ?? '',
                         })}</p>
+                        {mode === 'lunar' ? <LunarReturnReadingComponent chart={ret.chart}/> : null}
                         <div className={classes.stage}>
                             <ChartWheelComponent chart={ret.chart} activeId={hovered} selectedId={selected}
                                                  onActivate={handleActivate} onSelect={handleSelect}/>

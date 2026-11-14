@@ -121,10 +121,12 @@ export class MoonModel {
     public waxing: boolean = true;
     public sign: string | null = null;
     public illumination: number = 0;
+    public mansion: number = 1;
     public voidOfCourse: VoidOfCourseModel = new VoidOfCourseModel({});
 
     constructor(item: any) {
         this._setPhase(item);
+        this._setMansion(item);
         this._setWaxing(item);
         this._setSign(item);
         this._setIllumination(item);
@@ -133,6 +135,10 @@ export class MoonModel {
 
     private _setPhase({phase}: any) {
         this.phase = phase ?? null;
+    }
+
+    private _setMansion({mansion}: any) {
+        this.mansion = mansion ?? 1;
     }
 
     private _setWaxing({waxing}: any) {

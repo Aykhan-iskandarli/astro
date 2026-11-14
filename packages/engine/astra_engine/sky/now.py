@@ -6,6 +6,7 @@ import warnings
 from datetime import datetime, timedelta, timezone
 
 from .._backend import swe
+from ..common.zodiac import lunar_mansion
 from ..western.lunar import lunar_phase
 from .common import SWE_IDS, iso, jd_of, kery_planet, kery_sign, position
 
@@ -63,6 +64,7 @@ def calculate(at: datetime | None = None) -> dict:
         "moon": {
             **lunar_phase(by_id["sun"]["longitude"], by_id["moon"]["longitude"]),
             "sign": by_id["moon"]["sign"],
+            "mansion": lunar_mansion(by_id["moon"]["longitude"]),
             "illumination": round(attr[1], 4),
             "voidOfCourse": _void_of_course(at),
         },

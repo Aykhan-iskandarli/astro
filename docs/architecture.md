@@ -37,6 +37,7 @@ JSON-serialisable. Modules are registered in `astra_engine.MODULES` by id (`west
 | `vedic/chart.py` → `sadeSati` | Sidereal (Lahiri) Saturn over the sign before, of and after the natal Moon, for 100 years; each phase from first entry to last exit, periods merged across short retrograde exits. |
 | `western/details.py`, `western/timing.py` | Declinations (out of bounds vs true obliquity), antiscia (1.5°), prenatal eclipses (Swiss Ephemeris backward search); receptions, dominants, firdaria and zodiacal releasing via kerykeion; solar arc = progressed Sun − natal Sun, aspects within 1°. |
 | `vedic/match.py` | Ashtakoota (36 points) and Manglik; conventions in the module docstring. |
+| `western/personal_moon.py` | The Moon in a natal chart: for a window of hours, the Moon's natal house, every house and sign change and every exact aspect to a natal point; for a date range, each lunation (New, First Quarter, Full, Last Quarter) and eclipse with the natal house of the Moon's degree and the natal points it touches (transit orbs). Moon mansions: `common/zodiac.py` `lunar_mansion` (28 equal parts from 0° Aries). Without a birth time: no houses or angles, natal Moon left out. |
 | `other/systems.py`, `sky/day.py` | Tarot birth cards (Greer), Tzolkin (GMT 584283), Kua (Eight Mansions); Panchang at sunrise (Lahiri) and planetary hours (kerykeion). |
 
 Conventions: tropical zodiac, true node, mean Lilith, sect-aware Part of Fortune and Part of Spirit.

@@ -1,6 +1,8 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import SkyModel, {CalendarModel} from '../models/sky.model';
-import {getCalendar, getMoonCalendar, getSky, getSkyDay, IMoonPlace} from './sky.service';
+import {getCalendar, getMoonCalendar, getMoonDay, getMoonLunations, getSky, getSkyDay, IMoonPlace} from './sky.service';
+import {IBirthInput} from 'store/store';
+import MoonDayModel, {PersonalLunationsModel} from '../models/personal-moon.model';
 import SkyDayModel from '../models/sky-day.model';
 import MoonCalendarModel from '../models/moon-calendar.model';
 
@@ -49,5 +51,35 @@ export const useGetSkyDay = (date: string, place: IMoonPlace) => {
         placeholderData: keepPreviousData,
         staleTime: Infinity,
         retry: 1,
+    });
+};
+
+// Personal: the birth data is part of the query key, so it stays in memory only (dropped 5 minutes after leaving)
+export const useGetMoonDay = (input: IBirthInput | null, start: string) => {
+    return useQuery<MoonDayModel, Error>({
+        queryKey: ['moon-day', input, start],
+        queryFn: () => {
+            return getMoonDay(input!, start, 24);
+        },
+        enabled: !!input,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetMoonLunations = (input: IBirthInput | null, start: string, days: number) => {
+    return useQuery<PersonalLunationsModel, Error>({
+        queryKey: ['moon-lunations', input, start, days],
+        queryFn: () => {
+            return getMoonLunations(input!, start, days);
+        },
+        enabled: !!input,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        refetchOnWindowFocus: false,
     });
 };

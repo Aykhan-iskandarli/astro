@@ -54,3 +54,12 @@ def house_of(lon: float, cusps: list[float]) -> int:
         if (lon - start) % 360 < width:
             return i + 1
     return 12  # unreachable for valid cusps; zero-width houses fall through to the next
+
+
+MANSIONS = 28
+
+
+def lunar_mansion(lon: float) -> int:
+    """Moon mansion 1..28 of a tropical longitude: 28 equal parts of 360° (12°51′26″ each) counted from 0° Aries,
+    the convention of the medieval Western tradition (Agrippa, Picatrix). Mansion 1 is Al Sharatain."""
+    return int(norm(lon) // (360.0 / MANSIONS)) + 1

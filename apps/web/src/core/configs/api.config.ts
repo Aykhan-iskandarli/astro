@@ -21,6 +21,8 @@ export const API = {
     other: '/api/other',
     skyDay: '/api/sky/day',
     astrocartography: '/api/charts/astrocartography',
+    moonDay: '/api/charts/moon-day',
+    moonLunations: '/api/charts/moon-lunations',
     davison: '/api/charts/davison',
     numerologyCompatibility: '/api/numerology/compatibility',
     sky: '/api/sky',

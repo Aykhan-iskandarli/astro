@@ -2848,6 +2848,240 @@
     "modality": {
       "term": "Modality",
       "definition": "Cardinal, fixed or mutable: how a sign acts (starting, sustaining or adapting)."
+    },
+    "moonMansion": {
+      "term": "Moon mansion",
+      "definition": "One of 28 equal parts of the zodiac (about 12°51′ each, counted from 0° Aries) that the Moon passes through in a month; a medieval tradition with Arabic names."
+    },
+    "eclipse": {
+      "term": "Eclipse",
+      "definition": "A New Moon (solar eclipse) or Full Moon (lunar eclipse) that happens close to the Moon's nodes. Traditionally read as a stronger turning point than an ordinary lunation."
+    }
+  },
+  "moonMansions": {
+    "1": {
+      "name": "Al Sharatain",
+      "meaning": "the two horns (of Aries)",
+      "theme": "beginnings, first steps, courage"
+    },
+    "2": {
+      "name": "Al Butain",
+      "meaning": "the little belly",
+      "theme": "things below the surface, patient searching"
+    },
+    "3": {
+      "name": "Al Thurayya",
+      "meaning": "the Pleiades",
+      "theme": "gathering, abundance, community"
+    },
+    "4": {
+      "name": "Al Dabaran",
+      "meaning": "the follower (Aldebaran)",
+      "theme": "persistence, following a goal through"
+    },
+    "5": {
+      "name": "Al Haq'a",
+      "meaning": "the white spot (head of Orion)",
+      "theme": "curiosity, learning, the mind at work"
+    },
+    "6": {
+      "name": "Al Han'a",
+      "meaning": "the mark or brand",
+      "theme": "distinguishing yourself, leaving a mark"
+    },
+    "7": {
+      "name": "Al Dhira",
+      "meaning": "the forearm",
+      "theme": "reaching out, support, helping hands"
+    },
+    "8": {
+      "name": "Al Nathra",
+      "meaning": "the gap (the Beehive cluster)",
+      "theme": "sensing what is hidden, intuition"
+    },
+    "9": {
+      "name": "Al Tarf",
+      "meaning": "the glance or eye (of the Lion)",
+      "theme": "attention, noticing, looking ahead"
+    },
+    "10": {
+      "name": "Al Jabha",
+      "meaning": "the forehead (of the Lion)",
+      "theme": "pride, standing tall, leadership"
+    },
+    "11": {
+      "name": "Al Zubra",
+      "meaning": "the mane (of the Lion)",
+      "theme": "strength, display, vitality"
+    },
+    "12": {
+      "name": "Al Sarfa",
+      "meaning": "the changer",
+      "theme": "turning points, change of direction"
+    },
+    "13": {
+      "name": "Al Awwa",
+      "meaning": "the barker",
+      "theme": "speaking up, calls for attention, restlessness"
+    },
+    "14": {
+      "name": "Al Simak",
+      "meaning": "the high one (Spica)",
+      "theme": "grace, talent, things growing"
+    },
+    "15": {
+      "name": "Al Ghafr",
+      "meaning": "the covering",
+      "theme": "protection, privacy, holding back"
+    },
+    "16": {
+      "name": "Al Zubana",
+      "meaning": "the claws (of the Scorpion)",
+      "theme": "balance, weighing, bargaining"
+    },
+    "17": {
+      "name": "Al Iklil",
+      "meaning": "the crown",
+      "theme": "honour, recognition, completion"
+    },
+    "18": {
+      "name": "Al Qalb",
+      "meaning": "the heart (Antares)",
+      "theme": "depth of feeling, intensity, courage"
+    },
+    "19": {
+      "name": "Al Shaula",
+      "meaning": "the sting (of the Scorpion)",
+      "theme": "sharpness, sudden change, resolve"
+    },
+    "20": {
+      "name": "Al Na'am",
+      "meaning": "the ostriches",
+      "theme": "moving on, travel, restlessness"
+    },
+    "21": {
+      "name": "Al Baldah",
+      "meaning": "the city, or the empty space",
+      "theme": "clearing space, settling, a fresh ground"
+    },
+    "22": {
+      "name": "Sa'd al-Dhabih",
+      "meaning": "the luck of the slaughterer",
+      "theme": "decisive action, cutting away what is not needed"
+    },
+    "23": {
+      "name": "Sa'd Bula",
+      "meaning": "the luck of the swallower",
+      "theme": "absorbing, taking in, recovery"
+    },
+    "24": {
+      "name": "Sa'd al-Su'ud",
+      "meaning": "the luck of lucks",
+      "theme": "fortune, good news, openness"
+    },
+    "25": {
+      "name": "Sa'd al-Akhbiya",
+      "meaning": "the luck of the tents",
+      "theme": "shelter, home, a safe base"
+    },
+    "26": {
+      "name": "Al Fargh al-Mukdim",
+      "meaning": "the first outpouring (of the water jar)",
+      "theme": "giving, sharing, outpouring"
+    },
+    "27": {
+      "name": "Al Fargh al-Thani",
+      "meaning": "the second outpouring",
+      "theme": "continuing, flow, refinement"
+    },
+    "28": {
+      "name": "Batn al-Hut",
+      "meaning": "the belly of the fish",
+      "theme": "completion, rest, the end of a cycle"
+    }
+  },
+  "moonDay": {
+    "house": {
+      "1": "Moods are close to the surface today and others see them. A good day to look after yourself and your appearance.",
+      "2": "Attention goes to money, possessions and what you value. Feelings of security are tied to practical things.",
+      "3": "A talkative, curious day: conversations, messages, short trips and learning feel natural.",
+      "4": "You are drawn toward home, family and your private space. A day for rest and emotional safety.",
+      "5": "Creativity, play and romance come forward. You want to enjoy yourself and be noticed.",
+      "6": "Work, routines and health take attention. Putting things in order brings calm.",
+      "7": "Other people are in focus: partners, clients, close relationships. Feelings are shaped by how others respond.",
+      "8": "Feelings run deep today: shared money, intimacy and things you usually keep private come up.",
+      "9": "Your mind turns to the bigger picture: travel, study, beliefs and plans for the future.",
+      "10": "Career and public life are in focus. You may feel more visible and more driven to achieve.",
+      "11": "Friends, groups and hopes for the future matter most. Time with like-minded people feels supportive.",
+      "12": "A quieter, more inward day: rest, reflection and solitude restore you; hidden feelings may surface."
+    }
+  },
+  "lunationReading": {
+    "new": {
+      "1": "A fresh start for you personally: a new look, a new approach, new beginnings in how you present yourself.",
+      "2": "A new start with money and values: income, spending habits and what you truly want to own.",
+      "3": "A new start in communication and learning: a course, a project, conversations that open new doors.",
+      "4": "A new start at home and with family: moving, renovating or a new emotional foundation.",
+      "5": "A new start in creativity, romance and joy: a creative project, a new love, time for play.",
+      "6": "A new start in work and health: a new routine, new tasks or a habit you want to build.",
+      "7": "A new start in partnership: meeting someone, renewing a commitment or a new way of relating.",
+      "8": "A new start around shared resources and deep change: debts, joint finances or emotional healing.",
+      "9": "A new start in learning, travel and beliefs: a trip, a course or a new way of seeing things.",
+      "10": "A new start in career and public life: a new goal, role or direction you want to be known for.",
+      "11": "A new start with friends and long-term hopes: new groups, new contacts, clearer plans for the future.",
+      "12": "A quiet, inward start: rest, reflection and letting go of what is finished before the next cycle."
+    },
+    "full": {
+      "1": "A matter about you personally comes to a head and is visible to others. Balance your own needs with those of the people close to you.",
+      "2": "Money and values reach a point of clarity: results show up and you see what is worth keeping and what is not.",
+      "3": "Communication peaks: news, decisions or conversations reach a conclusion and feelings about them are strong.",
+      "4": "Feelings about home and family peak: an emotional matter at home comes to a head, or a family event brings people together.",
+      "5": "Creative and romantic matters reach a culmination: a project is shown or feelings in love are at their strongest.",
+      "6": "Work and health reach a turning point: the results of your effort show, and tiredness reminds you to adjust your routine.",
+      "7": "A relationship matter comes to a head: commitments, agreements or conflicts with another person come into the open.",
+      "8": "Deep feelings and shared resources come to a point: something hidden is revealed or a financial or emotional matter is resolved.",
+      "9": "Plans, studies or journeys reach a high point: a result arrives or a belief you held is tested.",
+      "10": "Career peaks: recognition, results or pressure at work are at their highest, and you see where your effort has led.",
+      "11": "Friendships and group matters reach a culmination: a hope is met or let go, and your circle shows who is on your side.",
+      "12": "A release of what was hidden or unfinished: rest is needed, and old feelings that surface are ready to be let go."
+    },
+    "quarter": {
+      "first_quarter": "Waxing half Moon: a moment to act and push through the first obstacle of what you began at the New Moon.",
+      "last_quarter": "Waning half Moon: a moment to review, let go and adjust what has not worked since the Full Moon."
+    },
+    "eclipse": {
+      "solar": "Solar eclipse: a stronger-than-usual New Moon. Traditionally a turning point whose effects unfold over the next months; avoid rushed decisions and watch the house it touches.",
+      "lunar": "Lunar eclipse: a stronger-than-usual Full Moon. Traditionally an ending or a revelation in the area of the house it touches; effects can be felt for weeks."
+    }
+  },
+  "lunarReturn": {
+    "house": {
+      "1": "This month your feelings are close to the surface and you take things personally; self-care and new starts are in focus.",
+      "2": "This month's emotional focus is money, possessions and security; feeling safe depends on practical matters.",
+      "3": "This month's focus is communication, learning, siblings and your surroundings; you need to talk things through.",
+      "4": "This month's focus is home and family; you need privacy, comfort and emotional roots.",
+      "5": "This month's focus is creativity, romance, children and pleasure; you want to enjoy life and express yourself.",
+      "6": "This month's focus is daily work, routine and health; order and being useful settle you.",
+      "7": "This month's focus is relationships and partnerships; your feelings are shaped by other people.",
+      "8": "This month's focus is deep bonds, shared resources and change; emotions run strong and private.",
+      "9": "This month's focus is travel, study and beliefs; you need wider horizons and meaning.",
+      "10": "This month's focus is career and public life; you are more visible and more driven.",
+      "11": "This month's focus is friends, groups and hopes; you find support among like-minded people.",
+      "12": "This month's focus is rest, solitude and the inner life; time alone restores you and old feelings may surface."
+    },
+    "asc": {
+      "aries": "You act directly and quickly this month; energy is high and patience is low.",
+      "taurus": "You move steadily and want comfort; a calm, practical month.",
+      "gemini": "You are curious and talkative; many contacts, news and short trips.",
+      "cancer": "You are sensitive and protective; home and family feel important.",
+      "leo": "You want to be seen and to enjoy yourself; warmth and confidence lead.",
+      "virgo": "You are careful and practical; details, health and routines matter.",
+      "libra": "You seek harmony and company; relationships and fairness are in focus.",
+      "scorpio": "You feel intensely and look beneath the surface; a month for depth and honesty.",
+      "sagittarius": "You are optimistic and restless; you want freedom, movement and new ideas.",
+      "capricorn": "You are serious and focused; responsibilities and goals come first.",
+      "aquarius": "You feel independent and original; friends, ideas and change attract you.",
+      "pisces": "You are dreamy and sensitive; intuition and rest matter more than planning."
     }
   }
 }

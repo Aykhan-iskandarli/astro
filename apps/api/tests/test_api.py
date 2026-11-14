@@ -245,3 +245,15 @@ def test_astrocartography_endpoint():
     r = client.post("/api/charts/astrocartography", json=body)
     assert r.status_code == 200 and len(r.json()["lines"]) == 40 and isinstance(r.json()["near"], list)
     assert client.post("/api/charts/astrocartography", json={**body, "time": None}).status_code == 422
+
+
+def test_personal_moon_endpoints():
+    day = client.post("/api/charts/moon-day", json={**BAKU, "start": "2026-11-14T00:00:00Z", "hours": 24})
+    assert day.status_code == 200
+    body = day.json()
+    assert body["moon"]["house"] in range(1, 13) and 1 <= body["moon"]["mansion"] <= 28 and body["events"]
+    lun = client.post("/api/charts/moon-lunations", json={**BAKU, "start": "2026-11-14", "days": 60})
+    assert lun.status_code == 200 and len(lun.json()["lunations"]) >= 7
+    assert client.post("/api/charts/moon-day", json={**BAKU, "hours": 100}).status_code == 422
+    assert client.post("/api/charts/moon-lunations", json={**BAKU, "days": 900}).status_code == 422
+    assert client.post("/api/charts/moon-day", json={**BAKU, "start": "1700-01-01T00:00:00Z"}).status_code == 422

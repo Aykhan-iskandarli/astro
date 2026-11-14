@@ -1,17 +1,18 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Button, Select} from 'antd';
 import {aspectPairText} from '@astra/content';
 import {ASPECT_GLYPHS, aspectTone, formatOrb, glyph, POINT_GLYPHS} from 'core/helpers/astro';
 import {useStore} from 'store/store.config';
-import {IBirthInput} from 'store/store';
 import {Routes} from 'router/routes';
 import LoaderComponent from 'core/shared/loader/loader.component';
 import useLocalization, {useContent} from 'assets/lang';
+import {useChartChoice} from 'core/helpers/use-chart-choice';
 import {useGetTransits} from 'pages/natal-chart/actions/natal-chart.query';
+import PersonalMoonDayComponent from '../personal-moon-day/personal-moon-day.component';
+import PersonalLunationsComponent from '../personal-lunations/personal-lunations.component';
 import {usePersonalTransitsStyles} from './personal-transits.style';
 
-const CURRENT = 'current';
 const MAX_ITEMS = 8;
 
 // Today's transits to one of the user's charts: the chart open in this session, or one they saved.
@@ -19,26 +20,11 @@ const PersonalTransitsComponent = () => {
     const translate = useLocalization();
     const content = useContent();
     const locale = useStore('locale');
-    const birthInput = useStore('birthInput');
-    const saved = useStore('savedCharts');
-    const primaryId = useStore('primaryChartId');
     const classes = usePersonalTransitsStyles();
-    const [choice, setChoice] = useState<string>(
-        // The chart open in this session first, then the profile marked as "my chart", then the newest saved one
-        birthInput ? CURRENT : (saved.find((s) => s.id === primaryId) ?? saved[0])?.id ?? CURRENT);
+    const {input, options, choice, onChoice} = useChartChoice();
     const [now] = useState(() => new Date().toISOString());
-
-    const input: IBirthInput | null = choice === CURRENT ? birthInput : saved.find((s) => s.id === choice)?.input ?? null;
+    const [today] = useState(() => new Date().toLocaleDateString('en-CA')); // local date, YYYY-MM-DD
     const {data, isFetching} = useGetTransits(input, now);
-
-    const options = useMemo(() => [
-        ...(birthInput ? [{value: CURRENT, label: birthInput.name || translate('today_current_chart')}] : []),
-        ...saved.map((s) => ({value: s.id, label: `${s.input.name || translate('unnamed_chart')} · ${s.input.date.split('-').reverse().join('.')}`})),
-    ], [birthInput, saved, translate]);
-
-    const handleChoice = useCallback((v: string) => {
-        setChoice(v);
-    }, []);
 
     const name = (id: string | null) => (id ? content.points[id as keyof typeof content.points]?.name ?? id : '');
     const aspects = [...(data?.aspects ?? [])].sort((a, b) => (a.orb ?? 9) - (b.orb ?? 9)).slice(0, MAX_ITEMS);
@@ -55,9 +41,11 @@ const PersonalTransitsComponent = () => {
     return (
         <div className={classes.wrap}>
             {options.length > 1 ? (
-                <Select className={classes.select} value={choice} options={options} onChange={handleChoice}
+                <Select className={classes.select} value={choice} options={options} onChange={onChoice}
                         aria-label={translate('today_choose_chart')}/>
             ) : null}
+            <PersonalMoonDayComponent input={input}/>
+            <h3 className={classes.sub}>{translate('transits_today_title')}</h3>
             {isFetching && !data ? <LoaderComponent/> : aspects.length ? (
                 <ul className={classes.list}>
                     {aspects.map((a) => (
@@ -84,6 +72,9 @@ const PersonalTransitsComponent = () => {
                     ))}
                 </ul>
             ) : <p className={classes.meta}>{translate('today_no_transits')}</p>}
+            <h3 className={classes.sub}>{translate('lunations_personal_title')}</h3>
+            <p className={classes.meta}>{translate('lunations_personal_intro')}</p>
+            <PersonalLunationsComponent input={input} start={today} days={62} limit={4}/>
         </div>
     );
 };

@@ -51,9 +51,20 @@ export const formatLocal = (iso: string | null, withTime = true) => {
     return withTime ? `${date} ${pad(d.getHours())}:${pad(d.getMinutes())}` : date;
 };
 
+/** UTC ISO instant -> the viewer's local time of day (HH:mm). */
+export const formatClock = (iso: string | null) => {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    return `${pad(d.getHours())}:${pad(d.getMinutes())}`;
+};
+
 /** Orb in degrees -> 1°23′ */
 export const formatOrb = (orb: number) => {
     const d = Math.floor(orb);
     const m = Math.floor((orb - d) * 60 + 1e-9);
     return `${d}°${pad(m)}′`;
 };
+
+/** Moon-to-natal-point aspect texts: the "same planet" text is a cycle (return) text, so only a conjunction gets it. */
+export const moonAspectKey = (point: string | null, aspect: string | null) =>
+    point === 'moon' && aspect !== 'conjunction' ? null : point;

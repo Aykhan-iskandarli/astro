@@ -2848,6 +2848,240 @@
     "modality": {
       "term": "Keyfiyyət (modallıq)",
       "definition": "Kardinal, sabit və ya dəyişkən: bürcün necə hərəkət etdiyi (başlamaq, saxlamaq və ya uyğunlaşmaq)."
+    },
+    "moonMansion": {
+      "term": "Ay mənzili",
+      "definition": "Ayın bir ay ərzində keçdiyi bürc dairəsinin 28 bərabər hissəsindən biri (0° Qoçdan sayılan, hər biri təxminən 12°51′); ərəb adları olan orta əsr ənənəsi."
+    },
+    "eclipse": {
+      "term": "Tutulma",
+      "definition": "Ayın düyünlərinə yaxın baş verən Yeni Ay (Günəş tutulması) və ya Tam Ay (Ay tutulması). Ənənəvi olaraq adi lunasiyadan güclü dönüş nöqtəsi kimi oxunur."
+    }
+  },
+  "moonMansions": {
+    "1": {
+      "name": "Al Sharatain",
+      "meaning": "iki buynuz (Qoçun)",
+      "theme": "başlanğıclar, ilk addımlar, cəsarət"
+    },
+    "2": {
+      "name": "Al Butain",
+      "meaning": "kiçik qarın",
+      "theme": "səthin altındakılar, səbirli axtarış"
+    },
+    "3": {
+      "name": "Al Thurayya",
+      "meaning": "Ülkər",
+      "theme": "toplanma, bolluq, icma"
+    },
+    "4": {
+      "name": "Al Dabaran",
+      "meaning": "izləyən (Aldebaran)",
+      "theme": "inadkarlıq, məqsədi sona qədər izləmək"
+    },
+    "5": {
+      "name": "Al Haq'a",
+      "meaning": "ağ ləkə (Oriyon başı)",
+      "theme": "maraq, öyrənmək, işləyən zehin"
+    },
+    "6": {
+      "name": "Al Han'a",
+      "meaning": "damğa, işarə",
+      "theme": "fərqlənmək, iz buraxmaq"
+    },
+    "7": {
+      "name": "Al Dhira",
+      "meaning": "ön qol",
+      "theme": "uzanmaq, dəstək, kömək əlləri"
+    },
+    "8": {
+      "name": "Al Nathra",
+      "meaning": "boşluq (Arı pətəyi dəstəsi)",
+      "theme": "gizli olanı hiss etmək, intuisiya"
+    },
+    "9": {
+      "name": "Al Tarf",
+      "meaning": "baxış, göz (Şirin)",
+      "theme": "diqqət, görmək, irəli baxmaq"
+    },
+    "10": {
+      "name": "Al Jabha",
+      "meaning": "alın (Şirin)",
+      "theme": "qürur, dik durmaq, liderlik"
+    },
+    "11": {
+      "name": "Al Zubra",
+      "meaning": "yal (Şirin)",
+      "theme": "güc, nümayiş, həyat enerjisi"
+    },
+    "12": {
+      "name": "Al Sarfa",
+      "meaning": "dəyişdirən",
+      "theme": "dönüş nöqtələri, istiqamət dəyişikliyi"
+    },
+    "13": {
+      "name": "Al Awwa",
+      "meaning": "hürən",
+      "theme": "səsini ucaltmaq, diqqət çağırışı, narahatlıq"
+    },
+    "14": {
+      "name": "Al Simak",
+      "meaning": "uca olan (Spika)",
+      "theme": "lütf, istedad, böyüyən şeylər"
+    },
+    "15": {
+      "name": "Al Ghafr",
+      "meaning": "örtük",
+      "theme": "qoruma, məxfilik, geri durmaq"
+    },
+    "16": {
+      "name": "Al Zubana",
+      "meaning": "caynaqlar (Əqrəbin)",
+      "theme": "tarazlıq, ölçüb-biçmək, çərçivə"
+    },
+    "17": {
+      "name": "Al Iklil",
+      "meaning": "tac",
+      "theme": "şərəf, tanınma, tamamlanma"
+    },
+    "18": {
+      "name": "Al Qalb",
+      "meaning": "ürək (Antares)",
+      "theme": "hisslərin dərinliyi, intensivlik, cəsarət"
+    },
+    "19": {
+      "name": "Al Shaula",
+      "meaning": "iynə (Əqrəbin)",
+      "theme": "kəskinlik, qəfil dəyişiklik, qətiyyət"
+    },
+    "20": {
+      "name": "Al Na'am",
+      "meaning": "dəvəquşları",
+      "theme": "irəli getmək, səyahət, narahatlıq"
+    },
+    "21": {
+      "name": "Al Baldah",
+      "meaning": "şəhər, yaxud boş yer",
+      "theme": "yer boşaltmaq, məskunlaşmaq, təmiz zəmin"
+    },
+    "22": {
+      "name": "Sa'd al-Dhabih",
+      "meaning": "kəsicinin şansı",
+      "theme": "qətiyyətli hərəkət, lazımsızı kəsib atmaq"
+    },
+    "23": {
+      "name": "Sa'd Bula",
+      "meaning": "uduzanın şansı",
+      "theme": "mənimsəmək, qəbul etmək, bərpa"
+    },
+    "24": {
+      "name": "Sa'd al-Su'ud",
+      "meaning": "şansların şansı",
+      "theme": "uğur, yaxşı xəbər, açıqlıq"
+    },
+    "25": {
+      "name": "Sa'd al-Akhbiya",
+      "meaning": "çadırların şansı",
+      "theme": "sığınacaq, ev, təhlükəsiz dayaq"
+    },
+    "26": {
+      "name": "Al Fargh al-Mukdim",
+      "meaning": "ilk axın (su küpünün)",
+      "theme": "vermək, bölüşmək, axıb getmək"
+    },
+    "27": {
+      "name": "Al Fargh al-Thani",
+      "meaning": "ikinci axın",
+      "theme": "davam etmək, axın, təkmilləşmə"
+    },
+    "28": {
+      "name": "Batn al-Hut",
+      "meaning": "balığın qarnı",
+      "theme": "tamamlanma, istirahət, dövrün sonu"
+    }
+  },
+  "moonDay": {
+    "house": {
+      "1": "Əhval bu gün səthdədir və başqaları onu görür. Özünüzə və görünüşünüzə diqqət etmək üçün yaxşı gündür.",
+      "2": "Diqqət pula, əşyalara və dəyər verdiklərinizə yönəlir. Təhlükəsizlik hissi praktik şeylərlə bağlıdır.",
+      "3": "Danışqan və maraqlı gün: söhbətlər, mesajlar, qısa səfərlər və öyrənmək təbii gəlir.",
+      "4": "Sizi ev, ailə və şəxsi məkan cəlb edir. İstirahət və emosional təhlükəsizlik günüdür.",
+      "5": "Yaradıcılıq, oyun və romantika önə çıxır. Özünüzdən zövq almaq və diqqət çəkmək istəyirsiniz.",
+      "6": "İş, gündəlik rejim və sağlamlıq diqqət tələb edir. İşləri nizama salmaq rahatlıq gətirir.",
+      "7": "Başqa insanlar mərkəzdədir: tərəfdaşlar, müştərilər, yaxın münasibətlər. Hisslər başqalarının reaksiyasından asılı olur.",
+      "8": "Hisslər bu gün dərin keçir: ortaq pul, yaxınlıq və adətən gizlətdikləriniz üzə çıxır.",
+      "9": "Düşüncəniz böyük mənzərəyə yönəlir: səyahət, təhsil, inanclar və gələcək planlar.",
+      "10": "Karyera və ictimai həyat mərkəzdədir. Özünüzü daha görünən hiss edə və nailiyyətə daha çox can ata bilərsiniz.",
+      "11": "Dostlar, qruplar və gələcək ümidlər ən önəmlidir. Həmfikirlərlə vaxt keçirmək dəstək verir.",
+      "12": "Daha sakit, daxilə yönəlmiş gün: istirahət, düşüncə və təklik sizi bərpa edir; gizli hisslər üzə çıxa bilər."
+    }
+  },
+  "lunationReading": {
+    "new": {
+      "1": "Şəxsən sizin üçün yeni başlanğıc: yeni görünüş, yeni yanaşma, özünüzü təqdim etməkdə yeni addımlar.",
+      "2": "Pul və dəyərlərdə yeni başlanğıc: gəlir, xərcləmə vərdişləri və həqiqətən sahib olmaq istədikləriniz.",
+      "3": "Ünsiyyət və öyrənmədə yeni başlanğıc: kurs, layihə, yeni qapılar açan söhbətlər.",
+      "4": "Evdə və ailədə yeni başlanğıc: köçmək, təmir və ya yeni emosional təməl.",
+      "5": "Yaradıcılıq, romantika və sevincdə yeni başlanğıc: yaradıcı layihə, yeni sevgi, oyun üçün vaxt.",
+      "6": "İş və sağlamlıqda yeni başlanğıc: yeni rejim, yeni tapşırıqlar və ya qurmaq istədiyiniz vərdiş.",
+      "7": "Tərəfdaşlıqda yeni başlanğıc: kiminləsə tanışlıq, öhdəliyin yenilənməsi və ya münasibətdə yeni üsul.",
+      "8": "Ortaq resurslar və dərin dəyişimdə yeni başlanğıc: borclar, ortaq maliyyə və ya emosional sağalma.",
+      "9": "Öyrənmə, səyahət və inanclarda yeni başlanğıc: səfər, kurs və ya baxışın yeni üsulu.",
+      "10": "Karyera və ictimai həyatda yeni başlanğıc: yeni məqsəd, rol və ya tanınmaq istədiyiniz istiqamət.",
+      "11": "Dostlar və uzunmüddətli ümidlərdə yeni başlanğıc: yeni qruplar, yeni tanışlar, gələcək üçün daha aydın planlar.",
+      "12": "Sakit, daxilə yönəlmiş başlanğıc: istirahət, düşüncə və növbəti dövrdən əvvəl bitmiş olanı buraxmaq."
+    },
+    "full": {
+      "1": "Şəxsən sizinlə bağlı məsələ həll nöqtəsinə gəlir və başqaları üçün görünür. Öz ehtiyaclarınızla yaxınlarınızın ehtiyaclarını tarazlayın.",
+      "2": "Pul və dəyərlər aydınlıq nöqtəsinə çatır: nəticələr görünür, nəyi saxlamağa dəyər, nəyin dəyməz olduğu bəlli olur.",
+      "3": "Ünsiyyət zirvəyə çatır: xəbərlər, qərarlar və ya söhbətlər nəticəyə gəlir, onlara münasibət güclü olur.",
+      "4": "Ev və ailə hissləri zirvəyə çatır: evdəki emosional məsələ həll olunur və ya ailə hadisəsi insanları bir araya gətirir.",
+      "5": "Yaradıcı və romantik məsələlər kulminasiyaya çatır: layihə təqdim olunur və ya sevgi hissləri ən güclü olur.",
+      "6": "İş və sağlamlıq dönüş nöqtəsinə gəlir: əməyinizin nəticəsi görünür, yorğunluq isə rejimi dəyişməyi xatırladır.",
+      "7": "Münasibət məsələsi həll nöqtəsinə gəlir: öhdəliklər, razılaşmalar və ya başqası ilə ziddiyyətlər açıq üzə çıxır.",
+      "8": "Dərin hisslər və ortaq resurslar həll nöqtəsinə gəlir: gizli olan üzə çıxır, maliyyə və ya emosional məsələ nəticələnir.",
+      "9": "Planlar, təhsil və ya səyahətlər zirvəyə çatır: nəticə gəlir və ya sahib olduğunuz inanc sınaqdan keçir.",
+      "10": "Karyera zirvəyə çatır: tanınma, nəticələr və ya işdəki təzyiq ən yüksək həddədir, səylərinizin hara apardığı görünür.",
+      "11": "Dostluq və qrup məsələləri kulminasiyaya çatır: ümid ya gerçəkləşir, ya buraxılır, ətrafınız kimin yanınızda olduğunu göstərir.",
+      "12": "Gizli və ya yarımçıq qalanın buraxılması: istirahət lazımdır, üzə çıxan köhnə hisslər buraxılmağa hazırdır."
+    },
+    "quarter": {
+      "first_quarter": "Böyüyən yarım Ay: Yeni Ayda başladığınız işdə ilk maneəni aşıb hərəkət etmək üçün məqam.",
+      "last_quarter": "Kiçilən yarım Ay: Tam Aydan bəri işləməyəni gözdən keçirmək, buraxmaq və düzəltmək üçün məqam."
+    },
+    "eclipse": {
+      "solar": "Günəş tutulması: adi Yeni Aydan güclü. Ənənəvi olaraq təsiri növbəti aylar boyu açılan dönüş nöqtəsidir; tələsik qərarlardan çəkinin və toxunduğu evə diqqət edin.",
+      "lunar": "Ay tutulması: adi Tam Aydan güclü. Ənənəvi olaraq toxunduğu ev sahəsində son və ya aşkar olunma; təsiri həftələrlə hiss oluna bilər."
+    }
+  },
+  "lunarReturn": {
+    "house": {
+      "1": "Bu ay hissləriniz səthdədir və hər şeyi şəxsi qəbul edirsiniz; özünə qayğı və yeni başlanğıclar önə çıxır.",
+      "2": "Bu ayın emosional mərkəzi pul, əşyalar və təhlükəsizlikdir; arxayınlıq praktik məsələlərdən asılıdır.",
+      "3": "Bu ayın mərkəzi ünsiyyət, öyrənmə, bacı-qardaşlar və yaxın mühitdir; hər şeyi danışmağa ehtiyacınız var.",
+      "4": "Bu ayın mərkəzi ev və ailədir; təklik, rahatlıq və emosional köklərə ehtiyacınız var.",
+      "5": "Bu ayın mərkəzi yaradıcılıq, romantika, uşaqlar və zövqdür; həyatdan həzz almaq və özünüzü ifadə etmək istəyirsiniz.",
+      "6": "Bu ayın mərkəzi gündəlik iş, rejim və sağlamlıqdır; nizam və faydalı olmaq sizi sakitləşdirir.",
+      "7": "Bu ayın mərkəzi münasibətlər və tərəfdaşlıqdır; hisslərinizi başqa insanlar formalaşdırır.",
+      "8": "Bu ayın mərkəzi dərin bağlar, ortaq resurslar və dəyişimdir; hisslər güclü və gizli keçir.",
+      "9": "Bu ayın mərkəzi səyahət, təhsil və inanclardır; daha geniş üfüqlərə və mənaya ehtiyacınız var.",
+      "10": "Bu ayın mərkəzi karyera və ictimai həyatdır; daha görünən və daha qətiyyətlisiniz.",
+      "11": "Bu ayın mərkəzi dostlar, qruplar və ümidlərdir; dəstəyi həmfikirlərin arasında tapırsınız.",
+      "12": "Bu ayın mərkəzi istirahət, təklik və daxili həyatdır; tək qalmaq sizi bərpa edir, köhnə hisslər üzə çıxa bilər."
+    },
+    "asc": {
+      "aries": "Bu ay birbaşa və tez hərəkət edirsiniz; enerji yüksək, səbir azdır.",
+      "taurus": "Sabit hərəkət edir və rahatlıq istəyirsiniz; sakit və praktik ay.",
+      "gemini": "Maraqlı və danışqansınız; çoxlu əlaqə, xəbər və qısa səfərlər.",
+      "cancer": "Həssas və qoruyucusunuz; ev və ailə önəmli görünür.",
+      "leo": "Görünmək və həzz almaq istəyirsiniz; istilik və özünəinam öndədir.",
+      "virgo": "Diqqətli və praktiksiniz; detallar, sağlamlıq və rejim önəmlidir.",
+      "libra": "Harmoniya və yoldaşlıq axtarırsınız; münasibətlər və ədalət mərkəzdədir.",
+      "scorpio": "Güclü hiss edir və səthin altına baxırsınız; dərinlik və səmimiyyət ayı.",
+      "sagittarius": "Nikbin və narahatsınız; azadlıq, hərəkət və yeni fikirlər istəyirsiniz.",
+      "capricorn": "Ciddi və cəmlənmisiniz; məsuliyyət və hədəflər birinci yerdədir.",
+      "aquarius": "Müstəqil və orijinal hiss edirsiniz; dostlar, fikirlər və dəyişiklik sizi cəlb edir.",
+      "pisces": "Xəyalpərəst və həssassınız; intuisiya və istirahət planlamadan daha önəmlidir."
     }
   }
 }
