@@ -8,6 +8,7 @@ export enum Routes {
     yearForecast = '/year-forecast',
     chooseDay = '/choose-day',
     transformations = '/transformations',
+    lifeTimeline = '/life-timeline',
     profiles = '/profiles',
     privacyPolicy = '/privacy-policy',
 }

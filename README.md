@@ -59,6 +59,9 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - `/transformations`: what a birth date points to in a chosen year. Only the birth date is needed. The long transits of
   Jupiter-Pluto to the natal planets grouped as life cycles (Saturn return, Uranus opposition, ...), major changes and
   other contacts, each with its exact dates, the age, a short line and a full reading to expand.
+- `/life-timeline`: a whole life on one 0-90 age axis: the firdaria, the Vimshottari mahadashas, the Chinese luck pillars and
+  the planetary life cycles (Jupiter, Saturn, Uranus and Neptune returns, squares and oppositions, the Moon's node and Chiron
+  returns). Select a block to read it.
 - `/glossary`: plain-language explanations of the terms used on the site (also shown as tooltips).
 - `/profiles`: saved charts as people (relation, "my chart"), with a JSON backup and restore; the data stays in
   the browser.
@@ -110,9 +113,9 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ## Test
 
 ```bash
-docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (375)
-docker compose run --rm api pytest -q                           # API (35)
-npm test                                                        # content consistency (2165 keys) + web unit tests (59)
+docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
+docker compose run --rm api pytest -q                           # API (36)
+npm test                                                        # content consistency (2187 keys) + web unit tests (64)
 npm run typecheck -w apps/web
 ```
 

@@ -5,6 +5,9 @@ import sizes from 'assets/styles/abstracts/sizes';
 import {rem} from 'assets/styles/abstracts/functions';
 import {breakpoint, transition} from 'assets/styles/abstracts/mixins';
 
+// Below this width the menu button replaces the links
+const NAV_BREAKPOINT = sizes.breakpointLg;
+
 const styles = {
     header: {
         position: 'fixed',
@@ -47,8 +50,8 @@ const styles = {
         display: 'flex',
         gap: rem(4),
         marginLeft: 'auto',
-        // Tablets and phones use the menu button instead (five links do not fit below ~1100px)
-        [breakpoint(sizes.breakpointLg)]: {display: 'none'},
+        '& a': {whiteSpace: 'nowrap'},
+        [breakpoint(NAV_BREAKPOINT)]: {display: 'none'},
     },
     // The header's backdrop-filter makes it the containing block for fixed children, so the scrim is
     // positioned against the header: it starts at its bottom edge and covers the rest of the viewport.
@@ -84,6 +87,10 @@ const styles = {
     },
     link: {
         display: 'inline-flex',
+        font: 'inherit',
+        border: 0,
+        background: 'none',
+        cursor: 'pointer',
         alignItems: 'center',
         minHeight: rem(sizes.touch),
         padding: [0, rem(14)],
@@ -98,9 +105,36 @@ const styles = {
     active: {
         color: colors.gold,
     },
+    group: {position: 'relative', display: 'inline-flex'},
+    groupMenu: {
+        position: 'absolute',
+        top: '100%',
+        left: 0,
+        minWidth: rem(240),
+        display: 'flex',
+        flexDirection: 'column',
+        padding: rem(8),
+        borderRadius: rem(16),
+        border: `1px solid ${colors.border}`,
+        background: 'rgba(20,20,43,0.97)',
+        boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+        zIndex: 5,
+    },
+    groupLink: {
+        display: 'flex',
+        alignItems: 'center',
+        minHeight: rem(sizes.touch),
+        padding: [0, rem(14)],
+        borderRadius: rem(10),
+        color: colors.text,
+        textDecoration: 'none',
+        whiteSpace: 'nowrap',
+        '&:hover, &:focus-visible': {background: 'rgba(157,140,255,0.1)'},
+        '&.active': {color: colors.gold},
+    },
     tools: {
         display: 'flex',
-        [breakpoint(sizes.breakpointLg)]: {marginLeft: 'auto'},
+        [breakpoint(NAV_BREAKPOINT)]: {marginLeft: 'auto'},
         alignItems: 'center',
         gap: rem(8),
         [breakpoint(sizes.breakpointSm)]: {gap: rem(2)},
@@ -140,7 +174,7 @@ const styles = {
     // After iconButton so its display rule wins (same specificity, later in the sheet)
     menuButton: {
         display: 'none',
-        [breakpoint(sizes.breakpointLg)]: {display: 'inline-flex'},
+        [breakpoint(NAV_BREAKPOINT)]: {display: 'inline-flex'},
     },
 };
 

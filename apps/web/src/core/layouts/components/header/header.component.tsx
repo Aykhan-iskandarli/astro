@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {Link, NavLink, useLocation} from 'react-router-dom';
 import {AnimatePresence, motion} from 'framer-motion';
 import classNames from 'classnames';
@@ -17,12 +17,17 @@ const NAV = [
     {to: Routes.natalChart, key: 'nav_chart', end: false},
     {to: Routes.nameAnalysis, key: 'nav_name', end: false},
     {to: Routes.today, key: 'nav_today', end: false},
+    {to: Routes.profiles, key: 'nav_profiles', end: false},
+] as const;
+// The forecast pages share one menu on wide screens (ten links do not fit in the header); the phone menu lists them all
+const FORECAST = [
     {to: Routes.calendar, key: 'nav_calendar', end: false},
     {to: Routes.yearForecast, key: 'nav_year', end: false},
     {to: Routes.chooseDay, key: 'nav_choose', end: false},
     {to: Routes.transformations, key: 'nav_transform', end: false},
-    {to: Routes.profiles, key: 'nav_profiles', end: false},
+    {to: Routes.lifeTimeline, key: 'nav_life', end: false},
 ] as const;
+const MOBILE_NAV = [...NAV.slice(0, 4), ...FORECAST, ...NAV.slice(4)];
 
 const HeaderComponent = () => {
     const translate = useLocalization();
@@ -30,14 +35,38 @@ const HeaderComponent = () => {
     const locale = useStore('locale');
     const ambientSound = useStore('ambientSound');
     const {header, inner, logo, logoMark, nav, link, active, tools, langButton, langActive, iconButton, menuButton,
-        mobileNav, mobileLink, scrim} = useHeaderStyles();
+        mobileNav, mobileLink, scrim, group, groupMenu, groupLink} = useHeaderStyles();
     const [menuOpen, setMenuOpen] = useState(false);
+    const [groupOpen, setGroupOpen] = useState(false);
+    const groupRef = useRef<HTMLDivElement>(null);
     const location = useLocation();
 
     // The mobile menu closes on navigation and on Escape
     useEffect(() => {
         setMenuOpen(false);
+        setGroupOpen(false);
     }, [location.pathname]);
+
+    // The forecast menu closes on Escape and on a click anywhere else
+    useEffect(() => {
+        if (!groupOpen) return undefined;
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setGroupOpen(false);
+        };
+        const onClick = (e: MouseEvent) => {
+            if (groupRef.current && !groupRef.current.contains(e.target as Node)) setGroupOpen(false);
+        };
+        window.addEventListener('keydown', onKey);
+        window.addEventListener('mousedown', onClick);
+        return () => {
+            window.removeEventListener('keydown', onKey);
+            window.removeEventListener('mousedown', onClick);
+        };
+    }, [groupOpen]);
+
+    const handleGroup = useCallback(() => {
+        setGroupOpen((v) => !v);
+    }, []);
 
     useEffect(() => {
         if (!menuOpen) return undefined;
@@ -75,6 +104,7 @@ const HeaderComponent = () => {
         document.documentElement.lang = locale;
     }, [locale]);
 
+    const forecastActive = FORECAST.some((f) => location.pathname === f.to || location.pathname.startsWith(`${f.to}/`));
     const navClass = useCallback(({isActive}: {isActive: boolean}) => classNames(link, {[active]: isActive}), [link, active]);
     const mobileClass = useCallback(({isActive}: {isActive: boolean}) => classNames(mobileLink, {[active]: isActive}), [mobileLink, active]);
 
@@ -86,7 +116,23 @@ const HeaderComponent = () => {
                     {translate('site_name')}
                 </Link>
                 <nav className={nav} aria-label={translate('nav_main')}>
-                    {NAV.map((n) => (
+                    {NAV.slice(0, 4).map((n) => (
+                        <NavLink key={n.to} to={n.to} end={n.end} className={navClass}>{translate(n.key)}</NavLink>
+                    ))}
+                    <div ref={groupRef} className={group}>
+                        <button type='button' className={classNames(link, {[active]: forecastActive})} aria-expanded={groupOpen}
+                                aria-controls='forecast-menu' aria-haspopup='true' onClick={handleGroup}>
+                            {translate('nav_forecast')} <span aria-hidden='true'>▾</span>
+                        </button>
+                        {groupOpen ? (
+                            <div id='forecast-menu' className={groupMenu}>
+                                {FORECAST.map((n) => (
+                                    <NavLink key={n.to} to={n.to} end={n.end} className={groupLink}>{translate(n.key)}</NavLink>
+                                ))}
+                            </div>
+                        ) : null}
+                    </div>
+                    {NAV.slice(4).map((n) => (
                         <NavLink key={n.to} to={n.to} end={n.end} className={navClass}>{translate(n.key)}</NavLink>
                     ))}
                 </nav>
@@ -143,7 +189,7 @@ const HeaderComponent = () => {
                         <motion.nav key='menu' id='mobile-nav' className={mobileNav} aria-label={translate('nav_main')}
                                     initial={{opacity: 0, y: -8}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -8}}
                                     transition={{duration: 0.2}}>
-                            {NAV.map((n) => (
+                            {MOBILE_NAV.map((n) => (
                                 <NavLink key={n.to} to={n.to} end={n.end} className={mobileClass}>
                                     {translate(n.key)}
                                 </NavLink>

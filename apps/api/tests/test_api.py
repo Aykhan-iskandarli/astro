@@ -294,3 +294,11 @@ def test_transformations_endpoint():
     assert d.status_code == 200 and d.json()["meta"]["timeUnknown"] is True
     assert client.post("/api/charts/transformations", json={**BAKU, "years": 99}).status_code == 422
     assert client.post("/api/charts/transformations", json={**BAKU, "startYear": 1500}).status_code == 422
+
+
+def test_lifetime_endpoint():
+    r = client.post("/api/charts/lifetime", json={**BAKU, "gender": "female"})
+    assert r.status_code == 200
+    body = r.json()
+    assert body["firdaria"]["periods"] and body["dasha"] and body["luck"]["pillars"] and body["cycles"]
+    assert client.post("/api/charts/lifetime", json={**BAKU, "gender": "x"}).status_code == 422

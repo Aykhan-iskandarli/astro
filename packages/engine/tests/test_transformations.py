@@ -99,3 +99,36 @@ def test_validation():
     for bad in ({"years": 0}, {"years": 31}, {"start_year": 1500}, {"start_year": 2998}):
         with pytest.raises(ValueError):
             transformations.calculate(KNOWN, **{"start_year": 2027, "years": 5, **bad})
+
+
+def test_only_mode_returns_the_same_passes_as_the_full_run():
+    full = transformations.calculate(KNOWN, 2015, 30)
+    only = transformations.calculate(KNOWN, 2015, 30, only=["saturn-conjunction", "uranus-opposition"], step=2.0)
+    assert {(e["transit"], e["aspect"]) for e in only["episodes"]} == {("saturn", "conjunction"), ("uranus", "opposition")}
+    for e in only["episodes"]:
+        match = [f for f in full["episodes"] if (f["transit"], f["natal"], f["aspect"]) == (e["transit"], e["natal"], e["aspect"])]
+        assert len(match) == 1 and [p["at"][:10] for p in match[0]["passes"]] == [p["at"][:10] for p in e["passes"]]
+
+
+def test_lifetime_firdaria_dasha_luck_and_cycles():
+    from astra_engine.western import forecast
+    out = forecast.lifetime(KNOWN)
+    # Day chart firdaria: Sun 10, Venus 8, Mercury 13, Moon 9, Saturn 11, Jupiter 12, Mars 7 years
+    periods = out["firdaria"]["periods"]
+    assert [p["lord"] for p in periods[:7]] == ["sun", "venus", "mercury", "moon", "saturn", "jupiter", "mars"][:len(periods[:7])]
+    assert [int(p["end"][:4]) - int(p["start"][:4]) for p in periods[:6]] == [10, 8, 13, 9, 11, 12]
+    assert out["dasha"][0]["lord"] == "jupiter" and len(out["luck"]["pillars"]) >= 8
+    cycles = out["cycles"]
+    key = lambda e: f'{e["transit"]}-{e["aspect"]}'  # noqa: E731
+    saturn = [e["ageAtStart"] for e in cycles if key(e) == "saturn-conjunction"]
+    assert any(28.5 <= a <= 30.5 for a in saturn) and any(57 <= a <= 60.5 for a in saturn)
+    nodes = [e["ageAtStart"] for e in cycles if key(e) == "northNode-conjunction"]
+    assert len(nodes) >= 4 and all(18.0 <= b - a <= 19.2 for a, b in zip(nodes, nodes[1:]))  # the nodal cycle is 18.6 years
+    assert any(49 <= e["ageAtStart"] <= 52 for e in cycles if key(e) == "chiron-conjunction")
+    assert all(0.5 <= e["ageAtStart"] <= 90 for e in cycles)
+
+
+def test_lifetime_without_birth_time_has_no_firdaria():
+    from astra_engine.western import forecast
+    out = forecast.lifetime(DATE_ONLY, "female")
+    assert out["firdaria"] is None and out["cycles"] and out["dasha"] and out["meta"]["gender"] == "female"

@@ -21,7 +21,7 @@ from datetime import date, datetime, time, timedelta, timezone
 from ..common.birth import BirthData, HouseSystem, resolve_utc
 from ..common.zodiac import SIGNS, house_of, norm, sign_index, sign_of, split_degree
 from ..sky.common import iso_from_jd, jd_of, kery_planet, longitude
-from . import cycles, natal, personal_moon, returns, timeline
+from . import cycles, natal, personal_moon, returns, timeline, transformations
 
 MODULE_ID = "western.forecast"
 MODULE_VERSION = "0.1.0"
@@ -214,8 +214,52 @@ def year_forecast(birth: BirthData, year_: int, house_system: HouseSystem = "P")
     }
 
 
+LIFE_YEARS = 90
+LIFE_CYCLES = ["jupiter-conjunction", "jupiter-opposition", "saturn-conjunction", "saturn-square", "saturn-opposition",
+               "uranus-square", "uranus-trine", "uranus-opposition", "neptune-square", "northNode-conjunction",
+               "chiron-conjunction"]
+
+
+def _plus_years(d: date, n: int) -> date:
+    try:
+        return d.replace(year=d.year + n)
+    except ValueError:  # 29 February
+        return d.replace(year=d.year + n, day=28)
+
+
+def lifetime(birth: BirthData, gender: str = "male", house_system: HouseSystem = "P") -> dict:
+    """Everything that runs through a whole life on one page: the firdaria (needs the birth time), the Vimshottari
+    mahadashas, the Chinese luck pillars, and the planetary life cycles (returns, squares, oppositions of Jupiter,
+    Saturn, Uranus and Neptune to their natal places, and the returns of the Moon's node and Chiron) over 90 years."""
+    from ..chinese import bazi
+    from ..vedic import chart as vedic_chart
+    utc = resolve_utc(birth.date, birth.time or time(12, 0), birth.timezone).utc
+    end = _plus_years(birth.date, LIFE_YEARS)
+    firdaria = None
+    if not birth.time_unknown:
+        fd = _firdaria(birth, utc, birth.date, end, house_system)
+        firdaria = {"diurnal": fd["diurnal"],
+                    "periods": [{"lord": p["lord"], "start": p["start"], "end": p["end"]} for p in fd["periods"]]}
+    cycles_found = []
+    for k in range(0, LIFE_YEARS, 30):
+        out = transformations.calculate(birth, birth.date.year + k, 30, house_system, only=LIFE_CYCLES, step=2.0)
+        cycles_found += out["episodes"]
+    cycles_found = [e for e in cycles_found if 0.5 <= e["ageAtStart"] <= LIFE_YEARS]
+    luck = bazi.calculate(birth, gender)["luck"]
+    dasha = vedic_chart.calculate(birth)["dasha"]["mahadashas"]
+    return {
+        "module": MODULE_ID + ".lifetime",
+        "meta": {"engineVersion": MODULE_VERSION, "timeUnknown": birth.time_unknown, "gender": gender, "years": LIFE_YEARS},
+        "birth": birth.date.isoformat(),
+        "firdaria": firdaria,
+        "dasha": [{"lord": d["lord"], "start": d["start"], "end": d["end"]} for d in dasha],
+        "luck": luck,
+        "cycles": cycles_found,
+    }
+
+
 def calculate(birth: BirthData, kind: str = "year", start: date | None = None, years: int = 15, days: int = 365,
-              year: int | None = None, house_system: HouseSystem = "P", **_options) -> dict:
+              year: int | None = None, house_system: HouseSystem = "P", gender: str = "male", **_options) -> dict:
     today = datetime.now(timezone.utc).date()
     if kind == "lifeline":
         return lifeline(birth, start or today, years, house_system)
@@ -223,4 +267,6 @@ def calculate(birth: BirthData, kind: str = "year", start: date | None = None, y
         return retrogrades(birth, start or today, days, house_system)
     if kind == "year":
         return year_forecast(birth, year or today.year, house_system)
-    raise ValueError("kind must be 'lifeline', 'retrogrades' or 'year'")
+    if kind == "lifetime":
+        return lifetime(birth, gender, house_system)
+    raise ValueError("kind must be 'lifeline', 'retrogrades', 'year' or 'lifetime'")

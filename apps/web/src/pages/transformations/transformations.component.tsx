@@ -1,15 +1,14 @@
 import {useCallback, useMemo, useState} from 'react';
 import {Link} from 'react-router-dom';
-import {Alert, Button, DatePicker, Segmented} from 'antd';
-import dayjs, {Dayjs} from 'dayjs';
+import {Alert, Button} from 'antd';
 import classNames from 'classnames';
 import {aspectPairText} from '@astra/content';
 import {Routes} from 'router/routes';
 import {useStore} from 'store/store.config';
-import {IBirthInput} from 'store/store';
 import {ASPECT_GLYPHS, aspectTone, formatDegree, formatLocal, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
 import {activeIn, byImportance, cycleKey, EpisodeGroup, groupOf, WINDOW_YEARS, windowStart} from 'core/helpers/transformations';
-import {useChartChoice} from 'core/helpers/use-chart-choice';
+import {useBirthSource} from 'core/helpers/use-birth-source';
+import BirthSourceComponent from 'core/shared/birth-source/birth-source.component';
 import SeoComponent from 'core/shared/seo/seo.component';
 import LoaderComponent from 'core/shared/loader/loader.component';
 import CosmicBackgroundComponent from 'core/shared/cosmic-background/cosmic-background.component';
@@ -22,8 +21,6 @@ import {useTransformationsStyles} from './transformations.style';
 const MIN_YEAR = 1801;
 const MAX_YEAR = 2960;
 const GROUPS: EpisodeGroup[] = ['cycle', 'major', 'other'];
-const BIRTH_MIN = dayjs('1800-01-01');
-const BIRTH_MAX = dayjs();
 
 // What a birth date points to in a chosen year: the long transits of Jupiter-Pluto to the natal planets, grouped as
 // life cycles, major changes and other contacts. Each contact has a short line and a full reading to expand.
@@ -32,26 +29,14 @@ function TransformationsComponent() {
     const content = useContent();
     const locale = useStore('locale');
     const classes = useTransformationsStyles();
-    const {input: chartInput} = useChartChoice();
-    const [mode, setMode] = useState<'chart' | 'date'>(chartInput ? 'chart' : 'date');
-    const [birth, setBirth] = useState<Dayjs | null>(null);
+    const source = useBirthSource();
+    const {input, chartInput} = source;
     const [year, setYear] = useState(() => new Date().getFullYear());
 
-    const dateInput = useMemo<IBirthInput | null>(() => (birth ? {
-        name: null, date: birth.format('YYYY-MM-DD'), time: null, latitude: 0, longitude: 0, timezone: 'UTC', place: '', houseSystem: 'P',
-    } as IBirthInput : null), [birth]);
-    const input = mode === 'chart' && chartInput ? chartInput : dateInput;
     const birthYear = input ? Number(input.date.slice(0, 4)) : null;
 
     const {data, isFetching, isError} = useGetTransformations(input, windowStart(year), WINDOW_YEARS);
 
-    const handleMode = useCallback((v: string | number) => {
-        setMode(v as 'chart' | 'date');
-    }, []);
-    const handleBirth = useCallback((v: Dayjs | null) => {
-        setBirth(v);
-    }, []);
-    const disabledBirth = useCallback((d: Dayjs) => d.isBefore(BIRTH_MIN) || d.isAfter(BIRTH_MAX), []);
     const handlePrev = useCallback(() => {
         setYear((y) => Math.max(MIN_YEAR, y - 1));
     }, []);
@@ -158,18 +143,8 @@ function TransformationsComponent() {
                 </header>
 
                 <div className={classes.toolbar}>
-                    {chartInput ? (
-                        <Segmented value={mode} onChange={handleMode} size='large'
-                                   options={[{value: 'chart', label: translate('tr_source_chart')}, {value: 'date', label: translate('tr_source_date')}]}/>
-                    ) : null}
-                    {mode === 'date' || !chartInput ? (
-                        <label className={classes.dateField}>
-                            <span>{translate('tr_date_label')}</span>
-                            <DatePicker value={birth} onChange={handleBirth} format='DD.MM.YYYY' disabledDate={disabledBirth}
-                                        placeholder={translate('field_date_placeholder')} inputReadOnly={false} size='large'/>
-                            <small>{translate('tr_date_hint')}</small>
-                        </label>
-                    ) : null}
+                    <BirthSourceComponent chartInput={chartInput} mode={source.mode} onMode={source.onMode} birth={source.birth}
+                                          onBirth={source.onBirth} showDate={source.showDate}/>
                     <div className={classes.yearSwitch}>
                         <Button onClick={handlePrev} aria-label={translate('calendar_prev')} disabled={year <= MIN_YEAR}>‹</Button>
                         <strong aria-live='polite'>{year}</strong>

@@ -488,6 +488,7 @@ export const az = {
     solar_return_title: 'Bu ilin Günəş qayıdışının oxunuşu',
     solar_return_sun: 'Qayıdış xəritəsində Günəş',
     solar_return_asc: 'Qayıdış xəritəsinin Assendenti',
+    nav_forecast: 'Proqnoz',
     nav_year: 'İl proqnozu',
     seo_year_title: 'İl proqnozu: sizin üçün il',
     seo_year_description: 'Natal xəritənizə görə seçilmiş ilin xülasəsi: profeksiya, Günəş qayıdışı, əsas aylar, ağır planetlər, tutulmalar və retroqradlar.',
@@ -634,6 +635,25 @@ export const az = {
     portrait_retro: 'Retroqrad planetlər',
     portrait_note: 'Yarımkürə vurğusu üçün on planetdən {n} və ya daha çoxu ənənəvi şərt kimi götürülür. Mətnlər ənənəvi mənalardır.',
     portrait_time_unknown: 'Doğum saatı bilinmir: hökmdar, sekt və yarımkürələr göstərilmir. Mətnlər ənənəvi mənalardır.',
+
+    // life timeline
+    nav_life: 'Dövrlər xətti',
+    seo_life_title: 'Dövrlər xətti: bütün həyat bir səhifədə',
+    seo_life_description: 'Firdariya, Vimşottari daşa, Çin bəxt sütunları və Saturn, Yupiter, Uran qayıdışları 0–90 yaş oxunda.',
+    lt_eyebrow: 'Həyat dövrləri',
+    lt_title: 'Dövrlər xətti',
+    lt_intro: 'Həyat boyu davam edən dövrlər bir yerdə: firdariya, daşa, bəxt sütunları və planetlərin qayıdış və bucaqları. Bloka basın: mətni aşağıda görünəcək.',
+    lt_firdaria: 'Firdariya',
+    lt_dasha: 'Vimşottari daşa',
+    lt_luck: 'Çin bəxt sütunları',
+    lt_cycles: 'Planet dövrləri',
+    lt_now: 'indi',
+    lt_ages: '{from}–{to} yaş',
+    lt_pick: 'Bir bloka basın: dövrün mənası burada görünəcək.',
+    lt_gender_note: 'Cinsiyyət yalnız Çin bəxt sütunlarının istiqaməti üçün lazımdır.',
+    lt_error: 'Dövrlər xəttini hesablamaq alınmadı.',
+    lt_time_unknown: 'Doğum saatı bilinmir: firdariya göstərilmir, daşa isə təxminidir (Ay günorta götürülüb).',
+    lt_note: 'Planet dövrləri yalnız dəqiq təmaslardır. Mətnlər ənənəvi mənalardır, qəti proqnoz deyil.',
 
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',

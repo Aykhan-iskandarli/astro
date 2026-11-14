@@ -490,6 +490,7 @@ export const en: Record<keyof typeof az, string> = {
     solar_return_title: 'Reading of this solar return',
     solar_return_sun: 'The Sun in the return chart',
     solar_return_asc: 'Ascendant of the return chart',
+    nav_forecast: 'Forecast',
     nav_year: 'Year forecast',
     seo_year_title: 'Year forecast: your year ahead',
     seo_year_description: 'Your chosen year read in your natal chart: profection, solar return, key months, slow planets, eclipses and retrogrades.',
@@ -636,6 +637,25 @@ export const en: Record<keyof typeof az, string> = {
     portrait_retro: 'Retrograde planets',
     portrait_note: 'For emphasis of a half, {n} or more of the ten planets is the traditional convention. The texts give traditional meanings.',
     portrait_time_unknown: 'Birth time unknown: the ruler, sect and halves are not shown. The texts give traditional meanings.',
+
+    // life timeline
+    nav_life: 'Life timeline',
+    seo_life_title: 'Life timeline: a whole life on one page',
+    seo_life_description: 'Firdaria, Vimshottari dasha, Chinese luck pillars and the Saturn, Jupiter and Uranus cycles on a 0–90 age axis.',
+    lt_eyebrow: 'Life periods',
+    lt_title: 'Life timeline',
+    lt_intro: 'The periods that run through a life in one place: firdaria, dasha, luck pillars and the planetary returns and angles. Select a block to read it below.',
+    lt_firdaria: 'Firdaria',
+    lt_dasha: 'Vimshottari dasha',
+    lt_luck: 'Chinese luck pillars',
+    lt_cycles: 'Planetary cycles',
+    lt_now: 'now',
+    lt_ages: 'age {from}–{to}',
+    lt_pick: 'Select a block to see what the period means.',
+    lt_gender_note: 'Gender is only needed for the direction of the Chinese luck pillars.',
+    lt_error: 'Could not calculate the life timeline.',
+    lt_time_unknown: 'Birth time unknown: the firdaria is not shown and the dasha is approximate (the Moon is taken at noon).',
+    lt_note: 'Planetary cycles are exact contacts only. The texts give traditional meanings, not certain predictions.',
 
     // not found
     not_found_title: 'There is no such star in this sky',

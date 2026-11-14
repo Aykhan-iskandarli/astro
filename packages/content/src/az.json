@@ -3325,6 +3325,14 @@
       "neptune-square": {
         "name": "Neptun kvadratı",
         "text": "Neptun kvadratı təxminən 40–42 yaşda baş verir. Bu, aldanmaların aradan qalxması və mənəvi axtarış dövrüdür: inandığınız şeylər sorğulanır, heç vaxt yaşanmamış xəyallar görünür, məna ehtiyacı artır. Çaşqınlıq və yorğunluq ola bilər, amma gözləntilərin daha səmimi bir şeylə əvəzlənməsi də olur. Mühüm qərarları sənədlərlə və yoxlanmış faktlarla verin."
+      },
+      "northNode-conjunction": {
+        "name": "Düyün qayıdışı",
+        "text": "Ayın düyünü təxminən hər 18,6 ildən bir doğuş yerinə qayıdır (18–19, 37, 56 və 74 yaş ətrafında). Bu, taleyin yönünü yoxlama dövrüdür: hansı yolun sizə uyğun olduğu və nəyin artıq vərdişə çevrildiyi aydınlaşır. Çox vaxt iş, münasibət və ya yaşayış yerində ciddi qərarlar bu dövrə düşür. Hadisələr əvvəlcədən “yazılmış” hiss oluna bilər; mühüm olan dərsi görmək və istiqaməti şüurlu seçməkdir."
+      },
+      "chiron-conjunction": {
+        "name": "Xiron qayıdışı",
+        "text": "Xiron təxminən 50 yaşda doğuş yerinə qayıdır. Bu, “yaralı şifaçı” dövrüdür: uzun illər daşınan həssaslıq və incik görünür, onunla barışmaq və başqalarına kömək etmək mümkün olur. Çox vaxt həyatın ikinci yarısına keçid hiss olunur: nə üçün yaşadığınızı yenidən qurur, öz təcrübənizi başqalarına ötürürsünüz. Köhnə yaralara yeni baxış şifanın başlanğıcıdır."
       }
     }
   },
@@ -3464,6 +3472,30 @@
       "uranus": "Retroqrad Uran fərdiliyin içəridən yaşandığını göstərir: fərqli olmaq xaricdən az görünür, amma düşüncənizdə güclüdür. Nəsil dəyişimini daha çox daxili yaşayırsınız.",
       "neptune": "Retroqrad Neptun ideal və intuisiyanın daha şəxsi və daxili olduğunu göstərir. Nəslin xəyallarını öz yolunuzla yaşayırsınız; ruhani axtarış çox vaxt tənha və dərin olur.",
       "pluto": "Retroqrad Pluton dərin dəyişimin içəridə baş verdiyini göstərir: güc və nəzarət mövzuları xarici mübarizədən çox daxili işdir. Nəslin dəyişimini şəxsi səviyyədə keçirsiniz."
+    }
+  },
+  "lifetime": {
+    "firdaria": {
+      "sun": "Günəş dövrü kimlik və görünməyin dövrüdür: özünüzü ifadə etmək, öz yerini tapmaq və nüfuz qazanmaq önə çıxır. Liderlik, atalıq mövzusu, özünəinam və həyat məqsədi bu illərdə qurulur. Uğur adətən açıq və şüurlu səylə gəlir.",
+      "venus": "Venera dövrü sevgi, münasibət, zövq və ahəngin dövrüdür. Yaxınlıq, evlilik, sənət, gözəllik və maddi rahatlıq mövzuları önə çıxır. Bu illərdə ünsiyyət asan olur, amma həddindən artıq rahatlığa qapılmamaq lazımdır.",
+      "mercury": "Merkuri dövrü öyrənmə, ünsiyyət, ticarət və hərəkətin dövrüdür. Təhsil, yazı, səyahətlər, qardaş-bacılar və məlumatla iş önə çıxır. Zehin çox fəal olur; diqqəti dağıtmamaq və bir neçə işi dərinləşdirmək yaxşıdır.",
+      "moon": "Ay dövrü hisslərin, evin, ailənin və dəyişkənliyin dövrüdür. Köklər, anaya aid mövzular, ictimai əlaqələr və əhval dəyişir. Hadisələr daha tez-tez dəyişir; daxili ehtiyaclara qulaq asmaq əsas dayaqdır.",
+      "saturn": "Saturn dövrü məsuliyyət, zəhmət və yetkinlik dövrüdür. Öhdəliklər artır, hədlər görünür, gecikmələr ola bilər, amma qurduğunuz şey möhkəm olur. Bu illər çox vaxt sonradan ən dəyərli illər kimi xatırlanır.",
+      "jupiter": "Yupiter dövrü böyümə, imkan və nikbinlik dövrüdür. Təhsil, səyahət, hüquq, öyrətmək və sosial genişlənmə önə çıxır. Şans və dəstək daha tez gəlir; yalnız həddindən artıq söz verməkdən və xərcləməkdən çəkinin.",
+      "mars": "Mars dövrü enerji, hərəkət və mübarizə dövrüdür. Cəsarət, rəqabət, məqsədə doğru səy və sürtünmə artır. Bu illərdə təşəbbüs göstərmək yaxşıdır, hirsi isə fiziki fəaliyyət və aydın hədəflərə yönəltmək lazımdır.",
+      "northNode": "Şimal Düyün dövrü böyümə istiqaməti və yeni qarşılaşmalar dövrüdür. Kənardan gələn imkanlar, yeni insanlar və hələ tanış olmayan yollar önə çıxır. Bu illər çox vaxt “nəyə doğru böyüyürəm” sualını verir.",
+      "southNode": "Cənub Düyün dövrü buraxmaq və yekunlaşdırmaq dövrüdür. Köhnə vərdişlər, keçmiş münasibətlər və artıq xidmət etməyən şeylər üzə çıxır. Bu, itki kimi görünə bilər, amma yeni mərhələ üçün yer açır."
+    },
+    "dasha": {
+      "ketu": "Ketu dövrü (7 il) ayrılıq, mənəvi axtarış və buraxmaq dövrüdür. Maddi hədəflərə maraq azala bilər, daxili aləmə və mənaya meyl artır. Qəfil dəyişikliklər və itkilər ola bilər; vərdişlərdən azad olmaq əsas dərsdir.",
+      "venus": "Venera dövrü (20 il) ən uzun dövrdür: sevgi, münasibət, sənət, rahatlıq və maddi imkanlar. Bu illərdə zövq və gözəllik önə çıxır, ailə qurmaq və dəyərləri formalaşdırmaq mümkün olur. Həddindən artıq rahatlıq və asılılıq təhlükədir.",
+      "sun": "Günəş dövrü (6 il) kimlik, nüfuz və karyeranın dövrüdür. Rəhbərlik, hökumətlə iş, ata və sağlamlıq mövzuları önə çıxır. Qısa, amma təyinedici dövrdür: özünüzü ifadə etmək və məqsəd qoymaq vacibdir.",
+      "moon": "Ay dövrü (10 il) hisslərin, evin və ailənin dövrüdür. Ruh halı, ana, yaşayış yeri və ictimai əlaqələr önə çıxır. Əhval dəyişkən ola bilər; daxili sabitliyi qurmaq əsas vəzifədir.",
+      "mars": "Mars dövrü (7 il) enerji, əmlak və hərəkət dövrüdür. Cəsarət, rəqabət, daşınmaz əmlak və qardaş mövzuları önə çıxır. Güclü irəliləyiş dövrüdür, amma tələskənlik və sürtünmə də artır.",
+      "rahu": "Rahu dövrü (18 il) həvəs, qeyri-ənənəvi yollar və yeni sahələrin dövrüdür. Xarici ölkələr, texnologiya, şöhrət və qeyri-adi qarşılaşmalar önə çıxır. Böyük irəliləyiş və ya aldanış ola bilər; yoxlanmış faktlar kömək edir.",
+      "jupiter": "Yupiter dövrü (16 il) müdriklik, böyümə və dəstək dövrüdür. Təhsil, öyrətmək, uşaqlar, hüquq və mənəvi inkişaf önə çıxır. Çox vaxt bu illər ən xeyirli sayılır; genişlənməni nizamla birləşdirmək lazımdır.",
+      "saturn": "Saturn dövrü (19 il) intizam, zəhmət və məsuliyyət dövrüdür. Karyera quruculuğu, öhdəliklər və yetkinlik önə çıxır. Gecikmələr və ağırlıq ola bilər, amma səbirlə qurulan şey ömürlük olur.",
+      "mercury": "Merkuri dövrü (17 il) zehin, ünsiyyət və ticarət dövrüdür. Təhsil, biznes, yazı və yeni bacarıqlar önə çıxır. Çeviklik və öyrənmə qabiliyyəti artır; səpələnməmək vacibdir."
     }
   }
 }

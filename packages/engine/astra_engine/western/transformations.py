@@ -25,6 +25,7 @@ MODULE_VERSION = "0.1.0"
 
 TRANSITING = ["jupiter", "saturn", "uranus", "neptune", "pluto"]
 NATAL_TARGETS = ["sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"]
+EXTRA_POINTS = ["northNode", "chiron"]  # only used for returns (a point to itself); not part of the default targets
 ASPECTS = {"conjunction": 0.0, "sextile": 60.0, "square": 90.0, "trine": 120.0, "opposition": 180.0}
 MAX_YEARS = 30
 EPISODE_GAP = 300.0  # days between exact passes that still belong to the same episode
@@ -46,36 +47,46 @@ def _refine(pid: str, target: float, off: float, lo: float, hi: float, flo: floa
     return (lo + hi) / 2
 
 
-def _natal_targets(birth: BirthData, house_system: HouseSystem) -> tuple[dict, dict, bool]:
+def _natal_targets(birth: BirthData, house_system: HouseSystem, wanted: list[str] | None = None) -> tuple[dict, dict, bool]:
     chart = natal.calculate(birth, house_system=house_system)
     known = not chart["meta"]["timeUnknown"]
+    ids = wanted if wanted is not None else NATAL_TARGETS
     targets = {p["id"]: p["longitude"] for p in chart["points"]
-               if p["id"] in NATAL_TARGETS and (known or p["id"] != "moon")}
-    if known and chart["angles"]:
+               if p["id"] in ids and (known or p["id"] != "moon")}
+    if wanted is None and known and chart["angles"]:
         targets.update({a: chart["angles"][a]["longitude"] for a in ("asc", "mc")})
     return chart, targets, not known
 
 
 def calculate(birth: BirthData, start_year: int | None = None, years: int = 10,
-              house_system: HouseSystem = "P", **_options) -> dict:
+              house_system: HouseSystem = "P", only: list[str] | None = None, step: float = STEP, **_options) -> dict:
+    """`only` ("saturn-conjunction", ...) restricts the result to a planet's own aspects to itself, which is what the
+    life-cycle timeline needs (returns, squares, oppositions); the transiting planets may then include the Moon's node
+    and Chiron. `step` is the sampling step in days (coarser is faster; two days still cannot skip a crossing)."""
     if not 1 <= years <= MAX_YEARS:
         raise ValueError(f"years must be between 1 and {MAX_YEARS}")
     first = start_year or datetime.now(timezone.utc).year
     if not 1800 <= first <= 2998 - years:
         raise ValueError("start year out of range")
-    chart, targets, unknown = _natal_targets(birth, house_system)
+    wanted = sorted({k.rsplit("-", 1)[0] for k in only}) if only else None
+    chart, targets, unknown = _natal_targets(birth, house_system, wanted)
     a = jd_of(datetime(first, 1, 1, tzinfo=timezone.utc))
     b = jd_of(datetime(first + years, 1, 1, tzinfo=timezone.utc))
     days = int(b - a)
-    times = [a + i * STEP for i in range(int(days / STEP) + 1)]
+    times = [a + i * step for i in range(int(days / step) + 1)]
     birth_jd = jd_of(datetime(birth.date.year, birth.date.month, birth.date.day, tzinfo=timezone.utc))
 
     hits: dict[tuple, list[tuple[float, bool]]] = {}
-    for pid in TRANSITING:
-        samples = [longitude(pid, t) for t in times]
-        lons = [s[0] for s in samples]
+    for pid in (wanted if only else TRANSITING):
+        if pid not in targets and only:
+            continue
+        lons = [longitude(pid, t)[0] for t in times]
         for tid, tlon in targets.items():
+            if only and tid != pid:
+                continue
             for aspect, angle in ASPECTS.items():
+                if only and f"{pid}-{aspect}" not in only:
+                    continue
                 for off in ((angle,) if angle in (0.0, 180.0) else (angle, -angle)):
                     vals = [_wrap(x - tlon - off) for x in lons]
                     for i in range(len(vals) - 1):

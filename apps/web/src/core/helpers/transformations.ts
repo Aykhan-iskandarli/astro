@@ -9,7 +9,7 @@ export type EpisodeGroup = 'cycle' | 'major' | 'other';
 /** Contacts of a planet to itself are life cycles; the rest of Saturn-Pluto's hard aspects are the big changes. */
 export const CYCLE_KEYS = [
     'saturn-conjunction', 'saturn-square', 'saturn-opposition', 'jupiter-conjunction', 'jupiter-opposition',
-    'uranus-square', 'uranus-trine', 'uranus-opposition', 'neptune-square',
+    'uranus-square', 'uranus-trine', 'uranus-opposition', 'neptune-square', 'northNode-conjunction', 'chiron-conjunction',
 ];
 
 export const groupOf = (e: IEpisode): EpisodeGroup => {

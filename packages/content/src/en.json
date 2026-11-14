@@ -3325,6 +3325,14 @@
       "neptune-square": {
         "name": "Neptune square",
         "text": "The Neptune square happens around ages 40 to 42. It is a time of disillusion and spiritual searching: what you believed in is questioned, dreams never lived come into view and the need for meaning grows. Confusion and tiredness are possible, but so is replacing expectations with something more honest. Make important decisions with documents and checked facts."
+      },
+      "northNode-conjunction": {
+        "name": "Nodal return",
+        "text": "The Moon's node returns to its birth place about every 18.6 years (around ages 18 to 19, 37, 56 and 74). It is a checkpoint of direction: it becomes clear which road suits you and what has turned into mere habit. Serious decisions about work, relationships or where to live often fall in this period. Events can feel as if they were written in advance; what matters is to see the lesson and choose the direction consciously."
+      },
+      "chiron-conjunction": {
+        "name": "Chiron return",
+        "text": "Chiron returns to its birth place at about age 50. It is the wounded-healer period: a sensitivity and hurt carried for many years comes into view, and it becomes possible to make peace with it and help others. A passage into the second half of life is often felt: you rebuild what you live for and pass your experience on. A new look at old wounds is where healing begins."
       }
     }
   },
@@ -3464,6 +3472,30 @@
       "uranus": "A retrograde Uranus shows individuality lived from within: being different shows less outwardly but is strong in your thinking. You experience generational change more inwardly.",
       "neptune": "A retrograde Neptune shows ideals and intuition that are more personal and inward. You live the dreams of your generation in your own way; the spiritual search is often solitary and deep.",
       "pluto": "A retrograde Pluto shows deep change happening inside: themes of power and control are inner work more than outer struggle. You go through the generation's transformation on a personal level."
+    }
+  },
+  "lifetime": {
+    "firdaria": {
+      "sun": "The Sun period is one of identity and visibility: expressing yourself, finding your place and gaining standing come forward. Leadership, the theme of the father, self-confidence and life purpose are built in these years. Success usually comes through open, conscious effort.",
+      "venus": "The Venus period is one of love, relationships, pleasure and harmony. Closeness, marriage, art, beauty and material comfort come forward. Relating is easier in these years, but beware of settling into too much ease.",
+      "mercury": "The Mercury period is one of learning, communication, trade and movement. Education, writing, trips, siblings and work with information come forward. The mind is very active; it helps not to scatter attention and to deepen a few things.",
+      "moon": "The Moon period is one of feelings, home, family and change. Roots, themes of the mother, public contacts and mood shift. Events change more often; listening to inner needs is the main support.",
+      "saturn": "The Saturn period is one of responsibility, hard work and maturity. Obligations grow, limits show and delays can happen, but what you build is solid. These years are often remembered later as the most valuable.",
+      "jupiter": "The Jupiter period is one of growth, opportunity and optimism. Education, travel, law, teaching and social expansion come forward. Luck and support come more readily; just avoid over-promising and over-spending.",
+      "mars": "The Mars period is one of energy, action and struggle. Courage, competition, drive toward goals and friction increase. It is a good time to take initiative, and anger is best directed into physical activity and clear goals.",
+      "northNode": "The North Node period is one of growth direction and new encounters. Opportunities from outside, new people and unfamiliar roads come forward. These years often ask “what am I growing toward?”",
+      "southNode": "The South Node period is one of letting go and closing. Old habits, past relationships and what no longer serves come into view. It can look like loss, but it makes room for a new stage."
+    },
+    "dasha": {
+      "ketu": "The Ketu period (7 years) is one of detachment, spiritual search and letting go. Interest in material goals may fade while the pull toward the inner world and meaning grows. Sudden changes and losses are possible; freeing yourself from habits is the main lesson.",
+      "venus": "The Venus period (20 years) is the longest: love, relationships, art, comfort and material means. Pleasure and beauty come forward and it becomes possible to build a family and shape values. Too much comfort and dependence are the danger.",
+      "sun": "The Sun period (6 years) is one of identity, standing and career. Leadership, work with authority, the father and health come forward. A short but decisive period: expressing yourself and setting goals matter.",
+      "moon": "The Moon period (10 years) is one of feelings, home and family. Mood, the mother, where you live and public contacts come forward. Mood may be changeable; building inner stability is the main task.",
+      "mars": "The Mars period (7 years) is one of energy, property and action. Courage, competition, real estate and siblings come forward. It is a time of strong progress, but haste and friction also grow.",
+      "rahu": "The Rahu period (18 years) is one of ambition, unconventional paths and new fields. Foreign lands, technology, fame and unusual encounters come forward. Great progress or deception is possible; checked facts help.",
+      "jupiter": "The Jupiter period (16 years) is one of wisdom, growth and support. Education, teaching, children, law and spiritual growth come forward. These years are often counted as the most fortunate; expansion needs to be joined with order.",
+      "saturn": "The Saturn period (19 years) is one of discipline, hard work and responsibility. Career building, obligations and maturity come forward. Delays and heaviness are possible, but what is built patiently lasts a lifetime.",
+      "mercury": "The Mercury period (17 years) is one of mind, communication and trade. Education, business, writing and new skills come forward. Flexibility and the ability to learn grow; not scattering matters."
     }
   }
 }
