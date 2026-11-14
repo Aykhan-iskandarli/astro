@@ -10,8 +10,8 @@ describe('fullReading', () => {
         expect(r.house).toBeTruthy();
         expect(r.aspects.map((a) => a.type)).toEqual(['trine', 'square']); // each type once
     });
-    it('has no Big Three text for other planets, but still reads the layers', () => {
-        const r = fullReading('az', 'mars', 'aries', null);
+    it('has no sign-specific text for the outer planets, but still reads the layers', () => {
+        const r = fullReading('az', 'saturn', 'aries', null);
         expect(r.specific).toBeNull();
         expect(r.planet && r.sign).toBeTruthy();
         expect(r.house).toBeNull();
@@ -24,7 +24,7 @@ describe('fullReading', () => {
             for (const id of Object.keys(c.points)) expect(Object.keys(reading.planet)).toContain(id);
             for (const id of Object.keys(c.signs)) {
                 expect(Object.keys(reading.sign)).toContain(id);
-                for (const body of ['sun', 'moon', 'asc']) expect(Object.keys(reading.bigThree[body])).toContain(id);
+                for (const body of ['sun', 'moon', 'asc', 'mercury', 'venus', 'mars']) expect(Object.keys(reading.bigThree[body])).toContain(id);
             }
             for (let h = 1; h <= 12; h++) expect(Object.keys(reading.house)).toContain(String(h));
             for (const id of ['conjunction', 'opposition', 'trine', 'square', 'sextile']) expect(Object.keys(reading.aspect)).toContain(id);

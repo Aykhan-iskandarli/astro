@@ -23,7 +23,7 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - **Karmic path**: lunar node axis, Chiron, Lilith.
 - **Transits**: any date and time, bi-wheel.
 - **Full readings**: every placement keeps its short text and has a "Read in full" section underneath (the planet, the sign,
-  the house, the aspect types it makes and, for the Sun, Moon and Ascendant, a text written for that sign); the same on the
+  the house, the aspect types it makes and, for the Sun, Moon, Mercury, Venus, Mars and the Ascendant, a text written for that sign); the same on the
   transformation cards.
 - **Chart portrait**: under the Big Three, the first things an astrologer counts: the chart ruler by house, the sect, the halves
   of the chart, stelliums, retrograde planets and a planet that rules several of the Big Three.
@@ -115,7 +115,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2188 keys) + web unit tests (65)
+npm test                                                        # content consistency (2224 keys) + web unit tests (65)
 npm run typecheck -w apps/web
 ```
 
