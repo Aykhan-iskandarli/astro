@@ -608,6 +608,14 @@ export const en: Record<keyof typeof az, string> = {
     tr_natal_at: 'natal {name}: {sign} {degree}',
     tr_note: 'Only exact contacts are counted; a planet that turns back before reaching the aspect is not. The texts give traditional meanings, not certain predictions.',
 
+    // full readings
+    read_full: 'Read in full',
+    read_specific: '{point} in {sign}',
+    read_planet: 'What {name} means',
+    read_sign: 'In {name}',
+    read_house: 'The {name}',
+    read_aspects: 'Aspects',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

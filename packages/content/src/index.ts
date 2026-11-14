@@ -82,3 +82,24 @@ export const aspectPairText = (lang: ContentLang, a: string, b: string): string 
     const pairs = getContent(lang).aspectPairs as Record<string, string>;
     return pairs[`${a}-${b}`] ?? pairs[`${b}-${a}`] ?? null;
 };
+
+/** The long, layered reading of a placement: the planet, the sign, the house and the aspect types it makes. */
+export const fullReading = (
+    lang: ContentLang,
+    pointId: string,
+    sign: string,
+    house: number | null,
+    aspectTypes: string[] = [],
+) => {
+    const r = getContent(lang).reading as {
+        planet: Record<string, string>; sign: Record<string, string>; house: Record<string, string>; aspect: Record<string, string>;
+        bigThree?: Record<string, Record<string, string>>;
+    };
+    return {
+        specific: r.bigThree?.[pointId]?.[sign] ?? null,
+        planet: r.planet[pointId] ?? null,
+        sign: r.sign[sign] ?? null,
+        house: house ? r.house[String(house)] ?? null : null,
+        aspects: [...new Set(aspectTypes)].map((type) => ({type, text: r.aspect[type]})).filter((a) => a.text),
+    };
+};

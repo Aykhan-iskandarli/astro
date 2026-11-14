@@ -3,6 +3,7 @@ import {aspectPairText, describePlacement} from '@astra/content';
 import {ASPECT_GLYPHS, aspectTone, formatDegree, formatOrb, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
 import {useStore} from 'store/store.config';
 import useLocalization, {useContent} from 'assets/lang';
+import FullReadingComponent from '../full-reading/full-reading.component';
 import {useInterpretationPanelStyles} from './interpretation-panel.style';
 import {IInterpretationPanel} from './interpretation-panel';
 
@@ -54,6 +55,8 @@ const InterpretationPanelComponent = ({chart, pointId}: IInterpretationPanel) =>
                                 </p>
                             ) : null}
                         </div>
+
+                        {point.sign ? <FullReadingComponent pointId={point.id!} sign={point.sign} house={house} aspectTypes={aspects.map((a) => a.type!)}/> : null}
 
                         {aspects.length ? (
                             <ul className={classes.aspects}>

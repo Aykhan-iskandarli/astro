@@ -22,6 +22,9 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - **Destiny Matrix**: 22 arcana (Ladini method), purposes, health map, love/money lines, age timeline.
 - **Karmic path**: lunar node axis, Chiron, Lilith.
 - **Transits**: any date and time, bi-wheel.
+- **Full readings**: every placement keeps its short text and has a "Read in full" section underneath (the planet, the sign,
+  the house, the aspect types it makes and, for the Sun, Moon and Ascendant, a text written for that sign); the same on the
+  transformation cards.
 - **Forecast**: transit timeline (exact dates for 12 months), life timeline (the years Jupiter-Pluto spend in each
   of your houses), retrograde calendar (with the natal house of each station), solar and lunar returns (with relocation),
   secondary progressions, life cycles (Jupiter/Saturn/Chiron returns, profections), firdaria, zodiacal
@@ -107,7 +110,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (375)
 docker compose run --rm api pytest -q                           # API (35)
-npm test                                                        # content consistency (2055 keys) + web unit tests (49)
+npm test                                                        # content consistency (2139 keys) + web unit tests (52)
 npm run typecheck -w apps/web
 ```
 

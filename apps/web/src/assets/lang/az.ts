@@ -606,6 +606,14 @@ export const az = {
     tr_natal_at: 'natal {name}: {sign} {degree}',
     tr_note: 'Yalnız dəqiq təmaslar sayılır; planet aspektə çatıb dönərsə sayılmır. Mətnlər ənənəvi mənalardır, qəti proqnoz deyil.',
 
+    // full readings
+    read_full: 'Tam oxu',
+    read_specific: '{point} {sign} bürcündə',
+    read_planet: '{name}: nə deməkdir',
+    read_sign: '{name} bürcündə',
+    read_house: '{name}',
+    read_aspects: 'Aspektlər',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

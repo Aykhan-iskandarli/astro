@@ -4,6 +4,7 @@ import {placementText} from '@astra/content';
 import {ELEMENT_OF_SIGN, formatDegree, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
 import {useStore} from 'store/store.config';
 import useLocalization, {useContent} from 'assets/lang';
+import FullReadingComponent from '../full-reading/full-reading.component';
 import {useBigThreeStyles} from './big-three.style';
 import {IBigThree} from './big-three';
 
@@ -60,6 +61,7 @@ const BigThreeComponent = ({chart, onSelect}: IBigThree) => {
                                         {element ? content.elements[element].name : ''} · {signInfo?.keywords}
                                     </p>
                                     <p className={classes.text}>{placementText(locale, id, sign)}</p>
+                                    <FullReadingComponent pointId={id} sign={sign} house={'house' in p ? (p.house as number | null) : null}/>
                                     <button type='button' className={classes.more} data-id={id} onClick={handleClick}>
                                         {translate('big_three_more')}
                                     </button>
