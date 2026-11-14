@@ -33,11 +33,11 @@ MODULES: dict[str, EngineModule] = {
     progressions.MODULE_ID: progressions,        # Phase 7
     composite.MODULE_ID: composite,              # Phase 7
     timeline.MODULE_ID: timeline,                # transit timeline
-    cycles.MODULE_ID: cycles,
+    cycles.MODULE_ID: cycles,                    # planetary returns (Jupiter/Saturn/Chiron) + profections
     details.MODULE_ID: details,                  # declinations, antiscia, receptions, dominants, prenatal eclipses
-    timing.MODULE_ID: timing,
-    davison.MODULE_ID: davison,
-    cartography.MODULE_ID: cartography,          # astrocartography lines                  # relationship chart for the midpoint in time and space                    # firdaria, zodiacal releasing, solar arc                    # planetary returns (Jupiter/Saturn/Chiron) + profections
+    timing.MODULE_ID: timing,                    # firdaria, zodiacal releasing, solar arc
+    davison.MODULE_ID: davison,                  # relationship chart for the midpoint in time and space
+    cartography.MODULE_ID: cartography,          # astrocartography lines
 }
 
 # The sky itself is not tied to a birth chart: calculate(at) / calculate(start, end)

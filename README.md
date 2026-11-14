@@ -1,7 +1,7 @@
 # Astra
 
-A free, open-source astrology platform. Phase 1 delivers an accurate Western natal chart
-(Swiss Ephemeris precision, astro-seek level of detail) with a calm, immersive web experience in
+A free, open-source astrology platform: Western, Vedic and Chinese astrology, numerology and the Destiny
+Matrix, calculated with Swiss Ephemeris precision and presented in a calm, immersive web app in
 Azerbaijani and English.
 
 - **Accurate**: positions come from the Swiss Ephemeris (via kerykeion); golden tests compare every
@@ -10,13 +10,50 @@ Azerbaijani and English.
   the browser.
 - **Free**: AGPL-3.0. The core chart will stay free.
 
+## What it does
+
+**Natal chart** (`/natal-chart`), one result screen with tabs:
+
+- **Natal**: wheel, planets and points, houses with rulers, aspect grid, aspect patterns, element/modality
+  balance, the "Big Three" summary and interpretations (planet in sign, planet in house, aspect pairs).
+  Extra points: Ceres, Pallas, Juno, Vesta, Vertex, Part of Spirit, Selena. Details: dominants, mutual
+  receptions, out-of-bounds, antiscia, prenatal eclipses, 18 fixed stars, Hellenistic lots, harmonic charts
+  H5/H7/H9.
+- **Destiny Matrix**: 22 arcana (Ladini method), purposes, health map, love/money lines, age timeline.
+- **Karmic path**: lunar node axis, Chiron, Lilith.
+- **Transits**: any date and time, bi-wheel.
+- **Forecast**: transit timeline (exact dates for 12 months), solar and lunar returns (with relocation),
+  secondary progressions, life cycles (Jupiter/Saturn/Chiron returns, profections), firdaria, zodiacal
+  releasing, solar arc.
+- **Vedic**: sidereal (Lahiri) D1/D9 and D3/D7/D10/D12, nakshatras, Vimshottari dasha, yogas, Ashtakavarga,
+  Sade Sati.
+- **Numerology**: core numbers, pinnacles and challenges, personal year/month/day, Lo Shu grid, Pythagoras
+  square (psychomatrix), compatibility.
+- **Chinese**: BaZi four pillars and luck pillars, Zi Wei Dou Shu, Chinese zodiac compatibility.
+- **Compatibility**: synastry with a score, composite and Davison charts, Guna Milan + Manglik, summary.
+- **Other systems**: Tarot birth cards, Maya Tzolkin, Kua number.
+- **Astrocartography**: planet lines on a world map (bundled Natural Earth outline, no external requests).
+
+**Other pages**
+
+- `/today`: the sky now (Moon phase and sign, void-of-course Moon, retrogrades, planet positions, coming
+  lunations and stations), today's transits to your chart, Panchang and planetary hours.
+- `/calendar`: astro calendar for a year (lunations, eclipses, ingresses, stations, retrograde periods) and a
+  moon calendar (lunar days, phase, void-of-course Moon) for a chosen city.
+- `/name-analysis`: numerology from a full name alone; the birth date is optional.
+- `/privacy-policy`.
+
+Interpretation texts are AI-written drafts and still need editorial review (see `packages/content`).
+The full list of phases, methods and how each was verified is in [docs/roadmap.md](docs/roadmap.md).
+
 ## Repository layout
 
 ```
 apps/
   web/        Vite + React 19 + TypeScript front end (Ant Design, Redux Toolkit, React Query, React-JSS,
               framer-motion, React Three Fiber)
-  api/        FastAPI service: /api/charts/natal, /api/places (offline GeoNames index)
+  api/        FastAPI service: /api/charts/* (one endpoint per engine module), /api/numerology*, /api/sky*,
+              /api/places (offline GeoNames index); full list at http://localhost:8000/api/docs
 packages/
   engine/     Python calculation modules — common interface calculate(birth_data) -> JSON
   content/    Interpretation texts (az, en) as structured JSON + a small TS helper
@@ -52,7 +89,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (333)
 docker compose run --rm api pytest -q                           # API (30)
-npm test                                                        # content consistency + web unit tests
+npm test                                                        # content consistency (1632 keys) + web unit tests (24)
 npm run typecheck -w apps/web
 ```
 
@@ -63,7 +100,7 @@ npm run build                     # typecheck → vite build → prerender publi
 npm run build:spa -w apps/web     # same without the prerender step
 ```
 
-The prerender step writes static HTML for `/`, `/natal-chart` and `/privacy-policy` (fast first paint,
+The prerender step writes static HTML for `/`, `/natal-chart`, `/name-analysis` and `/privacy-policy` (fast first paint,
 route-specific meta/OG tags for social previews and crawlers) as both `dist/<route>.html` and
 `dist/<route>/index.html`, and keeps the untouched SPA shell as `dist/spa.html`.
 **Hosting must serve the prerendered file when it exists and fall back to `dist/spa.html` with HTTP 404
