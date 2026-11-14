@@ -257,3 +257,15 @@ def test_personal_moon_endpoints():
     assert client.post("/api/charts/moon-day", json={**BAKU, "hours": 100}).status_code == 422
     assert client.post("/api/charts/moon-lunations", json={**BAKU, "days": 900}).status_code == 422
     assert client.post("/api/charts/moon-day", json={**BAKU, "start": "1700-01-01T00:00:00Z"}).status_code == 422
+
+
+def test_forecast_endpoints():
+    life = client.post("/api/charts/lifeline", json={**BAKU, "start": "2026-01-01", "years": 6})
+    assert life.status_code == 200 and set(life.json()["planets"]) == {"jupiter", "saturn", "uranus", "neptune", "pluto"}
+    retro = client.post("/api/charts/retrogrades", json={**BAKU, "start": "2027-01-01", "days": 365})
+    assert retro.status_code == 200 and retro.json()["retrogrades"]
+    year = client.post("/api/charts/year", json={**BAKU, "year": 2027})
+    assert year.status_code == 200 and year.json()["year"] == 2027 and year.json()["months"]
+    assert client.post("/api/charts/lifeline", json={**BAKU, "years": 99}).status_code == 422
+    assert client.post("/api/charts/retrogrades", json={**BAKU, "days": 5000}).status_code == 422
+    assert client.post("/api/charts/year", json={**BAKU, "year": 1500}).status_code == 422

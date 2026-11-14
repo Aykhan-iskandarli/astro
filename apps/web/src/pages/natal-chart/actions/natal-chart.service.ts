@@ -15,6 +15,7 @@ import CyclesModel from '../models/cycles.model';
 import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
 import {DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
 import AstrocartographyModel from '../models/astrocartography.model';
+import YearModel, {LifelineModel, RetrogradesModel} from '../models/forecast-year.model';
 import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 
 export const getPlaces = (query: string): Promise<PlaceModel[]> => {
@@ -180,5 +181,26 @@ export const getDavison = (first: IBirthInput, second: IBirthInput): Promise<Nat
     return axiosPublic.post(API.davison, {first, second, houseSystem: first.houseSystem})
         .then((res) => {
             return new NatalChartModel(res.data);
+        });
+};
+
+export const getLifeline = (input: IBirthInput, start: string, years: number): Promise<LifelineModel> => {
+    return axiosPublic.post(API.lifeline, {...input, start, years})
+        .then((res) => {
+            return new LifelineModel(res.data);
+        });
+};
+
+export const getRetrogrades = (input: IBirthInput, start: string, days: number): Promise<RetrogradesModel> => {
+    return axiosPublic.post(API.retrogrades, {...input, start, days})
+        .then((res) => {
+            return new RetrogradesModel(res.data);
+        });
+};
+
+export const getYear = (input: IBirthInput, year: number): Promise<YearModel> => {
+    return axiosPublic.post(API.year, {...input, year})
+        .then((res) => {
+            return new YearModel(res.data);
         });
 };

@@ -17,12 +17,15 @@ import TransitTimelineComponent from '../transit-timeline/transit-timeline.compo
 import LifeCyclesComponent from '../life-cycles/life-cycles.component';
 import TimingPanelComponent from '../timing-panel/timing-panel.component';
 import LunarReturnReadingComponent from '../lunar-return-reading/lunar-return-reading.component';
+import SolarReturnReadingComponent from '../solar-return-reading/solar-return-reading.component';
+import LifelineComponent from '../lifeline/lifeline.component';
+import RetrogradeCalendarComponent from '../retrograde-calendar/retrograde-calendar.component';
 import {useForecastPanelStyles} from './forecast-panel.style';
 import {IForecastPanel} from './forecast-panel';
 
-type Mode = 'timeline' | 'cycles' | 'timing' | 'solar' | 'lunar' | 'progressions';
+type Mode = 'timeline' | 'lifeline' | 'retro' | 'cycles' | 'timing' | 'solar' | 'lunar' | 'progressions';
 // Modes with their own panel: no return/progression controls or chart below
-const STANDALONE: Mode[] = ['timeline', 'cycles', 'timing'];
+const STANDALONE: Mode[] = ['timeline', 'lifeline', 'retro', 'cycles', 'timing'];
 const MIN = dayjs('1800-01-01');
 const MAX = dayjs('2999-12-31');
 
@@ -98,6 +101,8 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
 
     const modes = useMemo(() => [
         {value: 'timeline', label: translate('forecast_timeline')},
+        {value: 'lifeline', label: translate('forecast_lifeline')},
+        {value: 'retro', label: translate('forecast_retro')},
         {value: 'cycles', label: translate('forecast_cycles')},
         {value: 'timing', label: translate('forecast_timing')},
         {value: 'solar', label: translate('forecast_solar')},
@@ -125,6 +130,8 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
             </header>
 
             {mode === 'timeline' ? <TransitTimelineComponent/> : null}
+            {mode === 'lifeline' ? <LifelineComponent/> : null}
+            {mode === 'retro' ? <RetrogradeCalendarComponent/> : null}
             {mode === 'cycles' ? <LifeCyclesComponent/> : null}
             {mode === 'timing' ? <TimingPanelComponent/> : null}
 
@@ -169,6 +176,10 @@ const ForecastPanelComponent = ({chart}: IForecastPanel) => {
                             place: ret.placeName ?? '',
                         })}</p>
                         {mode === 'lunar' ? <LunarReturnReadingComponent chart={ret.chart}/> : null}
+                        {mode === 'solar' ? (
+                            <SolarReturnReadingComponent sun={ret.chart.points.find((p) => p.id === 'sun') ?? null}
+                                                         asc={ret.chart.angles.find((a) => a.id === 'asc') ?? null}/>
+                        ) : null}
                         <div className={classes.stage}>
                             <ChartWheelComponent chart={ret.chart} activeId={hovered} selectedId={selected}
                                                  onActivate={handleActivate} onSelect={handleSelect}/>

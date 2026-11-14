@@ -2,12 +2,13 @@ import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
 import {
     getAstrocartography, getBazi, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
-    IAcgProbe, INumerologyPerson, IReturnParams,
+    getLifeline, getRetrogrades, getYear, IAcgProbe, INumerologyPerson, IReturnParams,
 } from './natal-chart.service';
 import CyclesModel from '../models/cycles.model';
 import ChineseCompatibilityModel from '../models/chinese-compatibility.model';
 import {DetailsModel, GunaMilanModel, OtherSystemsModel, TimingModel} from '../models/extras.model';
 import AstrocartographyModel from '../models/astrocartography.model';
+import YearModel, {LifelineModel, RetrogradesModel} from '../models/forecast-year.model';
 import NumerologyCompatibilityModel from '../models/numerology-compatibility.model';
 import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
@@ -293,6 +294,57 @@ export const useGetDavison = (first: IBirthInput | null, second: IBirthInput | n
         staleTime: Infinity,
         gcTime: 5 * 60 * 1000,
         retry: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetLifeline = (input: IBirthInput | null, start: string, years: number) => {
+    return useQuery<LifelineModel, Error>({
+        queryKey: ['lifeline', input, start, years],
+        queryFn: () => {
+            return getLifeline(input!, start, years);
+        },
+        enabled: !!input,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetRetrogrades = (input: IBirthInput | null, start: string, days: number) => {
+    return useQuery<RetrogradesModel, Error>({
+        queryKey: ['retrogrades', input, start, days],
+        queryFn: () => {
+            return getRetrogrades(input!, start, days);
+        },
+        enabled: !!input,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetYear = (input: IBirthInput | null, year: number) => {
+    return useQuery<YearModel, Error>({
+        queryKey: ['year', input, year],
+        queryFn: () => {
+            return getYear(input!, year);
+        },
+        enabled: !!input,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
+        retryOnMount: false,
+        refetchOnReconnect: false,
         refetchOnWindowFocus: false,
     });
 };

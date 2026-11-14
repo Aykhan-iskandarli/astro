@@ -3083,5 +3083,137 @@
       "aquarius": "Müstəqil və orijinal hiss edirsiniz; dostlar, fikirlər və dəyişiklik sizi cəlb edir.",
       "pisces": "Xəyalpərəst və həssassınız; intuisiya və istirahət planlamadan daha önəmlidir."
     }
+  },
+  "lifeline": {
+    "house": {
+      "jupiter": {
+        "1": "Özünəinam və imkanlar dövrü: şəxsən böyüyürsünüz, təşəbbüs göstərəndə həyat açılır.",
+        "2": "Gəlir və resurslar artıra bilər; pul, bacarıq və özünüdəyər qurmaq üçün yaxşı vaxt.",
+        "3": "Öyrənmə, yazı, əlaqələr və qısa səfərlər imkan gətirir; ünsiyyət dairəniz genişlənir.",
+        "4": "Evdə və ailədə böyümə: daha böyük və ya yaxşı ev, qohumların dəstəyi, möhkəm dayaq.",
+        "5": "Sevinc, yaradıcılıq və romantika genişlənir; sevgi, uşaqlar və zövq aldığınız layihələr üçün yaxşı vaxt.",
+        "6": "İşdə və gündəlik həyatda imkanlar; sağlamlıq vərdişlərini və rejimi yaxşılaşdırmaq üçün yaxşı vaxt.",
+        "7": "Tərəfdaşlıq böyümə gətirir: köməkçi insanlarla tanışlıq, razılaşmalar, nikah və ya işgüzar əlaqələr üçün yaxşı vaxt.",
+        "8": "Ortaq resurslar vasitəsilə dəstək: kreditlər, investisiyalar, miras və ya dərin emosional inkişaf.",
+        "9": "Səyahət, təhsil və böyük fikirlər açılır; üfüqləri genişləndirmək və inancları sınamaq vaxtı.",
+        "10": "Karyera artımı və tanınma: irəliləmək, daha böyük rol götürmək və görünmək üçün əlverişli vaxt.",
+        "11": "Dostlar, qruplar və uzunmüddətli ümidlər şans gətirir; faydalı əlaqələr və gələcəyə aydın baxış.",
+        "12": "Sakit, qoruyucu dövr: istirahət, daxili inkişaf və gizli dəstək; növbəti dövrə hazırlıq vaxtı."
+      },
+      "saturn": {
+        "1": "Sizin üçün ciddi dönüş nöqtəsi: daha çox məsuliyyət, yeni yetkinlik səviyyəsi və dəyişən obraz.",
+        "2": "Pul və dəyərlər sınanır: büdcə, qazancın əsaslandırılması və davamlı təhlükəsizliyin addım-addım qurulması.",
+        "3": "Ünsiyyət və öyrənmə intizam tələb edir: ciddi təhsil, diqqətli sözlər və yaxın mühitin nizama salınması.",
+        "4": "Ev və ailə yük daşıyır: qohumlara görə məsuliyyət, təmir və ya köçmə, təməlin yenidən qurulması.",
+        "5": "Sevinc və yaradıcılıq səy tələb edir: sevgi və uşaqlar məsuliyyət gətirir, yaradıcı iş intizam istəyir.",
+        "6": "İş və sağlamlıq mərkəzdədir: ağır iş yükü, rejimə ehtiyac və bədənə qayğı xatırlatması.",
+        "7": "Münasibətlər sınanır: öhdəliklər götürülür və ya bitir, tərəfdaşdan həqiqətən nə istədiyinizi öyrənirsiniz.",
+        "8": "Ortaq pul və dərin məsələlər ehtiyat tələb edir: borclar, birgə maliyyə və həqiqi güc üçün qorxularla üzləşmək.",
+        "9": "İnanclar və uzun planlar sınanır: ciddi təhsil, məsuliyyətli səyahət və təcrübəyə əsaslanan dünyagörüşü.",
+        "10": "Karyerada məsuliyyətin zirvəsi: tələbkar rol, yavaş, amma möhkəm nailiyyət və nüfuzun sınağı.",
+        "11": "Dostluq və hədəflər nizama düşür: daha az, amma sadiq dostlar və gələcək üçün real plan.",
+        "12": "Ağır, daxilə yönəlmiş dövr: qorxular və köhnə yüklər həll olunmaq üçün üzə çıxır; istirahət və təklik zəruridir."
+      },
+      "uranus": {
+        "1": "Kim olduğunuzda qəfil dəyişiklik: yeni görünüş, yeni müstəqillik və köhnə özünüzdən qopmaq istəyi.",
+        "2": "Pul və dəyərlər gözlənilmədən dəyişir: qeyri-adi gəlir, qəfil xərclər və sahib olduqlarınıza yeni baxış.",
+        "3": "Düşüncəniz sürətlənir: yeni fikirlər, qəfil xəbərlər, öyrənmə və ünsiyyətin yeni üsulları.",
+        "4": "Ev və ailə qəfil dəyişir: köçmə, keçmişlə qopma və ya qeyri-adi ev həyatı.",
+        "5": "Sevgidə və yaradıcılıqda sürprizlər: qəfil romanlar, qeyri-adi layihələr və zövq aldığınız işdə azadlığa ehtiyac.",
+        "6": "Gündəlik iş və sağlamlıq rejimi sarsılır: iş dəyişikliyi, yeni texnologiya və ya yeni həyat tərzi.",
+        "7": "Münasibətlər qəfil dəyişir: gözlənilməz tanışlıqlar və ya ayrılıqlar, tərəfdaşlarla şəxsi məkan ehtiyacı.",
+        "8": "Ortaq maliyyədə və dərin məsələlərdə qəfil dəyişikliklər: gözlənilməz qazanc və ya itki, psixoloji sıçrayışlar.",
+        "9": "İnanclar və üfüqlər dəyişir: qəfil səfərlər, yeni fikirlər və köhnə düşüncə tərzindən qopma.",
+        "10": "Karyeranız gözlənilməz dönüş edə bilər: rolun qəfil dəyişməsi, yeni istiqamətlər və müstəqilliyə təkan.",
+        "11": "Dostlar, qruplar və hədəflər sarsılır: yeni dairələr, qeyri-adi müttəfiqlər və gələcəyə dəyişmiş baxış.",
+        "12": "Daxildən qəfil anlayışlar: gizli nümunələr dağılır və köhnə, görünməyən məhdudiyyətlərdən azad olursunuz."
+      },
+      "neptune": {
+        "1": "Şəxsiyyətiniz yumşalır, həssaslaşır və xəyalpərəstləşir; özünüzü itirməməyə diqqət edin.",
+        "2": "Pul və dəyərlər qeyri-müəyyənləşir: pula idealist baxış, ona görə maliyyəni aydın saxlayın və riskli vədlərdən qaçın.",
+        "3": "Düşüncə intuitiv və xəyalpərəst olur; ünsiyyət ilhamlı, amma qeyri-müəyyən ola bilər, detalları yoxlayın.",
+        "4": "Ev və ailə ideallaşdırılmış və ya qeyri-aydın görünür; sakit, demək olar ki, mənəvi evə həsrət.",
+        "5": "Yaradıcılıq və romantika ilhamlıdır, amma asan ideallaşır; incəsənət çiçəklənir, sevgidə illüziya riski də artır.",
+        "6": "İş və sağlamlıq ehtiyat tələb edir: stresə və mühitə həssaslıq, xidmət və ya müalicəyə meyil.",
+        "7": "Tərəfdaşlar ideallaşır, sərhədlər bulanır; mərhəmət artır, amma insanlara olduqları kimi baxın.",
+        "8": "Dərin, gizli hisslər və ortaq resurslar qeyri-aydın olur; birgə pul və sirlərlə ehtiyatlı olun.",
+        "9": "İnanclar mənəvi və idealist olur; inam və ilham artır, illüziyalara uyma riski də.",
+        "10": "Karyera istiqaməti qeyri-müəyyən olur və ya incəsənət, qayğı və ideallara doğru dəyişir; ictimai obrazınız yumşalır.",
+        "11": "Dostluq və ümidlər ideallaşır; ilhamverici dairələr, amma yoldaşları və məqsədləri aydın gözlə seçin.",
+        "12": "Dərin mənəvi, xəyalpərəst dövr: intuisiya və mərhəmət artır; təklik və sağlam sərhədlər lazımdır."
+      },
+      "pluto": {
+        "1": "Kim olduğunuzun dərin dəyişimi: köhnə özünüzü atır və güclənirsiniz, intensiv şəxsi dəyişiklik.",
+        "2": "Pul və dəyərlər sıfırdan yenidən qurulur: itki və qazanc, sahib olduqlarınızla yeni münasibət.",
+        "3": "Düşüncə və ünsiyyət dərinləşir: güclü sözlər, üzə çıxan gizli həqiqətlər və dəyişmiş zehin.",
+        "4": "Ev və ailə dəyişir: dərin ailə məsələləri üzə çıxır, emosional təməl yenidən qurulur.",
+        "5": "Sevgi, yaradıcılıq və uşaqlar güclü təcrübələr gətirir; ehtiras və güc mübarizəsi səmimiyyət tələb edir.",
+        "6": "İş və sağlamlıq kökündən dəyişir: vərdişlərdə, işdə və bədənə münasibətdə dərin dəyişikliklər.",
+        "7": "Münasibətlər dəyişir: güclü bağlar, sonlar və yenidən doğuşlar, üzləşməli olduğunuz güc dinamikası.",
+        "8": "Ən dərin dəyişim: yaxınlıq, ortaq resurslar və gizlətdikləriniz ətrafında böhran və yenidən doğuş.",
+        "9": "İnanclar dağılır və yenidən qurulur: təhsil, səyahət və ya böhran vasitəsilə dünyagörüşündə dərin dəyişiklik.",
+        "10": "Karyera və ictimai həyat dəyişir: güc, nüfuz və istiqamət çox vaxt gərgin hadisələrlə dəyişir.",
+        "11": "Dostlar, qruplar və hədəflər dəyişir: bəzi bağlar bitir, bəziləri dərinləşir, gələcək baxışı yenidən doğulur.",
+        "12": "Dərin daxili dəyişim: şüuraltı basdırılanı üzə çıxarır və əsl sağalma mümkün olur."
+      }
+    }
+  },
+  "retrograde": {
+    "planet": {
+      "mercury": "Merkuri retroqradı: ünsiyyət, səyahət və texnologiya əlavə ehtiyat tələb edir. Yeni müqavilə bağlamaqdansa, yoxlamaq, təkrar oxumaq, ehtiyat nüsxə çıxarmaq və köhnə işləri bitirmək vaxtıdır.",
+      "venus": "Venera retroqradı: sevgi, pul və dəyərlər yenidən nəzərdən keçirilir. Köhnə münasibətlər və xərcləmə vərdişləri ikinci baxış üçün qayıdır; böyük alışlardan və tələsik öhdəliklərdən çəkinin.",
+      "mars": "Mars retroqradı (təxminən iki ildən bir): enerji və hərəkət gücü yavaşlayır və daxilə yönəlir. İrəli getməzdən əvvəl hədəflərə və məyusluqlara yenidən baxın.",
+      "jupiter": "Yupiter retroqradı: böyümə daxilə yönəlir. Son genişlənməni mənimsəmək, inanc və planlara baxmaq, daha çoxunun dalınca getmək yerinə əsl mənanı tapmaq vaxtıdır.",
+      "saturn": "Saturn retroqradı: məsuliyyətlərinizə və nizamınıza baxmaq, həqiqətən möhkəm olanı və yenidən qurulmalı olanı tapmaq vaxtı.",
+      "uranus": "Uran retroqradı: dəyişiklik istəyi daxilə yönəlir; qəfil addım atmazdan əvvəl necə azad olmaq istədiyinizi düşünün.",
+      "neptune": "Neptun retroqradı: illüziyalar sönür və mənzərə aydınlaşır. Xəyallar və ideallar nəzərdən keçirilir, hər şeyi olduğu kimi görmək asanlaşır.",
+      "pluto": "Pluton retroqradı: dərin dəyişim səthin altında işləyir; daxili iş, basdırdıqlarınızla üzləşmək və öz gücünüzü geri almaq vaxtı."
+    }
+  },
+  "solarReturn": {
+    "house": {
+      "1": "Bu il özünüzə yönəlib: yeni başlanğıclar, güclü kimlik hissi və özünüzü yenidən kəşf etmək şansı.",
+      "2": "Bu il pul, qazanc üçün iş və dəyər verdiklərinizə yönəlib; təhlükəsizlik qurmaq ən önəmlidir.",
+      "3": "Bu il öyrənmə, ünsiyyət, bacı-qardaşlar və qısa səfərlərə yönəlib; zehniniz çox fəaldır.",
+      "4": "Bu il ev və ailəyə yönəlib: köçmək, təmir və ya emosional dayağı yenidən formalaşdırmaq.",
+      "5": "Bu il yaradıcılıq, romantika, uşaqlar və sevinc ətrafındadır: həyatdan zövq almaq və nə bacardığınızı göstərmək ili.",
+      "6": "Bu il gündəlik iş, sağlamlıq və rejimə yönəlib; daha yaxşı vərdişlər qurmaq bəhrə verir.",
+      "7": "Bu il tərəfdaşlığa yönəlib: münasibətlər, razılaşmalar və başqaları ilə işləmək ili formalaşdırır.",
+      "8": "Bu il dərin dəyişikliyə yönəlib: ortaq resurslar, yaxınlıq və bitmiş olanı buraxmaq.",
+      "9": "Bu il səyahət, təhsil və inanclara yönəlib; üfüqləri genişləndirmək ilin mövzusudur.",
+      "10": "Bu il karyera və ictimai həyata yönəlib: nailiyyət, görünmə və daha böyük rol.",
+      "11": "Bu il dostlar, qruplar və ümidlərə yönəlib; əlaqələr və uzunmüddətli hədəflər önə çıxır.",
+      "12": "Bu il istirahət, daxili həyat və pərdə arxasında olanlara yönəlib: bərpa olunmaq və hazırlaşmaq ili."
+    },
+    "asc": {
+      "aries": "İl enerji və təşəbbüslə başlayır: tez hərəkət edir və rəhbərlik edirsiniz.",
+      "taurus": "Sabit, praktik il: qurur, yığır və rahatlıq, sabitlik istəyirsiniz.",
+      "gemini": "Canlı, maraqlı il: çoxlu əlaqə, fikir, xəbər və templərin dəyişməsi.",
+      "cancer": "Həssas, ev mərkəzli il: ailə və emosional təhlükəsizlik birinci yerdədir.",
+      "leo": "Özünəinamlı, görünən il: parlamaq, yaratmaq və tanınmaq istəyirsiniz.",
+      "virgo": "Diqqətli, praktik il: detallar, sağlamlıq, iş və işləri yaxşılaşdırmaq önəmlidir.",
+      "libra": "Sosial, tarazlıq ili: münasibətlər, ədalət və əməkdaşlıq seçimlərinizi formalaşdırır.",
+      "scorpio": "Güclü, dəyişdirici il: səthin altına baxır və gizli olanla üzləşirsiniz.",
+      "sagittarius": "Nikbin, narahat il: səyahət, öyrənmə və məna axtarışı.",
+      "capricorn": "Ciddi, hədəfyönlü il: məsuliyyət, nizam və uzunmüddətli planlar.",
+      "aquarius": "Müstəqil, orijinal il: dostlar, fikirlər və dəyişiklik sizi cəlb edir.",
+      "pisces": "Xəyalpərəst, intuitiv il: həssaslıq, təxəyyül və istirahətə ehtiyac."
+    }
+  },
+  "profectionYear": {
+    "house": {
+      "1": "Şəxsi diqqət ili: sağlamlığınız, görünüşünüz və müstəqilliyiniz mərkəzdədir, indi başladığınız iş tonu müəyyən edir.",
+      "2": "Pul və resurslar ili: qazanc, xərc, əşyalar və özünüdəyər diqqət mərkəzindədir.",
+      "3": "Ünsiyyət və öyrənmə ili: bacı-qardaşlar, qonşular, təhsil, yazı və qısa səfərlər fəaldır.",
+      "4": "Ev və köklər ili: ailə, mülk, valideynlər və daxili təməl önə çıxır.",
+      "5": "Yaradıcılıq və sevinc ili: romantika, uşaqlar, hobbilər və özünüifadə önə çıxır.",
+      "6": "İş və sağlamlıq ili: gündəlik rejim, xidmət, işçilər və bədən diqqət tələb edir.",
+      "7": "Tərəfdaşlıq ili: nikah, yaxın münasibətlər, müştərilər və açıq rəqiblər mərkəzdədir.",
+      "8": "Dərinlik və dəyişim ili: ortaq pul, borclar, yaxınlıq, sonlar və yenilənmə önə çıxır.",
+      "9": "Genişlənmə ili: səyahət, ali təhsil, nəşr, inam və xarici əlaqələr fəaldır.",
+      "10": "Karyera və mövqe ili: iddia, nüfuz, hakimiyyət və ictimai nailiyyət önə çıxır.",
+      "11": "Dostlar və hədəflər ili: qruplar, şəbəkələr, müttəfiqlər və uzunmüddətli ümidlər mərkəzdədir.",
+      "12": "Çəkilmə və daxili iş ili: istirahət, təklik, gizli məsələlər və sonlar növbəti dövrü hazırlayır."
+    }
   }
 }

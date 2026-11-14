@@ -95,6 +95,20 @@ class TimelineRequest(NatalRequest):
     days: int = Field(default=365, ge=1, le=400)
 
 
+class LifelineRequest(NatalRequest):
+    start: Date | None = None
+    years: int = Field(default=15, ge=1, le=30)
+
+
+class RetrogradesRequest(NatalRequest):
+    start: Date | None = None
+    days: int = Field(default=365, ge=1, le=800)
+
+
+class YearRequest(NatalRequest):
+    year: int | None = Field(default=None, ge=1800, le=2998)
+
+
 class MoonDayRequest(NatalRequest):
     start: DateTime | None = None  # ISO 8601; naive values are treated as UTC; default: now
     hours: int = Field(default=24, ge=1, le=72)
@@ -371,6 +385,31 @@ def transit_timeline(req: TimelineRequest) -> dict:
     if req.start is not None and not 1800 <= req.start.year <= 2998:
         raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
     return MODULES["western.timeline"].calculate(_birth(req), start=req.start, days=req.days,
+                                                 house_system=req.house_system)
+
+
+@app.post("/api/charts/lifeline")
+def lifeline(req: LifelineRequest) -> dict:
+    """The natal house and sign of Jupiter-Pluto over the coming years, as dated segments."""
+    if req.start is not None and not 1800 <= req.start.year <= 2960:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2960"])
+    return MODULES["western.forecast"].calculate(_birth(req), kind="lifeline", start=req.start, years=req.years,
+                                                 house_system=req.house_system)
+
+
+@app.post("/api/charts/retrogrades")
+def retrograde_calendar(req: RetrogradesRequest) -> dict:
+    """Retrograde periods with the natal house of each station."""
+    if req.start is not None and not 1800 <= req.start.year <= 2998:
+        raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
+    return MODULES["western.forecast"].calculate(_birth(req), kind="retrogrades", start=req.start, days=req.days,
+                                                 house_system=req.house_system)
+
+
+@app.post("/api/charts/year")
+def year_forecast(req: YearRequest) -> dict:
+    """One calendar year read in the natal chart (profections, solar return, transits by month, eclipses, ...)."""
+    return MODULES["western.forecast"].calculate(_birth(req), kind="year", year=req.year,
                                                  house_system=req.house_system)
 
 

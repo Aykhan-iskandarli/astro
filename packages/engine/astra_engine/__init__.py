@@ -12,8 +12,8 @@ from .destiny import matrix as destiny_matrix
 from .numerology import core as numerology
 from .vedic import chart as vedic_chart
 from .sky import calendar as sky_calendar, day as sky_day, moon as sky_moon, now as sky_now
-from .western import (astrocartography, composite, cycles, davison, details, natal, personal_moon, progressions,
-                      returns, synastry, timeline, timing, transits)
+from .western import (astrocartography, composite, cycles, davison, details, forecast, natal, personal_moon,
+                      progressions, returns, synastry, timeline, timing, transits)
 
 
 class EngineModule(Protocol):
@@ -40,6 +40,7 @@ MODULES: dict[str, EngineModule] = {
     davison.MODULE_ID: davison,                  # relationship chart for the midpoint in time and space
     astrocartography.MODULE_ID: astrocartography,  # astrocartography lines (in mundo) + lines near a city
     personal_moon.MODULE_ID: personal_moon,      # the Moon's day and the lunations in the natal chart
+    forecast.MODULE_ID: forecast,                # life timeline of slow planets, retrograde calendar, year forecast
 }
 
 # The sky itself is not tied to a birth chart: calculate(at) / calculate(start, end)

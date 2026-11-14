@@ -22,9 +22,10 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - **Destiny Matrix**: 22 arcana (Ladini method), purposes, health map, love/money lines, age timeline.
 - **Karmic path**: lunar node axis, Chiron, Lilith.
 - **Transits**: any date and time, bi-wheel.
-- **Forecast**: transit timeline (exact dates for 12 months), solar and lunar returns (with relocation),
+- **Forecast**: transit timeline (exact dates for 12 months), life timeline (the years Jupiter-Pluto spend in each
+  of your houses), retrograde calendar (with the natal house of each station), solar and lunar returns (with relocation),
   secondary progressions, life cycles (Jupiter/Saturn/Chiron returns, profections), firdaria, zodiacal
-  releasing, solar arc. The lunar return comes with a short monthly reading (Moon's house, Ascendant sign).
+  releasing, solar arc. The solar and lunar returns come with a short reading (house of the Sun / Moon, Ascendant sign).
 - **Vedic**: sidereal (Lahiri) D1/D9 and D3/D7/D10/D12, nakshatras, Vimshottari dasha, yogas, Ashtakavarga,
   Sade Sati.
 - **Numerology**: core numbers, pinnacles and challenges, personal year/month/day, Lo Shu grid, Pythagoras
@@ -44,6 +45,9 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
   moon calendar (lunar days, phase, void-of-course Moon) for a chosen city, plus the year's lunations and
   eclipses read in your chart (natal house and natal points touched).
 - `/name-analysis`: numerology from a full name alone; the birth date is optional.
+- `/year-forecast`: one chosen year read in your chart: the annual profection(s), the solar return, the firdaria
+  sub-periods, the busiest months (exact aspects from Jupiter-Pluto, month by month), the slow planets' houses,
+  New/Full Moons and eclipses with their natal houses, and the year's retrogrades.
 - `/glossary`: plain-language explanations of the terms used on the site (also shown as tooltips).
 - `/profiles`: saved charts as people (relation, "my chart"), with a JSON backup and restore; the data stays in
   the browser.
@@ -95,9 +99,9 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ## Test
 
 ```bash
-docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (345)
-docker compose run --rm api pytest -q                           # API (31)
-npm test                                                        # content consistency (1881 keys) + web unit tests (32)
+docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (357)
+docker compose run --rm api pytest -q                           # API (32)
+npm test                                                        # content consistency (1985 keys) + web unit tests (32)
 npm run typecheck -w apps/web
 ```
 

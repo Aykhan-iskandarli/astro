@@ -68,4 +68,4 @@ const styles = {
 };
 
 // @ts-ignore
-export const usePersonalLunationsStyles = createUseStyles(styles);
+export const useLunationListStyles = createUseStyles(styles);

@@ -3083,5 +3083,137 @@
       "aquarius": "You feel independent and original; friends, ideas and change attract you.",
       "pisces": "You are dreamy and sensitive; intuition and rest matter more than planning."
     }
+  },
+  "lifeline": {
+    "house": {
+      "jupiter": {
+        "1": "A period of confidence and opportunity: you grow personally, and life opens up when you take initiative.",
+        "2": "Income and resources can grow; a good time to build money, skills and a sense of worth.",
+        "3": "Learning, writing, contacts and short trips bring opportunities; your circle of communication widens.",
+        "4": "Growth at home and in the family: a bigger or better home, support from relatives, a stronger base.",
+        "5": "Joy, creativity and romance expand; a good time for love, children and projects you enjoy.",
+        "6": "Opportunities in work and daily life, and a good time to improve health habits and routines.",
+        "7": "Partnerships bring growth: meeting helpful people, a good time for agreements, marriage or business ties.",
+        "8": "Support through shared resources: loans, investments, inheritance or deep emotional growth.",
+        "9": "Travel, study and big ideas open up; a time to widen your horizons and test your beliefs.",
+        "10": "Career growth and recognition: a favourable time to advance, take a larger role and be seen.",
+        "11": "Friends, groups and long-term hopes bring luck; useful contacts and a clearer vision of the future.",
+        "12": "A quiet, protective period: rest, inner growth and hidden support; a time to prepare for the next cycle."
+      },
+      "saturn": {
+        "1": "A serious turning point for you personally: more responsibility, a new level of maturity and a changed image.",
+        "2": "Money and values are tested: budgets, earning your keep and building lasting security step by step.",
+        "3": "Communication and learning need discipline: serious study, careful words and sorting out your surroundings.",
+        "4": "Home and family carry weight: responsibilities for relatives, repairs or a move, and rebuilding your foundations.",
+        "5": "Joy and creativity ask for effort: love and children bring responsibility, and creative work needs discipline.",
+        "6": "Work and health are in focus: heavier workload, a need for routine and a reminder to look after your body.",
+        "7": "Relationships are tested: commitments are made or ended, and you learn what you really want from a partner.",
+        "8": "Shared money and deep matters need care: debts, joint finances, and facing fears to gain real strength.",
+        "9": "Beliefs and long plans are tested: serious study, responsible travel and a worldview built on experience.",
+        "10": "A peak of responsibility in career: a demanding role, slow but solid achievement and a test of your reputation.",
+        "11": "Friendships and goals are sorted out: fewer but more loyal friends, and a realistic plan for the future.",
+        "12": "A heavy, inward period: fears and old burdens surface to be dealt with; rest and solitude are necessary."
+      },
+      "uranus": {
+        "1": "Sudden change in who you are: a new look, new independence and a strong urge to break from the old you.",
+        "2": "Money and values shift unexpectedly: unusual income, sudden expenses and a new view of what you own.",
+        "3": "Your thinking speeds up: new ideas, sudden news, new ways of learning and communicating.",
+        "4": "Home and family change suddenly: a move, a break with the past or an unusual home life.",
+        "5": "Surprises in love and creativity: sudden romances, unusual projects and a need for freedom in what you enjoy.",
+        "6": "Daily work and health routines are shaken up: a job change, new technology or a new way of living.",
+        "7": "Relationships change suddenly: unexpected meetings or breakups, and a need for space with partners.",
+        "8": "Sudden shifts in shared finances and deep matters: unexpected gains or losses and psychological breakthroughs.",
+        "9": "Beliefs and horizons change: sudden trips, new ideas and a break from old ways of thinking.",
+        "10": "Your career can take an unexpected turn: sudden changes of role, new directions and a push toward independence.",
+        "11": "Friends, groups and goals are shaken up: new circles, unusual allies and a changed vision of your future.",
+        "12": "Sudden insights from within: hidden patterns break open, and you free yourself from old, unseen limits."
+      },
+      "neptune": {
+        "1": "Your identity softens and becomes more sensitive and imaginative; guard against losing your sense of self.",
+        "2": "Money and values become unclear: idealism about money, so keep finances clear and avoid risky promises.",
+        "3": "Thinking turns intuitive and dreamy; communication can be inspired but also vague, so check the details.",
+        "4": "Home and family feel idealised or unclear; a longing for a peaceful, almost spiritual home.",
+        "5": "Creativity and romance are inspired but easily idealised; art flourishes, and so does the risk of illusion in love.",
+        "6": "Work and health need care: sensitivity to stress and environment, and a pull toward service or healing.",
+        "7": "Partners are idealised and boundaries blur; compassion grows, but see people as they really are.",
+        "8": "Deep, hidden feelings and shared resources become unclear; be careful with joint money and with secrets.",
+        "9": "Beliefs turn spiritual and idealistic; faith and inspiration grow, as does the risk of following illusions.",
+        "10": "Career direction becomes unclear or shifts toward art, care or ideals; your public image softens.",
+        "11": "Friendships and hopes are idealised; inspiring circles, but choose companions and causes with clear eyes.",
+        "12": "A deeply spiritual, dreamy period: intuition and compassion grow; you need solitude and healthy boundaries."
+      },
+      "pluto": {
+        "1": "A deep transformation of who you are: you shed an old self and grow stronger, with intense personal change.",
+        "2": "Money and values are rebuilt from the ground: loss and gain, and a new relationship with what you own.",
+        "3": "Thinking and communication deepen: powerful words, hidden truths coming out, and a changed mind.",
+        "4": "Home and family are transformed: deep family matters surface, and your emotional foundation is rebuilt.",
+        "5": "Love, creativity and children bring intense experiences; passion and power struggles ask for honesty.",
+        "6": "Work and health are overhauled: deep changes in habits, jobs and your relationship to your body.",
+        "7": "Relationships are transformed: intense bonds, endings and rebirths, and power dynamics that must be faced.",
+        "8": "The deepest transformation: crisis and rebirth around intimacy, shared resources and what you keep hidden.",
+        "9": "Beliefs are broken down and rebuilt: a deep change in your worldview through study, travel or crisis.",
+        "10": "Career and public life are transformed: power, reputation and direction change, often through intense events.",
+        "11": "Friends, groups and goals are transformed: some ties end, others deepen, and your vision of the future is reborn.",
+        "12": "A deep inner transformation: the unconscious brings up what was buried, and real healing becomes possible."
+      }
+    }
+  },
+  "retrograde": {
+    "planet": {
+      "mercury": "Mercury retrograde: communication, travel and technology need extra care. A time to review, re-read, back up and finish old matters rather than sign new contracts.",
+      "venus": "Venus retrograde: love, money and values are reviewed. Old relationships and spending habits come back for a second look; avoid big purchases or rash commitments.",
+      "mars": "Mars retrograde (about every two years): energy and drive slow down and turn inward. Revisit goals and frustrations before pushing forward.",
+      "jupiter": "Jupiter retrograde: growth turns inward. A time to digest recent expansion, review beliefs and plans, and find real meaning rather than chase more.",
+      "saturn": "Saturn retrograde: a time to review your responsibilities and structures, to find what is truly solid and what must be rebuilt.",
+      "uranus": "Uranus retrograde: the urge for change turns inward; reflect on how you want to be free before making sudden moves.",
+      "neptune": "Neptune retrograde: illusions fade and the picture clears. Dreams and ideals are reviewed, and it becomes easier to see things as they are.",
+      "pluto": "Pluto retrograde: deep change works under the surface; a time for inner work, facing what you have buried and taking back your own power."
+    }
+  },
+  "solarReturn": {
+    "house": {
+      "1": "This year centres on you: new beginnings, a stronger sense of identity and a chance to reinvent yourself.",
+      "2": "This year centres on money, work for income and what you value; building security matters most.",
+      "3": "This year centres on learning, communication, siblings and short trips; your mind is very active.",
+      "4": "This year centres on home and family: moving, renovating or reshaping your emotional base.",
+      "5": "This year centres on creativity, romance, children and joy: a year to enjoy life and show what you can do.",
+      "6": "This year centres on daily work, health and routines; building better habits pays off.",
+      "7": "This year centres on partnerships: relationships, agreements and working with others shape the year.",
+      "8": "This year centres on deep change: shared resources, intimacy and letting go of what is finished.",
+      "9": "This year centres on travel, study and beliefs; widening your horizons is the theme.",
+      "10": "This year centres on career and public life: achievement, visibility and a bigger role.",
+      "11": "This year centres on friends, groups and hopes; networking and long-term goals come forward.",
+      "12": "This year centres on rest, the inner life and what is behind the scenes: a year to recover and prepare."
+    },
+    "asc": {
+      "aries": "The year starts with energy and initiative: you act quickly and take the lead.",
+      "taurus": "A steady, practical year: you build, save and want comfort and stability.",
+      "gemini": "A lively, curious year: many contacts, ideas, news and changes of pace.",
+      "cancer": "A sensitive, home-centred year: family and emotional security come first.",
+      "leo": "A confident, visible year: you want to shine, create and be recognised.",
+      "virgo": "A careful, practical year: details, health, work and improving things matter.",
+      "libra": "A social, balancing year: relationships, fairness and cooperation shape your choices.",
+      "scorpio": "An intense, transformative year: you look beneath the surface and face what is hidden.",
+      "sagittarius": "An optimistic, restless year: travel, learning and a search for meaning.",
+      "capricorn": "A serious, goal-driven year: responsibilities, structure and long-term plans.",
+      "aquarius": "An independent, original year: friends, ideas and change attract you.",
+      "pisces": "A dreamy, intuitive year: sensitivity, imagination and a need for rest."
+    }
+  },
+  "profectionYear": {
+    "house": {
+      "1": "A year of personal focus: your health, appearance and independence take centre stage, and what you start now sets the tone.",
+      "2": "A year of money and resources: earning, spending, possessions and self-worth are in the spotlight.",
+      "3": "A year of communication and learning: siblings, neighbours, studies, writing and short trips are active.",
+      "4": "A year of home and roots: family, property, parents and your inner foundation come to the front.",
+      "5": "A year of creativity and joy: romance, children, hobbies and self-expression are highlighted.",
+      "6": "A year of work and health: daily routines, service, employees and the body need attention.",
+      "7": "A year of partnership: marriage, close relationships, clients and open rivals are in focus.",
+      "8": "A year of depth and change: shared money, debts, intimacy, endings and renewal come forward.",
+      "9": "A year of expansion: travel, higher learning, publishing, faith and foreign contacts are active.",
+      "10": "A year of career and standing: ambition, reputation, authority and public achievement are highlighted.",
+      "11": "A year of friends and goals: groups, networks, allies and long-term hopes are in focus.",
+      "12": "A year of retreat and inner work: rest, solitude, hidden matters and endings prepare the next cycle."
+    }
   }
 }
