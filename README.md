@@ -125,7 +125,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2405 keys) + web unit tests (113)
+npm test                                                        # content consistency (2403 keys) + web unit tests (113)
 npm run typecheck -w apps/web
 ```
 
