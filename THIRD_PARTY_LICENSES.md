@@ -88,3 +88,11 @@ components are used as dependencies or data files.
   The site footer links to the repository (`VITE_SOURCE_URL` / `ASTRA_SOURCE_URL`).
 - **CC BY 4.0 (GeoNames)**: attribution in the footer ("City data: GeoNames (CC BY 4.0)").
 - **SIL OFL-1.1 fonts**: the fonts are redistributed unmodified with their license files (inside the npm packages).
+
+## Essential dignity tables (not code)
+
+The Dorothean triplicity rulers, the Egyptian terms and the Chaldean faces used in `apps/web/src/core/helpers/dignity.ts` are
+classical astrological tables (public knowledge, many centuries old, not copyrightable as such). They were read from the kerykeion
+documentation (kerykeion.net, "Dignities") and cross-checked: every sign's terms add up to 30 degrees, each planet's total is the
+classical value (Saturn 57, Jupiter 79, Mars 66, Venus 82, Mercury 76), and the faces follow the Chaldean order from Mars at 0 Aries.
+The scoring (+5, +4, +3, +2, +1; -5, -4, -5) is William Lilly's, Christian Astrology (1647), public domain.

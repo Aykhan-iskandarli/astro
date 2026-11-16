@@ -32,6 +32,9 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
   stands in, the 10th and 6th houses, and the condition of the planets that signify work. Finances: the 2nd house and its ruler, the Part of Fortune, the 8th and 11th houses and the planets of money. Health (traditional sign-body associations, with a plain disclaimer): the Ascendant and its ruler, the 6th and 12th houses and the planets of vitality.
 - **Aspect readings** (Deep analysis tab, and under each aspect in the point panel): every major aspect closest first, with a short
   line and a "Read in full" made of what the two planets mean together (all 45 pairs of Sun-Pluto), the aspect type and its tone.
+- **Planet strength** (Deep analysis tab): Lilly's essential dignity score (domicile, exaltation, triplicity, term, face; detriment,
+  fall, peregrine) for the seven traditional planets, angularity, aspect counts, rulership markers, and the strongest, weakest and
+  prominent planets, with every rule listed on the page.
 - **Chart portrait**: under the Big Three, the first things an astrologer counts: the chart ruler by house, the sect, the halves
   of the chart, stelliums, retrograde planets and a planet that rules several of the Big Three.
 - **Forecast**: transit timeline (exact dates for 12 months), life timeline (the years Jupiter-Pluto spend in each
@@ -122,7 +125,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2403 keys) + web unit tests (96)
+npm test                                                        # content consistency (2405 keys) + web unit tests (113)
 npm run typecheck -w apps/web
 ```
 
