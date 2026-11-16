@@ -916,6 +916,15 @@ export const en: Record<keyof typeof az, string> = {
     lines_plus: 'Light side:',
     lines_minus: 'Shadow side:',
 
+    // karmic debts
+    kd_title: 'Karmic debts',
+    kd_intro: 'If the calculation of your numbers passes through 13, 14, 16 or 19, it counts as a karmic debt. All of them are shown here in one place, with the number each comes from.',
+    kd_debt: 'Karmic debt',
+    kd_shows: 'How it can show',
+    kd_lesson: 'The lesson',
+    kd_none: 'None of your numbers carries a karmic debt (13, 14, 16, 19).',
+    kd_note: 'The calculation is exact (the reduction chain is written above). The idea of a karmic debt is, however, an interpretation of traditional numerology, not a proven fact; read it as one way of looking at yourself. In the life path the day, month and year are reduced separately first, and the birthday is checked on its own. Name numbers need a name.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

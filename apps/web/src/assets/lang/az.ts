@@ -914,6 +914,15 @@ export const az = {
     lines_plus: 'İşıqlı tərəf:',
     lines_minus: 'Kölgəli tərəf:',
 
+    // karmic debts
+    kd_title: 'Karmik borclar',
+    kd_intro: 'Ədədlərinizin hesablanması zamanı 13, 14, 16 və ya 19 ədədindən keçilibsə, bu karmik borc sayılır. Aşağıda hamısı bir yerdə, hansı ədəddən gəldiyi ilə göstərilir.',
+    kd_debt: 'Karmik borc',
+    kd_shows: 'Necə görünə bilər',
+    kd_lesson: 'Dərs',
+    kd_none: 'Ədədlərinizdə karmik borc (13, 14, 16, 19) yoxdur.',
+    kd_note: 'Hesablama dəqiqdir (ədədlərin azaldılma zənciri yuxarıda yazılıb). Karmik borc anlayışı isə ənənəvi numerologiyanın şərhidir, sübut olunmuş fakt deyil; öz-özünü tanımaq üçün baxış kimi oxuyun. Həyat yolunda gün, ay və il əvvəl ayrı-ayrılıqda azaldılır, doğum günü ayrıca yoxlanır. Ad ədədləri üçün ad yazılmalıdır.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

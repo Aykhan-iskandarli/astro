@@ -9,6 +9,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {useGetNumerology} from '../../actions/natal-chart.query';
 import {INumerologyNumber} from '../../models/numerology.model';
 import NumerologyExtrasComponent from '../numerology-extras/numerology-extras.component';
+import KarmicDebtsComponent from '../karmic-debts/karmic-debts.component';
 import {useNumerologyPanelStyles} from './numerology-panel.style';
 
 const ORDER = ['lifePath', 'expression', 'soulUrge', 'personality', 'birthday', 'maturity'] as const;
@@ -87,6 +88,8 @@ const NumerologyPanelComponent = () => {
                         {card('personalMonth', data.personalMonth !== null ? {value: data.personalMonth} : null, ORDER.length + 1)}
                         {card('personalDay', data.personalDay !== null ? {value: data.personalDay} : null, ORDER.length + 2)}
                     </div>
+
+                    <KarmicDebtsComponent numbers={data.numbers}/>
 
                     {birthInput ? <NumerologyExtrasComponent data={data} birthDate={birthInput.date} fullName={debouncedName}/> : null}
 

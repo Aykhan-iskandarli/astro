@@ -1518,6 +1518,28 @@
           "high": "Ehtiraslı temperament və güclü cazibə."
         }
       }
+    },
+    "karmicDebtReading": {
+      "13": {
+        "origin": "13/4: ənənəvi numerologiyaya görə bu borc əməyi yan keçmək və başqalarının zəhməti hesabına yaşamaqla bağlı bir ssenari kimi oxunur.",
+        "shows": "İşlərin yarımçıq qalması, əməyin dəyərlənmədiyi hissi və ya hər şeyin çox zəhmətlə əldə olunması kimi görünə bilər. Sizdən davamlılıq və intizam tələb olunur.",
+        "lesson": "İşi sona çatdırmaq, kiçik addımlarla sabit irəliləmək və zəhmətin özündə dəyər görmək."
+      },
+      "14": {
+        "origin": "14/5: ənənəvi numerologiyaya görə bu borc azadlığın ifratlara və asılılıqlara sərf olunması ilə bağlı bir ssenari kimi oxunur.",
+        "shows": "Dəyişikliyə və hərəkətə can atma ilə sabitlik arasında gərginlik, vərdişlərdə ifrat və öhdəlikdən qaçma meyli kimi görünə bilər.",
+        "lesson": "Ölçü və ardıcıllıq: azadlığı məsuliyyətlə birləşdirmək və seçdiyiniz yolda qalmaq."
+      },
+      "16": {
+        "origin": "16/7: ənənəvi numerologiyaya görə bu borc qürur, eqo və ya münasibətlərdə yaranan inamın sarsılması ilə bağlı bir ssenari kimi oxunur.",
+        "shows": "Əvvəl qurulanın qəfil dağılması, illüziyaların çökməsi və yenidən qurma ehtiyacı kimi görünə bilər. Bəzən bu, təvazökarlığa aparan yoldur.",
+        "lesson": "Təvazökarlıq, daxili həqiqətə dönmək və həyatı eqonun yox, dəyərlərin üzərində qurmaq."
+      },
+      "19": {
+        "origin": "19/1: ənənəvi numerologiyaya görə bu borc gücdən və müstəqillikdən yalnız özü üçün istifadə etmək ilə bağlı bir ssenari kimi oxunur.",
+        "shows": "Hər şeyi tək etməyə meyl, kömək istəməkdə çətinlik, müstəqillik ilə təklik arasında gərginlik kimi görünə bilər.",
+        "lesson": "Kömək istəməyi və qəbul etməyi öyrənmək, gücü paylaşmaq və başqalarına etibar etmək."
+      }
     }
   },
   "chinese": {

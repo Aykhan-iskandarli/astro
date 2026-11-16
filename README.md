@@ -61,6 +61,7 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - `/calendar`: astro calendar for a year (lunations, eclipses, ingresses, stations, retrograde periods) and a
   moon calendar (lunar days, phase, void-of-course Moon) for a chosen city, plus the year's lunations and
   eclipses read in your chart (natal house and natal points touched).
+- **Karmic debts** (Numerology tab): all the debts (13/4, 14/5, 16/7, 19/1) found in the person's numbers in one block, with the number and the reduction chain each comes from (for example 49 → 13 → 4) and a longer reading.
 - `/name-analysis`: numerology from a full name alone; the birth date is optional.
 - `/year-forecast`: one chosen year read in your chart: the annual profection(s), the solar return, the firdaria
   sub-periods, the busiest months (exact aspects from Jupiter-Pluto, month by month), the slow planets' houses,
@@ -129,7 +130,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2485 keys) + web unit tests (124)
+npm test                                                        # content consistency (2497 keys) + web unit tests (127)
 npm run typecheck -w apps/web
 ```
 
