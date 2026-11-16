@@ -4,6 +4,8 @@
  * writes out the reduction chain (49 -> 13 -> 4) so that the reader can see where the debt comes from.
  */
 export const DEBTS = [13, 14, 16, 19] as const;
+/** Numbers that are built from other numbers, so a debt in them repeats one already found (maturity = life path + expression). */
+export const DERIVED = ['maturity'];
 export const MASTER = [11, 22, 33];
 
 export interface IDebtNumber {
@@ -17,6 +19,7 @@ export interface IDebtSource {
     compound: number;
     value: number;
     chain: number[];
+    derived: boolean;
 }
 
 export interface IDebtGroup {
@@ -40,7 +43,7 @@ export const karmicDebts = (numbers: Record<string, IDebtNumber | null>, order: 
         debt,
         sources: order.flatMap((kind) => {
             const n = numbers[kind];
-            return n && n.karmicDebt === debt ? [{kind, compound: n.compound, value: n.value, chain: chainOf(n.compound)}] : [];
+            return n && n.karmicDebt === debt ? [{kind, compound: n.compound, value: n.value, chain: chainOf(n.compound), derived: DERIVED.includes(kind)}] : [];
         }),
     }))
     .filter((g) => g.sources.length > 0);

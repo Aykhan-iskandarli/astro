@@ -922,8 +922,9 @@ export const en: Record<keyof typeof az, string> = {
     kd_debt: 'Karmic debt',
     kd_shows: 'How it can show',
     kd_lesson: 'The lesson',
+    kd_derived: 'derived from the life path',
     kd_none: 'None of your numbers carries a karmic debt (13, 14, 16, 19).',
-    kd_note: 'The calculation is exact (the reduction chain is written above). The idea of a karmic debt is, however, an interpretation of traditional numerology, not a proven fact; read it as one way of looking at yourself. In the life path the day, month and year are reduced separately first, and the birthday is checked on its own. Name numbers need a name.',
+    kd_note: 'The calculation is exact (the reduction chain is written above). The idea of a karmic debt is, however, an interpretation of traditional numerology, not a proven fact; read it as one way of looking at yourself. In the life path the day, month and year are reduced separately first, and the birthday and the digit sum of the birth year are checked on their own. The maturity number is the life path plus the expression, so a debt there counts as derived. Name numbers need a name.',
 
     // not found
     not_found_title: 'There is no such star in this sky',

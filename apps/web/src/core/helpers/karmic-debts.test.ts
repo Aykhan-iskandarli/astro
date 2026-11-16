@@ -21,6 +21,11 @@ describe('karmic debts', () => {
         expect(g.map((x) => x.debt)).toEqual([13, 16]);
         expect(g[0].sources.map((s) => s.kind)).toEqual(['lifePath', 'birthday']);
         expect(g[1].sources[0]).toMatchObject({kind: 'expression', chain: [16, 7]});
+        expect(g[0].sources.some((s) => s.derived)).toBe(false);
+    });
+    it('marks a debt in a derived number (maturity) as derived', () => {
+        const g = karmicDebts({lifePath: {value: 4, compound: 13, karmicDebt: 13}, maturity: {value: 4, compound: 13, karmicDebt: 13}}, ['lifePath', 'maturity']);
+        expect(g[0].sources.map((s) => [s.kind, s.derived])).toEqual([['lifePath', false], ['maturity', true]]);
     });
     it('returns nothing when no number has a debt', () => {
         expect(karmicDebts({lifePath: {value: 3, compound: 3, karmicDebt: null}}, ['lifePath'])).toEqual([]);

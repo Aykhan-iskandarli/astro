@@ -920,8 +920,9 @@ export const az = {
     kd_debt: 'Karmik borc',
     kd_shows: 'Necə görünə bilər',
     kd_lesson: 'Dərs',
+    kd_derived: 'həyat yolundan törəmə',
     kd_none: 'Ədədlərinizdə karmik borc (13, 14, 16, 19) yoxdur.',
-    kd_note: 'Hesablama dəqiqdir (ədədlərin azaldılma zənciri yuxarıda yazılıb). Karmik borc anlayışı isə ənənəvi numerologiyanın şərhidir, sübut olunmuş fakt deyil; öz-özünü tanımaq üçün baxış kimi oxuyun. Həyat yolunda gün, ay və il əvvəl ayrı-ayrılıqda azaldılır, doğum günü ayrıca yoxlanır. Ad ədədləri üçün ad yazılmalıdır.',
+    kd_note: 'Hesablama dəqiqdir (ədədlərin azaldılma zənciri yuxarıda yazılıb). Karmik borc anlayışı isə ənənəvi numerologiyanın şərhidir, sübut olunmuş fakt deyil; öz-özünü tanımaq üçün baxış kimi oxuyun. Həyat yolunda gün, ay və il əvvəl ayrı-ayrılıqda azaldılır, doğum günü və doğum ilinin rəqəmlər cəmi ayrıca yoxlanır. Yetkinlik ədədi həyat yolu ilə ifadə ədədinin cəmidir, ona görə oradakı borc törəmə sayılır. Ad ədədləri üçün ad yazılmalıdır.',
 
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',

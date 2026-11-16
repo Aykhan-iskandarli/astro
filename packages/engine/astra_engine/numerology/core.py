@@ -133,6 +133,7 @@ def calculate(birth, full_name: str | None = None, today: Date | None = None, **
     py = personal_year(d, today.year)
     pm, _ = reduce_number(py["value"] + today.month, keep_master=False)
     bday = _number(d.day)
+    byear = _number(digit_sum(d.year))  # the digit sum of the year on its own (1990 -> 19 -> 1), checked for a karmic debt
     pd = _single(pm + _single(today.day))
     return {
         "module": MODULE_ID,
@@ -141,6 +142,7 @@ def calculate(birth, full_name: str | None = None, today: Date | None = None, **
         "input": {"date": d.isoformat(), "name": full_name or birth.name, "today": today.isoformat()},
         "lifePath": lp,
         "birthday": bday,
+        "birthYear": byear,
         "expression": names["expression"],
         "soulUrge": names["soulUrge"],
         "personality": names["personality"],

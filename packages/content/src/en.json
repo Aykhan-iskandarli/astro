@@ -1166,6 +1166,10 @@
       "challenge": {
         "name": "Challenge",
         "meaning": "The theme to work on during that period."
+      },
+      "birthYear": {
+        "name": "Birth year",
+        "meaning": "The digit sum of the birth year: used only to check for a karmic debt."
       }
     },
     "karmicDebt": {

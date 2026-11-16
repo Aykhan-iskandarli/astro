@@ -60,7 +60,7 @@ export default class NumerologyModel {
     }
 
     private _setNumbers(item: any) {
-        for (const key of ['lifePath', 'expression', 'soulUrge', 'personality', 'birthday', 'maturity']) {
+        for (const key of ['lifePath', 'expression', 'soulUrge', 'personality', 'birthday', 'maturity', 'birthYear']) {
             this.numbers[key] = item?.[key] ?? null;
         }
     }

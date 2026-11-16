@@ -15,6 +15,9 @@ Module `numerology.core` (`packages/engine/astra_engine/numerology/core.py`), Py
 
 Reduction keeps the master numbers 11, 22, 33. Karmic debt (13, 14, 16, 19) is reported when one of these
 compounds appears on the way to the final digit.
+The checked numbers are the life path, the birthday, the expression, soul urge and personality numbers, the maturity number (a
+derived one: life path + expression) and the digit sum of the birth year on its own (1990 -> 19 -> 1), which the life path
+hides because it reduces the year first. The month is 1-12 and can never be a debt.
 
 | Personal day | personal month + day of the current date (no master numbers) |
 | Pinnacles | month+day, day+year, first+second, month+year (month, day, year each reduced to one digit first; master numbers kept in the result) |

@@ -222,3 +222,11 @@ def test_full_alphabet_sentence_in_upper_and_lower_case_gives_the_same_letters()
     upper = num.normalise_letters(sentence.upper())
     assert lower[1] == [] and upper[1] == []
     assert [b for _, b in lower[0]] == [b for _, b in upper[0]]
+
+
+def test_birth_year_digit_sum_is_checked_for_a_karmic_debt():
+    out = MODULES["numerology.core"].calculate(BirthData(date=date(1990, 6, 15), time=None, latitude=0, longitude=0, timezone="UTC"))
+    # 1990 -> 1+9+9+0 = 19 -> 1: the year alone carries karmic debt 19 (the life path reduces the year first and hides it)
+    assert out["birthYear"] == {"value": 1, "compound": 19, "master": False, "karmicDebt": 19}
+    no_debt = MODULES["numerology.core"].calculate(BirthData(date=date(2001, 6, 15), time=None, latitude=0, longitude=0, timezone="UTC"))
+    assert no_debt["birthYear"]["karmicDebt"] is None

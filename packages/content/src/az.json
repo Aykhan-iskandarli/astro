@@ -1166,6 +1166,10 @@
       "challenge": {
         "name": "Sınaq",
         "meaning": "Həmin dövrdə üzərində işləməli olduğunuz mövzu."
+      },
+      "birthYear": {
+        "name": "Doğum ili",
+        "meaning": "Doğum ilinin rəqəmlər cəmi: yalnız karmik borcun yoxlanması üçün."
       }
     },
     "karmicDebt": {

@@ -4,7 +4,7 @@ import useLocalization, {useContent} from 'assets/lang';
 import {useKarmicDebtsStyles} from './karmic-debts.style';
 import {IKarmicDebts} from './karmic-debts';
 
-const ORDER = ['lifePath', 'birthday', 'expression', 'soulUrge', 'personality', 'maturity'] as const;
+const ORDER = ['lifePath', 'birthday', 'birthYear', 'expression', 'soulUrge', 'personality', 'maturity'] as const;
 
 // All the karmic debts (13, 14, 16, 19) found in the person's numbers, in one place: where each comes from (the number
 // and its reduction chain) and a longer reading. The numbers come from the engine; the readings are the traditional ones.
@@ -31,7 +31,7 @@ const KarmicDebtsComponent = ({numbers}: IKarmicDebts) => {
                                 <p className={classes.label}>{translate('kd_debt')}</p>
                                 <h4>{g.debt}/{g.sources[0].value}</h4>
                                 <p className={classes.fact}>
-                                    {g.sources.map((s) => `${n.kinds[s.kind]?.name}: ${s.chain.join(' → ')}`).join(' · ')}
+                                    {g.sources.map((s) => `${n.kinds[s.kind]?.name}${s.derived ? ` (${translate('kd_derived')})` : ''}: ${s.chain.join(' → ')}`).join(' · ')}
                                 </p>
                                 <p className={classes.text}>{r.origin}</p>
                                 <div>
