@@ -714,6 +714,22 @@ export const az = {
     career_planets: 'İşə aid planetlər',
     career_note: 'Bunlar ənənəvi qaydalarla sayılan faktlardır; mətnlər ənənəvi mənalardır, peşə seçiminə qəti yol göstərmir.',
 
+    // finance
+    depth_nav_finance: 'Maliyyə',
+    finance_title: 'Maliyyə',
+    finance_intro: 'Ənənəvi qaydalarla: 2-ci ev və hökmdarı, Taleyin hissəsi, 8-ci və 11-ci evlər, pula aid planetlərin vəziyyəti.',
+    finance_time_unknown: 'Doğum saatı bilinmir: evlər və Taleyin hissəsi göstərilmir, yalnız planetlərin bürcləri.',
+    finance_second: '2-ci ev: öz qazancınız',
+    finance_ruler: 'Hökmdar',
+    finance_second_empty: '2-ci evdə planet yoxdur: qazanc əsasən evin bürcü və hökmdarı ilə oxunur.',
+    finance_fortune: 'Taleyin hissəsi',
+    finance_eighth: '8-ci ev: başqalarının pulu',
+    finance_eighth_text: '8-ci evdə planet yoxdur: ortaq pul, borc və miras evin bürcü və hökmdarı ilə oxunur.',
+    finance_eleventh: '11-ci ev: gəlirlər və ümidlər',
+    finance_eleventh_text: '11-ci evdə planet yoxdur: şəbəkələrdən gələn gəlir evin bürcü və hökmdarı ilə oxunur.',
+    finance_planets: 'Pula aid planetlər',
+    finance_note: 'Bunlar ənənəvi qaydalarla sayılan faktlardır; mətnlər ənənəvi mənalardır və maliyyə məsləhəti deyil.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

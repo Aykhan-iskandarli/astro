@@ -716,6 +716,22 @@ export const en: Record<keyof typeof az, string> = {
     career_planets: 'Planets of work',
     career_note: 'These are facts counted by traditional rules; the texts give traditional meanings and are no firm guide to a choice of profession.',
 
+    // finance
+    depth_nav_finance: 'Finances',
+    finance_title: 'Finances',
+    finance_intro: 'By the traditional rules: the 2nd house and its ruler, the Part of Fortune, the 8th and 11th houses and the condition of the planets of money.',
+    finance_time_unknown: "Birth time unknown: the houses and the Part of Fortune are not shown, only the planets' signs.",
+    finance_second: '2nd house: your own earnings',
+    finance_ruler: 'Ruler',
+    finance_second_empty: "No planet in the 2nd house: earnings are read mainly through the house's sign and ruler.",
+    finance_fortune: 'Part of Fortune',
+    finance_eighth: "8th house: other people's money",
+    finance_eighth_text: "No planet in the 8th house: shared money, debts and inheritance are read through the house's sign and ruler.",
+    finance_eleventh: '11th house: gains and hopes',
+    finance_eleventh_text: "No planet in the 11th house: gains from networks are read through the house's sign and ruler.",
+    finance_planets: 'Planets of money',
+    finance_note: 'These are facts counted by traditional rules; the texts give traditional meanings and are not financial advice.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

@@ -71,3 +71,19 @@ describe('career texts', () => {
         }
     });
 });
+
+describe('finance texts', () => {
+    it('cover every 2nd house sign, every house of the ruler and of the Part of Fortune, and every planet of money in both languages', async () => {
+        await loadContent('en');
+        for (const lang of ['az', 'en'] as const) {
+            const c = getContent(lang);
+            const fin = c.finance as {cusp: Record<string, string>; ruler: Record<string, string>; fortune: Record<string, string>; planet: Record<string, string>};
+            for (const id of Object.keys(c.signs)) expect(fin.cusp[id]).toBeTruthy();
+            for (let h = 1; h <= 12; h++) {
+                expect(fin.ruler[String(h)]).toBeTruthy();
+                expect(fin.fortune[String(h)]).toBeTruthy();
+            }
+            for (const id of ['venus', 'jupiter', 'saturn', 'mercury', 'mars']) expect(fin.planet[id]).toBeTruthy();
+        }
+    });
+});

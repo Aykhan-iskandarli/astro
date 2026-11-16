@@ -3609,5 +3609,56 @@
       "jupiter": "Karyerada Yupiter: böyümə, şans, öyrətmək və genişlənmə. Yupiterin vəziyyəti karyerada imkanların nə qədər asan açıldığını və hansı sahədə uğur gətirdiyini göstərir.",
       "saturn": "Karyerada Saturn: quruluş, məsuliyyət, nüfuz və uzunmüddətli nəticə. Saturnun vəziyyəti karyerada hansı çətinlikləri aşmalı və nəyi zamanla möhkəm qura biləcəyinizi göstərir."
     }
+  },
+  "finance": {
+    "cusp": {
+      "aries": "2-ci evin bürcü Qoçdur: pulu sürətlə qazanır və sürətlə xərcləyirsiniz. Təşəbbüs, sahibkarlıq və öz işiniz gəlir gətirir. Tələsik xərc və risk təhlükəsi var; gəlirinizi qoruyan bir qayda lazımdır.",
+      "taurus": "2-ci evin bürcü Buğadır (öz evi): pul sizin üçün təhlükəsizlik və rahatlıqdır. Yavaş, sabit və yığaraq qurursunuz; torpaq, əmlak və keyfiyyətli əşyalar dəyər saxlayır. Qənaət güclü cəhətdir, həddindən artıq sahiblənmə isə zəif.",
+      "gemini": "2-ci evin bürcü Əkizlərdir: gəlir söz, ticarət, yazı və bir neçə mənbədən gəlir. Gəlir çeviklidir və dəyişkən ola bilər. Bir neçə yarım iş əvəzinə bir-iki əsas mənbəni möhkəmləndirmək yaxşıdır.",
+      "cancer": "2-ci evin bürcü Xərçəngdir: pul sizin üçün ailə və duyğusal təhlükəsizlikdir. Qazancı ev, yemək, qayğı və daşınmaz əmlak vasitəsilə qurmaq uyğundur. Əhval xərclərə təsir edir; duyğusal alış-veriş təhlükəsi var.",
+      "leo": "2-ci evin bürcü Şirdir: pulu səxavətlə xərcləyir və qazancı yaradıcılıq, rəhbərlik və görünməklə qurursunuz. Keyfiyyətli və gözəl şeylər sizi cəlb edir. Statusa görə xərcləmək təhlükəsi var; qazancı uzunmüddətli planla bağlayın.",
+      "virgo": "2-ci evin bürcü Qızdır: pulla dəqiq, qənaətcil və praktik davranırsınız. Gəlir xidmət, təhlil və təfərrüatlı iş vasitəsilə gəlir. Büdcə qurmaq sizə yaxındır; həddindən artıq narahatlıq və özünütənqid təhlükəsi var.",
+      "libra": "2-ci evin bürcü Tərəzidir: pul tərəfdaşlıq, gözəllik və ahəng üzərindən gəlir. Dizayn, hüquq, diplomatiya və ortaq işlər qazanc gətirir. Zövqə və münasibətlərə xərc çox ola bilər; tarazlığı büdcə ilə qorumaq vacibdir.",
+      "scorpio": "2-ci evin bürcü Əqrəbdir: pulla dərin, strateji və gizli davranırsınız. Gəlir maliyyə, tədqiqat, yenidənqurma və ortaq resurslar üzərindən gəlir. Güc və nəzarət mövzusu pulla bağlıdır; böyük qazanc və böyük itki dövrləri ola bilər.",
+      "sagittarius": "2-ci evin bürcü Oxatandır: pul genişlənmə, səyahət, təhsil və nikbinlik üzərindən gəlir. Səxavətlisiniz və bəzən həddindən artıq xərcləyirsiniz. Xaricdən və ya öyrətməkdən gəlir mümkündür; xərc intizamı lazımdır.",
+      "capricorn": "2-ci evin bürcü Oğlaqdır: pul sizin üçün zəhmət, məsuliyyət və uzunmüddətli quruluşdur. Gəlir tədricən, intizamla və karyera ilə artır. Qənaətli və ehtiyatlısınız; pula həddindən artıq ciddi yanaşmaq və özünüzə xərcləməyi unutmaq təhlükəsi var.",
+      "aquarius": "2-ci evin bürcü Dolçadır: gəlir qeyri-ənənəvi yollar, texnologiya, şəbəkələr və yenilik üzərindən gəlir. Pula münasibətiniz müstəqil və qeyri-sabit ola bilər. Gəlir mənbələrini şaxələndirmək yaxşıdır.",
+      "pisces": "2-ci evin bürcü Balıqlardır: pul axıcı, intuitiv və bəzən qeyri-müəyyəndir. Gəlir yaradıcılıq, şəfa, incəsənət və ya başqalarına kömək vasitəsilə gələ bilər. Sərhədləri aydın qoymaq və borc, aldanma təhlükəsindən qorunmaq vacibdir."
+    },
+    "ruler": {
+      "1": "Maliyyə hökmdarı 1-ci evdədir: pul və şəxsiyyət bir-birinə bağlıdır. Gəlir sizin şəxsi təşəbbüsünüz, bacarığınız və görünüşünüzlə gəlir. Özünüzə sərmayə qoymaq ən yaxşı gəlirdir.",
+      "2": "Maliyyə hökmdarı öz evində, 2-ci evdədir: pul həyatınızın əsas mövzusudur. Öz gəlirinizi qurmaq və idarə etmək üçün güclü təbii imkan var. Özünüdəyər və gəlir bir-birinə bağlıdır.",
+      "3": "Maliyyə hökmdarı 3-cü evdədir: gəlir ünsiyyət, ticarət, yazı, təhsil və qısa səfərlərlə bağlıdır. Məlumat və əlaqələr pula çevrilir. Qardaş-bacılar və qonşular maliyyədə rol oynaya bilər.",
+      "4": "Maliyyə hökmdarı 4-cü evdədir: pul ev, ailə, daşınmaz əmlak və irslə bağlıdır. Ailə vasitəsilə dəstək və ya mülkdən gəlir mümkündür. Maddi təhlükəsizlik sizin üçün ev təhlükəsizliyindən ayrılmazdır.",
+      "5": "Maliyyə hökmdarı 5-ci evdədir: gəlir yaradıcılıq, əyləncə, investisiya və uşaqlarla bağlıdır. Risk götürmək və zövq üçün xərcləmək ola bilər. Yaradıcı iş və ya ehtiyatlı investisiya gəlir gətirir.",
+      "6": "Maliyyə hökmdarı 6-cı evdədir: gəlir gündəlik iş, xidmət və sağlamlıq sahəsi ilə bağlıdır. Maaşlı iş və ya xidmət gəliri sabitdir. Sağlamlığa xərc və işə görə qazanc bir-birinə bağlıdır.",
+      "7": "Maliyyə hökmdarı 7-ci evdədir: pul tərəfdaşlıq, müştərilər və ortaq işlərlə bağlıdır. Gəlir və xərc tərəfdaşla paylaşıla bilər. Düzgün tərəfdaş seçimi maliyyə nəticəsini müəyyən edir.",
+      "8": "Maliyyə hökmdarı 8-ci evdədir: pul ortaq resurslar, borclar, miras, sığorta və başqalarının pulu ilə bağlıdır. Böyük dəyişikliklər və yenidən başlamalar ola bilər. Maliyyə qaydası və açıqlıq vacibdir.",
+      "9": "Maliyyə hökmdarı 9-cu evdədir: gəlir təhsil, hüquq, nəşriyyat, səyahət və xarici əlaqələrlə bağlıdır. Xaricdən və ya öyrətməkdən qazanc mümkündür. Geniş baxış maliyyədə üstünlükdür.",
+      "10": "Maliyyə hökmdarı 10-cu evdədir: pul karyera, nüfuz və ictimai mövqe ilə bağlıdır. Gəlir peşədəki nailiyyətlə artır. Nüfuz və pul bir-birini qidalandırır.",
+      "11": "Maliyyə hökmdarı 11-ci evdədir: gəlir şəbəkələr, dostlar, qruplar və uzunmüddətli layihələrlə bağlıdır. Tanışlıqlar vasitəsilə qazanc mümkündür. Ortaq məqsədlər maliyyə imkanlarını artırır.",
+      "12": "Maliyyə hökmdarı 12-ci evdədir: pul gizli xərclər, itkilər və ya kənardan görünməyən işlərlə bağlıdır. Xeyriyyə, şəfa və ya kulis arxası iş gəlir gətirə bilər. Maliyyəni şəffaf saxlamaq və gizli xərcləri izləmək vacibdir."
+    },
+    "fortune": {
+      "1": "Taleyin hissəsi 1-ci evdədir: uğur və rahatlıq şəxsi təşəbbüsünüzdən, görünüşünüzdən və özünüzü ifadə etməkdən gəlir. Özünüz olduğunuz yerdə işlər asan gedir.",
+      "2": "Taleyin hissəsi 2-ci evdədir: bu, ənənəvi olaraq maddi uğurun ən güclü yeridir. Qazanc, bacarıq və öz resurslarınız vasitəsilə rahatlıq gəlir.",
+      "3": "Taleyin hissəsi 3-cü evdədir: şans ünsiyyət, öyrənmə, yazı və yaxın mühitdən gəlir. Düzgün söz və əlaqə sizə imkan açır.",
+      "4": "Taleyin hissəsi 4-cü evdədir: rahatlıq ev, ailə, köklər və daşınmaz əmlakdan gəlir. Həyatın sonrakı illəri çox vaxt daha uğurlu olur.",
+      "5": "Taleyin hissəsi 5-ci evdədir: uğur yaradıcılıq, romantika, uşaqlar və zövq verən işlərdən gəlir. Oynamaq və yaratmaq sizə pul gətirə bilər.",
+      "6": "Taleyin hissəsi 6-cı evdədir: rahatlıq gündəlik iş, xidmət, sağlamlıq və yaxşı vərdişlərdən gəlir. Nizam və faydalı olmaq sizə uğur gətirir.",
+      "7": "Taleyin hissəsi 7-ci evdədir: uğur tərəfdaşlıq, nikah və əməkdaşlıqdan gəlir. Doğru insanla birlikdə işlər daha asan gedir.",
+      "8": "Taleyin hissəsi 8-ci evdədir: şans ortaq resurslar, miras, sığorta və dərin dəyişimlərdən gəlir. Başqalarının pulu və yenilənmə imkan yaradır.",
+      "9": "Taleyin hissəsi 9-cu evdədir: uğur təhsil, səyahət, hüquq və xarici əlaqələrdən gəlir. Dünyanı genişləndirdikcə şans artır.",
+      "10": "Taleyin hissəsi 10-cu evdədir: uğur karyera, ictimai mövqe və nailiyyətdən gəlir. Peşədə tanınma sizə həm rahatlıq, həm maddi imkan gətirir.",
+      "11": "Taleyin hissəsi 11-ci evdədir: şans dostlardan, şəbəkələrdən və ortaq məqsədlərdən gəlir. Düzgün insanlar dairəsi sizə qapılar açır.",
+      "12": "Taleyin hissəsi 12-ci evdədir: rahatlıq tənhalıq, daxili iş, xidmət və ruhani sahələrdən gəlir. Şans çox vaxt gözdən uzaq, dolayı yolla gəlir."
+    },
+    "planet": {
+      "venus": "Pulda Venera: gəlir, dəyərlər və zövq. Veneranın vəziyyəti nəyə dəyər verdiyinizi, pula necə münasibət bəslədiyinizi və xərcdən zövq alma tərzinizi göstərir.",
+      "jupiter": "Pulda Yupiter: bolluq, şans və böyümə. Yupiterin vəziyyəti maddi imkanların nə qədər asan açıldığını və nə vaxt ifrata getdiyinizi göstərir.",
+      "saturn": "Pulda Saturn: qənaət, məhdudiyyət və uzunmüddətli quruluş. Saturnun vəziyyəti maddi təhlükəsizlik üçün nə qədər zəhmət çəkməli olduğunuzu və nəyi zamanla yığa biləcəyinizi göstərir.",
+      "mercury": "Pulda Merkuri: ticarət, hesablama və müqavilə. Merkurinin vəziyyəti alqı-satqı, danışıq və sənədlərlə işləmə bacarığınızı göstərir.",
+      "mars": "Pulda Mars: xərc, risk və qazanc üçün mübarizə. Marsın vəziyyəti pul üçün nə qədər atılqan olduğunuzu və impulsiv xərclərə meylinizi göstərir."
+    }
   }
 }

@@ -3609,5 +3609,56 @@
       "jupiter": "Jupiter in career: growth, luck, teaching and expansion. Jupiter's condition shows how easily opportunities open in career and where success comes.",
       "saturn": "Saturn in career: structure, responsibility, authority and long-term results. Saturn's condition shows which difficulties you must overcome in career and what you can build solidly over time."
     }
+  },
+  "finance": {
+    "cusp": {
+      "aries": "The 2nd house cusp is Aries: you earn money fast and spend it fast. Initiative, enterprise and work of your own bring income. Hasty spending and risk are the dangers; you need a rule that protects your income.",
+      "taurus": "The 2nd house cusp is Taurus (its own house): money is safety and comfort for you. You build slowly, steadily and by saving; land, property and quality things hold value. Thrift is a strength, too much possessiveness a weakness.",
+      "gemini": "The 2nd house cusp is Gemini: income comes from words, trade, writing and several sources. Income is flexible and can vary. It helps to strengthen one or two main sources instead of several half-jobs.",
+      "cancer": "The 2nd house cusp is Cancer: money means family and emotional security. Building earnings through home, food, care and real estate suits you. Mood affects spending; emotional shopping is the risk.",
+      "leo": "The 2nd house cusp is Leo: you spend money generously and earn through creativity, leadership and visibility. Quality and beautiful things attract you. Spending for status is the risk; tie earnings to a long-term plan.",
+      "virgo": "The 2nd house cusp is Virgo: you are precise, thrifty and practical with money. Income comes through service, analysis and detailed work. Budgeting comes naturally; excessive worry and self-criticism are the risks.",
+      "libra": "The 2nd house cusp is Libra: money comes through partnership, beauty and harmony. Design, law, diplomacy and joint ventures bring earnings. Spending on taste and relationships can be high; keeping balance with a budget matters.",
+      "scorpio": "The 2nd house cusp is Scorpio: you are deep, strategic and private about money. Income comes through finance, research, restructuring and shared resources. Power and control are tied to money; there may be periods of big gain and big loss.",
+      "sagittarius": "The 2nd house cusp is Sagittarius: money comes through expansion, travel, education and optimism. You are generous and sometimes overspend. Income from abroad or from teaching is possible; spending discipline is needed.",
+      "capricorn": "The 2nd house cusp is Capricorn: money is hard work, responsibility and long-term structure. Income grows gradually, with discipline and career. You are thrifty and careful; taking money too seriously and forgetting to spend on yourself are the risks.",
+      "aquarius": "The 2nd house cusp is Aquarius: income comes through unconventional ways, technology, networks and innovation. Your relation to money can be independent and unstable. Diversifying sources of income is good.",
+      "pisces": "The 2nd house cusp is Pisces: money is fluid, intuitive and sometimes vague. Income can come through creativity, healing, the arts or helping others. Setting clear boundaries and guarding against debt and being deceived matter."
+    },
+    "ruler": {
+      "1": "The finance ruler is in the 1st house: money and identity are linked. Income comes through your personal initiative, skill and appearance. Investing in yourself is the best return.",
+      "2": "The finance ruler is in its own house, the 2nd: money is a main theme of life. There is a strong natural capacity to build and manage your own income. Self-worth and income are linked.",
+      "3": "The finance ruler is in the 3rd house: income is tied to communication, trade, writing, education and short trips. Information and contacts turn into money. Siblings and neighbours may play a part in finances.",
+      "4": "The finance ruler is in the 4th house: money is tied to home, family, real estate and inheritance. Support through family or income from property is possible. Material security is inseparable from home security.",
+      "5": "The finance ruler is in the 5th house: income is tied to creativity, entertainment, investment and children. Risk-taking and spending for pleasure are possible. Creative work or careful investment brings income.",
+      "6": "The finance ruler is in the 6th house: income is tied to daily work, service and health. A salary or service income is steady. Health spending and earnings from work are linked.",
+      "7": "The finance ruler is in the 7th house: money is tied to partnership, clients and joint ventures. Income and spending may be shared with a partner. Choosing the right partner decides the financial result.",
+      "8": "The finance ruler is in the 8th house: money is tied to shared resources, debts, inheritance, insurance and other people's money. Big changes and fresh starts may come. Financial order and openness matter.",
+      "9": "The finance ruler is in the 9th house: income is tied to education, law, publishing, travel and foreign contacts. Earnings from abroad or from teaching are possible. A wide view is an advantage in finances.",
+      "10": "The finance ruler is in the 10th house: money is tied to career, standing and public position. Income grows with professional achievement. Authority and money feed each other.",
+      "11": "The finance ruler is in the 11th house: income is tied to networks, friends, groups and long-term projects. Gains through contacts are possible. Shared goals increase financial possibilities.",
+      "12": "The finance ruler is in the 12th house: money is tied to hidden costs, losses or work unseen from outside. Charity, healing or behind-the-scenes work may bring income. Keeping finances transparent and watching hidden costs matter."
+    },
+    "fortune": {
+      "1": "The Part of Fortune is in the 1st house: success and ease come from your own initiative, appearance and self-expression. Things go easily where you are yourself.",
+      "2": "The Part of Fortune is in the 2nd house: traditionally the strongest place for material success. Ease comes through earnings, skills and your own resources.",
+      "3": "The Part of Fortune is in the 3rd house: luck comes from communication, learning, writing and the near environment. The right word and contact open opportunities.",
+      "4": "The Part of Fortune is in the 4th house: ease comes from home, family, roots and real estate. The later years of life are often more fortunate.",
+      "5": "The Part of Fortune is in the 5th house: success comes from creativity, romance, children and work you enjoy. Playing and creating may bring you money.",
+      "6": "The Part of Fortune is in the 6th house: ease comes from daily work, service, health and good habits. Order and being useful bring you success.",
+      "7": "The Part of Fortune is in the 7th house: success comes from partnership, marriage and cooperation. Things go more easily together with the right person.",
+      "8": "The Part of Fortune is in the 8th house: luck comes from shared resources, inheritance, insurance and deep change. Other people's money and renewal create opportunity.",
+      "9": "The Part of Fortune is in the 9th house: success comes from education, travel, law and foreign contacts. Luck grows as you widen your world.",
+      "10": "The Part of Fortune is in the 10th house: success comes from career, public standing and achievement. Recognition in your profession brings both ease and material means.",
+      "11": "The Part of Fortune is in the 11th house: luck comes from friends, networks and shared goals. The right circle of people opens doors.",
+      "12": "The Part of Fortune is in the 12th house: ease comes from solitude, inner work, service and spiritual fields. Luck often comes out of sight, by an indirect route."
+    },
+    "planet": {
+      "venus": "Venus in money: income, values and pleasure. Venus's condition shows what you value, how you relate to money and how you enjoy spending.",
+      "jupiter": "Jupiter in money: abundance, luck and growth. Jupiter's condition shows how easily material opportunities open and when you go to excess.",
+      "saturn": "Saturn in money: thrift, limits and long-term structure. Saturn's condition shows how much work material security takes and what you can accumulate over time.",
+      "mercury": "Mercury in money: trade, calculation and contracts. Mercury's condition shows your skill in buying and selling, negotiating and handling documents.",
+      "mars": "Mars in money: spending, risk and fighting for earnings. Mars's condition shows how driven you are for money and your tendency to impulsive spending."
+    }
   }
 }
