@@ -74,6 +74,7 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
 - `/life-timeline`: a whole life on one 0-90 age axis: the firdaria, the Vimshottari mahadashas, the Chinese luck pillars and
   the planetary life cycles (Jupiter, Saturn, Uranus and Neptune returns, squares and oppositions, the Moon's node and Chiron
   returns). Select a block to read it.
+- `/directions`: Solar Arc and secondary progressions year by year: the exact dates when a directed or progressed point touches a natal one (month by month, with a full reading) and when the progressed Sun, Moon, Mercury, Venus or Mars enters a new sign. The Moon and the angles need the birth time.
 - `/glossary`: plain-language explanations of the terms used on the site (also shown as tooltips).
 - `/profiles`: saved charts as people (relation, "my chart"), with a JSON backup and restore; the data stays in
   the browser.
@@ -127,7 +128,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2479 keys) + web unit tests (117)
+npm test                                                        # content consistency (2479 keys) + web unit tests (120)
 npm run typecheck -w apps/web
 ```
 

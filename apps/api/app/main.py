@@ -468,6 +468,13 @@ def transformations(req: TransformationsRequest) -> dict:
                                                         house_system=req.house_system)
 
 
+@app.post("/api/charts/directions")
+def directions(req: TransformationsRequest) -> dict:
+    """Solar Arc hits and secondary-progression aspects and sign changes over several years."""
+    return MODULES["western.directions"].calculate(_birth(req), start_year=req.start_year, years=req.years,
+                                                   house_system=req.house_system)
+
+
 @app.post("/api/charts/generation")
 def generation(req: NatalRequest) -> dict:
     """How long Saturn, Uranus, Neptune, Pluto and the North Node stood in the birth sign (only the date is used)."""

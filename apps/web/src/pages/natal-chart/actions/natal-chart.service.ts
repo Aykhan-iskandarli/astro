@@ -11,6 +11,7 @@ import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
 import LifetimeModel from '../models/lifetime.model';
 import GenerationModel from '../models/generation.model';
+import DirectionsModel from '../models/directions.model';
 import TransformationsModel from '../models/transformations.model';
 import ElectionalModel from '../models/electional.model';
 import BaziYearsModel from '../models/bazi-years.model';
@@ -111,6 +112,13 @@ export const getGeneration = (input: IBirthInput): Promise<GenerationModel> => {
     return axiosPublic.post(API.generation, input)
         .then((res) => {
             return new GenerationModel(res.data);
+        });
+};
+
+export const getDirections = (input: IBirthInput, startYear: number, years: number): Promise<DirectionsModel> => {
+    return axiosPublic.post(API.directions, {...input, startYear, years})
+        .then((res) => {
+            return new DirectionsModel(res.data);
         });
 };
 

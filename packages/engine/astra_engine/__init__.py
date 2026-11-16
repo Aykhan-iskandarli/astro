@@ -12,7 +12,7 @@ from .destiny import matrix as destiny_matrix
 from .numerology import core as numerology
 from .vedic import chart as vedic_chart
 from .sky import calendar as sky_calendar, day as sky_day, moon as sky_moon, now as sky_now
-from .western import (astrocartography, composite, cycles, davison, details, electional, forecast, generation, natal, personal_moon,
+from .western import (astrocartography, composite, cycles, davison, details, directions, electional, forecast, generation, natal, personal_moon,
                       progressions, returns, synastry, timeline, timing, transformations, transits)
 
 
@@ -42,6 +42,7 @@ MODULES: dict[str, EngineModule] = {
     personal_moon.MODULE_ID: personal_moon,      # the Moon's day and the lunations in the natal chart
     forecast.MODULE_ID: forecast,                # life timeline of slow planets, retrograde calendar, year forecast
     electional.MODULE_ID: electional,            # day-by-day facts for choosing a day, read in the natal chart
+    directions.MODULE_ID: directions,            # Solar Arc hits and secondary-progression events on a timeline
     generation.MODULE_ID: generation,            # how long the slow planets stayed in the birth sign
     transformations.MODULE_ID: transformations,  # long slow-planet transits (episodes) to the natal chart over years
 }

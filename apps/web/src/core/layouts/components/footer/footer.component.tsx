@@ -23,6 +23,7 @@ const FooterComponent = () => {
                     <li><Link to={Routes.yearForecast}>{translate('nav_year')}</Link></li>
                     <li><Link to={Routes.chooseDay}>{translate('nav_choose')}</Link></li>
                     <li><Link to={Routes.transformations}>{translate('nav_transform')}</Link></li>
+                    <li><Link to={Routes.directions}>{translate('nav_directions')}</Link></li>
                     <li><Link to={Routes.lifeTimeline}>{translate('nav_life')}</Link></li>
                     <li><Link to={Routes.glossary}>{translate('nav_glossary')}</Link></li>
                     <li><Link to={Routes.privacyPolicy}>{translate('nav_privacy')}</Link></li>

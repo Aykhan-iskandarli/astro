@@ -9,6 +9,7 @@ export enum Routes {
     chooseDay = '/choose-day',
     transformations = '/transformations',
     lifeTimeline = '/life-timeline',
+    directions = '/directions',
     profiles = '/profiles',
     privacyPolicy = '/privacy-policy',
 }

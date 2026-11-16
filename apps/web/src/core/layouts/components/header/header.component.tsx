@@ -26,6 +26,7 @@ const FORECAST = [
     {to: Routes.chooseDay, key: 'nav_choose', end: false},
     {to: Routes.transformations, key: 'nav_transform', end: false},
     {to: Routes.lifeTimeline, key: 'nav_life', end: false},
+    {to: Routes.directions, key: 'nav_directions', end: false},
 ] as const;
 const MOBILE_NAV = [...NAV.slice(0, 4), ...FORECAST, ...NAV.slice(4)];
 

@@ -15,6 +15,7 @@ const ProfilesComponent = lazyWithPreload(() => import('../pages/profiles/profil
 const YearForecastComponent = lazyWithPreload(() => import('../pages/year-forecast/year-forecast.component'));
 const ChooseDayComponent = lazyWithPreload(() => import('../pages/choose-day/choose-day.component'));
 const TransformationsComponent = lazyWithPreload(() => import('../pages/transformations/transformations.component'));
+const DirectionsComponent = lazyWithPreload(() => import('../pages/directions/directions.component'));
 const LifeTimelineComponent = lazyWithPreload(() => import('../pages/life-timeline/life-timeline.component'));
 const GlossaryComponent = lazyWithPreload(() => import('../pages/glossary/glossary.component'));
 const PrivacyPolicyComponent = lazyWithPreload(() => import('../pages/privacy-policy/privacy-policy.component'));
@@ -31,6 +32,7 @@ export const preloadRoute = (pathname: string) => {
     if (path === Routes.yearForecast) return YearForecastComponent.preload();
     if (path === Routes.chooseDay) return ChooseDayComponent.preload();
     if (path === Routes.transformations) return TransformationsComponent.preload();
+    if (path === Routes.directions) return DirectionsComponent.preload();
     if (path === Routes.lifeTimeline) return LifeTimelineComponent.preload();
     if (path === Routes.glossary) return GlossaryComponent.preload();
     if (path === Routes.privacyPolicy) return PrivacyPolicyComponent.preload();
@@ -80,6 +82,10 @@ const router = createBrowserRouter([
             {
                 path: Routes.transformations,
                 element: withSuspense(<TransformationsComponent/>),
+            },
+            {
+                path: Routes.directions,
+                element: withSuspense(<DirectionsComponent/>),
             },
             {
                 path: Routes.lifeTimeline,

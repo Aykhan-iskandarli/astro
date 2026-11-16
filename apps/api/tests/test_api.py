@@ -309,3 +309,15 @@ def test_generation_endpoint():
     assert r.status_code == 200
     ids = [p["id"] for p in r.json()["planets"]]
     assert ids == ["saturn", "uranus", "neptune", "pluto", "northNode"]
+
+
+def test_directions_endpoint():
+    r = client.post("/api/charts/directions", json={**BAKU, "startYear": 2026, "years": 2})
+    assert r.status_code == 200
+    d = r.json()
+    assert d["solarArc"] and d["progressed"] and d["meta"]["timeUnknown"] is False
+    date_only = {k: v for k, v in BAKU.items() if k != "time"}
+    d2 = client.post("/api/charts/directions", json={**date_only, "startYear": 2026, "years": 2}).json()
+    assert d2["meta"]["timeUnknown"] is True
+    assert all(h["progressed"] != "moon" and "moon" not in (h["natal"],) for h in d2["progressed"])
+    assert client.post("/api/charts/directions", json={**BAKU, "years": 99}).status_code == 422

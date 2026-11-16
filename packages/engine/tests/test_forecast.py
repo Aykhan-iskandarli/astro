@@ -156,3 +156,97 @@ def test_generation_stay_matches_an_independent_daily_scan(pid):
 def test_generation_known_dates():
     pluto = {p["id"]: p for p in G.calculate(BIRTH)["planets"]}["pluto"]
     assert pluto["start"].startswith("1983-11-05") and pluto["end"].startswith("1995-11-10")
+
+
+D = MODULES["western.directions"]
+ASPECT_ANGLES = {"conjunction": 0, "sextile": 60, "square": 90, "trine": 120, "opposition": 180}
+
+
+def _dir_setup():
+    """Natal longitudes of the points the directions module uses: the ten planets and the two angles."""
+    chart = MODULES["western.natal"].calculate(BIRTH)
+    ids = ["sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"]
+    lon = {p["id"]: p["longitude"] for p in chart["points"] if p["id"] in ids}
+    lon.update({a: chart["angles"][a]["longitude"] for a in ("asc", "mc")})
+    return lon, None
+
+
+def _birth_jd():
+    from astra_engine.common.birth import resolve_utc
+    from datetime import time
+    return jd_of(resolve_utc(BIRTH.date, BIRTH.time or time(12, 0), BIRTH.timezone).utc)
+
+
+def test_solar_arc_hits_are_exact_with_the_progressed_sun_arc():
+    out = D.calculate(BIRTH, start_year=2024, years=6)
+    lon, _ = _dir_setup()
+    bj = _birth_jd()
+    assert out["solarArc"]
+    for h in out["solarArc"]:
+        age = (_jd(h["at"]) - bj) / 365.2422
+        arc = _d(longitude("sun", bj + age)[0] - lon["sun"])
+        assert arc == pytest.approx(h["arc"], abs=0.002)
+        diff = abs(_d(lon[h["directed"]] + arc - lon[h["natal"]]))
+        assert diff == pytest.approx(ASPECT_ANGLES[h["aspect"]], abs=0.003), h
+
+
+def test_solar_arc_finds_every_hit_of_an_independent_scan():
+    out = D.calculate(BIRTH, start_year=2024, years=6)
+    lon, _ = _dir_setup()
+    bj = _birth_jd()
+    found = {(h["directed"], h["natal"], h["aspect"], off_of) for h in out["solarArc"] for off_of in [0]}
+    a0 = (_jd("2024-01-01T00:00:00Z") - bj) / 365.2422
+    a1 = (_jd("2030-01-01T00:00:00Z") - bj) / 365.2422
+    n = 2000
+    ages = [a0 + (a1 - a0) * i / n for i in range(n + 1)]
+    arcs = [_d(longitude("sun", bj + a)[0] - lon["sun"]) for a in ages]
+    expected = set()
+    for p in lon:
+        for q in lon:
+            if p == q or (p in ("asc", "mc") and q in ("asc", "mc")):
+                continue
+            for aspect, angle in ASPECT_ANGLES.items():
+                for off in {angle, -angle}:
+                    vals = [_d(lon[p] + arc - lon[q] - off) for arc in arcs]
+                    if any((x < 0) != (y < 0) and abs(x) < 30 and abs(y) < 30 for x, y in zip(vals, vals[1:])):
+                        expected.add((p, q, aspect, 0))
+    assert found == expected
+
+
+def test_progressed_aspects_are_exact():
+    out = D.calculate(BIRTH, start_year=2025, years=5)
+    lon, _ = _dir_setup()
+    bj = _birth_jd()
+    assert out["progressed"] and out["ingresses"]
+    for h in out["progressed"]:
+        jd = _jd(h["at"])
+        prog = longitude(h["progressed"], bj + (jd - bj) / 365.2422)[0]
+        assert abs(_d(prog - lon[h["natal"]])) == pytest.approx(ASPECT_ANGLES[h["aspect"]], abs=0.003) or \
+            abs(abs(_d(prog - lon[h["natal"]])) - ASPECT_ANGLES[h["aspect"]]) < 0.003, h
+    for h in out["ingresses"]:
+        jd = _jd(h["at"])
+        before = sign_index(longitude(h["progressed"], bj + (jd - 0.01 - bj) / 365.2422)[0])
+        after = sign_index(longitude(h["progressed"], bj + (jd + 0.01 - bj) / 365.2422)[0])
+        assert SIGNS[after] == h["sign"] and before != after
+
+
+def test_progressed_moon_count_matches_a_fine_scan_and_date_only_drops_the_moon():
+    out = D.calculate(BIRTH, start_year=2025, years=5)
+    lon, _ = _dir_setup()
+    bj = _birth_jd()
+    a, b = _jd("2025-01-01T00:00:00Z"), _jd("2030-01-01T00:00:00Z")
+    expected = 0
+    for tid, tl in lon.items():
+        if tid == "moon":
+            continue
+        for aspect, angle in ASPECT_ANGLES.items():
+            for off in ((angle,) if angle in (0, 180) else (angle, -angle)):
+                prev, t = None, a
+                while t <= b:
+                    v = _d(longitude("moon", bj + (t - bj) / 365.2422)[0] - tl - off)
+                    if prev is not None and (prev < 0) != (v < 0) and abs(v) < 30 and abs(prev) < 30:
+                        expected += 1
+                    prev, t = v, t + 2.0
+    assert expected == sum(1 for h in out["progressed"] if h["progressed"] == "moon")
+    dateonly = D.calculate(BirthData(date=BIRTH.date, time=None, latitude=BIRTH.latitude, longitude=BIRTH.longitude, timezone=BIRTH.timezone), start_year=2025, years=3)
+    assert dateonly["meta"]["timeUnknown"]
