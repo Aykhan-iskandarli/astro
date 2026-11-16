@@ -831,6 +831,21 @@ export const az = {
     sum_retro: '{n} retroqrad planet',
     sum_note: 'Bu {n} maddə xəritənin əsas cizgilərinin xülasəsidir; hər birinin təfərrüatı bu sekmənin digər bölmələrindədir. Mətnlər ümumi tendensiyadır.',
 
+    // generation
+    depth_nav_generation: 'Nəsil',
+    gen_title: 'Nəsil: kollektiv dərs və karma',
+    gen_intro: 'Yavaş planetlər illərlə eyni bürcdə qalır, ona görə eyni mövqeni minlərlə yaşıd paylaşır. Bu, şəxsi deyil, nəslin ortaq dərsidir; şəxsi tərəfi ev və aspektlərdə görünür.',
+    gen_planet: '{planet}: nəslin ortaq mövqeyi',
+    gen_node: 'Nəslin karmik oxu ({planet})',
+    gen_years: '{n} il',
+    gen_unbounded: 'Tarixlər axtarış pəncərəsindən kənardadır.',
+    gen_dips: 'Retroqrad hərəkətə görə planet {n} dəfə qonşu bürcə qısa müddətlik keçib qayıdır; tarixlər ilk giriş və son çıxışdır.',
+    gen_edge: 'Siz bu mövqenin sərhədinə {days} gündən yaxın doğulmusunuz: iki nəslin kəsişməsi sayıla bilər.',
+    gen_pairs: 'Nəslin ortaq aspektləri',
+    gen_pairs_none: 'Saturn, Uran, Neptun və Pluton arasında əsas aspekt yoxdur.',
+    gen_note: 'Dövrlər Swiss Ephemeris ilə hesablanıb, yalnız doğum tarixi lazımdır. Nəsil karması astrologiyada kollektiv mövzu kimi oxunur; mətnlər ümumi tendensiyadır, hər yaşıd üçün eyni deyil.',
+    gen_error: 'Nəsil məlumatı yüklənmədi.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

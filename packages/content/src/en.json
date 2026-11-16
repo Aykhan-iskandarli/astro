@@ -3831,5 +3831,35 @@
       },
       "retro": "Pluto is retrograde: the process of change happens more inside than outside. Power is to be understood within before it is expressed."
     }
+  },
+  "generation": {
+    "uranus": {
+      "aries": "Uranus in Aries: the shared theme of the generation is bold beginnings, individual freedom and initiative. Those who take the first step bring the new.",
+      "taurus": "Uranus in Taurus: the shared theme of the generation is the renewal of money, land, food and values. What was thought steady is shaken.",
+      "gemini": "Uranus in Gemini: the shared theme of the generation is new forms of information, communication and learning. Ideas change fast.",
+      "cancer": "Uranus in Cancer: the shared theme of the generation is rethinking family, home and the idea of security.",
+      "leo": "Uranus in Leo: the shared theme of the generation is individual expression, creativity and new paths to recognition. Everyone wants to be one of a kind.",
+      "virgo": "Uranus in Virgo: the shared theme of the generation is the renewal of work, technique and daily life, and a rebuilding of efficiency.",
+      "libra": "Uranus in Libra: the shared theme of the generation is relationships, marriage and social rules moving into new forms.",
+      "scorpio": "Uranus in Scorpio: the shared theme of the generation is power, intimacy and the surfacing of what is hidden. Deep and sudden change.",
+      "sagittarius": "Uranus in Sagittarius: the shared theme of the generation is belief, travel and a widening worldview. Borders open.",
+      "capricorn": "Uranus in Capricorn: the shared theme of the generation is power, institutions and the rebuilding of traditional structures.",
+      "aquarius": "Uranus in Aquarius is at home: the shared theme of the generation is technology, society and collective freedom. The new arrives as a natural flow.",
+      "pisces": "Uranus in Pisces: the shared theme of the generation is spirituality, imagination and the dissolving of boundaries. New forms of feeling and awareness."
+    },
+    "neptune": {
+      "aries": "Neptune in Aries: the shared dream of the generation is personal courage, heroism and a new start. The risk is hasty action for an ideal.",
+      "taurus": "Neptune in Taurus: the shared dream of the generation is material comfort, beauty and closeness to nature. The risk is illusion about money and things.",
+      "gemini": "Neptune in Gemini: the shared dream of the generation is the magic of the word, information and communication. The risk is truth mixing with falsehood.",
+      "cancer": "Neptune in Cancer: the shared dream of the generation is family, homeland and care. The risk is too much nostalgia for the past.",
+      "leo": "Neptune in Leo: the shared dream of the generation is fame, creativity and romantic ideals. The risk is being fooled by glitter.",
+      "virgo": "Neptune in Virgo: the shared dream of the generation is service, health and perfect work. The risk is vagueness and confusion through criticism.",
+      "libra": "Neptune in Libra: the shared dream of the generation is ideal love, justice and harmony. The risk is illusion about relationships.",
+      "scorpio": "Neptune in Scorpio: the shared dream of the generation is deep intimacy, mystery and a spiritual turn. The risk is hidden or compulsive bonds.",
+      "sagittarius": "Neptune in Sagittarius: the shared dream of the generation is distant ideals, faith and free travel. The risk is blind belief.",
+      "capricorn": "Neptune in Capricorn: the shared dream of the generation is faith in structure, achievement and authority. The risk is trusting institutions too much and then being disappointed.",
+      "aquarius": "Neptune in Aquarius: the shared dream of the generation is universal ideals, technology and togetherness. The risk is the individual disappearing in the collective.",
+      "pisces": "Neptune in Pisces is at home: the shared dream of the generation is spirituality, compassion and unity. The risk is escape from reality."
+    }
   }
 }

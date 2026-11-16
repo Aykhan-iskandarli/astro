@@ -3831,5 +3831,35 @@
       },
       "retro": "Pluton retroqraddır: dəyişmə prosesi çöldən çox daxildə gedir. Gücü ifadə etməkdənsə əvvəl onu özündə anlamaq lazımdır."
     }
+  },
+  "generation": {
+    "uranus": {
+      "aries": "Uran Qoçda: nəslin ortaq mövzusu cəsur başlanğıclar, fərdi azadlıq və təşəbbüsdür. Yeniliyi ilk addım atanlar gətirir.",
+      "taurus": "Uran Buğada: nəslin ortaq mövzusu pul, torpaq, qida və dəyərlərin yenilənməsidir. Sabit sandığın şeylərin sarsılması.",
+      "gemini": "Uran Əkizlərdə: nəslin ortaq mövzusu informasiya, ünsiyyət və öyrənmənin yeni formalarıdır. Fikirlər sürətlə dəyişir.",
+      "cancer": "Uran Xərçəngdə: nəslin ortaq mövzusu ailə, ev və təhlükəsizlik anlayışının yenidən düşünülməsidir.",
+      "leo": "Uran Şirdə: nəslin ortaq mövzusu fərdi ifadə, yaradıcılıq və tanınma üçün yeni yollardır. Hər kəs özünəməxsus olmaq istəyir.",
+      "virgo": "Uran Qızda: nəslin ortaq mövzusu iş, texnika və gündəlik həyatın yeniləşməsi, səmərəliliyin yenidən qurulmasıdır.",
+      "libra": "Uran Tərəzidə: nəslin ortaq mövzusu münasibətlərin, evliliyin və sosial qaydaların yeni formalara keçməsidir.",
+      "scorpio": "Uran Əqrəbdə: nəslin ortaq mövzusu güc, intimlik və gizli olanın üzə çıxmasıdır. Dərin və qəfil dəyişikliklər.",
+      "sagittarius": "Uran Oxatanda: nəslin ortaq mövzusu inanc, səyahət və dünyagörüşünün genişlənməsidir. Sərhədlər açılır.",
+      "capricorn": "Uran Oğlaqda: nəslin ortaq mövzusu hakimiyyət, qurumlar və ənənəvi strukturların yenidən qurulmasıdır.",
+      "aquarius": "Uran Dolçada öz evindədir: nəslin ortaq mövzusu texnologiya, cəmiyyət və kollektiv azadlıqdır. Yenilik təbii axar kimi gəlir.",
+      "pisces": "Uran Balıqlarda: nəslin ortaq mövzusu mənəviyyat, təxəyyül və sərhədlərin əriməsidir. Yeni hissiyyat və şüur formaları."
+    },
+    "neptune": {
+      "aries": "Neptun Qoçda: nəslin ortaq xəyalı şəxsi cəsarət, qəhrəmanlıq və yeni başlanğıcdır. Risk: ideal uğrunda tələsik hərəkət.",
+      "taurus": "Neptun Buğada: nəslin ortaq xəyalı maddi rahatlıq, gözəllik və təbiətlə bağlılıqdır. Risk: pul və əşyaya illüziya.",
+      "gemini": "Neptun Əkizlərdə: nəslin ortaq xəyalı söz, informasiya və ünsiyyətin sehridir. Risk: həqiqətlə yalanın qarışması.",
+      "cancer": "Neptun Xərçəngdə: nəslin ortaq xəyalı ailə, vətən və qayğıdır. Risk: keçmişə həddindən artıq nostalji.",
+      "leo": "Neptun Şirdə: nəslin ortaq xəyalı şöhrət, yaradıcılıq və romantik ideallardır. Risk: parıltıya aldanmaq.",
+      "virgo": "Neptun Qızda: nəslin ortaq xəyalı xidmət, sağlamlıq və mükəmməl işdir. Risk: qeyri-müəyyənlik və tənqidlə çaşqınlıq.",
+      "libra": "Neptun Tərəzidə: nəslin ortaq xəyalı ideal sevgi, ədalət və harmoniyadır. Risk: münasibətlərə illüziya.",
+      "scorpio": "Neptun Əqrəbdə: nəslin ortaq xəyalı dərin yaxınlıq, sirr və mənəvi dönüşdür. Risk: gizli və məcburi bağlar.",
+      "sagittarius": "Neptun Oxatanda: nəslin ortaq xəyalı uzaq ideallar, inanc və azad səyahətdir. Risk: kor-koranə inam.",
+      "capricorn": "Neptun Oğlaqda: nəslin ortaq xəyalı quruluş, nailiyyət və hakimiyyətə inamdır. Risk: qurumlara həddindən artıq inam və sonra məyusluq.",
+      "aquarius": "Neptun Dolçada: nəslin ortaq xəyalı ümumbəşəri ideallar, texnologiya və birlikdir. Risk: kollektivdə fərdin itməsi.",
+      "pisces": "Neptun Balıqlarda öz evindədir: nəslin ortaq xəyalı mənəviyyat, şəfqət və birlikdir. Risk: reallıqdan qaçış."
+    }
   }
 }

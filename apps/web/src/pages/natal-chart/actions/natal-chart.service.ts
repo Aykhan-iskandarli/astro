@@ -10,6 +10,7 @@ import VedicModel from '../models/vedic.model';
 import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
 import LifetimeModel from '../models/lifetime.model';
+import GenerationModel from '../models/generation.model';
 import TransformationsModel from '../models/transformations.model';
 import ElectionalModel from '../models/electional.model';
 import BaziYearsModel from '../models/bazi-years.model';
@@ -103,6 +104,13 @@ export const getLifetime = (input: IBirthInput, gender: 'male' | 'female'): Prom
     return axiosPublic.post(API.lifetime, {...input, gender})
         .then((res) => {
             return new LifetimeModel(res.data);
+        });
+};
+
+export const getGeneration = (input: IBirthInput): Promise<GenerationModel> => {
+    return axiosPublic.post(API.generation, input)
+        .then((res) => {
+            return new GenerationModel(res.data);
         });
 };
 

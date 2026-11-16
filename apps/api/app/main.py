@@ -468,6 +468,12 @@ def transformations(req: TransformationsRequest) -> dict:
                                                         house_system=req.house_system)
 
 
+@app.post("/api/charts/generation")
+def generation(req: NatalRequest) -> dict:
+    """How long Saturn, Uranus, Neptune, Pluto and the North Node stood in the birth sign (only the date is used)."""
+    return MODULES["western.generation"].calculate(_birth(req))
+
+
 @app.post("/api/charts/lifetime")
 def lifetime(req: LifetimeRequest) -> dict:
     """Firdaria, Vimshottari dasha, Chinese luck pillars and the planetary life cycles over 90 years."""

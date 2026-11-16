@@ -26,6 +26,7 @@ export const API = {
     retrogrades: '/api/charts/retrogrades',
     year: '/api/charts/year',
     lifetime: '/api/charts/lifetime',
+    generation: '/api/charts/generation',
     transformations: '/api/charts/transformations',
     electional: '/api/charts/electional',
     moonDay: '/api/charts/moon-day',

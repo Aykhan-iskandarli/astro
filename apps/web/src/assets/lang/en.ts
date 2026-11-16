@@ -833,6 +833,21 @@ export const en: Record<keyof typeof az, string> = {
     sum_retro: '{n} retrograde planets',
     sum_note: "These {n} items are a summary of the chart's main lines; the detail of each is in the other sections of this tab. The texts are general tendencies.",
 
+    // generation
+    depth_nav_generation: 'Generation',
+    gen_title: 'Generation: the shared lesson and karma',
+    gen_intro: 'The slow planets stay in a sign for years, so thousands of peers share the same placement. This is the lesson of the generation, not a personal one; the personal side shows in the house and aspects.',
+    gen_planet: '{planet}: the shared placement',
+    gen_node: 'The karmic axis of the generation ({planet})',
+    gen_years: '{n} years',
+    gen_unbounded: 'The dates fall outside the search window.',
+    gen_dips: 'Because of retrograde motion the planet steps into the neighbouring sign and back {n} time(s); the dates are the first entry and the last exit.',
+    gen_edge: 'You were born within {days} days of the edge of this placement: you can count as a cusp between two generations.',
+    gen_pairs: 'Aspects shared by the generation',
+    gen_pairs_none: 'There is no major aspect between Saturn, Uranus, Neptune and Pluto.',
+    gen_note: 'The periods are computed with the Swiss Ephemeris and only the birth date is needed. Generational karma is read in astrology as a collective theme; the texts are general tendencies, not the same for every peer.',
+    gen_error: 'The generation data could not be loaded.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

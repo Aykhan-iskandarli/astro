@@ -8,12 +8,13 @@ import ChartFinanceComponent from '../chart-finance/chart-finance.component';
 import ChartPowerComponent from '../chart-power/chart-power.component';
 import ChartSaturnPlutoComponent from '../chart-saturn-pluto/chart-saturn-pluto.component';
 import ChartDraconicComponent from '../chart-draconic/chart-draconic.component';
+import ChartGenerationComponent from '../chart-generation/chart-generation.component';
 import ChartSummaryComponent from '../chart-summary/chart-summary.component';
 import ChartHealthComponent from '../chart-health/chart-health.component';
 import {useDepthTabsStyles} from './depth-tabs.style';
 import {IDepthTabs} from './depth-tabs';
 
-type Section = 'summary' | 'general' | 'power' | 'saturnPluto' | 'draconic' | 'aspects' | 'career' | 'finance' | 'health';
+type Section = 'summary' | 'general' | 'power' | 'saturnPluto' | 'draconic' | 'generation' | 'aspects' | 'career' | 'finance' | 'health';
 
 // The deep-analysis tab: the general reading and the life areas (career, finances, health), one at a time.
 const DepthTabsComponent = ({chart}: IDepthTabs) => {
@@ -31,6 +32,7 @@ const DepthTabsComponent = ({chart}: IDepthTabs) => {
         {value: 'aspects', label: translate('depth_nav_aspects')},
         {value: 'saturnPluto', label: translate('depth_nav_sp')},
         {value: 'draconic', label: translate('depth_nav_draconic')},
+        {value: 'generation', label: translate('depth_nav_generation')},
         {value: 'career', label: translate('depth_nav_career')},
         {value: 'finance', label: translate('depth_nav_finance')},
         {value: 'health', label: translate('depth_nav_health')},
@@ -41,6 +43,7 @@ const DepthTabsComponent = ({chart}: IDepthTabs) => {
             <div className={classes.nav}><Segmented value={section} onChange={handleSection} options={options} size='large'/></div>
             {section === 'summary' ? <ChartSummaryComponent chart={chart}/> : null}
             {section === 'saturnPluto' ? <ChartSaturnPlutoComponent chart={chart}/> : null}
+            {section === 'generation' ? <ChartGenerationComponent chart={chart}/> : null}
             {section === 'draconic' ? <ChartDraconicComponent chart={chart}/> : null}
             {section === 'general' ? <ChartDepthComponent chart={chart}/> : null}
             {section === 'power' ? <ChartPowerComponent chart={chart}/> : null}

@@ -36,6 +36,7 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
   fall, peregrine) for the seven traditional planets, angularity, aspect counts, rulership markers, and the strongest, weakest and
   prominent planets, with every rule listed on the page.
 - **Summary, Saturn and Pluto, draconic chart** (Deep analysis tab): the ten things an astrologer notices first gathered from the other analyses; Saturn and Pluto by sign, house, retrograde motion and major aspects; the draconic chart (positions turned so the North Node is at 0° Aries) with its coincidences with the natal chart.
+- **Generation** (Deep analysis tab): how long Saturn, Uranus, Neptune, Pluto and the North Node stood in the birth sign (first entry to last exit, retrograde dips merged, computed with the Swiss Ephemeris from the birth date only), the shared theme of each, and the contacts between the slow planets.
 - **Chart portrait**: under the Big Three, the first things an astrologer counts: the chart ruler by house, the sect, the halves
   of the chart, stelliums, retrograde planets and a planet that rules several of the Big Three.
 - **Forecast**: transit timeline (exact dates for 12 months), life timeline (the years Jupiter-Pluto spend in each
@@ -126,7 +127,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2455 keys) + web unit tests (117)
+npm test                                                        # content consistency (2479 keys) + web unit tests (117)
 npm run typecheck -w apps/web
 ```
 

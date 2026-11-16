@@ -1,7 +1,7 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import {IBirthInput} from 'store/store';
 import {
-    getAstrocartography, getLifetime, getTransformations, getElectional, getBazi, getBaziYears, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
+    getAstrocartography, getGeneration, getLifetime, getTransformations, getElectional, getBazi, getBaziYears, getChineseCompatibility, getComposite, getCycles, getDavison, getDetails, getGunaMilan, getOtherSystems, getTiming, getNumerology, getNumerologyCompatibility, getPlaces, getProgressions, getReturn, getTimeline, getTransits, getVedic,
     getLifeline, getRetrogrades, getYear, IAcgProbe, INumerologyPerson, IReturnParams,
 } from './natal-chart.service';
 import CyclesModel from '../models/cycles.model';
@@ -16,6 +16,7 @@ import VedicModel from '../models/vedic.model';
 import NumerologyModel from '../models/numerology.model';
 import BaziModel from '../models/bazi.model';
 import LifetimeModel from '../models/lifetime.model';
+import GenerationModel from '../models/generation.model';
 import TransformationsModel from '../models/transformations.model';
 import ElectionalModel from '../models/electional.model';
 import BaziYearsModel from '../models/bazi-years.model';
@@ -137,6 +138,22 @@ export const useGetTransformations = (input: IBirthInput | null, startYear: numb
         gcTime: 5 * 60 * 1000,
         retry: false,
         retryOnMount: false,
+        refetchOnReconnect: false,
+        refetchOnWindowFocus: false,
+    });
+};
+
+export const useGetGeneration = (input: IBirthInput | null) => {
+    return useQuery<GenerationModel, Error>({
+        queryKey: ['generation', input],
+        queryFn: () => {
+            return getGeneration(input!);
+        },
+        enabled: !!input,
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        gcTime: 5 * 60 * 1000,
+        retry: false,
         refetchOnReconnect: false,
         refetchOnWindowFocus: false,
     });

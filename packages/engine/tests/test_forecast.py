@@ -127,3 +127,32 @@ def test_limits():
         F.calculate(BIRTH, kind="retrogrades", days=5000)
     with pytest.raises(ValueError):
         F.calculate(BIRTH, kind="year", year=1500)
+
+
+G = MODULES["western.generation"]
+
+
+@pytest.mark.parametrize("pid", ["saturn", "uranus", "neptune", "pluto", "northNode"])
+def test_generation_stay_matches_an_independent_daily_scan(pid):
+    out = {p["id"]: p for p in G.calculate(BIRTH)["planets"]}[pid]
+    birth = jd_of(datetime(1990, 6, 15, 12, tzinfo=timezone.utc))
+    idx = sign_index(longitude(pid, birth)[0])
+    assert out["sign"] == SIGNS[idx]
+    start, end = _jd(out["start"]), _jd(out["end"])
+    # the sign is the birth sign just after the start and just before the end, and a different one just outside
+    assert sign_index(longitude(pid, start + 0.01)[0]) == idx and sign_index(longitude(pid, end - 0.01)[0]) == idx
+    assert sign_index(longitude(pid, start - 0.01)[0]) != idx and sign_index(longitude(pid, end + 0.01)[0]) != idx
+    # between the first entry and the last exit the planet is in the sign except for short retrograde dips
+    t, away = start + 0.01, 0.0  # the boundary instant itself can fall on either side
+    while t < end - 0.01:
+        if sign_index(longitude(pid, t)[0]) != idx:
+            away += 1.0
+        t += 1.0
+    assert away < 400 * out["dips"] + 1
+    assert out["daysFromStart"] == pytest.approx(birth - start, abs=0.1)
+    assert out["daysToEnd"] == pytest.approx(end - birth, abs=0.1)
+
+
+def test_generation_known_dates():
+    pluto = {p["id"]: p for p in G.calculate(BIRTH)["planets"]}["pluto"]
+    assert pluto["start"].startswith("1983-11-05") and pluto["end"].startswith("1995-11-10")
