@@ -745,6 +745,16 @@ export const az = {
     health_planets: 'Canlılıq planetləri',
     health_note: 'Ənənəvi mənalar, qəti proqnoz və ya diaqnoz deyil. Narahat edən simptomlar üçün həkimə müraciət edin.',
 
+    // natal aspects
+    depth_nav_aspects: 'Aspektlər',
+    aspects_title: 'Natal aspektlərin oxunuşu',
+    aspects_intro: 'Xəritənin bütün əsas aspektləri, ən dəqiqdən başlayaraq. Hər biri üçün qısa mətn və “Tam oxu”: iki planetin birlikdə mənası, aspektin növü və təbiəti.',
+    aspects_all: 'Hamısı',
+    aspects_easy: 'Rahat',
+    aspects_hard: 'Gərgin',
+    aspects_conj: 'Birləşmə',
+    aspects_note: 'Orb dəqiqliyi yaxın aspektləri daha güclü edir. Mətnlər ənənəvi mənalardır, qəti proqnoz deyil.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

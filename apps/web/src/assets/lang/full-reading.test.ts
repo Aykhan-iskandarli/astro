@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {aspectPairText, fullReading, getContent, loadContent} from '@astra/content';
+import {aspectPairText, aspectReading, fullReading, getContent, loadContent} from '@astra/content';
 
 describe('fullReading', () => {
     it('layers the Big Three text, the planet, the sign and the house', () => {
@@ -101,5 +101,32 @@ describe('health texts', () => {
             for (let n = 1; n <= 12; n++) expect(h.ruler[String(n)]).toBeTruthy();
             for (const id of ['sun', 'moon', 'mercury', 'mars', 'saturn']) expect(h.planet[id]).toBeTruthy();
         }
+    });
+});
+
+describe('aspectReading', () => {
+    it('has a long text for every pair of the ten planets and a tone for every major aspect type', async () => {
+        await loadContent('en');
+        const ids = ['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
+        for (const lang of ['az', 'en'] as const) {
+            for (let i = 0; i < ids.length; i++) {
+                for (let j = i + 1; j < ids.length; j++) {
+                    const r = aspectReading(lang, ids[i], ids[j], 'square');
+                    expect(r.pair, `${ids[i]}-${ids[j]}`).toBeTruthy();
+                    expect(aspectReading(lang, ids[j], ids[i], 'square').pair).toBe(r.pair); // the order does not matter
+                }
+            }
+            for (const t of ['conjunction', 'sextile', 'square', 'trine', 'opposition']) {
+                const r = aspectReading(lang, 'sun', 'moon', t);
+                expect(r.aspect && r.tone).toBeTruthy();
+            }
+        }
+    });
+    it('falls back to the planets and gives no tone for a minor aspect', () => {
+        const r = aspectReading('az', 'sun', 'mc', 'quincunx');
+        expect(r.pair).toBeNull();
+        expect(r.first && r.second).toBeTruthy();
+        expect(r.tone).toBeNull();
+        expect(r.aspect).toBeNull();
     });
 });

@@ -30,6 +30,8 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
   rule and threshold used is listed on the page.
 - **Career, finances and health** (inside the Deep analysis tab). Career: the Midheaven sign and the planets touching it, the 10th-house ruler by the house it
   stands in, the 10th and 6th houses, and the condition of the planets that signify work. Finances: the 2nd house and its ruler, the Part of Fortune, the 8th and 11th houses and the planets of money. Health (traditional sign-body associations, with a plain disclaimer): the Ascendant and its ruler, the 6th and 12th houses and the planets of vitality.
+- **Aspect readings** (Deep analysis tab, and under each aspect in the point panel): every major aspect closest first, with a short
+  line and a "Read in full" made of what the two planets mean together (all 45 pairs of Sun-Pluto), the aspect type and its tone.
 - **Chart portrait**: under the Big Three, the first things an astrologer counts: the chart ruler by house, the sect, the halves
   of the chart, stelliums, retrograde planets and a planet that rules several of the Big Three.
 - **Forecast**: transit timeline (exact dates for 12 months), life timeline (the years Jupiter-Pluto spend in each
@@ -120,7 +122,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2355 keys) + web unit tests (94)
+npm test                                                        # content consistency (2403 keys) + web unit tests (96)
 npm run typecheck -w apps/web
 ```
 

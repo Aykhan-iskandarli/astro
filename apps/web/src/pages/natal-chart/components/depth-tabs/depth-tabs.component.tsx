@@ -1,6 +1,7 @@
 import {useCallback, useMemo, useState} from 'react';
 import {Segmented} from 'antd';
 import useLocalization from 'assets/lang';
+import ChartAspectsComponent from '../chart-aspects/chart-aspects.component';
 import ChartCareerComponent from '../chart-career/chart-career.component';
 import ChartDepthComponent from '../chart-depth/chart-depth.component';
 import ChartFinanceComponent from '../chart-finance/chart-finance.component';
@@ -8,7 +9,7 @@ import ChartHealthComponent from '../chart-health/chart-health.component';
 import {useDepthTabsStyles} from './depth-tabs.style';
 import {IDepthTabs} from './depth-tabs';
 
-type Section = 'general' | 'career' | 'finance' | 'health';
+type Section = 'general' | 'aspects' | 'career' | 'finance' | 'health';
 
 // The deep-analysis tab: the general reading and the life areas (career, finances, health), one at a time.
 const DepthTabsComponent = ({chart}: IDepthTabs) => {
@@ -21,6 +22,7 @@ const DepthTabsComponent = ({chart}: IDepthTabs) => {
     }, []);
     const options = useMemo(() => [
         {value: 'general', label: translate('depth_nav_general')},
+        {value: 'aspects', label: translate('depth_nav_aspects')},
         {value: 'career', label: translate('depth_nav_career')},
         {value: 'finance', label: translate('depth_nav_finance')},
         {value: 'health', label: translate('depth_nav_health')},
@@ -30,6 +32,7 @@ const DepthTabsComponent = ({chart}: IDepthTabs) => {
         <div className={classes.wrap}>
             <div className={classes.nav}><Segmented value={section} onChange={handleSection} options={options} size='large'/></div>
             {section === 'general' ? <ChartDepthComponent chart={chart}/> : null}
+            {section === 'aspects' ? <ChartAspectsComponent chart={chart}/> : null}
             {section === 'career' ? <ChartCareerComponent chart={chart}/> : null}
             {section === 'finance' ? <ChartFinanceComponent chart={chart}/> : null}
             {section === 'health' ? <ChartHealthComponent chart={chart}/> : null}

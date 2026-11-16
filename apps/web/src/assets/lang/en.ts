@@ -747,6 +747,16 @@ export const en: Record<keyof typeof az, string> = {
     health_planets: 'Planets of vitality',
     health_note: 'Traditional meanings, not a firm prediction or diagnosis. See a doctor for symptoms that worry you.',
 
+    // natal aspects
+    depth_nav_aspects: 'Aspects',
+    aspects_title: 'Reading of the natal aspects',
+    aspects_intro: 'All the major aspects of the chart, closest first. Each has a short text and a “Read in full”: what the two planets mean together, the aspect type and its nature.',
+    aspects_all: 'All',
+    aspects_easy: 'Easy',
+    aspects_hard: 'Hard',
+    aspects_conj: 'Conjunctions',
+    aspects_note: 'The closer the orb the stronger the aspect. The texts give traditional meanings, not certain predictions.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

@@ -111,3 +111,23 @@ export const fullReading = (
         aspects: [...new Set(aspectTypes)].map((type) => ({type, text: r.aspect[type]})).filter((a) => a.text),
     };
 };
+
+const TONE_OF: Record<string, string> = {conjunction: 'fusion', trine: 'easy', sextile: 'easy', square: 'hard', opposition: 'hard'};
+
+/**
+ * The long reading of an aspect between two points: what the two planets mean together (when written for that pair),
+ * how the aspect type works, and whether it is a fusion, an easy or a hard contact. Order of the two points does not matter.
+ */
+export const aspectReading = (lang: ContentLang, a: string, b: string, type: string) => {
+    const r = getContent(lang).reading as {
+        planet: Record<string, string>; aspect: Record<string, string>; pair: Record<string, string>; tone: Record<string, string>;
+    };
+    const tone = TONE_OF[type] ?? null;
+    return {
+        pair: r.pair[`${a}-${b}`] ?? r.pair[`${b}-${a}`] ?? null,
+        first: r.planet[a] ?? null,
+        second: r.planet[b] ?? null,
+        aspect: r.aspect[type] ?? null,
+        tone: tone ? r.tone[tone] ?? null : null,
+    };
+};
