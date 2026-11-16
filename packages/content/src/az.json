@@ -3570,5 +3570,44 @@
       "reception": "Qarşılıqlı qəbul: iki planet bir-birinin bürcündədir. Onlar bir-birini dəstəkləyir və sanki yer dəyişərək əməkdaşlıq edir: bir planetin mövzusu digərinin vasitəsi ilə ifadə olunur. Bu, çətin aspektləri belə yumşaldır.",
       "loop": "Dövrə: planetlər bir-birini zəncirvari idarə edir və bir planetdə dayanmır. Belə xəritədə vahid rəhbər yoxdur: bu planetlər birlikdə işləyir və bir mövzu digərinə keçir. Bu, daxili çoxsəslilik və ya qarşılıqlı asılılıq hissi verə bilər."
     }
+  },
+  "career": {
+    "mc": {
+      "aries": "Orta Səmanız Qoçdadır: karyerada öncül, rəqabətçi və müstəqil olmaq istəyirsiniz. Yeni şeylərə başlamaq, təşəbbüs göstərmək və birinci olmaq sizi irəli aparır; başqasının əmri altında uzun müddət işləmək çətin ola bilər. Sahibkarlıq, satış, idman, hərbi və ya təcili qərar tələb edən peşələr uyğundur.",
+      "taurus": "Orta Səmanız Buğadadır: karyerada sabitlik, keyfiyyət və maddi nəticə axtarırsınız. Yavaş, lakin möhkəm irəliləyirsiniz; zövq, gözəllik və praktik dəyər yaradan işlər uyğundur. Maliyyə, torpaq və əmlak, sənətkarlıq, yemək və estetika sahələri adi seçimlərdir. Dəyişiklik gec gəlir, amma qurduğunuz uzunömürlü olur.",
+      "gemini": "Orta Səmanız Əkizlərdədir: karyerada söz, məlumat və əlaqə sizin alətinizdir. Çevik, çoxşaxəli və öyrənməyə açıqsınız; yazı, jurnalistika, təhsil, ticarət, texnologiya və ünsiyyət sahələri uyğundur. Bir neçə fərqli iş və ya yola eyni vaxtda sahib ola bilərsiniz; dərinləşmək üçün bir istiqamətdə qalmaq lazımdır.",
+      "cancer": "Orta Səmanız Xərçəngdədir: karyerada qayğı, qoruma və insanlara dəstək mərkəzdədir. Ailə, ev, yemək, tibb, psixologiya, təhsil və uşaqlarla bağlı işlər uyğundur; kollektivdə “ana/ata” rolunu oynaya bilərsiniz. Ictimai tanınma duyğusal bağlarla gəlir; həddindən artıq həssaslıq və tənqidə qarşı incimə təhlükəsi var.",
+      "leo": "Orta Səmanız Şirdədir: karyerada görünmək, yaratmaq və başqalarını ruhlandırmaq istəyirsiniz. Liderlik, sənət, səhnə, idarəetmə, uşaq və əyləncə sahələri uyğundur. Tanınma və hörmət sizin üçün vacibdir; gözdən uzaq, anonim işdə çətin dözürsünüz. Səxavətli rəhbər ola bilərsiniz.",
+      "virgo": "Orta Səmanız Qızdadır: karyerada dəqiqlik, təhlil və faydalı olmaq sizin güclü cəhətinizdir. Tibb, sağlamlıq, mühasibat, redaktə, tədqiqat, texniki və xidmət sahələri uyğundur. Təfərrüata və keyfiyyətə diqqət sizi dəyərli mütəxəssis edir; mükəmməllik axtarışı və özünütənqid təhlükəsi var.",
+      "libra": "Orta Səmanız Tərəzidədir: karyerada tərəfdaşlıq, diplomatiya və ədalət önə çıxır. Hüquq, diplomatiya, dizayn, moda, incəsənət, məsləhətçilik və insanlarla işləmək uyğundur. Komandada və cütlükdə yaxşı işləyirsiniz; tək qərar vermək və ziddiyyətdən qaçmaq çətin ola bilər.",
+      "scorpio": "Orta Səmanız Əqrəbdədir: karyerada dərinlik, araşdırma və dəyişim sizi cəlb edir. Psixologiya, tədqiqat, istintaq, maliyyə, cərrahiyyə, böhran idarəetməsi və ya gizli bilgi ilə işləyən sahələr uyğundur. Güclüsünüz, strateji və qətiyyətlisiniz; nəzarət və güc mübarizəsi təhlükəsi var.",
+      "sagittarius": "Orta Səmanız Oxatandadır: karyerada azadlıq, geniş üfüqlər və məna axtarışı vacibdir. Təhsil, hüquq, nəşriyyat, səyahət, xarici əlaqələr, fəlsəfə və ya din sahələri uyğundur. Sərbəstliyi sevirsiniz; dar çərçivədə və təkrarlanan işdə çətin dözürsünüz. Böyük şəkli görürsünüz, təfərrüat isə zəif cəhət ola bilər.",
+      "capricorn": "Orta Səmanız öz bürcündə, Oğlaqdadır: karyera sizin həyatınızın əsas mövzusudur. Məqsədyönlü, intizamlı və uzunmüddətli düşünürsünüz; rəhbərlik, idarəetmə, hökumət, mühəndislik, biznes və ya sənaye sahələri uyğundur. Hörmət və nailiyyət sizin üçün vacibdir; iş həyatı qalan hər şeyi kölgədə qoymasın.",
+      "aquarius": "Orta Səmanız Dolçadadır: karyerada yenilik, texnologiya və cəmiyyətə xidmət sizi cəlb edir. Elm, proqramlaşdırma, innovasiya, sosial layihələr, qeyri-kommersiya və qrup işi uyğundur. Qeyri-ənənəvi yol seçməyə və müstəqil işləməyə meyllisiniz; iyerarxiyaya və qaydalara uyğunlaşmaq çətin ola bilər.",
+      "pisces": "Orta Səmanız Balıqlardadır: karyerada yaradıcılıq, mərhəmət və ruhani məna axtarışı önə çıxır. İncəsənət, musiqi, kino, şəfa və yardım peşələri, ruhani işlər və ya su ilə bağlı sahələr uyğundur. Karyera yolunuz əvvəlcə aydın olmaya bilər; sərhədləri qorumaq və praktik tərəfi unutmamaq vacibdir."
+    },
+    "ruler": {
+      "1": "Karyera hökmdarı 1-ci evdədir: peşə sizin şəxsiyyətinizlə üst-üstə düşür. Karyeranı özünüz yaradır, öz adınızla tanınırsınız. Çox vaxt sərbəst işləmək və ya özünüzü işin “üzü” kimi təqdim etmək uyğundur.",
+      "2": "Karyera hökmdarı 2-ci evdədir: karyera pulla, istedadla və qazancla bağlıdır. İşinizdən maddi sabitlik qurmaq və öz bacarıqlarınızı pula çevirmək ön plandadır. Maliyyə, ticarət və ya əl əməyi sahələri uyğun ola bilər.",
+      "3": "Karyera hökmdarı 3-cü evdədir: peşə ünsiyyət, yazı, təhsil və ya nəqliyyatla bağlıdır. Məlumat və fikir mübadiləsi sizin işinizdir. Qardaş-bacılar, qonşular və yaxın mühit karyerada rol oynaya bilər.",
+      "4": "Karyera hökmdarı 4-cü evdədir: iş ev, ailə, daşınmaz əmlak və ya kökə bağlıdır. Evdən işləmək, ailə biznesi və ya yurda xidmət uyğun ola bilər. Daxili təhlükəsizlik karyera seçiminə güclü təsir edir.",
+      "5": "Karyera hökmdarı 5-ci evdədir: peşə yaradıcılıq, sənət, əyləncə, uşaqlar və ya risk götürməklə bağlıdır. Özünüzü ifadə etdiyiniz iş sizə güc verir. Səhnə, təhsil, idman və ya investisiya uyğun ola bilər.",
+      "6": "Karyera hökmdarı 6-cı evdədir: peşə xidmət, sağlamlıq, gündəlik iş və ətraflı işlə bağlıdır. Başqalarına praktik fayda vermək sizə məna verir. Tibb, texniki və ya inzibati sahələr uyğundur; işə həddindən artıq qapılmamaq vacibdir.",
+      "7": "Karyera hökmdarı 7-ci evdədir: karyera tərəfdaşlıq, müştərilər və ictimaiyyətlə bağlıdır. Ortaq iş, məsləhətçilik, hüquq və ya diplomatiya uyğundur. Karyera çox vaxt başqa insanın vasitəsilə qurulur.",
+      "8": "Karyera hökmdarı 8-ci evdədir: peşə ortaq pul, maliyyə, tədqiqat və ya böhran sahələrinə bağlıdır. Banklar, sığorta, vergi, psixologiya, tibb və ya gizli bilgi ilə işləmək uyğundur. Karyerada böyük dəyişikliklər və yenidən başlamalar ola bilər.",
+      "9": "Karyera hökmdarı 9-cu evdədir: peşə təhsil, hüquq, nəşriyyat, səyahət və ya xarici əlaqələrlə bağlıdır. Öyrətmək, tərcümə, beynəlxalq iş və fəlsəfi sahələr uyğundur. Karyera çox vaxt doğma yerdən kənarda genişlənir.",
+      "10": "Karyera hökmdarı öz evində, 10-cu evdədir: karyera həyatınızın mərkəzidir və aydın istiqamət verir. Ictimai mövqe və nüfuz sizin üçün güclü motivasiyadır. Rəhbərlik və məsuliyyət çox vaxt təbii gəlir.",
+      "11": "Karyera hökmdarı 11-ci evdədir: karyera dostlar, şəbəkələr, qruplar və gələcək layihələrlə bağlıdır. Komanda işi, icma, texnologiya və sosial təşəbbüslər uyğundur. Tanışlıqlar və tövsiyələr karyeranı irəli aparır.",
+      "12": "Karyera hökmdarı 12-ci evdədir: karyera kənardan az görünür, kulis arxası, tənha və ya xidmətə yönəlmiş ola bilər. Tədqiqat, şəfa, ruhani sahələr, xəstəxana və ya xeyriyyə uyğundur. Tanınma gec və ya dolayı yolla gələ bilər."
+    },
+    "planet": {
+      "sun": "Karyerada Günəş: tanınma, liderlik və öz yolunuzu seçmək. Günəşin vəziyyəti işdə nə qədər görünmək və səlahiyyət almaq istədiyinizi göstərir.",
+      "moon": "Karyerada Ay: insanlarla işləmək, ictimai əlaqə, qayğı və çeviklik. Ayın vəziyyəti karyerada emosional dəyişkənlik və ictimaiyyətlə münasibət haqqında məlumat verir.",
+      "mercury": "Karyerada Merkuri: ünsiyyət, ticarət, təhlil, yazı və danışıqlar. Merkurinin vəziyyəti düşüncə və təqdimat qabiliyyətinin karyerada necə işlədiyini göstərir.",
+      "venus": "Karyerada Venera: gözəllik, diplomatiya, işgüzar münasibətlər və gəlir. Veneranın vəziyyəti cazibə, zövq və işdə razılığa gəlmək bacarığını göstərir.",
+      "mars": "Karyerada Mars: enerji, rəqabət, təşəbbüs və texniki bacarıq. Marsın vəziyyəti işdə nə qədər atılqan olduğunuzu və mübarizəni necə apardığınızı göstərir.",
+      "jupiter": "Karyerada Yupiter: böyümə, şans, öyrətmək və genişlənmə. Yupiterin vəziyyəti karyerada imkanların nə qədər asan açıldığını və hansı sahədə uğur gətirdiyini göstərir.",
+      "saturn": "Karyerada Saturn: quruluş, məsuliyyət, nüfuz və uzunmüddətli nəticə. Saturnun vəziyyəti karyerada hansı çətinlikləri aşmalı və nəyi zamanla möhkəm qura biləcəyinizi göstərir."
+    }
   }
 }

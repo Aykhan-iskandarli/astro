@@ -697,6 +697,25 @@ export const en: Record<keyof typeof az, string> = {
     depth_rules_dispositor: "Dispositor: each planet answers to the traditional ruler of its sign (the seven visible planets). A planet in its own sign closes the chain. A mutual reception is two planets in each other's signs.",
     depth_note: 'These are facts counted by traditional rules; the texts give traditional meanings, not certain predictions.',
 
+    // career
+    depth_nav_general: 'General',
+    depth_nav_career: 'Career',
+    career_title: 'Career',
+    career_intro: 'By the traditional rules: the Midheaven, the ruler of the 10th house, the planets in the 10th and 6th houses, and the condition of the planets that signify work.',
+    career_time_unknown: "Birth time unknown: the Midheaven and houses are not shown, only the planets' signs.",
+    career_mc: 'Midheaven (MC)',
+    career_mc_aspects: 'Planets touching the Midheaven',
+    career_ruler: 'Career ruler',
+    career_modern: 'modern ruler',
+    career_tenth: '10th house: career',
+    career_cusp: '{house}: cusp in {sign}',
+    career_tenth_empty: 'No planet in the 10th house: career is read mainly through the Midheaven sign and its ruler.',
+    career_sixth: '6th house: daily work',
+    career_ruler_in: 'ruler {planet} · {house}',
+    career_sixth_text: "No planet in the 6th house: the daily work environment is read through the house's sign and ruler.",
+    career_planets: 'Planets of work',
+    career_note: 'These are facts counted by traditional rules; the texts give traditional meanings and are no firm guide to a choice of profession.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

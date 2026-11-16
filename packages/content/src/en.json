@@ -3570,5 +3570,44 @@
       "reception": "Mutual reception: two planets stand in each other's signs. They support each other and cooperate as if by exchanging places: the theme of one is expressed through the other. It softens even hard aspects.",
       "loop": "Loop: the planets rule each other in a chain and it does not stop at one planet. Such a chart has no single chief: these planets work together and one theme passes to the next. It can give inner many-voicedness or a sense of interdependence."
     }
+  },
+  "career": {
+    "mc": {
+      "aries": "Your Midheaven is in Aries: in your career you want to be a pioneer, competitive and independent. Starting new things, showing initiative and being first drive you; working long under someone else's orders may be hard. Entrepreneurship, sales, sport, the military or professions needing quick decisions suit you.",
+      "taurus": "Your Midheaven is in Taurus: in your career you look for stability, quality and material results. You advance slowly but solidly; work that creates pleasure, beauty and practical value suits you. Finance, land and property, crafts, food and aesthetics are usual choices. Change comes late, but what you build lasts.",
+      "gemini": "Your Midheaven is in Gemini: in your career words, information and contacts are your tools. You are flexible, many-sided and open to learning; writing, journalism, education, trade, technology and communication suit you. You may hold several jobs or paths at once; to go deep you need to stay in one direction.",
+      "cancer": "Your Midheaven is in Cancer: in your career care, protection and support for people are central. Work with family, home, food, medicine, psychology, education and children suits you; in a team you may play the parent. Public recognition comes through emotional bonds; over-sensitivity and taking criticism hard are the risks.",
+      "leo": "Your Midheaven is in Leo: in your career you want to be seen, to create and to inspire others. Leadership, the arts, the stage, management, children and entertainment suit you. Recognition and respect matter to you; you bear unseen, anonymous work poorly. You can be a generous leader.",
+      "virgo": "Your Midheaven is in Virgo: in your career precision, analysis and being useful are your strengths. Medicine, health, accounting, editing, research, technical and service fields suit you. Attention to detail and quality makes you a valued specialist; perfectionism and self-criticism are the risks.",
+      "libra": "Your Midheaven is in Libra: in your career partnership, diplomacy and fairness come forward. Law, diplomacy, design, fashion, the arts, counselling and working with people suit you. You work well in teams and pairs; deciding alone and avoiding conflict can be hard.",
+      "scorpio": "Your Midheaven is in Scorpio: in your career depth, investigation and transformation attract you. Psychology, research, investigation, finance, surgery, crisis management or work with hidden knowledge suit you. You are strong, strategic and determined; control and power struggles are the risks.",
+      "sagittarius": "Your Midheaven is in Sagittarius: in your career freedom, wide horizons and the search for meaning matter. Education, law, publishing, travel, foreign relations, philosophy or religion suit you. You love independence and bear a narrow, repetitive job poorly. You see the big picture; detail may be a weakness.",
+      "capricorn": "Your Midheaven is in its own sign, Capricorn: career is a main theme of your life. You are purposeful, disciplined and think long term; leadership, management, government, engineering, business or industry suit you. Respect and achievement matter; do not let work overshadow everything else.",
+      "aquarius": "Your Midheaven is in Aquarius: in your career innovation, technology and service to society attract you. Science, programming, innovation, social projects, non-profit and group work suit you. You tend to choose an unconventional path and to work independently; fitting into hierarchy and rules can be hard.",
+      "pisces": "Your Midheaven is in Pisces: in your career creativity, compassion and the search for spiritual meaning come forward. The arts, music, film, healing and helping professions, spiritual work or water-related fields suit you. Your career path may not be clear at first; keeping boundaries and not forgetting the practical side matters."
+    },
+    "ruler": {
+      "1": "The career ruler is in the 1st house: your profession coincides with your personality. You make your career yourself and become known under your own name. Working independently or being the “face” of the work often suits you.",
+      "2": "The career ruler is in the 2nd house: career is tied to money, talent and earnings. Building material stability from your work and turning your skills into money come first. Finance, trade or craft fields may suit you.",
+      "3": "The career ruler is in the 3rd house: the profession involves communication, writing, education or transport. Exchanging information and ideas is your work. Siblings, neighbours and the near environment may play a part in your career.",
+      "4": "The career ruler is in the 4th house: work is tied to home, family, real estate or roots. Working from home, a family business or service to the homeland may suit you. Inner security strongly affects career choice.",
+      "5": "The career ruler is in the 5th house: the profession involves creativity, art, entertainment, children or risk-taking. Work in which you express yourself gives you strength. The stage, education, sport or investment may suit you.",
+      "6": "The career ruler is in the 6th house: the profession involves service, health, daily work and detailed work. Giving others practical help gives you meaning. Medicine, technical or administrative fields suit you; not being absorbed by work matters.",
+      "7": "The career ruler is in the 7th house: career is tied to partnership, clients and the public. Joint ventures, counselling, law or diplomacy suit you. Career is often built through another person.",
+      "8": "The career ruler is in the 8th house: the profession is tied to shared money, finance, research or crisis fields. Banks, insurance, tax, psychology, medicine or work with hidden knowledge suit you. Big changes and fresh starts may come in your career.",
+      "9": "The career ruler is in the 9th house: the profession involves education, law, publishing, travel or foreign contacts. Teaching, translation, international work and philosophical fields suit you. Career often expands away from the place of birth.",
+      "10": "The career ruler is in its own house, the 10th: career is the centre of your life and gives a clear direction. Public standing and authority are a strong motive. Leadership and responsibility often come naturally.",
+      "11": "The career ruler is in the 11th house: career is tied to friends, networks, groups and future projects. Teamwork, community, technology and social initiatives suit you. Contacts and recommendations carry your career forward.",
+      "12": "The career ruler is in the 12th house: career is less visible from outside and may be behind the scenes, solitary or service-oriented. Research, healing, spiritual fields, hospitals or charity suit you. Recognition may come late or indirectly."
+    },
+    "planet": {
+      "sun": "The Sun in career: recognition, leadership and choosing your own road. The Sun's condition shows how much you want to be seen and to hold authority at work.",
+      "moon": "The Moon in career: working with people, public contact, care and flexibility. The Moon's condition tells about emotional changeability in career and the relation with the public.",
+      "mercury": "Mercury in career: communication, trade, analysis, writing and negotiation. Mercury's condition shows how thinking and presentation work in your career.",
+      "venus": "Venus in career: beauty, diplomacy, working relationships and income. Venus's condition shows charm, taste and the ability to reach agreement at work.",
+      "mars": "Mars in career: energy, competition, initiative and technical skill. Mars's condition shows how driven you are at work and how you handle competition.",
+      "jupiter": "Jupiter in career: growth, luck, teaching and expansion. Jupiter's condition shows how easily opportunities open in career and where success comes.",
+      "saturn": "Saturn in career: structure, responsibility, authority and long-term results. Saturn's condition shows which difficulties you must overcome in career and what you can build solidly over time."
+    }
   }
 }

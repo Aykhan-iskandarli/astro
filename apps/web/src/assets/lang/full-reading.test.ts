@@ -58,3 +58,16 @@ describe('transit reading coverage', () => {
         }
     });
 });
+
+describe('career texts', () => {
+    it('cover every Midheaven sign, every house of the ruler and every planet of work in both languages', async () => {
+        await loadContent('en');
+        for (const lang of ['az', 'en'] as const) {
+            const c = getContent(lang);
+            const career = c.career as {mc: Record<string, string>; ruler: Record<string, string>; planet: Record<string, string>};
+            for (const id of Object.keys(c.signs)) expect(career.mc[id]).toBeTruthy();
+            for (let h = 1; h <= 12; h++) expect(career.ruler[String(h)]).toBeTruthy();
+            for (const id of ['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn']) expect(career.planet[id]).toBeTruthy();
+        }
+    });
+});

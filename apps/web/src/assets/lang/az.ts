@@ -695,6 +695,25 @@ export const az = {
     depth_rules_dispositor: 'Dispozitor: hər planet öz bürcünün ənənəvi hökmdarına (yeddi görünən planet) tabedir. Öz bürcündə olan planet zənciri bağlayır. Qarşılıqlı qəbul iki planetin bir-birinin bürcündə olmasıdır.',
     depth_note: 'Bunlar ənənəvi qaydalarla sayılan faktlardır; mətnlər ənənəvi mənalardır, qəti proqnoz deyil.',
 
+    // career
+    depth_nav_general: 'Ümumi',
+    depth_nav_career: 'Karyera',
+    career_title: 'Karyera',
+    career_intro: 'Ənənəvi qaydalarla: Orta Səma, 10-cu evin hökmdarı, 10-cu və 6-cı evdəki planetlər, işə aid planetlərin vəziyyəti.',
+    career_time_unknown: 'Doğum saatı bilinmir: Orta Səma və evlər göstərilmir, yalnız planetlərin bürcləri.',
+    career_mc: 'Orta Səma (MC)',
+    career_mc_aspects: 'Orta Səmaya təmas edən planetlər',
+    career_ruler: 'Karyera hökmdarı',
+    career_modern: 'müasir hökmdar',
+    career_tenth: '10-cu ev: karyera',
+    career_cusp: '{house}: {sign} bürcündə',
+    career_tenth_empty: '10-cu evdə planet yoxdur: karyera əsasən Orta Səma bürcü və hökmdarı ilə oxunur.',
+    career_sixth: '6-cı ev: gündəlik iş',
+    career_ruler_in: 'hökmdar {planet} · {house}',
+    career_sixth_text: '6-cı evdə planet yoxdur: gündəlik iş mühiti evin bürcü və hökmdarı ilə oxunur.',
+    career_planets: 'İşə aid planetlər',
+    career_note: 'Bunlar ənənəvi qaydalarla sayılan faktlardır; mətnlər ənənəvi mənalardır, peşə seçiminə qəti yol göstərmir.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',
