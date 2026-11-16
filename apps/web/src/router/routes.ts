@@ -10,6 +10,7 @@ export enum Routes {
     transformations = '/transformations',
     lifeTimeline = '/life-timeline',
     directions = '/directions',
+    pastEvents = '/past-events',
     profiles = '/profiles',
     privacyPolicy = '/privacy-policy',
 }

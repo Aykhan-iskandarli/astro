@@ -75,6 +75,7 @@ Azerbaijani and English (Russian is being added: untranslated parts show in Engl
   the planetary life cycles (Jupiter, Saturn, Uranus and Neptune returns, squares and oppositions, the Moon's node and Chiron
   returns). Select a block to read it.
 - `/directions`: Solar Arc and secondary progressions year by year: the exact dates when a directed or progressed point touches a natal one (month by month, with a full reading) and when the progressed Sun, Moon, Mercury, Venus or Mars enters a new sign. The Moon and the angles need the birth time.
+- `/past-events`: a look back at dated life events (up to eight, with a type such as marriage, job or move): for each date the long transits exact within 60 days, the Solar Arc hits within a year and the progressions within half a year, closest first, with contacts traditionally linked to the event type marked. The dates stay in the browser; the engine is only asked for the years around them.
 - `/glossary`: plain-language explanations of the terms used on the site (also shown as tooltips).
 - `/profiles`: saved charts as people (relation, "my chart"), with a JSON backup and restore; the data stays in
   the browser.
@@ -128,7 +129,7 @@ To run the parts separately: `docker compose up -d api` and `npm run dev`.
 ```bash
 docker compose run --rm -w /app/packages/engine api pytest -q   # engine: unit + golden tests (378)
 docker compose run --rm api pytest -q                           # API (36)
-npm test                                                        # content consistency (2479 keys) + web unit tests (120)
+npm test                                                        # content consistency (2479 keys) + web unit tests (124)
 npm run typecheck -w apps/web
 ```
 
