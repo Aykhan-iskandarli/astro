@@ -23,6 +23,7 @@ import ChinesePanelComponent from '../chinese-panel/chinese-panel.component';
 import ForecastPanelComponent from '../forecast-panel/forecast-panel.component';
 import TabStripComponent from '../tab-strip/tab-strip.component';
 import BigThreeComponent from '../big-three/big-three.component';
+import ChartDepthComponent from '../chart-depth/chart-depth.component';
 import ChartPortraitComponent from '../chart-portrait/chart-portrait.component';
 import ExtraPointsComponent from '../extra-points/extra-points.component';
 import KarmicPanelComponent from '../karmic-panel/karmic-panel.component';
@@ -182,6 +183,7 @@ const ChartResultComponent = ({chart, matrix, matrixFailed, onEdit, onSave, save
                             ) : null}
                         </div>
                     )},
+                    {key: 'depth', label: translate('tab_depth'), children: <div className={classes.tabBody}><ChartDepthComponent chart={chart}/></div>},
                     {key: 'destiny', label: translate('tab_destiny'), children: matrix
                         ? <DestinyMatrixComponent matrix={matrix}/>
                         : matrixFailed ? <Alert type='warning' showIcon title={translate('destiny_error')}/> : <LoaderComponent/>},

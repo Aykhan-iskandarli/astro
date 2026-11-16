@@ -2900,6 +2900,10 @@
     "eclipse": {
       "term": "Tutulma",
       "definition": "Ayın düyünlərinə yaxın baş verən Yeni Ay (Günəş tutulması) və ya Tam Ay (Ay tutulması). Ənənəvi olaraq adi lunasiyadan güclü dönüş nöqtəsi kimi oxunur."
+    },
+    "dispositor": {
+      "term": "Dispozitor",
+      "definition": "Planetin bürcünün hökmdarı. Hər planet öz bürcünün hökmdarına “tabedir”; zəncir öz bürcündəki planetdə bağlanır (final dispozitor)."
     }
   },
   "moonMansions": {
@@ -3539,6 +3543,32 @@
       "jupiter": "Yupiter dövrü (16 il) müdriklik, böyümə və dəstək dövrüdür. Təhsil, öyrətmək, uşaqlar, hüquq və mənəvi inkişaf önə çıxır. Çox vaxt bu illər ən xeyirli sayılır; genişlənməni nizamla birləşdirmək lazımdır.",
       "saturn": "Saturn dövrü (19 il) intizam, zəhmət və məsuliyyət dövrüdür. Karyera quruculuğu, öhdəliklər və yetkinlik önə çıxır. Gecikmələr və ağırlıq ola bilər, amma səbirlə qurulan şey ömürlük olur.",
       "mercury": "Merkuri dövrü (17 il) zehin, ünsiyyət və ticarət dövrüdür. Təhsil, biznes, yazı və yeni bacarıqlar önə çıxır. Çeviklik və öyrənmə qabiliyyəti artır; səpələnməmək vacibdir."
+    }
+  },
+  "depth": {
+    "shape": {
+      "bundle": "Dəstə (Bundle): bütün planetlər bir üçbucağın içində, 120° daxilində toplanıb. Bu, dar, diqqəti cəmləyən və özünə kifayət edən xarakter verir: bir neçə mövzuda çox dərinlik, lakin geniş həyat təcrübəsi olmaya bilər. Boş qalan hissələr çox vaxt başqalarından öyrənmək lazım olan sahələrdir.",
+      "bowl": "Kasa (Bowl): bütün planetlər dairənin yarısında, 180° daxilindədir. Boş yarı həyatda qarşılanmalı olan sahəni göstərir, dolu yarı isə sizin təbii güclü sahənizdir. Çox vaxt daxili bir bütövlük və nəyisə “doldurmaq” ehtiyacı hiss olunur.",
+      "bucket": "Vedrə (Bucket): planetlərin çoxu kasa əmələ gətirir, bir planet isə qarşıda tək dayanır və “sap” rolunu oynayır. Sap planeti xəritənin enerjisinin çıxış nöqtəsidir: bütün diqqət ona yönəlir və həyatın əsas məqsədinə çevrilə bilər.",
+      "locomotive": "Lokomotiv: planetlər 240° daxilində bərabər paylanıb, bir bürc üçbucağı boşdur. Bu, hərəkət, sürücü qüvvə və hədəfə doğru irəliləyiş verir; “çatışmayan” hissə çox vaxt daxili təkan olaraq hiss olunur. İnsan fəaldır, amma dincəlməyi öyrənməlidir.",
+      "seesaw": "Tərəzi (Seesaw): planetlər iki qrupa bölünüb, aralarında iki geniş boşluq var. Həyat çox vaxt iki qütb arasında tarazlıq axtarışı kimi yaşanır: iş və ailə, daxili və xarici, mən və başqası. Hər iki tərəfi görmək güclü cəhətdir, qərar vermək isə çətin ola bilər.",
+      "splash": "Sıçrama (Splash): planetlər bütün dairə boyu bərabər səpələnib, böyük boşluq yoxdur. Bu, çoxşaxəli maraqlar, geniş təcrübə və uyğunlaşma verir; təhlükə səpələnmə və bir mövzuya dərinləşməkdə çətinlikdir.",
+      "splay": "Dağınıq (Splay): planetlər üç və ya daha çox qrupda yığılıb, nizamlı bir forma yoxdur. Bu, fərdi, qeyri-adi və qaydalara sığmayan xarakter verir: öz yolunu özünüz seçirsiniz. Hər qrup ayrıca həyat mövzusudur."
+    },
+    "temperament": {
+      "choleric": "Xolerik (od): enerjili, qətiyyətli, təşəbbüskar və tələbkardır. Tez qərar verir, mübarizə sevir və liderliyə meyllidir. Zəif cəhəti səbirsizlik və hirsdir; hərəkət, məqsəd və rəqabət ona güc verir.",
+      "sanguine": "Sanqvinik (hava): ünsiyyətcil, nikbin, çevik və maraqlıdır. İnsanlar və fikirlər arasında rahat hərəkət edir, yeniliyi sevir. Zəif cəhəti səthilik və davamsızlıqdır; söhbət, müxtəliflik və sosial mühit ona güc verir.",
+      "melancholic": "Melanxolik (torpaq): ciddi, dərin, məsuliyyətli və dəqiqdir. Hər şeyi düşünüb qərar verir, uzunmüddətli planlar qurur. Zəif cəhəti pessimizm və həddindən artıq narahatlıqdır; nizam, praktik iş və sabitlik ona güc verir.",
+      "phlegmatic": "Flegmatik (su): sakit, həssas, dözümlü və qayğıkeşdir. Tələsmir, hisslərə və ətrafdakılara diqqətlə yanaşır. Zəif cəhəti passivlik və qapanmadır; rahatlıq, yaxın insanlar və daxili aləm ona güc verir."
+    },
+    "critical": {
+      "anaretic": "Anaretik dərəcə (29°): planet bürcün son dərəcəsindədir. Bu mövzu “tamamlanma” və təcili ehtiyac kimi yaşanır: bürcün dərsini yekunlaşdırmaq, çox vaxt gərginlik və böyük diqqətlə. Çox vaxt həyatda erkən yetkinlik və ya vacib, amma çətin bir dərs hiss olunur.",
+      "critical": "Kritik dərəcə: planet bürcün modallığına görə “kritik” sayılan dərəcədədir (kardinal 0°, 13°, 26°; sabit 9°, 21°; dəyişkən 4°, 17°). Ənənəvi olaraq belə planet daha vurğulu və qeyri-sabit hesab olunur: mövzu həyatda önə çıxır və müəyyənedici anlar gətirir."
+    },
+    "dispositor": {
+      "final": "Final dispozitor, bütün planet zəncirlərinin sonunda dayanan planetdir: o, öz bürcündədir və qalan planetlər onun hökmü altındadır. Onun mövzuları xəritənin “baş idarəçisi” kimi işləyir, bu planetin vəziyyəti bütün xəritənin rahatlığını müəyyən edir.",
+      "reception": "Qarşılıqlı qəbul: iki planet bir-birinin bürcündədir. Onlar bir-birini dəstəkləyir və sanki yer dəyişərək əməkdaşlıq edir: bir planetin mövzusu digərinin vasitəsi ilə ifadə olunur. Bu, çətin aspektləri belə yumşaldır.",
+      "loop": "Dövrə: planetlər bir-birini zəncirvari idarə edir və bir planetdə dayanmır. Belə xəritədə vahid rəhbər yoxdur: bu planetlər birlikdə işləyir və bir mövzu digərinə keçir. Bu, daxili çoxsəslilik və ya qarşılıqlı asılılıq hissi verə bilər."
     }
   }
 }

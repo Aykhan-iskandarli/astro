@@ -2900,6 +2900,10 @@
     "eclipse": {
       "term": "Eclipse",
       "definition": "A New Moon (solar eclipse) or Full Moon (lunar eclipse) that happens close to the Moon's nodes. Traditionally read as a stronger turning point than an ordinary lunation."
+    },
+    "dispositor": {
+      "term": "Dispositor",
+      "definition": "The ruler of the sign a planet is in. Every planet answers to the ruler of its sign; the chain closes on a planet in its own sign (the final dispositor)."
     }
   },
   "moonMansions": {
@@ -3539,6 +3543,32 @@
       "jupiter": "The Jupiter period (16 years) is one of wisdom, growth and support. Education, teaching, children, law and spiritual growth come forward. These years are often counted as the most fortunate; expansion needs to be joined with order.",
       "saturn": "The Saturn period (19 years) is one of discipline, hard work and responsibility. Career building, obligations and maturity come forward. Delays and heaviness are possible, but what is built patiently lasts a lifetime.",
       "mercury": "The Mercury period (17 years) is one of mind, communication and trade. Education, business, writing and new skills come forward. Flexibility and the ability to learn grow; not scattering matters."
+    }
+  },
+  "depth": {
+    "shape": {
+      "bundle": "Bundle: all the planets are gathered within 120°. This gives a narrow, focused and self-contained character: great depth in a few themes, but perhaps less breadth of experience. The empty parts are often areas to learn from other people.",
+      "bowl": "Bowl: all the planets are in half the circle, within 180°. The empty half shows the area you have to meet in life, the full half your natural strength. A sense of inner wholeness and of something to be filled is common.",
+      "bucket": "Bucket: most planets form a bowl and one planet stands alone opposite it as the handle. The handle planet is the outlet of the chart's energy: attention is drawn to it, and it can become the main purpose of life.",
+      "locomotive": "Locomotive: the planets are spread evenly over 240° with one empty trine of signs. It gives movement, drive and progress toward a goal; the missing part is often felt as an inner push. The person is active but has to learn to rest.",
+      "seesaw": "Seesaw: the planets form two groups with two wide gaps between them. Life is often lived as a search for balance between two poles: work and family, inner and outer, self and other. Seeing both sides is a strength, deciding can be hard.",
+      "splash": "Splash: the planets are spread evenly around the whole circle with no large gap. It gives many-sided interests, wide experience and adaptability; the risk is scatter and difficulty going deep into one theme.",
+      "splay": "Splay: the planets gather in three or more clusters with no regular pattern. It gives an individual, unusual character that does not fit rules: you choose your own way. Each cluster is a life theme of its own."
+    },
+    "temperament": {
+      "choleric": "Choleric (fire): energetic, determined, enterprising and demanding. Decides quickly, likes a contest and leans toward leadership. The weakness is impatience and anger; action, goals and competition give strength.",
+      "sanguine": "Sanguine (air): sociable, optimistic, flexible and curious. Moves easily among people and ideas and likes novelty. The weakness is superficiality and inconsistency; conversation, variety and a social setting give strength.",
+      "melancholic": "Melancholic (earth): serious, deep, responsible and precise. Thinks everything over, makes long-term plans. The weakness is pessimism and over-worry; order, practical work and stability give strength.",
+      "phlegmatic": "Phlegmatic (water): calm, sensitive, patient and caring. Does not hurry and attends to feelings and those around. The weakness is passivity and withdrawal; comfort, close people and the inner world give strength."
+    },
+    "critical": {
+      "anaretic": "Anaretic degree (29°): the planet is in the last degree of the sign. The theme is lived as completion and urgency: finishing the sign's lesson, often with tension and great attention. It is often felt as early maturity or an important but hard lesson.",
+      "critical": "Critical degree: the planet is at a degree counted critical for the sign's modality (cardinal 0°, 13°, 26°; fixed 9°, 21°; mutable 4°, 17°). Traditionally such a planet is considered more emphasised and unstable: the theme comes forward and brings decisive moments."
+    },
+    "dispositor": {
+      "final": "The final dispositor is the planet at the end of every chain: it is in its own sign and the other planets answer to it. Its themes work as the “chief executive” of the chart, and its condition sets the ease of the whole chart.",
+      "reception": "Mutual reception: two planets stand in each other's signs. They support each other and cooperate as if by exchanging places: the theme of one is expressed through the other. It softens even hard aspects.",
+      "loop": "Loop: the planets rule each other in a chain and it does not stop at one planet. Such a chart has no single chief: these planets work together and one theme passes to the next. It can give inner many-voicedness or a sense of interdependence."
     }
   }
 }
