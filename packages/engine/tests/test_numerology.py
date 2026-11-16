@@ -205,3 +205,18 @@ def test_dotted_capital_i_is_not_reported_as_an_unknown_symbol(name):
 def test_dotted_and_dotless_i_have_the_same_value():
     assert num.normalise_letters("İİ")[0] == [("i", "i"), ("i", "i")]
     assert num.normalise_letters("Iı")[0] == [("i", "i"), ("ı", "i")]
+
+
+AZ_ALPHABET = "abcçdeəfgğhxıijkqlmnoöprsştuüvyz"
+
+
+@pytest.mark.parametrize("letter", list(AZ_ALPHABET) + [c.upper() for c in AZ_ALPHABET if c != "i"] + ["İ"])
+def test_every_azerbaijani_letter_is_counted_in_both_cases(letter):
+    letters, ignored = num.normalise_letters(letter)
+    assert ignored == [] and len(letters) == 1
+
+
+def test_full_alphabet_pangram_in_upper_and_lower_case_gives_the_same_letters():
+    sentence = "Ağ ışıq çöl üstündə şəfəq, Ə, İ, Ü, Ö, Ğ, Ş, Ç"
+    lower, up = num.normalise_letters(sentence.lower()), num.normalise_letters(sentence.upper().replace("I", "İ", 0))
+    assert lower[1] == [] and up[1] == []
