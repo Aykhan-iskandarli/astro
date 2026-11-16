@@ -216,7 +216,9 @@ def test_every_azerbaijani_letter_is_counted_in_both_cases(letter):
     assert ignored == [] and len(letters) == 1
 
 
-def test_full_alphabet_pangram_in_upper_and_lower_case_gives_the_same_letters():
-    sentence = "Ağ ışıq çöl üstündə şəfəq, Ə, İ, Ü, Ö, Ğ, Ş, Ç"
-    lower, up = num.normalise_letters(sentence.lower()), num.normalise_letters(sentence.upper().replace("I", "İ", 0))
-    assert lower[1] == [] and up[1] == []
+def test_full_alphabet_sentence_in_upper_and_lower_case_gives_the_same_letters():
+    sentence = "Ağ ışıq çöl üstündə şəfəq Ə İ Ü Ö Ğ Ş Ç"
+    lower = num.normalise_letters(sentence.lower())
+    upper = num.normalise_letters(sentence.upper())
+    assert lower[1] == [] and upper[1] == []
+    assert [b for _, b in lower[0]] == [b for _, b in upper[0]]
