@@ -87,3 +87,19 @@ describe('finance texts', () => {
         }
     });
 });
+
+describe('health texts', () => {
+    it('cover every Ascendant sign, 6th house cusp sign, house of the ruler and planet of vitality in both languages', async () => {
+        await loadContent('en');
+        for (const lang of ['az', 'en'] as const) {
+            const c = getContent(lang);
+            const h = c.health as {asc: Record<string, string>; cusp: Record<string, string>; ruler: Record<string, string>; planet: Record<string, string>};
+            for (const id of Object.keys(c.signs)) {
+                expect(h.asc[id]).toBeTruthy();
+                expect(h.cusp[id]).toBeTruthy();
+            }
+            for (let n = 1; n <= 12; n++) expect(h.ruler[String(n)]).toBeTruthy();
+            for (const id of ['sun', 'moon', 'mercury', 'mars', 'saturn']) expect(h.planet[id]).toBeTruthy();
+        }
+    });
+});

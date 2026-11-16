@@ -3660,5 +3660,56 @@
       "mercury": "Mercury in money: trade, calculation and contracts. Mercury's condition shows your skill in buying and selling, negotiating and handling documents.",
       "mars": "Mars in money: spending, risk and fighting for earnings. Mars's condition shows how driven you are for money and your tendency to impulsive spending."
     }
+  },
+  "health": {
+    "asc": {
+      "aries": "The Ascendant is in Aries: traditionally the head, face and eyes are tied to this sign. Your energy is high and quick, but too much tension may show as headaches, strain and a tendency to accidents. Movement and physical activity keep you well.",
+      "taurus": "The Ascendant is in Taurus: traditionally the neck, throat and voice are tied to this sign. You have a steady, enduring body; too much comfort, food and inactivity can raise weight. A regular routine and walks in nature help.",
+      "gemini": "The Ascendant is in Gemini: traditionally the arms, hands, lungs and nervous system are tied to this sign. Mental activity is high; restlessness, disturbed sleep and nervous fatigue are the risks. Breathing exercises and mental rest help.",
+      "cancer": "The Ascendant is in Cancer: traditionally the chest, stomach and breasts are tied to this sign. Your body is very sensitive to feelings; stress may show as digestive discomfort. Emotional comfort and good nutrition are the basis of health.",
+      "leo": "The Ascendant is in Leo: traditionally the heart, back and spine are tied to this sign. You have strong vitality; overload and stress may affect the cardiovascular system. Good posture, rest and heartfelt enjoyment help.",
+      "virgo": "The Ascendant is in Virgo: traditionally the digestive system and intestines are tied to this sign. Your body is very sensitive to food and routine; worry may show as digestive trouble. Simple, clean food and daily order are the main support.",
+      "libra": "The Ascendant is in Libra: traditionally the kidneys, lower back and skin are tied to this sign. The body wants balance and comfort; conflict and lost balance lower your energy. Enough water and a harmonious setting help.",
+      "scorpio": "The Ascendant is in Scorpio: traditionally the reproductive and excretory organs are tied to this sign. Your body has a deep power of recovery; suppressed feelings and stress may build up in the body. Expressing feelings and physical release are important.",
+      "sagittarius": "The Ascendant is in Sagittarius: traditionally the hips, thighs and liver are tied to this sign. You need movement and open air; excess (food, drink, load) is the risk. A moderate lifestyle and long walks help.",
+      "capricorn": "The Ascendant is in Capricorn: traditionally the bones, joints, knees and skin are tied to this sign. Your body is enduring but may be sensitive to cold and stiffness; heavy workload affects the joints. Warmth, stretching and rest are important.",
+      "aquarius": "The Ascendant is in Aquarius: traditionally the ankles, calves and circulation are tied to this sign. The body can be unsteady; sedentary work worsens circulation. Movement, resting the legs and a regular routine help.",
+      "pisces": "The Ascendant is in Pisces: traditionally the feet, lymph and immune system are tied to this sign. Your body is very sensitive to surroundings; tiredness and energy swings may occur. Enough sleep, water and moments of solitude restore you."
+    },
+    "cusp": {
+      "aries": "The 6th house cusp is Aries: illnesses start quickly and pass quickly; inflammation, fever and a tendency to accidents are traditionally tied to this. Movement and active work are important in the daily routine.",
+      "taurus": "The 6th house cusp is Taurus: health depends on routine, food and a comfortable setting. The throat and neck may be sensitive; slow, lingering complaints are possible. Steady daily habits are the basis.",
+      "gemini": "The 6th house cusp is Gemini: health depends on breathing, the nervous system and mental load. With a heavy workload fatigue and sleep problems may occur. Breaks and breathing exercises help.",
+      "cancer": "The 6th house cusp is Cancer: health is tied to feelings and digestion. Stress affects the stomach; comfort at home and food are the most important part of health.",
+      "leo": "The 6th house cusp is Leo: health is tied to the heart, spine and vitality. Good mood and creativity support health; overload affects the heart.",
+      "virgo": "The 6th house cusp is Virgo (its own house): health is a very important theme for you. Digestion, food, cleanliness and routine play the main part; worry affects the body. Systematic daily care is the best medicine.",
+      "libra": "The 6th house cusp is Libra: health is tied to balance, the kidneys and the skin. If there is no harmony in the work setting the body feels it. Enough water and a peaceful working setting are important.",
+      "scorpio": "The 6th house cusp is Scorpio: health is tied to deep recovery power and hidden tension. Hidden fatigue and the hormonal and excretory systems need attention. Releasing feelings and renewal are important.",
+      "sagittarius": "The 6th house cusp is Sagittarius: health depends on movement, open air and moderation. The liver and hips may be sensitive; excess of food, drink and load is the risk.",
+      "capricorn": "The 6th house cusp is Capricorn: health is tied to discipline. Bones, joints and skin need attention; too much load at work may cause chronic fatigue. Plan rest as well.",
+      "aquarius": "The 6th house cusp is Aquarius: health is tied to circulation and the nervous system. An unusual work schedule and a sedentary life may cause trouble. Find a different but regular routine.",
+      "pisces": "The 6th house cusp is Pisces: health is tied to sensitivity, immunity and tiredness. Surroundings affect the body strongly; enough sleep, water and a quiet working setting are important. It is good to have vague complaints checked."
+    },
+    "ruler": {
+      "1": "The ruler of the 6th is in the 1st house: health is bound up with your personality. The body responds to everything at once; you know your body well. Looking after yourself should be at the centre of your lifestyle.",
+      "2": "The ruler of the 6th is in the 2nd house: health and material situation are linked. Food, bodily resources and care according to income matter. Investing in health brings a long-term return.",
+      "3": "The ruler of the 6th is in the 3rd house: health is tied to breathing, the nervous system and daily movement. Mental load and too much information cause fatigue. The people near you affect your routine.",
+      "4": "The ruler of the 6th is in the 4th house: health is tied to the home setting, family and emotional security. Comfort at home and nutrition are the basis. Family health patterns may affect you.",
+      "5": "The ruler of the 6th is in the 5th house: health is tied to pleasure, creativity and heart energy. Play and enjoyment heal you; be careful with excess and risky pursuits.",
+      "6": "The ruler of the 6th is in its own house: health and daily routine are a main theme of your life. Work and care of the body often blend. A systematic routine is a strong support; being absorbed by work is the risk.",
+      "7": "The ruler of the 6th is in the 7th house: health is affected by relationships. A partner's routine and mood pass to you. Healthy habits together are the best support.",
+      "8": "The ruler of the 6th is in the 8th house: the health theme is tied to deep change and recovery. Stress and built-up tension can leave a deep mark on the body. Take recovery periods seriously and have checks on time.",
+      "9": "The ruler of the 6th is in the 9th house: health is tied to travel, open air and a wide outlook. Beliefs and philosophy about health matter to you. Watch routine and food when travelling.",
+      "10": "The ruler of the 6th is in the 10th house: health is directly tied to career and workload. Professional stress passes to the body; balance between work and rest is important. The profession affects health, or health may turn into a profession.",
+      "11": "The ruler of the 6th is in the 11th house: health is tied to friends and groups. Sport together and community support help. The social setting shapes your habits.",
+      "12": "The ruler of the 6th is in the 12th house: the health theme is tied to hidden fatigue, sleep and the inner world. Complaints may be hard to pin down; solitary rest and sleep restore. It is important to have vague complaints checked."
+    },
+    "planet": {
+      "sun": "The Sun in health: vitality and life force. The Sun's condition shows your general strength, its links with the heart and spine, and what you draw energy from.",
+      "moon": "The Moon in health: feelings, sleep, fluids and daily rhythm. The Moon's condition shows mood swings, digestion and how sensitive the body is to rhythm.",
+      "mercury": "Mercury in health: the nervous system, breathing and mental load. Mercury's condition shows how worry, sleep and information overload affect the body.",
+      "mars": "Mars in health: energy, inflammation and accidents. Mars's condition shows your physical strength, the effect of anger on the body and care in risky situations.",
+      "saturn": "Saturn in health: bones, joints and chronic fatigue. Saturn's condition shows endurance, the body's sensitivity to cold and load, and changes that come with time."
+    }
   }
 }

@@ -732,6 +732,21 @@ export const en: Record<keyof typeof az, string> = {
     finance_planets: 'Planets of money',
     finance_note: 'These are facts counted by traditional rules; the texts give traditional meanings and are not financial advice.',
 
+    // health
+    depth_nav_health: 'Health',
+    health_title: 'Health map',
+    health_intro: 'By the traditional associations of signs and the body and the traditional rules: the Ascendant and its ruler, the 6th and 12th houses, and the planets of vitality, nerves, energy and endurance.',
+    health_disclaimer: 'This is not a medical diagnosis or advice. The traditional links between signs and parts of the body are a cultural reading. For health matters consult a professional.',
+    health_time_unknown: "Birth time unknown: the Ascendant and houses are not shown, only the planets' signs.",
+    health_body: 'Body and vitality: the Ascendant',
+    health_asc_ruler: 'Ascendant ruler',
+    health_sixth: '6th house: daily health',
+    health_sixth_empty: "No planet in the 6th house: daily health is read through the house's sign and ruler.",
+    health_twelfth: '12th house: hidden and chronic',
+    health_twelfth_text: "No planet in the 12th house: hidden fatigue and chronic matters are read through the house's sign.",
+    health_planets: 'Planets of vitality',
+    health_note: 'Traditional meanings, not a firm prediction or diagnosis. See a doctor for symptoms that worry you.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

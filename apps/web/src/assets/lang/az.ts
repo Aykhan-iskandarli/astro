@@ -730,6 +730,21 @@ export const az = {
     finance_planets: 'Pula aid planetlər',
     finance_note: 'Bunlar ənənəvi qaydalarla sayılan faktlardır; mətnlər ənənəvi mənalardır və maliyyə məsləhəti deyil.',
 
+    // health
+    depth_nav_health: 'Sağlamlıq',
+    health_title: 'Sağlamlıq xəritəsi',
+    health_intro: 'Ənənəvi bürc-bədən uyğunluqları və qaydalarla: Assendent və hökmdarı, 6-cı və 12-ci evlər, canlılıq, sinir sistemi, enerji və dözüm planetləri.',
+    health_disclaimer: 'Bu, tibbi diaqnoz və ya məsləhət deyil. Astrologiyada bədən sahələri ilə bürclər arasındakı ənənəvi uyğunluqlar mədəni oxunuşdur. Sağlamlıq məsələlərində mütəxəssisə müraciət edin.',
+    health_time_unknown: 'Doğum saatı bilinmir: Assendent və evlər göstərilmir, yalnız planetlərin bürcləri.',
+    health_body: 'Bədən və canlılıq: Assendent',
+    health_asc_ruler: 'Assendent hökmdarı',
+    health_sixth: '6-cı ev: gündəlik sağlamlıq',
+    health_sixth_empty: '6-cı evdə planet yoxdur: gündəlik sağlamlıq evin bürcü və hökmdarı ilə oxunur.',
+    health_twelfth: '12-ci ev: gizli və müzmin',
+    health_twelfth_text: '12-ci evdə planet yoxdur: gizli yorğunluq və müzmin məsələlər evin bürcü ilə oxunur.',
+    health_planets: 'Canlılıq planetləri',
+    health_note: 'Ənənəvi mənalar, qəti proqnoz və ya diaqnoz deyil. Narahat edən simptomlar üçün həkimə müraciət edin.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

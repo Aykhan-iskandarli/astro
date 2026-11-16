@@ -3660,5 +3660,56 @@
       "mercury": "Pulda Merkuri: ticarət, hesablama və müqavilə. Merkurinin vəziyyəti alqı-satqı, danışıq və sənədlərlə işləmə bacarığınızı göstərir.",
       "mars": "Pulda Mars: xərc, risk və qazanc üçün mübarizə. Marsın vəziyyəti pul üçün nə qədər atılqan olduğunuzu və impulsiv xərclərə meylinizi göstərir."
     }
+  },
+  "health": {
+    "asc": {
+      "aries": "Assendent Qoçdadır: ənənəvi olaraq baş, üz və gözlər bu bürclə bağlı sayılır. Enerjiniz yüksək və sürətlidir, amma həddindən artıq gərginlik baş ağrısı, gərginlik və qəza meylində özünü göstərə bilər. Hərəkət və fiziki fəaliyyət sizi sağlam saxlayır.",
+      "taurus": "Assendent Buğadadır: ənənəvi olaraq boyun, boğaz və səs bu bürclə bağlı sayılır. Sabit, dözümlü bədəniniz var; həddindən artıq rahatlıq, yemək və hərəkətsizlik çəkini artıra bilər. Mütəmadi rejim və təbiətdə gəzinti faydalıdır.",
+      "gemini": "Assendent Əkizlərdədir: ənənəvi olaraq qollar, əllər, ağ ciyərlər və sinir sistemi bu bürclə bağlı sayılır. Zehni aktivlik yüksəkdir; narahatlıq, yuxu pozuntusu və sinir yorğunluğu təhlükəsi var. Nəfəs məşqləri və zehni dincəlmə kömək edir.",
+      "cancer": "Assendent Xərçəngdədir: ənənəvi olaraq sinə, mədə və döş bu bürclə bağlı sayılır. Bədəniniz duyğulara çox həssasdır; stress mədə-bağırsaq narahatlığı kimi özünü göstərə bilər. Emosional rahatlıq və düzgün qidalanma sağlamlığın əsasıdır.",
+      "leo": "Assendent Şirdədir: ənənəvi olaraq ürək, bel və onurğa bu bürclə bağlı sayılır. Güclü həyat enerjiniz var; həddindən artıq yüklənmə və stress ürək-damar sisteminə təsir edə bilər. Düzgün duruş, istirahət və ürəkdən zövq almaq faydalıdır.",
+      "virgo": "Assendent Qızdadır: ənənəvi olaraq həzm sistemi və bağırsaqlar bu bürclə bağlı sayılır. Bədəniniz qidaya və rejimə çox həssasdır; narahatlıq həzm problemləri kimi özünü göstərə bilər. Sadə, təmiz qida və gündəlik nizam əsas dayaqdır.",
+      "libra": "Assendent Tərəzidədir: ənənəvi olaraq böyrəklər, aşağı bel və dəri bu bürclə bağlı sayılır. Bədən tarazlıq və rahatlıq istəyir; ziddiyyət və tarazlığın pozulması enerjinizi azaldır. Kifayət qədər su və ahəngli mühit kömək edir.",
+      "scorpio": "Assendent Əqrəbdədir: ənənəvi olaraq reproduktiv və ifrazat orqanları bu bürclə bağlı sayılır. Bədəniniz dərin bərpa gücünə malikdir; bastırılmış hisslər və stress bədəndə yığıla bilər. Duyğuları ifadə etmək və fiziki boşalma vacibdir.",
+      "sagittarius": "Assendent Oxatandadır: ənənəvi olaraq omba, bud və qaraciyər bu bürclə bağlı sayılır. Hərəkətə və açıq havaya ehtiyacınız var; ifrat (yemək, içki, yük) təhlükəsi var. Mötədil həyat tərzi və uzun gəzintilər faydalıdır.",
+      "capricorn": "Assendent Oğlaqdadır: ənənəvi olaraq sümüklər, oynaqlar, dizlər və dəri bu bürclə bağlı sayılır. Bədəniniz dözümlüdür, amma soyuğa və sərtliyə həssas ola bilər; həddindən artıq iş yükü oynaqlara təsir edir. İstilik, uzanma və istirahət vacibdir.",
+      "aquarius": "Assendent Dolçadadır: ənənəvi olaraq topuqlar, baldırlar və qan dövranı bu bürclə bağlı sayılır. Bədən qeyri-sabit ola bilər; oturaq iş dövranı pisləşdirir. Hərəkət, ayaqları istirahət etdirmək və müntəzəm rejim faydalıdır.",
+      "pisces": "Assendent Balıqlardadır: ənənəvi olaraq ayaqlar, limfa və immun sistemi bu bürclə bağlı sayılır. Bədəniniz ətrafın təsirinə çox həssasdır; yorğunluq və enerji dalğalanması ola bilər. Kifayət qədər yuxu, su və tənhalıq anları bərpa edir."
+    },
+    "cusp": {
+      "aries": "6-cı evin bürcü Qoçdur: xəstəliklər tez başlayır və tez keçir; iltihab, qızdırma və qəza meyli ənənəvi olaraq bununla bağlıdır. Gündəlik rejimdə hərəkət və fəal iş vacibdir.",
+      "taurus": "6-cı evin bürcü Buğadır: sağlamlıq rejim, qida və yataq mühitindən asılıdır. Boğaz və boyun həssas ola bilər; yavaş keçən və uzun çəkən narahatlıqlar mümkündür. Sabit gündəlik vərdiş əsasdır.",
+      "gemini": "6-cı evin bürcü Əkizlərdir: sağlamlıq tənəffüs, sinir sistemi və zehni yükdən asılıdır. İş yükü çoxdursa yorğunluq və yuxu problemləri ola bilər. Fasilələr və nəfəs məşqləri kömək edir.",
+      "cancer": "6-cı evin bürcü Xərçəngdir: sağlamlıq duyğularla və həzmlə bağlıdır. Stress mədəyə təsir edir; evdə rahatlıq və yemək sağlamlığın ən vacib hissəsidir.",
+      "leo": "6-cı evin bürcü Şirdir: sağlamlıq ürək, onurğa və canlılıqla bağlıdır. Yaxşı əhval və yaradıcılıq sağlamlığı dəstəkləyir; həddindən artıq yük ürəyə təsir edir.",
+      "virgo": "6-cı evin bürcü Qızdır (öz evi): sağlamlıq mövzusu sizin üçün çox vacibdir. Həzm, qida, təmizlik və rejim əsas rol oynayır; narahatlıq bədənə təsir edir. Sistemli gündəlik qayğı ən yaxşı dərmandır.",
+      "libra": "6-cı evin bürcü Tərəzidir: sağlamlıq tarazlıq, böyrək və dəri ilə bağlıdır. İş mühitində ahəng yoxdursa bədən bunu hiss edir. Kifayət qədər su və dinc iş mühiti vacibdir.",
+      "scorpio": "6-cı evin bürcü Əqrəbdir: sağlamlıq dərin bərpa gücü və gizli gərginliklə bağlıdır. Gizli yorğunluq, hormonal və ifrazat sistemləri diqqət tələb edir. Duyğuları boşaltmaq və yenilənmək vacibdir.",
+      "sagittarius": "6-cı evin bürcü Oxatandır: sağlamlıq hərəkət, açıq hava və mötədillikdən asılıdır. Qaraciyər və omba həssas ola bilər; ifrat yemək-içki və yük təhlükəsi var.",
+      "capricorn": "6-cı evin bürcü Oğlaqdır: sağlamlıq intizamla bağlıdır. Sümük, oynaq və dəri diqqət tələb edir; işdə həddindən artıq yük müzmin yorğunluğa səbəb ola bilər. İstirahəti də planlaşdırın.",
+      "aquarius": "6-cı evin bürcü Dolçadır: sağlamlıq qan dövranı və sinir sistemi ilə bağlıdır. Qeyri-adi iş rejimi və oturaq həyat narahatlıq yarada bilər. Fərqli, lakin müntəzəm rejim tapın.",
+      "pisces": "6-cı evin bürcü Balıqlardır: sağlamlıq həssaslıq, immunitet və yorğunluqla bağlıdır. Ətrafın təsiri bədənə güclü keçir; kifayət qədər yuxu, su və sakit iş mühiti vacibdir. Qeyri-müəyyən şikayətləri yoxlatmaq yaxşıdır."
+    },
+    "ruler": {
+      "1": "6-cı evin hökmdarı 1-ci evdədir: sağlamlıq şəxsiyyətinizlə iç-içədir. Bədən hər şeyə dərhal cavab verir; öz bədəninizi yaxşı tanıyırsınız. Özünüzə qayğı həyat tərzinizin mərkəzində olmalıdır.",
+      "2": "6-cı evin hökmdarı 2-ci evdədir: sağlamlıq və maddi vəziyyət bir-birinə bağlıdır. Qida, bədən resursları və gəlirə görə qayğı vacibdir. Sağlamlığa sərmayə uzunmüddətli qazanc gətirir.",
+      "3": "6-cı evin hökmdarı 3-cü evdədir: sağlamlıq tənəffüs, sinir sistemi və gündəlik hərəkətlə bağlıdır. Zehni yük və məlumat bolluğu yorğunluq yaradır. Yaxın mühitdəki insanlar rejiminizə təsir edir.",
+      "4": "6-cı evin hökmdarı 4-cü evdədir: sağlamlıq ev mühiti, ailə və emosional təhlükəsizliklə bağlıdır. Evdə rahatlıq və qidalanma əsasdır. Ailə sağlamlıq nümunələri sizə təsir edə bilər.",
+      "5": "6-cı evin hökmdarı 5-ci evdədir: sağlamlıq zövq, yaradıcılıq və ürək enerjisi ilə bağlıdır. Əyləncə və oyun sizə şəfa verir; ifrat və riskli həvəslərdən ehtiyatlı olun.",
+      "6": "6-cı evin hökmdarı öz evindədir: sağlamlıq və gündəlik rejim həyatınızın əsas mövzusudur. İş və bədən qayğısı çox vaxt bir-birinə qarışır. Sistemli rejim güclü dayaqdır; işə həddindən artıq qapılmaq təhlükəsi var.",
+      "7": "6-cı evin hökmdarı 7-ci evdədir: sağlamlıq münasibətlərdən təsirlənir. Tərəfdaşın rejimi və əhvalı sizə keçir. Birgə sağlam vərdişlər ən yaxşı dəstəkdir.",
+      "8": "6-cı evin hökmdarı 8-ci evdədir: sağlamlıq mövzusu dərin dəyişimlərlə və bərpa ilə bağlıdır. Stress və yığılmış gərginlik bədəndə dərin iz qoya bilər. Bərpa dövrlərini ciddi qəbul edin və yoxlamaları vaxtında edin.",
+      "9": "6-cı evin hökmdarı 9-cu evdədir: sağlamlıq səyahət, açıq hava və geniş baxışla bağlıdır. Sağlamlıq inancları və fəlsəfəsi sizin üçün önəmlidir. Səyahətdə rejim və qidaya diqqət edin.",
+      "10": "6-cı evin hökmdarı 10-cu evdədir: sağlamlıq karyera və iş yükü ilə birbaşa bağlıdır. Peşə stressi bədənə keçir; iş və istirahət arasında tarazlıq vacibdir. Peşə sağlamlığa təsir edir və ya sağlamlıq peşəyə çevrilə bilər.",
+      "11": "6-cı evin hökmdarı 11-ci evdədir: sağlamlıq dostlar və qruplarla bağlıdır. Birgə idman və icma dəstəyi faydalıdır. Sosial mühit vərdişlərinizi formalaşdırır.",
+      "12": "6-cı evin hökmdarı 12-ci evdədir: sağlamlıq mövzusu gizli yorğunluq, yuxu və daxili aləmlə bağlıdır. Şikayətlər çətin müəyyən oluna bilər; tənha istirahət və yuxu bərpa edir. Qeyri-müəyyən şikayətləri yoxlatmaq vacibdir."
+    },
+    "planet": {
+      "sun": "Sağlamlıqda Günəş: həyat enerjisi və canlılıq. Günəşin vəziyyəti ümumi gücünüzü, ürək və onurğa ilə əlaqələrini və enerjinizi nədən aldığınızı göstərir.",
+      "moon": "Sağlamlıqda Ay: duyğular, yuxu, mayelər və gündəlik ritm. Ayın vəziyyəti əhval dalğalanmasını, həzmi və bədənin ritmə nə qədər həssas olduğunu göstərir.",
+      "mercury": "Sağlamlıqda Merkuri: sinir sistemi, tənəffüs və zehni yük. Merkurinin vəziyyəti narahatlıq, yuxu və məlumat yüklənməsinin bədənə necə təsir etdiyini göstərir.",
+      "mars": "Sağlamlıqda Mars: enerji, iltihab və qəza. Marsın vəziyyəti fiziki gücünüzü, hirsin bədənə təsirini və təhlükəli vəziyyətlərdə ehtiyatı göstərir.",
+      "saturn": "Sağlamlıqda Saturn: sümüklər, oynaqlar və müzmin yorğunluq. Saturnun vəziyyəti dözümü, bədənin soyuğa və yükə həssaslığını və vaxtla gələn dəyişiklikləri göstərir."
+    }
   }
 }
