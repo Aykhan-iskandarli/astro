@@ -905,6 +905,15 @@ export const az = {
     ev_cat_study: 'Təhsil',
     ev_cat_other: 'Digər',
 
+    // matrix lines
+    lines_how: 'Hər xətt üç addımdan ibarətdir. Ədədlər 1–22 arkanlardır, xəttin hansı nöqtələrdən keçdiyi hər addımın altında yazılıb. Soldan sağa oxuyun: başlanğıc, keçid, nəticə. Matris ənənəvi rəqəm sistemidir, elmi sübut yoxdur; bunu öz-özünü tanımaq üçün bir baxış kimi oxuyun.',
+    lines_step_1: 'Başlanğıc',
+    lines_step_2: 'Keçid',
+    lines_step_3: 'Nəticə',
+    lines_read_more: 'Hər arkanın işıqlı və kölgəli tərəfi',
+    lines_plus: 'İşıqlı tərəf:',
+    lines_minus: 'Kölgəli tərəf:',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

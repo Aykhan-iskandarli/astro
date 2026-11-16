@@ -5,6 +5,7 @@ import {AnimatePresence, motion} from 'framer-motion';
 import classNames from 'classnames';
 import useLocalization, {useContent} from 'assets/lang';
 import MatrixDiagramComponent from '../matrix-diagram/matrix-diagram.component';
+import MatrixLinesComponent from '../matrix-lines/matrix-lines.component';
 import {IChakraRow} from '../../models/destiny-matrix.model';
 import {useDestinyMatrixStyles} from './destiny-matrix.style';
 import {IDestinyMatrix} from './destiny-matrix';
@@ -48,15 +49,6 @@ const DestinyMatrixComponent = ({matrix}: IDestinyMatrix) => {
         if (matrix.chakraTotal) rows.push({id: 'total', name: translate('total'), ...matrix.chakraTotal});
         return rows;
     }, [matrix, d, translate]);
-
-    const lineRows = useMemo(() => {
-        const lines = matrix.lines as Record<string, number[] | number[][]>;
-        return (['love', 'money', 'financeProgram', 'karmicTail', 'maleLine', 'femaleLine'] as const).map((k) => ({
-            key: k,
-            name: d.lines[k],
-            values: (Array.isArray(lines[k]?.[0]) ? (lines[k] as number[][]) : [lines[k] as number[]]).filter(Boolean),
-        }));
-    }, [matrix, d]);
 
     const totalRowClass = useCallback((r: {id: string}) => (r.id === 'total' ? classes.totalRow : ''), [classes.totalRow]);
 
@@ -130,21 +122,7 @@ const DestinyMatrixComponent = ({matrix}: IDestinyMatrix) => {
 
             <section className={classes.section} aria-labelledby='dm-lines'>
                 <h3 id='dm-lines'>{translate('section_lines')}</h3>
-                <ul className={classes.lines}>
-                    {lineRows.map((l) => (
-                        <li key={l.key}>
-                            <strong>{l.name}</strong>
-                            <span>
-                                {l.values.map((seq) => (
-                                    <span key={seq.join('-')} className={classes.sequence}
-                                          title={seq.map((n) => `${n} — ${arcana(n)?.name}`).join(' · ')}>
-                                        {seq.join(' – ')}
-                                    </span>
-                                ))}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
+                <MatrixLinesComponent matrix={matrix}/>
             </section>
 
             <section className={classes.section} aria-labelledby='dm-age'>

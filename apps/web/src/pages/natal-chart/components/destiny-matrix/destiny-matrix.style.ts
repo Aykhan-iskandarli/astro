@@ -130,28 +130,6 @@ const styles = {
     totalRow: {
         '& td': {fontWeight: sizes.weight600, color: colors.gold},
     },
-    lines: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
-        gap: rem(12),
-        '& li': {
-            display: 'flex',
-            flexDirection: 'column',
-            gap: rem(6),
-            padding: rem(14),
-            borderRadius: rem(12),
-            border: `1px solid ${colors.borderSoft}`,
-            background: colors.surface,
-        },
-        '& strong': {fontWeight: sizes.weight500, color: colors.textMuted, fontSize: rem(sizes.small)},
-    },
-    sequence: {
-        display: 'inline-block',
-        marginRight: rem(16),
-        fontSize: rem(20),
-        fontVariantNumeric: 'tabular-nums',
-        cursor: 'help',
-    },
     ages: {
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',

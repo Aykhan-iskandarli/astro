@@ -907,6 +907,15 @@ export const en: Record<keyof typeof az, string> = {
     ev_cat_study: 'Study',
     ev_cat_other: 'Other',
 
+    // matrix lines
+    lines_how: 'Each line has three steps. The numbers are the arcana 1–22, and the matrix point each step comes from is written under it. Read from left to right: start, transition, result. The Matrix is a traditional number system with no scientific proof; read it as one way of looking at yourself.',
+    lines_step_1: 'Start',
+    lines_step_2: 'Transition',
+    lines_step_3: 'Result',
+    lines_read_more: 'The light and shadow side of each arcana',
+    lines_plus: 'Light side:',
+    lines_minus: 'Shadow side:',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

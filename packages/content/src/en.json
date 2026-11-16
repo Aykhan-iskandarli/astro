@@ -700,6 +700,14 @@
       "karmicTail": "Karmic tail",
       "maleLine": "Male ancestral programmes",
       "femaleLine": "Female ancestral programmes"
+    },
+    "lineInfo": {
+      "love": "The love line shows how you come to a relationship. Left to right: the readiness for a relationship, the general character of the relationship and, last, the knot of love and money: the main block and the point of growth in a relationship.",
+      "money": "The money line shows in which way and in which field income comes more easily. Left to right: the channel through which money comes, the field of work that brings success, and the knot of love and money.",
+      "financeProgram": "The finance programme shows how inner beliefs about money turn into a material result. Left to right: the material task up to age 40, the inner beliefs about money and the channel through which money comes.",
+      "karmicTail": "The karmic tail shows scenarios that repeat in life and the way to resolve them. Left to right: the readiness for a relationship, the unworked task from the past and the soul's main karmic lesson.",
+      "maleLine": "The male generational programmes are the two branches of the father's line. The first runs from the spiritual inheritance to the programme and the talent; the second runs from the near-centre energy of the material inheritance to the programme and the material inheritance itself.",
+      "femaleLine": "The female generational programmes are the two branches of the mother's line. The first runs from the material inheritance to the programme and the near-centre energy; the second runs from the near-centre energy to the programme and the spiritual inheritance itself."
     }
   },
   "vedic": {

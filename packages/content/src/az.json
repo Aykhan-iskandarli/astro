@@ -700,6 +700,14 @@
       "karmicTail": "Karmik quyruq",
       "maleLine": "Kişi nəsil proqramları",
       "femaleLine": "Qadın nəsil proqramları"
+    },
+    "lineInfo": {
+      "love": "Sevgi xətti münasibətə necə gəldiyinizi göstərir. Soldan sağa: münasibətə hazırlıq, münasibətin ümumi xarakteri və sonda sevgi ilə pulun düyünü, yəni münasibətdə əsas blok və inkişaf nöqtəsi.",
+      "money": "Pul xətti gəlirin hansı yolla və hansı sahədə daha asan gəldiyini göstərir. Soldan sağa: pulun gəldiyi kanal, uğur gətirən peşə sahəsi və sevgi ilə pulun düyünü.",
+      "financeProgram": "Maliyyə proqramı pul haqqında daxili inancların maddi nəticəyə necə çevrildiyini göstərir. Soldan sağa: 40 yaşa qədər maddi tapşırıq, pulla bağlı daxili inanclar və pulun gəldiyi kanal.",
+      "karmicTail": "Karmik quyruq həyatda təkrarlanan ssenariləri və onları həll yolunu göstərir. Soldan sağa: münasibətə hazırlıq, keçmişdən gələn işlənməmiş tapşırıq və ruhun əsas karmik dərsi.",
+      "maleLine": "Kişi nəsil proqramları ata xəttinin iki qoludur. Birinci qol mənəvi irsdən proqrama və istedada gedir; ikinci qol maddi irsin mərkəzə yaxın enerjisindən proqrama və maddi irsin özünə gedir.",
+      "femaleLine": "Qadın nəsil proqramları ana xəttinin iki qoludur. Birinci qol maddi irsdən proqrama və mərkəzə yaxın enerjiyə gedir; ikinci qol mərkəzə yaxın enerjidən proqrama və mənəvi irsin özünə gedir."
     }
   },
   "vedic": {
