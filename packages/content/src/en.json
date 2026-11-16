@@ -2904,6 +2904,10 @@
     "dispositor": {
       "term": "Dispositor",
       "definition": "The ruler of the sign a planet is in. Every planet answers to the ruler of its sign; the chain closes on a planet in its own sign (the final dispositor)."
+    },
+    "draconic": {
+      "term": "Draconic chart",
+      "definition": "The same sky turned so that the North Node stands at 0° Aries. It is read as the soul-level pattern behind the natal chart."
     }
   },
   "moonMansions": {
@@ -3762,6 +3766,70 @@
       "mercury": "Mercury in health: the nervous system, breathing and mental load. Mercury's condition shows how worry, sleep and information overload affect the body.",
       "mars": "Mars in health: energy, inflammation and accidents. Mars's condition shows your physical strength, the effect of anger on the body and care in risky situations.",
       "saturn": "Saturn in health: bones, joints and chronic fatigue. Saturn's condition shows endurance, the body's sensitivity to cold and load, and changes that come with time."
+    }
+  },
+  "saturnPluto": {
+    "saturn": {
+      "sign": {
+        "aries": "Saturn in Aries is in its fall: initiative, courage and breaking your own path are a hard lesson here. Confidence comes late, but when it comes it is unshakable.",
+        "taurus": "Saturn in Taurus gives patient lessons about security, money and the body. What is built slowly here lasts.",
+        "gemini": "Saturn in Gemini asks for discipline in thought, speech and learning. It gives serious, deep thinking and teaches you to hold back instead of rushing to speak.",
+        "cancer": "Saturn in Cancer is in detriment: family, home and emotional security can feel cold or heavy. The lesson is to build your own shelter.",
+        "leo": "Saturn in Leo is in detriment: holding back, or pressure to prove yourself, around being loved, creating and being seen. The lesson is to shine without waiting for approval.",
+        "virgo": "Saturn in Virgo gives a steady craft in work, service and daily order. Perfectionism and harsh self-criticism are the main risks.",
+        "libra": "Saturn in Libra is exalted: it brings maturity to relationships, fairness and commitments. It helps build unions that come late but last.",
+        "scorpio": "Saturn in Scorpio teaches control over feelings, power and shared resources. Facing deep fears gives a serious foundation in the end.",
+        "sagittarius": "Saturn in Sagittarius tests faith, law and worldview. It asks you to build truths you have tested yourself, not ready-made beliefs.",
+        "capricorn": "Saturn in Capricorn is at home: responsibility, achievement and structure work as natural strengths. The risk is leaving no room for anything but work.",
+        "aquarius": "Saturn in Aquarius is at home: a cool but fair view of collective rules, friendship and public duty. It teaches you to pay the price of being different.",
+        "pisces": "Saturn in Pisces teaches boundaries piece by piece among dreams, compassion and escape. The lesson is to give help with measure, not without limits."
+      },
+      "house": {
+        "1": "Saturn in the 1st house: feeling serious and burdened, early responsibility. Over time it builds a strong personality and authority.",
+        "2": "Saturn in the 2nd house: money and a sense of worth are earned hard and teach thrift. Material stability comes late but firm.",
+        "3": "Saturn in the 3rd house: seriousness and difficulty in communication, study and with siblings. The weight of your word grows.",
+        "4": "Saturn in the 4th house: coldness, a sense of debt or a heavy atmosphere at home. The adult lesson is to build your own home and roots consciously.",
+        "5": "Saturn in the 5th house: tension or delay around joy, creativity and children. The lesson is to allow yourself play and pleasure.",
+        "6": "Saturn in the 6th house: a heavy workload and a need for routine for health. When discipline is built, body and work steady.",
+        "7": "Saturn in the 7th house: entering relationships late and seriously, fear of commitment or older, responsible partners. Unions become reliable with time.",
+        "8": "Saturn in the 8th house: caution or fear around intimacy, power, inheritance and shared money. Deep trust is built slowly.",
+        "9": "Saturn in the 9th house: doubt in belief, higher study and travel, or building your own strict rules. Mastery and your own truth arrive in maturity.",
+        "10": "Saturn in the 10th house: high aims, serious work in the career and late recognition. The peak is hard but lasting; authority also brings duty.",
+        "11": "Saturn in the 11th house: being selective with friends, taking hopes seriously. Few but loyal friends and long-term goals.",
+        "12": "Saturn in the 12th house: hidden fears, loneliness and self-imposed burdens. If solitude and silence are chosen consciously, they give deep inner strength."
+      },
+      "retro": "Saturn is retrograde: a lesson turned inward that asks for inner responsibility. The rules are to be built by you, not from the outside."
+    },
+    "pluto": {
+      "sign": {
+        "aries": "Pluto in Aries: the shared theme of the generation is personal will, new beginnings and bold change. The personal effect depends on the house.",
+        "taurus": "Pluto in Taurus: the shared theme of the generation is a deep change in money, land, security and values.",
+        "gemini": "Pluto in Gemini: the shared theme of the generation is the change of information, language and the exchange of ideas.",
+        "cancer": "Pluto in Cancer: the shared theme of the generation is the rebuilding of family, homeland and security.",
+        "leo": "Pluto in Leo: the shared theme of the generation is personal expression, creativity and a redefinition of power.",
+        "virgo": "Pluto in Virgo: the shared theme of the generation is the rebuilding of work, service, health and daily life.",
+        "libra": "Pluto in Libra: the shared theme of the generation is a change in relationships, justice and partnerships.",
+        "scorpio": "Pluto in Scorpio is at home: the shared theme of the generation is power, secrets, death and rebirth and shared resources. Depth is natural here.",
+        "sagittarius": "Pluto in Sagittarius: the shared theme of the generation is a change in belief, religion, law and worldview.",
+        "capricorn": "Pluto in Capricorn: the shared theme of the generation is power, the state, and the collapse and rebuilding of structures.",
+        "aquarius": "Pluto in Aquarius: the shared theme of the generation is society, technology and a shift in collective power.",
+        "pisces": "Pluto in Pisces: the shared theme of the generation is spirituality, dreams and the dissolving of boundaries."
+      },
+      "house": {
+        "1": "Pluto in the 1st house: a strong, intense personality; recreating yourself several times in life. Others feel your power.",
+        "2": "Pluto in the 2nd house: deep changes in money, possessions and sense of worth; losing and rebuilding. Power is tied to material security.",
+        "3": "Pluto in the 3rd house: power of influence in thought and speech; intensity in communication and deep events with siblings.",
+        "4": "Pluto in the 4th house: hidden power struggles in the family, deep root themes. A serious cleansing around home and the past.",
+        "5": "Pluto in the 5th house: intense, possibly obsessive experiences in love, creativity and with children. A creative rebirth.",
+        "6": "Pluto in the 6th house: a deep rebuilding of work and health; themes of control and purging at work.",
+        "7": "Pluto in the 7th house: intense relationships, themes of power and control. Deep change through the partner.",
+        "8": "Pluto in the 8th house: strong, as at home: intimacy, inheritance, crisis and rebirth. The power to handle secrets and deep feelings.",
+        "9": "Pluto in the 9th house: a deep change in belief and worldview; change through long journeys or study.",
+        "10": "Pluto in the 10th house: power, control and turning points in the career and public role. Great influence, but struggles too.",
+        "11": "Pluto in the 11th house: power and change in friendships and groups; a wish to influence society.",
+        "12": "Pluto in the 12th house: hidden, subconscious power; deep inner transformations. Great change in solitude and silence."
+      },
+      "retro": "Pluto is retrograde: the process of change happens more inside than outside. Power is to be understood within before it is expressed."
     }
   }
 }

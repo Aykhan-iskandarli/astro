@@ -2904,6 +2904,10 @@
     "dispositor": {
       "term": "Dispozitor",
       "definition": "Planetin bürcünün hökmdarı. Hər planet öz bürcünün hökmdarına “tabedir”; zəncir öz bürcündəki planetdə bağlanır (final dispozitor)."
+    },
+    "draconic": {
+      "term": "Draconic xəritə",
+      "definition": "Eyni göy, lakin Şimal Düyünü 0° Qoça qoyulacaq şəkildə fırladılmış xəritə. Natal xəritənin arxasındakı ruh səviyyəsi kimi oxunur."
     }
   },
   "moonMansions": {
@@ -3762,6 +3766,70 @@
       "mercury": "Sağlamlıqda Merkuri: sinir sistemi, tənəffüs və zehni yük. Merkurinin vəziyyəti narahatlıq, yuxu və məlumat yüklənməsinin bədənə necə təsir etdiyini göstərir.",
       "mars": "Sağlamlıqda Mars: enerji, iltihab və qəza. Marsın vəziyyəti fiziki gücünüzü, hirsin bədənə təsirini və təhlükəli vəziyyətlərdə ehtiyatı göstərir.",
       "saturn": "Sağlamlıqda Saturn: sümüklər, oynaqlar və müzmin yorğunluq. Saturnun vəziyyəti dözümü, bədənin soyuğa və yükə həssaslığını və vaxtla gələn dəyişiklikləri göstərir."
+    }
+  },
+  "saturnPluto": {
+    "saturn": {
+      "sign": {
+        "aries": "Saturn Qoçda düşüşdədir: təşəbbüs, cəsarət və öz yolunu açmaq burada ağır dərsdir. Özünə güvən gec gəlir, amma gələndə sarsılmaz olur.",
+        "taurus": "Saturn Buğada təhlükəsizlik, pul və bədən üçün səbirli dərslər verir. Yavaş yığılan hər şey burada uzunömürlü olur.",
+        "gemini": "Saturn Əkizlərdə fikrin, danışığın və öyrənmənin intizama salınmasını istəyir. Ciddi, dərin düşüncə qabiliyyəti verir, danışmağa tələsməyi yox, çəkməyi öyrədir.",
+        "cancer": "Saturn Xərçəngdə sürgündədir: ailə, ev və hissi təhlükəsizlik soyuq və ya yüklü keçə bilər. Dərs: özünə sığınacaq yaratmaq.",
+        "leo": "Saturn Şirdə sürgündədir: sevilmək, yaradıcılıq və görünmək üçün çəkinmək və ya özünü sübut etmək təzyiqi. Dərs: təsdiq gözləmədən parlamaq.",
+        "virgo": "Saturn Qızda işdə, xidmətdə və gündəlik nizamda sabit bir ustalıq verir. Perfeksionizm və özünə sərt tənqid əsas riskdir.",
+        "libra": "Saturn Tərəzidə yüksəlişdədir: münasibətlərdə, ədalətdə və öhdəliklərdə yetkinlik gətirir. Gec, amma davamlı birliklər qurmağa yardım edir.",
+        "scorpio": "Saturn Əqrəbdə hissləri, gücü və paylaşılan resursları nəzarətdə saxlamağı öyrədir. Dərin qorxularla üz-üzə gəlmək sonda ciddi dayaq verir.",
+        "sagittarius": "Saturn Oxatanda inam, hüquq və dünyagörüşünü sınaqdan keçirir. Hazır inancları yox, özünün sınanmış həqiqətlərini qurmağı istəyir.",
+        "capricorn": "Saturn Oğlaqda öz evindədir: məsuliyyət, nailiyyət və struktur burada təbii güc kimi işləyir. Risk: işdən başqa heç nəyə yer qalmaması.",
+        "aquarius": "Saturn Dolçada öz evindədir: kollektiv qaydalar, dostluq və ictimai məsuliyyət mövzularında soyuq, amma ədalətli bir baxış verir. Fərqli olmağın bədəlini ödəməyi öyrədir.",
+        "pisces": "Saturn Balıqlarda sərhədləri hissə-hissə qurmağı öyrədir: xəyal, şəfqət və qaçış meylləri arasında. Dərs: köməyi sərhədsiz yox, ölçülü vermək."
+      },
+      "house": {
+        "1": "1-ci evdə Saturn: özünü ciddi və yük altında hiss etmək, erkən məsuliyyət. Zaman keçdikcə güclü bir şəxsiyyət və nüfuz qurur.",
+        "2": "2-ci evdə Saturn: pul və dəyər hissi çətin qazanılır, qənaət öyrədir. Maddi sabitlik gec, amma möhkəm gəlir.",
+        "3": "3-cü evdə Saturn: ünsiyyətdə, təhsildə və qardaş-bacı münasibətlərində ciddilik və çətinlik. Sözün çəkisi böyüyür.",
+        "4": "4-cü evdə Saturn: ailədə soyuqluq, borc hissi və ya ağır ev mühiti. Yetkinlikdə öz evini və köklərini şüurlu qurmaq dərsi.",
+        "5": "5-ci evdə Saturn: sevinc, yaradıcılıq və uşaqlarla bağlı gərginlik və ya gecikmə. Dərs: özünə oyun və zövq üçün icazə vermək.",
+        "6": "6-cı evdə Saturn: ağır iş yükü, sağlamlıq üçün rejim tələbi. Nizam-intizam qurulanda bədən və iş sabitləşir.",
+        "7": "7-ci evdə Saturn: münasibətlərə gec və ciddi girmək, öhdəliyə qorxu və ya yaşlı, məsuliyyətli tərəfdaşlar. Birliklər zamanla etibarlı olur.",
+        "8": "8-ci evdə Saturn: yaxınlıq, güc, miras və paylaşılan pulda ehtiyat və ya qorxu. Dərin etimad yavaş qurulur.",
+        "9": "9-cu evdə Saturn: inanc, ali təhsil və səyahətdə şübhə və ya ciddi, öz qaydanı qurma. Ustalıq və öz həqiqətin yetkinlikdə gəlir.",
+        "10": "10-cu evdə Saturn: yüksək məqsəd, karyerada ciddi iş və gec tanınma. Zirvə çətin, amma qalıcı olur; nüfuz öhdəliyi də gətirir.",
+        "11": "11-ci evdə Saturn: dostluqda seçici olmaq, ümidlərə ağır yanaşmaq. Az, amma sadiq dostlar və uzunmüddətli məqsədlər.",
+        "12": "12-ci evdə Saturn: gizli qorxular, tənhalıq və öz-özünə yük. Tənhalıq və sükut şüurlu seçilsə, dərin daxili güc verir."
+      },
+      "retro": "Saturn retroqraddır: öz içinə baxan, daxili məsuliyyət tələb edən dərs. Qaydaları kənardan yox, özünüz qurmalısınız."
+    },
+    "pluto": {
+      "sign": {
+        "aries": "Pluton Qoçda: nəslin ortaq mövzusu şəxsi iradə, yeni başlanğıc və cəsur dəyişiklikdir. Şəxsi təsiri evdən asılıdır.",
+        "taurus": "Pluton Buğada: nəslin ortaq mövzusu pul, torpaq, təhlükəsizlik və dəyərlərin dərindən dəyişməsidir.",
+        "gemini": "Pluton Əkizlərdə: nəslin ortaq mövzusu informasiya, dil və fikir mübadiləsinin dəyişməsidir.",
+        "cancer": "Pluton Xərçəngdə: nəslin ortaq mövzusu ailə, vətən və təhlükəsizliyin yenidən qurulmasıdır.",
+        "leo": "Pluton Şirdə: nəslin ortaq mövzusu şəxsi ifadə, yaradıcılıq və gücün yenidən müəyyən edilməsidir.",
+        "virgo": "Pluton Qızda: nəslin ortaq mövzusu iş, xidmət, sağlamlıq və gündəlik həyatın yenidən qurulmasıdır.",
+        "libra": "Pluton Tərəzidə: nəslin ortaq mövzusu münasibətlər, ədalət və birliklərin dəyişməsidir.",
+        "scorpio": "Pluton Əqrəbdə öz evindədir: nəslin ortaq mövzusu güc, sirr, ölüm-yenidən doğuluş və paylaşılan resurslardır. Dərinlik burada təbiidir.",
+        "sagittarius": "Pluton Oxatanda: nəslin ortaq mövzusu inanc, din, hüquq və dünya görüşünün dəyişməsidir.",
+        "capricorn": "Pluton Oğlaqda: nəslin ortaq mövzusu hakimiyyət, dövlət və quruluşların çökməsi və yenidən qurulmasıdır.",
+        "aquarius": "Pluton Dolçada: nəslin ortaq mövzusu cəmiyyət, texnologiya və kollektiv gücün dəyişməsidir.",
+        "pisces": "Pluton Balıqlarda: nəslin ortaq mövzusu mənəviyyat, xəyal və sərhədlərin əriməsidir."
+      },
+      "house": {
+        "1": "1-ci evdə Pluton: güclü, yoğun şəxsiyyət; həyat boyu özünü bir neçə dəfə yenidən yaratmaq. Başqaları sizi güclü hiss edir.",
+        "2": "2-ci evdə Pluton: pul, mülkiyyət və dəyər hissində dərin dəyişikliklər; itirib yenidən qurmaq. Güc maddi təhlükəsizliyə bağlanır.",
+        "3": "3-cü evdə Pluton: fikirdə və danışıqda təsir gücü; ünsiyyətdə yoğunluq, qardaş-bacı münasibətlərində dərin hadisələr.",
+        "4": "4-cü evdə Pluton: ailədə gizli güc mübarizəsi, dərin kök mövzuları. Ev və keçmişlə bağlı ciddi təmizlənmə.",
+        "5": "5-ci evdə Pluton: sevgi, yaradıcılıq və uşaqlarda yoğun, obsesiv ola bilən təcrübələr. Yaradıcı yenidən doğuluş.",
+        "6": "6-cı evdə Pluton: iş və sağlamlıqda dərin yenidən qurulma; işdə nəzarət və təmizləmə mövzuları.",
+        "7": "7-ci evdə Pluton: yoğun münasibətlər, güc və nəzarət mövzuları. Tərəfdaş vasitəsilə dərin dəyişiklik.",
+        "8": "8-ci evdə Pluton: öz evindəki kimi güclü: yaxınlıq, miras, böhran və yenidən doğuluş. Sirləri və dərin hissləri idarə etmək gücü.",
+        "9": "9-cu evdə Pluton: inanc və dünyagörüşündə dərin dəyişiklik; uzaq səfərlər və ya təhsil vasitəsilə dəyişmə.",
+        "10": "10-cu evdə Pluton: karyerada və ictimai rolda güc, nəzarət və dönüşlər. Böyük təsir, amma mübarizələr də.",
+        "11": "11-ci evdə Pluton: dostluqlar və qruplarda güc və dəyişmə; cəmiyyətə təsir etmək istəyi.",
+        "12": "12-ci evdə Pluton: gizli, şüuraltı güc; dərin daxili çevrilmələr. Təklikdə və sükutda böyük dəyişmə."
+      },
+      "retro": "Pluton retroqraddır: dəyişmə prosesi çöldən çox daxildə gedir. Gücü ifadə etməkdənsə əvvəl onu özündə anlamaq lazımdır."
     }
   }
 }
