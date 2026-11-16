@@ -20,7 +20,7 @@ MODULE_VERSION = "0.2.0"
 MASTER = {11, 22, 33}
 KARMIC_DEBT = {13, 14, 16, 19}
 VALUES = {ch: (i % 9) + 1 for i, ch in enumerate("abcdefghijklmnopqrstuvwxyz")}
-LETTER_MAP = {"ə": "e", "ç": "c", "ğ": "g", "ı": "i", "ö": "o", "ş": "s", "ü": "u", "i̇": "i"}
+LETTER_MAP = {"ə": "e", "ç": "c", "ğ": "g", "ı": "i", "ö": "o", "ş": "s", "ü": "u"}
 VOWELS = set("aeiou")
 
 
@@ -42,7 +42,10 @@ def reduce_number(n: int, keep_master: bool = True) -> tuple[int, int | None]:
 def normalise_letters(name: str) -> tuple[list[tuple[str, str]], list[str]]:
     """Return [(original letter, base latin letter)] and the list of ignored characters."""
     out, ignored = [], []
-    for ch in name.lower():
+    # Turkic dotted capital I: str.lower() turns it into "i" + U+0307 (two characters), and the stray combining dot
+    # would be reported as an unknown symbol. Fold it to a plain "i" first (also when the input is already decomposed).
+    text = unicodedata.normalize("NFC", name).replace("İ", "i").lower().replace("i̇", "i")
+    for ch in text:
         if ch.isspace() or ch in "-'’.":
             continue
         base = LETTER_MAP.get(ch)

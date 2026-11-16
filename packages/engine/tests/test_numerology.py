@@ -193,3 +193,15 @@ def test_psychomatrix_in_outputs():
     assert num.calculate(birth(date(1990, 6, 15)), today=date(2026, 11, 13))["psychomatrix"]["workNumbers"][0] == 31
     assert num.name_analysis("Aysel")["psychomatrix"] is None
     assert num.name_analysis("Aysel", date(1990, 6, 15))["psychomatrix"]["workNumbers"][0] == 31
+
+
+@pytest.mark.parametrize("name", ["Ayxan İskəndərli", "Ayxan İskəndərli".replace("İ", "i̇"), "AYXAN İSKƏNDƏRLİ"])
+def test_dotted_capital_i_is_not_reported_as_an_unknown_symbol(name):
+    letters, ignored = num.normalise_letters(name)
+    assert ignored == []
+    assert "".join(base for _, base in letters) == "ayxaniskenderli"
+
+
+def test_dotted_and_dotless_i_have_the_same_value():
+    assert num.normalise_letters("İİ")[0] == [("i", "i"), ("i", "i")]
+    assert num.normalise_letters("Iı")[0] == [("i", "i"), ("ı", "i")]
