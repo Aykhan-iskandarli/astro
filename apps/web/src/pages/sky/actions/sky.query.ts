@@ -1,6 +1,7 @@
 import {keepPreviousData, useQuery} from '@tanstack/react-query';
 import SkyModel, {CalendarModel} from '../models/sky.model';
-import {getCalendar, getMoonCalendar, getMoonDay, getMoonLunations, getSky, getSkyDay, IMoonPlace} from './sky.service';
+import CollectiveModel from '../models/collective.model';
+import {getCalendar, getCollective, getMoonCalendar, getMoonDay, getMoonLunations, getSky, getSkyDay, IMoonPlace} from './sky.service';
 import {IBirthInput} from 'store/store';
 import MoonDayModel, {PersonalLunationsModel} from '../models/personal-moon.model';
 import SkyDayModel from '../models/sky-day.model';
@@ -24,6 +25,19 @@ export const useGetCalendar = (start: string, end: string) => {
         queryKey: ['sky-calendar', start, end],
         queryFn: () => {
             return getCalendar(start, end);
+        },
+        placeholderData: keepPreviousData,
+        staleTime: Infinity,
+        retry: 1,
+    });
+};
+
+// Not personal (the collective sky of a year): cached like the rest of the sky
+export const useGetCollective = (year: number) => {
+    return useQuery<CollectiveModel, Error>({
+        queryKey: ['sky-collective', year],
+        queryFn: () => {
+            return getCollective(year);
         },
         placeholderData: keepPreviousData,
         staleTime: Infinity,

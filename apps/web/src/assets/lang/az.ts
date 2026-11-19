@@ -924,6 +924,25 @@ export const az = {
     kd_none: 'Ədədlərinizdə karmik borc (13, 14, 16, 19) yoxdur.',
     kd_note: 'Hesablama dəqiqdir (ədədlərin azaldılma zənciri yuxarıda yazılıb). Karmik borc anlayışı isə ənənəvi numerologiyanın şərhidir, sübut olunmuş fakt deyil; öz-özünü tanımaq üçün baxış kimi oxuyun. Həyat yolunda gün, ay və il əvvəl ayrı-ayrılıqda azaldılır, doğum günü və doğum ilinin rəqəmlər cəmi ayrıca yoxlanır. Yetkinlik ədədi həyat yolu ilə ifadə ədədinin cəmidir, ona görə oradakı borc törəmə sayılır. Ad ədədləri üçün ad yazılmalıdır.',
 
+    // collective year
+    col_title: 'Cəmiyyəti nə gözləyir',
+    col_intro: 'Seçilmiş ilin kollektiv mənzərəsi: ağır planetlərin hansı bürcdə olması, onların bir-biri ilə dəqiq aspektləri, tutulmalar və retroqradlar. Bu hamı üçün eynidir və doğum məlumatı tələb etmir. Şəxsi proqnoz aşağıdadır.',
+    col_error: 'Kollektiv mənzərəni hesablamaq alınmadı.',
+    col_era: 'Dövrün ruhu: hansı enerji aktivdir',
+    col_era_intro: 'Ən yavaş planetdən başlayaraq: onlar ilin ümumi tonunu və cəmiyyətin getdiyi istiqaməti müəyyən edir.',
+    col_whole_year: 'bütün il',
+    col_aspects: 'Ağır planetlərin bir-biri ilə aspektləri',
+    col_aspects_intro: 'Yupiter, Saturn, Uran, Neptun və Plutonun bir-biri ilə dəqiq aspektləri: dövrün əsas dönüş nöqtələri. Retroqrad səbəbindən eyni aspekt bir neçə dəfə dəqiqləşə bilər.',
+    col_aspects_none: 'Bu il ağır planetlər arasında dəqiq aspekt yoxdur.',
+    col_eclipses: 'Tutulmalar: dönüş nöqtələri',
+    col_eclipses_intro: 'Tutulma hansı bürcdə olursa, cəmiyyətdə həmin bürcün mövzusunda dönüş nöqtəsi kimi oxunur.',
+    col_eclipses_none: 'Bu il tutulma yoxdur.',
+    col_eclipse_theme: 'Mövzu: {areas}.',
+    col_retro: 'Ağır planetlərin retroqradı',
+    col_retro_intro: 'Planet geri hərəkət edərkən onun mövzuları kollektiv səviyyədə yenidən nəzərdən keçirilir.',
+    col_retro_none: 'Bu il ağır planetlərin retroqradı göstərilmir.',
+    col_note: 'Bu bölmə kollektiv baxışdır: hər kəsə eyni cür təsir etmir və qəti proqnoz deyil. Tarixlər Swiss Ephemeris ilə hesablanıb, mətnlər isə astroloji şərh qaralamasıdır.',
+
     // not found
     not_found_title: 'Bu səmada belə ulduz yoxdur',
     not_found_text: 'Axtardığınız səhifə tapılmadı.',

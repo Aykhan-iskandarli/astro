@@ -3895,5 +3895,150 @@
       "aquarius": "Neptun Dolçada: nəslin ortaq xəyalı ümumbəşəri ideallar, texnologiya və birlikdir. Risk: kollektivdə fərdin itməsi.",
       "pisces": "Neptun Balıqlarda öz evindədir: nəslin ortaq xəyalı mənəviyyat, şəfqət və birlikdir. Risk: reallıqdan qaçış."
     }
+  },
+  "collective": {
+    "role": {
+      "jupiter": "Yupiter: genişlənmə, inam, iqtisadi artım, təhsil və qanun. İlin ümumi əhval-ruhiyyəsini və cəmiyyətin nəyə ümid bağladığını göstərir.",
+      "saturn": "Saturn: qayda, məsuliyyət, məhdudiyyət və qurumlar. Cəmiyyətin harada sərtləşdiyini, nəyi yenidən qurmalı olduğunu göstərir.",
+      "uranus": "Uran: qəfil dəyişiklik, texnologiya, azadlıq və üsyan. Köhnə sistemlərin harada çatladığını göstərir.",
+      "neptune": "Neptun: ideal, xəyal, mənəviyyat, media və aldanış. Cəmiyyətin nəyə inandığını və harada çaşdığını göstərir.",
+      "pluto": "Pluton: dərin çevrilmə, güc və gizli olanın üzə çıxması. Uzun müddətli, geri dönməz dəyişikliklərin mövzusunu göstərir.",
+      "northNode": "Şimal düyünü: kollektiv inkişaf istiqaməti. Cəmiyyətin hansı mövzuya doğru getdiyini, Cənub düyünü isə nədən uzaqlaşdığını göstərir."
+    },
+    "areas": {
+      "aries": "təşəbbüs, müstəqillik, rəqabət və münaqişə",
+      "taurus": "pul, torpaq, qida, resurslar və dəyərlər",
+      "gemini": "informasiya, ünsiyyət, təhsil və ticarət",
+      "cancer": "ailə, ev, vətən və təhlükəsizlik hissi",
+      "leo": "liderlik, yaradıcılıq, tanınma və əyləncə",
+      "virgo": "əmək, sağlamlıq, xidmət və səmərəlilik",
+      "libra": "münasibətlər, ədalət, diplomatiya və tərəfdaşlıq",
+      "scorpio": "güc, ortaq resurslar, sirlər və böhranlardan çıxış",
+      "sagittarius": "inanc, səyahət, ali təhsil və qanun",
+      "capricorn": "dövlət, hakimiyyət, qurumlar və intizam",
+      "aquarius": "texnologiya, cəmiyyət, bərabərlik və şəbəkələr",
+      "pisces": "mənəviyyat, mərhəmət, təxəyyül və sağalma"
+    },
+    "signs": {
+      "jupiter": {
+        "aries": "Yupiter Qoçda: cəsarət, təşəbbüs və yeni başlanğıclar genişlənir. Sahibkarlıq və liderlik üçün əlverişli, tələsik qərarlar və münaqişələrin qızışması üçün isə riskli dövrdür.",
+        "taurus": "Yupiter Buğada: sabit artım, maddi rifah və təbiətə qayıdış mövzudur. Əmlak, kənd təsərrüfatı və yığım üçün yaxşı fon, həddindən artıq istehlaka meyl də var.",
+        "gemini": "Yupiter Əkizlərdə: məlumat, öyrənmə, media və ticarət genişlənir. Çoxlu fikir və səs var, əsas çətinlik məlumat bolluğunda seçim etməkdir.",
+        "cancer": "Yupiter Xərçəngdə: ailə, ev və vətən hissi güclənir. Mənzil, qayğı və qarşılıqlı dəstək mövzuları önə çıxır, emosional rahatlıq axtarışı artır.",
+        "leo": "Yupiter Şirdə: yaradıcılıq, əyləncə, liderlik və fərdi ifadə genişlənir. Xarizmatik simalar önə çıxır, qürur və özünü göstərmə ifrata varır.",
+        "virgo": "Yupiter Qızda: əmək, sağlamlıq və xidmət sahələri böyüyür. Texnikanın və qaydanın təkmilləşməsi üçün yaxşıdır, xırdalıqlarda ilişib böyük mənzərəni itirmək riski var.",
+        "libra": "Yupiter Tərəzidə: tərəfdaşlıq, diplomatiya və ədalət mövzuları önə çıxır. Razılaşmalar və hüquqi islahatlar üçün əlverişli, qərarsızlıq və güzəştlərin həddindən artıq olması mümkündür.",
+        "scorpio": "Yupiter Əqrəbdə: dərin dəyişikliklər, ortaq maliyyə, borc və gizli məsələlərin açılması mövzudur. Böhrandan sonra yenilənmə imkanı var, güc oyunları da güclənir.",
+        "sagittarius": "Yupiter Oxatanda öz evindədir: inanc, səyahət, ali təhsil və qanun sahələri genişlənir. Optimizm yüksəkdir, bəzən həddindən artıq güvənə çevrilir.",
+        "capricorn": "Yupiter Oğlaqda: genişlənmə qurum və dövlət çərçivəsində, planlı və tədricən gedir. Sabit işlər üçün əlverişli, ancaq optimizm Yupiterin təbii gücünə nisbətən məhduddur.",
+        "aquarius": "Yupiter Dolçada: texnologiya, kollektiv layihələr və sosial yeniliklər böyüyür. Bərabərlik və iştirakçılıq ideyaları gündəmdədir, mücərrəd ideallar real addımlarla dəstəklənməlidir.",
+        "pisces": "Yupiter Balıqlarda öz evindədir: mərhəmət, mənəviyyat, incəsənət və xeyriyyə mövzuları güclənir. Xəyal və inam böyüyür, həqiqətdən qaçmaq və aldanış riski də artır."
+      },
+      "saturn": {
+        "aries": "Saturn Qoçda: təşəbbüs və liderlik intizam sınağına çəkilir. Cəmiyyət yeni başlanğıclar etmək və məsuliyyəti özündə görmək dərsini keçir, səbirsizlik əngəllənir.",
+        "taurus": "Saturn Buğada: pul, əmlak və resurslar mövzusunda sərtləşmə və yenidən qiymətləndirmə var. Qənaət və sabit təməl önə çıxır, maddi sarsıntılar dəyərləri yenidən düşündürür.",
+        "gemini": "Saturn Əkizlərdə: informasiya, təhsil və ünsiyyətdə qayda və məsuliyyət tələb olunur. Yalan məlumata qarşı tədbirlər, təhsil sistemində islahatlar mümkündür.",
+        "cancer": "Saturn Xərçəngdə: ailə, mənzil və təhlükəsizlik mövzusunda ciddi sınaq. Ev və təminat sahələrində yenidən qurulma, emosional soyuqluqla üzləşmək lazım gəlir.",
+        "leo": "Saturn Şirdə: liderlik, hakimiyyət və yaradıcılıq mövzusunda sərtlik. Rəhbərlərin məsuliyyəti yoxlanır, əyləncə və özünü göstərmə sahəsində ölçü tələb olunur.",
+        "virgo": "Saturn Qızda: əmək bazarı, sağlamlıq xidmətləri və səmərəlilik mövzusunda yenidən qurulma. Qayda və ixtisas dəyərlənir, həddindən artıq nəzarət və yorğunluq riski var.",
+        "libra": "Saturn Tərəzidə: münasibətlər, hüquq və ədalət sistemi sınağa çəkilir. Müqavilə, diplomatiya və tərəfdaşlıqda ciddi öhdəliklər irəli gəlir.",
+        "scorpio": "Saturn Əqrəbdə: ortaq maliyyə, borc və güc strukturları yoxlanır. Gizli olan üzə çıxa bilər, dərin yenidən qurulma çətin, amma möhkəm nəticə verir.",
+        "sagittarius": "Saturn Oxatanda: inanc sistemləri, ali təhsil və qanunlar sınağa çəkilir. Dünyagörüşü məsuliyyətlə əsaslandırılmalı, sərhəd və səyahət qaydaları sərtləşə bilər.",
+        "capricorn": "Saturn Oğlaqda öz evindədir: dövlət, hakimiyyət və qurumlar güclənir, qaydalar sərtləşir. Uzunmüddətli planlar və intizam önə çıxır, avtoritarizm riski də var.",
+        "aquarius": "Saturn Dolçada öz evindədir: texnologiya, şəbəkələr və cəmiyyət qaydaları yenidən qurulur. Kollektiv məsuliyyət və sistemli yeniliklər mövzudur.",
+        "pisces": "Saturn Balıqlarda: ideallar, mənəviyyat və kollektiv xəyallar reallıqla sınanır. Aldanışlar çökür, mərhəmət və qayğı mövzusunda ciddi struktur tələb olunur."
+      },
+      "uranus": {
+        "aries": "Uran Qoçda: qəfil başlanğıclar, fərdi azadlıq və təşəbbüs dalğası. Köhnə münaqişələr yeni formada alovlana bilər, cəmiyyət cəsarətlə dəyişir.",
+        "taurus": "Uran Buğada: pul, torpaq, qida və dəyərlər sistemi sarsılır. Maliyyədə yeni alətlər və qiymət qəfilliyi, təbiət və resurslarla bağlı yeni yanaşmalar gəlir.",
+        "gemini": "Uran Əkizlərdə: informasiya, media və ünsiyyətdə sürətli dəyişiklik. Yeni texnologiyalar və fikir mübadiləsi formaları, eləcə də məlumat qarışıqlığı mövzudur.",
+        "cancer": "Uran Xərçəngdə: ailə, ev və vətən anlayışı yenidən düşünülür. Məskunlaşma, miqrasiya və təminat sahəsində qəfil dəyişikliklər mümkündür.",
+        "leo": "Uran Şirdə: fərdi ifadə, yaradıcılıq və hakimiyyət simalarında qəfil dəyişiklik. Liderlərin dəyişməsi və tanınma anlayışının yenilənməsi.",
+        "virgo": "Uran Qızda: əmək, sağlamlıq və gündəlik həyatda texniki yeniliklər. İş bazarı və səhiyyə sistemi yenidən qurulur.",
+        "libra": "Uran Tərəzidə: münasibətlər, evlilik və sosial qaydalarda yeni formalar. Hüquq və tərəfdaşlıq anlayışı dəyişir, ayrılıqlar və yeni birliklər çoxalır.",
+        "scorpio": "Uran Əqrəbdə: güc, ortaq maliyyə və gizli olanın qəfil üzə çıxması. Dərin, bəzən sarsıdıcı çevrilmələr və tabu mövzularının açılması.",
+        "sagittarius": "Uran Oxatanda: inanc, səyahət və dünyagörüşünün genişlənməsi. Qanunlar və sərhədlər yenidən müzakirə olunur, təhsil və dini baxışlarda sıçrayış.",
+        "capricorn": "Uran Oğlaqda: hakimiyyət, qurumlar və ənənəvi strukturların çatlaması. Dövlət idarəçiliyində və iqtisadi sistemdə köklü yenidən qurulma.",
+        "aquarius": "Uran Dolçada öz evindədir: texnologiya, cəmiyyət və kollektiv azadlıq mövzusunda sıçrayış. Yenilik təbii axar kimi gəlir, ictimai hərəkatlar güclənir.",
+        "pisces": "Uran Balıqlarda: mənəviyyat, təxəyyül və sərhədlərin əriməsi. Yeni inanc formaları, rəqəmsal və virtual dünyaların genişlənməsi və aldanışlara qarşı oyanış."
+      },
+      "neptune": {
+        "aries": "Neptun Qoçda: yeni idealların və xəyalların doğuşu. Cəmiyyət fərdi cəsarət və mənəvi başlanğıclara can atır, eyni zamanda sərt qəhrəmanlıq obrazları aldada bilər.",
+        "taurus": "Neptun Buğada: pul, torpaq və dəyərlərə dair ideallar və aldanışlar. Maliyyə illüziyaları və təbiətlə mənəvi bağ eyni vaxtda güclənir.",
+        "gemini": "Neptun Əkizlərdə: informasiya və ünsiyyət dumanlı olur. Media, dezinformasiya və şeir kimi fikir formaları mövzudur.",
+        "cancer": "Neptun Xərçəngdə: ailə, vətən və kökə bağlılıq idealizə olunur. Ev və vətən haqqında xəyallar, eləcə də emosional asılılıq və itki mövzusu.",
+        "leo": "Neptun Şirdə: şöhrət, əyləncə və yaradıcılıq ideallaşdırılır. Kino, musiqi və tanınma mədəniyyəti güclənir, lider obrazları illüziyaya çevrilə bilər.",
+        "virgo": "Neptun Qızda: əmək, sağlamlıq və xidmətdə qeyri-müəyyənlik. Səhiyyə, qida və iş mühitində aldanış və çaşqınlıq, eləcə də şəfa və qayğı mövzuları.",
+        "libra": "Neptun Tərəzidə: münasibətlər və ədalət ideallaşdırılır. Sevgi və tərəfdaşlıq xəyalları, hüquq sistemində qeyri-müəyyənlik mövzudur.",
+        "scorpio": "Neptun Əqrəbdə: gizli olanın, sirlərin və kollektiv sezgilərin dərinləşməsi. Güc və ortaq resurslarda aldanış, eləcə də ruhi çevrilmə mövzusu.",
+        "sagittarius": "Neptun Oxatanda: inanc, dini və fəlsəfi axtarışlar genişlənir. Böyük ideallar və sektalar, həqiqət axtarışı və mənəvi yüksəliş eyni vaxtda mövzudur.",
+        "capricorn": "Neptun Oğlaqda: qurumlara və hakimiyyətə inam əriyir, yeni nizam axtarılır. Hökumət və iqtisadi sistemlərdə aldanış, eləcə də mənəvi məsuliyyət mövzusu.",
+        "aquarius": "Neptun Dolçada: texnologiya və cəmiyyət haqqında kollektiv xəyallar. Virtual dünyalar, şəbəkələr və utopik ideyalar güclənir, onların arxasında illüziya riski də var.",
+        "pisces": "Neptun Balıqlarda öz evindədir: mənəviyyat, mərhəmət və təxəyyül ən güclü dövrünü yaşayır. İncəsənət və şəfa çiçəklənir, həqiqətdən qaçış da həddindən artıq olur."
+      },
+      "pluto": {
+        "aries": "Pluton Qoçda: kollektiv iradə, müstəqillik və güc mübarizəsinin yeni dövrü. Müharibə və inqilab, eləcə də fərdin cəsarətlə yenidən doğuşu mövzusu.",
+        "taurus": "Pluton Buğada: pul, torpaq və resurslar mövzusunda dərin çevrilmə. Maliyyə sistemləri, təbii sərvətlər və dəyərlər yenidən qurulur.",
+        "gemini": "Pluton Əkizlərdə: informasiya, media və ünsiyyətdə köklü dəyişiklik. Düşüncə və təhsil üsulları çevrilir, məlumat üzərində güc mübarizəsi gedir.",
+        "cancer": "Pluton Xərçəngdə: ailə, vətən və təhlükəsizlik anlayışı dərindən çevrilir. Dövlət, ərazi və kök mövzusunda sarsıntılar, kollektiv yaddaşın yenilənməsi.",
+        "leo": "Pluton Şirdə: liderlik, şəxsiyyət və yaradıcılıqda güc çevrilməsi. Şəxsiyyətlərə pərəstiş və fərdi ifadə azadlığı mövzusunda dərin dəyişikliklər.",
+        "virgo": "Pluton Qızda: əmək, sağlamlıq və gündəlik həyatın dərin yenidən qurulması. Səhiyyə, iş bazarı və ekoloji məsələlərdə çevrilmə.",
+        "libra": "Pluton Tərəzidə: münasibətlər, hüquq və sosial müqavilə dərindən çevrilir. Ədalət və tərəfdaşlıq anlayışı yenidən qurulur.",
+        "scorpio": "Pluton Əqrəbdə öz evindədir: güc, sirr və kollektiv travmalar ən güclü dərinləşmə dövrünü yaşayır. Böhran və yenilənmə, gizlinin açılması, dərin psixoloji dəyişiklik.",
+        "sagittarius": "Pluton Oxatanda: inanc sistemləri, dinlər və qanunlar köklü çevrilir. Dünyagörüşü və sərhədlər yenidən qurulur, ideoloji mübarizələr güclənir.",
+        "capricorn": "Pluton Oğlaqda: dövlət, hakimiyyət və iqtisadi qurumlar dərindən çevrilir. Köhnə strukturlar dağılır, yenisi qurulur; hakimiyyət və pul üzərində mübarizə gedir.",
+        "aquarius": "Pluton Dolçada: texnologiya, cəmiyyət və kollektiv güc mövzusunda dərin dəyişiklik. Rəqəmsal sistemlər, şəbəkələr və ictimai strukturlar yenidən qurulur, nəzarət və azadlıq mübarizəsi.",
+        "pisces": "Pluton Balıqlarda: kollektiv inanc, mənəviyyat və təxəyyül dərindən çevrilir. Mənəvi dəyərlər yenilənir, aldanışların çökməsi və kollektiv şəfa mövzusu."
+      },
+      "northNode": {
+        "aries": "Şimal düyünü Qoçda: cəmiyyət müstəqillik, cəsarət və fərdi təşəbbüsə doğru gedir, Cənub düyünü Tərəzidə isə həddindən artıq güzəşt və asılılıqdan uzaqlaşmanı göstərir.",
+        "taurus": "Şimal düyünü Buğada: sabitlik, dəyərlər və təbii resurslara doğru hərəkət. Cənub düyünü Əqrəbdə isə böhran və ortaq asılılıqdan uzaqlaşma mövzusudur.",
+        "gemini": "Şimal düyünü Əkizlərdə: öyrənmə, ünsiyyət və məlumata açıqlığa doğru hərəkət. Cənub düyünü Oxatanda isə dogmalardan uzaqlaşmaq mövzusudur.",
+        "cancer": "Şimal düyünü Xərçəngdə: ailə, qayğı və emosional təhlükəsizliyə doğru hərəkət. Cənub düyünü Oğlaqda isə sərt hakimiyyət və soyuqluqdan uzaqlaşma mövzusudur.",
+        "leo": "Şimal düyünü Şirdə: yaradıcılıq, ürək və fərdi ifadəyə doğru hərəkət. Cənub düyünü Dolçada isə kollektiv anonimlikdən çıxış mövzusudur.",
+        "virgo": "Şimal düyünü Qızda: xidmət, sağlamlıq və praktik təkmilləşməyə doğru hərəkət. Cənub düyünü Balıqlarda isə qaçış və aldanışlardan uzaqlaşma mövzusudur.",
+        "libra": "Şimal düyünü Tərəzidə: tərəfdaşlıq, ədalət və uzlaşmaya doğru hərəkət. Cənub düyünü Qoçda isə təkbaşına mübarizə və qəzəbdən uzaqlaşma mövzusudur.",
+        "scorpio": "Şimal düyünü Əqrəbdə: dərin çevrilmə, ortaq resurslar və həqiqətlə üzləşməyə doğru hərəkət. Cənub düyünü Buğada isə maddi sabitliyə həddindən artıq bağlılıqdan uzaqlaşma mövzusudur.",
+        "sagittarius": "Şimal düyünü Oxatanda: inanc, geniş dünyagörüşü və həqiqət axtarışına doğru hərəkət. Cənub düyünü Əkizlərdə isə səthi məlumatdan uzaqlaşma mövzusudur.",
+        "capricorn": "Şimal düyünü Oğlaqda: məsuliyyət, struktur və uzunmüddətli quruculuğa doğru hərəkət. Cənub düyünü Xərçəngdə isə həddindən artıq emosional asılılıqdan uzaqlaşma mövzusudur.",
+        "aquarius": "Şimal düyünü Dolçada: kollektiv, texnologiya və bərabərliyə doğru hərəkət. Cənub düyünü Şirdə isə şəxsi şöhrət və eqodan uzaqlaşma mövzusudur.",
+        "pisces": "Şimal düyünü Balıqlarda: mərhəmət, mənəviyyat və təslimiyyətə doğru hərəkət. Cənub düyünü Qızda isə həddindən artıq nəzarət və tənqidçilikdən uzaqlaşma mövzusudur."
+      }
+    },
+    "pairs": {
+      "jupiter_saturn": "Yupiter və Saturn: genişlənmə ilə məhdudiyyətin, ümid ilə reallığın görüşü. Təxminən 20 ildən bir birləşirlər və iqtisadi-sosial dövrün tonunu dəyişirlər.",
+      "jupiter_uranus": "Yupiter və Uran: yenilik, texnoloji sıçrayış və azadlıq dalğası. Gözlənilməz fürsətlər və təşəbbüslər, eləcə də həddi aşmaq riski.",
+      "jupiter_neptune": "Yupiter və Neptun: ideal, inam və mənəviyyat dalğası. Mərhəmət və böyük xəyallar, eləcə də aldanış və şişirtmə riski.",
+      "jupiter_pluto": "Yupiter və Pluton: güc, resurslar və təsir mövzusunda böyük genişlənmə. Dərin iqtisadi və siyasi çevrilmələr, nəzarət və ifrat güc riski.",
+      "saturn_uranus": "Saturn və Uran: köhnə nizam ilə yeniliyin qarşılaşması. İslahatlar və sistem dəyişiklikləri, qayda və azadlıq arasında gərginlik.",
+      "saturn_neptune": "Saturn və Neptun: xəyalın reallıqla qovuşması. İdeallar struktur qazanır və ya çökür, kollektiv əhval-ruhiyyədə yenidən qurulma gedir. Təxminən 36 ildən bir birləşirlər.",
+      "saturn_pluto": "Saturn və Pluton: güc və nəzarət strukturlarının dərin yenidən qurulması. Hakimiyyət, iqtisadiyyat və təhlükəsizlik sahələrində sərt, uzunmüddətli dəyişikliklər. Təxminən 33–38 ildən bir birləşirlər.",
+      "uranus_neptune": "Uran və Neptun: texnologiya ilə mənəviyyatın, yenilik ilə ideal arasındakı əlaqə. Nəsil səviyyəsində uzun müddətli mədəni dəyişikliklər.",
+      "uranus_pluto": "Uran və Pluton: inqilabi, sürətli və dərin dəyişikliklər. Köklü sosial yeniləşmə və hakimiyyətə qarşı kollektiv hərəkat dövrü.",
+      "neptune_pluto": "Neptun və Pluton: ən yavaş dövr, təxminən 492 ildən bir birləşir. Kollektiv şüur, inanc və mənəvi dəyərlərin əsrlik çevrilməsi."
+    },
+    "kinds": {
+      "conjunction": "Birləşmə: iki planetin enerjisi birləşir, yeni bir dövr başlanır. Mövzu çox qüvvətlidir və tək bir istiqamətə yönəlir.",
+      "sextile": "Sekstil: iki enerji bir-birinə dəstək verir. Əlverişli imkan var, amma onu faktiki işə çevirmək üçün təşəbbüs lazımdır.",
+      "square": "Kvadrat: iki enerji arasında gərginlik və sürtünmə. Qərar və dəyişiklik məcbur edir, böhran yaradır, lakin inkişafa da itələyir.",
+      "trine": "Trin: iki enerji rahat axır. Mövzu asan irəliləyir, ancaq bu rahatlıq passivliyə çevrilməsin.",
+      "opposition": "Oppozisiya: iki enerji bir-birinə qarşı qoyulur. Qütbləşmə və tarazlıq axtarışı, iki tərəfi bir yerə gətirmək tələb olunur."
+    },
+    "eclipse": {
+      "solar": "Günəş tutulması yeni dövrün başlanğıcını göstərir. Yaxın 6 ay ərzində həmin mövzuda dəyişiklik və yeni istiqamət açılır.",
+      "lunar": "Ay tutulması bir mövzunun kulminasiyasını və tamamlanmasını göstərir. Gizli olan açılır, artıq lazım olmayan buraxılır.",
+      "total": "Tam tutulma ən güclü təsirə malikdir.",
+      "annular": "Üzük şəkilli tutulma təsiri tədricən və dolayı yolla göstərir.",
+      "partial": "Qismən tutulma orta güclüdür.",
+      "penumbral": "Penumbral Ay tutulması ən zəif olanıdır, çox vaxt astroloji baxımdan yüngül hesab olunur.",
+      "hybrid": "Hibrid tutulma ilin ən güclülərindən sayılır."
+    },
+    "retro": {
+      "jupiter": "Retroqrad Yupiter: genişlənmə mövzularının yenidən nəzərdən keçirilməsi. Planlar yoxlanır, inam və inkişaf istiqaməti daxildən düşünülür.",
+      "saturn": "Retroqrad Saturn: qayda və məsuliyyət mövzularının yenidən yoxlanması. Qurumların zəif yerləri üzə çıxır, əvvəl yarımçıq qalan işlərə qayıdılır.",
+      "uranus": "Retroqrad Uran: qəfil dəyişikliklərin daxilə yönəlməsi. Yeniliyin nəticələri qiymətləndirilir, üsyan enir və fikirlər yetişir.",
+      "neptune": "Retroqrad Neptun: aldanışlar azalır və idealların reallığı yoxlanır. Mənəvi mövzular daxildən dərinləşir.",
+      "pluto": "Retroqrad Pluton: dərin çevrilmənin daxili mərhələsi. Gizli güc strukturları və kollektiv travmalar yenidən nəzərdən keçirilir."
+    }
   }
 }

@@ -339,6 +339,15 @@ def sky_calendar(start: Date, end: Date) -> dict:
         raise HTTPException(status_code=422, detail=[str(e)]) from e
 
 
+@app.get("/api/sky/collective")
+def sky_collective(year: int = Query(ge=1801, le=2997)) -> dict:
+    """The collective sky of a year: slow planets' signs, their mutual aspects, eclipses, retrogrades. Not personal."""
+    try:
+        return SKY["sky.collective"].calculate(year)
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=[str(e)]) from e
+
+
 @app.get("/api/sky/moon")
 def sky_moon(start: Date, end: Date, lat: float = Query(ge=-90, le=90), lon: float = Query(ge=-180, le=180),
              tz: str = Query(max_length=64)) -> dict:

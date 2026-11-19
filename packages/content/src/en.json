@@ -3895,5 +3895,150 @@
       "aquarius": "Neptune in Aquarius: the shared dream of the generation is universal ideals, technology and togetherness. The risk is the individual disappearing in the collective.",
       "pisces": "Neptune in Pisces is at home: the shared dream of the generation is spirituality, compassion and unity. The risk is escape from reality."
     }
+  },
+  "collective": {
+    "role": {
+      "jupiter": "Jupiter: expansion, faith, economic growth, education and law. It shows the general mood of the year and what society places its hopes in.",
+      "saturn": "Saturn: rules, responsibility, limits and institutions. It shows where society tightens and what it has to rebuild.",
+      "uranus": "Uranus: sudden change, technology, freedom and revolt. It shows where old systems crack.",
+      "neptune": "Neptune: ideals, dreams, spirituality, media and illusion. It shows what society believes in and where it loses its bearings.",
+      "pluto": "Pluto: deep transformation, power and the surfacing of what was hidden. It shows the theme of long, irreversible change.",
+      "northNode": "The North Node: the collective direction of growth. It shows the theme society is moving toward, while the South Node shows what it is moving away from."
+    },
+    "areas": {
+      "aries": "initiative, independence, rivalry and conflict",
+      "taurus": "money, land, food, resources and values",
+      "gemini": "information, communication, education and trade",
+      "cancer": "family, home, homeland and the sense of security",
+      "leo": "leadership, creativity, recognition and entertainment",
+      "virgo": "work, health, service and efficiency",
+      "libra": "relationships, justice, diplomacy and partnership",
+      "scorpio": "power, shared resources, secrets and the way out of crises",
+      "sagittarius": "belief, travel, higher education and law",
+      "capricorn": "government, authority, institutions and discipline",
+      "aquarius": "technology, community, equality and networks",
+      "pisces": "spirituality, compassion, imagination and healing"
+    },
+    "signs": {
+      "jupiter": {
+        "aries": "Jupiter in Aries: courage, initiative and new beginnings expand. Favourable for enterprise and leadership, risky for hasty decisions and for conflicts flaring up.",
+        "taurus": "Jupiter in Taurus: steady growth, material well-being and a return to nature. A good backdrop for property, farming and saving, with a pull toward overconsumption.",
+        "gemini": "Jupiter in Gemini: information, learning, media and trade expand. There are many ideas and voices; the difficulty is choosing among an abundance of information.",
+        "cancer": "Jupiter in Cancer: the sense of family, home and homeland strengthens. Housing, care and mutual support come forward, and so does the search for emotional comfort.",
+        "leo": "Jupiter in Leo: creativity, entertainment, leadership and individual expression expand. Charismatic figures come forward; pride and showing off can go too far.",
+        "virgo": "Jupiter in Virgo: the fields of work, health and service grow. Good for improving methods and order, with the risk of getting stuck in details and losing the big picture.",
+        "libra": "Jupiter in Libra: partnership, diplomacy and justice come forward. Favourable for agreements and legal reform; indecision and too many compromises are possible.",
+        "scorpio": "Jupiter in Scorpio: deep change, shared finance, debt and the opening of hidden matters. There is a chance of renewal after a crisis, and power games grow stronger.",
+        "sagittarius": "Jupiter in Sagittarius is at home: belief, travel, higher education and law expand. Optimism is high and can turn into overconfidence.",
+        "capricorn": "Jupiter in Capricorn: expansion goes through institutions and the state, planned and gradual. Good for steady work, but optimism is more limited than Jupiter's natural strength.",
+        "aquarius": "Jupiter in Aquarius: technology, collective projects and social innovation grow. Ideas of equality and participation are on the agenda; abstract ideals need real steps behind them.",
+        "pisces": "Jupiter in Pisces is at home: compassion, spirituality, art and charity grow stronger. Dreams and faith grow, and so does the risk of escapism and illusion."
+      },
+      "saturn": {
+        "aries": "Saturn in Aries: initiative and leadership are tested by discipline. Society learns to start new things and to take responsibility; impatience is held back.",
+        "taurus": "Saturn in Taurus: tightening and a re-evaluation around money, property and resources. Thrift and a firm foundation come forward; material shocks make people rethink values.",
+        "gemini": "Saturn in Gemini: information, education and communication call for rules and responsibility. Measures against false information and reforms in education are possible.",
+        "cancer": "Saturn in Cancer: a serious test of family, housing and security. Rebuilding in the home and provision sectors, and facing emotional coldness.",
+        "leo": "Saturn in Leo: severity around leadership, authority and creativity. Leaders' responsibility is checked; measure is required in entertainment and self-display.",
+        "virgo": "Saturn in Virgo: the labour market, health services and efficiency are rebuilt. Order and skill are valued; the risk is excessive control and exhaustion.",
+        "libra": "Saturn in Libra: relationships, law and the justice system are tested. Contracts, diplomacy and partnership bring serious commitments.",
+        "scorpio": "Saturn in Scorpio: shared finance, debt and power structures are examined. What was hidden can come out; deep rebuilding is hard but gives a solid result.",
+        "sagittarius": "Saturn in Sagittarius: belief systems, higher education and laws are tested. A worldview must be grounded in responsibility; border and travel rules can tighten.",
+        "capricorn": "Saturn in Capricorn is at home: the state, authority and institutions grow stronger and rules tighten. Long-term plans and discipline come forward; so does the risk of authoritarianism.",
+        "aquarius": "Saturn in Aquarius is at home: technology, networks and the rules of society are rebuilt. Collective responsibility and systematic innovation are the theme.",
+        "pisces": "Saturn in Pisces: ideals, spirituality and collective dreams are tested against reality. Illusions collapse and care and compassion call for serious structure."
+      },
+      "uranus": {
+        "aries": "Uranus in Aries: sudden beginnings, personal freedom and a wave of initiative. Old conflicts can flare in a new form; society changes with courage.",
+        "taurus": "Uranus in Taurus: the system of money, land, food and values is shaken. New financial tools and sudden price moves arrive, with new approaches to nature and resources.",
+        "gemini": "Uranus in Gemini: fast change in information, media and communication. New technologies and forms of exchanging ideas, and also information confusion.",
+        "cancer": "Uranus in Cancer: the idea of family, home and homeland is rethought. Sudden changes in settlement, migration and provision are possible.",
+        "leo": "Uranus in Leo: sudden change in self-expression, creativity and figures of authority. Leaders change and the idea of recognition is renewed.",
+        "virgo": "Uranus in Virgo: technical innovation in work, health and daily life. The job market and the health system are rebuilt.",
+        "libra": "Uranus in Libra: new forms in relationships, marriage and social rules. The idea of law and partnership shifts; separations and new unions multiply.",
+        "scorpio": "Uranus in Scorpio: power, shared finance and the sudden surfacing of what was hidden. Deep, sometimes shattering transformations and the opening of taboo subjects.",
+        "sagittarius": "Uranus in Sagittarius: belief, travel and a widening worldview. Laws and borders are renegotiated; a leap in education and religious views.",
+        "capricorn": "Uranus in Capricorn: authority, institutions and traditional structures crack. A root-and-branch rebuild of state administration and the economic system.",
+        "aquarius": "Uranus in Aquarius is at home: a leap in technology, society and collective freedom. Innovation arrives like a natural flow and social movements strengthen.",
+        "pisces": "Uranus in Pisces: spirituality, imagination and the dissolving of boundaries. New forms of belief, the growth of digital and virtual worlds, and a waking up from illusions."
+      },
+      "neptune": {
+        "aries": "Neptune in Aries: new ideals and dreams are born. Society reaches for personal courage and spiritual beginnings, while harsh heroic images can mislead.",
+        "taurus": "Neptune in Taurus: ideals and illusions about money, land and values. Financial illusions and a spiritual bond with nature grow together.",
+        "gemini": "Neptune in Gemini: information and communication turn hazy. Media, disinformation and poetic forms of thought are the theme.",
+        "cancer": "Neptune in Cancer: family, homeland and belonging are idealised. Dreams about home and homeland, and also emotional dependence and loss.",
+        "leo": "Neptune in Leo: fame, entertainment and creativity are idealised. Cinema, music and the culture of recognition grow; the image of the leader can become an illusion.",
+        "virgo": "Neptune in Virgo: uncertainty in work, health and service. Illusion and confusion in health care, food and the workplace, along with themes of healing and care.",
+        "libra": "Neptune in Libra: relationships and justice are idealised. Dreams of love and partnership, and uncertainty in the legal system.",
+        "scorpio": "Neptune in Scorpio: the hidden, secrets and collective intuition deepen. Illusion around power and shared resources, and a theme of spiritual transformation.",
+        "sagittarius": "Neptune in Sagittarius: religious and philosophical searching widens. Great ideals and sects, the search for truth and spiritual ascent are the theme together.",
+        "capricorn": "Neptune in Capricorn: faith in institutions and authority dissolves and a new order is sought. Illusion in governments and economic systems, and a theme of spiritual responsibility.",
+        "aquarius": "Neptune in Aquarius: collective dreams about technology and society. Virtual worlds, networks and utopian ideas strengthen, with the risk of illusion behind them.",
+        "pisces": "Neptune in Pisces is at home: spirituality, compassion and imagination are at their strongest. Art and healing flourish, and so does escape from the truth."
+      },
+      "pluto": {
+        "aries": "Pluto in Aries: a new era of collective will, independence and struggle for power. War and revolution, and also the individual's rebirth through courage.",
+        "taurus": "Pluto in Taurus: deep transformation around money, land and resources. Financial systems, natural wealth and values are rebuilt.",
+        "gemini": "Pluto in Gemini: root change in information, media and communication. Ways of thinking and teaching are transformed, and there is a struggle for power over information.",
+        "cancer": "Pluto in Cancer: the idea of family, homeland and security is deeply transformed. Shocks around the state, territory and roots, and a renewal of collective memory.",
+        "leo": "Pluto in Leo: a transformation of power in leadership, identity and creativity. Deep change around the worship of personalities and freedom of self-expression.",
+        "virgo": "Pluto in Virgo: a deep rebuilding of work, health and daily life. Transformation in health care, the labour market and ecological questions.",
+        "libra": "Pluto in Libra: relationships, law and the social contract are deeply transformed. The idea of justice and partnership is rebuilt.",
+        "scorpio": "Pluto in Scorpio is at home: power, secrets and collective trauma go through their most intense deepening. Crisis and renewal, the opening of what was hidden, deep psychological change.",
+        "sagittarius": "Pluto in Sagittarius: belief systems, religions and laws are transformed at the root. Worldviews and borders are rebuilt and ideological struggles strengthen.",
+        "capricorn": "Pluto in Capricorn: the state, authority and economic institutions are deeply transformed. Old structures fall and new ones are built, with a struggle over power and money.",
+        "aquarius": "Pluto in Aquarius: deep change in technology, society and collective power. Digital systems, networks and social structures are rebuilt, with a struggle between control and freedom.",
+        "pisces": "Pluto in Pisces: collective belief, spirituality and imagination are deeply transformed. Spiritual values are renewed, illusions collapse and collective healing is the theme."
+      },
+      "northNode": {
+        "aries": "North Node in Aries: society moves toward independence, courage and personal initiative; the South Node in Libra points away from excessive compromise and dependence.",
+        "taurus": "North Node in Taurus: a move toward stability, values and natural resources; the South Node in Scorpio points away from crisis and shared dependence.",
+        "gemini": "North Node in Gemini: a move toward learning, communication and openness to information; the South Node in Sagittarius points away from dogma.",
+        "cancer": "North Node in Cancer: a move toward family, care and emotional security; the South Node in Capricorn points away from harsh authority and coldness.",
+        "leo": "North Node in Leo: a move toward creativity, the heart and individual expression; the South Node in Aquarius points away from collective anonymity.",
+        "virgo": "North Node in Virgo: a move toward service, health and practical improvement; the South Node in Pisces points away from escape and illusion.",
+        "libra": "North Node in Libra: a move toward partnership, justice and agreement; the South Node in Aries points away from lone struggle and anger.",
+        "scorpio": "North Node in Scorpio: a move toward deep transformation, shared resources and facing the truth; the South Node in Taurus points away from too much attachment to material comfort.",
+        "sagittarius": "North Node in Sagittarius: a move toward belief, a wider worldview and the search for truth; the South Node in Gemini points away from superficial information.",
+        "capricorn": "North Node in Capricorn: a move toward responsibility, structure and long-term building; the South Node in Cancer points away from excessive emotional dependence.",
+        "aquarius": "North Node in Aquarius: a move toward the collective, technology and equality; the South Node in Leo points away from personal fame and ego.",
+        "pisces": "North Node in Pisces: a move toward compassion, spirituality and surrender; the South Node in Virgo points away from excessive control and criticism."
+      }
+    },
+    "pairs": {
+      "jupiter_saturn": "Jupiter and Saturn: expansion meets limit, hope meets reality. They join about every 20 years and change the tone of the economic and social cycle.",
+      "jupiter_uranus": "Jupiter and Uranus: a wave of innovation, technological leaps and freedom. Unexpected opportunities and initiatives, and the risk of overreaching.",
+      "jupiter_neptune": "Jupiter and Neptune: a wave of ideals, faith and spirituality. Compassion and great dreams, and the risk of illusion and exaggeration.",
+      "jupiter_pluto": "Jupiter and Pluto: great expansion in power, resources and influence. Deep economic and political transformations, with the risk of control and excess power.",
+      "saturn_uranus": "Saturn and Uranus: the old order meets the new. Reforms and system change, and tension between rule and freedom.",
+      "saturn_neptune": "Saturn and Neptune: the dream meets reality. Ideals gain structure or collapse, and the collective mood is rebuilt. They join about every 36 years.",
+      "saturn_pluto": "Saturn and Pluto: a deep rebuilding of the structures of power and control. Hard, long-lasting change in authority, the economy and security. They join about every 33 to 38 years.",
+      "uranus_neptune": "Uranus and Neptune: the link between technology and spirituality, between innovation and ideal. Long cultural change at the level of a generation.",
+      "uranus_pluto": "Uranus and Pluto: revolutionary, fast and deep change. A time of radical social renewal and collective movement against authority.",
+      "neptune_pluto": "Neptune and Pluto: the slowest cycle, joining about every 492 years. A centuries-long transformation of collective consciousness, belief and spiritual values."
+    },
+    "kinds": {
+      "conjunction": "Conjunction: the energies of two planets join and a new cycle begins. The theme is very strong and points in a single direction.",
+      "sextile": "Sextile: the two energies support each other. There is a favourable opening, but it takes initiative to turn it into fact.",
+      "square": "Square: tension and friction between two energies. It forces decisions and change and creates crisis, but it also pushes growth.",
+      "trine": "Trine: the two energies flow easily. The theme moves forward without effort, though the ease should not turn into passivity.",
+      "opposition": "Opposition: two energies face each other. Polarisation and a search for balance; the two sides have to be brought together."
+    },
+    "eclipse": {
+      "solar": "A solar eclipse marks the start of a new chapter. Over the next six months change and a new direction open in that theme.",
+      "lunar": "A lunar eclipse marks the culmination and completion of a theme. What was hidden comes out and what is no longer needed is let go.",
+      "total": "A total eclipse has the strongest effect.",
+      "annular": "An annular eclipse works gradually and indirectly.",
+      "partial": "A partial eclipse is of medium strength.",
+      "penumbral": "A penumbral lunar eclipse is the weakest and is usually counted as slight in astrology.",
+      "hybrid": "A hybrid eclipse is counted among the strongest of the year."
+    },
+    "retro": {
+      "jupiter": "Jupiter retrograde: themes of expansion are reconsidered. Plans are checked and the direction of faith and growth is thought over from within.",
+      "saturn": "Saturn retrograde: rules and responsibility are checked again. The weak places of institutions come out and unfinished work is returned to.",
+      "uranus": "Uranus retrograde: sudden change turns inward. The results of innovation are weighed, revolt cools and ideas ripen.",
+      "neptune": "Neptune retrograde: illusions fade and the reality of ideals is tested. Spiritual themes deepen from within.",
+      "pluto": "Pluto retrograde: the inner stage of deep transformation. Hidden power structures and collective trauma are looked at again."
+    }
   }
 }

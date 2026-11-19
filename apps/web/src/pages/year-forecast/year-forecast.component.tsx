@@ -17,6 +17,7 @@ import {useGetYear} from 'pages/natal-chart/actions/natal-chart.query';
 import RetrogradeListComponent from 'pages/natal-chart/components/retrograde-list/retrograde-list.component';
 import LunationListComponent from 'pages/sky/components/lunation-list/lunation-list.component';
 import TransitReadingComponent from 'pages/natal-chart/components/transit-reading/transit-reading.component';
+import CollectiveYearComponent from './components/collective-year/collective-year.component';
 import {useYearForecastStyles} from './year-forecast.style';
 
 const MIN_YEAR = 1801;
@@ -85,6 +86,8 @@ function YearForecastComponent() {
                                 aria-label={translate('today_choose_chart')}/>
                     ) : null}
                 </div>
+
+                <CollectiveYearComponent year={year}/>
 
                 {!input ? (
                     <div className={classes.empty}>

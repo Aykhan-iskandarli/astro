@@ -321,3 +321,11 @@ def test_directions_endpoint():
     assert d2["meta"]["timeUnknown"] is True
     assert all(h["progressed"] != "moon" and "moon" not in (h["natal"],) for h in d2["progressed"])
     assert client.post("/api/charts/directions", json={**BAKU, "years": 99}).status_code == 422
+
+
+def test_sky_collective_endpoint():
+    r = client.get("/api/sky/collective", params={"year": 2026})
+    assert r.status_code == 200
+    body = r.json()
+    assert body["year"] == 2026 and len(body["positions"]) == 6 and body["aspects"] and body["eclipses"]
+    assert client.get("/api/sky/collective", params={"year": 1700}).status_code == 422

@@ -36,4 +36,5 @@ export const API = {
     numerologyCompatibility: '/api/numerology/compatibility',
     sky: '/api/sky',
     skyCalendar: '/api/sky/calendar',
+    skyCollective: '/api/sky/collective',
 };

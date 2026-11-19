@@ -1,6 +1,7 @@
 import axiosPublic from 'core/configs/axios-public.config';
 import {API} from 'core/configs/api.config';
 import SkyModel, {CalendarModel} from '../models/sky.model';
+import CollectiveModel from '../models/collective.model';
 import MoonCalendarModel from '../models/moon-calendar.model';
 import SkyDayModel from '../models/sky-day.model';
 import MoonDayModel, {PersonalLunationsModel} from '../models/personal-moon.model';
@@ -17,6 +18,13 @@ export const getCalendar = (start: string, end: string): Promise<CalendarModel> 
     return axiosPublic.get(API.skyCalendar, {params: {start, end}})
         .then((res) => {
             return new CalendarModel(res.data);
+        });
+};
+
+export const getCollective = (year: number): Promise<CollectiveModel> => {
+    return axiosPublic.get(API.skyCollective, {params: {year}})
+        .then((res) => {
+            return new CollectiveModel(res.data);
         });
 };
 

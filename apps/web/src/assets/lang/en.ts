@@ -926,6 +926,25 @@ export const en: Record<keyof typeof az, string> = {
     kd_none: 'None of your numbers carries a karmic debt (13, 14, 16, 19).',
     kd_note: 'The calculation is exact (the reduction chain is written above). The idea of a karmic debt is, however, an interpretation of traditional numerology, not a proven fact; read it as one way of looking at yourself. In the life path the day, month and year are reduced separately first, and the birthday and the digit sum of the birth year are checked on their own. The maturity number is the life path plus the expression, so a debt there counts as derived. Name numbers need a name.',
 
+    // collective year
+    col_title: 'What awaits society',
+    col_intro: 'The collective picture of the chosen year: which signs the slow planets stand in, their exact aspects to each other, the eclipses and the retrogrades. It is the same for everyone and needs no birth data. Your personal forecast is below.',
+    col_error: 'The collective picture could not be calculated.',
+    col_era: 'The spirit of the era: which energy is active',
+    col_era_intro: 'Starting from the slowest planet: they set the general tone of the year and the direction society is moving in.',
+    col_whole_year: 'the whole year',
+    col_aspects: 'Aspects between the slow planets',
+    col_aspects_intro: 'The exact aspects of Jupiter, Saturn, Uranus, Neptune and Pluto to each other: the main turning points of the period. Because of retrograde motion the same aspect can become exact more than once.',
+    col_aspects_none: 'The slow planets make no exact aspect to each other this year.',
+    col_eclipses: 'Eclipses: turning points',
+    col_eclipses_intro: 'An eclipse is read as a turning point for the themes of the sign it falls in.',
+    col_eclipses_none: 'There are no eclipses this year.',
+    col_eclipse_theme: 'Theme: {areas}.',
+    col_retro: 'Retrograde of the slow planets',
+    col_retro_intro: 'While a planet moves backwards, its themes are reconsidered at the collective level.',
+    col_retro_none: 'No retrograde of the slow planets is shown this year.',
+    col_note: 'This section is a collective view: it does not affect everyone in the same way and it is not a firm prediction. The dates are calculated with Swiss Ephemeris; the texts are a draft of astrological interpretation.',
+
     // not found
     not_found_title: 'There is no such star in this sky',
     not_found_text: 'The page you are looking for was not found.',

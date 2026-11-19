@@ -102,3 +102,63 @@ def test_worker_threads_use_the_swiss_ephemeris_files():
         chiron, flag, moon_flag, vedic = pool.submit(in_thread).result()
     assert flag == swe.FLG_SWIEPH and moon_flag == swe.FLG_SWIEPH  # not the Moshier fallback
     assert vedic == main
+
+
+# ---- collective sky of a year ----
+
+def test_collective_aspects_are_exact_and_complete():
+    out = SKY["sky.collective"].calculate(2026)
+    assert out["aspects"], "2026 has slow-planet aspects"
+    for a in out["aspects"]:
+        jd = _jd(a["at"])
+        p, q = a["planets"]
+        assert _sep(longitude(p, jd)[0], longitude(q, jd)[0]) == pytest.approx(ANGLES[a["aspect"]], abs=0.01), a
+    # an independent fine scan finds exactly the same set of (pair, aspect) hits in the year
+    lo, hi = _jd("2026-01-01T00:00:00Z"), _jd("2027-01-01T00:00:00Z")
+    pairs = [("jupiter", "saturn"), ("jupiter", "uranus"), ("jupiter", "neptune"), ("jupiter", "pluto"),
+             ("saturn", "uranus"), ("saturn", "neptune"), ("saturn", "pluto"),
+             ("uranus", "neptune"), ("uranus", "pluto"), ("neptune", "pluto")]
+    found = 0
+    for p, q in pairs:
+        for name, ang in ANGLES.items():
+            for target in ((ang,) if ang in (0, 180) else (ang, -ang)):
+                prev = None
+                jd = lo
+                while jd < hi:
+                    d = (longitude(p, jd)[0] - longitude(q, jd)[0] - target + 180) % 360 - 180
+                    if prev is not None and (d > 0) != (prev > 0) and abs(d) < 5 and abs(prev) < 5:
+                        found += 1
+                    prev = d
+                    jd += 0.5
+    assert found == len(out["aspects"])
+
+
+def test_collective_known_events_2026():
+    out = SKY["sky.collective"].calculate(2026)
+    pos = {p["id"]: p for p in out["positions"]}
+    assert (pos["saturn"]["signAtStart"], pos["saturn"]["signAtEnd"]) == ("pisces", "aries")
+    assert pos["saturn"]["stays"][0]["end"][:10] == "2026-02-14"
+    assert pos["neptune"]["stays"][0]["end"][:10] == "2026-01-26"
+    assert pos["jupiter"]["stays"][0]["end"][:10] == "2026-06-30"
+    assert pos["pluto"]["stays"] == [{"sign": "aquarius", "start": None, "end": None}]
+    sn = [a for a in out["aspects"] if a["planets"] == ["saturn", "neptune"] and a["aspect"] == "conjunction"]
+    assert len(sn) == 1 and sn[0]["at"][:10] == "2026-02-20"
+    assert [(e["kind"], e["at"][:10]) for e in out["eclipses"]] == [
+        ("solar", "2026-02-17"), ("lunar", "2026-03-03"), ("solar", "2026-08-12"), ("lunar", "2026-08-28")]
+    assert {r["planet"] for r in out["retrogrades"]} <= {"jupiter", "saturn", "uranus", "neptune", "pluto"}
+
+
+def test_collective_great_conjunction_2020():
+    out = SKY["sky.collective"].calculate(2020)
+    js = [a for a in out["aspects"] if a["planets"] == ["jupiter", "saturn"] and a["aspect"] == "conjunction"]
+    assert len(js) == 1 and js[0]["at"][:10] == "2020-12-21"
+    sp = [a for a in out["aspects"] if a["planets"] == ["saturn", "pluto"] and a["aspect"] == "conjunction"]
+    assert len(sp) == 1 and sp[0]["at"][:10] == "2020-01-12"
+    # a retrograde dip across a boundary is listed as separate stays
+    sat = next(p for p in out["positions"] if p["id"] == "saturn")
+    assert [s["sign"] for s in sat["stays"]] == ["capricorn", "aquarius", "capricorn", "aquarius"]
+
+
+def test_collective_year_range():
+    with pytest.raises(ValueError):
+        SKY["sky.collective"].calculate(1700)
