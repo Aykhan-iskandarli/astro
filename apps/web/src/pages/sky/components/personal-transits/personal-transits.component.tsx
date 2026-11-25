@@ -11,6 +11,7 @@ import {useChartChoice} from 'core/helpers/use-chart-choice';
 import {useGetTransits} from 'pages/natal-chart/actions/natal-chart.query';
 import PersonalMoonDayComponent from '../personal-moon-day/personal-moon-day.component';
 import PersonalLunationsComponent from '../personal-lunations/personal-lunations.component';
+import UpcomingPersonalComponent from '../upcoming-personal/upcoming-personal.component';
 import TransitReadingComponent from 'pages/natal-chart/components/transit-reading/transit-reading.component';
 import {usePersonalTransitsStyles} from './personal-transits.style';
 
@@ -74,6 +75,7 @@ const PersonalTransitsComponent = () => {
                     ))}
                 </ul>
             ) : <p className={classes.meta}>{translate('today_no_transits')}</p>}
+            <UpcomingPersonalComponent input={input} today={today}/>
             <h3 className={classes.sub}>{translate('lunations_personal_title')}</h3>
             <p className={classes.meta}>{translate('lunations_personal_intro')}</p>
             <PersonalLunationsComponent input={input} start={today} days={62} limit={4}/>

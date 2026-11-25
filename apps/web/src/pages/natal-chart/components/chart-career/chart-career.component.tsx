@@ -25,7 +25,25 @@ const ChartCareerComponent = ({chart}: IChartCareer) => {
     const sixth = houses.find((h) => h.house === 6);
     const touching = useMemo(() => (known ? aspectsToPoint(chart.points, mc?.longitude) : []), [chart.points, mc, known]);
     const sig = useMemo(() => significators(chart, SIGNIFICATORS), [chart]);
-    const text = content.career as {mc: Record<string, string>; ruler: Record<string, string>; planet: Record<string, string>};
+    const text = content.career as unknown as {
+        mc: Record<string, string>; ruler: Record<string, string>; planet: Record<string, string>;
+        professions: {sign: Record<string, string>; planet: Record<string, string>};
+    };
+    const sun = chart.points.find((p) => p.id === 'sun') ?? null;
+    // Where the suggestions come from: the MC sign, the ruler of the 10th, the planets in it (or the Sun sign without a birth time)
+    const professions = useMemo(() => {
+        const out: {key: string; label: string; list: string}[] = [];
+        const p = (content.career as unknown as {professions: {sign: Record<string, string>; planet: Record<string, string>}}).professions;
+        const nm = (id: string) => content.points[id as keyof typeof content.points]?.name ?? id;
+        const sg = (id: string) => content.signs[id as keyof typeof content.signs]?.name ?? id;
+        if (known && mc?.sign) out.push({key: 'mc', label: translate('career_prof_mc', {sign: sg(mc.sign)}), list: p.sign[mc.sign]});
+        const ruler = tenth?.rulers.find((r) => r.kind !== 'modern');
+        if (ruler?.id && p.planet[ruler.id]) out.push({key: 'ruler', label: translate('career_prof_ruler', {planet: nm(ruler.id)}), list: p.planet[ruler.id]});
+        (tenth?.occupants ?? []).filter((id) => p.planet[id] && id !== ruler?.id)
+            .forEach((id) => out.push({key: `in-${id}`, label: translate('career_prof_in', {planet: nm(id)}), list: p.planet[id]}));
+        if (!known && sun?.sign) out.push({key: 'sun', label: translate('career_prof_sun', {sign: sg(sun.sign)}), list: p.sign[sun.sign]});
+        return out;
+    }, [content, known, mc, tenth, sun, translate]);
 
     const name = (id: string | null) => (id ? content.points[id as keyof typeof content.points]?.name ?? id : '');
     const sign = (id: string | null) => (id ? content.signs[id as keyof typeof content.signs]?.name ?? id : '');
@@ -39,6 +57,19 @@ const ChartCareerComponent = ({chart}: IChartCareer) => {
             <p className={classes.muted}>{translate('career_intro')}</p>
             {!known ? <Alert type='info' showIcon title={translate('career_time_unknown')}/> : null}
             <div className={classes.grid}>
+                {professions.length ? (
+                    <article className={classes.card}>
+                        <p className={classes.label}>{translate('career_prof_title')}</p>
+                        {professions.map((x) => (
+                            <div key={x.key}>
+                                <p className={classes.fact}>{x.label}</p>
+                                <p className={classes.text}>{x.list}</p>
+                            </div>
+                        ))}
+                        <p className={classes.muted}>{translate('career_prof_note')}</p>
+                    </article>
+                ) : null}
+
                 {known && mc ? (
                     <article className={classes.card}>
                         <p className={classes.label}>{translate('career_mc')}</p>

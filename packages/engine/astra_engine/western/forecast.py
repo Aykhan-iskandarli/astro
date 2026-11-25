@@ -20,6 +20,7 @@ from datetime import date, datetime, time, timedelta, timezone
 
 from ..common.birth import BirthData, HouseSystem, resolve_utc
 from ..common.zodiac import SIGNS, house_of, norm, sign_index, sign_of, split_degree
+from ..numerology.core import personal_year
 from ..sky.common import iso_from_jd, jd_of, kery_planet, longitude
 from . import cycles, natal, personal_moon, returns, timeline, transformations
 
@@ -27,6 +28,7 @@ MODULE_ID = "western.forecast"
 MODULE_VERSION = "0.1.0"
 
 SLOW = ["jupiter", "saturn", "uranus", "neptune", "pluto"]
+FAST = ["sun", "mercury", "venus", "mars", "northNode", "chiron"]  # houses through the year: the quick planets, the node, Chiron
 RETRO_PLANETS = ["mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"]
 MAX_YEARS = 30
 STEP = 0.5  # days; the slowest crossing pair (a station right on a cusp) still needs the planet within 0.05°
@@ -183,6 +185,8 @@ def year_forecast(birth: BirthData, year_: int, house_system: HouseSystem = "P")
              "asc": asc, "mc": (ret["chart"]["angles"] or {}).get("mc")} if not unknown else \
         {"at": ret["at"], "local": ret["local"], "sun": by_id["sun"], "moon": by_id["moon"], "asc": None, "mc": None}
 
+    solar["points"] = ret["chart"]["points"]  # every point of the return chart (sign, degree, house)
+
     tl = timeline.calculate(birth, start=lo, days=days, house_system=house_system)
     events = tl["events"]
     months = [{"month": m, "hits": 0, "slowHits": 0} for m in range(1, 13)]
@@ -196,6 +200,8 @@ def year_forecast(birth: BirthData, year_: int, house_system: HouseSystem = "P")
     lunations = [x for x in lun["lunations"] if x["phase"] in ("new", "full")]
     retro = retrogrades(birth, lo, days, house_system)["retrogrades"]
     line = lifeline(birth, lo, 1, house_system)
+    a, b = _day(lo), _day(date(year_ + 1, 1, 1))
+    fast = {pid: segments(pid, a, b, cusps, lambda lon: house_of(lon, cusps)) for pid in FAST} if cusps else None
 
     birth_utc = resolve_utc(birth.date, birth.time or time(12, 0), birth.timezone).utc
     return {
@@ -207,6 +213,8 @@ def year_forecast(birth: BirthData, year_: int, house_system: HouseSystem = "P")
         "solarReturn": solar,
         "firdaria": _firdaria(birth, birth_utc, lo, hi, house_system),
         "slowPlanets": line["planets"],
+        "fastPlanets": fast,
+        "personalYear": personal_year(birth.date, year_),
         "transits": events,
         "months": months,
         "lunations": lunations,

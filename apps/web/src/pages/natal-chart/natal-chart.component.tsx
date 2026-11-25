@@ -53,12 +53,22 @@ function NatalChartComponent() {
     // Opened from the profiles page: /natal-chart?profile=<id>
     const [params, setParams] = useSearchParams();
     const profileId = params.get('profile');
+    const timeParam = params.get('time');
     useEffect(() => {
         if (!profileId) return;
         const profile = savedCharts.find((c) => c.id === profileId);
         setParams({}, {replace: true});
         if (profile) handleSubmit(profile.input);
     }, [profileId, savedCharts, handleSubmit, setParams]);
+    useEffect(() => {
+        // Opened from the rectification page: /natal-chart?time=14:28 builds the chart for that time. The parameter is
+        // left in the address: changing it would remount the page (the layout animates on every navigation).
+        if (timeParam && birthInput && /^\d{2}:\d{2}$/.test(timeParam)) handleSubmit({...birthInput, time: timeParam});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [timeParam]);
+    useEffect(() => {
+        if (timeParam && chart) setEditing(false);
+    }, [timeParam, chart]);
 
     const handleEdit = useCallback(() => {
         setEditing(true);

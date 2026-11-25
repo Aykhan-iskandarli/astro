@@ -1,6 +1,6 @@
 import {useCallback, useMemo, useState} from 'react';
 import {Link} from 'react-router-dom';
-import {Alert, Button, Select} from 'antd';
+import {Alert, Button, Segmented, Select} from 'antd';
 import classNames from 'classnames';
 import {aspectPairText} from '@astra/content';
 import {Routes} from 'router/routes';
@@ -17,12 +17,22 @@ import {useGetYear} from 'pages/natal-chart/actions/natal-chart.query';
 import RetrogradeListComponent from 'pages/natal-chart/components/retrograde-list/retrograde-list.component';
 import LunationListComponent from 'pages/sky/components/lunation-list/lunation-list.component';
 import TransitReadingComponent from 'pages/natal-chart/components/transit-reading/transit-reading.component';
+import YearSummaryComponent from './components/year-summary/year-summary.component';
+import YearRhythmComponent from './components/year-rhythm/year-rhythm.component';
+import YearSolarComponent from './components/year-solar/year-solar.component';
+import YearStagesComponent from './components/year-stages/year-stages.component';
+import YearDirectionsComponent from './components/year-directions/year-directions.component';
+import YearSystemsComponent from './components/year-systems/year-systems.component';
+import {foldShortDips} from 'core/helpers/year-rhythm';
 import CollectiveYearComponent from './components/collective-year/collective-year.component';
 import {useYearForecastStyles} from './year-forecast.style';
 
 const MIN_YEAR = 1801;
 const MAX_YEAR = 2997;
 const TOP_MONTHS = 3;
+
+type View = 'mine' | 'society';
+type Part = 'summary' | 'character' | 'rhythm' | 'months' | 'solar' | 'slow' | 'lunations' | 'retro' | 'stages' | 'directions' | 'systems';
 
 // One calendar year read in one of the user's charts: the year's character, the busiest months, the slow
 // planets' houses, Moon phases and eclipses, and retrogrades.
@@ -35,6 +45,33 @@ function YearForecastComponent() {
     const [year, setYear] = useState(() => new Date().getFullYear());
     const [month, setMonth] = useState<number | null>(null);
     const {data, isFetching, isError} = useGetYear(input, year);
+    const [chosenView, setChosenView] = useState<View | null>(null);
+    const [part, setPart] = useState<Part>('summary');
+    const view: View = chosenView ?? (input ? 'mine' : 'society');
+    const mine = view === 'mine';
+    const handleView = useCallback((v: string | number) => {
+        setChosenView(v as View);
+    }, []);
+    const handlePart = useCallback((v: string | number) => {
+        setPart(v as Part);
+    }, []);
+    const views = useMemo(() => [
+        {value: 'mine', label: translate('year_view_mine')},
+        {value: 'society', label: translate('year_view_society')},
+    ], [translate]);
+    const parts = useMemo(() => [
+        {value: 'summary', label: translate('year_nav_summary')},
+        {value: 'character', label: translate('year_nav_character')},
+        {value: 'rhythm', label: translate('year_nav_rhythm')},
+        {value: 'months', label: translate('year_nav_months')},
+        {value: 'solar', label: translate('year_nav_solar')},
+        {value: 'slow', label: translate('year_nav_slow')},
+        {value: 'lunations', label: translate('year_nav_lunations')},
+        {value: 'retro', label: translate('year_nav_retro')},
+        {value: 'stages', label: translate('year_nav_stages')},
+        {value: 'directions', label: translate('year_nav_directions')},
+        {value: 'systems', label: translate('year_nav_systems')},
+    ], [translate]);
 
     const handlePrev = useCallback(() => {
         setYear((y) => Math.max(MIN_YEAR, y - 1));
@@ -62,6 +99,13 @@ function YearForecastComponent() {
 
     const profText = (n: number | null) => (n ? (content.profectionYear.house as Record<string, string>)[String(n)] : null);
     const solar = content.solarReturn as {house: Record<string, string>; asc: Record<string, string>};
+    const longText = content.lifetime as {firdaria: Record<string, string>};
+    const planetText = (content.reading as {planet: Record<string, string>}).planet;
+    const eraText = (content.collective as unknown as {signs: Record<string, Record<string, string>>}).signs;
+    const karmic = content.karmic as unknown as {nodeHouse: Record<string, {future: string}>; chironHouse: Record<string, string>};
+    const handleSolarPart = useCallback(() => {
+        setPart('solar');
+    }, []);
     const lifeText = (pid: string, n: number | null) => (n ? (content.lifeline.house as Record<string, Record<string, string>>)[pid]?.[String(n)] : null);
 
     return (
@@ -87,21 +131,33 @@ function YearForecastComponent() {
                     ) : null}
                 </div>
 
-                <CollectiveYearComponent year={year}/>
+                <div className={classes.nav}><Segmented value={view} onChange={handleView} options={views} size='large'/></div>
 
-                {!input ? (
+                {!mine ? <CollectiveYearComponent year={year}/> : null}
+
+                {mine && !input ? (
                     <div className={classes.empty}>
                         <p className={classes.muted}>{translate('today_no_chart')}</p>
                         <Link to={Routes.natalChart}><Button type='primary'>{translate('hero_cta')}</Button></Link>
                     </div>
                 ) : null}
-                {isError ? <Alert type='error' showIcon title={translate('year_error')}/> : null}
-                {input && !data && isFetching ? <LoaderComponent/> : null}
+                {mine && isError ? <Alert type='error' showIcon title={translate('year_error')}/> : null}
+                {mine && input && !data && isFetching ? <LoaderComponent/> : null}
 
-                {data ? (
+                {mine && data ? (
                     <div className={classNames(classes.body, {[classes.busy]: isFetching})}>
+                        <div className={classes.nav}><Segmented value={part} onChange={handlePart} options={parts} size='large'/></div>
+
                         {data.timeUnknown ? <Alert type='info' showIcon title={translate('year_time_unknown')}/> : null}
 
+                        {part === 'summary' ? <YearSummaryComponent data={data}/> : null}
+                        {part === 'rhythm' ? <YearRhythmComponent data={data}/> : null}
+                        {part === 'solar' ? <YearSolarComponent data={data}/> : null}
+                        {part === 'stages' && input ? <YearStagesComponent input={input} year={year}/> : null}
+                        {part === 'directions' && input ? <YearDirectionsComponent input={input} year={year}/> : null}
+                        {part === 'systems' && input ? <YearSystemsComponent input={input} year={year} data={data}/> : null}
+
+{part === 'character' ? (
                         <section className={classes.section} aria-labelledby='sec-character'>
                             <h2 id='sec-character'>{translate('year_character')}</h2>
                             <div className={classes.cards}>
@@ -116,6 +172,12 @@ function YearForecastComponent() {
                                             <span className='glyph' aria-hidden='true'>{glyph(POINT_GLYPHS[p.lord!])}</span> {name(p.lord)}
                                         </p>
                                         <p className={classes.text}>{profText(p.house)}</p>
+                                        {p.lord ? (
+                                            <details className={classes.more}>
+                                                <summary>{translate('year_full_read')}</summary>
+                                                <p>{translate('year_lord_read', {planet: name(p.lord)})} {planetText[p.lord]}</p>
+                                            </details>
+                                        ) : null}
                                     </article>
                                 ))}
                                 {data.solar.sun ? (
@@ -130,6 +192,7 @@ function YearForecastComponent() {
                                         </p>
                                         {data.solar.sun.house ? <p className={classes.text}>{solar.house[String(data.solar.sun.house)]}</p> : null}
                                         {data.solar.asc ? <p className={classes.text}>{solar.asc[data.solar.asc.sign!]}</p> : null}
+                                        <div><Button onClick={handleSolarPart}>{translate('year_solar_full')}</Button></div>
                                     </article>
                                 ) : null}
                                 {data.firdaria.length ? (
@@ -138,6 +201,12 @@ function YearForecastComponent() {
                                         {data.firdaria.map((p) => (
                                             <div key={p.start}>
                                                 <h3><span className='glyph' aria-hidden='true'>{glyph(POINT_GLYPHS[p.lord!])}</span> {name(p.lord)}</h3>
+                                                {longText.firdaria[p.lord!] ? (
+                                                    <details className={classes.more}>
+                                                        <summary>{translate('year_full_read')}</summary>
+                                                        <p>{longText.firdaria[p.lord!]}</p>
+                                                    </details>
+                                                ) : null}
                                                 <ul className={classes.plain}>
                                                     {p.sub.map((s) => (
                                                         <li key={s.start}>
@@ -152,7 +221,9 @@ function YearForecastComponent() {
                                 ) : null}
                             </div>
                         </section>
+) : null}
 
+{part === 'months' ? (
                         <section className={classes.section} aria-labelledby='sec-months'>
                             <h2 id='sec-months'>{translate('year_key_months')}</h2>
                             <p className={classes.muted}>{translate('year_key_months_intro')}</p>
@@ -197,7 +268,9 @@ function YearForecastComponent() {
                                 </div>
                             ) : null}
                         </section>
+) : null}
 
+{part === 'slow' ? (
                         <section className={classes.section} aria-labelledby='sec-slow'>
                             <h2 id='sec-slow'>{translate('year_slow')}</h2>
                             <p className={classes.muted}>{translate('year_slow_intro')}</p>
@@ -216,20 +289,45 @@ function YearForecastComponent() {
                                                 </div>
                                             );
                                         })}
+                                        {v.houses ? v.signs.map((s) => (eraText[pid]?.[s.sign!] ? (
+                                            <p key={`sign-${s.start}`} className={classes.text}>
+                                                <strong>{sign(s.sign)}</strong>
+                                                <span className={classes.muted}>{` · ${s.startClipped ? translate('year_from_start') : formatLocal(s.start, false)} – ${s.endClipped ? translate('year_to_end') : formatLocal(s.end, false)}`}</span>
+                                                <br/>{eraText[pid][s.sign!]}
+                                            </p>
+                                        ) : null)) : null}
                                     </li>
                                 ))}
+                                {(['northNode', 'chiron'] as const).map((pid) => (data.fastPlanets?.[pid]?.length ? (
+                                    <li key={pid} className={classes.slowItem}>
+                                        <h3><span className='glyph' aria-hidden='true'>{glyph(POINT_GLYPHS[pid])}</span> {name(pid)}</h3>
+                                        {foldShortDips(data.fastPlanets[pid]).map((s) => (
+                                            <div key={s.start} className={classes.slowSeg}>
+                                                <p><strong>{house(s.region)?.name}</strong>
+                                                    <span className={classes.muted}>{` · ${s.startClipped ? translate('year_from_start') : formatLocal(s.start, false)} – ${s.endClipped ? translate('year_to_end') : formatLocal(s.end, false)}`}</span>
+                                                </p>
+                                                <p className={classes.text}>{pid === 'northNode' ? karmic.nodeHouse[String(s.region)]?.future : karmic.chironHouse[String(s.region)]}</p>
+                                            </div>
+                                        ))}
+                                    </li>
+                                ) : null))}
                             </ul>
                         </section>
+) : null}
 
+{part === 'lunations' ? (
                         <section className={classes.section} aria-labelledby='sec-lunations'>
                             <h2 id='sec-lunations'>{translate('year_lunations')}</h2>
                             <LunationListComponent lunations={data.lunations} timeUnknown={data.timeUnknown} limit={8} expandable/>
                         </section>
+) : null}
 
+{part === 'retro' ? (
                         <section className={classes.section} aria-labelledby='sec-retro'>
                             <h2 id='sec-retro'>{translate('year_retro')}</h2>
                             <RetrogradeListComponent retrogrades={data.retrogrades} from={`${year}-01-01`} to={`${year + 1}-01-01`}/>
                         </section>
+) : null}
 
                         <p className={classes.muted}>{translate('year_note')}</p>
                     </div>

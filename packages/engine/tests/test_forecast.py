@@ -250,3 +250,32 @@ def test_progressed_moon_count_matches_a_fine_scan_and_date_only_drops_the_moon(
     assert expected == sum(1 for h in out["progressed"] if h["progressed"] == "moon")
     dateonly = D.calculate(BirthData(date=BIRTH.date, time=None, latitude=BIRTH.latitude, longitude=BIRTH.longitude, timezone=BIRTH.timezone), start_year=2025, years=3)
     assert dateonly["meta"]["timeUnknown"]
+
+
+@pytest.mark.parametrize("pid", ["sun", "mercury", "venus", "mars", "northNode", "chiron"])
+def test_year_fast_planet_houses_match_an_independent_scan(pid):
+    out = F.calculate(BIRTH, kind="year", year=2027)
+    segs = out["fastPlanets"][pid]
+    cusps = _cusps()
+    a, b = _jd(segs[0]["start"]), _jd(segs[-1]["end"])
+    assert [s["region"] for s in segs] == _scan(pid, a, b, 0.05, lambda lon: house_of(lon, cusps))
+    assert segs[0]["startClipped"] and segs[-1]["endClipped"]
+    assert segs[0]["start"].startswith("2027-01-01") and segs[-1]["end"].startswith("2028-01-01")
+
+
+def test_year_solar_return_lists_every_point_of_the_return_chart():
+    out = F.calculate(BIRTH, kind="year", year=2027)
+    pts = {p["id"]: p for p in out["solarReturn"]["points"]}
+    assert {"sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"} <= set(pts)
+    assert pts["sun"]["longitude"] == out["solarReturn"]["sun"]["longitude"] and pts["sun"]["house"]
+
+
+def test_year_without_birth_time_has_no_fast_planet_houses():
+    b = BirthData(date=BIRTH.date, latitude=BIRTH.latitude, longitude=BIRTH.longitude, timezone=BIRTH.timezone)
+    assert F.calculate(b, kind="year", year=2027)["fastPlanets"] is None
+
+
+def test_year_carries_the_numerology_personal_year():
+    # born 15.06: day 6 + month 6 + the year's digit sum (2027 -> 11 -> 2) = 14 -> 5; 2026 -> 10 -> 1: 6 + 6 + 1 = 13 -> 4
+    assert F.calculate(BIRTH, kind="year", year=2027)["personalYear"] == {"value": 5, "year": 2027}
+    assert F.calculate(BIRTH, kind="year", year=2026)["personalYear"] == {"value": 4, "year": 2026}

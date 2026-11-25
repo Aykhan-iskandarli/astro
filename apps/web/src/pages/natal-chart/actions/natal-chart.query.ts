@@ -261,11 +261,11 @@ export const useGetComposite = (first: IBirthInput | null, second: IBirthInput |
     });
 };
 
-export const useGetTimeline = (input: IBirthInput | null, start: string, days: number, enabled: boolean) => {
+export const useGetTimeline = (input: IBirthInput | null, start: string, days: number, enabled: boolean, fast = false) => {
     return useQuery<TimelineModel, Error>({
-        queryKey: ['timeline', input, start, days],
+        queryKey: ['timeline', input, start, days, fast],
         queryFn: () => {
-            return getTimeline(input!, start, days);
+            return getTimeline(input!, start, days, fast);
         },
         enabled: !!input && enabled,
         placeholderData: keepPreviousData,

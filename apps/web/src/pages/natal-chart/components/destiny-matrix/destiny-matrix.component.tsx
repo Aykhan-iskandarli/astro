@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import useLocalization, {useContent} from 'assets/lang';
 import MatrixDiagramComponent from '../matrix-diagram/matrix-diagram.component';
 import MatrixLinesComponent from '../matrix-lines/matrix-lines.component';
+import MatrixChakrasComponent from '../matrix-chakras/matrix-chakras.component';
+import MatrixAgeComponent from '../matrix-age/matrix-age.component';
 import {IChakraRow} from '../../models/destiny-matrix.model';
 import {useDestinyMatrixStyles} from './destiny-matrix.style';
 import {IDestinyMatrix} from './destiny-matrix';
@@ -118,6 +120,7 @@ const DestinyMatrixComponent = ({matrix}: IDestinyMatrix) => {
                 <h3 id='dm-health'>{translate('section_health')}</h3>
                 <Table rowKey='id' size='small' columns={chakraColumns} dataSource={chakraRows} pagination={false}
                        scroll={{x: true}} rowClassName={totalRowClass}/>
+                <MatrixChakrasComponent matrix={matrix}/>
             </section>
 
             <section className={classes.section} aria-labelledby='dm-lines'>
@@ -127,6 +130,7 @@ const DestinyMatrixComponent = ({matrix}: IDestinyMatrix) => {
 
             <section className={classes.section} aria-labelledby='dm-age'>
                 <h3 id='dm-age'>{translate('section_age')}</h3>
+                <MatrixAgeComponent matrix={matrix} currentAge={currentAge}/>
                 <div className={classes.ages}>
                     {sectors.map((steps) => (
                         <ol key={steps[0]?.age} className={classes.sector}>

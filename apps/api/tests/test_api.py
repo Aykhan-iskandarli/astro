@@ -329,3 +329,14 @@ def test_sky_collective_endpoint():
     body = r.json()
     assert body["year"] == 2026 and len(body["positions"]) == 6 and body["aspects"] and body["eclipses"]
     assert client.get("/api/sky/collective", params={"year": 1700}).status_code == 422
+
+
+def test_rectification_endpoint():
+    body = {"date": "1990-06-15", "latitude": 40.4093, "longitude": 49.8671, "timezone": "Asia/Baku",
+            "events": ["2004-10-16", "2010-01-05"], "windowStart": "12:00", "windowEnd": "16:00"}
+    r = client.post("/api/charts/rectification", json=body)
+    assert r.status_code == 200
+    out = r.json()
+    assert out["top"] and out["curve"][0]["time"] == "12:00"
+    assert client.post("/api/charts/rectification", json={**body, "events": ["1980-01-01"]}).status_code == 422
+    assert client.post("/api/charts/rectification", json={**body, "events": []}).status_code == 422

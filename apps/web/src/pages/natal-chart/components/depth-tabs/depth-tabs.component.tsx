@@ -10,11 +10,12 @@ import ChartSaturnPlutoComponent from '../chart-saturn-pluto/chart-saturn-pluto.
 import ChartDraconicComponent from '../chart-draconic/chart-draconic.component';
 import ChartGenerationComponent from '../chart-generation/chart-generation.component';
 import ChartSummaryComponent from '../chart-summary/chart-summary.component';
+import ChartThemesComponent from '../chart-themes/chart-themes.component';
 import ChartHealthComponent from '../chart-health/chart-health.component';
 import {useDepthTabsStyles} from './depth-tabs.style';
 import {IDepthTabs} from './depth-tabs';
 
-type Section = 'summary' | 'general' | 'power' | 'saturnPluto' | 'draconic' | 'generation' | 'aspects' | 'career' | 'finance' | 'health';
+type Section = 'summary' | 'themes' | 'general' | 'power' | 'saturnPluto' | 'draconic' | 'generation' | 'aspects' | 'career' | 'finance' | 'health';
 
 // The deep-analysis tab: the general reading and the life areas (career, finances, health), one at a time.
 const DepthTabsComponent = ({chart}: IDepthTabs) => {
@@ -27,6 +28,7 @@ const DepthTabsComponent = ({chart}: IDepthTabs) => {
     }, []);
     const options = useMemo(() => [
         {value: 'summary', label: translate('depth_nav_summary')},
+        {value: 'themes', label: translate('depth_nav_themes')},
         {value: 'general', label: translate('depth_nav_general')},
         {value: 'power', label: translate('depth_nav_power')},
         {value: 'aspects', label: translate('depth_nav_aspects')},
@@ -42,6 +44,7 @@ const DepthTabsComponent = ({chart}: IDepthTabs) => {
         <div className={classes.wrap}>
             <div className={classes.nav}><Segmented value={section} onChange={handleSection} options={options} size='large'/></div>
             {section === 'summary' ? <ChartSummaryComponent chart={chart}/> : null}
+            {section === 'themes' ? <ChartThemesComponent chart={chart}/> : null}
             {section === 'saturnPluto' ? <ChartSaturnPlutoComponent chart={chart}/> : null}
             {section === 'generation' ? <ChartGenerationComponent chart={chart}/> : null}
             {section === 'draconic' ? <ChartDraconicComponent chart={chart}/> : null}

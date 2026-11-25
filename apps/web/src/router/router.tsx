@@ -17,6 +17,9 @@ const ChooseDayComponent = lazyWithPreload(() => import('../pages/choose-day/cho
 const TransformationsComponent = lazyWithPreload(() => import('../pages/transformations/transformations.component'));
 const DirectionsComponent = lazyWithPreload(() => import('../pages/directions/directions.component'));
 const PastEventsComponent = lazyWithPreload(() => import('../pages/past-events/past-events.component'));
+const QuestionsComponent = lazyWithPreload(() => import('../pages/questions/questions.component'));
+const DashboardComponent = lazyWithPreload(() => import('../pages/dashboard/dashboard.component'));
+const RectificationComponent = lazyWithPreload(() => import('../pages/rectification/rectification.component'));
 const LifeTimelineComponent = lazyWithPreload(() => import('../pages/life-timeline/life-timeline.component'));
 const GlossaryComponent = lazyWithPreload(() => import('../pages/glossary/glossary.component'));
 const PrivacyPolicyComponent = lazyWithPreload(() => import('../pages/privacy-policy/privacy-policy.component'));
@@ -35,6 +38,9 @@ export const preloadRoute = (pathname: string) => {
     if (path === Routes.transformations) return TransformationsComponent.preload();
     if (path === Routes.directions) return DirectionsComponent.preload();
     if (path === Routes.pastEvents) return PastEventsComponent.preload();
+    if (path === Routes.questions) return QuestionsComponent.preload();
+    if (path === Routes.dashboard) return DashboardComponent.preload();
+    if (path === Routes.rectification) return RectificationComponent.preload();
     if (path === Routes.lifeTimeline) return LifeTimelineComponent.preload();
     if (path === Routes.glossary) return GlossaryComponent.preload();
     if (path === Routes.privacyPolicy) return PrivacyPolicyComponent.preload();
@@ -92,6 +98,18 @@ const router = createBrowserRouter([
             {
                 path: Routes.pastEvents,
                 element: withSuspense(<PastEventsComponent/>),
+            },
+            {
+                path: Routes.questions,
+                element: withSuspense(<QuestionsComponent/>),
+            },
+            {
+                path: Routes.dashboard,
+                element: withSuspense(<DashboardComponent/>),
+            },
+            {
+                path: Routes.rectification,
+                element: withSuspense(<RectificationComponent/>),
             },
             {
                 path: Routes.lifeTimeline,

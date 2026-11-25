@@ -17,6 +17,7 @@ const FooterComponent = () => {
                 </div>
                 <ul className={links}>
                     <li><Link to={Routes.natalChart}>{translate('nav_chart')}</Link></li>
+                    <li><Link to={Routes.dashboard}>{translate('nav_dashboard')}</Link></li>
                     <li><Link to={Routes.nameAnalysis}>{translate('nav_name')}</Link></li>
                     <li><Link to={Routes.today}>{translate('nav_today')}</Link></li>
                     <li><Link to={Routes.calendar}>{translate('nav_calendar')}</Link></li>
@@ -25,6 +26,8 @@ const FooterComponent = () => {
                     <li><Link to={Routes.transformations}>{translate('nav_transform')}</Link></li>
                     <li><Link to={Routes.directions}>{translate('nav_directions')}</Link></li>
                     <li><Link to={Routes.pastEvents}>{translate('nav_events')}</Link></li>
+                    <li><Link to={Routes.questions}>{translate('nav_questions')}</Link></li>
+                    <li><Link to={Routes.rectification}>{translate('nav_rect')}</Link></li>
                     <li><Link to={Routes.lifeTimeline}>{translate('nav_life')}</Link></li>
                     <li><Link to={Routes.glossary}>{translate('nav_glossary')}</Link></li>
                     <li><Link to={Routes.privacyPolicy}>{translate('nav_privacy')}</Link></li>

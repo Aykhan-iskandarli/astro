@@ -252,10 +252,12 @@ export class SolarReturnSummaryModel {
     public sun: ChartPointModel | null = null;
     public moon: ChartPointModel | null = null;
     public asc: ChartPositionModel | null = null;
+    public points: ChartPointModel[] = [];
 
     constructor(item: any) {
         this._setAt(item);
         this._setPoints(item);
+        this._setAllPoints(item);
     }
 
     private _setAt({at}: any) {
@@ -267,6 +269,10 @@ export class SolarReturnSummaryModel {
         this.moon = moon ? new ChartPointModel(moon) : null;
         this.asc = asc ? new ChartPositionModel(asc, 'asc') : null;
     }
+
+    private _setAllPoints({points}: any) {
+        this.points = points?.map((p: any) => new ChartPointModel(p)) ?? [];
+    }
 }
 
 export default class YearModel {
@@ -276,6 +282,8 @@ export default class YearModel {
     public solar: SolarReturnSummaryModel = new SolarReturnSummaryModel({});
     public firdaria: FirdariaPeriodModel[] = [];
     public slowPlanets: Record<string, SlowPlanetModel> = {};
+    public fastPlanets: Record<string, SegmentModel[]> | null = null;
+    public personalYear: number | null = null;
     public transits: TimelineEventModel[] = [];
     public months: MonthModel[] = [];
     public lunations: PersonalLunationModel[] = [];
@@ -287,6 +295,8 @@ export default class YearModel {
         this._setSolar(item);
         this._setFirdaria(item);
         this._setSlowPlanets(item);
+        this._setFastPlanets(item);
+        this._setPersonalYear(item);
         this._setTransits(item);
         this._setMonths(item);
         this._setLunations(item);
@@ -312,6 +322,16 @@ export default class YearModel {
 
     private _setSlowPlanets({slowPlanets}: any) {
         this.slowPlanets = planets(slowPlanets);
+    }
+
+    private _setFastPlanets({fastPlanets}: any) {
+        this.fastPlanets = fastPlanets
+            ? Object.fromEntries(Object.entries(fastPlanets).map(([id, segs]) => [id, (segs as any[]).map((x) => new SegmentModel(x))]))
+            : null;
+    }
+
+    private _setPersonalYear({personalYear}: any) {
+        this.personalYear = personalYear?.value ?? null;
     }
 
     private _setTransits({transits}: any) {

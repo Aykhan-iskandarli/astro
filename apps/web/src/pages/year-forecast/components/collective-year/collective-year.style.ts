@@ -6,6 +6,7 @@ import {rem} from 'assets/styles/abstracts/functions';
 const styles = {
     wrap: {display: 'flex', flexDirection: 'column', gap: rem(28)},
     title: {fontSize: rem(28)},
+    nav: {overflowX: 'auto', paddingBottom: rem(4)},
     block: {display: 'flex', flexDirection: 'column', gap: rem(14), '& > h3': {fontSize: rem(22)}},
     muted: {color: colors.textMuted, fontSize: rem(sizes.small), lineHeight: 1.6},
     grid: {display: 'flex', flexDirection: 'column', gap: rem(20), width: '100%', maxWidth: rem(820)},

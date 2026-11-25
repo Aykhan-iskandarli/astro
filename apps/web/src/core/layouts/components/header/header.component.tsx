@@ -15,12 +15,14 @@ const LANGS: ILang[] = ['az', 'en', 'ru'];
 const NAV = [
     {to: Routes.default, key: 'nav_home', end: true},
     {to: Routes.natalChart, key: 'nav_chart', end: false},
+    {to: Routes.dashboard, key: 'nav_dashboard', end: false},
     {to: Routes.nameAnalysis, key: 'nav_name', end: false},
     {to: Routes.today, key: 'nav_today', end: false},
     {to: Routes.profiles, key: 'nav_profiles', end: false},
 ] as const;
 // The forecast pages share one menu on wide screens (ten links do not fit in the header); the phone menu lists them all
 const FORECAST = [
+    {to: Routes.questions, key: 'nav_questions', end: false},
     {to: Routes.calendar, key: 'nav_calendar', end: false},
     {to: Routes.yearForecast, key: 'nav_year', end: false},
     {to: Routes.chooseDay, key: 'nav_choose', end: false},
@@ -28,8 +30,9 @@ const FORECAST = [
     {to: Routes.lifeTimeline, key: 'nav_life', end: false},
     {to: Routes.directions, key: 'nav_directions', end: false},
     {to: Routes.pastEvents, key: 'nav_events', end: false},
+    {to: Routes.rectification, key: 'nav_rect', end: false},
 ] as const;
-const MOBILE_NAV = [...NAV.slice(0, 4), ...FORECAST, ...NAV.slice(4)];
+const MOBILE_NAV = [...NAV.slice(0, 5), ...FORECAST, ...NAV.slice(5)];
 
 const HeaderComponent = () => {
     const translate = useLocalization();
@@ -118,7 +121,7 @@ const HeaderComponent = () => {
                     {translate('site_name')}
                 </Link>
                 <nav className={nav} aria-label={translate('nav_main')}>
-                    {NAV.slice(0, 4).map((n) => (
+                    {NAV.slice(0, 5).map((n) => (
                         <NavLink key={n.to} to={n.to} end={n.end} className={navClass}>{translate(n.key)}</NavLink>
                     ))}
                     <div ref={groupRef} className={group}>
@@ -134,7 +137,7 @@ const HeaderComponent = () => {
                             </div>
                         ) : null}
                     </div>
-                    {NAV.slice(4).map((n) => (
+                    {NAV.slice(5).map((n) => (
                         <NavLink key={n.to} to={n.to} end={n.end} className={navClass}>{translate(n.key)}</NavLink>
                     ))}
                 </nav>

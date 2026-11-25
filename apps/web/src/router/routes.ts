@@ -11,6 +11,9 @@ export enum Routes {
     lifeTimeline = '/life-timeline',
     directions = '/directions',
     pastEvents = '/past-events',
+    questions = '/questions',
+    dashboard = '/panel',
+    rectification = '/rectification',
     profiles = '/profiles',
     privacyPolicy = '/privacy-policy',
 }

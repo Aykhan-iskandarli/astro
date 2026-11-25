@@ -1,4 +1,5 @@
 import useLocalization, {useContent} from 'assets/lang';
+import TransitAdviceComponent from 'core/shared/transit-advice/transit-advice.component';
 import {useTransitReadingStyles} from './transit-reading.style';
 import {ITransitReading} from './transit-reading';
 
@@ -19,8 +20,10 @@ const TransitReadingComponent = ({transit, natal, aspect, children}: ITransitRea
     const aspectText = tr.aspect[aspect];
     const target = tr.target[natal];
 
-    if (!cycle && !planet && !aspectText && !target) return null;
+    if (!cycle && !planet && !aspectText && !target) return <TransitAdviceComponent transit={transit} aspect={aspect}/>;
     return (
+        <>
+        <TransitAdviceComponent transit={transit} aspect={aspect}/>
         <details className={classes.full}>
             <summary>{translate('tr_read_full')}</summary>
             {cycle ? <section><h5>{translate('tr_part_cycle')}: {cycle.name}</h5><p>{cycle.text}</p></section> : null}
@@ -29,6 +32,7 @@ const TransitReadingComponent = ({transit, natal, aspect, children}: ITransitRea
             {target ? <section><h5>{translate('tr_part_target')}: {name(natal)}</h5><p>{target}</p></section> : null}
             {children}
         </details>
+        </>
     );
 };
 

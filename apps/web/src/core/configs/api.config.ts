@@ -28,6 +28,7 @@ export const API = {
     lifetime: '/api/charts/lifetime',
     generation: '/api/charts/generation',
     directions: '/api/charts/directions',
+    rectification: '/api/charts/rectification',
     transformations: '/api/charts/transformations',
     electional: '/api/charts/electional',
     moonDay: '/api/charts/moon-day',

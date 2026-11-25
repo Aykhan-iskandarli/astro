@@ -100,6 +100,7 @@ class AstrocartographyRequest(NatalRequest):
 class TimelineRequest(NatalRequest):
     start: Date | None = None
     days: int = Field(default=365, ge=1, le=400)
+    fast: bool = False  # also the Sun, Mercury and Venus (for days and weeks)
 
 
 class LifelineRequest(NatalRequest):
@@ -133,6 +134,12 @@ class LifetimeRequest(NatalRequest):
 class TransformationsRequest(NatalRequest):
     start_year: int | None = Field(default=None, ge=1800, le=2960)
     years: int = Field(default=5, ge=1, le=30)
+
+
+class RectificationRequest(NatalRequest):
+    events: list[Date] = Field(min_length=1, max_length=12)
+    window_start: Time | None = None
+    window_end: Time | None = None
 
 
 class ElectionalRequest(NatalRequest):
@@ -421,7 +428,7 @@ def transit_timeline(req: TimelineRequest) -> dict:
     if req.start is not None and not 1800 <= req.start.year <= 2998:
         raise HTTPException(status_code=422, detail=["date must be between 1800 and 2999"])
     return MODULES["western.timeline"].calculate(_birth(req), start=req.start, days=req.days,
-                                                 house_system=req.house_system)
+                                                 house_system=req.house_system, fast=req.fast)
 
 
 @app.post("/api/charts/lifeline")
@@ -475,6 +482,16 @@ def transformations(req: TransformationsRequest) -> dict:
     """Long transits of Jupiter-Pluto to the natal chart as episodes (all exact passes), over several years."""
     return MODULES["western.transformations"].calculate(_birth(req), start_year=req.start_year, years=req.years,
                                                         house_system=req.house_system)
+
+
+@app.post("/api/charts/rectification")
+def rectification(req: RectificationRequest) -> dict:
+    """Candidate birth times of the birth day ranked by how well they fit the dated events. Nothing is stored."""
+    try:
+        return MODULES["western.rectification"].calculate(_birth(req), events=req.events, start=req.window_start,
+                                                         end=req.window_end)
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=[str(e)]) from e
 
 
 @app.post("/api/charts/directions")

@@ -708,6 +708,36 @@
       "karmicTail": "Karmik quyruq həyatda təkrarlanan ssenariləri və onları həll yolunu göstərir. Soldan sağa: münasibətə hazırlıq, keçmişdən gələn işlənməmiş tapşırıq və ruhun əsas karmik dərsi.",
       "maleLine": "Kişi nəsil proqramları ata xəttinin iki qoludur. Birinci qol mənəvi irsdən proqrama və istedada gedir; ikinci qol maddi irsin mərkəzə yaxın enerjisindən proqrama və maddi irsin özünə gedir.",
       "femaleLine": "Qadın nəsil proqramları ana xəttinin iki qoludur. Birinci qol maddi irsdən proqrama və mərkəzə yaxın enerjiyə gedir; ikinci qol mərkəzə yaxın enerjidən proqrama və mənəvi irsin özünə gedir."
+    },
+    "chakraInfo": {
+      "sahasrara": {
+        "body": "baş beyni, kəllə, sinir sistemi",
+        "theme": "dünyagörüşü, mənəviyyat, həyatın mənası ilə bağlılıq"
+      },
+      "ajna": {
+        "body": "gözlər, baş, burun, endokrin sistemin yuxarı hissəsi",
+        "theme": "təfəkkür, sezgi, öz həyatını görmək və planlaşdırmaq"
+      },
+      "vishuddha": {
+        "body": "boğaz, qalxanabənzər vəz, çiyinlər, səs",
+        "theme": "özünüifadə, fikrini deyə bilmək, ünsiyyət"
+      },
+      "anahata": {
+        "body": "ürək, ağciyərlər, döş qəfəsi, qollar",
+        "theme": "sevgi, qəbul etmək, münasibətlərdə açıqlıq"
+      },
+      "manipura": {
+        "body": "mədə, qaraciyər, öd kisəsi, mədəaltı vəz",
+        "theme": "iradə, özünə inam, pul və sosial uğur"
+      },
+      "svadhisthana": {
+        "body": "böyrəklər, cinsiyyət orqanları, kiçik çanaq",
+        "theme": "zövq, istək, yaradıcılıq, bədənlə barışıq"
+      },
+      "muladhara": {
+        "body": "onurğanın aşağısı, ayaqlar, sümüklər, bağırsağın aşağısı",
+        "theme": "təhlükəsizlik, maddi təməl, yaşamaq instinkti"
+      }
     }
   },
   "vedic": {
@@ -1544,6 +1574,17 @@
         "shows": "Hər şeyi tək etməyə meyl, kömək istəməkdə çətinlik, müstəqillik ilə təklik arasında gərginlik kimi görünə bilər.",
         "lesson": "Kömək istəməyi və qəbul etməyi öyrənmək, gücü paylaşmaq və başqalarına etibar etmək."
       }
+    },
+    "personalYearReading": {
+      "1": "Yeni başlanğıc ili: 9 illik dövr yenidən başlayır. Təşəbbüs, müstəqillik və yeni layihələr önə çıxır; indi atdığınız addımlar növbəti illərin istiqamətini müəyyən edir.",
+      "2": "Əməkdaşlıq və səbir ili: tərəfdaşlıq, münasibətlər və diplomatiya önə çıxır. Tələsmək yox, hazırlaşmaq, dinləmək və gözləmək vaxtıdır.",
+      "3": "Yaradıcılıq və ünsiyyət ili: özünüifadə, sosial əlaqələr və sevinc mövzudur. Fikirlərinizi paylaşmaq və yaradıcı işlərə vaxt ayırmaq üçün yaxşı ildir.",
+      "4": "Quruculuq ili: iş, intizam, təməl və nizam önə çıxır. Zəhmət tələb edir, amma uzunmüddətli sabitlik qurmaq üçün əlverişlidir.",
+      "5": "Dəyişiklik ili: hərəkət, səyahət, azadlıq və gözlənilməz hadisələr mövzudur. Yeniliyə açıq olmaq, amma tələsik qərarlardan çəkinmək lazımdır.",
+      "6": "Məsuliyyət və ailə ili: ev, qayğı, öhdəliklər və münasibətlərdə uyğunluq önə çıxır. Yaxınlarınıza vaxt ayırmaq və tarazlıq qurmaq vaxtıdır.",
+      "7": "Daxili axtarış ili: təhlil, öyrənmə, mənəviyyat və tənhalıq mövzudur. Çölə yox, içəri baxmaq, dərinləşmək və nəticə çıxarmaq üçün yaxşı ildir.",
+      "8": "Nailiyyət və güc ili: karyera, pul, nüfuz və nəticələr önə çıxır. Əvvəlki zəhmətin bəhrəsi gəlir, eyni zamanda məsuliyyət və ölçü tələb olunur.",
+      "9": "Tamamlanma ili: 9 illik dövr yekunlaşır. Köhnəni buraxmaq, bağışlamaq, yekun vurmaq və növbəti dövrə hazırlaşmaq vaxtıdır."
     }
   },
   "chinese": {
@@ -3698,6 +3739,34 @@
       "mars": "Karyerada Mars: enerji, rəqabət, təşəbbüs və texniki bacarıq. Marsın vəziyyəti işdə nə qədər atılqan olduğunuzu və mübarizəni necə apardığınızı göstərir.",
       "jupiter": "Karyerada Yupiter: böyümə, şans, öyrətmək və genişlənmə. Yupiterin vəziyyəti karyerada imkanların nə qədər asan açıldığını və hansı sahədə uğur gətirdiyini göstərir.",
       "saturn": "Karyerada Saturn: quruluş, məsuliyyət, nüfuz və uzunmüddətli nəticə. Saturnun vəziyyəti karyerada hansı çətinlikləri aşmalı və nəyi zamanla möhkəm qura biləcəyinizi göstərir."
+    },
+    "professions": {
+      "sign": {
+        "aries": "sahibkarlıq, idman və məşqçilik, hərbi və təhlükəsizlik xidmətləri, cərrahiyyə, satış, start-aplar, xilasetmə",
+        "taurus": "maliyyə və bank işi, daşınmaz əmlak, kənd təsərrüfatı və qida, dizayn və incəsənət, musiqi, gözəllik, tikinti materialları",
+        "gemini": "jurnalistika, yazıçılıq, tərcümə, müəllimlik, marketinq və reklam, ticarət, nəqliyyat və logistika, İT və sosial media",
+        "cancer": "uşaq və ailə xidmətləri, qida və restoran işi, daşınmaz əmlak və ev, tibb bacısı, psixoloji dəstək, tarix və muzey işi",
+        "leo": "rəhbərlik və idarəetmə, səhnə, kino və şou, dizayn, təqdimat və aparıcılıq, uşaqlarla iş, brend və PR",
+        "virgo": "səhiyyə və farmakologiya, analitika, mühasibat və audit, redaktorluq, keyfiyyətə nəzarət, qidalanma, inzibati iş",
+        "libra": "hüquq və vasitəçilik, diplomatiya, dizayn və moda, gözəllik sənayesi, insan resursları, müştəri münasibətləri, incəsənət",
+        "scorpio": "psixologiya və psixoterapiya, tədqiqat və araşdırma, cərrahiyyə, maliyyə, investisiya və sığorta, təhlükəsizlik, böhran idarəetməsi",
+        "sagittarius": "ali təhsil və müəllimlik, nəşriyyat, hüquq, turizm və səyahət, beynəlxalq ticarət, din və fəlsəfə, idman",
+        "capricorn": "dövlət xidməti, idarəetmə və menecment, mühəndislik və tikinti, maliyyə planlaması, hüquq, böyük təşkilatlarda karyera",
+        "aquarius": "İT və proqramlaşdırma, elm və innovasiya, sosial layihələr və QHT, aviasiya, şəbəkələr, astrologiya, kollektiv işlər",
+        "pisces": "incəsənət, musiqi və film, şəfa və tibb, psixologiya, xeyriyyə, dəniz və su ilə bağlı işlər, mənəvi xidmət, foto"
+      },
+      "planet": {
+        "sun": "rəhbərlik, idarəetmə, ictimai rol, öz adı ilə tanınan işlər",
+        "moon": "insanlarla və ictimaiyyətlə iş, qayğı, qida, ev, satış",
+        "mercury": "yazı, ünsiyyət, ticarət, təhsil, analiz, İT",
+        "venus": "incəsənət, dizayn, gözəllik, diplomatiya, maliyyə",
+        "mars": "sahibkarlıq, idman, mühəndislik, hərbi iş, cərrahiyyə, rəqabətli sahələr",
+        "jupiter": "təhsil, hüquq, nəşriyyat, beynəlxalq iş, məsləhətçilik",
+        "saturn": "idarəetmə, dövlət, tikinti, uzunmüddətli layihələr, ekspert işi",
+        "uranus": "texnologiya, elm, innovasiya, sərbəst və qeyri-adi peşələr",
+        "neptune": "incəsənət, film, musiqi, şəfa, xeyriyyə, mənəvi iş",
+        "pluto": "tədqiqat, psixologiya, maliyyə, böhran idarəetməsi, güc strukturları"
+      }
     }
   },
   "finance": {
@@ -4039,6 +4108,142 @@
       "uranus": "Retroqrad Uran: qəfil dəyişikliklərin daxilə yönəlməsi. Yeniliyin nəticələri qiymətləndirilir, üsyan enir və fikirlər yetişir.",
       "neptune": "Retroqrad Neptun: aldanışlar azalır və idealların reallığı yoxlanır. Mənəvi mövzular daxildən dərinləşir.",
       "pluto": "Retroqrad Pluton: dərin çevrilmənin daxili mərhələsi. Gizli güc strukturları və kollektiv travmalar yenidən nəzərdən keçirilir."
+    }
+  },
+  "themes": {
+    "1": {
+      "name": "Özün və təşəbbüs",
+      "text": "Həyatınızda tez-tez özünüz olmaq, ilk addımı atmaq və öz yolunuzu açmaq mövzusu çıxır. Müstəqillik, cəsarət və rəqabət sizin üçün təsadüfi deyil, əsas xətdir; dərs səbir və başqalarını da nəzərə almaqdır."
+    },
+    "2": {
+      "name": "Dəyərlər və resurslar",
+      "text": "Pul, mülk, bədən və özünüdəyər hissi xəritənizdə təkrarlanır. Sabit təməl qurmaq, istedadı gəlirə çevirmək və həqiqətən nəyə dəyər verdiyinizi bilmək həyatınızın əsas işlərindəndir."
+    },
+    "3": {
+      "name": "Ünsiyyət və öyrənmə",
+      "text": "Söz, məlumat, öyrənmə və yaxın ətraf (bacı-qardaş, qonşu, gündəlik əlaqələr) mövzusu təkrarlanır. Fikri çatdırmaq, yazmaq, danışmaq və maraqlanmaq sizin üçün əsas alətdir."
+    },
+    "4": {
+      "name": "Ev, ailə və köklər",
+      "text": "Ev, ailə, kök və emosional təhlükəsizlik mövzusu xəritədə dəfələrlə görünür. Özünüzü rahat hiss etdiyiniz yeri qurmaq, keçmişlə və ailə ilə münasibəti anlamaq həyatınızın əsas xəttidir."
+    },
+    "5": {
+      "name": "Yaradıcılıq və özünüifadə",
+      "text": "Yaradıcılıq, sevinc, oyun, uşaqlar və özünü göstərmə mövzusu təkrarlanır. Ürəkdən gələni ifadə etmək və görünmək sizin üçün həyati ehtiyacdır; dərs qürurla deyil, ürəklə parlamaqdır."
+    },
+    "6": {
+      "name": "İş, xidmət və sağlamlıq",
+      "text": "Gündəlik iş, vərdişlər, sağlamlıq və faydalı olmaq mövzusu xəritədə önə çıxır. Nizam, bacarıq və təkmilləşmə sizin gücünüzdür; dərs mükəmməllik təzyiqini azaltmaqdır."
+    },
+    "7": {
+      "name": "Münasibətlər və tərəfdaşlıq",
+      "text": "Tərəfdaşlıq, müqavilə, ədalət və 'mən və o biri' mövzusu təkrarlanır. Həyatınızın çox hissəsi başqaları ilə qarşılaşmada formalaşır; dərs özünüzü itirmədən tarazlıq tapmaqdır."
+    },
+    "8": {
+      "name": "Dərin çevrilmə və ortaq resurslar",
+      "text": "Güc, gizli olan, böhranlar, ortaq pul və dərin bağlılıq mövzusu təkrarlanır. Həyatınız bir neçə dəfə 'ölüb-dirilmə' kimi yenilənmə yaşadır; dərs nəzarəti buraxıb dəyişikliyə etibar etməkdir."
+    },
+    "9": {
+      "name": "Məna, inam və uzaq üfüqlər",
+      "text": "Dünyagörüşü, inanc, ali təhsil, səyahət və həyatın mənası mövzusu xəritədə təkrarlanır. Böyük mənzərəni görmək, öyrənmək və öyrətmək sizin yolunuzdur; dərs inamı dogmaya çevirməməkdir."
+    },
+    "10": {
+      "name": "Karyera, məqsəd və status",
+      "text": "Karyera, ictimai mövqe, məsuliyyət və uzunmüddətli məqsəd mövzusu dəfələrlə görünür. Həyatınızda nəyisə qurmaq və tanınmaq əsas xətdir; dərs uğuru yalnız nəticə ilə ölçməməkdir."
+    },
+    "11": {
+      "name": "Dostlar, cəmiyyət və gələcək",
+      "text": "Dostluq, qruplar, ideallar, yeniliklər və gələcəyə baxış mövzusu təkrarlanır. Başqaları ilə birlikdə böyük bir şeyin parçası olmaq sizə güc verir; dərs fərdiliyi itirmədən kollektivdə olmaqdır."
+    },
+    "12": {
+      "name": "Daxili dünya və mənəviyyat",
+      "text": "Daxili dünya, təklik, mənəviyyat, mərhəmət və görünməyən olan mövzusu xəritədə təkrarlanır. Sezgi və empatiya güclüdür; dərs sərhədləri qoruyub özünüzü itirmədən başqalarına kömək etməkdir."
+    }
+  },
+  "advice": {
+    "mars": {
+      "conjunction": {
+        "do": "Enerjini bir konkret işə yönəlt: idman, başlanmamış iş, cəsarət tələb edən addım.",
+        "avoid": "Tələsik qərar, mübahisə, sürətli maşın sürmə və qəzəblə danışıq."
+      },
+      "hard": {
+        "do": "Gərginliyi fiziki fəaliyyətlə boşalt və münaqişəni sakit vaxta saxla.",
+        "avoid": "Qızışıb söz demək, risqli fiziki iş və 'indi və ya heç vaxt' qərarları."
+      },
+      "soft": {
+        "do": "Uzun müddət təxirə saldığın işi indi başla; təşəbbüs asan gedir.",
+        "avoid": "Enerjini xırda işlərə səpələmək."
+      }
+    },
+    "jupiter": {
+      "conjunction": {
+        "do": "Yeni imkanlara 'hə' de: təhsil, səyahət, böyük layihə, yeni tanışlıqlar.",
+        "avoid": "Həddindən artıq söz vermək, xərcləmək və hər şeyi birdən götürmək."
+      },
+      "hard": {
+        "do": "Böyük planı kiçik addımlara böl və rəqəmləri iki dəfə yoxla.",
+        "avoid": "Şişirdilmiş optimizm, borc götürmək və gücünü həddindən artıq qiymətləndirmək."
+      },
+      "soft": {
+        "do": "Kömək istə, müraciət et, təqdim et: qapılar asan açılır.",
+        "avoid": "Rahatlıqdan passiv qalıb fürsəti buraxmaq."
+      }
+    },
+    "saturn": {
+      "conjunction": {
+        "do": "Məsuliyyəti qəbul et, uzunmüddətli plan qur, nəyin həqiqətən vacib olduğunu seç.",
+        "avoid": "Çətinlikdən qaçmaq, qısa yol axtarmaq və özünü həddindən artıq yükləmək."
+      },
+      "hard": {
+        "do": "Səbirli ol: problemi hissələrə böl, intizamla, ardıcıl işlə; lazım olsa yardım al.",
+        "avoid": "Hər şeyi tək daşımağa çalışmaq, ümidsizliyə qapılmaq və tələsik imtina."
+      },
+      "soft": {
+        "do": "Sabit təməl qur: müqavilə, qayda, vərdiş, uzunmüddətli öhdəlik üçün yaxşı vaxtdır.",
+        "avoid": "Həddindən artıq ehtiyatla imkanı itirmək."
+      }
+    },
+    "uranus": {
+      "conjunction": {
+        "do": "Yeniliyə açıq ol, köhnəlmiş şeyi dəyiş, plan B saxla.",
+        "avoid": "Hər şeyi bir anda dağıtmaq və düşünmədən qəfil qərar vermək."
+      },
+      "hard": {
+        "do": "Çevik qal: gözlənilməz dəyişikliyə hazır ol, ehtiyat (pul, vaxt) saxla.",
+        "avoid": "Üsyan xatirinə körpüləri yandırmaq və riskli qəfil addımlar."
+      },
+      "soft": {
+        "do": "Yeni üsul, texnologiya, kurs və ya yeni mühit sınamaq üçün əlverişlidir.",
+        "avoid": "Həyəcan verici ideyalara görə hazır olanı tərk etmək."
+      }
+    },
+    "neptune": {
+      "conjunction": {
+        "do": "Sezgiyə, yaradıcılığa və mənəviyyata vaxt ayır; xəyal qur, amma qeyd et.",
+        "avoid": "Mühüm sənədləri yoxlamadan imzalamaq, aldanmaq və qaçış vərdişləri (alkoqol, həddindən artıq ekran)."
+      },
+      "hard": {
+        "do": "Faktları yoxla, sərhədlərini qoru, qərarı aydın günə saxla.",
+        "avoid": "Kiminsə sözünə yoxlamadan inanmaq, qeyri-müəyyən vəd və özünü qurban vermək."
+      },
+      "soft": {
+        "do": "İncəsənət, şəfa, xeyriyyə və meditasiya üçün gözəl dövrdür.",
+        "avoid": "Hər şeyi axına buraxıb praktik işləri unutmaq."
+      }
+    },
+    "pluto": {
+      "conjunction": {
+        "do": "Dərin dəyişikliyə hazır ol: işləməyəni burax, gücünü yenidən qur.",
+        "avoid": "Nəzarəti zorla saxlamaq və güc mübarizəsinə girmək."
+      },
+      "hard": {
+        "do": "Gizli problemlə üzləş, psixoloq, mütəxəssis dəstəyi al, borc və güc məsələlərini aydınlaşdır.",
+        "avoid": "Manipulyasiya, inad və 'hər şey və ya heç nə' mövqeyi."
+      },
+      "soft": {
+        "do": "Dərin yenilənmə, investisiya, psixoloji iş və köklü islahat üçün əlverişlidir.",
+        "avoid": "Böyük dəyişiklik imkanını qorxu üzündən təxirə salmaq."
+      }
     }
   }
 }

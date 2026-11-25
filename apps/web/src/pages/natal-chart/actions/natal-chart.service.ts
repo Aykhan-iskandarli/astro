@@ -2,6 +2,7 @@ import axiosPublic from 'core/configs/axios-public.config';
 import {API} from 'core/configs/api.config';
 import {IBirthInput} from 'store/store';
 import NatalChartModel from '../models/natal-chart.model';
+import RectificationModel, {IRectificationRequest} from '../models/rectification.model';
 import DestinyMatrixModel from '../models/destiny-matrix.model';
 import PlaceModel from '../models/place.model';
 import TransitsModel from '../models/transits.model';
@@ -94,6 +95,13 @@ export const getElectional = (input: IBirthInput, start: string, days: number, v
         });
 };
 
+export const getRectification = (req: IRectificationRequest): Promise<RectificationModel> => {
+    return axiosPublic.post(API.rectification, {...req.input, events: req.events, windowStart: req.windowStart, windowEnd: req.windowEnd})
+        .then((res) => {
+            return new RectificationModel(res.data);
+        });
+};
+
 export const getTransformations = (input: IBirthInput, startYear: number, years: number): Promise<TransformationsModel> => {
     return axiosPublic.post(API.transformations, {...input, startYear, years})
         .then((res) => {
@@ -150,8 +158,8 @@ export const getComposite = (first: IBirthInput, second: IBirthInput): Promise<N
         });
 };
 
-export const getTimeline = (input: IBirthInput, start: string, days: number): Promise<TimelineModel> => {
-    return axiosPublic.post(API.timeline, {...input, start, days})
+export const getTimeline = (input: IBirthInput, start: string, days: number, fast = false): Promise<TimelineModel> => {
+    return axiosPublic.post(API.timeline, {...input, start, days, fast})
         .then((res) => {
             return new TimelineModel(res.data);
         });

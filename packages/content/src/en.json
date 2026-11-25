@@ -708,6 +708,36 @@
       "karmicTail": "The karmic tail shows scenarios that repeat in life and the way to resolve them. Left to right: the readiness for a relationship, the unworked task from the past and the soul's main karmic lesson.",
       "maleLine": "The male generational programmes are the two branches of the father's line. The first runs from the spiritual inheritance to the programme and the talent; the second runs from the near-centre energy of the material inheritance to the programme and the material inheritance itself.",
       "femaleLine": "The female generational programmes are the two branches of the mother's line. The first runs from the material inheritance to the programme and the near-centre energy; the second runs from the near-centre energy to the programme and the spiritual inheritance itself."
+    },
+    "chakraInfo": {
+      "sahasrara": {
+        "body": "the brain, skull and nervous system",
+        "theme": "worldview, spirituality, a bond with the meaning of life"
+      },
+      "ajna": {
+        "body": "the eyes, head, nose and the upper endocrine system",
+        "theme": "thinking, intuition, seeing and planning your own life"
+      },
+      "vishuddha": {
+        "body": "the throat, thyroid, shoulders and voice",
+        "theme": "self-expression, being able to speak your mind, communication"
+      },
+      "anahata": {
+        "body": "the heart, lungs, chest and arms",
+        "theme": "love, acceptance, openness in relationships"
+      },
+      "manipura": {
+        "body": "the stomach, liver, gall bladder and pancreas",
+        "theme": "will, self-confidence, money and social success"
+      },
+      "svadhisthana": {
+        "body": "the kidneys, sexual organs and lower pelvis",
+        "theme": "pleasure, desire, creativity, being at ease with the body"
+      },
+      "muladhara": {
+        "body": "the lower spine, legs, bones and lower bowel",
+        "theme": "safety, a material base, the instinct to survive"
+      }
     }
   },
   "vedic": {
@@ -1544,6 +1574,17 @@
         "shows": "It can show as a tendency to do everything alone, difficulty in asking for help and tension between independence and loneliness.",
         "lesson": "To learn to ask for and accept help, to share power and to trust others."
       }
+    },
+    "personalYearReading": {
+      "1": "A year of new beginnings: the nine-year cycle starts again. Initiative, independence and new projects come forward; the steps you take now set the direction of the coming years.",
+      "2": "A year of cooperation and patience: partnership, relationships and diplomacy come forward. It is a time to prepare, listen and wait rather than hurry.",
+      "3": "A year of creativity and communication: self-expression, social contacts and joy are the theme. A good year for sharing your ideas and giving time to creative work.",
+      "4": "A year of building: work, discipline, foundations and order come forward. It asks for effort but suits building long-term stability.",
+      "5": "A year of change: movement, travel, freedom and the unexpected are the theme. Stay open to the new, but avoid hasty decisions.",
+      "6": "A year of responsibility and family: home, care, commitments and harmony in relationships come forward. A time to give your close ones attention and to restore balance.",
+      "7": "A year of inner search: analysis, learning, spirituality and solitude are the theme. A good year to look inward, go deeper and draw conclusions.",
+      "8": "A year of achievement and power: career, money, influence and results come forward. The fruit of earlier work arrives, and with it a call for responsibility and measure.",
+      "9": "A year of completion: the nine-year cycle comes to an end. A time to let go of the old, forgive, sum up and prepare for the next cycle."
     }
   },
   "chinese": {
@@ -3698,6 +3739,34 @@
       "mars": "Mars in career: energy, competition, initiative and technical skill. Mars's condition shows how driven you are at work and how you handle competition.",
       "jupiter": "Jupiter in career: growth, luck, teaching and expansion. Jupiter's condition shows how easily opportunities open in career and where success comes.",
       "saturn": "Saturn in career: structure, responsibility, authority and long-term results. Saturn's condition shows which difficulties you must overcome in career and what you can build solidly over time."
+    },
+    "professions": {
+      "sign": {
+        "aries": "entrepreneurship, sport and coaching, military and security services, surgery, sales, start-ups, rescue",
+        "taurus": "finance and banking, real estate, farming and food, design and art, music, beauty, building materials",
+        "gemini": "journalism, writing, translation, teaching, marketing and advertising, trade, transport and logistics, IT and social media",
+        "cancer": "child and family services, food and restaurants, real estate and the home, nursing, psychological support, history and museums",
+        "leo": "leadership and management, stage, film and shows, design, presenting, work with children, brand and PR",
+        "virgo": "health care and pharmacy, analytics, accounting and audit, editing, quality control, nutrition, administration",
+        "libra": "law and mediation, diplomacy, design and fashion, the beauty industry, human resources, client relations, art",
+        "scorpio": "psychology and psychotherapy, research and investigation, surgery, finance, investment and insurance, security, crisis management",
+        "sagittarius": "higher education and teaching, publishing, law, tourism and travel, international trade, religion and philosophy, sport",
+        "capricorn": "public service, administration and management, engineering and construction, financial planning, law, careers in large organisations",
+        "aquarius": "IT and programming, science and innovation, social projects and NGOs, aviation, networks, astrology, collective work",
+        "pisces": "art, music and film, healing and medicine, psychology, charity, work with the sea and water, spiritual service, photography"
+      },
+      "planet": {
+        "sun": "leadership, management, a public role, work known by your own name",
+        "moon": "work with people and the public, care, food, the home, sales",
+        "mercury": "writing, communication, trade, teaching, analysis, IT",
+        "venus": "art, design, beauty, diplomacy, finance",
+        "mars": "entrepreneurship, sport, engineering, the military, surgery, competitive fields",
+        "jupiter": "education, law, publishing, international work, consulting",
+        "saturn": "management, the state, construction, long-term projects, expert work",
+        "uranus": "technology, science, innovation, freelance and unusual professions",
+        "neptune": "art, film, music, healing, charity, spiritual work",
+        "pluto": "research, psychology, finance, crisis management, power structures"
+      }
     }
   },
   "finance": {
@@ -4039,6 +4108,142 @@
       "uranus": "Uranus retrograde: sudden change turns inward. The results of innovation are weighed, revolt cools and ideas ripen.",
       "neptune": "Neptune retrograde: illusions fade and the reality of ideals is tested. Spiritual themes deepen from within.",
       "pluto": "Pluto retrograde: the inner stage of deep transformation. Hidden power structures and collective trauma are looked at again."
+    }
+  },
+  "themes": {
+    "1": {
+      "name": "Self and initiative",
+      "text": "Being yourself, taking the first step and opening your own way turn up again and again in your life. Independence, courage and competition are a main line, not an accident; the lesson is patience and taking others into account."
+    },
+    "2": {
+      "name": "Values and resources",
+      "text": "Money, possessions, the body and the sense of self-worth repeat in your chart. Building a firm base, turning talent into income and knowing what you really value are among the main tasks of your life."
+    },
+    "3": {
+      "name": "Communication and learning",
+      "text": "Words, information, learning and the close circle (siblings, neighbours, daily contacts) repeat. Getting an idea across, writing, speaking and being curious are your main tools."
+    },
+    "4": {
+      "name": "Home, family and roots",
+      "text": "Home, family, roots and emotional security show up many times in the chart. Building a place where you feel at ease and understanding your past and your family are a main line of your life."
+    },
+    "5": {
+      "name": "Creativity and self-expression",
+      "text": "Creativity, joy, play, children and showing yourself repeat. Expressing what comes from the heart and being seen is a vital need for you; the lesson is to shine with the heart rather than with pride."
+    },
+    "6": {
+      "name": "Work, service and health",
+      "text": "Daily work, habits, health and being useful come forward in the chart. Order, skill and improvement are your strength; the lesson is to ease the pressure of perfectionism."
+    },
+    "7": {
+      "name": "Relationships and partnership",
+      "text": "Partnership, contracts, fairness and the theme of 'me and the other' repeat. Much of your life takes shape in meeting others; the lesson is to find balance without losing yourself."
+    },
+    "8": {
+      "name": "Deep transformation and shared resources",
+      "text": "Power, the hidden, crises, shared money and deep bonds repeat. Your life goes through renewals that feel like dying and being reborn; the lesson is to let go of control and trust change."
+    },
+    "9": {
+      "name": "Meaning, belief and far horizons",
+      "text": "Worldview, belief, higher learning, travel and the meaning of life repeat in the chart. Seeing the big picture, learning and teaching is your way; the lesson is not to turn belief into dogma."
+    },
+    "10": {
+      "name": "Career, purpose and standing",
+      "text": "Career, public standing, responsibility and a long-term goal show up many times. Building something and being recognised is a main line of your life; the lesson is not to measure success only by results."
+    },
+    "11": {
+      "name": "Friends, community and the future",
+      "text": "Friendship, groups, ideals, innovation and a view of the future repeat. Being part of something bigger with others gives you strength; the lesson is to belong to the group without losing your individuality."
+    },
+    "12": {
+      "name": "Inner world and spirituality",
+      "text": "The inner world, solitude, spirituality, compassion and the unseen repeat in the chart. Intuition and empathy are strong; the lesson is to help others while keeping your boundaries and not losing yourself."
+    }
+  },
+  "advice": {
+    "mars": {
+      "conjunction": {
+        "do": "Put the energy into one concrete thing: sport, a task you have not started, a step that needs courage.",
+        "avoid": "Hasty decisions, arguments, fast driving and speaking in anger."
+      },
+      "hard": {
+        "do": "Release the tension physically and keep a conflict for a calmer moment.",
+        "avoid": "Saying things in the heat of the moment, risky physical work and now-or-never decisions."
+      },
+      "soft": {
+        "do": "Start the task you have put off for long; initiative comes easily.",
+        "avoid": "Scattering the energy over small things."
+      }
+    },
+    "jupiter": {
+      "conjunction": {
+        "do": "Say yes to new openings: study, travel, a big project, new people.",
+        "avoid": "Promising, spending and taking on too much at once."
+      },
+      "hard": {
+        "do": "Break the big plan into small steps and check the numbers twice.",
+        "avoid": "Inflated optimism, taking on debt and overrating your strength."
+      },
+      "soft": {
+        "do": "Ask for help, apply, present yourself: doors open easily.",
+        "avoid": "Staying passive out of comfort and letting the chance go."
+      }
+    },
+    "saturn": {
+      "conjunction": {
+        "do": "Accept responsibility, make a long-term plan, choose what really matters.",
+        "avoid": "Running from difficulty, looking for shortcuts and overloading yourself."
+      },
+      "hard": {
+        "do": "Be patient: split the problem into parts, work with discipline and steadily; get help if needed.",
+        "avoid": "Trying to carry everything alone, giving in to despair and quitting in haste."
+      },
+      "soft": {
+        "do": "Build a firm base: a good time for contracts, rules, habits and long-term commitments.",
+        "avoid": "Losing a chance through too much caution."
+      }
+    },
+    "uranus": {
+      "conjunction": {
+        "do": "Be open to the new, change what is worn out, keep a plan B.",
+        "avoid": "Tearing everything down at once and sudden decisions without thought."
+      },
+      "hard": {
+        "do": "Stay flexible: be ready for unexpected change and keep reserves (money, time).",
+        "avoid": "Burning bridges for the sake of rebellion and risky sudden moves."
+      },
+      "soft": {
+        "do": "A good time to try a new method, technology, course or setting.",
+        "avoid": "Leaving what works for an exciting idea."
+      }
+    },
+    "neptune": {
+      "conjunction": {
+        "do": "Give time to intuition, creativity and spirituality; dream, but write it down.",
+        "avoid": "Signing important papers unchecked, being deceived and escape habits (alcohol, too much screen time)."
+      },
+      "hard": {
+        "do": "Check the facts, keep your boundaries, save the decision for a clear day.",
+        "avoid": "Believing someone without checking, vague promises and sacrificing yourself."
+      },
+      "soft": {
+        "do": "A fine period for art, healing, charity and meditation.",
+        "avoid": "Letting everything drift and forgetting practical matters."
+      }
+    },
+    "pluto": {
+      "conjunction": {
+        "do": "Be ready for deep change: let go of what does not work, rebuild your strength.",
+        "avoid": "Holding on to control by force and entering power struggles."
+      },
+      "hard": {
+        "do": "Face the hidden problem, get the support of a therapist or expert, clear up debt and power issues.",
+        "avoid": "Manipulation, stubbornness and an all-or-nothing stance."
+      },
+      "soft": {
+        "do": "Good for deep renewal, investment, psychological work and root reform.",
+        "avoid": "Putting off a chance for big change out of fear."
+      }
     }
   }
 }

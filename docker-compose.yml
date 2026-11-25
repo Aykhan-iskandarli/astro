@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: apps/api/Dockerfile
     image: astra-api:dev
+    # Come back up after Docker or the computer restarts (a stopped API shows up as ECONNREFUSED in the dev proxy)
+    restart: unless-stopped
     ports:
       - "8000:8000"
     environment:

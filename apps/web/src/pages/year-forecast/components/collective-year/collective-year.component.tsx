@@ -1,4 +1,5 @@
-import {Alert} from 'antd';
+import {useCallback, useMemo, useState} from 'react';
+import {Alert, Segmented} from 'antd';
 import {ASPECT_GLYPHS, aspectTone, formatLocal, glyph, POINT_GLYPHS, SIGN_GLYPHS} from 'core/helpers/astro';
 import LoaderComponent from 'core/shared/loader/loader.component';
 import useLocalization, {useContent} from 'assets/lang';
@@ -9,6 +10,8 @@ import {ICollectiveYear} from './collective-year';
 
 // From the slowest (deepest) planet to the quickest: the order in which the year's tone is read.
 const ORDER = ['pluto', 'neptune', 'uranus', 'saturn', 'jupiter', 'northNode'];
+
+type Part = 'era' | 'aspects' | 'eclipses' | 'retro';
 
 type Texts = {
     role: Record<string, string>;
@@ -28,6 +31,16 @@ function CollectiveYearComponent({year}: ICollectiveYear) {
     const classes = useCollectiveYearStyles();
     const {data, isFetching, isError} = useGetCollective(year);
     const c = content.collective as unknown as Texts;
+    const [part, setPart] = useState<Part>('era');
+    const handlePart = useCallback((v: string | number) => {
+        setPart(v as Part);
+    }, []);
+    const parts = useMemo(() => [
+        {value: 'era', label: translate('col_nav_era')},
+        {value: 'aspects', label: translate('col_nav_aspects')},
+        {value: 'eclipses', label: translate('col_nav_eclipses')},
+        {value: 'retro', label: translate('col_nav_retro')},
+    ], [translate]);
 
     const name = (id: string) => content.points[id as keyof typeof content.points]?.name ?? id;
     const sign = (id: string | null) => (id ? content.signs[id as keyof typeof content.signs]?.name ?? id : '');
@@ -44,11 +57,14 @@ function CollectiveYearComponent({year}: ICollectiveYear) {
                 <p className={classes.muted}>{translate('col_intro')}</p>
             </div>
 
+            <div className={classes.nav}><Segmented value={part} onChange={handlePart} options={parts} size='large'/></div>
+
             {isError ? <Alert type='error' showIcon title={translate('col_error')}/> : null}
             {!data && isFetching ? <LoaderComponent/> : null}
 
             {data ? (
                 <>
+{part === 'era' ? (
                     <div className={classes.block}>
                         <h3>{translate('col_era')}</h3>
                         <p className={classes.muted}>{translate('col_era_intro')}</p>
@@ -69,7 +85,9 @@ function CollectiveYearComponent({year}: ICollectiveYear) {
                             ))}
                         </div>
                     </div>
+) : null}
 
+{part === 'aspects' ? (
                     <div className={classes.block}>
                         <h3>{translate('col_aspects')}</h3>
                         <p className={classes.muted}>{translate('col_aspects_intro')}</p>
@@ -94,7 +112,9 @@ function CollectiveYearComponent({year}: ICollectiveYear) {
                             </div>
                         ) : <p className={classes.muted}>{translate('col_aspects_none')}</p>}
                     </div>
+) : null}
 
+{part === 'eclipses' ? (
                     <div className={classes.block}>
                         <h3>{translate('col_eclipses')}</h3>
                         <p className={classes.muted}>{translate('col_eclipses_intro')}</p>
@@ -114,7 +134,9 @@ function CollectiveYearComponent({year}: ICollectiveYear) {
                             </div>
                         ) : <p className={classes.muted}>{translate('col_eclipses_none')}</p>}
                     </div>
+) : null}
 
+{part === 'retro' ? (
                     <div className={classes.block}>
                         <h3>{translate('col_retro')}</h3>
                         <p className={classes.muted}>{translate('col_retro_intro')}</p>
@@ -132,6 +154,7 @@ function CollectiveYearComponent({year}: ICollectiveYear) {
                             </div>
                         ) : <p className={classes.muted}>{translate('col_retro_none')}</p>}
                     </div>
+) : null}
 
                     <p className={classes.note}>{translate('col_note')}</p>
                 </>

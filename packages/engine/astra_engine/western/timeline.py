@@ -16,6 +16,7 @@ MODULE_VERSION = "0.1.0"
 MAX_DAYS = 400
 
 TRANSITING = ["mars", "jupiter", "saturn", "uranus", "neptune", "pluto"]
+QUICK = ["sun", "mercury", "venus"]  # only on request (fast=True): they make many short contacts, fine for days and weeks
 NATAL_TARGETS = ["sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn"]
 ASPECTS = {"conjunction": 0.0, "sextile": 60.0, "square": 90.0, "trine": 120.0, "opposition": 180.0}
 
@@ -49,7 +50,8 @@ def _exact_times(pid: str, target: float, angle: float, jd0: float, days: int) -
     return hits
 
 
-def calculate(birth: BirthData, start: date | None = None, days: int = 365, house_system: HouseSystem = "P") -> dict:
+def calculate(birth: BirthData, start: date | None = None, days: int = 365, house_system: HouseSystem = "P",
+              fast: bool = False, **_options) -> dict:
     if not 1 <= days <= MAX_DAYS:
         raise ValueError(f"days must be between 1 and {MAX_DAYS}")
     start = start or datetime.now(timezone.utc).date()
@@ -60,7 +62,8 @@ def calculate(birth: BirthData, start: date | None = None, days: int = 365, hous
 
     jd0 = jd_of(datetime(start.year, start.month, start.day, tzinfo=timezone.utc))
     events = []
-    for pid in TRANSITING:
+    transiting = QUICK + TRANSITING if fast else TRANSITING
+    for pid in transiting:
         for tid, tlon in targets.items():
             for name, angle in ASPECTS.items():
                 for jd in _exact_times(pid, tlon, angle, jd0, days):
@@ -80,7 +83,7 @@ def calculate(birth: BirthData, start: date | None = None, days: int = 365, hous
         e["passes"] = totals[(e["transit"], e["natal"], e["aspect"])]
     return {
         "module": MODULE_ID,
-        "meta": {"engineVersion": MODULE_VERSION, "transiting": TRANSITING, "aspects": list(ASPECTS)},
+        "meta": {"engineVersion": MODULE_VERSION, "transiting": transiting, "aspects": list(ASPECTS)},
         "start": start.isoformat(),
         "days": days,
         "events": events,

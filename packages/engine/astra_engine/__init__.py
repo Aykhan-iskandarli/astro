@@ -12,8 +12,9 @@ from .destiny import matrix as destiny_matrix
 from .numerology import core as numerology
 from .vedic import chart as vedic_chart
 from .sky import calendar as sky_calendar, collective as sky_collective, day as sky_day, moon as sky_moon, now as sky_now
-from .western import (astrocartography, composite, cycles, davison, details, directions, electional, forecast, generation, natal, personal_moon,
-                      progressions, returns, synastry, timeline, timing, transformations, transits)
+from .western import (astrocartography, composite, cycles, davison, details, directions, electional, forecast,
+                      generation, natal, personal_moon, progressions, rectification, returns, synastry, timeline,
+                      timing, transformations, transits)
 
 
 class EngineModule(Protocol):
@@ -44,6 +45,7 @@ MODULES: dict[str, EngineModule] = {
     electional.MODULE_ID: electional,            # day-by-day facts for choosing a day, read in the natal chart
     directions.MODULE_ID: directions,            # Solar Arc hits and secondary-progression events on a timeline
     generation.MODULE_ID: generation,            # how long the slow planets stayed in the birth sign
+    rectification.MODULE_ID: rectification,      # candidate birth times ranked by how well they fit dated events
     transformations.MODULE_ID: transformations,  # long slow-planet transits (episodes) to the natal chart over years
 }
 

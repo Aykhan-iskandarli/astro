@@ -13,6 +13,12 @@ const styles = {
     eyebrow: skyStyles.eyebrow,
     muted: skyStyles.muted,
     busy: {opacity: 0.6, transition: 'opacity .2s'},
+    more: {
+        color: colors.textMuted,
+        '& summary': {cursor: 'pointer', color: colors.gold, minHeight: rem(sizes.touch), display: 'flex', alignItems: 'center'},
+        '& p': {marginTop: rem(6), lineHeight: 1.7, color: colors.text},
+    },
+    nav: {overflowX: 'auto', paddingBottom: rem(4)},
     body: {display: 'flex', flexDirection: 'column', gap: rem(40)},
     toolbar: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: rem(16)},
     yearSwitch: {

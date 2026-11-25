@@ -162,3 +162,18 @@ def test_collective_great_conjunction_2020():
 def test_collective_year_range():
     with pytest.raises(ValueError):
         SKY["sky.collective"].calculate(1700)
+
+
+def test_timeline_fast_adds_the_sun_mercury_and_venus_exactly():
+    from conftest import BIRTHS
+    b = BIRTHS["baku-1990"]
+    slow = MODULES["western.timeline"].calculate(b, start=date(2026, 12, 1), days=30)
+    fast = MODULES["western.timeline"].calculate(b, start=date(2026, 12, 1), days=30, fast=True)
+    quick = [e for e in fast["events"] if e["transit"] in ("sun", "mercury", "venus")]
+    assert quick and not [e for e in slow["events"] if e["transit"] in ("sun", "mercury", "venus")]
+    assert len(fast["events"]) == len(slow["events"]) + len(quick)
+    natal = {p["id"]: p["longitude"] for p in MODULES["western.natal"].calculate(b)["points"]}
+    natal.update({a: MODULES["western.natal"].calculate(b)["angles"][a]["longitude"] for a in ("asc", "mc")})
+    for e in quick:
+        lon = longitude(e["transit"], _jd(e["at"]))[0]
+        assert _sep(lon, natal[e["natal"]]) == pytest.approx(ANGLES[e["aspect"]], abs=0.01), e
